@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IW Content Hub — Internwise social media content review dashboard">
+  <title>IW Content Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="site-header__inner">
+
+      <div class="site-header__brand">
+        <svg class="logo-mark" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true" focusable="false">
+          <rect width="36" height="36" rx="8" fill="var(--color-blue)"/>
+          <text x="18" y="25" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="16" fill="var(--color-amber)">IW</text>
+        </svg>
+        <span class="site-header__title">Content Hub</span>
+      </div>
+
+      <div class="site-header__controls">
+        <label for="week-selector" class="sr-only">Select week</label>
+        <select id="week-selector" class="week-selector" aria-label="Select week">
+          <option value="">Loading weeks...</option>
+        </select>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main-content">
+
+    <div class="week-meta" id="week-meta" aria-live="polite">
+      <!-- Week label and date range injected by JS -->
+    </div>
+
+    <div class="post-grid" id="post-grid" role="list">
+      <!-- Post cards injected by JS -->
+    </div>
+
+    <div class="empty-state" id="empty-state" hidden>
+      <p>No posts found for this week.</p>
+    </div>
+
+  </main>
+
+  <!-- ===== POST DETAIL OVERLAY ===== -->
+  <div
+    class="overlay"
+    id="overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="overlay-title"
+    hidden
+  >
+    <div class="overlay__backdrop" id="overlay-backdrop" aria-hidden="true"></div>
+
+    <div class="overlay__panel">
+
+      <!-- Left: slide viewer -->
+      <div class="slide-viewer" id="slide-viewer">
+
+        <div class="slide-viewer__stage">
+          <img
+            class="slide-viewer__img"
+            id="slide-img"
+            src=""
+            alt=""
+            loading="lazy"
+          >
+        </div>
+
+        <div class="slide-viewer__controls">
+          <button class="slide-btn slide-btn--prev" id="slide-prev" aria-label="Previous slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+
+          <span class="slide-counter" id="slide-counter" aria-live="polite">1 / 1</span>
+
+          <button class="slide-btn slide-btn--next" id="slide-next" aria-label="Next slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Right: content sidebar -->
+      <aside class="content-sidebar" id="content-sidebar">
+
+        <button class="overlay__close" id="overlay-close" aria-label="Close post detail">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+
+        <div class="content-sidebar__header">
+          <h2 class="content-sidebar__title" id="overlay-title"></h2>
+          <div class="content-sidebar__meta">
+            <span class="day-label" id="detail-day"></span>
+            <span class="platform-badge" id="detail-platform"></span>
+          </div>
+        </div>
+
+        <div class="content-sidebar__status">
+          <label for="detail-status" class="sidebar-label">Status</label>
+          <select class="status-select" id="detail-status" aria-label="Post status">
+            <option value="draft">Draft</option>
+            <option value="in-review">In Review</option>
+            <option value="approved">Approved</option>
+            <option value="scheduled">Scheduled</option>
+            <option value="published">Published</option>
+          </select>
+        </div>
+
+        <hr class="sidebar-divider">
+
+        <section class="sidebar-section" aria-labelledby="caption-heading">
+          <h3 class="sidebar-label" id="caption-heading">Caption</h3>
+          <div class="caption-box" id="detail-caption" tabindex="0" aria-label="Post caption"></div>
+          <button class="copy-btn" id="copy-caption-btn" aria-label="Copy caption to clipboard">
+            Copy Caption
+          </button>
+        </section>
+
+        <hr class="sidebar-divider">
+
+        <section class="sidebar-section" aria-labelledby="hashtags-heading">
+          <h3 class="sidebar-label" id="hashtags-heading">Hashtags</h3>
+          <div class="hashtag-pills" id="detail-hashtags" aria-label="Post hashtags"></div>
+          <button class="copy-btn" id="copy-hashtags-btn" aria-label="Copy hashtags to clipboard">
+            Copy Hashtags
+          </button>
+        </section>
+
+        <hr class="sidebar-divider">
+
+        <div class="sidebar-footer">
+          <a href="https://internwise.co.uk" target="_blank" rel="noopener noreferrer" class="site-link">
+            internwise.co.uk
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
