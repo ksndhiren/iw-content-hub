@@ -18,17 +18,16 @@
   ------------------------------------------------------------------------- */
   const DATA_URL      = 'data/weeks.json';
   const STORAGE_KEY   = 'iw-content-hub-statuses';
+  const COMMENTS_KEY  = 'iw-content-hub-comments';
 
   /** Ordered list of status values for cycling on badge click */
-  const STATUS_CYCLE  = ['draft', 'in-review', 'approved', 'scheduled', 'published'];
+  const STATUS_CYCLE  = ['in-review', 'approved', 'declined'];
 
   /** Human-readable labels for status values */
   const STATUS_LABELS = {
-    'draft':     'Draft',
     'in-review': 'In Review',
     'approved':  'Approved',
-    'scheduled': 'Scheduled',
-    'published': 'Published',
+    'declined':  'Declined',
   };
 
   /* -------------------------------------------------------------------------
@@ -37,6 +36,7 @@
   let allWeeks        = [];      // Full weeks array from JSON
   let currentWeek     = null;    // Currently displayed week object
   let statuses        = {};      // { postId: statusString } persisted in localStorage
+  let comments        = {};      // { postId: [{ text, ts }] } persisted in localStorage
   let overlayPostId   = null;    // Post currently open in overlay
   let currentSlideIdx = 0;       // Zero-based slide index in overlay
 
@@ -62,6 +62,9 @@
   let elDetailHashtags;
   let elCopyCaptionBtn;
   let elCopyHashtagsBtn;
+  let elCommentList;
+  let elCommentTextarea;
+  let elCommentSubmitBtn;
 
   /* -------------------------------------------------------------------------
      Initialisation
@@ -69,6 +72,7 @@
   function init() {
     resolveElements();
     loadStatuses();
+    loadComments();
     fetchWeeks();
     bindGlobalEvents();
   }
@@ -94,6 +98,9 @@
     elDetailHashtags  = document.getElementById('detail-hashtags');
     elCopyCaptionBtn  = document.getElementById('copy-caption-btn');
     elCopyHashtagsBtn = document.getElementById('copy-hashtags-btn');
+    elCommentList     = document.getElementById('comment-list');
+    elCommentTextarea = document.getElementById('comment-textarea');
+    elCommentSubmitBtn = document.getElementById('comment-submit-btn');
   }
 
   /* -------------------------------------------------------------------------
@@ -112,7 +119,24 @@
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(statuses));
     } catch (_) {
-      // localStorage unavailable (private browsing etc.) — silently continue
+      // localStorage unavailable (private browsing etc.) - silently continue
+    }
+  }
+
+  function loadComments() {
+    try {
+      const stored = localStorage.getItem(COMMENTS_KEY);
+      comments = stored ? JSON.parse(stored) : {};
+    } catch (_) {
+      comments = {};
+    }
+  }
+
+  function saveComments() {
+    try {
+      localStorage.setItem(COMMENTS_KEY, JSON.stringify(comments));
+    } catch (_) {
+      // localStorage unavailable - silently continue
     }
   }
 
@@ -146,7 +170,7 @@
     allWeeks.forEach(function (week) {
       const opt = document.createElement('option');
       opt.value = week.id;
-      opt.textContent = `${week.label} — ${week.dateRange}`;
+      opt.textContent = `${week.label} - ${week.dateRange}`;
       elWeekSelector.appendChild(opt);
     });
 
@@ -268,7 +292,7 @@
   }
 
   function cycleStatus(postId, badgeEl, cardEl) {
-    const current = getStatus(postId, 'draft');
+    const current = getStatus(postId, 'in-review');
     const nextIdx = (STATUS_CYCLE.indexOf(current) + 1) % STATUS_CYCLE.length;
     const next    = STATUS_CYCLE[nextIdx];
 
@@ -322,6 +346,10 @@
     // Load first slide
     renderSlide(post, 0);
 
+    // Load comments for this post
+    renderComments(postId);
+    elCommentTextarea.value = '';
+
     // Show overlay
     elOverlay.hidden = false;
     // Force reflow before adding class to trigger CSS transition
@@ -338,6 +366,9 @@
   function closeOverlay() {
     elOverlay.classList.remove('is-open');
 
+    // Capture the id before clearing it so focus-return works
+    const returningPostId = overlayPostId;
+
     // Wait for fade-out before hiding
     elOverlay.addEventListener('transitionend', function handler() {
       elOverlay.hidden = true;
@@ -348,8 +379,8 @@
     document.body.style.overflow = '';
 
     // Return focus to the triggering card
-    if (currentWeek) {
-      const card = elPostGrid.querySelector(`[data-post-id="${overlayPostId || ''}"]`);
+    if (currentWeek && returningPostId) {
+      const card = elPostGrid.querySelector(`[data-post-id="${returningPostId}"]`);
       if (card) card.focus();
     }
   }
@@ -395,6 +426,53 @@
       }, 2000);
     }).catch(function (err) {
       console.error('[IW Content Hub] Clipboard write failed:', err);
+    });
+  }
+
+  /* -------------------------------------------------------------------------
+     Comments
+  ------------------------------------------------------------------------- */
+  function renderComments(postId) {
+    elCommentList.innerHTML = '';
+    const postComments = (comments[postId] || []);
+
+    postComments.forEach(function (c) {
+      const item = document.createElement('div');
+      item.className = 'comment-item';
+
+      const meta = document.createElement('div');
+      meta.className = 'comment-item__meta';
+      meta.textContent = formatCommentDate(c.ts);
+
+      const text = document.createElement('div');
+      text.className = 'comment-item__text';
+      text.textContent = c.text;
+
+      item.appendChild(meta);
+      item.appendChild(text);
+      elCommentList.appendChild(item);
+    });
+
+    // Scroll to bottom so newest comment is visible
+    if (postComments.length > 0) {
+      elCommentList.lastElementChild.scrollIntoView({ block: 'nearest' });
+    }
+  }
+
+  function addComment(postId, text) {
+    if (!postId || !text.trim()) return;
+
+    if (!comments[postId]) comments[postId] = [];
+    comments[postId].push({ text: text.trim(), ts: Date.now() });
+    saveComments();
+    renderComments(postId);
+  }
+
+  function formatCommentDate(ts) {
+    const d = new Date(ts);
+    return d.toLocaleDateString('en-GB', {
+      day: 'numeric', month: 'short', year: 'numeric',
+      hour: '2-digit', minute: '2-digit',
     });
   }
 
@@ -451,6 +529,24 @@
       if (!overlayPostId || !currentWeek) return;
       const post = currentWeek.posts.find(function (p) { return p.id === overlayPostId; });
       if (post) copyToClipboard(post.hashtags.join(' '), elCopyHashtagsBtn);
+    });
+
+    // Submit comment via button
+    elCommentSubmitBtn.addEventListener('click', function () {
+      if (!overlayPostId) return;
+      addComment(overlayPostId, elCommentTextarea.value);
+      elCommentTextarea.value = '';
+      elCommentTextarea.focus();
+    });
+
+    // Submit comment via Ctrl+Enter / Cmd+Enter in textarea
+    elCommentTextarea.addEventListener('keydown', function (e) {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+        e.preventDefault();
+        if (!overlayPostId) return;
+        addComment(overlayPostId, elCommentTextarea.value);
+        elCommentTextarea.value = '';
+      }
     });
 
     // Keyboard navigation
