@@ -113,11 +113,9 @@
         <div class="content-sidebar__status">
           <label for="detail-status" class="sidebar-label">Status</label>
           <select class="status-select" id="detail-status" aria-label="Post status">
-            <option value="draft">Draft</option>
             <option value="in-review">In Review</option>
             <option value="approved">Approved</option>
-            <option value="scheduled">Scheduled</option>
-            <option value="published">Published</option>
+            <option value="declined">Declined</option>
           </select>
         </div>
 
@@ -139,6 +137,30 @@
           <button class="copy-btn" id="copy-hashtags-btn" aria-label="Copy hashtags to clipboard">
             Copy Hashtags
           </button>
+        </section>
+
+        <hr class="sidebar-divider">
+
+        <section class="sidebar-section" aria-labelledby="comments-heading">
+          <h3 class="sidebar-label" id="comments-heading">Team Comments</h3>
+
+          <div class="comment-list" id="comment-list" aria-live="polite" aria-label="Comments">
+            <!-- Comments injected by JS -->
+          </div>
+
+          <div class="comment-compose">
+            <textarea
+              class="comment-textarea"
+              id="comment-textarea"
+              placeholder="Add a comment..."
+              aria-label="Write a comment"
+              rows="2"
+              maxlength="500"
+            ></textarea>
+            <button class="comment-submit-btn" id="comment-submit-btn" aria-label="Post comment">
+              Post
+            </button>
+          </div>
         </section>
 
         <hr class="sidebar-divider">
