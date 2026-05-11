@@ -9,7 +9,7 @@
           "id": "d1-salaries",
           "day": "Monday",
           "title": "Graduate Salaries by Sector 2026",
-          "platform": "Instagram",
+          "platform": "Multi-Platform",
           "format": "Carousel",
           "slides": [
             "slide_1.png",
@@ -38,7 +38,7 @@
           "id": "d2-cv",
           "day": "Tuesday",
           "title": "CV Mistakes Tip Card",
-          "platform": "Instagram",
+          "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "tipcard_cv.png"
@@ -60,7 +60,7 @@
           "id": "d3-jobmarket",
           "day": "Wednesday",
           "title": "UK Grad Job Market 2026",
-          "platform": "Instagram",
+          "platform": "Multi-Platform",
           "format": "Carousel",
           "slides": [
             "slide_1.png",
@@ -89,7 +89,7 @@
           "id": "d4-london",
           "day": "Thursday",
           "title": "London vs Regional Salary",
-          "platform": "Instagram",
+          "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "statcard_london.png"
@@ -111,7 +111,7 @@
           "id": "d5-internship",
           "day": "Friday",
           "title": "Turn Your Internship Into a Job Offer",
-          "platform": "Instagram",
+          "platform": "Multi-Platform",
           "format": "Carousel",
           "slides": [
             "slide_1.png",
