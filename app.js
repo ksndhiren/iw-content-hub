@@ -176,7 +176,7 @@
     allWeeks.forEach(function (week) {
       const opt = document.createElement('option');
       opt.value = week.id;
-      opt.textContent = `${week.label} - ${week.dateRange}`;
+      opt.textContent = formatWC(week.weekCommencing) || week.label;
       elWeekSelector.appendChild(opt);
     });
 
@@ -191,9 +191,10 @@
     currentWeek = week;
 
     // Update meta bar
+    const wcLabel = formatWC(week.weekCommencing);
     elWeekMeta.innerHTML = `
       <span class="week-meta__label">${escapeHtml(week.label)}</span>
-      <span class="week-meta__date">${escapeHtml(week.dateRange)}</span>
+      ${wcLabel ? `<span class="week-meta__date">${escapeHtml(wcLabel)}</span>` : ''}
     `;
 
     // Render cards
@@ -664,6 +665,30 @@
   ------------------------------------------------------------------------- */
   function buildImagePath(weekId, postId, filename) {
     return `images/${weekId}/${postId}/${filename}`;
+  }
+
+  /**
+   * Format a week-commencing ISO date string (YYYY-MM-DD) as "w/c 11th May"
+   * Falls back to the raw string if parsing fails.
+   */
+  function formatWC(dateStr) {
+    if (!dateStr) return '';
+    const d = new Date(dateStr + 'T00:00:00');
+    if (isNaN(d)) return dateStr;
+    const day   = d.getUTCDate();
+    const month = d.toLocaleDateString('en-GB', { month: 'long', timeZone: 'UTC' });
+    return 'w/c ' + ordinal(day) + ' ' + month;
+  }
+
+  /** Return number with English ordinal suffix — 1st, 2nd, 3rd, 4th … 11th … 21st */
+  function ordinal(n) {
+    const mod100 = n % 100;
+    const mod10  = n % 10;
+    if (mod100 >= 11 && mod100 <= 13) return n + 'th';
+    if (mod10 === 1) return n + 'st';
+    if (mod10 === 2) return n + 'nd';
+    if (mod10 === 3) return n + 'rd';
+    return n + 'th';
   }
 
   /** Minimal HTML escaping to avoid XSS from JSON data */
