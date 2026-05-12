@@ -538,6 +538,16 @@ a {
   cursor: not-allowed;
 }
 
+.slide-btn--download {
+  margin-left: var(--space-2);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.slide-btn--download:hover {
+  background-color: var(--color-amber);
+  color: var(--color-navy);
+}
+
 .slide-counter {
   font-size: 0.8125rem;
   color: rgba(255, 255, 255, 0.6);
@@ -734,6 +744,38 @@ a {
 
 .site-link:hover {
   color: var(--color-coral);
+}
+
+/* --------------------------------------------------------------------------
+   Download all button
+   -------------------------------------------------------------------------- */
+.download-all-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--color-navy);
+  border-radius: 8px;
+  padding: var(--space-3) var(--space-4);
+  transition: background-color var(--trans-fast);
+  letter-spacing: 0.01em;
+}
+
+.download-all-btn:hover {
+  background-color: var(--color-blue);
+}
+
+.download-all-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.download-all-btn.is-downloading {
+  background-color: var(--color-amber);
+  color: var(--color-navy);
 }
 
 /* --------------------------------------------------------------------------

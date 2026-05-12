@@ -85,6 +85,14 @@
               <polyline points="9 18 15 12 9 6"></polyline>
             </svg>
           </button>
+
+          <button class="slide-btn slide-btn--download" id="download-slide-btn" aria-label="Download this slide">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </button>
         </div>
 
       </div>
@@ -138,6 +146,19 @@
 
         <hr class="sidebar-divider">
 
+        <section class="sidebar-section">
+          <button class="download-all-btn" id="download-all-btn" aria-label="Download all slides as ZIP">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span id="download-all-label">Download All Slides</span>
+          </button>
+        </section>
+
+        <hr class="sidebar-divider">
+
         <section class="sidebar-section" aria-labelledby="comments-heading">
           <h3 class="sidebar-label" id="comments-heading">Team Comments</h3>
 
@@ -177,6 +198,7 @@
     </div>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" crossorigin="anonymous"></script>
   <script src="app.js"></script>
 </body>
 </html>

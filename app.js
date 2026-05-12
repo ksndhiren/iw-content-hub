@@ -62,6 +62,9 @@
   let elDetailHashtags;
   let elCopyCaptionBtn;
   let elCopyHashtagsBtn;
+  let elDownloadSlideBtn;
+  let elDownloadAllBtn;
+  let elDownloadAllLabel;
   let elCommentList;
   let elCommentTextarea;
   let elCommentSubmitBtn;
@@ -98,7 +101,10 @@
     elDetailHashtags  = document.getElementById('detail-hashtags');
     elCopyCaptionBtn  = document.getElementById('copy-caption-btn');
     elCopyHashtagsBtn = document.getElementById('copy-hashtags-btn');
-    elCommentList     = document.getElementById('comment-list');
+    elDownloadSlideBtn  = document.getElementById('download-slide-btn');
+    elDownloadAllBtn    = document.getElementById('download-all-btn');
+    elDownloadAllLabel  = document.getElementById('download-all-label');
+    elCommentList       = document.getElementById('comment-list');
     elCommentTextarea = document.getElementById('comment-textarea');
     elCommentSubmitBtn = document.getElementById('comment-submit-btn');
   }
@@ -430,6 +436,90 @@
   }
 
   /* -------------------------------------------------------------------------
+     Downloads
+  ------------------------------------------------------------------------- */
+  function downloadCurrentSlide() {
+    if (!overlayPostId || !currentWeek) return;
+    const post = currentWeek.posts.find(function (p) { return p.id === overlayPostId; });
+    if (!post) return;
+
+    const url      = buildImagePath(currentWeek.id, post.id, post.slides[currentSlideIdx]);
+    const filename = post.id + '_slide_' + (currentSlideIdx + 1) + '.png';
+
+    fetch(url)
+      .then(function (r) { return r.blob(); })
+      .then(function (blob) {
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(a.href);
+      })
+      .catch(function (err) {
+        console.error('[IW Content Hub] Download failed:', err);
+      });
+  }
+
+  async function downloadAllSlides() {
+    if (!overlayPostId || !currentWeek) return;
+    const post = currentWeek.posts.find(function (p) { return p.id === overlayPostId; });
+    if (!post) return;
+
+    const isSingle = post.slides.length === 1;
+
+    // Single slide - just download directly, no ZIP needed
+    if (isSingle) {
+      downloadCurrentSlide();
+      return;
+    }
+
+    // Multi-slide - bundle as ZIP
+    elDownloadAllBtn.disabled = true;
+    elDownloadAllBtn.classList.add('is-downloading');
+    elDownloadAllLabel.textContent = 'Preparing ZIP...';
+
+    try {
+      const zip     = new JSZip();
+      const folder  = zip.folder(post.id);
+      const total   = post.slides.length;
+
+      for (let i = 0; i < total; i++) {
+        elDownloadAllLabel.textContent = 'Downloading ' + (i + 1) + ' / ' + total + '...';
+        const url      = buildImagePath(currentWeek.id, post.id, post.slides[i]);
+        const response = await fetch(url);
+        const blob     = await response.blob();
+        folder.file('slide_' + (i + 1) + '.png', blob);
+      }
+
+      elDownloadAllLabel.textContent = 'Creating ZIP...';
+      const content = await zip.generateAsync({ type: 'blob' });
+
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(content);
+      a.download = post.id + '_slides.zip';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(a.href);
+
+      elDownloadAllLabel.textContent = 'Downloaded!';
+      setTimeout(function () {
+        elDownloadAllLabel.textContent = 'Download All Slides';
+        elDownloadAllBtn.classList.remove('is-downloading');
+        elDownloadAllBtn.disabled = false;
+      }, 2000);
+
+    } catch (err) {
+      console.error('[IW Content Hub] ZIP download failed:', err);
+      elDownloadAllLabel.textContent = 'Download All Slides';
+      elDownloadAllBtn.classList.remove('is-downloading');
+      elDownloadAllBtn.disabled = false;
+    }
+  }
+
+  /* -------------------------------------------------------------------------
      Comments
   ------------------------------------------------------------------------- */
   function renderComments(postId) {
@@ -548,6 +638,12 @@
         elCommentTextarea.value = '';
       }
     });
+
+    // Download current slide
+    elDownloadSlideBtn.addEventListener('click', downloadCurrentSlide);
+
+    // Download all slides (ZIP for multi-slide, direct for single)
+    elDownloadAllBtn.addEventListener('click', downloadAllSlides);
 
     // Keyboard navigation
     document.addEventListener('keydown', function (e) {
