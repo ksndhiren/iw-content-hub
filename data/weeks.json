@@ -3,7 +3,7 @@
     {
       "id": "week3",
       "label": "Week 3",
-      "dateRange": "May 2026",
+      "weekCommencing": "2026-05-11",
       "posts": [
         {
           "id": "d1-salaries",
