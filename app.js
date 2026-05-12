@@ -673,7 +673,7 @@
    */
   function formatWC(dateStr) {
     if (!dateStr) return '';
-    const d = new Date(dateStr + 'T00:00:00');
+    const d = new Date(dateStr + 'T00:00:00Z');
     if (isNaN(d)) return dateStr;
     const day   = d.getUTCDate();
     const month = d.toLocaleDateString('en-GB', { month: 'long', timeZone: 'UTC' });
