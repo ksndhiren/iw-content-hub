@@ -471,67 +471,17 @@ a {
   overflow: hidden;
 }
 
-/* On mobile the layout stacks vertically */
+/* On mobile the layout stacks vertically.
+   Only layout rules here — component overrides (.content-sidebar,
+   .overlay__close, etc.) are in the block at the end of the file so they
+   come after the base rules and win the cascade. */
 @media (max-width: 767px) {
   .overlay__panel {
     flex-direction: column;
   }
 
-  /* 55vw used viewport width as height — images were tiny (~140px usable area).
-     45% uses parent height (viewport) so the image gets ~330px on a typical iPhone. */
   .slide-viewer {
     flex: 0 0 45%;
-  }
-
-  /* Remove positioning context so the close button can escape to the panel level */
-  .content-sidebar {
-    position: static;
-    flex: 1;
-    min-height: 0;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    padding: var(--space-4) var(--space-4) var(--space-6);
-  }
-
-  /* Pin close button to top-right of the whole panel (over the dark slide area)
-     so it's always visible regardless of sidebar scroll position */
-  .overlay__close {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    width: 44px;
-    height: 44px;
-    background-color: rgba(0, 0, 0, 0.45);
-    color: #ffffff;
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
-    z-index: 10;
-  }
-
-  .overlay__close:hover {
-    background-color: rgba(0, 0, 0, 0.65);
-    color: #ffffff;
-  }
-
-  /* No header padding-right needed — close button no longer overlaps the header */
-  .content-sidebar__header {
-    padding-right: 0;
-  }
-
-  /* iOS 44px minimum touch targets for slide nav */
-  .slide-btn {
-    width: 44px;
-    height: 44px;
-  }
-
-  /* Reduce caption box max-height so more of the sidebar is visible */
-  .caption-box {
-    max-height: 160px;
-  }
-
-  /* Platform tabs: remove extra side padding */
-  .platform-tabs {
-    padding: var(--space-2) 0;
   }
 }
 
@@ -1073,5 +1023,64 @@ a {
 
   .content-sidebar {
     padding: var(--space-4);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Overlay mobile overrides — MUST live after the base .content-sidebar and
+   .overlay__close rules so they win the cascade (earlier placement was
+   being overridden by the base rules defined further down the file)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  /* Remove positioning context so .overlay__close floats up to .overlay__panel */
+  .content-sidebar {
+    position: static;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: var(--space-4) var(--space-4) var(--space-6);
+    border-left: none;
+  }
+
+  /* Pin close button over the dark slide viewer area — always visible
+     regardless of sidebar scroll position */
+  .overlay__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(0, 0, 0, 0.45);
+    color: #ffffff;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    z-index: 10;
+  }
+
+  .overlay__close:hover {
+    background-color: rgba(0, 0, 0, 0.65);
+    color: #ffffff;
+  }
+
+  /* No padding-right needed — close button is no longer inside the header */
+  .content-sidebar__header {
+    padding-right: 0;
+  }
+
+  /* iOS 44px minimum touch targets */
+  .slide-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Cap caption box so more sidebar content is visible */
+  .caption-box {
+    max-height: 160px;
+  }
+
+  /* Remove extra side padding from platform tabs */
+  .platform-tabs {
+    padding: var(--space-2) 0;
   }
 }
