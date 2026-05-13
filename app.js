@@ -86,6 +86,7 @@
   let elCaptionThread;
   let elThreadList;
   let elCopyThreadBtn;
+  let elContentSidebar;
 
   /* -------------------------------------------------------------------------
      Initialisation
@@ -130,6 +131,7 @@
     elCaptionThread     = document.getElementById('caption-thread');
     elThreadList        = document.getElementById('thread-list');
     elCopyThreadBtn     = document.getElementById('copy-thread-btn');
+    elContentSidebar    = document.getElementById('content-sidebar');
   }
 
   /* -------------------------------------------------------------------------
@@ -382,6 +384,9 @@
     void elOverlay.offsetWidth;
     elOverlay.classList.add('is-open');
 
+    // Always start sidebar at top so title/status are visible first
+    elContentSidebar.scrollTop = 0;
+
     // Trap focus — move to close button
     elOverlayClose.focus();
 
@@ -413,8 +418,11 @@
       }
     }
 
-    // Wait for fade-out before hiding
+    // Wait for fade-out before hiding. iOS Safari can drop transitionend,
+    // so a timeout fallback guarantees hidden is always set.
+    var hideTimer = setTimeout(function () { elOverlay.hidden = true; }, 250);
     elOverlay.addEventListener('transitionend', function handler() {
+      clearTimeout(hideTimer);
       elOverlay.hidden = true;
       elOverlay.removeEventListener('transitionend', handler);
     });
