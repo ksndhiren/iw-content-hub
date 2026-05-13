@@ -30,6 +30,17 @@
     'declined':  'Declined',
   };
 
+  /** Max hashtags to show per platform */
+  const PLATFORM_HASHTAG_LIMIT = {
+    'ig-fb':    5,
+    'linkedin': 5,
+    'x':        2,
+    'threads':  5,
+  };
+
+  /** Platforms that show thread-style captions for carousel posts */
+  const THREAD_PLATFORMS = ['x', 'threads'];
+
   /* -------------------------------------------------------------------------
      Module state
   ------------------------------------------------------------------------- */
@@ -39,6 +50,8 @@
   let comments        = {};      // { postId: [{ text, ts }] } persisted in localStorage
   let overlayPostId   = null;    // Post currently open in overlay
   let currentSlideIdx = 0;       // Zero-based slide index in overlay
+  let currentPlatform = 'ig-fb'; // Active platform tab
+  let currentHashtags = [];      // Hashtags currently displayed (platform-filtered)
 
   /* -------------------------------------------------------------------------
      DOM references (resolved once after DOMContentLoaded)
@@ -68,6 +81,11 @@
   let elCommentList;
   let elCommentTextarea;
   let elCommentSubmitBtn;
+  let elPlatformTabs;
+  let elCaptionStandard;
+  let elCaptionThread;
+  let elThreadList;
+  let elCopyThreadBtn;
 
   /* -------------------------------------------------------------------------
      Initialisation
@@ -105,8 +123,13 @@
     elDownloadAllBtn    = document.getElementById('download-all-btn');
     elDownloadAllLabel  = document.getElementById('download-all-label');
     elCommentList       = document.getElementById('comment-list');
-    elCommentTextarea = document.getElementById('comment-textarea');
-    elCommentSubmitBtn = document.getElementById('comment-submit-btn');
+    elCommentTextarea   = document.getElementById('comment-textarea');
+    elCommentSubmitBtn  = document.getElementById('comment-submit-btn');
+    elPlatformTabs      = document.getElementById('platform-tabs');
+    elCaptionStandard   = document.getElementById('caption-standard');
+    elCaptionThread     = document.getElementById('caption-thread');
+    elThreadList        = document.getElementById('thread-list');
+    elCopyThreadBtn     = document.getElementById('copy-thread-btn');
   }
 
   /* -------------------------------------------------------------------------
@@ -334,21 +357,17 @@
     currentSlideIdx = 0;
 
     // Populate sidebar content
-    elOverlayTitle.textContent  = post.title;
-    elDetailDay.textContent     = post.day;
+    elOverlayTitle.textContent   = post.title;
+    elDetailDay.textContent      = post.day;
     elDetailPlatform.textContent = post.platform;
-    elDetailPlatform.className  = 'platform-badge';
-    elDetailStatus.value        = getStatus(post.id, post.status);
-    elDetailCaption.textContent = post.caption;
+    elDetailPlatform.className   = 'platform-badge';
+    elDetailStatus.value         = getStatus(post.id, post.status);
 
-    // Hashtag pills
-    elDetailHashtags.innerHTML = '';
-    post.hashtags.forEach(function (tag) {
-      const pill = document.createElement('span');
-      pill.className   = 'hashtag-pill';
-      pill.textContent = tag;
-      elDetailHashtags.appendChild(pill);
-    });
+    // Reset to default platform then render platform-aware content
+    currentPlatform = 'ig-fb';
+    updatePlatformTabs();
+    renderCaptionForPlatform(post, currentPlatform);
+    renderHashtagsForPlatform(post, currentPlatform);
 
     // Load first slide
     renderSlide(post, 0);
@@ -615,11 +634,9 @@
       if (post) copyToClipboard(post.caption, elCopyCaptionBtn);
     });
 
-    // Copy hashtags
+    // Copy hashtags (copies only the platform-filtered set currently shown)
     elCopyHashtagsBtn.addEventListener('click', function () {
-      if (!overlayPostId || !currentWeek) return;
-      const post = currentWeek.posts.find(function (p) { return p.id === overlayPostId; });
-      if (post) copyToClipboard(post.hashtags.join(' '), elCopyHashtagsBtn);
+      if (currentHashtags.length) copyToClipboard(currentHashtags.join(' '), elCopyHashtagsBtn);
     });
 
     // Submit comment via button
@@ -638,6 +655,18 @@
         addComment(overlayPostId, elCommentTextarea.value);
         elCommentTextarea.value = '';
       }
+    });
+
+    // Platform tab clicks
+    elPlatformTabs.querySelectorAll('.platform-tab').forEach(function (btn) {
+      btn.addEventListener('click', function () { switchPlatform(btn.dataset.platform); });
+    });
+
+    // Copy full thread
+    elCopyThreadBtn.addEventListener('click', function () {
+      if (!overlayPostId || !currentWeek) return;
+      const post = currentWeek.posts.find(function (p) { return p.id === overlayPostId; });
+      if (post && post.captionThread) copyToClipboard(post.captionThread.join('\n\n'), elCopyThreadBtn);
     });
 
     // Download current slide
@@ -665,6 +694,87 @@
   ------------------------------------------------------------------------- */
   function buildImagePath(weekId, postId, filename) {
     return `images/${weekId}/${postId}/${filename}`;
+  }
+
+  /* -------------------------------------------------------------------------
+     Platform switching
+  ------------------------------------------------------------------------- */
+  function switchPlatform(platform) {
+    currentPlatform = platform;
+    updatePlatformTabs();
+    if (!overlayPostId || !currentWeek) return;
+    const post = currentWeek.posts.find(function (p) { return p.id === overlayPostId; });
+    if (!post) return;
+    renderCaptionForPlatform(post, platform);
+    renderHashtagsForPlatform(post, platform);
+  }
+
+  function updatePlatformTabs() {
+    elPlatformTabs.querySelectorAll('.platform-tab').forEach(function (btn) {
+      const active = btn.dataset.platform === currentPlatform;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-selected', String(active));
+    });
+  }
+
+  function renderCaptionForPlatform(post, platform) {
+    const isCarousel       = post.slides.length > 1;
+    const isThreadPlatform = THREAD_PLATFORMS.includes(platform);
+    const hasThread        = isCarousel && isThreadPlatform &&
+                             Array.isArray(post.captionThread) && post.captionThread.length > 0;
+
+    if (hasThread) {
+      elCaptionStandard.hidden = true;
+      elCaptionThread.hidden   = false;
+      renderThreadList(post.captionThread);
+    } else {
+      elCaptionStandard.hidden = false;
+      elCaptionThread.hidden   = true;
+      elDetailCaption.textContent = post.caption;
+    }
+  }
+
+  function renderHashtagsForPlatform(post, platform) {
+    const limit     = PLATFORM_HASHTAG_LIMIT[platform] || 5;
+    currentHashtags = (post.hashtags || []).slice(0, limit);
+
+    elDetailHashtags.innerHTML = '';
+    currentHashtags.forEach(function (tag) {
+      const pill = document.createElement('span');
+      pill.className   = 'hashtag-pill';
+      pill.textContent = tag;
+      elDetailHashtags.appendChild(pill);
+    });
+  }
+
+  function renderThreadList(tweets) {
+    elThreadList.innerHTML = '';
+    tweets.forEach(function (tweet, i) {
+      const charCount = tweet.length;
+      const isOver    = charCount > 280;
+
+      const item = document.createElement('div');
+      item.className = 'thread-item';
+      item.innerHTML =
+        '<div class="thread-item__header">' +
+          '<span class="thread-item__num">' + (i + 1) + '</span>' +
+          '<span class="thread-item__chars' + (isOver ? ' is-over' : '') + '">' + charCount + '/280</span>' +
+          '<button class="thread-item__copy" data-idx="' + i + '" aria-label="Copy post ' + (i + 1) + '">Copy</button>' +
+        '</div>' +
+        '<div class="thread-item__text">' + escapeHtml(tweet) + '</div>';
+
+      elThreadList.appendChild(item);
+    });
+
+    // Bind individual copy buttons
+    elThreadList.querySelectorAll('.thread-item__copy').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (!overlayPostId || !currentWeek) return;
+        const post = currentWeek.posts.find(function (p) { return p.id === overlayPostId; });
+        if (!post || !post.captionThread) return;
+        copyToClipboard(post.captionThread[parseInt(btn.dataset.idx, 10)], btn);
+      });
+    });
   }
 
   /**
