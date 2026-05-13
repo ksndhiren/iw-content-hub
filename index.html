@@ -126,12 +126,31 @@
 
         <hr class="sidebar-divider">
 
+        <div class="platform-tabs" id="platform-tabs" role="tablist" aria-label="Platform">
+          <button class="platform-tab is-active" data-platform="ig-fb" role="tab" aria-selected="true">IG / FB</button>
+          <button class="platform-tab" data-platform="linkedin" role="tab" aria-selected="false">LinkedIn</button>
+          <button class="platform-tab" data-platform="x" role="tab" aria-selected="false">X</button>
+          <button class="platform-tab" data-platform="threads" role="tab" aria-selected="false">Threads</button>
+        </div>
+
+        <hr class="sidebar-divider">
+
         <section class="sidebar-section" aria-labelledby="caption-heading">
           <h3 class="sidebar-label" id="caption-heading">Caption</h3>
-          <div class="caption-box" id="detail-caption" tabindex="0" aria-label="Post caption"></div>
-          <button class="copy-btn" id="copy-caption-btn" aria-label="Copy caption to clipboard">
-            Copy Caption
-          </button>
+
+          <div id="caption-standard">
+            <div class="caption-box" id="detail-caption" tabindex="0" aria-label="Post caption"></div>
+            <button class="copy-btn" id="copy-caption-btn" aria-label="Copy caption to clipboard">
+              Copy Caption
+            </button>
+          </div>
+
+          <div id="caption-thread" hidden>
+            <div class="thread-list" id="thread-list"></div>
+            <button class="copy-btn" id="copy-thread-btn" aria-label="Copy full thread to clipboard">
+              Copy Full Thread
+            </button>
+          </div>
         </section>
 
         <hr class="sidebar-divider">

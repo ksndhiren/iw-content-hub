@@ -649,6 +649,109 @@ a {
   border-color: var(--color-blue);
 }
 
+/* Platform tabs */
+.platform-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  padding: var(--space-3) var(--space-4);
+}
+
+.platform-tab {
+  padding: 8px 4px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--color-text-muted);
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: color var(--trans-fast), background-color var(--trans-fast), border-color var(--trans-fast);
+}
+
+.platform-tab:hover {
+  color: var(--color-text);
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.platform-tab.is-active {
+  background: var(--color-amber);
+  color: var(--color-navy);
+  border-color: var(--color-amber);
+}
+
+/* Thread view */
+.thread-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.thread-item {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.thread-item__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.thread-item__num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-amber);
+  color: var(--color-navy);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.thread-item__chars {
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  margin-left: auto;
+}
+
+.thread-item__chars.is-over {
+  color: var(--color-coral);
+  font-weight: 700;
+}
+
+.thread-item__copy {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  background: rgba(0, 0, 0, 0.06);
+  border: none;
+  border-radius: 4px;
+  padding: 3px 8px;
+  cursor: pointer;
+  transition: background-color var(--trans-fast), color var(--trans-fast);
+}
+
+.thread-item__copy:hover {
+  background: rgba(0, 0, 0, 0.12);
+  color: var(--color-text);
+}
+
+.thread-item__text {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--color-text);
+  white-space: pre-wrap;
+}
+
 /* Dividers */
 .sidebar-divider {
   border: none;
