@@ -395,6 +395,24 @@
     // Capture the id before clearing it so focus-return works
     const returningPostId = overlayPostId;
 
+    // Guarantee the card badge reflects the saved status when the overlay closes.
+    // The change handler updates it in real-time, but this acts as a hard sync
+    // so any edge case (mobile native picker, fast close, etc.) can't leave the
+    // badge out of sync.
+    if (returningPostId && currentWeek) {
+      const post        = currentWeek.posts.find(function (p) { return p.id === returningPostId; });
+      const savedStatus = getStatus(returningPostId, post ? post.status : 'in-review');
+      const badge       = elPostGrid.querySelector('.status-badge[data-post-id="' + returningPostId + '"]');
+      if (badge) {
+        STATUS_CYCLE.forEach(function (s) { badge.classList.remove('status-badge--' + s); });
+        badge.classList.add('status-badge--' + savedStatus);
+        badge.textContent = STATUS_LABELS[savedStatus];
+        badge.setAttribute('aria-label', 'Status: ' + STATUS_LABELS[savedStatus] + '. Click to cycle status.');
+        const card = badge.closest('.post-card');
+        if (card && post) card.setAttribute('aria-label', post.title + ', ' + STATUS_LABELS[savedStatus]);
+      }
+    }
+
     // Wait for fade-out before hiding
     elOverlay.addEventListener('transitionend', function handler() {
       elOverlay.hidden = true;
