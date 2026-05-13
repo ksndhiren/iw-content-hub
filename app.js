@@ -476,14 +476,29 @@
   /* -------------------------------------------------------------------------
      Downloads
   ------------------------------------------------------------------------- */
+
+  /** iOS Safari ignores the `download` attribute and won't accept blob URLs.
+   *  Open the image in a new tab instead — the user can long-press to save. */
+  function isIOS() {
+    return (
+      /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+    );
+  }
+
   function downloadCurrentSlide() {
     if (!overlayPostId || !currentWeek) return;
     const post = currentWeek.posts.find(function (p) { return p.id === overlayPostId; });
     if (!post) return;
 
-    const url      = buildImagePath(currentWeek.id, post.id, post.slides[currentSlideIdx]);
-    const filename = post.id + '_slide_' + (currentSlideIdx + 1) + '.png';
+    const url = buildImagePath(currentWeek.id, post.id, post.slides[currentSlideIdx]);
 
+    if (isIOS()) {
+      window.open(url, '_blank');
+      return;
+    }
+
+    const filename = post.id + '_slide_' + (currentSlideIdx + 1) + '.png';
     fetch(url)
       .then(function (r) { return r.blob(); })
       .then(function (blob) {
@@ -507,9 +522,18 @@
 
     const isSingle = post.slides.length === 1;
 
-    // Single slide - just download directly, no ZIP needed
+    // Single slide
     if (isSingle) {
       downloadCurrentSlide();
+      return;
+    }
+
+    // iOS can't download ZIPs — guide the user to save slides individually
+    if (isIOS()) {
+      elDownloadAllLabel.textContent = 'Use ↓ on each slide to save';
+      setTimeout(function () {
+        elDownloadAllLabel.textContent = 'Download All Slides';
+      }, 3000);
       return;
     }
 

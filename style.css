@@ -477,13 +477,43 @@ a {
     flex-direction: column;
   }
 
+  /* 55vw used viewport width as height — images were tiny (~140px usable area).
+     45% uses parent height (viewport) so the image gets ~330px on a typical iPhone. */
   .slide-viewer {
-    flex: 0 0 55vw;
+    flex: 0 0 45%;
   }
 
   .content-sidebar {
     flex: 1;
+    min-height: 0;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* iOS 44px minimum touch targets */
+  .slide-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .overlay__close {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Tighten sidebar padding on mobile to give more room to content */
+  .content-sidebar {
+    padding: var(--space-4) var(--space-4) var(--space-6);
+  }
+
+  /* Reduce caption box max-height so more of the sidebar is visible */
+  .caption-box {
+    max-height: 160px;
+  }
+
+  /* Platform tabs: remove extra side padding they inherit from the sidebar section */
+  .platform-tabs {
+    padding: var(--space-2) 0;
   }
 }
 
@@ -976,6 +1006,26 @@ a {
 .comment-submit-btn:disabled {
   opacity: 0.4;
   cursor: not-allowed;
+}
+
+/* --------------------------------------------------------------------------
+   Very small screens: 4 platform tabs need smaller text (< 360px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 359px) {
+  .platform-tabs {
+    gap: 4px;
+  }
+
+  .platform-tab {
+    font-size: 0.625rem;
+    padding: 6px 2px;
+    letter-spacing: 0;
+  }
+
+  .week-selector {
+    min-width: 110px;
+    font-size: 0.75rem;
+  }
 }
 
 /* --------------------------------------------------------------------------
