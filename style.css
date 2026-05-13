@@ -483,27 +483,45 @@ a {
     flex: 0 0 45%;
   }
 
+  /* Remove positioning context so the close button can escape to the panel level */
   .content-sidebar {
+    position: static;
     flex: 1;
     min-height: 0;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    padding: var(--space-4) var(--space-4) var(--space-6);
   }
 
-  /* iOS 44px minimum touch targets */
+  /* Pin close button to top-right of the whole panel (over the dark slide area)
+     so it's always visible regardless of sidebar scroll position */
+  .overlay__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(0, 0, 0, 0.45);
+    color: #ffffff;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    z-index: 10;
+  }
+
+  .overlay__close:hover {
+    background-color: rgba(0, 0, 0, 0.65);
+    color: #ffffff;
+  }
+
+  /* No header padding-right needed — close button no longer overlaps the header */
+  .content-sidebar__header {
+    padding-right: 0;
+  }
+
+  /* iOS 44px minimum touch targets for slide nav */
   .slide-btn {
     width: 44px;
     height: 44px;
-  }
-
-  .overlay__close {
-    width: 44px;
-    height: 44px;
-  }
-
-  /* Tighten sidebar padding on mobile to give more room to content */
-  .content-sidebar {
-    padding: var(--space-4) var(--space-4) var(--space-6);
   }
 
   /* Reduce caption box max-height so more of the sidebar is visible */
@@ -511,7 +529,7 @@ a {
     max-height: 160px;
   }
 
-  /* Platform tabs: remove extra side padding they inherit from the sidebar section */
+  /* Platform tabs: remove extra side padding */
   .platform-tabs {
     padding: var(--space-2) 0;
   }
