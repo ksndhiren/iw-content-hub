@@ -58,6 +58,15 @@
 
     <div class="overlay__panel">
 
+      <!-- Close button lives on the panel so it is always visible on mobile
+           (pinned to the dark slide-viewer corner) and on desktop (sidebar corner) -->
+      <button class="overlay__close" id="overlay-close" aria-label="Close post detail">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
       <!-- Left: slide viewer -->
       <div class="slide-viewer" id="slide-viewer">
 
@@ -99,13 +108,6 @@
 
       <!-- Right: content sidebar -->
       <aside class="content-sidebar" id="content-sidebar">
-
-        <button class="overlay__close" id="overlay-close" aria-label="Close post detail">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
 
         <div class="content-sidebar__header">
           <h2 class="content-sidebar__title" id="overlay-title"></h2>
