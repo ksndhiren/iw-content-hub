@@ -569,7 +569,9 @@ a {
   border-left: 1px solid var(--color-border);
 }
 
-/* Close button */
+/* Close button — positioned on .overlay__panel (position:relative) so it is
+   always visible: desktop = top-right of sidebar area, mobile = top-right
+   of the dark slide viewer. */
 .overlay__close {
   position: absolute;
   top: var(--space-4);
@@ -577,13 +579,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   color: var(--color-text-muted);
   background-color: transparent;
   transition: background-color var(--trans-fast), color var(--trans-fast);
   flex-shrink: 0;
+  z-index: 10;
 }
 
 .overlay__close:hover {
@@ -1032,9 +1035,8 @@ a {
    being overridden by the base rules defined further down the file)
    -------------------------------------------------------------------------- */
 @media (max-width: 767px) {
-  /* Remove positioning context so .overlay__close floats up to .overlay__panel */
+  /* Sidebar scrollable area */
   .content-sidebar {
-    position: static;
     flex: 1;
     min-height: 0;
     overflow-y: auto;
@@ -1043,10 +1045,9 @@ a {
     border-left: none;
   }
 
-  /* Pin close button over the dark slide viewer area — always visible
-     regardless of sidebar scroll position */
+  /* Close button is now a direct child of .overlay__panel (position:relative),
+     positioned over the dark slide area top-right — always visible on mobile */
   .overlay__close {
-    position: absolute;
     top: 12px;
     right: 12px;
     width: 44px;
@@ -1055,7 +1056,6 @@ a {
     color: #ffffff;
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
-    z-index: 10;
   }
 
   .overlay__close:hover {
@@ -1063,7 +1063,7 @@ a {
     color: #ffffff;
   }
 
-  /* No padding-right needed — close button is no longer inside the header */
+  /* No padding-right needed — close button is in the slide area, not the header */
   .content-sidebar__header {
     padding-right: 0;
   }
