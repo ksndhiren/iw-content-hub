@@ -165,6 +165,172 @@
           ]
         }
       ]
+    },
+    {
+      "id": "week4",
+      "label": "Week 4",
+      "weekCommencing": "2026-05-18",
+      "posts": [
+        {
+          "id": "d1-interview",
+          "day": "Monday",
+          "title": "5 Interview Questions Every Recruiter Asks",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png",
+            "slide_8.png"
+          ],
+          "status": "in-review",
+          "caption": "Everyone gets nervous before an interview. But the 5 questions every recruiter asks? You can prepare for those.\n\nPast - Present - Future. Research - Align - Aspire. Real - Addressed - Growing. STAR. Company - Growth - Honest.\n\nThe frameworks that make the difference between stumbling and standing out.\n\nSwipe to nail every one.\n\nFind roles worth preparing for at internwise.co.uk",
+          "captionThread": [
+            "5 questions every recruiter asks in every interview. Here are the exact frameworks to answer each one.",
+            "Q1: \"Tell me about yourself.\" Use Past - Present - Future. Start where you've been. Land where you're going. Keep it under 90 seconds. Practice it out loud until it flows.",
+            "Q2: \"Why do you want to work here?\" Research - Align - Aspire. If your answer works for any company, you haven't done enough research. Name something specific about this one.",
+            "Q3: \"What's your biggest weakness?\" Real - Addressed - Growing. Name an actual weakness. Tell them what you're actively doing about it. Never say 'I'm a perfectionist.'",
+            "Q4: \"Tell me about a time you...\" STAR method. Situation - Task - Action - Result. Use 'I', not 'we'. Quantify the outcome if you can. Prepare 5 of these before any interview.",
+            "Q5: \"Where do you see yourself in 5 years?\" Company - Growth - Honest. Show you want to develop here. Name specific skills. You don't need a 5-year plan. Show ambition and curiosity.",
+            "What every interviewer is actually scoring: Clarity (can you think under pressure?), Self-awareness (do you know yourself?), Fit (does your story match what they need right now?).",
+            "The best answers are prepared, not improvised. Find roles worth preparing for at internwise.co.uk"
+          ],
+          "hashtags": [
+            "#interviewtips",
+            "#jobinterview",
+            "#careeradvice",
+            "#graduatejobs",
+            "#interviewprep",
+            "#jobhunting",
+            "#careertips",
+            "#howtogetajob"
+          ]
+        },
+        {
+          "id": "d2-linkedin",
+          "day": "Tuesday",
+          "title": "Your LinkedIn Profile Is Your CV Now",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "statcard_linkedin.png"
+          ],
+          "status": "in-review",
+          "caption": "9 in 10 recruiters check your profile before they meet you.\n\nYour LinkedIn isn't optional. It's your CV.\n\nA photo gets you 21x more views. A completed summary gets 40x more weekly engagement.\n\nMost candidates apply and then wonder why the phone doesn't ring. Often, the profile told the story first.\n\nFind roles at internwise.co.uk",
+          "hashtags": [
+            "#linkedin",
+            "#linkedintips",
+            "#personalbranding",
+            "#jobsearch",
+            "#careeradvice",
+            "#graduatejobs",
+            "#profiletips",
+            "#jobhunting"
+          ]
+        },
+        {
+          "id": "d3-ats",
+          "day": "Wednesday",
+          "title": "Why 80% of CVs Never Reach a Human (ATS Guide)",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png",
+            "slide_8.png"
+          ],
+          "status": "in-review",
+          "caption": "Most CVs never reach a human.\n\nNot because you're underqualified. Because a piece of software filtered you out first.\n\nTables, columns, graphics, non-standard headings, missing keywords. Each one is a reason to be rejected before anyone reads your name.\n\nThe fix takes less than an hour. Swipe.\n\nFind roles at internwise.co.uk",
+          "captionThread": [
+            "Most CVs are rejected before a human reads them. Not because of experience. Because of formatting. Here's what's getting you filtered out.",
+            "What is ATS? Applicant Tracking Systems scan every CV submitted online. They score you on keywords, structure, and format. Below the threshold, your CV is never seen.",
+            "ATS killer #1: Wrong format. Tables and columns scramble the output. Headers and footers are ignored. Graphics disappear. Use a single-column, plain text layout. Every time.",
+            "ATS killer #2: Missing keywords. If the job description says 'Data Analyst', don't write 'Data Specialist'. Copy the exact phrases from the job description - that's what ATS searches for.",
+            "ATS killer #3: Non-standard headings. ATS looks for 'Work Experience', 'Education', 'Skills'. Not 'My Journey' or 'Things I've Built'. Be completely literal with section titles.",
+            "ATS killer #4: Fancy formatting. Progress bars, logos, coloured boxes, skill chips. All of them confuse the parser. Plain text. Bold for headings. Bullet points only. Nothing else.",
+            "The ATS-proof checklist: .docx format / single column / standard headings / keywords from the JD / no graphics / no text boxes. Six rules. Every application, every time.",
+            "A clean CV gets read by a human. That's the only goal. Find roles worth applying for at internwise.co.uk"
+          ],
+          "hashtags": [
+            "#cvtips",
+            "#resumeadvice",
+            "#ats",
+            "#jobsearch",
+            "#careeradvice",
+            "#graduatejobs",
+            "#howtogetajob",
+            "#cvadvice"
+          ]
+        },
+        {
+          "id": "d4-schemes",
+          "day": "Thursday",
+          "title": "Graduate Schemes vs Direct Entry",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "statcard_schemes.png"
+          ],
+          "status": "in-review",
+          "caption": "1-3% acceptance rate. Applications open September to January only. 9-12 months before you start.\n\nThat's a graduate scheme.\n\nDirect entry at an SME: higher acceptance rate, year-round applications, 4-8 weeks to start.\n\nNeither path is wrong. The question is which one fits where you are right now.\n\nMost graduates only look at one. Most opportunities are on the other.\n\nFind both at internwise.co.uk\n\nSources: ISE Graduate Recruitment Survey 2025/26, High Fliers Graduate Market Report 2026",
+          "hashtags": [
+            "#gradscheme",
+            "#graduatejobs",
+            "#careeradvice",
+            "#ukgraduate",
+            "#directentry",
+            "#jobhunting",
+            "#gradlife",
+            "#careerpath"
+          ]
+        },
+        {
+          "id": "d5-experience",
+          "day": "Friday",
+          "title": "How to Build Experience When You Have None",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "'No relevant experience' is the most common reason graduates don't apply.\n\nIt's also mostly wrong.\n\nYou can build real, CV-worthy experience right now. Without connections. Without a placement already lined up.\n\nBuild something. Volunteer for responsibility. Do a micro-internship. Take one freelance job. Build your presence online.\n\n5 methods. Any of them will move your application from 'no relevant experience' to 'here's what I've done'.\n\nSwipe.\n\nFind entry-level roles at internwise.co.uk",
+          "captionThread": [
+            "Everyone says you need experience. Here's how to get it when you have none. 5 methods that actually work.",
+            "Method 1: Build something. A project beats a blank CV every time. Aspiring marketer? Write a newsletter. Developer? Build an app on GitHub. Analyst? Clean a public dataset and write it up. One finished project beats 10 courses.",
+            "Method 2: Volunteer for responsibility. Not just to attend - to run something. Treasurer, events lead, sports captain. Budget management, coordination, team leadership. It's real experience. Name it properly on your CV.",
+            "Method 3: Micro-internships. Short, project-based, paid roles - usually 1-4 weeks. Low barrier. Real company names on your CV. Do 2-3 back to back and your experience section looks very different.",
+            "Method 4: Freelance, even once. Find one small business that needs a task done. Social content, data work, writing, or design. Write it as 'Freelance [role] - self-employed'. It is legitimate work experience.",
+            "Method 5: Build your online presence. A complete, keyword-rich profile, a GitHub with clean projects, a personal site showing your work. You don't need thousands of followers. You need to be findable.",
+            "You don't need experience to start. You need to start to get experience. Find your first role at internwise.co.uk"
+          ],
+          "hashtags": [
+            "#careertips",
+            "#noexperience",
+            "#entryleveljobs",
+            "#graduatejobs",
+            "#careeradvice",
+            "#cvtips",
+            "#firstjob",
+            "#careerstarter"
+          ]
+        }
+      ]
     }
   ]
 }
