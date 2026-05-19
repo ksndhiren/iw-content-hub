@@ -1,172 +1,6 @@
 {
   "weeks": [
     {
-      "id": "week3",
-      "label": "Week 3",
-      "weekCommencing": "2026-05-11",
-      "posts": [
-        {
-          "id": "d1-salaries",
-          "day": "Monday",
-          "title": "Graduate Salaries by Sector 2026",
-          "platform": "Multi-Platform",
-          "format": "Carousel",
-          "slides": [
-            "slide_1.png",
-            "slide_2.png",
-            "slide_3.png",
-            "slide_4.png",
-            "slide_5.png",
-            "slide_6.png",
-            "slide_7.png",
-            "slide_8.png"
-          ],
-          "status": "in-review",
-          "caption": "What UK employers actually pay you in 2026.\n\nWe broke down graduate starting salaries across every major sector - from £22K in hospitality to £65K+ in finance and law.\n\nThe wild card? A supermarket grad scheme that beats most finance roles on base salary. Not what you expected.\n\nSwipe to see where your sector lands.\n\nFind roles matched to your salary at internwise.co.uk",
-          "captionThread": [
-            "What UK employers actually pay graduates in 2026. Starting salaries broken down across every major sector. The range is wider than most people realise. Here's the full picture.",
-            "Hospitality and retail: £22K-£28K. The lowest-paid sector for graduates. High street roles often start near minimum wage. But top retail grad schemes can reach £40K+.",
-            "Marketing, HR and comms: £25K-£29K. Below the graduate average to start. Digital marketing roles pay better (£27K-£49K). Pick the right company and progression is fast.",
-            "Tech, engineering and consulting: £30K-£55K. The widest range of any sector. Startups start around £28K. Large tech firms go to £55K base. AI Engineer is the fastest-growing grad title in 2026.",
-            "Finance, law and accounting: £35K-£65K+. The highest ceiling. Top City law firm trainees start at £56K. Large accounting firms start £28K-£33K but the long-term ceiling is genuinely high.",
-            "The wild cards: £40K-£52K+. Not finance. Not law. A leading supermarket grad scheme pays £52,020 + a company car. Intelligence services: £40K-£44K. Not what most people expect.",
-            "The number to know: £30,500. That's the broader graduate market average. Top 100 employer median is £35K. Never accept below the market average without a clear reason.",
-            "Now you know the numbers. Find roles matched to your target salary at internwise.co.uk"
-          ],
-          "hashtags": [
-            "#salarytransparency",
-            "#paytransparency",
-            "#gradscheme",
-            "#graduatejobs",
-            "#ukgraduate",
-            "#careeradvice",
-            "#graduatesalary",
-            "#firstjobuk"
-          ]
-        },
-        {
-          "id": "d2-cv",
-          "day": "Tuesday",
-          "title": "CV Mistakes Tip Card",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "tipcard_cv.png"
-          ],
-          "status": "in-review",
-          "caption": "You have more experience than you think.\n\nMost students write 'no relevant experience' on their CV - but you've been building it the whole time. You just weren't counting it.\n\n5 things to add to your CV right now\n\nSave this before your next application.\n\nFind roles at every experience level - internwise.co.uk",
-          "hashtags": [
-            "#cvtips",
-            "#resumeadvice",
-            "#careeradvice",
-            "#jobsearchtips",
-            "#entryleveljobs",
-            "#graduatejobs",
-            "#careertips",
-            "#howtogetajob"
-          ]
-        },
-        {
-          "id": "d3-jobmarket",
-          "day": "Wednesday",
-          "title": "UK Grad Job Market 2026",
-          "platform": "Multi-Platform",
-          "format": "Carousel",
-          "slides": [
-            "slide_1.png",
-            "slide_2.png",
-            "slide_3.png",
-            "slide_4.png",
-            "slide_5.png",
-            "slide_6.png",
-            "slide_7.png",
-            "slide_8.png"
-          ],
-          "status": "in-review",
-          "caption": "The UK grad job market in 2026 is brutal. But most people are fighting the wrong battle.\n\n140 applications per vacancy. 7% fewer jobs. Sounds bad.\n\nBut entry-level only dropped 6% while big schemes fell 10%. SMEs hire year-round. AI and tech are growing fastest.\n\nThe gaps exist. You just have to know where to look. Swipe.\n\ninternwise.co.uk",
-          "captionThread": [
-            "The UK grad job market in 2026 is brutal. But here's exactly where the gaps are. A thread on what the data actually says.",
-            "140 applications per vacancy. 7% fewer grad vacancies. Sounds terrible. But these numbers hide the real picture.",
-            "Entry-level roles fell just 6%. Big corporate schemes fell 10%. The competition is concentrated at the big names. Entry-level is where your opportunity is.",
-            "Three sectors are actively hiring grads right now: AI and technology (fastest growing), health and life sciences, infrastructure and engineering.",
-            "60% of grad applications go to London. But London holds less than half the vacancies. Same roles. Half the competition. Applying only to London makes it harder than it needs to be.",
-            "SMEs hire year-round. No September deadline. No 6-stage process. Most grads ignore them completely. That's your edge.",
-            "44% of Gen Z say not having the right network is their biggest barrier to getting hired. You can build one. It just has to be intentional.",
-            "Stop fighting for the same 100 roles as everyone else. The gaps exist. You just have to know where to look. internwise.co.uk"
-          ],
-          "hashtags": [
-            "#jobmarket",
-            "#graduatejobs",
-            "#careeradvice",
-            "#jobhunting",
-            "#gradscheme",
-            "#ukjobs",
-            "#jobsearchstrategy",
-            "#entrylevel"
-          ]
-        },
-        {
-          "id": "d4-london",
-          "day": "Thursday",
-          "title": "London vs Regional Salary",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "statcard_london.png"
-          ],
-          "status": "in-review",
-          "caption": "£33K in London vs £27K in Manchester.\n\nEveryone assumes London wins. The maths says otherwise.\n\nAfter rent (avg £1,500/mo) and travel (£180/mo), the London grad keeps £200 less every month than the Manchester grad.\n\nThe salary gap disappears in month one.\n\nDo the maths before you default to London.\n\nFind roles across the UK - internwise.co.uk\n\nSources: High Fliers Graduate Market Report 2026 (salaries) - Rightmove Rental Tracker Q1 2026 (rent) - TfL / Bee Network (transport costs)",
-          "hashtags": [
-            "#londonlife",
-            "#costofliving",
-            "#graduatejobs",
-            "#londonvsmanchester",
-            "#ukcities",
-            "#gradlife",
-            "#salaryadvice",
-            "#relocateuk"
-          ]
-        },
-        {
-          "id": "d5-internship",
-          "day": "Friday",
-          "title": "Turn Your Internship Into a Job Offer",
-          "platform": "Multi-Platform",
-          "format": "Carousel",
-          "slides": [
-            "slide_1.png",
-            "slide_2.png",
-            "slide_3.png",
-            "slide_4.png",
-            "slide_5.png",
-            "slide_6.png",
-            "slide_7.png"
-          ],
-          "status": "in-review",
-          "caption": "Most interns finish and leave. The ones who got return offers did 3 things differently.\n\nIt's not about being the smartest in the room. Not about staying late every night.\n\nIt's about treating the internship like a 10-week interview - and playing it accordingly.\n\nSwipe for the full playbook.\n\nFind internships worth converting - internwise.co.uk",
-          "captionThread": [
-            "Most interns finish and leave. Here's what the ones who got return offers did differently. A playbook in 3 steps.",
-            "Thing 1: treat it like a 10-week interview. Not a CV builder. Not work experience. An audition. Every interaction counts.",
-            "Thing 2: own one project. Deliver it visibly. Don't wait to be assigned credit. Make sure the right people see the outcome.",
-            "Thing 3: build relationships up and across. Not just your manager. The people two levels up. The people in other teams. Conversations, not just connections.",
-            "Most interns ask the wrong question. Not 'Can I have a job?' but 'What would I need to demonstrate for a return offer?' Then go and demonstrate it.",
-            "What most interns do: turn up, do the work, say goodbye. And wonder why the offer didn't come.",
-            "A return offer isn't luck. It's a playbook. Find internships worth converting. internwise.co.uk"
-          ],
-          "hashtags": [
-            "#internshiptips",
-            "#internship",
-            "#careeradvice",
-            "#joboffer",
-            "#workplacetips",
-            "#graduatejobs",
-            "#internlife",
-            "#careersuccess"
-          ]
-        }
-      ]
-    },
-    {
       "id": "week4",
       "label": "Week 4",
       "weekCommencing": "2026-05-18",
@@ -328,6 +162,172 @@
             "#cvtips",
             "#firstjob",
             "#careerstarter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "week3",
+      "label": "Week 3",
+      "weekCommencing": "2026-05-11",
+      "posts": [
+        {
+          "id": "d1-salaries",
+          "day": "Monday",
+          "title": "Graduate Salaries by Sector 2026",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png",
+            "slide_8.png"
+          ],
+          "status": "in-review",
+          "caption": "What UK employers actually pay you in 2026.\n\nWe broke down graduate starting salaries across every major sector - from £22K in hospitality to £65K+ in finance and law.\n\nThe wild card? A supermarket grad scheme that beats most finance roles on base salary. Not what you expected.\n\nSwipe to see where your sector lands.\n\nFind roles matched to your salary at internwise.co.uk",
+          "captionThread": [
+            "What UK employers actually pay graduates in 2026. Starting salaries broken down across every major sector. The range is wider than most people realise. Here's the full picture.",
+            "Hospitality and retail: £22K-£28K. The lowest-paid sector for graduates. High street roles often start near minimum wage. But top retail grad schemes can reach £40K+.",
+            "Marketing, HR and comms: £25K-£29K. Below the graduate average to start. Digital marketing roles pay better (£27K-£49K). Pick the right company and progression is fast.",
+            "Tech, engineering and consulting: £30K-£55K. The widest range of any sector. Startups start around £28K. Large tech firms go to £55K base. AI Engineer is the fastest-growing grad title in 2026.",
+            "Finance, law and accounting: £35K-£65K+. The highest ceiling. Top City law firm trainees start at £56K. Large accounting firms start £28K-£33K but the long-term ceiling is genuinely high.",
+            "The wild cards: £40K-£52K+. Not finance. Not law. A leading supermarket grad scheme pays £52,020 + a company car. Intelligence services: £40K-£44K. Not what most people expect.",
+            "The number to know: £30,500. That's the broader graduate market average. Top 100 employer median is £35K. Never accept below the market average without a clear reason.",
+            "Now you know the numbers. Find roles matched to your target salary at internwise.co.uk"
+          ],
+          "hashtags": [
+            "#salarytransparency",
+            "#paytransparency",
+            "#gradscheme",
+            "#graduatejobs",
+            "#ukgraduate",
+            "#careeradvice",
+            "#graduatesalary",
+            "#firstjobuk"
+          ]
+        },
+        {
+          "id": "d2-cv",
+          "day": "Tuesday",
+          "title": "CV Mistakes Tip Card",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "tipcard_cv.png"
+          ],
+          "status": "in-review",
+          "caption": "You have more experience than you think.\n\nMost students write 'no relevant experience' on their CV - but you've been building it the whole time. You just weren't counting it.\n\n5 things to add to your CV right now\n\nSave this before your next application.\n\nFind roles at every experience level - internwise.co.uk",
+          "hashtags": [
+            "#cvtips",
+            "#resumeadvice",
+            "#careeradvice",
+            "#jobsearchtips",
+            "#entryleveljobs",
+            "#graduatejobs",
+            "#careertips",
+            "#howtogetajob"
+          ]
+        },
+        {
+          "id": "d3-jobmarket",
+          "day": "Wednesday",
+          "title": "UK Grad Job Market 2026",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png",
+            "slide_8.png"
+          ],
+          "status": "in-review",
+          "caption": "The UK grad job market in 2026 is brutal. But most people are fighting the wrong battle.\n\n140 applications per vacancy. 7% fewer jobs. Sounds bad.\n\nBut entry-level only dropped 6% while big schemes fell 10%. SMEs hire year-round. AI and tech are growing fastest.\n\nThe gaps exist. You just have to know where to look. Swipe.\n\ninternwise.co.uk",
+          "captionThread": [
+            "The UK grad job market in 2026 is brutal. But here's exactly where the gaps are. A thread on what the data actually says.",
+            "140 applications per vacancy. 7% fewer grad vacancies. Sounds terrible. But these numbers hide the real picture.",
+            "Entry-level roles fell just 6%. Big corporate schemes fell 10%. The competition is concentrated at the big names. Entry-level is where your opportunity is.",
+            "Three sectors are actively hiring grads right now: AI and technology (fastest growing), health and life sciences, infrastructure and engineering.",
+            "60% of grad applications go to London. But London holds less than half the vacancies. Same roles. Half the competition. Applying only to London makes it harder than it needs to be.",
+            "SMEs hire year-round. No September deadline. No 6-stage process. Most grads ignore them completely. That's your edge.",
+            "44% of Gen Z say not having the right network is their biggest barrier to getting hired. You can build one. It just has to be intentional.",
+            "Stop fighting for the same 100 roles as everyone else. The gaps exist. You just have to know where to look. internwise.co.uk"
+          ],
+          "hashtags": [
+            "#jobmarket",
+            "#graduatejobs",
+            "#careeradvice",
+            "#jobhunting",
+            "#gradscheme",
+            "#ukjobs",
+            "#jobsearchstrategy",
+            "#entrylevel"
+          ]
+        },
+        {
+          "id": "d4-london",
+          "day": "Thursday",
+          "title": "London vs Regional Salary",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "statcard_london.png"
+          ],
+          "status": "in-review",
+          "caption": "£33K in London vs £27K in Manchester.\n\nEveryone assumes London wins. The maths says otherwise.\n\nAfter rent (avg £1,500/mo) and travel (£180/mo), the London grad keeps £200 less every month than the Manchester grad.\n\nThe salary gap disappears in month one.\n\nDo the maths before you default to London.\n\nFind roles across the UK - internwise.co.uk\n\nSources: High Fliers Graduate Market Report 2026 (salaries) - Rightmove Rental Tracker Q1 2026 (rent) - TfL / Bee Network (transport costs)",
+          "hashtags": [
+            "#londonlife",
+            "#costofliving",
+            "#graduatejobs",
+            "#londonvsmanchester",
+            "#ukcities",
+            "#gradlife",
+            "#salaryadvice",
+            "#relocateuk"
+          ]
+        },
+        {
+          "id": "d5-internship",
+          "day": "Friday",
+          "title": "Turn Your Internship Into a Job Offer",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "Most interns finish and leave. The ones who got return offers did 3 things differently.\n\nIt's not about being the smartest in the room. Not about staying late every night.\n\nIt's about treating the internship like a 10-week interview - and playing it accordingly.\n\nSwipe for the full playbook.\n\nFind internships worth converting - internwise.co.uk",
+          "captionThread": [
+            "Most interns finish and leave. Here's what the ones who got return offers did differently. A playbook in 3 steps.",
+            "Thing 1: treat it like a 10-week interview. Not a CV builder. Not work experience. An audition. Every interaction counts.",
+            "Thing 2: own one project. Deliver it visibly. Don't wait to be assigned credit. Make sure the right people see the outcome.",
+            "Thing 3: build relationships up and across. Not just your manager. The people two levels up. The people in other teams. Conversations, not just connections.",
+            "Most interns ask the wrong question. Not 'Can I have a job?' but 'What would I need to demonstrate for a return offer?' Then go and demonstrate it.",
+            "What most interns do: turn up, do the work, say goodbye. And wonder why the offer didn't come.",
+            "A return offer isn't luck. It's a playbook. Find internships worth converting. internwise.co.uk"
+          ],
+          "hashtags": [
+            "#internshiptips",
+            "#internship",
+            "#careeradvice",
+            "#joboffer",
+            "#workplacetips",
+            "#graduatejobs",
+            "#internlife",
+            "#careersuccess"
           ]
         }
       ]
