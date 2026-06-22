@@ -485,31 +485,45 @@
      Downloads
   ------------------------------------------------------------------------- */
 
-  /** iOS Safari ignores the `download` attribute and won't accept blob URLs.
-   *  Open the image in a new tab instead — the user can long-press to save. */
+  /** Detect iOS (iPhone / iPad including iPadOS which reports MacIntel on newer devices) */
   function isIOS() {
     return (
-      /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+      /iPhone|iPod/.test(navigator.userAgent) ||
+      /iPad/.test(navigator.userAgent) ||
+      (navigator.maxTouchPoints > 1 && /Mac/.test(navigator.platform || ''))
     );
   }
 
+  /**
+   * Download the currently-displayed slide.
+   * Uses Web Share API on mobile (opens native share sheet → Save to Gallery).
+   * Falls back to blob download on desktop.
+   */
   function downloadCurrentSlide() {
     if (!overlayPostId || !currentWeek) return;
     const post = currentWeek.posts.find(function (p) { return p.id === overlayPostId; });
     if (!post) return;
 
-    const url = buildImagePath(currentWeek.id, post.id, post.slides[currentSlideIdx]);
-
-    if (isIOS()) {
-      window.open(url, '_blank');
-      return;
-    }
-
+    const url      = buildImagePath(currentWeek.id, post.id, post.slides[currentSlideIdx]);
     const filename = post.id + '_slide_' + (currentSlideIdx + 1) + '.png';
+
     fetch(url)
       .then(function (r) { return r.blob(); })
       .then(function (blob) {
+        const file = new File([blob], filename, { type: 'image/png' });
+
+        // Web Share API — opens native share sheet on iOS/Android
+        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+          return navigator.share({ files: [file] });
+        }
+
+        // iOS without Share API — open in new tab, long-press to save
+        if (isIOS()) {
+          window.open(URL.createObjectURL(blob), '_blank');
+          return;
+        }
+
+        // Desktop — direct blob download
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
         a.download = filename;
@@ -519,53 +533,80 @@
         URL.revokeObjectURL(a.href);
       })
       .catch(function (err) {
-        console.error('[IW Content Hub] Download failed:', err);
+        if (err && err.name !== 'AbortError') {
+          console.error('[IW Content Hub] Download failed:', err);
+        }
       });
   }
 
+  /**
+   * Download all slides for the open post.
+   *
+   * Priority:
+   *  1. Web Share API (iOS 15+ / Android Chrome 86+) → native share sheet → Save to Gallery
+   *  2. iOS without Share API → open each slide in a new tab (long-press to save)
+   *  3. Desktop / Android → ZIP bundle via JSZip
+   */
   async function downloadAllSlides() {
     if (!overlayPostId || !currentWeek) return;
     const post = currentWeek.posts.find(function (p) { return p.id === overlayPostId; });
     if (!post) return;
 
-    const isSingle = post.slides.length === 1;
-
-    // Single slide
-    if (isSingle) {
+    // Single slide — reuse single-slide path
+    if (post.slides.length === 1) {
       downloadCurrentSlide();
       return;
     }
 
-    // iOS can't download ZIPs — guide the user to save slides individually
-    if (isIOS()) {
-      elDownloadAllLabel.textContent = 'Use ↓ on each slide to save';
-      setTimeout(function () {
-        elDownloadAllLabel.textContent = 'Download All Slides';
-      }, 3000);
-      return;
-    }
-
-    // Multi-slide - bundle as ZIP
     elDownloadAllBtn.disabled = true;
     elDownloadAllBtn.classList.add('is-downloading');
-    elDownloadAllLabel.textContent = 'Preparing ZIP...';
 
     try {
-      const zip     = new JSZip();
-      const folder  = zip.folder(post.id);
-      const total   = post.slides.length;
+      const total = post.slides.length;
+      const blobs = [];
 
+      // Fetch all images as blobs
       for (let i = 0; i < total; i++) {
-        elDownloadAllLabel.textContent = 'Downloading ' + (i + 1) + ' / ' + total + '...';
-        const url      = buildImagePath(currentWeek.id, post.id, post.slides[i]);
-        const response = await fetch(url);
-        const blob     = await response.blob();
-        folder.file('slide_' + (i + 1) + '.png', blob);
+        elDownloadAllLabel.textContent = 'Loading ' + (i + 1) + ' / ' + total + '...';
+        const url = buildImagePath(currentWeek.id, post.id, post.slides[i]);
+        const res = await fetch(url);
+        blobs.push(await res.blob());
       }
 
-      elDownloadAllLabel.textContent = 'Creating ZIP...';
-      const content = await zip.generateAsync({ type: 'blob' });
+      const shareFiles = blobs.map(function (blob, i) {
+        return new File([blob], post.id + '_slide_' + (i + 1) + '.png', { type: 'image/png' });
+      });
 
+      // ── Path 1: Web Share API ──────────────────────────────────────────────
+      // Opens native iOS/Android share sheet — tap "Save Image" to add to gallery
+      if (navigator.canShare && navigator.canShare({ files: shareFiles })) {
+        elDownloadAllLabel.textContent = 'Opening share sheet...';
+        await navigator.share({ title: post.title, files: shareFiles });
+        elDownloadAllLabel.textContent = 'Download All Slides';
+        return;
+      }
+
+      // ── Path 2: iOS without Share API ─────────────────────────────────────
+      // Open each slide in a new tab; user long-presses → Save to Photos
+      if (isIOS()) {
+        for (let i = 0; i < total; i++) {
+          elDownloadAllLabel.textContent = 'Opening ' + (i + 1) + ' / ' + total + '...';
+          window.open(URL.createObjectURL(blobs[i]), '_blank');
+          await new Promise(function (r) { setTimeout(r, 800); });
+        }
+        elDownloadAllLabel.textContent = 'Long-press each tab to save';
+        setTimeout(function () { elDownloadAllLabel.textContent = 'Download All Slides'; }, 4000);
+        return;
+      }
+
+      // ── Path 3: Desktop / Android — ZIP ───────────────────────────────────
+      elDownloadAllLabel.textContent = 'Creating ZIP...';
+      const zip    = new JSZip();
+      const folder = zip.folder(post.id);
+      blobs.forEach(function (blob, i) {
+        folder.file('slide_' + (i + 1) + '.png', blob);
+      });
+      const content = await zip.generateAsync({ type: 'blob' });
       const a = document.createElement('a');
       a.href = URL.createObjectURL(content);
       a.download = post.id + '_slides.zip';
@@ -573,17 +614,15 @@
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(a.href);
-
       elDownloadAllLabel.textContent = 'Downloaded!';
-      setTimeout(function () {
-        elDownloadAllLabel.textContent = 'Download All Slides';
-        elDownloadAllBtn.classList.remove('is-downloading');
-        elDownloadAllBtn.disabled = false;
-      }, 2000);
+      setTimeout(function () { elDownloadAllLabel.textContent = 'Download All Slides'; }, 2000);
 
     } catch (err) {
-      console.error('[IW Content Hub] ZIP download failed:', err);
+      if (err && err.name !== 'AbortError') {
+        console.error('[IW Content Hub] Download failed:', err);
+      }
       elDownloadAllLabel.textContent = 'Download All Slides';
+    } finally {
       elDownloadAllBtn.classList.remove('is-downloading');
       elDownloadAllBtn.disabled = false;
     }
