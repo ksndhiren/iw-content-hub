@@ -331,6 +331,146 @@
           ]
         }
       ]
+    },
+    {
+      "id": "week5",
+      "label": "Week 5",
+      "weekCommencing": "2026-06-22",
+      "posts": [
+        {
+          "id": "d1-assessment",
+          "day": "Monday",
+          "title": "Assessment Centres: What They Actually Test",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "Most candidates prepare for the interview. The assessment centre is a different challenge entirely.\n\nGroup exercises. Case studies. Written tests. A competency interview. And lunch - where you're still being observed.\n\nSwipe for the full playbook on what they actually measure and how to prepare for each stage.\n\nFind roles worth preparing for at internwise.co.uk",
+          "hashtags": [
+            "#assessmentcentre",
+            "#graduatejobs",
+            "#careeradvice",
+            "#interviewtips",
+            "#jobsearch",
+            "#graduaterecruitment",
+            "#careertips",
+            "#ukjobs"
+          ]
+        },
+        {
+          "id": "d2-application",
+          "day": "Tuesday",
+          "title": "What Happens After You Hit Send",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "statcard_application.png"
+          ],
+          "status": "in-review",
+          "caption": "Most candidates optimise their CV for the job description. Very few optimise for what happens after they submit.\n\nThere are 5 stages between your application and an offer. Each one filters for something different.\n\nKnowing what each stage is actually looking for changes how you prepare at every step.\n\nFind roles at internwise.co.uk",
+          "hashtags": [
+            "#jobsearch",
+            "#applicationtips",
+            "#careeradvice",
+            "#graduatejobs",
+            "#hiringprocess",
+            "#jobhunting",
+            "#careerstrategy",
+            "#ukjobs"
+          ]
+        },
+        {
+          "id": "d3-coverletter",
+          "day": "Wednesday",
+          "title": "Write a Cover Letter That Gets Read",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "Your cover letter has about 8 seconds.\n\nThree paragraphs. One hook that's specific to this company. One paragraph of matched evidence. One confident close.\n\nMost letters get cut because they could have been sent to any company. The ones that get read couldn't.\n\nSwipe for the full framework - structure, opening line formula, tailoring method, and before/after examples.\n\nFind roles worth applying for at internwise.co.uk",
+          "hashtags": [
+            "#coverletter",
+            "#coverlettertips",
+            "#jobsearch",
+            "#careeradvice",
+            "#applicationtips",
+            "#graduatejobs",
+            "#jobhunting",
+            "#careertips"
+          ]
+        },
+        {
+          "id": "d4-conversion",
+          "day": "Thursday",
+          "title": "How to Convert Your Internship Into a Full-Time Offer",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png"
+          ],
+          "status": "in-review",
+          "caption": "Getting the internship is step one.\n\nMost interns turn up, do the work, and wait to hear back. The ones who get return offers treat the whole placement differently - from day one to the final week.\n\nFirst 2 weeks. Mid-point check-in. Final 2 weeks. How to bring up the conversation. How to leave well.\n\nSwipe for the full playbook.\n\nFind your next placement at internwise.co.uk",
+          "hashtags": [
+            "#internshiptips",
+            "#internship",
+            "#careeradvice",
+            "#graduatejobs",
+            "#internshiplife",
+            "#careerstrategy",
+            "#jobsearch",
+            "#workplacetips"
+          ]
+        },
+        {
+          "id": "d5-sideprojects",
+          "day": "Friday",
+          "title": "Side Projects That Actually Impress Employers",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "Your side projects speak louder than your degree.\n\nNot because employers don't value your education. Because a working project proves you can actually do the thing, not just study it.\n\nWhat counts. How to build a portfolio that works for your sector. How to list it on your CV so it lands. Tools that cost nothing to start.\n\nSwipe for the full guide.\n\nFind roles to apply to now at internwise.co.uk",
+          "hashtags": [
+            "#sideprojects",
+            "#portfolio",
+            "#careeradvice",
+            "#graduatejobs",
+            "#jobsearch",
+            "#personalbranding",
+            "#careertips",
+            "#ukjobs"
+          ]
+        }
+      ]
     }
   ]
 }
