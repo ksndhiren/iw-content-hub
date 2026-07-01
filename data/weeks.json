@@ -1,6 +1,183 @@
 {
   "weeks": [
     {
+      "id": "week6",
+      "label": "Week 6",
+      "weekCommencing": "2026-06-29",
+      "posts": [
+        {
+          "id": "d1-salary",
+          "day": "Monday",
+          "title": "Salary Negotiation",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "73% of employers expect you to negotiate.\n\nThe average graduate leaves £3,000 on the table because they didn't ask.\n\nOne conversation. Four moves. Done.\n\nSwipe for the exact script.\n\nFind your next role at internwise.co.uk",
+          "captionThread": [
+            "73% of employers expect you to negotiate salary. The average grad leaves £3K unclaimed. Here's the exact 4-step script. A thread.",
+            "Most employers expect graduates to negotiate. £3,000 is the average gap between first offer and what was achievable. You're not being greedy. You're being prepared.",
+            "Four moves. In this order. 1. Wait for the offer. 2. Express genuine enthusiasm. 3. State your number. 4. Stop talking. Silence is your most powerful tool after stating a number.",
+            "Before you negotiate, do your research. Glassdoor, LinkedIn Salary, and job ads in the same space. Know your range. Know the market. Know your floor.",
+            "What to do when they push back. It's normal. Don't panic. Ask about a 3-month salary review or sign-on bonus. Don't fold on the first no.",
+            "The exact words that work: 'Based on my research into the market rate for this role, I was hoping we could get to £[X]. Is there any flexibility there?' Save it. Use it.",
+            "One conversation can close a £3K gap. Most grads don't ask. You now know how. Find roles worth negotiating for at internwise.co.uk"
+          ],
+          "hashtags": [
+            "#salarynegotiation",
+            "#graduatejobs",
+            "#careeradvice",
+            "#jobhunting",
+            "#salarytips",
+            "#ukjobs",
+            "#careertips",
+            "#entrylevel"
+          ]
+        },
+        {
+          "id": "d2-networking",
+          "day": "Tuesday",
+          "title": "Networking Without Cringe",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "statcard_networking.png"
+          ],
+          "status": "in-review",
+          "caption": "Most networking advice makes you feel gross. That's because it treats people like transactions.\n\nThese 5 methods work because they don't.\n\nComment before you connect. Give before you ask. Follow up within 24 hours.\n\nNo cringe required.\n\nFind your next opportunity at internwise.co.uk",
+          "hashtags": [
+            "#networking",
+            "#careeradvice",
+            "#graduatejobs",
+            "#linkedintips",
+            "#networkingtips",
+            "#jobhunting",
+            "#careertips",
+            "#professionaldevelopment"
+          ]
+        },
+        {
+          "id": "d3-personalstatement",
+          "day": "Wednesday",
+          "title": "How to Write a Personal Statement",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "A personal statement written for every role is written for no role.\n\nThe ones that get read are specific. They reference the company. They match the language of the job spec. They answer the question before it's asked.\n\nSwipe for the framework.\n\nFind roles worth applying for at internwise.co.uk",
+          "captionThread": [
+            "A personal statement written for every role works for none of them. Here's the framework that actually gets read. A thread.",
+            "30 seconds. That's how long a recruiter spends on a personal statement. Your first 3 lines decide whether they keep reading. Most people waste them on 'I am a passionate and motivated graduate.'",
+            "The framework: ROLE - what you're going for. REASON - why this company specifically. EVIDENCE - one thing you've done that proves it. CTA - why you want to talk.",
+            "The biggest mistake: copying your statement between applications and just changing the company name. Recruiters see hundreds. They know.",
+            "What to do with the job spec: find the 3 words that appear most. Use those exact words in your statement. Not synonyms. The same words.",
+            "Template that works: 'Having studied X at Y, I developed a strong interest in Z. I'm applying to [Company] because [specific reason]. In my [project/role], I [specific outcome].'",
+            "One personal statement won't get you the job. But a bad one will lose it. Start here. Find roles worth writing for at internwise.co.uk"
+          ],
+          "hashtags": [
+            "#personalstatement",
+            "#graduatejobs",
+            "#careeradvice",
+            "#jobapplication",
+            "#cvtips",
+            "#ukjobs",
+            "#jobsearchtips",
+            "#entrylevel"
+          ]
+        },
+        {
+          "id": "d4-referral",
+          "day": "Thursday",
+          "title": "The Referral Advantage",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "Cold applications have a 2% callback rate.\n\nReferrals have 40%.\n\nThe difference isn't luck. It's access.\n\nMost grads skip this step entirely. This is how to get a warm intro even when you don't know anyone at the company.\n\nSwipe.\n\nFind your next role at internwise.co.uk",
+          "captionThread": [
+            "Cold apply: 2% callback rate. Referred: 40%. Most grads skip the referral step entirely. Here's how to get a warm intro when you know no one. A thread.",
+            "Why referrals work: you skip the ATS. You arrive with social proof. The hiring manager already knows your name. You're not a CV in a stack. You're a recommendation.",
+            "How to find who to ask: search LinkedIn for alumni at target companies. Filter by your university + company name. Alumni respond at 3x the rate of cold connections.",
+            "The message that works: 'Hi [Name], I studied [subject] at [uni] too. I'm applying for [role] at [company] and would love to ask one quick question about your experience there. Would that be OK?'",
+            "What to ask first: not 'can you refer me.' Ask for insight. 'What do you wish you'd known before joining?' Build a micro-relationship. Then follow up with the referral ask.",
+            "The timeline: message Monday, give 3 days, follow up once. Never ask for the referral in the first message.",
+            "One warm intro can change the entire outcome. You don't need to know people. You need to know how to reach them. Find roles worth pursuing at internwise.co.uk"
+          ],
+          "hashtags": [
+            "#referral",
+            "#networkingtips",
+            "#graduatejobs",
+            "#careeradvice",
+            "#jobhunting",
+            "#ukjobs",
+            "#jobsearchtips",
+            "#entrylevel"
+          ]
+        },
+        {
+          "id": "d5-firstdays",
+          "day": "Friday",
+          "title": "Your First 30 Days",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "The first 30 days at a new job shape how they see you for the first year.\n\nMost people spend them trying not to make mistakes. The smart ones spend them building visibility.\n\nHere's the playbook.\n\ninternwise.co.uk",
+          "captionThread": [
+            "The first 30 days at a new job shape how they see you for the first year. Here's the playbook for getting it right from day one. A thread.",
+            "Week 1 rule: listen more than you speak. Observe the culture before you comment on it. Learn the names. Understand the politics. Ask questions. Don't have opinions yet.",
+            "Week 2 goal: pick one visible task and deliver it cleanly. Doesn't need to be big. Needs to be on time and well-communicated. Reliability compounds.",
+            "Week 3 move: schedule a coffee chat with someone outside your direct team. One conversation builds more goodwill than a month of desk work.",
+            "Day 25: ask your manager for feedback. Not 'how am I doing?' Ask: 'What's one thing I could do differently in the next 30 days?' They'll remember you asked.",
+            "The 30-day checklist: know 20 names. Deliver one thing with a clear outcome. Have one meaningful conversation outside your team. Ask for feedback at least once.",
+            "Month one is a gift. You have permission to ask anything, meet anyone, and get things slightly wrong. Use it. Find roles worth starting at internwise.co.uk"
+          ],
+          "hashtags": [
+            "#newjob",
+            "#careeradvice",
+            "#firstday",
+            "#workplacetips",
+            "#graduatejobs",
+            "#careertips",
+            "#professionaldevelopment",
+            "#newstarter"
+          ]
+        }
+      ]
+    },
+    {
       "id": "week5",
       "label": "Week 5",
       "weekCommencing": "2026-06-22",
