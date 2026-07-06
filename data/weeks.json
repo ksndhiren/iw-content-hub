@@ -1,6 +1,183 @@
 {
   "weeks": [
     {
+      "id": "week7",
+      "label": "Week 7",
+      "weekCommencing": "2026-07-06",
+      "posts": [
+        {
+          "id": "d1-videointerview",
+          "day": "Monday",
+          "title": "Video Interview Mastery",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "90% of graduate first rounds are now on video.\n\nAnd recruiters decide in 7 seconds. Most of that decision comes from your setup, your body language, your first 60 seconds - not your answers.\n\nHere's the room, the script, and the rescue plan.\n\nFind roles worth interviewing for at internwise.co.uk",
+          "captionThread": [
+            "90% of grad first rounds are now video. And recruiters decide in the first 7 seconds. Here's how to nail those seconds - the room, the opening, the body language. A thread.",
+            "The data: 90% of grad first-rounds are video. 7 seconds is the decision window. 55% of that first impression is body language and setting, not your words. Your setup does half the work.",
+            "The 5 setup rules: camera at eye level (stack books). Light in front, never behind. Neutral background. Wired ethernet if possible. Wired headphones - AirPods die at the worst moment.",
+            "Your first 60 seconds: smile 3 seconds before you unmute. Thank them by name. Then reference one thing about the company - a launch, campaign, or announcement. Warm. Human. Prepared.",
+            "Body language wins: look at the camera not the screen. Nod slowly. Keep hands visible. Lean 5cm forward when engaged. Don't read from notes, don't cross arms, don't look at your own tile.",
+            "When tech dies: if they freeze, wait 10 seconds before repeating. If audio dies, dial in by phone. If a housemate walks in, pause calmly and return. Composure wins the moment.",
+            "Practice. Then practice again. Record yourself. Rewatch on mute - is your body open? Do a full run 24h before the real thing. Find roles worth interviewing for at internwise.co.uk"
+          ],
+          "hashtags": [
+            "#videointerview",
+            "#interviewtips",
+            "#graduatejobs",
+            "#careeradvice",
+            "#jobinterview",
+            "#interviewprep",
+            "#ukjobs",
+            "#entrylevel"
+          ]
+        },
+        {
+          "id": "d2-hiddenmarket",
+          "day": "Tuesday",
+          "title": "The Hidden Job Market",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "statcard_hiddenmarket.png"
+          ],
+          "status": "in-review",
+          "caption": "70% of jobs are never advertised.\n\nWhich means 92% of grads are fighting for 8% of the roles.\n\nReferrals fill 40%. Direct outreach fills 22%. Alumni networks fill 18%. SMEs hire off-market entirely.\n\nStop searching in the wrong pool.\n\nFind hidden roles at internwise.co.uk\n\nSources: BLS 2025 - LinkedIn Talent Insights 2026",
+          "hashtags": [
+            "#hiddenjobmarket",
+            "#careeradvice",
+            "#graduatejobs",
+            "#networking",
+            "#jobsearchtips",
+            "#ukjobs",
+            "#referrals",
+            "#entrylevel"
+          ]
+        },
+        {
+          "id": "d3-starmethod",
+          "day": "Wednesday",
+          "title": "STAR Method for Behavioural Interviews",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "Every behavioural interview question is asking for the same thing: a clear story.\n\nSituation. Task. Action. Result.\n\nFour parts. Four sentences. The interviewer stays with you the whole way.\n\nSwipe for the exact structure and 3 stories every grad should have ready.\n\nFind interviews worth prepping for at internwise.co.uk",
+          "captionThread": [
+            "Every 'tell me about a time...' question is asking for the same thing: a clear story in a clear shape. STAR is that shape. A thread on how to use it without sounding robotic.",
+            "Without structure: 'Well, so basically in second year, before that I did this thing, and there was a project, kind of...' With STAR: four sentences, clear beginning, clear end. Interviewers score you higher on communication.",
+            "S = Situation. One sentence. Where, when, what team. Skip the backstory of the backstory. 15 seconds of context is enough.",
+            "T = Task. What YOU needed to do. Make your role obvious, not the team's. This is where interviewers separate you from the group.",
+            "A = Action. 60% of your answer lives here. Use 'I' not 'we'. Every sentence. Show judgment, not just activity.",
+            "R = Result. Numbers, always numbers. Even rough estimates land. Tie it back to the task. End with what you learned - shows self-awareness.",
+            "3 stories every grad needs ready: a time you led something, a time you handled conflict, a time you failed and learned. Drill them into STAR shape. Find interviews at internwise.co.uk"
+          ],
+          "hashtags": [
+            "#starmethod",
+            "#interviewtips",
+            "#behaviouralinterview",
+            "#graduatejobs",
+            "#careeradvice",
+            "#interviewprep",
+            "#ukjobs",
+            "#entrylevel"
+          ]
+        },
+        {
+          "id": "d4-followup",
+          "day": "Thursday",
+          "title": "The Follow-Up Email Nobody Sends",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "Only 4% of applicants send a follow-up email.\n\nThe ones who do are 3x more likely to get an interview.\n\n3 lines. 30 seconds to write. Puts you back at the top of their inbox and their memory.\n\nSwipe for 3 templates (post-apply, post-interview, gentle chase) and what NOT to send.\n\nFind roles at internwise.co.uk",
+          "captionThread": [
+            "Only 4% of applicants ever follow up on their application. The ones who do are 3x more likely to get an interview. 3 lines. 30 seconds. Here's the template. A thread.",
+            "The data: 4% of applicants send follow-ups. Those who do are 3x more likely to get an interview. 48 hours is the sweet spot - too fast looks pushy, too late they've moved on.",
+            "48h after applying template - subject: 'Application for [Role] - one more thing worth knowing'. Then flag one specific relevant thing your CV doesn't capture. Then offer a Loom.",
+            "2h after interview template - subject: 'Thanks for today - and one thought on [topic they raised]'. Reference something specific they said. Show you've kept thinking about it.",
+            "7 days later, no reply - subject: 'Following up - [Role] at [Company]'. Circle back once, ask about the decision timeline. Don't chase again after this.",
+            "What NOT to send: 'Just checking in!!!' Vague and needy. 'Any update?' Puts the burden on them. 'Bumping this to the top of your inbox' - you're not their boss.",
+            "Pick one open application right now. Follow up. 30-second job. Massive upside. Find roles worth following up on at internwise.co.uk"
+          ],
+          "hashtags": [
+            "#followupemail",
+            "#jobsearchtips",
+            "#careeradvice",
+            "#graduatejobs",
+            "#emailtemplate",
+            "#jobapplication",
+            "#ukjobs",
+            "#entrylevel"
+          ]
+        },
+        {
+          "id": "d5-burnout",
+          "day": "Friday",
+          "title": "Job Search Burnout",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "50 no's. Still nothing.\n\nJob search burnout is real. And you're not lazy for feeling it.\n\n63% of grad job seekers report anxiety during their search. The average grad search now takes 6 months. The odds aren't personal.\n\nHere's how to keep going without breaking.\n\nSave this for the day you need it.\n\ninternwise.co.uk",
+          "captionThread": [
+            "50 no's. Still nothing. Job search burnout is real. And you are not lazy for feeling it. A thread on how to keep going without breaking.",
+            "The reality: 63% of grad job seekers report burnout. 140 average applications per grad vacancy. 6 months is the average grad search now. 2% callback rate on cold applies. The odds are not personal.",
+            "Signs you are running on empty: refreshing your inbox knowing nothing new is there. Feeling worse after applying. Comparing yourself to LinkedIn strangers daily. Snapping at people who ask 'any luck yet?'",
+            "New rules for the long haul: cap at 5 applications per day. Block 2 mornings a week for search, zero on the others. Move your body before opening the laptop. Log 3 wins per session.",
+            "When you can't apply to one more thing: close the laptop for the day. Do something you're already good at. Talk to one human who isn't job hunting. Get support if it's been weeks.",
+            "The reframe: a rejection is information, not a verdict. Not 'I'm not good enough' but 'not this one, next.' Every no narrows the search. Every no is a data point.",
+            "You are not your job search. The job will come. It comes for everyone eventually. Keep going, kindly. When you're ready, find your next role at internwise.co.uk"
+          ],
+          "hashtags": [
+            "#jobsearchburnout",
+            "#mentalhealth",
+            "#graduatejobs",
+            "#careeradvice",
+            "#jobhunting",
+            "#burnout",
+            "#ukjobs",
+            "#gradlife"
+          ]
+        }
+      ]
+    },
+    {
       "id": "week6",
       "label": "Week 6",
       "weekCommencing": "2026-06-29",
