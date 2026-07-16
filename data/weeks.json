@@ -1,6 +1,183 @@
 {
   "weeks": [
     {
+      "id": "week8",
+      "label": "Week 8",
+      "weekCommencing": "2026-07-13",
+      "posts": [
+        {
+          "id": "d1-colddm",
+          "day": "Monday",
+          "title": "Cold DMs That Actually Work",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "A researched cold DM gets a 27% reply rate.\n\n'I'd love to connect' gets 2%.\n\nThe difference is 90 words, one specific detail, and one question they can answer in a sentence.\n\nSwipe for the anatomy, the before/after, and who to actually message.\n\nFind roles at internwise.co.uk",
+          "captionThread": [
+            "A specific, researched cold DM gets a 27% reply rate. A generic 'I'd love to connect' gets 2%. Here's the exact anatomy. A thread.",
+            "The numbers: 27% reply on a researched DM. 2% on a generic one. 90 words is the ceiling before it gets skimmed and dropped. Specific beats polite, every time.",
+            "Four parts, in order. 1. Hook: the shared thing. 2. Proof: why you, in one line. 3. Ask: one question with an easy yes. 4. Exit: zero pressure. Ninety words total.",
+            "Before: 'Hi! I'm a final year student and I'd love to connect and learn more about your company.' 40 sent, 0 replies. Generic reads as a mass send, because it is one.",
+            "After: 'Hi Sarah - saw your talk on scaling the payments API. I built a smaller version for my uni society. Was rate-limiting the bit that bit you too?' 40 sent, 11 replies.",
+            "Message the right human: alumni first (3x reply rate), then whoever wrote their eng blog, then the hiring manager (not the recruiter), then someone who joined 3 months ago.",
+            "Four ways it dies: no research, an ask that's too big, over 90 words, or no graceful exit. Pick 5 people. Alumni first. Send today. internwise.co.uk"
+          ],
+          "hashtags": [
+            "#coldoutreach",
+            "#networking",
+            "#graduatejobs",
+            "#careeradvice",
+            "#jobhunting",
+            "#linkedintips",
+            "#ukjobs",
+            "#entrylevel"
+          ]
+        },
+        {
+          "id": "d2-jobspecs",
+          "day": "Tuesday",
+          "title": "Reading Job Specs Like a Recruiter",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "statcard_jobspecs.png"
+          ],
+          "status": "in-review",
+          "caption": "'2+ years experience' means 'we'd like it'. Internships count. Apply anyway.\n\n'Experience with Looker, Tableau, PowerBI, dbt, Airflow' - nobody has all five. Name the two you know.\n\nMost job specs have 2 hard requirements, not 5. You're closer than the spec makes you feel.\n\nFind roles at internwise.co.uk",
+          "hashtags": [
+            "#jobspec",
+            "#jobapplication",
+            "#graduatejobs",
+            "#careeradvice",
+            "#jobhunting",
+            "#recruitment",
+            "#ukjobs",
+            "#entrylevel"
+          ]
+        },
+        {
+          "id": "d3-portfolio",
+          "day": "Wednesday",
+          "title": "The Portfolio Play for Non-Designers",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "76% of hiring managers say a portfolio link changes how they read a CV.\n\nOnly 11% of non-design grads have one.\n\nYou don't need a degree in design. You need one thing they can click.\n\nSwipe for 5 that work for any subject - English, history, geography, anything.\n\nFind roles at internwise.co.uk",
+          "captionThread": [
+            "76% of hiring managers say a portfolio link changes their read of a CV. Only 11% of non-design grads have one. Here are 5 that work for any subject. A thread.",
+            "The odds: 76% of hiring managers care about a portfolio link. 11% of non-design grads have one. One clickable thing is all it takes to be in the 11%.",
+            "01 The teardown. Pick a company you want to work for. Analyse one thing they do. 800 words on what you'd change. An English grad did this on a fintech's onboarding copy and got hired by their content team.",
+            "02 The rebuild. Rebuild a small piece of something that exists. Badly is fine. A history grad rebuilt their council's bin-collection lookup as a web app. Two interviews from one link.",
+            "03 The data story. Public dataset, one question, one clear chart, 300 words. A geography grad mapped 5 years of local flooding data and landed an analyst role at an insurer.",
+            "04 The receipts page. One page, every project, the outcome, a link. Not a CV. A menu of proof they can click through in 90 seconds. A Notion page works fine.",
+            "The format matters far less than the fact it exists. Pick one. Ship it this weekend. It does not need to be perfect. internwise.co.uk"
+          ],
+          "hashtags": [
+            "#portfolio",
+            "#graduatejobs",
+            "#careeradvice",
+            "#jobhunting",
+            "#proofofwork",
+            "#sideprojects",
+            "#ukjobs",
+            "#entrylevel"
+          ]
+        },
+        {
+          "id": "d4-offers",
+          "day": "Thursday",
+          "title": "Handling Multiple Offers",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "58% of grads accept the first offer without asking for more time.\n\n92% of employers will extend a deadline if you ask professionally.\n\nThe exploding deadline is the pressure. It's also usually a red flag about them, not a test of you.\n\nSwipe for the scripts, the real comparison, and the four ways to lose both.\n\nFind roles at internwise.co.uk",
+          "captionThread": [
+            "58% of grads accept the first offer without asking for more time. 92% of employers would have said yes to an extension. Two offers is a good problem. Here's the play. A thread.",
+            "The tape: 58% fold early. 92% of employers will extend a deadline if you ask professionally. Average uplift when a second offer is mentioned honestly: £4,200.",
+            "Move 1, buy time: 'Thank you, I'm really pleased. This is a big decision and I want to give it the attention it deserves. Could I come back to you by [date, 7-10 days out]?' 92% say yes.",
+            "Move 2, speed up your first choice: 'I've received an offer elsewhere with a deadline of [date]. You're my first choice and I'd rather not decide without hearing from you.' Only say first choice if it's true.",
+            "Move 3, score all six lines: base salary, real take-home after rent, who you learn from, scope in year 1, name on the CV, time to promotion. Salary is one line of six.",
+            "Four fouls: bluffing an offer you don't have, accepting then reneging, playing them against each other, deciding on salary alone. The £5K gap disappears in year 2. The learning gap compounds for a decade.",
+            "Ask for 7-10 days in writing today. Email your first choice. Score all six lines. Decline the other one warmly, you'll meet them again. internwise.co.uk"
+          ],
+          "hashtags": [
+            "#joboffer",
+            "#salarynegotiation",
+            "#graduatejobs",
+            "#careeradvice",
+            "#jobhunting",
+            "#careerdecisions",
+            "#ukjobs",
+            "#entrylevel"
+          ]
+        },
+        {
+          "id": "d5-research",
+          "day": "Friday",
+          "title": "Company Research Beyond Glassdoor",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "The average UK Glassdoor rating is 3.4. It tells you almost nothing.\n\n71% of reviews are written by people on their way out.\n\nFour other sources tell you more in 20 minutes: their last 6 job ads, LinkedIn tenure math, Companies House, and their eng blog.\n\nAll free. All public.\n\nFind roles at internwise.co.uk",
+          "captionThread": [
+            "The average UK Glassdoor rating is 3.4 and it tells you nothing. 71% of reviews come from people on their way out. Four better sources, 20 minutes, all public. A thread.",
+            "Why reviews are the worst source: 3.4 is the average across all UK employers. 71% of reviews are written by leavers or recent leavers. You're reading a exit-interview sample, not a culture.",
+            "Source A, their last 6 job ads. Free on their careers page. Which teams are hiring tells you where the money is. The same role posted twice in 6 months means someone left. Three times means a manager problem.",
+            "Source B, LinkedIn tenure math. Filter their people by your target team and read the start dates. Nobody past 2 years is the loudest signal on this list. Ask about it in the interview.",
+            "Source C, Companies House. Free and public. Filed accounts, director changes, charges. Late filings plus sudden director resignations, together, are the pattern to watch. Both are timestamped.",
+            "Source D, their eng or product blog. Read the last three posts. You learn their stack, their problems, and their taste. Nothing published in 2 years is itself worth knowing.",
+            "Twenty minutes across four free sources. Then walk into the interview knowing more than the other candidates. All of it is public. internwise.co.uk"
+          ],
+          "hashtags": [
+            "#companyresearch",
+            "#interviewprep",
+            "#graduatejobs",
+            "#careeradvice",
+            "#jobhunting",
+            "#glassdoor",
+            "#ukjobs",
+            "#entrylevel"
+          ]
+        }
+      ]
+    },
+    {
       "id": "week7",
       "label": "Week 7",
       "weekCommencing": "2026-07-06",
