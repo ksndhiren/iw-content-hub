@@ -1,6 +1,183 @@
 {
   "weeks": [
     {
+      "id": "week9",
+      "label": "Week 9",
+      "weekCommencing": "2026-07-20",
+      "posts": [
+        {
+          "id": "d1-elevatorpitch",
+          "day": "Monday",
+          "title": "The 30-Second Elevator Pitch",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "You get 7 seconds to make a first impression and 30 to land your pitch.\n\nMost people freeze or ramble. The fix is a formula: who you are, your proof, what you want, the hook back.\n\nOne number beats five adjectives every time.\n\nSwipe for the formula and a worked example.\n\nFind roles at internwise.co.uk",
+          "captionThread": [
+            "You get 7 seconds to make a first impression and 30 to land your pitch. Most grads freeze or ramble. Here's the formula that fixes it. A thread.",
+            "The window: 7 seconds to a first impression, 30 seconds is the sweet spot for a pitch, and you're 3x more memorable if you lead with a result instead of a job title.",
+            "The formula, four parts in order. 1. Who you are: name + what you do, one line. 2. Your proof: one specific result. 3. What you want: be direct. 4. The hook back: end on a question.",
+            "What it sounds like: 'Hi, I'm Maya, I just finished a marketing degree. Last year I grew a festival's social from 2k to 15k followers in six months. I'm after a grad role in content. What does your team work on?'",
+            "Why it lands: a number they'll remember, a clear ask, and a question that hands them the mic. Read it aloud. If it runs long, cut the degree detail before you cut the result.",
+            "Flex it to the room: at a fair, lead with the ask. On a video call, keep it to 20 seconds. In a real lift, cut to proof plus ask. In a DM, same formula, written, under 90 words.",
+            "Cut these: the life story, the adjective pile, the mumbled ask, the 45-second monologue. Write your 4 parts, cut to 30 seconds, swap an adjective for a number, practise this week. internwise.co.uk"
+          ],
+          "hashtags": [
+            "#elevatorpitch",
+            "#networking",
+            "#graduatejobs",
+            "#careeradvice",
+            "#jobhunting",
+            "#interviewtips",
+            "#ukjobs",
+            "#entrylevel"
+          ]
+        },
+        {
+          "id": "d2-imposter",
+          "day": "Tuesday",
+          "title": "Imposter Syndrome in Your First Role",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "statcard_imposter.png"
+          ],
+          "status": "in-review",
+          "caption": "70% of people feel like a fraud at work at some point. It's the norm, not a defect.\n\nOn day one, remember: you were hired from a pool of hundreds. Someone experienced chose you on purpose.\n\nThe wobble usually lasts about 90 days. Competence arrives before the feeling does.\n\nThe feeling that you're behind is not evidence that you are. It's just new.\n\ninternwise.co.uk\n\nSource: Journal of Behavioral Science, 2025",
+          "hashtags": [
+            "#impostersyndrome",
+            "#newjob",
+            "#mentalhealth",
+            "#careeradvice",
+            "#graduatejobs",
+            "#firstjob",
+            "#ukjobs",
+            "#confidence"
+          ]
+        },
+        {
+          "id": "d3-readtheroom",
+          "day": "Wednesday",
+          "title": "Reading the Room in Interviews",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "An interview is a two-way read. You're interviewing them too.\n\nGreen flags: they start selling the role, they ask what you'd want in year two, the time runs over.\n\nRed flags: nobody can describe success, they dodge why the last person left, they pressure you to decide on the spot.\n\nSwipe for the full table read.\n\nFind roles at internwise.co.uk",
+          "captionThread": [
+            "An interview is a two-way read. Most candidates only play one side. Here's how to spot the buying signals and the red flags. A thread.",
+            "Why it matters: the interview reads you AND you read them. 55% of a room's mood is body language, not words. One flag spotted early can save you months in the wrong job.",
+            "Green flags they want you: they shift from testing you to selling the role, they ask what you'd want in year two, the 30-min slot runs to 45, they pull in a colleague mid-interview.",
+            "Red flags to walk away: three people give three answers to 'what does success look like?', they dodge why the last person left, they pressure a yes on the spot, everyone in the room looks exhausted.",
+            "Live tells to read: leaning in means interest, match it. Checking the time means you're losing them, wrap up. Note-taking spikes mean you just landed something. Closed arms and short replies mean pivot to asking about them.",
+            "Questions that flip the table: 'What does success look like in the first 90 days?' 'Why did the last person leave?' 'What would you change about working here?' 'How's the team on a stressful week?'",
+            "Green: they sell, they linger, they introduce you. Red: no clear success, dodged turnover, rushed yes. Always ask the question that reads them back. internwise.co.uk"
+          ],
+          "hashtags": [
+            "#interviewtips",
+            "#jobinterview",
+            "#graduatejobs",
+            "#careeradvice",
+            "#interviewprep",
+            "#redflags",
+            "#ukjobs",
+            "#entrylevel"
+          ]
+        },
+        {
+          "id": "d4-linkedincontent",
+          "day": "Thursday",
+          "title": "LinkedIn Content That Gets You Noticed",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "The best grads don't chase recruiters. They post so recruiters come to them.\n\nOnly 0.9% of LinkedIn users post weekly. Posting at all puts you ahead of 99%. And 60% of recruiters check your activity before reaching out.\n\nSwipe for what to post, the anatomy of a post that lands, and the cadence that builds an audience.\n\nFind roles at internwise.co.uk",
+          "captionThread": [
+            "The best grads don't chase recruiters. They post so recruiters come to them. Here's how to build content that gets you found. A thread.",
+            "The numbers: only 0.9% of LinkedIn users post weekly. You get 4x more profile views the week you publish. 60% of recruiters check your activity, not just your CV, before reaching out.",
+            "What to post: the learning log ('this week I learned X building Y'), the teardown of a product you admire, the honest rejection and what it taught you, the build-in-public project people root for.",
+            "Anatomy of a post that lands: line 1 is a specific, surprising confession that stops the scroll. The middle is one concrete action, short lines. The end is the payoff plus a question, because comments are the algorithm's fuel.",
+            "The cadence: post once a week, comment thoughtfully 5x a day, reply to every comment, and give it 8 weeks. Consistency beats virality. The account that keeps going is the one that wins.",
+            "What gets you ignored: the humble-brag, the 'comment YES if you agree' bait, the wall of text with no line breaks, the corporate voice. Write like you'd talk to a friend.",
+            "Pick one thing you did this week. Write the confession as line 1. Add 3 short lines and a question. Post it Tuesday, reply to everyone. Be the grad they find. internwise.co.uk"
+          ],
+          "hashtags": [
+            "#linkedintips",
+            "#personalbranding",
+            "#graduatejobs",
+            "#careeradvice",
+            "#contentcreation",
+            "#jobsearchtips",
+            "#ukjobs",
+            "#entrylevel"
+          ]
+        },
+        {
+          "id": "d5-skills",
+          "day": "Friday",
+          "title": "The Skills Employers Actually Pay For in 2026",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "caption": "Not every skill pays the same.\n\nThe four that move a 2026 grad salary most: AI fluency (+18%), data literacy (+14%), communication (+11%), project delivery (+9%).\n\nNone of them need a bootcamp. Each can be built in public, for free, in a month.\n\nSwipe for what each really means and how to prove it.\n\nFind roles at internwise.co.uk",
+          "captionThread": [
+            "Not every skill pays the same. Here are the four that actually move a 2026 grad salary, and how to build each one for free. A thread.",
+            "The salary premium, median grad uplift vs baseline: AI fluency +18%, data literacy +14%, communication +11%, project delivery +9%. Source: LinkedIn Skills Report and ONS 2026.",
+            "AI fluency (+18%): not 'can use ChatGPT'. Can you make an AI tool save your team real hours and check its work? Automate one task this month and document it. Prove it with a public write-up.",
+            "Data literacy (+14%): reading numbers without panic and spotting what a chart hides. Take one public dataset, answer one question with one clean chart, repeat monthly. Prove it with a shareable dashboard.",
+            "Communication (+11%): explaining complex things simply and writing emails that get a fast yes. Write in public weekly, run one society meeting well. Prove it with a post that got real comments or a talk you gave.",
+            "Project delivery (+9%): taking something from idea to shipped, on time, with other people. The rarest grad skill. Finish one thing end-to-end in front of real users. Prove it with a shipped project and an outcome.",
+            "Pick one this month. Build it in public. Then the next. Four skills, four months, a stack recruiters chase. internwise.co.uk"
+          ],
+          "hashtags": [
+            "#skills2026",
+            "#careeradvice",
+            "#graduatejobs",
+            "#futureofwork",
+            "#aiskills",
+            "#dataliteracy",
+            "#ukjobs",
+            "#entrylevel"
+          ]
+        }
+      ]
+    },
+    {
       "id": "week8",
       "label": "Week 8",
       "weekCommencing": "2026-07-13",
