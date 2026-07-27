@@ -17,6 +17,7 @@
      Constants
   ------------------------------------------------------------------------- */
   const DATA_URL      = 'data/weeks.json';
+  const FEATURED_URL  = 'data/featured.json';
   const STORAGE_KEY   = 'iw-content-hub-statuses';
   const COMMENTS_KEY  = 'iw-content-hub-comments';
 
@@ -45,6 +46,8 @@
      Module state
   ------------------------------------------------------------------------- */
   let allWeeks        = [];      // Full weeks array from JSON
+  let featuredWeek    = null;    // Featured Jobs pseudo-week (from featured.json)
+  let currentMode     = 'weekly';// 'weekly' | 'featured'
   let currentWeek     = null;    // Currently displayed week object
   let statuses        = {};      // { postId: statusString } persisted in localStorage
   let comments        = {};      // { postId: [{ text, ts }] } persisted in localStorage
@@ -87,6 +90,9 @@
   let elThreadList;
   let elCopyThreadBtn;
   let elContentSidebar;
+  let elModeTabs;
+  let elModeWeekly;
+  let elModeFeatured;
 
   /* -------------------------------------------------------------------------
      Initialisation
@@ -96,6 +102,7 @@
     loadStatuses();
     loadComments();
     fetchWeeks();
+    fetchFeatured();
     bindGlobalEvents();
   }
 
@@ -132,6 +139,9 @@
     elThreadList        = document.getElementById('thread-list');
     elCopyThreadBtn     = document.getElementById('copy-thread-btn');
     elContentSidebar    = document.getElementById('content-sidebar');
+    elModeTabs          = document.getElementById('mode-tabs');
+    elModeWeekly        = document.getElementById('mode-weekly');
+    elModeFeatured      = document.getElementById('mode-featured');
   }
 
   /* -------------------------------------------------------------------------
@@ -224,6 +234,60 @@
 
     // Render cards
     renderPostGrid(week.posts || []);
+  }
+
+  /* -------------------------------------------------------------------------
+     Featured Jobs
+  ------------------------------------------------------------------------- */
+  async function fetchFeatured() {
+    try {
+      const response = await fetch(FEATURED_URL);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      featuredWeek = await response.json();
+    } catch (err) {
+      console.error('[IW Content Hub] Failed to load featured.json:', err);
+      featuredWeek = null;
+    }
+  }
+
+  function renderFeatured() {
+    if (!featuredWeek) {
+      elWeekMeta.innerHTML = '<span class="week-meta__label">Featured Jobs</span>';
+      elPostGrid.innerHTML = '';
+      elEmptyState.hidden = false;
+      return;
+    }
+    currentWeek = featuredWeek;
+
+    const count = (featuredWeek.posts || []).length;
+    elWeekMeta.innerHTML = `
+      <span class="week-meta__label">${escapeHtml(featuredWeek.label)}</span>
+      <span class="week-meta__date">${count} open ${count === 1 ? 'role' : 'roles'}</span>
+    `;
+
+    renderPostGrid(featuredWeek.posts || []);
+  }
+
+  /** Switch between 'weekly' and 'featured' content modes. */
+  function setMode(mode) {
+    if (mode !== 'weekly' && mode !== 'featured') return;
+    currentMode = mode;
+
+    const isWeekly = (mode === 'weekly');
+    elModeWeekly.classList.toggle('is-active', isWeekly);
+    elModeFeatured.classList.toggle('is-active', !isWeekly);
+    elModeWeekly.setAttribute('aria-selected', String(isWeekly));
+    elModeFeatured.setAttribute('aria-selected', String(!isWeekly));
+
+    // Week selector is only meaningful in weekly mode
+    elWeekSelector.classList.toggle('is-hidden', !isWeekly);
+
+    if (isWeekly) {
+      const weekId = elWeekSelector.value || (allWeeks[0] && allWeeks[0].id);
+      if (weekId) renderWeek(weekId);
+    } else {
+      renderFeatured();
+    }
   }
 
   /* -------------------------------------------------------------------------
@@ -683,6 +747,10 @@
     elWeekSelector.addEventListener('change', function () {
       renderWeek(elWeekSelector.value);
     });
+
+    // Mode toggle: Weekly Graphics / Featured Jobs
+    elModeWeekly.addEventListener('click', function () { setMode('weekly'); });
+    elModeFeatured.addEventListener('click', function () { setMode('featured'); });
 
     // Overlay: close button
     elOverlayClose.addEventListener('click', closeOverlay);

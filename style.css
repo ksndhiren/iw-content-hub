@@ -189,6 +189,59 @@ a {
   color: #ffffff;
 }
 
+/* Hide the week selector when browsing Featured Jobs */
+.week-selector.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Mode toggle (Weekly Graphics / Featured Jobs) */
+.mode-tabs {
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.mode-tab {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: inherit;
+  padding: var(--space-2) var(--space-4);
+  border-radius: 7px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color var(--trans-fast), color var(--trans-fast);
+}
+
+.mode-tab:hover {
+  color: #ffffff;
+}
+
+.mode-tab.is-active {
+  background-color: var(--color-amber);
+  color: var(--color-navy);
+}
+
+.mode-tab:focus-visible {
+  outline: 2px solid var(--color-amber);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .mode-tab {
+    padding: var(--space-2) var(--space-3);
+    font-size: 0.8125rem;
+  }
+}
+
 /* --------------------------------------------------------------------------
    Main content area
    -------------------------------------------------------------------------- */

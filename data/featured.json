@@ -1,0 +1,74 @@
+{
+  "id": "featured",
+  "label": "Featured Jobs",
+  "posts": [
+    {
+      "id": "brand-design",
+      "day": "JBROWN GLOBAL LIMITED",
+      "title": "Brand Design Internship",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": ["brand-design-graphic.png"],
+      "status": "in-review",
+      "caption": "FEATURED JOB: Brand Design Internship at JBROWN GLOBAL LIMITED\n\nLove turning ideas into visuals that stop the scroll? Build your design portfolio with a real brand.\n\nSector: Graphic & Brand Design\nLocation: Central London\nType: Part-time\nDuration: 1 - 3 months\n\nApply now at internwise.co.uk (link in the post)",
+      "hashtags": [
+        "#graphicdesign",
+        "#designjobs",
+        "#internship",
+        "#londonjobs",
+        "#branddesign"
+      ]
+    },
+    {
+      "id": "surveying",
+      "day": "JBROWN GLOBAL LIMITED",
+      "title": "Real Estate Surveying Internship",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": ["surveying-graphic.png"],
+      "status": "in-review",
+      "caption": "FEATURED JOB: Real Estate Surveying Internship at JBROWN GLOBAL LIMITED\n\nCurious how property really works? Get hands-on with surveys, valuations and site visits across London.\n\nSector: Surveying & Real Estate\nLocation: Central London\nType: Part-time / Full-time\nDuration: 7 - 12 months\n\nApply now at internwise.co.uk (link in the post)",
+      "hashtags": [
+        "#surveying",
+        "#realestate",
+        "#propertyjobs",
+        "#internship",
+        "#londonjobs"
+      ]
+    },
+    {
+      "id": "marketing",
+      "day": "M N K ACCOUNTANTS LTD",
+      "title": "Marketing Internship",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": ["marketing-graphic.png"],
+      "status": "in-review",
+      "caption": "FEATURED JOB: Marketing Internship at M N K ACCOUNTANTS LTD\n\nReady to run real campaigns? Own content, socials and growth for a busy London firm.\n\nSector: Marketing & Social Media\nLocation: Camden Town, London\nType: Part-time\nDuration: 7 - 12 months\n\nApply now at internwise.co.uk (link in the post)",
+      "hashtags": [
+        "#marketingjobs",
+        "#socialmedia",
+        "#internship",
+        "#londonjobs",
+        "#marketinginternship"
+      ]
+    },
+    {
+      "id": "social-content",
+      "day": "LONDON PROPERTY STAGING LTD",
+      "title": "Social Media & Content Intern",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": ["social-content-graphic.png"],
+      "status": "in-review",
+      "caption": "FEATURED JOB: Social Media & Content Intern at LONDON PROPERTY STAGING LTD\n\nLove creating scroll-stopping content? Shoot, edit and post for beautifully staged London homes.\n\nSector: Social, Photo & Interiors\nLocation: London, Greater London\nType: Part-time\nDuration: 1 - 3 months\n\nApply now at internwise.co.uk (link in the post)",
+      "hashtags": [
+        "#contentcreator",
+        "#socialmedia",
+        "#internship",
+        "#londonjobs",
+        "#homestaging"
+      ]
+    }
+  ]
+}
