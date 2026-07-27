@@ -33,6 +33,10 @@ IMAGES_DIR    = os.path.join(HUB_DIR, "images", "featured")
 
 # JS that returns the featured-job cards as {href, lines[]} using the validated
 # "Featured Jobs heading -> section -> .list-job" structure.
+# Read each field from its own element in the card (robust to line-order quirks):
+#   .job-title h4     -> title      .job-title p       -> company
+#   .job-descriptions > p           -> sector/fields
+#   .job-descriptions .descriptions p (x3, any order)  -> location / type / date
 EXTRACT_JS = r"""
 () => {
   const heading = [...document.querySelectorAll('*')].find(e =>
@@ -46,20 +50,27 @@ EXTRACT_JS = r"""
     if (jobs.length) { cards = [...jobs]; break; }
     sec = sec.parentElement;
   }
-  const leaves = (el) => {
-    let r = [];
-    el.childNodes.forEach(n => {
-      if (n.nodeType === 3) { const t = n.textContent.trim(); if (t) r.push(t); }
-      else if (n.nodeType === 1) { r = r.concat(leaves(n)); }
-    });
-    return r;
-  };
+  const txt = el => el ? el.textContent.replace(/\s+/g, ' ').trim() : '';
+  // Only the element's OWN text nodes - skips nested icon/schema spans that would
+  // otherwise leak tokens like "GeographicReference" into the location.
+  const own = el => el ? [...el.childNodes].filter(n => n.nodeType === 3)
+                         .map(n => n.textContent).join(' ').replace(/\s+/g, ' ').trim() : '';
   return cards.map(card => {
-    const a = card.querySelector('a[href*="/job/"]');
-    return { href: a ? a.getAttribute('href') : '', lines: leaves(card) };
+    const a = card.querySelector('.job-title h4 a') || card.querySelector('a[href*="/job/"]');
+    return {
+      href:      a ? a.getAttribute('href') : '',
+      title:     txt(card.querySelector('.job-title h4')),
+      company:   txt(card.querySelector('.job-title p')),
+      fields:    own(card.querySelector('.job-descriptions > p')),
+      descLines: [...card.querySelectorAll('.job-descriptions .descriptions p')].map(own),
+    };
   });
 }
 """
+
+# A description line is a DATE, a TYPE(+duration), or (by elimination) the LOCATION.
+_DATE_RE = re.compile(r'\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{1,2},?\s+\d{4}', re.I)
+_TYPE_RE = re.compile(r'(part[-\s]?time|full[-\s]?time|internship|placement|permanent|contract|temporary|apprentice)', re.I)
 
 
 def scrape_featured():
@@ -86,12 +97,25 @@ def scrape_featured():
         if jid in seen:
             continue
         seen.add(jid)
-        lines = [l for l in item.get("lines", []) if l and l.strip()]
-        if len(lines) < 4:
-            continue
-        title, company, fields, location = lines[0], lines[1], lines[2], lines[3]
-        type_raw = lines[4] if len(lines) > 4 else ""
+
+        title   = (item.get("title") or "").strip()
+        company = (item.get("company") or "").strip()
+        fields  = (item.get("fields") or "").strip()
+        if not title:
+            continue  # can't render a job with no title
+
+        # Classify the 3 description lines by pattern rather than fixed position.
+        location, type_raw = "", ""
+        for d in item.get("descLines", []):
+            d = (d or "").strip()
+            if not d or _DATE_RE.search(d):
+                continue
+            if _TYPE_RE.search(d):
+                type_raw = d
+            elif not location:
+                location = d
         jtype, duration = _split_type(type_raw)
+
         jobs.append({
             "id": jid,
             "url": href if href.startswith("http") else "https://www.internwise.co.uk" + href,
