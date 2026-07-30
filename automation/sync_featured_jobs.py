@@ -16,7 +16,7 @@ branch and opens a PR for a human to approve before it reaches the live dashboar
 Run:  python3 sync_featured_jobs.py            (writes into ../../iw-content-hub)
       FEATURED_HUB_DIR=/path/to/hub python3 sync_featured_jobs.py
 """
-import os, re, json, sys, shutil
+import os, re, json, sys, shutil, datetime
 _HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, _HERE)
 # Point the generator at the vendored brand assets before importing it.
@@ -139,28 +139,45 @@ def _plain(s):
     return fj._sanitize(s).replace("&amp;", "&")
 
 
-def build_caption(job):
-    return (
-        f"FEATURED JOB: {_plain(job['title'])} at {_plain(job['company'])}\n\n"
-        f"{fj.SECTOR_STYLES[fj._pick_style(job.get('fields',''))][6]}\n\n"
-        f"Sector: {_plain(job.get('fields','').split(',')[0])}\n"
-        f"Location: {_plain(job.get('location',''))}\n"
-        f"Type: {_plain(job.get('jtype',''))}\n"
-        f"Duration: {_plain(job.get('duration',''))}\n\n"
-        f"Apply now at internwise.co.uk (link in the post)"
-    )
+def _clean_title(s):
+    """Plain title with any trailing year in parens removed."""
+    return fj.strip_year(_plain(s))
 
 
-def build_hashtags(job):
+def build_captions(job):
+    """Short, platform-tailored captions. Each repeats the graphic's hook line and
+    uses the job's own page as the apply link (not a generic homepage)."""
+    title   = _clean_title(job["title"])
+    company = _plain(job["company"])
+    loc     = _plain(job.get("location", ""))
+    typ     = _plain(job.get("jtype", ""))
+    hook    = fj.SECTOR_STYLES[fj._pick_style(job.get("fields", ""))][6]
+    url     = job["url"]
+    return {
+        "ig-fb":    f"{title} at {company} \U0001F4CD {loc}\n{hook}\nApply now \U0001F449 {url}",
+        "linkedin": f"We're hiring: {title} at {company} ({loc} · {typ}).\n{hook}\nApply here: {url}",
+        "x":        f"Now hiring: {title} @ {company} \U0001F4CD {loc}\nApply \U0001F447 {url}",
+        "threads":  f"New role alert \U0001F680 {title} at {company} in {loc}.\n{hook}\nApply → {url}",
+    }
+
+
+def build_hashtags_by_platform(job):
+    """Different hashtag sets per platform (broad on IG, professional on LinkedIn,
+    tight on X)."""
     style = fj._pick_style(job.get("fields", ""))
-    base = {
-        "design":    ["#graphicdesign", "#designjobs"],
-        "property":  ["#realestate", "#propertyjobs"],
-        "marketing": ["#marketingjobs", "#socialmedia"],
-        "social":    ["#contentcreator", "#socialmedia"],
-        "generic":   ["#internship", "#careers"],
+    tag = {
+        "design":    "#designjobs",
+        "property":  "#realestatejobs",
+        "marketing": "#marketingjobs",
+        "social":    "#socialmediajobs",
+        "generic":   "#internships",
     }[style]
-    return base + ["#internship", "#londonjobs", "#graduatejobs"]
+    return {
+        "ig-fb":    ["#internship", "#londonjobs", tag, "#hiring", "#graduatejobs"],
+        "linkedin": ["#hiring", "#internship", tag, "#careers"],
+        "x":        [tag, "#hiring"],
+        "threads":  ["#internship", "#hiring", tag, "#londonjobs"],
+    }
 
 
 def load_featured():
@@ -183,13 +200,17 @@ def main():
     manual   = [p for p in existing if not p.get("sourceId")]
     existing_auto = {p["sourceId"]: p for p in existing if p.get("sourceId")}
 
+    now_iso = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
     fj._load_logos()
     auto_posts, new_count = [], 0
 
     for job in scraped:
         sid = job["id"]
         if sid in existing_auto:
-            auto_posts.append(existing_auto[sid])  # keep graphic + review status
+            p = existing_auto[sid]
+            p.setdefault("addedAt", now_iso)  # backfill so sort order is stable
+            auto_posts.append(p)              # keep graphic + review status
             continue
 
         # New featured job -> generate a graphic
@@ -199,21 +220,26 @@ def main():
         fname = f"{post_id}.png"
         cfg = fj.build_config(job)
         fj.generate(cfg, os.path.join(out_dir, fname), art_mode="graphic")
+        captions = build_captions(job)
+        htags    = build_hashtags_by_platform(job)
         auto_posts.append({
             "id": post_id,
             "sourceId": sid,
             "sourceUrl": job["url"],
+            "addedAt": now_iso,
             "day": _plain(job["company"]),
-            "title": _plain(job["title"]),
+            "title": _clean_title(job["title"]),
             "platform": "Featured Job",
             "format": "Single",
             "slides": [fname],
             "status": "in-review",
-            "caption": build_caption(job),
-            "hashtags": build_hashtags(job),
+            "caption": captions["ig-fb"],            # default / fallback
+            "hashtags": htags["ig-fb"],              # default / fallback
+            "captions": captions,                    # per-platform text
+            "hashtagsByPlatform": htags,             # per-platform tags
         })
         new_count += 1
-        print(f"  + generated {post_id} ({cfg['_style']}): {_plain(job['title'])}")
+        print(f"  + generated {post_id} ({cfg['_style']}): {_clean_title(job['title'])}")
 
     # Drop images for auto jobs no longer featured
     live_ids = {f"job-{j['id']}" for j in scraped}
@@ -225,7 +251,10 @@ def main():
                 shutil.rmtree(old, ignore_errors=True)
             removed += 1
 
-    data["posts"] = manual + auto_posts
+    # Newest first: most recently added, then by numeric job id.
+    auto_posts.sort(key=lambda p: (p.get("addedAt", ""), int(p.get("sourceId", "0") or 0)),
+                    reverse=True)
+    data["posts"] = auto_posts + manual
     with open(FEATURED_JSON, "w") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
         f.write("\n")

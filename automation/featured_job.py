@@ -421,6 +421,11 @@ def _sanitize(s):
     s = s.replace("—", "-").replace("–", "-").replace("&", "&amp;")
     return re.sub(r"\s+", " ", s).strip()
 
+def strip_year(s):
+    """Drop a trailing year in parentheses, e.g. 'Business Assistant (2026)'."""
+    if not s: return ""
+    return re.sub(r"\s*\(\s*(?:19|20)\d{2}\s*\)\s*$", "", s).strip()
+
 def _wrap_title(title):
     """Balance the title into up to 3 lines; return (html_with_br, font_size)."""
     words = title.split()
@@ -448,7 +453,7 @@ def build_config(job):
     job keys: title, company, fields, location, jtype, duration."""
     style = _pick_style(job.get("fields", ""))
     accent, accent_d, bg1, bg2, spark, art_fn, hook = SECTOR_STYLES[style]
-    title_html, title_size = _wrap_title(_sanitize(job["title"]))
+    title_html, title_size = _wrap_title(_sanitize(strip_year(job["title"])))
     # primary sector = first comma-group, sanitized
     primary = _sanitize((job.get("fields", "") or "").split(",")[0]) or "Internship"
     details = [
