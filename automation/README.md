@@ -44,9 +44,13 @@ python sync_featured_jobs.py            # writes into the repo it lives in
 
 Override the target hub with `FEATURED_HUB_DIR=/path/to/hub`.
 
-## Hold for review (cloud routine)
+## Auto-publish + review on the dashboard
 
-The script only writes files. The scheduled cloud routine wraps it: it runs the
-sync, and **if `git status` shows changes**, commits them to a new branch and opens
-a **pull request** for a human to approve. Nothing reaches the live dashboard until
-that PR is merged.
+The script only writes files. The daily **GitHub Actions** workflow
+(`.github/workflows/featured-jobs-sync.yml`) runs it and, **if `git status` shows
+changes**, commits them straight to `main` — which auto-redeploys the Cloudflare
+Pages dashboard.
+
+Review happens **on the dashboard**: the Featured Jobs tab shows a red count badge
+and a "New" ribbon on any graphic you haven't seen yet (tracked per browser in
+localStorage), so each time you log in you can see what's new at a glance.

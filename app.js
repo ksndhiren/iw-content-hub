@@ -18,6 +18,7 @@
   ------------------------------------------------------------------------- */
   const DATA_URL      = 'data/weeks.json';
   const FEATURED_URL  = 'data/featured.json';
+  const FEATURED_SEEN_KEY = 'iw-content-hub-featured-seen';
   const STORAGE_KEY   = 'iw-content-hub-statuses';
   const COMMENTS_KEY  = 'iw-content-hub-comments';
 
@@ -48,6 +49,8 @@
   let allWeeks        = [];      // Full weeks array from JSON
   let featuredWeek    = null;    // Featured Jobs pseudo-week (from featured.json)
   let currentMode     = 'weekly';// 'weekly' | 'featured'
+  let featuredSeen    = new Set();// auto-post ids the user has already seen (localStorage)
+  let featuredNewIds  = new Set();// auto-post ids new since last visit (for badge + ribbon)
   let currentWeek     = null;    // Currently displayed week object
   let statuses        = {};      // { postId: statusString } persisted in localStorage
   let comments        = {};      // { postId: [{ text, ts }] } persisted in localStorage
@@ -93,6 +96,7 @@
   let elModeTabs;
   let elModeWeekly;
   let elModeFeatured;
+  let elFeaturedBadge;
 
   /* -------------------------------------------------------------------------
      Initialisation
@@ -101,6 +105,7 @@
     resolveElements();
     loadStatuses();
     loadComments();
+    loadFeaturedSeen();
     fetchWeeks();
     fetchFeatured();
     bindGlobalEvents();
@@ -142,6 +147,7 @@
     elModeTabs          = document.getElementById('mode-tabs');
     elModeWeekly        = document.getElementById('mode-weekly');
     elModeFeatured      = document.getElementById('mode-featured');
+    elFeaturedBadge     = document.getElementById('featured-badge');
   }
 
   /* -------------------------------------------------------------------------
@@ -248,6 +254,68 @@
       console.error('[IW Content Hub] Failed to load featured.json:', err);
       featuredWeek = null;
     }
+    computeFeaturedNew();
+    updateFeaturedBadge();
+  }
+
+  /* -------------------------------------------------------------------------
+     Featured "new graphics" notification
+     - Tracks which auto-generated (sourceId) posts the user has already seen,
+       in localStorage. New ones drive the tab badge + a NEW ribbon on cards.
+  ------------------------------------------------------------------------- */
+  function loadFeaturedSeen() {
+    try {
+      const stored = localStorage.getItem(FEATURED_SEEN_KEY);
+      featuredSeen = new Set(stored ? JSON.parse(stored) : []);
+    } catch (_) {
+      featuredSeen = new Set();
+    }
+  }
+
+  function saveFeaturedSeen() {
+    try {
+      localStorage.setItem(FEATURED_SEEN_KEY, JSON.stringify([...featuredSeen]));
+    } catch (_) { /* localStorage unavailable - continue */ }
+  }
+
+  /** Ids of auto-generated featured posts (the scraped ones). */
+  function autoFeaturedIds() {
+    return (featuredWeek && featuredWeek.posts || [])
+      .filter(function (p) { return p.sourceId; })
+      .map(function (p) { return p.id; });
+  }
+
+  function computeFeaturedNew() {
+    const autoIds = autoFeaturedIds();
+    const firstEverVisit = (localStorage.getItem(FEATURED_SEEN_KEY) === null);
+    if (firstEverVisit) {
+      // Don't flag everything as "new" on the very first visit.
+      featuredSeen = new Set(autoIds);
+      saveFeaturedSeen();
+      featuredNewIds = new Set();
+    } else {
+      featuredNewIds = new Set(autoIds.filter(function (id) { return !featuredSeen.has(id); }));
+    }
+  }
+
+  function updateFeaturedBadge() {
+    if (!elFeaturedBadge) return;
+    const unseen = autoFeaturedIds().filter(function (id) { return !featuredSeen.has(id); }).length;
+    if (unseen > 0) {
+      elFeaturedBadge.textContent = String(unseen);
+      elFeaturedBadge.hidden = false;
+      elFeaturedBadge.setAttribute('aria-label', unseen + ' new graphics');
+    } else {
+      elFeaturedBadge.hidden = true;
+      elFeaturedBadge.textContent = '';
+    }
+  }
+
+  /** Mark all current auto posts as seen (called when the user opens the tab). */
+  function markFeaturedSeen() {
+    autoFeaturedIds().forEach(function (id) { featuredSeen.add(id); });
+    saveFeaturedSeen();
+    updateFeaturedBadge();
   }
 
   function renderFeatured() {
@@ -287,6 +355,9 @@
       if (weekId) renderWeek(weekId);
     } else {
       renderFeatured();
+      // Opening the tab counts as reviewing: clear the badge (NEW ribbons remain
+      // for this session so the user can still spot which ones are new).
+      markFeaturedSeen();
     }
   }
 
@@ -333,6 +404,7 @@
           height="400"
         >
         ${slideCount > 1 ? `<span class="post-card__slide-pill" aria-label="${slideCount} slides">${slideCount} slides</span>` : ''}
+        ${featuredNewIds.has(post.id) ? '<span class="post-card__new-ribbon">New</span>' : ''}
       </div>
       <div class="post-card__body">
         <h2 class="post-card__title">${escapeHtml(post.title)}</h2>
