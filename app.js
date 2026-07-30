@@ -287,16 +287,10 @@
   }
 
   function computeFeaturedNew() {
+    // Anything the user hasn't seen yet is "new" (including on a first visit, so the
+    // badge is always visible when there are featured graphics to review).
     const autoIds = autoFeaturedIds();
-    const firstEverVisit = (localStorage.getItem(FEATURED_SEEN_KEY) === null);
-    if (firstEverVisit) {
-      // Don't flag everything as "new" on the very first visit.
-      featuredSeen = new Set(autoIds);
-      saveFeaturedSeen();
-      featuredNewIds = new Set();
-    } else {
-      featuredNewIds = new Set(autoIds.filter(function (id) { return !featuredSeen.has(id); }));
-    }
+    featuredNewIds = new Set(autoIds.filter(function (id) { return !featuredSeen.has(id); }));
   }
 
   function updateFeaturedBadge() {
@@ -329,10 +323,11 @@
     currentWeek = featuredWeek;
 
     const posts = (featuredWeek.posts || []).slice().sort(function (a, b) {
-      // Newest first: by addedAt, then by numeric job id as a fallback.
-      const at = a.addedAt || '', bt = b.addedAt || '';
-      if (at !== bt) return at < bt ? 1 : -1;
-      return (parseInt(b.sourceId || 0, 10)) - (parseInt(a.sourceId || 0, 10));
+      // Newest first: by numeric job id (higher id = more recently posted),
+      // then by addedAt as a tiebreak.
+      const ai = parseInt(a.sourceId || 0, 10), bi = parseInt(b.sourceId || 0, 10);
+      if (ai !== bi) return bi - ai;
+      return (b.addedAt || '') < (a.addedAt || '') ? -1 : 1;
     });
 
     const count = posts.length;

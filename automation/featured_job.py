@@ -422,9 +422,12 @@ def _sanitize(s):
     return re.sub(r"\s+", " ", s).strip()
 
 def strip_year(s):
-    """Drop a trailing year in parentheses, e.g. 'Business Assistant (2026)'."""
+    """Drop a trailing parenthetical that is just noise for a headline: a year
+    ('... (2026)') or an employment type ('... (Part-Time)', '(Full Time)')."""
     if not s: return ""
-    return re.sub(r"\s*\(\s*(?:19|20)\d{2}\s*\)\s*$", "", s).strip()
+    s = re.sub(r"\s*\(\s*(?:(?:19|20)\d{2}|(?:part|full)[\s-]?time)\s*\)\s*$",
+               "", s, flags=re.I)
+    return s.strip()
 
 def _wrap_title(title):
     """Balance the title into up to 3 lines; return (html_with_br, font_size)."""
