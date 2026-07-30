@@ -3,71 +3,129 @@
   "label": "Featured Jobs",
   "posts": [
     {
-      "id": "brand-design",
-      "day": "JBROWN GLOBAL LIMITED",
-      "title": "Brand Design Internship",
-      "platform": "Featured Job",
-      "format": "Single",
-      "slides": ["brand-design-graphic.png"],
-      "status": "in-review",
-      "caption": "FEATURED JOB: Brand Design Internship at JBROWN GLOBAL LIMITED\n\nLove turning ideas into visuals that stop the scroll? Build your design portfolio with a real brand.\n\nSector: Graphic & Brand Design\nLocation: Central London\nType: Part-time\nDuration: 1 - 3 months\n\nApply now at internwise.co.uk (link in the post)",
-      "hashtags": [
-        "#graphicdesign",
-        "#designjobs",
-        "#internship",
-        "#londonjobs",
-        "#branddesign"
-      ]
-    },
-    {
-      "id": "surveying",
-      "day": "JBROWN GLOBAL LIMITED",
-      "title": "Real Estate Surveying Internship",
-      "platform": "Featured Job",
-      "format": "Single",
-      "slides": ["surveying-graphic.png"],
-      "status": "in-review",
-      "caption": "FEATURED JOB: Real Estate Surveying Internship at JBROWN GLOBAL LIMITED\n\nCurious how property really works? Get hands-on with surveys, valuations and site visits across London.\n\nSector: Surveying & Real Estate\nLocation: Central London\nType: Part-time / Full-time\nDuration: 7 - 12 months\n\nApply now at internwise.co.uk (link in the post)",
-      "hashtags": [
-        "#surveying",
-        "#realestate",
-        "#propertyjobs",
-        "#internship",
-        "#londonjobs"
-      ]
-    },
-    {
-      "id": "marketing",
+      "id": "job-35387",
+      "sourceId": "35387",
+      "sourceUrl": "https://www.internwise.co.uk/job/35387/marketing-internship",
       "day": "M N K ACCOUNTANTS LTD",
       "title": "Marketing Internship",
       "platform": "Featured Job",
       "format": "Single",
-      "slides": ["marketing-graphic.png"],
+      "slides": [
+        "job-35387.png"
+      ],
       "status": "in-review",
-      "caption": "FEATURED JOB: Marketing Internship at M N K ACCOUNTANTS LTD\n\nReady to run real campaigns? Own content, socials and growth for a busy London firm.\n\nSector: Marketing & Social Media\nLocation: Camden Town, London\nType: Part-time\nDuration: 7 - 12 months\n\nApply now at internwise.co.uk (link in the post)",
+      "caption": "FEATURED JOB: Marketing Internship at M N K ACCOUNTANTS LTD\n\nReady to run real campaigns? Own content, socials and growth for a busy team.\n\nSector: Marketing / Advertising / Social Media\nLocation: Camden Town / London, Central London\nType: Part-time\nDuration: 7 - 12 months\n\nApply now at internwise.co.uk (link in the post)",
       "hashtags": [
         "#marketingjobs",
         "#socialmedia",
         "#internship",
         "#londonjobs",
-        "#marketinginternship"
+        "#graduatejobs"
       ]
     },
     {
-      "id": "social-content",
-      "day": "LONDON PROPERTY STAGING LTD",
-      "title": "Social Media & Content Intern",
+      "id": "job-35270",
+      "sourceId": "35270",
+      "sourceUrl": "https://www.internwise.co.uk/job/35270/real-estate-surveying-internship",
+      "day": "JBROWN GLOBAL LIMITED",
+      "title": "Real Estate Surveying Internship",
       "platform": "Featured Job",
       "format": "Single",
-      "slides": ["social-content-graphic.png"],
+      "slides": [
+        "job-35270.png"
+      ],
       "status": "in-review",
-      "caption": "FEATURED JOB: Social Media & Content Intern at LONDON PROPERTY STAGING LTD\n\nLove creating scroll-stopping content? Shoot, edit and post for beautifully staged London homes.\n\nSector: Social, Photo & Interiors\nLocation: London, Greater London\nType: Part-time\nDuration: 1 - 3 months\n\nApply now at internwise.co.uk (link in the post)",
+      "caption": "FEATURED JOB: Real Estate Surveying Internship at JBROWN GLOBAL LIMITED\n\nCurious how property really works? Get hands-on with real projects across London.\n\nSector: Construction\nLocation: London, Central London\nType: Part-time/Full-time\nDuration: 7 - 12 months\n\nApply now at internwise.co.uk (link in the post)",
       "hashtags": [
-        "#contentcreator",
+        "#realestate",
+        "#propertyjobs",
+        "#internship",
+        "#londonjobs",
+        "#graduatejobs"
+      ]
+    },
+    {
+      "id": "job-35307",
+      "sourceId": "35307",
+      "sourceUrl": "https://www.internwise.co.uk/job/35307/digital-pr-and-publicity-executive-2026",
+      "day": "WPGM LTD",
+      "title": "Digital PR And Publicity Executive (2026)",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35307.png"
+      ],
+      "status": "in-review",
+      "caption": "FEATURED JOB: Digital PR And Publicity Executive (2026) at WPGM LTD\n\nReady to run real campaigns? Own content, socials and growth for a busy team.\n\nSector: Public Relations (PR) & Communications\nLocation: London, United Kingdom, Central London\nType: Full-time\nDuration: 4 - 6 months\n\nApply now at internwise.co.uk (link in the post)",
+      "hashtags": [
+        "#marketingjobs",
         "#socialmedia",
         "#internship",
         "#londonjobs",
-        "#homestaging"
+        "#graduatejobs"
+      ]
+    },
+    {
+      "id": "job-35309",
+      "sourceId": "35309",
+      "sourceUrl": "https://www.internwise.co.uk/job/35309/pr-and-marketing-executive-2026",
+      "day": "WPGM LTD",
+      "title": "PR and Marketing Executive (2026)",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35309.png"
+      ],
+      "status": "in-review",
+      "caption": "FEATURED JOB: PR and Marketing Executive (2026) at WPGM LTD\n\nReady to run real campaigns? Own content, socials and growth for a busy team.\n\nSector: Public Relations (PR) & Communications\nLocation: London, United Kingdom, Central London\nType: Full-time\nDuration: 4 - 6 months\n\nApply now at internwise.co.uk (link in the post)",
+      "hashtags": [
+        "#marketingjobs",
+        "#socialmedia",
+        "#internship",
+        "#londonjobs",
+        "#graduatejobs"
+      ]
+    },
+    {
+      "id": "job-35305",
+      "sourceId": "35305",
+      "sourceUrl": "https://www.internwise.co.uk/job/35305/business-assistant-2026",
+      "day": "WPGM LTD",
+      "title": "Business Assistant (2026)",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35305.png"
+      ],
+      "status": "in-review",
+      "caption": "FEATURED JOB: Business Assistant (2026) at WPGM LTD\n\nReady to run real campaigns? Own content, socials and growth for a busy team.\n\nSector: Media / New Media\nLocation: London, United Kingdom, Central London\nType: Full-time\nDuration: 4 - 6 months\n\nApply now at internwise.co.uk (link in the post)",
+      "hashtags": [
+        "#marketingjobs",
+        "#socialmedia",
+        "#internship",
+        "#londonjobs",
+        "#graduatejobs"
+      ]
+    },
+    {
+      "id": "job-35388",
+      "sourceId": "35388",
+      "sourceUrl": "https://www.internwise.co.uk/job/35388/accounts-admin-internship-at-mk-accountants",
+      "day": "M N K ACCOUNTANTS LTD",
+      "title": "Accounts Admin Internship at M&K Accountants",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35388.png"
+      ],
+      "status": "in-review",
+      "caption": "FEATURED JOB: Accounts Admin Internship at M&K Accountants at M N K ACCOUNTANTS LTD\n\nKickstart your career with a hands-on internship at a growing UK company.\n\nSector: Accountancy\nLocation: London - Camden , Central London\nType: Full-time\nDuration: 7 - 12 months\n\nApply now at internwise.co.uk (link in the post)",
+      "hashtags": [
+        "#internship",
+        "#careers",
+        "#internship",
+        "#londonjobs",
+        "#graduatejobs"
       ]
     }
   ]

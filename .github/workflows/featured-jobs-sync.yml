@@ -1,8 +1,9 @@
 name: Featured Jobs Sync
 
 # Runs the automation pipeline daily: scrapes the live Featured Jobs section,
-# generates graphics for any NEW jobs, and opens a PR for review. Nothing reaches
-# the live dashboard until the PR is merged (which then auto-redeploys Cloudflare Pages).
+# generates graphics for any NEW jobs, and commits them straight to main. That
+# auto-redeploys the Cloudflare Pages dashboard, where the "new graphics" badge
+# flags anything you haven't seen yet. Review happens on the dashboard.
 
 on:
   schedule:
@@ -11,7 +12,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 concurrency:
   group: featured-jobs-sync
@@ -37,43 +37,18 @@ jobs:
       - name: Run featured-jobs sync
         run: python automation/sync_featured_jobs.py | tee /tmp/sync.log
 
-      - name: Open PR if there are changes
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Commit and push to main if there are changes
         run: |
           if [ -z "$(git status --porcelain)" ]; then
             echo "No changes - no new featured jobs. Nothing to do."
             exit 0
           fi
 
-          DATE_UTC="$(date -u +%Y-%m-%d)"
-          BRANCH="featured-jobs-sync-$(date -u +%Y%m%d-%H%M%S)"
-
           git config user.name  "internwise-content-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout -b "$BRANCH"
           git add -A data/featured.json images/featured
-          git commit -m "Featured jobs sync ($DATE_UTC)"
-          git push origin "$BRANCH"
+          git commit -m "Featured jobs sync ($(date -u +%Y-%m-%d))"
+          git push origin HEAD:main
 
-          NEWJOBS="$(grep '+ generated' /tmp/sync.log || true)"
-          [ -z "$NEWJOBS" ] && NEWJOBS="(entries updated or removed; see the diff)"
-
-          {
-            echo "Automated featured-jobs sync from the live internship-search page."
-            echo ""
-            echo "The graphics are marked **in-review** in the Featured Jobs tab. Please open"
-            echo "the Content Hub, visually check each new graphic, then merge to publish"
-            echo "(merging auto-redeploys the Cloudflare Pages site)."
-            echo ""
-            echo "**New / updated graphics:**"
-            echo '```'
-            echo "$NEWJOBS"
-            echo '```'
-          } > /tmp/pr_body.md
-
-          gh pr create \
-            --base main \
-            --head "$BRANCH" \
-            --title "Featured jobs sync ($DATE_UTC)" \
-            --body-file /tmp/pr_body.md
+          echo "Pushed new featured graphics to main; Cloudflare Pages will redeploy."
+          grep '+ generated' /tmp/sync.log || true
