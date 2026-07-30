@@ -58,6 +58,7 @@
   let currentSlideIdx = 0;       // Zero-based slide index in overlay
   let currentPlatform = 'ig-fb'; // Active platform tab
   let currentHashtags = [];      // Hashtags currently displayed (platform-filtered)
+  let currentCaption  = '';      // Caption text currently displayed (platform-specific)
 
   /* -------------------------------------------------------------------------
      DOM references (resolved once after DOMContentLoaded)
@@ -327,13 +328,20 @@
     }
     currentWeek = featuredWeek;
 
-    const count = (featuredWeek.posts || []).length;
+    const posts = (featuredWeek.posts || []).slice().sort(function (a, b) {
+      // Newest first: by addedAt, then by numeric job id as a fallback.
+      const at = a.addedAt || '', bt = b.addedAt || '';
+      if (at !== bt) return at < bt ? 1 : -1;
+      return (parseInt(b.sourceId || 0, 10)) - (parseInt(a.sourceId || 0, 10));
+    });
+
+    const count = posts.length;
     elWeekMeta.innerHTML = `
       <span class="week-meta__label">${escapeHtml(featuredWeek.label)}</span>
       <span class="week-meta__date">${count} open ${count === 1 ? 'role' : 'roles'}</span>
     `;
 
-    renderPostGrid(featuredWeek.posts || []);
+    renderPostGrid(posts);
   }
 
   /** Switch between 'weekly' and 'featured' content modes. */
@@ -860,7 +868,9 @@
     elCopyCaptionBtn.addEventListener('click', function () {
       if (!overlayPostId || !currentWeek) return;
       const post = currentWeek.posts.find(function (p) { return p.id === overlayPostId; });
-      if (post) copyToClipboard(post.caption, elCopyCaptionBtn);
+      if (!post) return;
+      // Copy the caption currently shown (platform-specific for featured jobs).
+      copyToClipboard(currentCaption || post.caption, elCopyCaptionBtn);
     });
 
     // Copy hashtags (copies only the platform-filtered set currently shown)
@@ -959,13 +969,17 @@
     } else {
       elCaptionStandard.hidden = false;
       elCaptionThread.hidden   = true;
-      elDetailCaption.textContent = post.caption;
+      // Prefer a platform-specific caption (featured jobs), else the single caption.
+      currentCaption = (post.captions && post.captions[platform]) || post.caption || '';
+      elDetailCaption.textContent = currentCaption;
     }
   }
 
   function renderHashtagsForPlatform(post, platform) {
     const limit     = PLATFORM_HASHTAG_LIMIT[platform] || 5;
-    currentHashtags = (post.hashtags || []).slice(0, limit);
+    // Prefer a platform-specific hashtag set (featured jobs), else the shared list.
+    const source    = (post.hashtagsByPlatform && post.hashtagsByPlatform[platform]) || post.hashtags || [];
+    currentHashtags = source.slice(0, limit);
 
     elDetailHashtags.innerHTML = '';
     currentHashtags.forEach(function (tag) {
