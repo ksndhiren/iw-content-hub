@@ -1,0 +1,10 @@
+# Cloudflare Pages configuration.
+# Binds the STATUSES KV namespace so functions/api/statuses.js can read/write
+# shared post statuses across devices. Applied automatically on each Pages deploy.
+name = "iw-content-hub"
+pages_build_output_dir = "."
+compatibility_date = "2025-06-01"
+
+[[kv_namespaces]]
+binding = "STATUSES"
+id = "902730a092f343419f0500283d8836b5"
