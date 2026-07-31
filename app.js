@@ -19,6 +19,7 @@
   const DATA_URL      = 'data/weeks.json';
   const FEATURED_URL  = 'data/featured.json';
   const FEATURED_SEEN_KEY = 'iw-content-hub-featured-seen';
+  const STATUS_API    = '/api/statuses';   // shared cross-device status store
   const STORAGE_KEY   = 'iw-content-hub-statuses';
   const COMMENTS_KEY  = 'iw-content-hub-comments';
 
@@ -109,6 +110,7 @@
     loadFeaturedSeen();
     fetchWeeks();
     fetchFeatured();
+    fetchRemoteStatuses();   // pull shared statuses, then refresh what's on screen
     bindGlobalEvents();
   }
 
@@ -459,7 +461,52 @@
 
   function setStatus(postId, newStatus) {
     statuses[postId] = newStatus;
-    saveStatuses();
+    saveStatuses();          // local cache (offline / instant)
+    pushRemoteStatus(postId, newStatus);
+  }
+
+  /* Shared status store (Cloudflare KV via /api/statuses). Falls back silently to
+     localStorage-only if the endpoint isn't configured yet. */
+  async function fetchRemoteStatuses() {
+    try {
+      const res = await fetch(STATUS_API, { cache: 'no-store' });
+      if (!res.ok) return;                         // 501 = KV not bound yet
+      const remote = await res.json();
+      if (remote && typeof remote === 'object') {
+        // Shared store is the source of truth across devices.
+        statuses = Object.assign({}, statuses, remote);
+        saveStatuses();
+        refreshVisibleStatuses();
+      }
+    } catch (_) { /* offline / no function - keep localStorage */ }
+  }
+
+  function pushRemoteStatus(postId, status) {
+    try {
+      fetch(STATUS_API, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ id: postId, status: status }),
+      }).catch(function () {});
+    } catch (_) { /* ignore */ }
+  }
+
+  /** Re-sync the status badges/dropdown currently on screen after a remote fetch. */
+  function refreshVisibleStatuses() {
+    if (!currentWeek) return;
+    (currentWeek.posts || []).forEach(function (post) {
+      const status = getStatus(post.id, post.status);
+      const badge  = elPostGrid.querySelector('.status-badge[data-post-id="' + post.id + '"]');
+      if (badge) {
+        STATUS_CYCLE.forEach(function (s) { badge.classList.remove('status-badge--' + s); });
+        badge.classList.add('status-badge--' + status);
+        badge.textContent = STATUS_LABELS[status];
+      }
+    });
+    if (overlayPostId) {
+      const p = currentWeek.posts.find(function (x) { return x.id === overlayPostId; });
+      if (p) elDetailStatus.value = getStatus(overlayPostId, p.status);
+    }
   }
 
   function cycleStatus(postId, badgeEl, cardEl) {
