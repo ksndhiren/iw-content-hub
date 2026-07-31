@@ -192,7 +192,7 @@
 
   async function fetchWeeks() {
     try {
-      const response = await fetch(DATA_URL);
+      const response = await fetch(DATA_URL, { cache: 'no-store' });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       allWeeks = data.weeks || [];
@@ -250,7 +250,7 @@
   ------------------------------------------------------------------------- */
   async function fetchFeatured() {
     try {
-      const response = await fetch(FEATURED_URL);
+      const response = await fetch(FEATURED_URL, { cache: 'no-store' });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       featuredWeek = await response.json();
     } catch (err) {

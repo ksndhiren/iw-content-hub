@@ -40,7 +40,41 @@
             "#interviewtips",
             "#ukjobs",
             "#entrylevel"
-          ]
+          ],
+          "captions": {
+            "ig-fb": "You get 7 seconds to make a first impression and 30 to land your pitch.\n\nMost people freeze or ramble. The fix is a formula: who you are, your proof, what you want, the hook back.\n\nOne number beats five adjectives every time.\n\nSwipe for the formula and a worked example.\n\nFind roles at internwise.co.uk",
+            "linkedin": "Most graduates lose the room in the first 30 seconds - not for lack of substance, but because they ramble.\n\nA strong introduction has four parts: who you are, one proof point, what you're looking for, and a question that opens a conversation.\n\nThe detail that changes everything is leading with a specific result rather than a job title. \"I grew our society's socials from 2k to 15k in six months\" lands far harder than \"I'm passionate and hardworking.\"\n\nThe full framework, with a worked example, is in the carousel.\n\ninternwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#elevatorpitch",
+              "#networking",
+              "#graduatejobs",
+              "#careeradvice",
+              "#jobhunting",
+              "#interviewtips",
+              "#ukjobs",
+              "#entrylevel"
+            ],
+            "linkedin": [
+              "#graduatecareers",
+              "#networking",
+              "#interviewtips",
+              "#careeradvice",
+              "#earlycareers"
+            ],
+            "x": [
+              "#careeradvice",
+              "#jobhunting"
+            ],
+            "threads": [
+              "#graduatejobs",
+              "#careeradvice",
+              "#networking",
+              "#jobhunting",
+              "#ukjobs"
+            ]
+          }
         },
         {
           "id": "d2-imposter",
@@ -62,7 +96,43 @@
             "#firstjob",
             "#ukjobs",
             "#confidence"
-          ]
+          ],
+          "captions": {
+            "ig-fb": "70% of people feel like a fraud at work at some point. It's the norm, not a defect.\n\nOn day one, remember: you were hired from a pool of hundreds. Someone experienced chose you on purpose.\n\nThe wobble usually lasts about 90 days. Competence arrives before the feeling does.\n\nThe feeling that you're behind is not evidence that you are. It's just new.\n\ninternwise.co.uk\n\nSource: Journal of Behavioral Science, 2025",
+            "linkedin": "If you recently started a new role and feel one mistake away from being \"found out\" - you're in good company.\n\nAround 70% of professionals experience imposter syndrome at some point. On day one it helps to remember you were chosen from a large pool by people who know what the job needs.\n\nThe discomfort usually eases within about 90 days. Competence tends to arrive before the feeling of it does.\n\nFeeling behind isn't evidence that you are. It's just new.\n\nSource: Journal of Behavioral Science, 2025\ninternwise.co.uk",
+            "x": "Feeling like a fraud in your first job? 70% do.\n\nYou were hired from hundreds - on purpose. The wobble fades in ~90 days.\n\nFeeling behind isn't proof you are. It's just new.\ninternwise.co.uk",
+            "threads": "Starting a new job and feeling like a fraud? You're not alone - about 70% feel it.\n\nYou were picked from hundreds. The wobble usually fades in ~90 days.\n\nFeeling behind isn't evidence you are. It's just new.\ninternwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#impostersyndrome",
+              "#newjob",
+              "#mentalhealth",
+              "#careeradvice",
+              "#graduatejobs",
+              "#firstjob",
+              "#ukjobs",
+              "#confidence"
+            ],
+            "linkedin": [
+              "#impostersyndrome",
+              "#earlycareers",
+              "#mentalhealthatwork",
+              "#careeradvice",
+              "#newjob"
+            ],
+            "x": [
+              "#impostersyndrome",
+              "#careeradvice"
+            ],
+            "threads": [
+              "#impostersyndrome",
+              "#newjob",
+              "#careeradvice",
+              "#mentalhealth",
+              "#firstjob"
+            ]
+          }
         },
         {
           "id": "d3-readtheroom",
@@ -99,7 +169,41 @@
             "#redflags",
             "#ukjobs",
             "#entrylevel"
-          ]
+          ],
+          "captions": {
+            "ig-fb": "An interview is a two-way read. You're interviewing them too.\n\nGreen flags: they start selling the role, they ask what you'd want in year two, the time runs over.\n\nRed flags: nobody can describe success, they dodge why the last person left, they pressure you to decide on the spot.\n\nSwipe for the full table read.\n\nFind roles at internwise.co.uk",
+            "linkedin": "Interviews aren't one-directional. While they assess you, you should be reading them.\n\nGreen flags worth noticing: the conversation shifts from testing you to selling the role, they ask what you'd want a year in, and the scheduled time overruns.\n\nRed flags worth respecting: no one can describe what success looks like, they avoid why the last person left, or they push for a same-day decision.\n\nThe full table read - live signals and the questions that flip the dynamic - is in the carousel.\n\ninternwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#interviewtips",
+              "#jobinterview",
+              "#graduatejobs",
+              "#careeradvice",
+              "#interviewprep",
+              "#redflags",
+              "#ukjobs",
+              "#entrylevel"
+            ],
+            "linkedin": [
+              "#interviewtips",
+              "#jobinterview",
+              "#earlycareers",
+              "#careeradvice",
+              "#hiring"
+            ],
+            "x": [
+              "#interviewtips",
+              "#jobinterview"
+            ],
+            "threads": [
+              "#interviewtips",
+              "#jobinterview",
+              "#careeradvice",
+              "#redflags",
+              "#ukjobs"
+            ]
+          }
         },
         {
           "id": "d4-linkedincontent",
@@ -136,7 +240,41 @@
             "#jobsearchtips",
             "#ukjobs",
             "#entrylevel"
-          ]
+          ],
+          "captions": {
+            "ig-fb": "The best grads don't chase recruiters. They post so recruiters come to them.\n\nOnly 0.9% of LinkedIn users post weekly. Posting at all puts you ahead of 99%. And 60% of recruiters check your activity before reaching out.\n\nSwipe for what to post, the anatomy of a post that lands, and the cadence that builds an audience.\n\nFind roles at internwise.co.uk",
+            "linkedin": "Most graduates apply into the void. The ones who get found do something different: they post.\n\nUnder 1% of LinkedIn users publish weekly, so simply showing up puts you ahead of almost everyone. And 60% of recruiters check your activity before they reach out.\n\nYou don't need to go viral. A weekly learning log, an honest reflection, or a small project built in public is enough to start compounding.\n\nWhat to post, the anatomy of a post that lands, and a realistic cadence are all in the carousel.\n\ninternwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#linkedintips",
+              "#personalbranding",
+              "#graduatejobs",
+              "#careeradvice",
+              "#contentcreation",
+              "#jobsearchtips",
+              "#ukjobs",
+              "#entrylevel"
+            ],
+            "linkedin": [
+              "#personalbranding",
+              "#earlycareers",
+              "#contentstrategy",
+              "#careeradvice",
+              "#graduatecareers"
+            ],
+            "x": [
+              "#personalbranding",
+              "#careeradvice"
+            ],
+            "threads": [
+              "#linkedintips",
+              "#personalbranding",
+              "#careeradvice",
+              "#jobsearch",
+              "#ukjobs"
+            ]
+          }
         },
         {
           "id": "d5-skills",
@@ -173,7 +311,41 @@
             "#dataliteracy",
             "#ukjobs",
             "#entrylevel"
-          ]
+          ],
+          "captions": {
+            "ig-fb": "Not every skill pays the same.\n\nThe four that move a 2026 grad salary most: AI fluency (+18%), data literacy (+14%), communication (+11%), project delivery (+9%).\n\nNone of them need a bootcamp. Each can be built in public, for free, in a month.\n\nSwipe for what each really means and how to prove it.\n\nFind roles at internwise.co.uk",
+            "linkedin": "Not every skill moves your salary by the same amount.\n\nBased on 2026 graduate data, four stand out: AI fluency (+18%), data literacy (+14%), communication (+11%) and project delivery (+9%).\n\nThe encouraging part is that none require a bootcamp. Each can be built in public, for free, in about a month, and evidenced with something you can link to.\n\nWhat each skill really means, and how to prove it, is in the carousel.\n\nSource: LinkedIn Skills Report and ONS 2026.\ninternwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#skills2026",
+              "#careeradvice",
+              "#graduatejobs",
+              "#futureofwork",
+              "#aiskills",
+              "#dataliteracy",
+              "#ukjobs",
+              "#entrylevel"
+            ],
+            "linkedin": [
+              "#futureofwork",
+              "#earlycareers",
+              "#skillsdevelopment",
+              "#aiskills",
+              "#careeradvice"
+            ],
+            "x": [
+              "#futureofwork",
+              "#aiskills"
+            ],
+            "threads": [
+              "#skills2026",
+              "#futureofwork",
+              "#careeradvice",
+              "#aiskills",
+              "#ukjobs"
+            ]
+          }
         }
       ]
     },
