@@ -3,19 +3,72 @@
   "label": "Featured Jobs",
   "posts": [
     {
-      "id": "job-35308",
-      "sourceId": "35308",
-      "sourceUrl": "https://www.internwise.co.uk/job/35308/sales-and-marketing-executive-2026",
-      "addedAt": "2026-07-31T09:11:32Z",
-      "day": "WPGM LTD",
-      "title": "Sales And Marketing Executive",
+      "id": "job-35388",
+      "sourceId": "35388",
+      "sourceUrl": "https://www.internwise.co.uk/job/35388/accounts-admin-internship-at-mk-accountants",
+      "addedAt": "2026-07-31T11:44:21Z",
+      "day": "M N K ACCOUNTANTS LTD",
+      "title": "Accounts Admin Internship",
       "platform": "Featured Job",
       "format": "Single",
       "slides": [
-        "job-35308.png"
+        "job-35388.png"
       ],
       "status": "in-review",
-      "caption": "Sales And Marketing Executive at WPGM LTD 📍 London, United Kingdom, Central London\nReady to run real campaigns? Own content, socials and growth for a busy team.\nApply now 👉 https://www.internwise.co.uk/job/35308/sales-and-marketing-executive-2026",
+      "caption": "Accounts Admin Internship 📍 London - Camden , Central London\nKickstart your career with a hands-on internship at a growing UK company.\nApply now 👉 https://www.internwise.co.uk/job/35388/accounts-admin-internship-at-mk-accountants",
+      "hashtags": [
+        "#internship",
+        "#londonjobs",
+        "#internships",
+        "#hiring",
+        "#graduatejobs"
+      ],
+      "captions": {
+        "ig-fb": "Accounts Admin Internship 📍 London - Camden , Central London\nKickstart your career with a hands-on internship at a growing UK company.\nApply now 👉 https://www.internwise.co.uk/job/35388/accounts-admin-internship-at-mk-accountants",
+        "linkedin": "We're hiring: Accounts Admin Internship (London - Camden , Central London · Full-time).\nKickstart your career with a hands-on internship at a growing UK company.\nApply here: https://www.internwise.co.uk/job/35388/accounts-admin-internship-at-mk-accountants",
+        "x": "Now hiring: Accounts Admin Internship 📍 London - Camden , Central London\nApply 👇 https://www.internwise.co.uk/job/35388/accounts-admin-internship-at-mk-accountants",
+        "threads": "New role alert 🚀 Accounts Admin Internship in London - Camden , Central London.\nKickstart your career with a hands-on internship at a growing UK company.\nApply → https://www.internwise.co.uk/job/35388/accounts-admin-internship-at-mk-accountants"
+      },
+      "hashtagsByPlatform": {
+        "ig-fb": [
+          "#internship",
+          "#londonjobs",
+          "#internships",
+          "#hiring",
+          "#graduatejobs"
+        ],
+        "linkedin": [
+          "#hiring",
+          "#internship",
+          "#internships",
+          "#careers"
+        ],
+        "x": [
+          "#internships",
+          "#hiring"
+        ],
+        "threads": [
+          "#internship",
+          "#hiring",
+          "#internships",
+          "#londonjobs"
+        ]
+      }
+    },
+    {
+      "id": "job-35387",
+      "sourceId": "35387",
+      "sourceUrl": "https://www.internwise.co.uk/job/35387/marketing-internship",
+      "addedAt": "2026-07-31T11:44:21Z",
+      "day": "M N K ACCOUNTANTS LTD",
+      "title": "Marketing Internship",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35387.png"
+      ],
+      "status": "in-review",
+      "caption": "Marketing Internship 📍 Camden Town / London, Central London\nReady to run real campaigns? Own content, socials and growth for a busy team.\nApply now 👉 https://www.internwise.co.uk/job/35387/marketing-internship",
       "hashtags": [
         "#internship",
         "#londonjobs",
@@ -24,10 +77,116 @@
         "#graduatejobs"
       ],
       "captions": {
-        "ig-fb": "Sales And Marketing Executive at WPGM LTD 📍 London, United Kingdom, Central London\nReady to run real campaigns? Own content, socials and growth for a busy team.\nApply now 👉 https://www.internwise.co.uk/job/35308/sales-and-marketing-executive-2026",
-        "linkedin": "We're hiring: Sales And Marketing Executive at WPGM LTD (London, United Kingdom, Central London · Full-time).\nReady to run real campaigns? Own content, socials and growth for a busy team.\nApply here: https://www.internwise.co.uk/job/35308/sales-and-marketing-executive-2026",
-        "x": "Now hiring: Sales And Marketing Executive @ WPGM LTD 📍 London, United Kingdom, Central London\nApply 👇 https://www.internwise.co.uk/job/35308/sales-and-marketing-executive-2026",
-        "threads": "New role alert 🚀 Sales And Marketing Executive at WPGM LTD in London, United Kingdom, Central London.\nReady to run real campaigns? Own content, socials and growth for a busy team.\nApply → https://www.internwise.co.uk/job/35308/sales-and-marketing-executive-2026"
+        "ig-fb": "Marketing Internship 📍 Camden Town / London, Central London\nReady to run real campaigns? Own content, socials and growth for a busy team.\nApply now 👉 https://www.internwise.co.uk/job/35387/marketing-internship",
+        "linkedin": "We're hiring: Marketing Internship (Camden Town / London, Central London · Part-time).\nReady to run real campaigns? Own content, socials and growth for a busy team.\nApply here: https://www.internwise.co.uk/job/35387/marketing-internship",
+        "x": "Now hiring: Marketing Internship 📍 Camden Town / London, Central London\nApply 👇 https://www.internwise.co.uk/job/35387/marketing-internship",
+        "threads": "New role alert 🚀 Marketing Internship in Camden Town / London, Central London.\nReady to run real campaigns? Own content, socials and growth for a busy team.\nApply → https://www.internwise.co.uk/job/35387/marketing-internship"
+      },
+      "hashtagsByPlatform": {
+        "ig-fb": [
+          "#internship",
+          "#londonjobs",
+          "#marketingjobs",
+          "#hiring",
+          "#graduatejobs"
+        ],
+        "linkedin": [
+          "#hiring",
+          "#internship",
+          "#marketingjobs",
+          "#careers"
+        ],
+        "x": [
+          "#marketingjobs",
+          "#hiring"
+        ],
+        "threads": [
+          "#internship",
+          "#hiring",
+          "#marketingjobs",
+          "#londonjobs"
+        ]
+      }
+    },
+    {
+      "id": "job-35321",
+      "sourceId": "35321",
+      "sourceUrl": "https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging",
+      "addedAt": "2026-07-31T11:44:21Z",
+      "day": "LONDON PROPERTY STAGING LTD",
+      "title": "Social Media and Content Intern - Home Staging",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35321.png"
+      ],
+      "status": "in-review",
+      "caption": "Social Media and Content Intern - Home Staging 📍 London, Greater London\nLove creating scroll-stopping content? Shoot, edit and post for a real brand.\nApply now 👉 https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging",
+      "hashtags": [
+        "#internship",
+        "#londonjobs",
+        "#socialmediajobs",
+        "#hiring",
+        "#graduatejobs"
+      ],
+      "captions": {
+        "ig-fb": "Social Media and Content Intern - Home Staging 📍 London, Greater London\nLove creating scroll-stopping content? Shoot, edit and post for a real brand.\nApply now 👉 https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging",
+        "linkedin": "We're hiring: Social Media and Content Intern - Home Staging (London, Greater London · Part-time).\nLove creating scroll-stopping content? Shoot, edit and post for a real brand.\nApply here: https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging",
+        "x": "Now hiring: Social Media and Content Intern - Home Staging 📍 London, Greater London\nApply 👇 https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging",
+        "threads": "New role alert 🚀 Social Media and Content Intern - Home Staging in London, Greater London.\nLove creating scroll-stopping content? Shoot, edit and post for a real brand.\nApply → https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging"
+      },
+      "hashtagsByPlatform": {
+        "ig-fb": [
+          "#internship",
+          "#londonjobs",
+          "#socialmediajobs",
+          "#hiring",
+          "#graduatejobs"
+        ],
+        "linkedin": [
+          "#hiring",
+          "#internship",
+          "#socialmediajobs",
+          "#careers"
+        ],
+        "x": [
+          "#socialmediajobs",
+          "#hiring"
+        ],
+        "threads": [
+          "#internship",
+          "#hiring",
+          "#socialmediajobs",
+          "#londonjobs"
+        ]
+      }
+    },
+    {
+      "id": "job-35309",
+      "sourceId": "35309",
+      "sourceUrl": "https://www.internwise.co.uk/job/35309/pr-and-marketing-executive-2026",
+      "addedAt": "2026-07-31T11:44:21Z",
+      "day": "WPGM LTD",
+      "title": "PR and Marketing Executive",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35309.png"
+      ],
+      "status": "in-review",
+      "caption": "PR and Marketing Executive 📍 London, United Kingdom, Central London\nReady to run real campaigns? Own content, socials and growth for a busy team.\nApply now 👉 https://www.internwise.co.uk/job/35309/pr-and-marketing-executive-2026",
+      "hashtags": [
+        "#internship",
+        "#londonjobs",
+        "#marketingjobs",
+        "#hiring",
+        "#graduatejobs"
+      ],
+      "captions": {
+        "ig-fb": "PR and Marketing Executive 📍 London, United Kingdom, Central London\nReady to run real campaigns? Own content, socials and growth for a busy team.\nApply now 👉 https://www.internwise.co.uk/job/35309/pr-and-marketing-executive-2026",
+        "linkedin": "We're hiring: PR and Marketing Executive (London, United Kingdom, Central London · Full-time).\nReady to run real campaigns? Own content, socials and growth for a busy team.\nApply here: https://www.internwise.co.uk/job/35309/pr-and-marketing-executive-2026",
+        "x": "Now hiring: PR and Marketing Executive 📍 London, United Kingdom, Central London\nApply 👇 https://www.internwise.co.uk/job/35309/pr-and-marketing-executive-2026",
+        "threads": "New role alert 🚀 PR and Marketing Executive in London, United Kingdom, Central London.\nReady to run real campaigns? Own content, socials and growth for a busy team.\nApply → https://www.internwise.co.uk/job/35309/pr-and-marketing-executive-2026"
       },
       "hashtagsByPlatform": {
         "ig-fb": [
@@ -59,7 +218,7 @@
       "id": "job-35306",
       "sourceId": "35306",
       "sourceUrl": "https://www.internwise.co.uk/job/35306/brand-design-executive-2026",
-      "addedAt": "2026-07-31T09:11:32Z",
+      "addedAt": "2026-07-31T11:44:21Z",
       "day": "WPGM LTD",
       "title": "Brand Design Executive",
       "platform": "Featured Job",
@@ -68,7 +227,7 @@
         "job-35306.png"
       ],
       "status": "in-review",
-      "caption": "Brand Design Executive at WPGM LTD 📍 London, United Kingdom, Central London\nLove turning ideas into visuals that stop the scroll? Build your portfolio with a real brand.\nApply now 👉 https://www.internwise.co.uk/job/35306/brand-design-executive-2026",
+      "caption": "Brand Design Executive 📍 London, United Kingdom, Central London\nLove turning ideas into visuals that stop the scroll? Build your portfolio with a real brand.\nApply now 👉 https://www.internwise.co.uk/job/35306/brand-design-executive-2026",
       "hashtags": [
         "#internship",
         "#londonjobs",
@@ -77,10 +236,10 @@
         "#graduatejobs"
       ],
       "captions": {
-        "ig-fb": "Brand Design Executive at WPGM LTD 📍 London, United Kingdom, Central London\nLove turning ideas into visuals that stop the scroll? Build your portfolio with a real brand.\nApply now 👉 https://www.internwise.co.uk/job/35306/brand-design-executive-2026",
-        "linkedin": "We're hiring: Brand Design Executive at WPGM LTD (London, United Kingdom, Central London · Full-time).\nLove turning ideas into visuals that stop the scroll? Build your portfolio with a real brand.\nApply here: https://www.internwise.co.uk/job/35306/brand-design-executive-2026",
-        "x": "Now hiring: Brand Design Executive @ WPGM LTD 📍 London, United Kingdom, Central London\nApply 👇 https://www.internwise.co.uk/job/35306/brand-design-executive-2026",
-        "threads": "New role alert 🚀 Brand Design Executive at WPGM LTD in London, United Kingdom, Central London.\nLove turning ideas into visuals that stop the scroll? Build your portfolio with a real brand.\nApply → https://www.internwise.co.uk/job/35306/brand-design-executive-2026"
+        "ig-fb": "Brand Design Executive 📍 London, United Kingdom, Central London\nLove turning ideas into visuals that stop the scroll? Build your portfolio with a real brand.\nApply now 👉 https://www.internwise.co.uk/job/35306/brand-design-executive-2026",
+        "linkedin": "We're hiring: Brand Design Executive (London, United Kingdom, Central London · Full-time).\nLove turning ideas into visuals that stop the scroll? Build your portfolio with a real brand.\nApply here: https://www.internwise.co.uk/job/35306/brand-design-executive-2026",
+        "x": "Now hiring: Brand Design Executive 📍 London, United Kingdom, Central London\nApply 👇 https://www.internwise.co.uk/job/35306/brand-design-executive-2026",
+        "threads": "New role alert 🚀 Brand Design Executive in London, United Kingdom, Central London.\nLove turning ideas into visuals that stop the scroll? Build your portfolio with a real brand.\nApply → https://www.internwise.co.uk/job/35306/brand-design-executive-2026"
       },
       "hashtagsByPlatform": {
         "ig-fb": [
@@ -104,165 +263,6 @@
           "#internship",
           "#hiring",
           "#designjobs",
-          "#londonjobs"
-        ]
-      }
-    },
-    {
-      "id": "job-35388",
-      "sourceId": "35388",
-      "sourceUrl": "https://www.internwise.co.uk/job/35388/accounts-admin-internship-at-mk-accountants",
-      "addedAt": "2026-07-30T12:56:51Z",
-      "day": "M N K ACCOUNTANTS LTD",
-      "title": "Accounts Admin Internship at M&K Accountants",
-      "platform": "Featured Job",
-      "format": "Single",
-      "slides": [
-        "job-35388.png"
-      ],
-      "status": "in-review",
-      "caption": "Accounts Admin Internship at M&K Accountants at M N K ACCOUNTANTS LTD 📍 London - Camden , Central London\nKickstart your career with a hands-on internship at a growing UK company.\nApply now 👉 https://www.internwise.co.uk/job/35388/accounts-admin-internship-at-mk-accountants",
-      "hashtags": [
-        "#internship",
-        "#londonjobs",
-        "#internships",
-        "#hiring",
-        "#graduatejobs"
-      ],
-      "captions": {
-        "ig-fb": "Accounts Admin Internship at M&K Accountants at M N K ACCOUNTANTS LTD 📍 London - Camden , Central London\nKickstart your career with a hands-on internship at a growing UK company.\nApply now 👉 https://www.internwise.co.uk/job/35388/accounts-admin-internship-at-mk-accountants",
-        "linkedin": "We're hiring: Accounts Admin Internship at M&K Accountants at M N K ACCOUNTANTS LTD (London - Camden , Central London · Full-time).\nKickstart your career with a hands-on internship at a growing UK company.\nApply here: https://www.internwise.co.uk/job/35388/accounts-admin-internship-at-mk-accountants",
-        "x": "Now hiring: Accounts Admin Internship at M&K Accountants @ M N K ACCOUNTANTS LTD 📍 London - Camden , Central London\nApply 👇 https://www.internwise.co.uk/job/35388/accounts-admin-internship-at-mk-accountants",
-        "threads": "New role alert 🚀 Accounts Admin Internship at M&K Accountants at M N K ACCOUNTANTS LTD in London - Camden , Central London.\nKickstart your career with a hands-on internship at a growing UK company.\nApply → https://www.internwise.co.uk/job/35388/accounts-admin-internship-at-mk-accountants"
-      },
-      "hashtagsByPlatform": {
-        "ig-fb": [
-          "#internship",
-          "#londonjobs",
-          "#internships",
-          "#hiring",
-          "#graduatejobs"
-        ],
-        "linkedin": [
-          "#hiring",
-          "#internship",
-          "#internships",
-          "#careers"
-        ],
-        "x": [
-          "#internships",
-          "#hiring"
-        ],
-        "threads": [
-          "#internship",
-          "#hiring",
-          "#internships",
-          "#londonjobs"
-        ]
-      }
-    },
-    {
-      "id": "job-35321",
-      "sourceId": "35321",
-      "sourceUrl": "https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging",
-      "addedAt": "2026-07-30T12:56:51Z",
-      "day": "LONDON PROPERTY STAGING LTD",
-      "title": "Social Media and Content Intern - Home Staging",
-      "platform": "Featured Job",
-      "format": "Single",
-      "slides": [
-        "job-35321.png"
-      ],
-      "status": "in-review",
-      "caption": "Social Media and Content Intern - Home Staging at LONDON PROPERTY STAGING LTD 📍 London, Greater London\nLove creating scroll-stopping content? Shoot, edit and post for a real brand.\nApply now 👉 https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging",
-      "hashtags": [
-        "#internship",
-        "#londonjobs",
-        "#socialmediajobs",
-        "#hiring",
-        "#graduatejobs"
-      ],
-      "captions": {
-        "ig-fb": "Social Media and Content Intern - Home Staging at LONDON PROPERTY STAGING LTD 📍 London, Greater London\nLove creating scroll-stopping content? Shoot, edit and post for a real brand.\nApply now 👉 https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging",
-        "linkedin": "We're hiring: Social Media and Content Intern - Home Staging at LONDON PROPERTY STAGING LTD (London, Greater London · Part-time).\nLove creating scroll-stopping content? Shoot, edit and post for a real brand.\nApply here: https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging",
-        "x": "Now hiring: Social Media and Content Intern - Home Staging @ LONDON PROPERTY STAGING LTD 📍 London, Greater London\nApply 👇 https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging",
-        "threads": "New role alert 🚀 Social Media and Content Intern - Home Staging at LONDON PROPERTY STAGING LTD in London, Greater London.\nLove creating scroll-stopping content? Shoot, edit and post for a real brand.\nApply → https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging"
-      },
-      "hashtagsByPlatform": {
-        "ig-fb": [
-          "#internship",
-          "#londonjobs",
-          "#socialmediajobs",
-          "#hiring",
-          "#graduatejobs"
-        ],
-        "linkedin": [
-          "#hiring",
-          "#internship",
-          "#socialmediajobs",
-          "#careers"
-        ],
-        "x": [
-          "#socialmediajobs",
-          "#hiring"
-        ],
-        "threads": [
-          "#internship",
-          "#hiring",
-          "#socialmediajobs",
-          "#londonjobs"
-        ]
-      }
-    },
-    {
-      "id": "job-35305",
-      "sourceId": "35305",
-      "sourceUrl": "https://www.internwise.co.uk/job/35305/business-assistant-2026",
-      "addedAt": "2026-07-30T12:56:51Z",
-      "day": "WPGM LTD",
-      "title": "Business Assistant",
-      "platform": "Featured Job",
-      "format": "Single",
-      "slides": [
-        "job-35305.png"
-      ],
-      "status": "in-review",
-      "caption": "Business Assistant at WPGM LTD 📍 London, United Kingdom, Central London\nReady to run real campaigns? Own content, socials and growth for a busy team.\nApply now 👉 https://www.internwise.co.uk/job/35305/business-assistant-2026",
-      "hashtags": [
-        "#internship",
-        "#londonjobs",
-        "#marketingjobs",
-        "#hiring",
-        "#graduatejobs"
-      ],
-      "captions": {
-        "ig-fb": "Business Assistant at WPGM LTD 📍 London, United Kingdom, Central London\nReady to run real campaigns? Own content, socials and growth for a busy team.\nApply now 👉 https://www.internwise.co.uk/job/35305/business-assistant-2026",
-        "linkedin": "We're hiring: Business Assistant at WPGM LTD (London, United Kingdom, Central London · Full-time).\nReady to run real campaigns? Own content, socials and growth for a busy team.\nApply here: https://www.internwise.co.uk/job/35305/business-assistant-2026",
-        "x": "Now hiring: Business Assistant @ WPGM LTD 📍 London, United Kingdom, Central London\nApply 👇 https://www.internwise.co.uk/job/35305/business-assistant-2026",
-        "threads": "New role alert 🚀 Business Assistant at WPGM LTD in London, United Kingdom, Central London.\nReady to run real campaigns? Own content, socials and growth for a busy team.\nApply → https://www.internwise.co.uk/job/35305/business-assistant-2026"
-      },
-      "hashtagsByPlatform": {
-        "ig-fb": [
-          "#internship",
-          "#londonjobs",
-          "#marketingjobs",
-          "#hiring",
-          "#graduatejobs"
-        ],
-        "linkedin": [
-          "#hiring",
-          "#internship",
-          "#marketingjobs",
-          "#careers"
-        ],
-        "x": [
-          "#marketingjobs",
-          "#hiring"
-        ],
-        "threads": [
-          "#internship",
-          "#hiring",
-          "#marketingjobs",
           "#londonjobs"
         ]
       }
@@ -271,7 +271,7 @@
       "id": "job-35281",
       "sourceId": "35281",
       "sourceUrl": "https://www.internwise.co.uk/job/35281/brand-design-internship-part-time",
-      "addedAt": "2026-07-30T12:56:51Z",
+      "addedAt": "2026-07-31T11:44:21Z",
       "day": "JBROWN GLOBAL LIMITED",
       "title": "Brand Design Internship",
       "platform": "Featured Job",
@@ -280,7 +280,7 @@
         "job-35281.png"
       ],
       "status": "in-review",
-      "caption": "Brand Design Internship at JBROWN GLOBAL LIMITED 📍 London, Central London\nLove turning ideas into visuals that stop the scroll? Build your portfolio with a real brand.\nApply now 👉 https://www.internwise.co.uk/job/35281/brand-design-internship-part-time",
+      "caption": "Brand Design Internship 📍 London, Central London\nLove turning ideas into visuals that stop the scroll? Build your portfolio with a real brand.\nApply now 👉 https://www.internwise.co.uk/job/35281/brand-design-internship-part-time",
       "hashtags": [
         "#internship",
         "#londonjobs",
@@ -289,10 +289,10 @@
         "#graduatejobs"
       ],
       "captions": {
-        "ig-fb": "Brand Design Internship at JBROWN GLOBAL LIMITED 📍 London, Central London\nLove turning ideas into visuals that stop the scroll? Build your portfolio with a real brand.\nApply now 👉 https://www.internwise.co.uk/job/35281/brand-design-internship-part-time",
-        "linkedin": "We're hiring: Brand Design Internship at JBROWN GLOBAL LIMITED (London, Central London · Part-time).\nLove turning ideas into visuals that stop the scroll? Build your portfolio with a real brand.\nApply here: https://www.internwise.co.uk/job/35281/brand-design-internship-part-time",
-        "x": "Now hiring: Brand Design Internship @ JBROWN GLOBAL LIMITED 📍 London, Central London\nApply 👇 https://www.internwise.co.uk/job/35281/brand-design-internship-part-time",
-        "threads": "New role alert 🚀 Brand Design Internship at JBROWN GLOBAL LIMITED in London, Central London.\nLove turning ideas into visuals that stop the scroll? Build your portfolio with a real brand.\nApply → https://www.internwise.co.uk/job/35281/brand-design-internship-part-time"
+        "ig-fb": "Brand Design Internship 📍 London, Central London\nLove turning ideas into visuals that stop the scroll? Build your portfolio with a real brand.\nApply now 👉 https://www.internwise.co.uk/job/35281/brand-design-internship-part-time",
+        "linkedin": "We're hiring: Brand Design Internship (London, Central London · Part-time).\nLove turning ideas into visuals that stop the scroll? Build your portfolio with a real brand.\nApply here: https://www.internwise.co.uk/job/35281/brand-design-internship-part-time",
+        "x": "Now hiring: Brand Design Internship 📍 London, Central London\nApply 👇 https://www.internwise.co.uk/job/35281/brand-design-internship-part-time",
+        "threads": "New role alert 🚀 Brand Design Internship in London, Central London.\nLove turning ideas into visuals that stop the scroll? Build your portfolio with a real brand.\nApply → https://www.internwise.co.uk/job/35281/brand-design-internship-part-time"
       },
       "hashtagsByPlatform": {
         "ig-fb": [
