@@ -146,18 +146,18 @@ def _clean_title(s):
 
 def build_captions(job):
     """Short, platform-tailored captions. Each repeats the graphic's hook line and
-    uses the job's own page as the apply link (not a generic homepage)."""
-    title   = _clean_title(job["title"])
-    company = _plain(job["company"])
-    loc     = _plain(job.get("location", ""))
-    typ     = _plain(job.get("jtype", ""))
-    hook    = fj.SECTOR_STYLES[fj._pick_style(job.get("fields", ""))][6]
-    url     = job["url"]
+    uses the job's own page as the apply link. Company name is NOT disclosed in the
+    caption (location is fine)."""
+    title = _clean_title(job["title"])
+    loc   = _plain(job.get("location", ""))
+    typ   = _plain(job.get("jtype", ""))
+    hook  = fj.SECTOR_STYLES[fj._pick_style(job.get("fields", ""))][6]
+    url   = job["url"]
     return {
-        "ig-fb":    f"{title} at {company} \U0001F4CD {loc}\n{hook}\nApply now \U0001F449 {url}",
-        "linkedin": f"We're hiring: {title} at {company} ({loc} · {typ}).\n{hook}\nApply here: {url}",
-        "x":        f"Now hiring: {title} @ {company} \U0001F4CD {loc}\nApply \U0001F447 {url}",
-        "threads":  f"New role alert \U0001F680 {title} at {company} in {loc}.\n{hook}\nApply → {url}",
+        "ig-fb":    f"{title} \U0001F4CD {loc}\n{hook}\nApply now \U0001F449 {url}",
+        "linkedin": f"We're hiring: {title} ({loc} · {typ}).\n{hook}\nApply here: {url}",
+        "x":        f"Now hiring: {title} \U0001F4CD {loc}\nApply \U0001F447 {url}",
+        "threads":  f"New role alert \U0001F680 {title} in {loc}.\n{hook}\nApply → {url}",
     }
 
 
