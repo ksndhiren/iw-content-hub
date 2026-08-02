@@ -3,6 +3,59 @@
   "label": "Featured Jobs",
   "posts": [
     {
+      "id": "job-35321",
+      "sourceId": "35321",
+      "sourceUrl": "https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging",
+      "addedAt": "2026-08-02T08:32:14Z",
+      "day": "LONDON PROPERTY STAGING LTD",
+      "title": "Social Media and Content Intern - Home Staging",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35321.png"
+      ],
+      "status": "in-review",
+      "caption": "Social Media and Content Intern - Home Staging 📍 London, Greater London\nLove creating scroll-stopping content? Shoot, edit and post for a real brand.\nApply now 👉 https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging",
+      "hashtags": [
+        "#internship",
+        "#londonjobs",
+        "#socialmediajobs",
+        "#hiring",
+        "#graduatejobs"
+      ],
+      "captions": {
+        "ig-fb": "Social Media and Content Intern - Home Staging 📍 London, Greater London\nLove creating scroll-stopping content? Shoot, edit and post for a real brand.\nApply now 👉 https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging",
+        "linkedin": "We're hiring: Social Media and Content Intern - Home Staging (London, Greater London · Part-time).\nLove creating scroll-stopping content? Shoot, edit and post for a real brand.\nApply here: https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging",
+        "x": "Now hiring: Social Media and Content Intern - Home Staging 📍 London, Greater London\nApply 👇 https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging",
+        "threads": "New role alert 🚀 Social Media and Content Intern - Home Staging in London, Greater London.\nLove creating scroll-stopping content? Shoot, edit and post for a real brand.\nApply → https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging"
+      },
+      "hashtagsByPlatform": {
+        "ig-fb": [
+          "#internship",
+          "#londonjobs",
+          "#socialmediajobs",
+          "#hiring",
+          "#graduatejobs"
+        ],
+        "linkedin": [
+          "#hiring",
+          "#internship",
+          "#socialmediajobs",
+          "#careers"
+        ],
+        "x": [
+          "#socialmediajobs",
+          "#hiring"
+        ],
+        "threads": [
+          "#internship",
+          "#hiring",
+          "#socialmediajobs",
+          "#londonjobs"
+        ]
+      }
+    },
+    {
       "id": "job-35308",
       "sourceId": "35308",
       "sourceUrl": "https://www.internwise.co.uk/job/35308/sales-and-marketing-executive-2026",
@@ -157,59 +210,6 @@
           "#internship",
           "#hiring",
           "#internships",
-          "#londonjobs"
-        ]
-      }
-    },
-    {
-      "id": "job-35387",
-      "sourceId": "35387",
-      "sourceUrl": "https://www.internwise.co.uk/job/35387/marketing-internship",
-      "addedAt": "2026-07-31T11:44:21Z",
-      "day": "M N K ACCOUNTANTS LTD",
-      "title": "Marketing Internship",
-      "platform": "Featured Job",
-      "format": "Single",
-      "slides": [
-        "job-35387.png"
-      ],
-      "status": "in-review",
-      "caption": "Marketing Internship 📍 Camden Town / London, Central London\nReady to run real campaigns? Own content, socials and growth for a busy team.\nApply now 👉 https://www.internwise.co.uk/job/35387/marketing-internship",
-      "hashtags": [
-        "#internship",
-        "#londonjobs",
-        "#marketingjobs",
-        "#hiring",
-        "#graduatejobs"
-      ],
-      "captions": {
-        "ig-fb": "Marketing Internship 📍 Camden Town / London, Central London\nReady to run real campaigns? Own content, socials and growth for a busy team.\nApply now 👉 https://www.internwise.co.uk/job/35387/marketing-internship",
-        "linkedin": "We're hiring: Marketing Internship (Camden Town / London, Central London · Part-time).\nReady to run real campaigns? Own content, socials and growth for a busy team.\nApply here: https://www.internwise.co.uk/job/35387/marketing-internship",
-        "x": "Now hiring: Marketing Internship 📍 Camden Town / London, Central London\nApply 👇 https://www.internwise.co.uk/job/35387/marketing-internship",
-        "threads": "New role alert 🚀 Marketing Internship in Camden Town / London, Central London.\nReady to run real campaigns? Own content, socials and growth for a busy team.\nApply → https://www.internwise.co.uk/job/35387/marketing-internship"
-      },
-      "hashtagsByPlatform": {
-        "ig-fb": [
-          "#internship",
-          "#londonjobs",
-          "#marketingjobs",
-          "#hiring",
-          "#graduatejobs"
-        ],
-        "linkedin": [
-          "#hiring",
-          "#internship",
-          "#marketingjobs",
-          "#careers"
-        ],
-        "x": [
-          "#marketingjobs",
-          "#hiring"
-        ],
-        "threads": [
-          "#internship",
-          "#hiring",
-          "#marketingjobs",
           "#londonjobs"
         ]
       }
