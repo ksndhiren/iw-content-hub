@@ -31,25 +31,20 @@ HUB_DIR    = os.environ.get("FEATURED_HUB_DIR", os.path.dirname(_HERE))
 FEATURED_JSON = os.path.join(HUB_DIR, "data", "featured.json")
 IMAGES_DIR    = os.path.join(HUB_DIR, "images", "featured")
 
-# JS that returns the featured-job cards as {href, lines[]} using the validated
-# "Featured Jobs heading -> section -> .list-job" structure.
+# JS that returns ONLY the featured-job cards. Featured jobs are the star-marked
+# ones with the grey card background (rgba(38, 77, 126, 0.1)); the general job
+# listings below have a transparent background. We select .list-job cards whose
+# background is not transparent, which excludes non-featured listings.
 # Read each field from its own element in the card (robust to line-order quirks):
 #   .job-title h4     -> title      .job-title p       -> company
 #   .job-descriptions > p           -> sector/fields
 #   .job-descriptions .descriptions p (x3, any order)  -> location / type / date
 EXTRACT_JS = r"""
 () => {
-  const heading = [...document.querySelectorAll('*')].find(e =>
-     /(^|\s)Featured Jobs(\s|$)/.test(e.textContent) &&
-     ![...e.children].some(c => /Featured Jobs/.test(c.textContent)));
-  if (!heading) return [];
-  let cards = [];
-  let sec = heading;
-  for (let i = 0; i < 6 && sec; i++) {
-    const jobs = sec.querySelectorAll(':scope .list-job');
-    if (jobs.length) { cards = [...jobs]; break; }
-    sec = sec.parentElement;
-  }
+  const isTransparent = c => !c || c === 'transparent' || c === 'rgba(0, 0, 0, 0)';
+  const cards = [...document.querySelectorAll('.list-job')].filter(card =>
+     !isTransparent(getComputedStyle(card).backgroundColor));
+  if (!cards.length) return [];
   const txt = el => el ? el.textContent.replace(/\s+/g, ' ').trim() : '';
   // Only the element's OWN text nodes - skips nested icon/schema spans that would
   // otherwise leak tokens like "GeographicReference" into the location.
@@ -145,38 +140,32 @@ def _clean_title(s):
 
 
 def build_captions(job):
-    """Short, platform-tailored captions. Each repeats the graphic's hook line and
-    uses the job's own page as the apply link. Company name is NOT disclosed in the
-    caption (location is fine)."""
-    title = _clean_title(job["title"])
-    loc   = _plain(job.get("location", ""))
-    typ   = _plain(job.get("jtype", ""))
-    hook  = fj.SECTOR_STYLES[fj._pick_style(job.get("fields", ""))][6]
-    url   = job["url"]
-    return {
-        "ig-fb":    f"{title} \U0001F4CD {loc}\n{hook}\nApply now \U0001F449 {url}",
-        "linkedin": f"We're hiring: {title} ({loc} · {typ}).\n{hook}\nApply here: {url}",
-        "x":        f"Now hiring: {title} \U0001F4CD {loc}\nApply \U0001F447 {url}",
-        "threads":  f"New role alert \U0001F680 {title} in {loc}.\n{hook}\nApply → {url}",
-    }
+    """Featured caption: the sector hook line, the location, and the apply link to
+    the job's own page. No title, no company. Same clean format across platforms
+    (Threads removed - users cross-post from Instagram)."""
+    loc  = _plain(job.get("location", ""))
+    hook = fj.SECTOR_STYLES[fj._pick_style(job.get("fields", ""))][6]
+    url  = job["url"]
+    text = f"{hook}\n\n\U0001F4CD {loc}\n\nApply now \U0001F449 {url}"
+    return {"ig-fb": text, "linkedin": text, "x": text}
 
+
+# One sector-specific hashtag per style, used across the platform sets below.
+_STYLE_TAG = {
+    "design": "#designjobs", "tech": "#techjobs", "social": "#socialmediajobs",
+    "property": "#realestatejobs", "finance": "#financejobs", "pr": "#prjobs",
+    "media": "#mediajobs", "sales": "#salesjobs", "marketing": "#marketingjobs",
+    "generic": "#internships",
+}
 
 def build_hashtags_by_platform(job):
     """Different hashtag sets per platform (broad on IG, professional on LinkedIn,
-    tight on X)."""
-    style = fj._pick_style(job.get("fields", ""))
-    tag = {
-        "design":    "#designjobs",
-        "property":  "#realestatejobs",
-        "marketing": "#marketingjobs",
-        "social":    "#socialmediajobs",
-        "generic":   "#internships",
-    }[style]
+    tight on X). Threads removed."""
+    tag = _STYLE_TAG[fj._pick_style(job.get("fields", ""))]
     return {
         "ig-fb":    ["#internship", "#londonjobs", tag, "#hiring", "#graduatejobs"],
         "linkedin": ["#hiring", "#internship", tag, "#careers"],
         "x":        [tag, "#hiring"],
-        "threads":  ["#internship", "#hiring", tag, "#londonjobs"],
     }
 
 

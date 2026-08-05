@@ -382,30 +382,42 @@ def _cluster_generic(accent):
 
 # ── Sector -> visual style mapping + config builder for scraped jobs ─────────
 # Each style: (accent, accent_dark, bg1, bg2, spark, cluster_fn, hook)
+# One distinct colour scheme per sector so featured posts read as varied.
 SECTOR_STYLES = {
-    "design": (PURPLE, "#5B3FC4", "#2B1E63", "#4A2F9E", LIME, _cluster_branddesign,
-               "Love turning ideas into visuals that stop the scroll? Build your portfolio with a real brand."),
-    "property": (AMBER, "#D18E14", "#0E4433", "#1B7B58", LIME, _cluster_surveying,
-                 "Curious how property really works? Get hands-on with real projects across London."),
-    "marketing": (CORAL, "#D2415C", "#7E2038", "#C43F5C", LIME, _cluster_marketing,
+    "design":    (PURPLE,   "#5B3FC4", "#2B1E63", "#4A2F9E", LIME, _cluster_branddesign,
+                  "Love turning ideas into visuals that stop the scroll? Build your portfolio with a real brand."),
+    "tech":      ("#3FD0E0", "#2AA9B8", "#141F4A", "#2E3E9E", LIME, _cluster_generic,
+                  "Love building things that work? Ship real features with an engineering team."),
+    "social":    ("#5AA9E8", "#2E6BB0", "#123A66", "#1E6FAE", LIME, _cluster_social,
+                  "Love creating scroll-stopping content? Shoot, edit and post for a real brand."),
+    "property":  (AMBER,    "#D18E14", "#0E4433", "#1B7B58", LIME, _cluster_surveying,
+                  "Curious how property really works? Get hands-on with real projects across London."),
+    "finance":   ("#FFC24A", "#D18E14", "#14233F", "#2A4470", LIME, _cluster_generic,
+                  "Good with numbers and detail? Get real experience across accounts and finance."),
+    "pr":        ("#2FBFB0", "#1E8A80", "#0C3B38", "#17706A", LIME, _cluster_marketing,
+                  "Love telling stories that land? Own the press, profile and publicity for a growing brand."),
+    "media":     ("#FF5CA8", "#D63D88", "#5A1440", "#A32473", LIME, _cluster_social,
+                  "Obsessed with content and culture? Help shape what a brand puts out into the world."),
+    "sales":     ("#FF9F45", "#E5771E", "#5A2A12", "#A85A1E", LIME, _cluster_marketing,
+                  "A natural at winning people over? Learn to pitch, close and grow real revenue."),
+    "marketing": (CORAL,    "#D2415C", "#7E2038", "#C43F5C", LIME, _cluster_marketing,
                   "Ready to run real campaigns? Own content, socials and growth for a busy team."),
-    "social": ("#5AA9E8", "#2E6BB0", "#123A66", "#1E6FAE", LIME, _cluster_social,
-               "Love creating scroll-stopping content? Shoot, edit and post for a real brand."),
-    "generic": (AMBER, "#D18E14", "#1B2A52", "#33468A", LIME, _cluster_generic,
-                "Kickstart your career with a hands-on internship at a growing UK company."),
+    "generic":   ("#5FC7A6", "#3FA985", "#26343F", "#43586A", LIME, _cluster_generic,
+                  "Kickstart your career with a hands-on internship at a growing UK company."),
 }
 
-# keyword -> style key (first match wins; ordered by specificity). Keys map to the
-# fixed Internwise sector taxonomy so results are predictable.
-#   social  = camera/content cluster  -> photography/videography, media
-#   design  = pen/swatches cluster    -> graphic/web/brand design
-#   property= hardhat/blueprint       -> surveying, real estate, construction, architecture
-#   marketing = megaphone/chart       -> marketing, advertising, PR, sales
+# keyword -> style key (first match wins; ordered by specificity). Maps the fixed
+# Internwise sector taxonomy to a distinct colour per sector.
 _SECTOR_KEYWORDS = [
+    ("tech",     ["information technology", "web development", "software"]),
     ("design",   ["graphic design", "web design", "brand design"]),
     ("social",   ["photography", "videography", "home staging"]),
     ("property", ["surveying", "real estate", "property management", "construction", "architecture"]),
-    ("marketing",["marketing", "advertising", "public relations", "(pr)", "communications", "sales"]),
+    ("finance",  ["accountancy", "accounting", "financial services", "banking"]),
+    ("pr",       ["public relations", "(pr)", "communications"]),
+    ("sales",    ["sales"]),
+    ("marketing",["marketing", "advertising"]),
+    ("media",    ["new media", "journalism", "broadcast"]),  # only pure-media roles
 ]
 
 def _pick_style(fields_text):
