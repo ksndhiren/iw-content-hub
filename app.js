@@ -38,11 +38,10 @@
     'ig-fb':    5,
     'linkedin': 5,
     'x':        2,
-    'threads':  5,
   };
 
   /** Platforms that show thread-style captions for carousel posts */
-  const THREAD_PLATFORMS = ['x', 'threads'];
+  const THREAD_PLATFORMS = ['x'];
 
   /* -------------------------------------------------------------------------
      Module state
