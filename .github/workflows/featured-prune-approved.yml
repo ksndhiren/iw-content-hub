@@ -1,0 +1,50 @@
+name: Featured Jobs - Prune Approved
+
+# Removes featured posts that have been APPROVED on the dashboard (== published).
+# Reads the shared statuses from the live KV endpoint and edits data/featured.json
+# + data/featured_published.json (which stops the daily scrape re-adding them).
+# No browser needed, so this runs hourly and is cheap.
+
+on:
+  schedule:
+    - cron: "20 * * * *"      # hourly, at :20 past
+  workflow_dispatch: {}        # manual "Run workflow" button
+
+permissions:
+  contents: write
+
+concurrency:
+  # Share a group with the daily sync so the two never push over each other.
+  group: featured-jobs-sync
+  cancel-in-progress: false
+
+jobs:
+  prune:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Prune approved featured posts
+        run: python automation/prune_approved.py | tee /tmp/prune.log
+
+      - name: Commit and push if anything was pruned
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Nothing approved to prune."
+            exit 0
+          fi
+          git config user.name  "internwise-content-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A data/featured.json data/featured_published.json images/featured
+          git commit -m "Prune approved featured jobs ($(date -u +%Y-%m-%dT%H:%MZ))"
+          # Rebase on top of any concurrent change before pushing.
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "Pruned approved featured posts; Cloudflare Pages will redeploy."
+          grep -- '- pruned' /tmp/prune.log || true
