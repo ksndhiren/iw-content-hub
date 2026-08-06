@@ -3,11 +3,12 @@ name: Featured Jobs - Prune Approved
 # Removes featured posts that have been APPROVED on the dashboard (== published).
 # Reads the shared statuses from the live KV endpoint and edits data/featured.json
 # + data/featured_published.json (which stops the daily scrape re-adding them).
-# No browser needed, so this runs hourly and is cheap.
+# No browser needed. Runs once a day (a few hours after the daily sync), and can
+# be triggered manually any time via "Run workflow".
 
 on:
   schedule:
-    - cron: "20 * * * *"      # hourly, at :20 past
+    - cron: "0 12 * * *"     # daily at 12:00 UTC
   workflow_dispatch: {}        # manual "Run workflow" button
 
 permissions:
