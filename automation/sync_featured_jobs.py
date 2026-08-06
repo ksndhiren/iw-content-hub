@@ -56,38 +56,61 @@ def fetch_statuses(url=None):
         return {}
 
 
+def _job_key(title, company):
+    """A stable content key (cleaned role title + company), so a job that RE-LISTS
+    under a new numeric id is still recognised as already-published. Guards against
+    'approved long ago but came back' when the site re-posts the same role."""
+    t = fj._sanitize(fj.strip_year(title or "")).replace("&amp;", "and").lower()
+    c = fj._sanitize(company or "").replace("&amp;", "and").lower()
+    t = re.sub(r"[^a-z0-9 ]", " ", t); c = re.sub(r"[^a-z0-9 ]", " ", c)
+    t = re.sub(r"\s+", " ", t).strip(); c = re.sub(r"\s+", " ", c).strip()
+    return f"{t}|{c}"
+
+
 def load_published():
+    """Returns {"ids": set(sourceId), "keys": set(title|company)}."""
     if not os.path.exists(PUBLISHED_JSON):
-        return set()
+        return {"ids": set(), "keys": set()}
     try:
         with open(PUBLISHED_JSON) as f:
-            return set(str(x) for x in json.load(f).get("publishedIds", []))
+            d = json.load(f)
+        return {"ids":  set(str(x) for x in d.get("publishedIds", [])),
+                "keys": set(str(x) for x in d.get("publishedKeys", []))}
     except Exception:
-        return set()
+        return {"ids": set(), "keys": set()}
 
 
-def save_published(ids):
+def save_published(pub):
     os.makedirs(os.path.dirname(PUBLISHED_JSON), exist_ok=True)
     with open(PUBLISHED_JSON, "w") as f:
-        json.dump({"publishedIds": sorted(ids, key=lambda s: int(s) if s.isdigit() else 0)},
-                  f, indent=2)
+        json.dump({
+            "publishedIds":  sorted(pub["ids"], key=lambda s: int(s) if s.isdigit() else 0),
+            "publishedKeys": sorted(pub["keys"]),
+        }, f, indent=2)
         f.write("\n")
 
 
-def seed_published_from_statuses(statuses, published):
+def is_published(pub, sid, title="", company=""):
+    """True if this job was already approved/published - by id OR by content key."""
+    if str(sid) in pub["ids"]:
+        return True
+    return _job_key(title, company) in pub["keys"] if (title or company) else False
+
+
+def seed_published_from_statuses(statuses, pub):
     """Add any approved featured id (like 'job-12345') to the published set, even
     if it is not currently in featured.json. Prevents resurrection on a later scrape."""
     for pid, st in (statuses or {}).items():
         m = re.match(r"^job-(\d+)$", pid or "")
         if m and st == "approved":
-            published.add(m.group(1))
-    return published
+            pub["ids"].add(m.group(1))
+    return pub
 
 
-def prune_approved(data, statuses, published):
+def prune_approved(data, statuses, pub):
     """Remove auto posts whose dashboard status is 'approved' (they are published).
-    Deletes each one's images and records its sourceId so a later scrape can't
-    resurrect it. Returns the number pruned. Manual posts (no sourceId) are left."""
+    Deletes each one's images and records its sourceId AND content key so a later
+    scrape can't resurrect it (even re-listed under a new id). Returns count pruned."""
     kept, removed = [], 0
     for p in data.get("posts", []):
         sid = p.get("sourceId")
@@ -95,7 +118,8 @@ def prune_approved(data, statuses, published):
             img = os.path.join(IMAGES_DIR, p["id"])
             if os.path.isdir(img):
                 shutil.rmtree(img, ignore_errors=True)
-            published.add(str(sid))
+            pub["ids"].add(str(sid))
+            pub["keys"].add(_job_key(p.get("title", ""), p.get("day", "")))
             removed += 1
             print(f"  - pruned approved/published {p['id']} ({p.get('title','')})")
         else:
@@ -263,7 +287,7 @@ def main():
 
     statuses  = fetch_statuses()
     published = seed_published_from_statuses(statuses, load_published())
-    print(f"Published (already approved) sourceIds on file: {len(published)}")
+    print(f"Published (already approved): {len(published['ids'])} ids, {len(published['keys'])} keys")
 
     now_iso = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -272,8 +296,8 @@ def main():
 
     for job in scraped:
         sid = job["id"]
-        if sid in published:
-            # Already approved/published - never re-add. Clean any leftover images.
+        if is_published(published, sid, job.get("title", ""), job.get("company", "")):
+            # Already approved/published (by id OR title+company) - never re-add.
             leftover = os.path.join(IMAGES_DIR, f"job-{sid}")
             if os.path.isdir(leftover):
                 shutil.rmtree(leftover, ignore_errors=True)
