@@ -46,8 +46,9 @@ jobs:
 
           git config user.name  "internwise-content-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A data/featured.json images/featured
+          git add -A data/featured.json data/featured_published.json images/featured
           git commit -m "Featured jobs sync ($(date -u +%Y-%m-%d))"
+          git pull --rebase origin main
           git push origin HEAD:main
 
           echo "Pushed new featured graphics to main; Cloudflare Pages will redeploy."

@@ -468,11 +468,81 @@ def _wrap_title(title):
     size = 78 if longest <= 12 else 68 if longest <= 16 else 58 if longest <= 20 else 50
     return "<br>".join(lines), size
 
+# ── Per-post hook line ──────────────────────────────────────────────────────
+# Each sector keeps its signature line (SECTOR_STYLES[..][6], index 0 below), plus
+# a pool of role-aware templates. We pick one per job by its id so the body/hook
+# text is DIFFERENT on every featured post, not repeated per sector. {noun} is the
+# role reduced to a plain sector noun (e.g. "Marketing Internship" -> "marketing").
+GENERIC_HOOKS = [
+    "Want real {noun} experience for your CV? This is where you start.",
+    "Ready to break into {noun}? Get hands-on with a growing UK team.",
+    "Turn what you have learned into real {noun} work with a team that mentors you.",
+    "Looking for your first step in {noun}? Build real skills, not just theory.",
+    "Serious about a {noun} career? Get the experience employers actually look for.",
+    "Swap the lecture hall for real {noun} projects and a team that backs you.",
+    "Kickstart your {noun} journey with a hands-on internship in the UK.",
+]
+
+# Sector-flavoured extra lines so posts stay relevant, not just generic.
+SECTOR_HOOKS = {
+    "design":    ["Love turning ideas into visuals that stop the scroll? Build your portfolio for real.",
+                  "Got an eye for clean, modern design? Ship real brand work, not mockups."],
+    "tech":      ["Love building things that work? Ship real features with an engineering team.",
+                  "Happiest in the code? Turn side projects into shipped, real-world work."],
+    "social":    ["Live on your feed? Shoot, edit and post content a real brand will publish.",
+                  "Know what makes people stop scrolling? Put it to work for a real brand."],
+    "property":  ["Curious how property really works? Get on real sites and real projects.",
+                  "Want a way into real estate? Learn surveys, valuations and site visits first-hand."],
+    "finance":   ["Good with numbers and detail? Get real experience across accounts and finance.",
+                  "Want the finance experience recruiters ask for? Start with real ledgers, not theory."],
+    "pr":        ["Love telling stories that land? Own the press and publicity for a growing brand.",
+                  "Great with words and people? Get real PR wins on your CV."],
+    "media":     ["Obsessed with content and culture? Help shape what a brand puts into the world.",
+                  "Live and breathe media? Make things that real audiences actually see."],
+    "sales":     ["A natural at winning people over? Learn to pitch, close and grow real revenue.",
+                  "Enjoy the thrill of a yes? Build real sales skills with a team that coaches you."],
+    "marketing": ["Ready to run real campaigns? Own content, socials and growth for a busy team.",
+                  "Full of campaign ideas? Get the budget, the tools and a team to run them with."],
+    "generic":   ["Kickstart your career with a hands-on internship at a growing UK company."],
+}
+
+def _role_noun(title):
+    """Reduce a listing title to a plain sector noun for hook templates."""
+    t = strip_year(title or "").lower().replace("&", "and")
+    t = re.sub(r"\b(internship|intern|placement|programme|program|scheme|trainee|graduate|apprentice(?:ship)?|junior|entry[-\s]?level)\b", " ", t)
+    t = re.sub(r"[^a-z0-9/ ]", " ", t)
+    t = re.sub(r"\s+", " ", t).strip(" -/")
+    return t or "this field"
+
+def _job_seed(job):
+    """Stable integer seed for a job (its numeric id, else a hash of its title)."""
+    sid = str(job.get("id") or job.get("sourceId") or "")
+    if sid.isdigit():
+        return int(sid)
+    return sum(ord(c) for c in (sid or _sanitize(job.get("title", "")) or "x"))
+
+def pick_hook(job):
+    """Deterministic, per-post hook line. Same job id -> same line on graphic + caption."""
+    style = _pick_style(job.get("fields", ""))
+    pool = list(SECTOR_HOOKS.get(style, [])) + GENERIC_HOOKS
+    noun = _role_noun(job.get("title", ""))
+    line = pool[_job_seed(job) % len(pool)]
+    return _sanitize(line.format(noun=noun)).replace("&amp;", "and")
+
+NUM_LAYOUTS = 3
+
+def pick_variant(job):
+    """Which layout template this post uses. Varies the GRAPHIC while the sector
+    colour stays fixed. Offset the seed so hook + layout choices don't move together."""
+    return (_job_seed(job) // 7) % NUM_LAYOUTS
+
+
 def build_config(job):
     """Turn a scraped job dict into a render config compatible with generate().
     job keys: title, company, fields, location, jtype, duration."""
     style = _pick_style(job.get("fields", ""))
-    accent, accent_d, bg1, bg2, spark, art_fn, hook = SECTOR_STYLES[style]
+    accent, accent_d, bg1, bg2, spark, art_fn, _sector_hook = SECTOR_STYLES[style]
+    hook = pick_hook(job)
     title_html, title_size = _wrap_title(_sanitize(strip_year(job["title"])))
     # primary sector = first comma-group, sanitized
     primary = _sanitize((job.get("fields", "") or "").split(",")[0]) or "Internship"
@@ -491,6 +561,7 @@ def build_config(job):
         "accent": accent, "accent_dark": accent_d,
         "bg1": bg1, "bg2": bg2, "spark": spark,
         "art_fn": art_fn,
+        "variant": pick_variant(job),
         "_style": style,
     }
 
@@ -605,103 +676,171 @@ def _detail_row(label, value, accent):
 </div>"""
 
 
+# ── Shared render pieces (composed differently by each layout) ───────────────
+def _p_header(accent, accent_d):
+    return f"""<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-shrink:0;position:relative;z-index:20;">
+  <div style="background:linear-gradient(100deg,{accent},{accent_d});color:#fff;
+               padding:14px 26px;border-radius:50px;font-family:Inter;font-weight:700;
+               font-size:24px;letter-spacing:4px;box-shadow:0 8px 18px rgba(0,0,0,0.3);">FEATURED JOB</div>
+  <img src="data:image/png;base64,{LOGO_W}" style="height:66px;">
+</div>"""
+
+def _p_hook_glass(hook, maxw=640):
+    return f"""<div style="position:relative;z-index:20;background:rgba(255,255,255,0.12);
+             border:2px solid rgba(255,255,255,0.22);border-radius:18px;padding:20px 24px;max-width:{maxw}px;
+             backdrop-filter:blur(4px);">
+  <div style="font-family:'DM Sans';font-weight:500;font-size:24px;color:rgba(255,255,255,0.92);line-height:1.4;">{hook}</div>
+</div>"""
+
+def _p_hook_ribbon(hook, accent, accent_d, maxw=640):
+    return f"""<div style="position:relative;z-index:20;display:inline-block;max-width:{maxw}px;
+             background:linear-gradient(100deg,{accent},{accent_d});border-radius:14px;padding:16px 24px;
+             box-shadow:0 10px 22px rgba(0,0,0,0.28);">
+  <div style="font-family:'DM Sans';font-weight:700;font-size:23px;color:#fff;line-height:1.35;">{hook}</div>
+</div>"""
+
+def _p_title(title_html, size, maxw=640):
+    return f"""<div style="position:relative;z-index:20;max-width:{maxw}px;">
+  <div style="font-family:Inter;font-weight:700;font-size:{size}px;line-height:0.98;
+               color:#fff;letter-spacing:-2.5px;word-break:keep-all;hyphens:none;">{title_html}</div>
+</div>"""
+
+def _p_details_card(rows, maxw=640):
+    return f"""<div style="position:relative;z-index:20;background:rgba(0,0,0,0.20);
+             border:2px solid rgba(255,255,255,0.16);border-radius:22px;padding:28px 30px;max-width:{maxw}px;
+             display:flex;flex-direction:column;gap:18px;">{rows}</div>"""
+
+def _detail_pill(value, accent):
+    return (f'<div style="display:inline-flex;align-items:center;gap:11px;background:rgba(0,0,0,0.24);'
+            f'border:2px solid rgba(255,255,255,0.16);border-radius:50px;padding:12px 22px;">'
+            f'<span style="width:11px;height:11px;border-radius:50%;background:{accent};flex-shrink:0;'
+            f'box-shadow:0 0 10px {accent};"></span>'
+            f'<span style="font-family:Inter;font-weight:700;font-size:22px;color:#fff;letter-spacing:-0.2px;">{value}</span></div>')
+
+def _p_details_pills(details, accent, maxw=620):
+    pills = "".join(_detail_pill(v, accent) for _, v in details)
+    return (f'<div style="position:relative;z-index:20;max-width:{maxw}px;display:flex;flex-wrap:wrap;gap:12px;">{pills}</div>')
+
+def _detail_tick(label, value, accent):
+    return (f'<div style="display:flex;align-items:center;gap:14px;">'
+            f'<span style="width:34px;height:34px;border-radius:10px;background:{accent};flex-shrink:0;'
+            f'display:flex;align-items:center;justify-content:center;box-shadow:0 6px 12px rgba(0,0,0,0.25);">'
+            f'<svg width="18" height="18" viewBox="0 0 24 24"><path d="M5 12 l5 5 l9-11" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>'
+            f'<span><span style="font-family:\'DM Sans\';font-weight:700;font-size:15px;color:rgba(255,255,255,0.5);'
+            f'text-transform:uppercase;letter-spacing:2px;display:block;">{"sector" if label=="field" else label}</span>'
+            f'<span style="font-family:Inter;font-weight:700;font-size:24px;color:#fff;letter-spacing:-0.3px;">{value}</span></span></div>')
+
+def _p_details_ticks(details, accent, maxw=560):
+    rows = "".join(_detail_tick(l, v, accent) for l, v in details)
+    return (f'<div style="position:relative;z-index:20;max-width:{maxw}px;display:flex;flex-direction:column;gap:16px;">{rows}</div>')
+
+def _p_cta(accent, accent_d):
+    return f"""<div style="position:relative;z-index:20;">
+  <div style="display:inline-flex;align-items:center;gap:14px;
+               background:linear-gradient(100deg,{accent},{accent_d});color:#fff;
+               padding:22px 46px;border-radius:60px;font-family:Inter;font-weight:700;font-size:32px;
+               letter-spacing:1px;box-shadow:0 12px 24px rgba(0,0,0,0.35);">APPLY NOW &rarr;</div>
+  <div style="font-family:'DM Sans';font-weight:700;font-size:26px;color:#fff;margin-top:20px;">www.internwise.co.uk</div>
+  <div style="font-family:'DM Sans';font-weight:500;font-size:22px;color:rgba(255,255,255,0.7);margin-top:2px;">(Link in the post)</div>
+</div>"""
+
+def _art_html(job, accent, art_mode, photo_path, scale, right, bottom):
+    if art_mode == "graphic":
+        inner = job["art_fn"](accent)
+    elif art_mode == "character":
+        inner = job["char_fn"](accent)
+    else:
+        photo = _src(photo_path)
+        return (f'<img src="{photo}" style="position:absolute;bottom:{bottom};right:{right};height:720px;'
+                f'object-fit:contain;z-index:10;filter:drop-shadow(0 18px 30px rgba(0,0,0,0.4));'
+                f'transform:scale({scale});transform-origin:bottom right;">')
+    return (f'<div style="position:absolute;bottom:{bottom};right:{right};z-index:10;'
+            f'transform:scale({scale});transform-origin:bottom right;">{inner}</div>')
+
+def _page(bg1, bg2, body, f):
+    return f"""<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+{f}
+*{{margin:0;padding:0;box-sizing:border-box;}}
+body{{width:{W}px;height:{H}px;overflow:hidden;background:linear-gradient(150deg,{bg1} 0%,{bg2} 100%);}}
+.c{{width:{W}px;height:{H}px;position:relative;padding:54px 56px;display:flex;flex-direction:column;}}
+{GRAIN}
+</style></head><body><div class="c"><div class="grain"></div>{body}</div></body></html>"""
+
+
+# ── Layout 0: Classic — stacked content left, art bottom-right ───────────────
+def _layout_classic(job, accent, accent_d, rows, art):
+    deco = f"""<div style="position:absolute;top:0;right:0;width:620px;height:{H}px;z-index:1;
+             background:linear-gradient(160deg,rgba(255,255,255,0.10),transparent 60%);
+             clip-path:polygon(28% 0,100% 0,100% 100%,0 100%);"></div>{_sparkles(job.get('spark', LIME))}"""
+    return f"""{deco}
+{_p_header(accent, accent_d)}
+<div style="margin-top:34px;">{_p_hook_glass(job['hook'])}</div>
+<div style="margin-top:34px;">{_p_title(job['title'], job.get('title_size',74))}</div>
+<div style="margin-top:32px;">{_p_details_card(rows)}</div>
+<div style="flex:1;"></div>
+{_p_cta(accent, accent_d)}
+{art}"""
+
+
+# ── Layout 1: Hero card up top, detail pills, art lower-right ────────────────
+def _layout_hero(job, accent, accent_d, rows, art):
+    deco = f"""<div style="position:absolute;bottom:-160px;right:-160px;width:620px;height:620px;border-radius:50%;
+             z-index:1;background:radial-gradient(circle at 40% 40%,{accent}44,transparent 66%);"></div>
+  {_sparkles(job.get('spark', LIME))}"""
+    hero = f"""<div style="position:relative;z-index:20;margin-top:30px;background:rgba(255,255,255,0.10);
+             border-left:8px solid {accent};border-radius:22px;padding:30px 32px;max-width:660px;
+             box-shadow:0 16px 34px rgba(0,0,0,0.30);">
+    <div style="font-family:'DM Sans';font-weight:700;font-size:21px;color:{accent};letter-spacing:1px;line-height:1.35;margin-bottom:16px;">{job['hook']}</div>
+    <div style="font-family:Inter;font-weight:700;font-size:{job.get('title_size',74)}px;line-height:0.98;
+                 color:#fff;letter-spacing:-2.5px;word-break:keep-all;hyphens:none;">{job['title']}</div>
+  </div>"""
+    return f"""{deco}
+{_p_header(accent, accent_d)}
+{hero}
+<div style="margin-top:30px;">{_p_details_pills(job['details'], accent)}</div>
+<div style="flex:1;"></div>
+{_p_cta(accent, accent_d)}
+{art}"""
+
+
+# ── Layout 2: Split — big type + tick list left, diagonal art wedge right ────
+def _layout_split(job, accent, accent_d, rows, art):
+    big = min(job.get('title_size', 74) + 6, 88)
+    deco = f"""<div style="position:absolute;top:0;right:0;width:560px;height:{H}px;z-index:1;
+             background:linear-gradient(200deg,{accent}33,transparent 70%);
+             clip-path:polygon(36% 0,100% 0,100% 100%,0 100%);"></div>
+  <div style="position:absolute;top:150px;right:70px;width:250px;height:250px;border-radius:50%;z-index:1;
+             border:3px dashed rgba(255,255,255,0.18);"></div>
+  {_sparkles(job.get('spark', LIME))}"""
+    return f"""{deco}
+{_p_header(accent, accent_d)}
+<div style="margin-top:40px;">{_p_title(job['title'], big, maxw=600)}</div>
+<div style="margin-top:26px;">{_p_hook_ribbon(job['hook'], accent, accent_d, maxw=560)}</div>
+<div style="margin-top:34px;">{_p_details_ticks(job['details'], accent)}</div>
+<div style="flex:1;"></div>
+{_p_cta(accent, accent_d)}
+{art}"""
+
+
+_LAYOUTS = [_layout_classic, _layout_hero, _layout_split]
+# Per-layout art placement (scale, right, bottom) so each composition sits right.
+_ART_POS = [(1.0, "-20px", "-30px"), (0.82, "-30px", "-40px"), (0.92, "-40px", "-30px")]
+
+
 def generate(job, out_path, photo_path=None, art_mode="photo"):
     f = _fonts()
     accent   = job["accent"]
     accent_d = job["accent_dark"]
     bg1, bg2 = job["bg1"], job["bg2"]
 
-    rows = ""
-    for label, value in job["details"]:
-        rows += _detail_row(label, value, accent)
+    rows = "".join(_detail_row(label, value, accent) for label, value in job["details"])
 
-    if art_mode == "graphic":
-        # 3D object cluster (no human); self-contained, no separate motif
-        art = (f'<div style="position:absolute;bottom:-30px;right:-20px;z-index:10;">'
-               f'{job["art_fn"](accent)}</div>')
-        motif_block = ""
-    elif art_mode == "character":
-        # 3D SVG character; motif lives inside the character, so skip the separate motif
-        art = (f'<div style="position:absolute;bottom:-10px;right:-6px;z-index:10;">'
-               f'{job["char_fn"](accent)}</div>')
-        motif_block = ""
-    else:
-        photo = _src(photo_path)
-        art = (f'<img src="{photo}" style="position:absolute;bottom:0;right:-30px;height:720px;'
-               f'object-fit:contain;z-index:10;filter:drop-shadow(0 18px 30px rgba(0,0,0,0.4));">')
-        motif = job["motif_fn"](accent)
-        motif_block = f'<div style="position:absolute;bottom:250px;right:340px;z-index:8;">{motif}</div>'
+    variant = job.get("variant", 0) % len(_LAYOUTS)
+    scale, right, bottom = _ART_POS[variant]
+    art = _art_html(job, accent, art_mode, photo_path, scale, right, bottom)
 
-    html = f"""<!DOCTYPE html><html><head><meta charset="utf-8"><style>
-{f}
-*{{margin:0;padding:0;box-sizing:border-box;}}
-body{{width:{W}px;height:{H}px;overflow:hidden;
-      background:linear-gradient(150deg,{bg1} 0%,{bg2} 100%);}}
-.c{{width:{W}px;height:{H}px;position:relative;padding:54px 56px;display:flex;flex-direction:column;}}
-{GRAIN}
-</style></head><body><div class="c">
-<div class="grain"></div>
-
-<!-- soft diagonal light panel -->
-<div style="position:absolute;top:0;right:0;width:620px;height:{H}px;z-index:1;
-             background:linear-gradient(160deg,rgba(255,255,255,0.10),transparent 60%);
-             clip-path:polygon(28% 0,100% 0,100% 100%,0 100%);"></div>
-
-{_sparkles(job.get('spark', LIME))}
-
-<!-- Header: FEATURED JOB tag + logo -->
-<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-shrink:0;position:relative;z-index:20;">
-  <div style="background:linear-gradient(100deg,{accent},{accent_d});color:#fff;
-               padding:14px 26px;border-radius:50px;font-family:Inter;font-weight:700;
-               font-size:24px;letter-spacing:4px;box-shadow:0 8px 18px rgba(0,0,0,0.3);">FEATURED JOB</div>
-  <img src="data:image/png;base64,{LOGO_W}" style="height:66px;">
-</div>
-
-<!-- Hook line -->
-<div style="margin-top:34px;position:relative;z-index:20;background:rgba(255,255,255,0.12);
-             border:2px solid rgba(255,255,255,0.22);border-radius:18px;padding:20px 24px;max-width:640px;
-             backdrop-filter:blur(4px);">
-  <div style="font-family:'DM Sans';font-weight:500;font-size:24px;color:rgba(255,255,255,0.92);line-height:1.4;">
-    {job['hook']}
-  </div>
-</div>
-
-<!-- Role title + company -->
-<div style="margin-top:34px;position:relative;z-index:20;max-width:640px;">
-  <div style="font-family:Inter;font-weight:700;font-size:{job.get('title_size',74)}px;line-height:0.98;
-               color:#fff;letter-spacing:-2.5px;word-break:keep-all;hyphens:none;">
-    {job['title']}
-  </div>
-</div>
-
-<!-- Detail card -->
-<div style="margin-top:32px;position:relative;z-index:20;background:rgba(0,0,0,0.20);
-             border:2px solid rgba(255,255,255,0.16);border-radius:22px;padding:28px 30px;max-width:640px;
-             display:flex;flex-direction:column;gap:18px;">
-  {rows}
-</div>
-
-<div style="flex:1;"></div>
-
-<!-- CTA -->
-<div style="position:relative;z-index:20;">
-  <div style="display:inline-flex;align-items:center;gap:14px;
-               background:linear-gradient(100deg,{accent},{accent_d});color:#fff;
-               padding:22px 46px;border-radius:60px;font-family:Inter;font-weight:700;font-size:32px;
-               letter-spacing:1px;box-shadow:0 12px 24px rgba(0,0,0,0.35);">
-    APPLY NOW &rarr;
-  </div>
-  <div style="font-family:'DM Sans';font-weight:700;font-size:26px;color:#fff;margin-top:20px;">www.internwise.co.uk</div>
-  <div style="font-family:'DM Sans';font-weight:500;font-size:22px;color:rgba(255,255,255,0.7);margin-top:2px;">(Link in the post)</div>
-</div>
-
-<!-- role motif behind/beside the art (photo mode only) -->
-{motif_block}
-
-<!-- art: Pexels cutout OR 3D SVG character, bottom-right -->
-{art}
-</div></body></html>"""
-    _render(html, out_path)
+    body = _LAYOUTS[variant](job, accent, accent_d, rows, art)
+    _render(_page(bg1, bg2, body, f), out_path)
 
 
 # ── Job configs ─────────────────────────────────────────────────────────────

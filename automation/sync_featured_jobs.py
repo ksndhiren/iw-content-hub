@@ -16,7 +16,7 @@ branch and opens a PR for a human to approve before it reaches the live dashboar
 Run:  python3 sync_featured_jobs.py            (writes into ../../iw-content-hub)
       FEATURED_HUB_DIR=/path/to/hub python3 sync_featured_jobs.py
 """
-import os, re, json, sys, shutil, datetime
+import os, re, json, sys, shutil, datetime, urllib.request
 _HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, _HERE)
 # Point the generator at the vendored brand assets before importing it.
@@ -30,6 +30,78 @@ SEARCH_URL = "https://www.internwise.co.uk/internship-search"
 HUB_DIR    = os.environ.get("FEATURED_HUB_DIR", os.path.dirname(_HERE))
 FEATURED_JSON = os.path.join(HUB_DIR, "data", "featured.json")
 IMAGES_DIR    = os.path.join(HUB_DIR, "images", "featured")
+# Record of sourceIds that were approved on the dashboard (== published). They are
+# removed from featured.json and must NEVER be re-added by a later scrape.
+PUBLISHED_JSON = os.path.join(HUB_DIR, "data", "featured_published.json")
+# Live dashboard endpoint that returns { "<postId>": "approved" | ... } from KV.
+STATUSES_URL   = os.environ.get("STATUSES_URL",
+                                "https://iw-content-hub.pages.dev/api/statuses")
+
+
+def fetch_statuses(url=None):
+    """Read shared post statuses from the live dashboard KV endpoint. On any
+    failure returns {} (fail safe: nothing gets pruned rather than wrongly pruned)."""
+    url = url or STATUSES_URL
+    try:
+        # Cloudflare blocks the default python-urllib agent (403); send a real UA.
+        req = urllib.request.Request(url, headers={
+            "cache-control": "no-store",
+            "User-Agent": "Mozilla/5.0 (compatible; internwise-content-bot/1.0)",
+        })
+        with urllib.request.urlopen(req, timeout=25) as r:
+            data = json.loads(r.read().decode())
+            return data if isinstance(data, dict) else {}
+    except Exception as e:
+        print(f"  (statuses fetch failed: {e}); treating none as approved")
+        return {}
+
+
+def load_published():
+    if not os.path.exists(PUBLISHED_JSON):
+        return set()
+    try:
+        with open(PUBLISHED_JSON) as f:
+            return set(str(x) for x in json.load(f).get("publishedIds", []))
+    except Exception:
+        return set()
+
+
+def save_published(ids):
+    os.makedirs(os.path.dirname(PUBLISHED_JSON), exist_ok=True)
+    with open(PUBLISHED_JSON, "w") as f:
+        json.dump({"publishedIds": sorted(ids, key=lambda s: int(s) if s.isdigit() else 0)},
+                  f, indent=2)
+        f.write("\n")
+
+
+def seed_published_from_statuses(statuses, published):
+    """Add any approved featured id (like 'job-12345') to the published set, even
+    if it is not currently in featured.json. Prevents resurrection on a later scrape."""
+    for pid, st in (statuses or {}).items():
+        m = re.match(r"^job-(\d+)$", pid or "")
+        if m and st == "approved":
+            published.add(m.group(1))
+    return published
+
+
+def prune_approved(data, statuses, published):
+    """Remove auto posts whose dashboard status is 'approved' (they are published).
+    Deletes each one's images and records its sourceId so a later scrape can't
+    resurrect it. Returns the number pruned. Manual posts (no sourceId) are left."""
+    kept, removed = [], 0
+    for p in data.get("posts", []):
+        sid = p.get("sourceId")
+        if sid and statuses.get(p.get("id")) == "approved":
+            img = os.path.join(IMAGES_DIR, p["id"])
+            if os.path.isdir(img):
+                shutil.rmtree(img, ignore_errors=True)
+            published.add(str(sid))
+            removed += 1
+            print(f"  - pruned approved/published {p['id']} ({p.get('title','')})")
+        else:
+            kept.append(p)
+    data["posts"] = kept
+    return removed
 
 # JS that returns ONLY the featured-job cards. Featured jobs are the star-marked
 # ones with the grey card background (rgba(38, 77, 126, 0.1)); the general job
@@ -144,7 +216,7 @@ def build_captions(job):
     the job's own page. No title, no company. Same clean format across platforms
     (Threads removed - users cross-post from Instagram)."""
     loc  = _plain(job.get("location", ""))
-    hook = fj.SECTOR_STYLES[fj._pick_style(job.get("fields", ""))][6]
+    hook = fj.pick_hook(job)   # per-post line, matches the graphic
     url  = job["url"]
     text = f"{hook}\n\n\U0001F4CD {loc}\n\nApply now \U0001F449 {url}"
     return {"ig-fb": text, "linkedin": text, "x": text}
@@ -189,6 +261,10 @@ def main():
     manual   = [p for p in existing if not p.get("sourceId")]
     existing_auto = {p["sourceId"]: p for p in existing if p.get("sourceId")}
 
+    statuses  = fetch_statuses()
+    published = seed_published_from_statuses(statuses, load_published())
+    print(f"Published (already approved) sourceIds on file: {len(published)}")
+
     now_iso = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     fj._load_logos()
@@ -196,6 +272,12 @@ def main():
 
     for job in scraped:
         sid = job["id"]
+        if sid in published:
+            # Already approved/published - never re-add. Clean any leftover images.
+            leftover = os.path.join(IMAGES_DIR, f"job-{sid}")
+            if os.path.isdir(leftover):
+                shutil.rmtree(leftover, ignore_errors=True)
+            continue
         if sid in existing_auto:
             p = existing_auto[sid]
             p.setdefault("addedAt", now_iso)  # backfill so sort order is stable
@@ -244,12 +326,18 @@ def main():
     auto_posts.sort(key=lambda p: (p.get("addedAt", ""), int(p.get("sourceId", "0") or 0)),
                     reverse=True)
     data["posts"] = auto_posts + manual
+
+    # Prune approved (published) posts and remember them so they can't be re-added.
+    pruned = prune_approved(data, statuses, published)
+    save_published(published)
+
     with open(FEATURED_JSON, "w") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
     print(f"Done. New: {new_count}, kept auto: {len(auto_posts)-new_count}, "
-          f"removed stale: {removed}, manual preserved: {len(manual)}.")
+          f"removed stale: {removed}, pruned approved: {pruned}, "
+          f"manual preserved: {len(manual)}.")
     print(f"Wrote {FEATURED_JSON}")
     return 0
 
