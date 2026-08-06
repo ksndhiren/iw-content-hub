@@ -194,7 +194,14 @@
       const response = await fetch(DATA_URL, { cache: 'no-store' });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
-      allWeeks = data.weeks || [];
+      // Latest week first, so the newest w/c is the default landing view and
+      // sits at the top of the selector. Order by week number, then w/c date.
+      allWeeks = (data.weeks || []).slice().sort(function (a, b) {
+        var an = parseInt(String(a.id).replace(/\D/g, ''), 10) || 0;
+        var bn = parseInt(String(b.id).replace(/\D/g, ''), 10) || 0;
+        if (an !== bn) return bn - an;
+        return (b.weekCommencing || '').localeCompare(a.weekCommencing || '');
+      });
       populateWeekSelector();
     } catch (err) {
       console.error('[IW Content Hub] Failed to load weeks.json:', err);
