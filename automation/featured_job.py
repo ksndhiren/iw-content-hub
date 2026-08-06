@@ -529,14 +529,6 @@ def pick_hook(job):
     line = pool[_job_seed(job) % len(pool)]
     return _sanitize(line.format(noun=noun)).replace("&amp;", "and")
 
-NUM_LAYOUTS = 3
-
-def pick_variant(job):
-    """Which layout template this post uses. Varies the GRAPHIC while the sector
-    colour stays fixed. Offset the seed so hook + layout choices don't move together."""
-    return (_job_seed(job) // 7) % NUM_LAYOUTS
-
-
 def build_config(job):
     """Turn a scraped job dict into a render config compatible with generate().
     job keys: title, company, fields, location, jtype, duration."""
@@ -561,7 +553,10 @@ def build_config(job):
         "accent": accent, "accent_dark": accent_d,
         "bg1": bg1, "bg2": bg2, "spark": spark,
         "art_fn": art_fn,
-        "variant": pick_variant(job),
+        # Precompute the 3D elements + seed HERE, where the raw job (with id +
+        # fields) is available. generate() only gets this config, not the job.
+        "elements": _pick_elements(job),
+        "_seed": _job_seed(job),
         "_style": style,
     }
 
@@ -782,52 +777,281 @@ def _layout_classic(job, accent, accent_d, rows, art):
 {art}"""
 
 
-# ── Layout 1: Hero card up top, detail pills, art lower-right ────────────────
-def _layout_hero(job, accent, accent_d, rows, art):
-    deco = f"""<div style="position:absolute;bottom:-160px;right:-160px;width:620px;height:620px;border-radius:50%;
-             z-index:1;background:radial-gradient(circle at 40% 40%,{accent}44,transparent 66%);"></div>
-  {_sparkles(job.get('spark', LIME))}"""
-    hero = f"""<div style="position:relative;z-index:20;margin-top:30px;background:rgba(255,255,255,0.10);
-             border-left:8px solid {accent};border-radius:22px;padding:30px 32px;max-width:660px;
-             box-shadow:0 16px 34px rgba(0,0,0,0.30);">
-    <div style="font-family:'DM Sans';font-weight:700;font-size:21px;color:{accent};letter-spacing:1px;line-height:1.35;margin-bottom:16px;">{job['hook']}</div>
-    <div style="font-family:Inter;font-weight:700;font-size:{job.get('title_size',74)}px;line-height:0.98;
-                 color:#fff;letter-spacing:-2.5px;word-break:keep-all;hyphens:none;">{job['title']}</div>
-  </div>"""
-    return f"""{deco}
-{_p_header(accent, accent_d)}
-{hero}
-<div style="margin-top:30px;">{_p_details_pills(job['details'], accent)}</div>
-<div style="flex:1;"></div>
-{_p_cta(accent, accent_d)}
-{art}"""
+# ═══════════════════════════════════════════════════════════════════════════
+#  3D ELEMENT LIBRARY — small glossy objects, composed differently per post.
+#  The LAYOUT stays the same (classic) and the sector keeps ONE colour; what
+#  changes post-to-post is WHICH 3D objects appear (role-relevant) and how they
+#  are arranged. Each builder returns a fixed-size relative block; the composer
+#  places 3 of them by centre point.
+# ═══════════════════════════════════════════════════════════════════════════
+def _el_pen(a):
+    return f'''<div style="width:210px;height:80px;position:relative;">
+  <div style="position:absolute;left:0;top:8px;width:150px;height:58px;border-radius:30px;background:linear-gradient(180deg,#7CA0F7,#3B62D6);{GLOSS}"></div>
+  <div style="position:absolute;left:16px;top:18px;width:118px;height:12px;border-radius:6px;background:rgba(255,255,255,0.32);"></div>
+  <div style="position:absolute;left:142px;top:3px;width:0;height:0;border-top:34px solid transparent;border-bottom:34px solid transparent;border-left:64px solid #E9EDF3;filter:drop-shadow(0 8px 10px rgba(0,0,0,0.3));"></div>
+  <div style="position:absolute;left:200px;top:29px;width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:16px solid #333A55;"></div>
+</div>'''
 
+def _el_colorwheel(a):
+    wheel = ("conic-gradient(#FF6B6B 0deg 60deg,#FFB120 60deg 120deg,#7FDBB6 120deg 180deg,"
+             "#5AA9E8 180deg 240deg,#7B5CE6 240deg 300deg,#FF3D8A 300deg 360deg)")
+    return f'''<div style="width:150px;height:150px;position:relative;">
+  <div style="position:absolute;inset:0;border-radius:50%;background:{wheel};{GLOSS}"></div>
+  <div style="position:absolute;inset:46px;border-radius:50%;background:{OFF_WHITE};box-shadow:inset 0 3px 6px rgba(0,0,0,0.25);"></div>
+</div>'''
 
-# ── Layout 2: Split — big type + tick list left, diagonal art wedge right ────
-def _layout_split(job, accent, accent_d, rows, art):
-    big = min(job.get('title_size', 74) + 6, 88)
-    deco = f"""<div style="position:absolute;top:0;right:0;width:560px;height:{H}px;z-index:1;
-             background:linear-gradient(200deg,{accent}33,transparent 70%);
-             clip-path:polygon(36% 0,100% 0,100% 100%,0 100%);"></div>
-  <div style="position:absolute;top:150px;right:70px;width:250px;height:250px;border-radius:50%;z-index:1;
-             border:3px dashed rgba(255,255,255,0.18);"></div>
-  {_sparkles(job.get('spark', LIME))}"""
-    return f"""{deco}
-{_p_header(accent, accent_d)}
-<div style="margin-top:40px;">{_p_title(job['title'], big, maxw=600)}</div>
-<div style="margin-top:26px;">{_p_hook_ribbon(job['hook'], accent, accent_d, maxw=560)}</div>
-<div style="margin-top:34px;">{_p_details_ticks(job['details'], accent)}</div>
-<div style="flex:1;"></div>
-{_p_cta(accent, accent_d)}
-{art}"""
+def _el_swatches(a):
+    chips = "".join(f'<div style="width:56px;height:74px;border-radius:10px;background:{c};margin-left:{-20 if i else 0}px;transform:rotate({-12+i*6}deg) translateY({(i%2)*-10}px);box-shadow:0 10px 18px rgba(0,0,0,0.3),inset 0 3px 4px rgba(255,255,255,0.45);border:3px solid rgba(255,255,255,0.55);"></div>' for i, c in enumerate(["#FF6B6B", "#FFB120", "#7FDBB6", "#5AA9E8", "#7B5CE6"]))
+    return f'<div style="width:210px;height:110px;position:relative;display:flex;align-items:flex-end;">{chips}</div>'
 
+def _el_typecard(a):
+    return f'''<div style="width:130px;height:158px;border-radius:22px;background:linear-gradient(160deg,#FFFFFF,#F0F0F4);{GLOSS}display:flex;align-items:center;justify-content:center;">
+  <div style="font-family:Inter;font-weight:700;font-size:80px;color:{a};letter-spacing:-4px;">Aa</div></div>'''
 
-_LAYOUTS = [_layout_classic, _layout_hero, _layout_split]
-# Per-layout art placement (scale, right, bottom) so each composition sits right.
-_ART_POS = [(1.0, "-20px", "-30px"), (0.82, "-30px", "-40px"), (0.92, "-40px", "-30px")]
+def _el_cursor(a):
+    return '<div style="width:58px;height:66px;position:relative;"><svg width="58" height="66" viewBox="0 0 46 54" style="filter:drop-shadow(0 6px 8px rgba(0,0,0,0.3));"><path d="M4 2 L4 44 L15 33 L23 50 L31 46 L23 30 L38 30 Z" fill="#fff" stroke="#2A2E45" stroke-width="2.5" stroke-linejoin="round"/></svg></div>'
+
+def _el_camera(a):
+    return f'''<div style="width:230px;height:180px;position:relative;">
+  <div style="position:absolute;top:0;left:44px;width:70px;height:34px;border-radius:10px 10px 0 0;background:linear-gradient(180deg,#5C6480,#3A4160);"></div>
+  <div style="position:absolute;top:26px;left:0;width:230px;height:154px;border-radius:26px;background:linear-gradient(160deg,#4A5170,#2A2F4A);{GLOSS}"></div>
+  <div style="position:absolute;top:58px;left:70px;width:98px;height:98px;border-radius:50%;background:radial-gradient(circle at 38% 34%,#8FC7F5,#2E6BB0);box-shadow:inset 0 4px 8px rgba(255,255,255,0.4),inset 0 -8px 12px rgba(0,0,0,0.4);"></div>
+  <div style="position:absolute;top:82px;left:94px;width:50px;height:50px;border-radius:50%;background:#12203A;"></div>
+  <div style="position:absolute;top:40px;left:186px;width:28px;height:20px;border-radius:6px;background:{a};"></div>
+</div>'''
+
+def _el_megaphone(a):
+    return f'''<div style="width:210px;height:150px;position:relative;">
+  <div style="position:absolute;top:20px;left:0;width:140px;height:110px;background:linear-gradient(160deg,#FFD778,{a});{GLOSS}clip-path:polygon(0 22%,60% 0,60% 100%,0 78%);"></div>
+  <div style="position:absolute;top:42px;left:82px;width:66px;height:72px;border-radius:14px;background:linear-gradient(180deg,#FF8A7A,{CORAL});{GLOSS}"></div>
+  <svg width="70" height="120" viewBox="0 0 120 140" style="position:absolute;top:6px;left:150px;"><path d="M10 40 Q40 70 10 100" stroke="{LIME}" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M44 24 Q92 70 44 116" stroke="{LIME}" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.7"/></svg>
+</div>'''
+
+def _el_target(a):
+    return f'<div style="width:122px;height:122px;position:relative;"><svg width="122" height="122" viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" fill="{OFF_WHITE}"/><circle cx="60" cy="60" r="36" fill="none" stroke="{a}" stroke-width="8"/><circle cx="60" cy="60" r="16" fill="{CORAL}"/></svg></div>'
+
+def _el_barchart(a):
+    return f'''<div style="width:182px;height:172px;border-radius:22px;background:linear-gradient(160deg,#FFFFFF,#F0F0F4);{GLOSS}display:flex;align-items:flex-end;gap:14px;padding:22px;position:relative;">
+  <div style="width:30px;height:50px;border-radius:8px 8px 0 0;background:#7FDBB6;"></div>
+  <div style="width:30px;height:86px;border-radius:8px 8px 0 0;background:#5AA9E8;"></div>
+  <div style="width:30px;height:120px;border-radius:8px 8px 0 0;background:{a};"></div>
+  <svg width="140" height="100" viewBox="0 0 150 120" style="position:absolute;top:14px;left:22px;"><path d="M10 100 L55 60 L90 78 L138 20" stroke="{CORAL}" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</div>'''
+
+def _el_heart(a):
+    return f'<div style="width:112px;height:112px;border-radius:28px 28px 28px 6px;background:linear-gradient(160deg,#FF8A7A,{CORAL});{GLOSS}display:flex;align-items:center;justify-content:center;"><svg width="56" height="52" viewBox="0 0 56 52"><path d="M28 48 C6 32 4 16 15 12 C23 9 28 17 28 21 C28 17 33 9 41 12 C52 16 50 32 28 48 Z" fill="#fff"/></svg></div>'
+
+def _el_play(a):
+    return f'<div style="width:120px;height:120px;border-radius:50%;background:linear-gradient(160deg,#FF8A7A,{CORAL});{GLOSS}display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-top:26px solid transparent;border-bottom:26px solid transparent;border-left:42px solid #fff;margin-left:10px;"></div></div>'
+
+def _el_chat(a):
+    return f'<div style="width:142px;height:106px;border-radius:26px 26px 6px 26px;background:linear-gradient(160deg,#FFFFFF,#EDEFF4);{GLOSS}display:flex;align-items:center;justify-content:center;gap:10px;"><svg width="40" height="38" viewBox="0 0 40 38"><path d="M20 34 C5 24 3 12 11 9 C17 6.5 20 12 20 15 C20 12 23 6.5 29 9 C37 12 35 24 20 34 Z" fill="{CORAL}"/></svg><div style="width:14px;height:14px;border-radius:50%;background:{a};"></div></div>'
+
+def _el_house(a):
+    return f'<div style="width:150px;height:135px;position:relative;"><svg width="150" height="135" viewBox="0 0 130 120"><path d="M20 54 L65 18 L110 54 L110 104 L20 104 Z" fill="{OFF_WHITE}"/><path d="M10 58 L65 14 L120 58" stroke="{a}" stroke-width="9" fill="none" stroke-linejoin="round"/><rect x="52" y="70" width="26" height="34" rx="3" fill="{CORAL}"/></svg></div>'
+
+def _el_building(a):
+    win = f'<div style="width:20px;height:22px;border-radius:4px;background:{a};opacity:0.85;"></div>'
+    floors = "".join(f'<div style="width:{150-i*8}px;height:52px;margin:0 auto 6px;border-radius:8px;background:linear-gradient(180deg,#EDE7DA,#CFC6B4);{GLOSS}display:flex;align-items:center;justify-content:space-around;padding:0 12px;">{win}{win}{win}</div>' for i in range(3))
+    return f'<div style="width:170px;height:200px;position:relative;">{floors}<div style="width:166px;height:18px;margin:0 auto;border-radius:6px;background:#B7AE9B;{GLOSS}"></div></div>'
+
+def _el_hardhat(a):
+    return f'''<div style="width:220px;height:130px;position:relative;">
+  <div style="position:absolute;bottom:20px;left:0;width:220px;height:52px;border-radius:110px/52px;background:linear-gradient(180deg,{a},#C98A15);{GLOSS}"></div>
+  <div style="position:absolute;top:0;left:36px;width:150px;height:100px;border-radius:75px 75px 0 0;background:linear-gradient(180deg,#FFD778,{a});{GLOSS}"></div>
+  <div style="position:absolute;top:0;left:104px;width:18px;height:88px;border-radius:8px;background:rgba(0,0,0,0.12);"></div>
+</div>'''
+
+def _el_blueprint(a):
+    return f'''<div style="width:200px;height:64px;position:relative;">
+  <div style="position:absolute;left:14px;top:0;width:170px;height:60px;border-radius:12px;background:linear-gradient(180deg,#5AA9E8,#2E6BB0);{GLOSS}background-image:linear-gradient(90deg,rgba(255,255,255,0.25) 1px,transparent 1px),linear-gradient(rgba(255,255,255,0.25) 1px,transparent 1px);background-size:18px 18px;"></div>
+  <div style="position:absolute;top:0;left:0;width:22px;height:60px;border-radius:11px;background:#EDE7DA;{GLOSS}"></div>
+  <div style="position:absolute;top:0;right:0;width:22px;height:60px;border-radius:11px;background:#EDE7DA;{GLOSS}"></div>
+</div>'''
+
+def _el_ruler(a):
+    ticks = "".join(f'<line x1="{18+i*24}" y1="24" x2="{18+i*24}" y2="{40 if i%2 else 48}" stroke="{a}" stroke-width="3"/>' for i in range(10))
+    return f'<div style="width:280px;height:64px;position:relative;"><svg width="280" height="64" viewBox="0 0 280 64"><rect x="0" y="22" width="270" height="32" rx="8" fill="{OFF_WHITE}"/>{ticks}</svg></div>'
+
+def _el_magnifier(a):
+    return f'<div style="width:122px;height:122px;position:relative;"><svg width="122" height="122" viewBox="0 0 120 120"><circle cx="46" cy="46" r="34" fill="rgba(255,255,255,0.92)" stroke="#2A3550" stroke-width="8"/><rect x="70" y="70" width="42" height="16" rx="8" transform="rotate(45 70 70)" fill="#2A3550"/></svg></div>'
+
+def _el_briefcase(a):
+    return f'''<div style="width:220px;height:172px;position:relative;">
+  <div style="position:absolute;top:30px;left:0;width:220px;height:142px;border-radius:24px;background:linear-gradient(160deg,#FFD778,{a});{GLOSS}"></div>
+  <div style="position:absolute;top:0;left:70px;width:80px;height:40px;border-radius:12px 12px 0 0;border:12px solid {a};border-bottom:none;background:transparent;"></div>
+  <div style="position:absolute;top:82px;left:0;width:220px;height:14px;background:rgba(0,0,0,0.18);"></div>
+  <div style="position:absolute;top:88px;left:90px;width:40px;height:28px;border-radius:6px;background:{OFF_WHITE};"></div>
+</div>'''
+
+def _el_check(a):
+    return f'<div style="width:122px;height:122px;position:relative;"><svg width="122" height="122" viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="{OFF_WHITE}"/><path d="M40 60 l14 14 l28 -30" stroke="{a}" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>'
+
+def _el_laptop(a):
+    return f'''<div style="width:220px;height:148px;position:relative;">
+  <div style="position:absolute;top:0;left:20px;width:180px;height:118px;border-radius:14px;background:linear-gradient(160deg,#3A4160,#232A44);{GLOSS}padding:16px;">
+    <div style="width:100%;height:100%;border-radius:6px;background:linear-gradient(160deg,{a},#2E6BB0);"></div></div>
+  <div style="position:absolute;bottom:0;left:0;width:220px;height:22px;border-radius:6px 6px 12px 12px;background:linear-gradient(180deg,#C7CFDC,#98A2B8);{GLOSS}"></div>
+</div>'''
+
+def _el_code(a):
+    return f'''<div style="width:172px;height:120px;border-radius:20px;background:linear-gradient(160deg,#2A2F4A,#12203A);{GLOSS}display:flex;align-items:center;justify-content:center;gap:12px;">
+  <span style="font-family:Inter;font-weight:700;font-size:56px;color:{a};">&lt;</span>
+  <span style="font-family:Inter;font-weight:700;font-size:44px;color:{LIME};">/</span>
+  <span style="font-family:Inter;font-weight:700;font-size:56px;color:{a};">&gt;</span>
+</div>'''
+
+def _el_gear(a):
+    teeth = "".join(f'<rect x="54" y="4" width="12" height="20" rx="3" transform="rotate({d} 60 60)"/>' for d in range(0, 360, 45))
+    return f'<div style="width:124px;height:124px;position:relative;"><svg width="124" height="124" viewBox="0 0 120 120"><g fill="{a}"><circle cx="60" cy="60" r="34"/>{teeth}</g><circle cx="60" cy="60" r="15" fill="{OFF_WHITE}"/></svg></div>'
+
+def _el_coins(a):
+    stack = "".join(f'<div style="position:absolute;bottom:{i*16}px;left:0;width:110px;height:30px;border-radius:50%;background:linear-gradient(180deg,#FFE08A,{a});{GLOSS}border:3px solid rgba(255,255,255,0.4);"></div>' for i in range(3))
+    return f'<div style="width:130px;height:140px;position:relative;">{stack}<div style="position:absolute;bottom:56px;left:14px;width:82px;height:82px;border-radius:50%;background:radial-gradient(circle at 40% 34%,#FFE9A8,{a});{GLOSS}display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:700;font-size:46px;color:#fff;">&pound;</div></div>'
+
+def _el_calc(a):
+    keys = "".join(f'<div style="width:26px;height:26px;border-radius:6px;background:{a if i==8 else "#EDEFF4"};"></div>' for i in range(9))
+    return f'''<div style="width:150px;height:192px;border-radius:20px;background:linear-gradient(160deg,#FFFFFF,#E7EAF2);{GLOSS}padding:18px;">
+  <div style="width:100%;height:44px;border-radius:8px;background:linear-gradient(160deg,#2A2F4A,#12203A);margin-bottom:12px;display:flex;align-items:center;justify-content:flex-end;padding:0 10px;"><span style="font-family:Inter;font-weight:700;font-size:22px;color:{LIME};">&pound;</span></div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">{keys}</div></div>'''
+
+def _el_clap(a):
+    stripes = "".join(f'<div style="width:20px;height:100%;background:{"#fff" if i%2 else a};transform:skewX(-18deg);"></div>' for i in range(7))
+    return f'''<div style="width:190px;height:150px;position:relative;">
+  <div style="position:absolute;top:26px;left:0;width:190px;height:120px;border-radius:12px;background:linear-gradient(160deg,#2A2F4A,#12203A);{GLOSS}"></div>
+  <div style="position:absolute;top:0;left:0;width:190px;height:34px;border-radius:10px 10px 0 0;background:#1a2036;transform-origin:left;transform:rotate(-8deg);display:flex;gap:8px;padding:6px 8px;overflow:hidden;">{stripes}</div>
+</div>'''
+
+def _el_mic(a):
+    return f'''<div style="width:110px;height:180px;position:relative;">
+  <div style="position:absolute;top:0;left:25px;width:60px;height:110px;border-radius:30px;background:linear-gradient(180deg,{a},{DEEP_BLUE});{GLOSS}"></div>
+  <div style="position:absolute;top:16px;left:33px;width:44px;height:20px;border-radius:10px;background:rgba(255,255,255,0.25);"></div>
+  <div style="position:absolute;top:96px;left:12px;width:86px;height:56px;border-radius:0 0 44px 44px;border:8px solid {a};border-top:none;background:transparent;"></div>
+  <div style="position:absolute;top:150px;left:50px;width:10px;height:30px;background:{a};"></div>
+</div>'''
+
+def _el_rocket(a):
+    return f'''<div style="width:120px;height:180px;position:relative;">
+  <div style="position:absolute;top:0;left:35px;width:50px;height:120px;border-radius:50% 50% 30% 30%;background:linear-gradient(160deg,#FFFFFF,#DDE3EE);{GLOSS}"></div>
+  <div style="position:absolute;top:44px;left:47px;width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 38% 34%,#8FC7F5,{DEEP_BLUE});"></div>
+  <div style="position:absolute;top:96px;left:14px;width:28px;height:40px;border-radius:8px;background:{CORAL};transform:skewY(20deg);"></div>
+  <div style="position:absolute;top:96px;right:14px;width:28px;height:40px;border-radius:8px;background:{CORAL};transform:skewY(-20deg);"></div>
+  <div style="position:absolute;top:132px;left:48px;width:24px;height:44px;border-radius:0 0 12px 12px;background:linear-gradient(180deg,{AMBER},{CORAL});"></div>
+</div>'''
+
+def _el_trophy(a):
+    return f'''<div style="width:130px;height:160px;position:relative;">
+  <div style="position:absolute;top:0;left:25px;width:80px;height:80px;border-radius:0 0 40px 40px;background:linear-gradient(180deg,#FFE08A,{AMBER});{GLOSS}"></div>
+  <div style="position:absolute;top:14px;left:-2px;width:34px;height:44px;border-radius:20px;border:8px solid {AMBER};background:transparent;"></div>
+  <div style="position:absolute;top:14px;right:-2px;width:34px;height:44px;border-radius:20px;border:8px solid {AMBER};background:transparent;"></div>
+  <div style="position:absolute;top:80px;left:56px;width:18px;height:30px;background:{AMBER};"></div>
+  <div style="position:absolute;top:108px;left:35px;width:60px;height:20px;border-radius:6px;background:#C98A15;"></div>
+  <div style="position:absolute;top:126px;left:25px;width:80px;height:20px;border-radius:6px;background:{AMBER};"></div>
+</div>'''
+
+def _el_bulb(a):
+    return f'''<div style="width:110px;height:150px;position:relative;">
+  <div style="position:absolute;top:0;left:15px;width:80px;height:80px;border-radius:50%;background:radial-gradient(circle at 38% 34%,#FFE38A,{AMBER});{GLOSS}"></div>
+  <div style="position:absolute;top:74px;left:37px;width:36px;height:18px;background:#C9922A;"></div>
+  <div style="position:absolute;top:92px;left:40px;width:30px;height:14px;border-radius:0 0 6px 6px;background:#9E7420;"></div>
+</div>'''
+
+ELEMENTS = {
+    "pen": _el_pen, "colorwheel": _el_colorwheel, "swatches": _el_swatches,
+    "typecard": _el_typecard, "cursor": _el_cursor, "camera": _el_camera,
+    "megaphone": _el_megaphone, "target": _el_target, "barchart": _el_barchart,
+    "heart": _el_heart, "play": _el_play, "chat": _el_chat, "house": _el_house,
+    "building": _el_building, "hardhat": _el_hardhat, "blueprint": _el_blueprint,
+    "ruler": _el_ruler, "magnifier": _el_magnifier, "briefcase": _el_briefcase,
+    "check": _el_check, "laptop": _el_laptop, "code": _el_code, "gear": _el_gear,
+    "coins": _el_coins, "calc": _el_calc, "clap": _el_clap, "mic": _el_mic,
+    "rocket": _el_rocket, "trophy": _el_trophy, "bulb": _el_bulb,
+}
+
+# Per-sector element pool (role-relevant objects). The composer rotates through
+# these by job id so posts in the same sector show DIFFERENT combinations.
+SECTOR_ELEMENTS = {
+    "design":    ["pen", "colorwheel", "swatches", "typecard", "cursor", "bulb", "magnifier"],
+    "tech":      ["laptop", "code", "gear", "cursor", "bulb", "rocket", "barchart"],
+    "social":    ["camera", "play", "heart", "chat", "house", "bulb"],
+    "property":  ["building", "house", "hardhat", "blueprint", "ruler", "magnifier"],
+    "finance":   ["coins", "calc", "barchart", "briefcase", "target", "check"],
+    "pr":        ["megaphone", "mic", "chat", "magnifier", "heart", "bulb"],
+    "media":     ["clap", "camera", "play", "mic", "heart", "bulb"],
+    "sales":     ["target", "barchart", "briefcase", "coins", "megaphone", "trophy"],
+    "marketing": ["megaphone", "target", "heart", "barchart", "chat", "rocket"],
+    "generic":   ["briefcase", "barchart", "bulb", "rocket", "target", "check"],
+}
+
+# Role-keyword -> a specific hero element, so the biggest object is relevant to
+# THIS job, not just its sector. First match wins.
+KEYWORD_ELEMENTS = [
+    ("photograph", "camera"), ("videograph", "clap"), ("video", "clap"), ("film", "clap"),
+    ("home staging", "house"), ("interior", "house"), ("estate", "building"),
+    ("survey", "ruler"), ("construction", "hardhat"), ("architect", "blueprint"), ("property", "building"),
+    ("account", "calc"), ("audit", "calc"), ("fund", "coins"), ("bank", "coins"), ("finance", "coins"),
+    ("brand", "colorwheel"), ("graphic", "colorwheel"), ("design", "pen"),
+    ("software", "code"), ("developer", "code"), ("web develop", "code"),
+    ("information technology", "laptop"), ("data", "barchart"),
+    ("public relation", "megaphone"), ("publicity", "megaphone"), ("podcast", "mic"),
+    ("journal", "mic"), ("news", "mic"), ("broadcast", "mic"),
+    ("sales", "target"), ("business develop", "briefcase"),
+    ("marketing", "megaphone"), ("advertis", "target"), ("content", "chat"), ("social", "heart"),
+]
+
+def _pick_elements(job):
+    """Choose 3 distinct, role-relevant 3D elements for this post. A keyword hero
+    (if the title matches) leads; the rest rotate through the sector pool by id so
+    different posts in the same sector get different objects."""
+    style = _pick_style(job.get("fields", ""))
+    pool  = list(SECTOR_ELEMENTS.get(style, SECTOR_ELEMENTS["generic"]))
+    n = len(pool)
+    s = _job_seed(job) % n
+    # Rotate the start point by id so different posts get different objects; step
+    # by 1 so we always collect 3 DISTINCT elements regardless of pool size.
+    ordered = [pool[(s + j) % n] for j in range(n)]
+    picks = []
+    for k in ordered:
+        if k not in picks:
+            picks.append(k)
+    picks = picks[:3]
+    # Role-keyword hero for relevance.
+    t = (job.get("title", "") + " " + job.get("fields", "")).lower()
+    hero = next((key for kw, key in KEYWORD_ELEMENTS if kw in t and key in ELEMENTS), None)
+    if hero:
+        if hero in picks:
+            picks.remove(hero)
+        picks = [hero] + picks
+    return picks[:3]
+
+# Arrangement presets (centre points in a 600x780 box): hero + 2 supporting.
+_ARRANGE = [
+    [(380, 500, 1.15, -6), (155, 320, 0.80, -12), (475, 270, 0.70, 14)],
+    [(345, 470, 1.20, 4),  (480, 560, 0.80, -10), (185, 290, 0.74, -8)],
+    [(405, 520, 1.12, -8), (225, 350, 0.84, 10),  (460, 315, 0.70, -14)],
+]
+
+def _compose_art(job, accent):
+    """Compose the per-post 3D cluster: 3 role-relevant elements + sparkles.
+    Prefers elements precomputed by build_config (the config has no id/fields)."""
+    keys  = job.get("elements") or _pick_elements(job)
+    seed  = job.get("_seed", _job_seed(job))
+    slots = _ARRANGE[seed % len(_ARRANGE)]
+    parts = ['<div style="position:absolute;bottom:70px;left:150px;width:320px;height:56px;border-radius:50%;background:radial-gradient(rgba(0,0,0,0.34),transparent 70%);"></div>']
+    for key, (lx, ty, sc, rot) in zip(keys, slots):
+        el = ELEMENTS.get(key, _el_check)(accent)
+        parts.append(f'<div style="position:absolute;left:{lx}px;top:{ty}px;transform:translate(-50%,-50%) rotate({rot}deg) scale({sc});filter:drop-shadow(0 18px 26px rgba(0,0,0,0.30));">{el}</div>')
+    spark = job.get("spark", LIME)
+    parts.append(f'<div style="position:absolute;top:150px;left:470px;">{_star(48, spark)}</div>')
+    parts.append(f'<div style="position:absolute;top:470px;left:110px;transform:rotate(18deg);">{_star(30, AMBER)}</div>')
+    parts.append(f'<div style="position:absolute;top:250px;left:20px;width:22px;height:22px;border-radius:50%;background:{CORAL};box-shadow:0 4px 8px rgba(0,0,0,0.25);"></div>')
+    parts.append(f'<div style="position:absolute;top:560px;left:500px;width:18px;height:18px;border-radius:50%;background:{MINT};box-shadow:0 4px 8px rgba(0,0,0,0.25);"></div>')
+    return f'<div style="position:relative;width:600px;height:780px;">{"".join(parts)}</div>'
 
 
 def generate(job, out_path, photo_path=None, art_mode="photo"):
+    """Single fixed layout (classic). Per post, only the sector COLOUR, the HOOK
+    line, and the composed 3D ELEMENTS change."""
     f = _fonts()
     accent   = job["accent"]
     accent_d = job["accent_dark"]
@@ -835,11 +1059,14 @@ def generate(job, out_path, photo_path=None, art_mode="photo"):
 
     rows = "".join(_detail_row(label, value, accent) for label, value in job["details"])
 
-    variant = job.get("variant", 0) % len(_LAYOUTS)
-    scale, right, bottom = _ART_POS[variant]
-    art = _art_html(job, accent, art_mode, photo_path, scale, right, bottom)
+    if art_mode == "graphic":
+        art = f'<div style="position:absolute;bottom:-30px;right:-20px;z-index:10;">{_compose_art(job, accent)}</div>'
+    elif art_mode == "character":
+        art = f'<div style="position:absolute;bottom:-10px;right:-6px;z-index:10;">{job["char_fn"](accent)}</div>'
+    else:
+        art = _art_html(job, accent, art_mode, photo_path, 1.0, "-30px", "0")
 
-    body = _LAYOUTS[variant](job, accent, accent_d, rows, art)
+    body = _layout_classic(job, accent, accent_d, rows, art)
     _render(_page(bg1, bg2, body, f), out_path)
 
 
