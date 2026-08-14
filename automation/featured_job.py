@@ -402,7 +402,7 @@ SECTOR_STYLES = {
                   "A natural at winning people over? Learn to pitch, close and grow real revenue."),
     "marketing": (CORAL,    "#D2415C", "#7E2038", "#C43F5C", LIME, _cluster_marketing,
                   "Ready to run real campaigns? Own content, socials and growth for a busy team."),
-    "events":    ("#22C7A9", "#159A82", "#0C3F39", "#12907B", LIME, _cluster_marketing,
+    "events":    ("#4FD98A", "#2FAF66", "#0A5A32", "#17A85E", LIME, _cluster_marketing,
                   "Love the buzz of live events? Help plan, promote and run real experiences."),
     "generic":   ("#5FC7A6", "#3FA985", "#26343F", "#43586A", LIME, _cluster_generic,
                   "Kickstart your career with a hands-on internship at a growing UK company."),
