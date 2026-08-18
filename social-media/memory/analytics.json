@@ -1,0 +1,21 @@
+{
+  "top_formats": {
+    "linkedin": ["stat_card", "carousel"],
+    "instagram": ["tip_card", "job_spotlight"],
+    "x": ["text_only", "stat_card"],
+    "tiktok": ["short_video", "tip_card"]
+  },
+  "top_topics": [
+    "remote work trends",
+    "salary transparency",
+    "tech hiring surges",
+    "career switching tips",
+    "resume optimization"
+  ],
+  "engagement_by_platform": {
+    "linkedin": {"avg_impressions": 0, "avg_engagement_rate": 0.0},
+    "instagram": {"avg_impressions": 0, "avg_engagement_rate": 0.0},
+    "x": {"avg_impressions": 0, "avg_engagement_rate": 0.0},
+    "tiktok": {"avg_impressions": 0, "avg_engagement_rate": 0.0}
+  }
+}

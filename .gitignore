@@ -1,2 +1,26 @@
 .DS_Store
 *.log
+
+# Local secrets and machine state
+.env
+.env.*
+!.env.example
+.canva_tokens.json
+secrets/
+analytics/ig_token.txt
+.wrangler/
+.pytest_cache/
+__pycache__/
+
+# Merged social-media build workspace local-only files
+social-media/.env
+social-media/.canva_tokens.json
+social-media/secrets/
+social-media/analytics/ig_token.txt
+social-media/.wrangler/
+social-media/.pytest_cache/
+social-media/**/__pycache__/
+social-media/jma-graphic-studio/.env
+social-media/jma-graphic-studio/node_modules/
+social-media/jma-graphic-studio/dist/
+social-media/jma-graphic-studio/.wrangler/

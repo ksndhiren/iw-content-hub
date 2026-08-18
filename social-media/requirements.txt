@@ -1,0 +1,10 @@
+anthropic>=0.25.0
+openai>=1.30.0
+elevenlabs>=1.0.0
+requests>=2.31.0
+pillow>=10.0.0
+ffmpeg-python>=0.2.0
+python-dotenv>=1.0.0
+redis>=5.0.0
+pydantic>=2.0.0
+pytest>=8.0.0

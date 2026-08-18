@@ -1,0 +1,140 @@
+{
+  "hook_layouts": {
+    "full_color_typography_ghost_letter": {
+      "post": "week5/d1-assessment",
+      "week": "week5"
+    },
+    "pipeline_statcard_dark": {
+      "post": "week5/d2-application",
+      "week": "week5"
+    },
+    "floating_person_ghost_letter_dark": {
+      "post": "week5/d3-coverletter",
+      "week": "week5"
+    },
+    "arch_cutout_right_mint": {
+      "post": "week5/d4-conversion",
+      "week": "week5"
+    },
+    "arch_cutout_right_amber": {
+      "post": "week5/d5-sideprojects",
+      "week": "week5"
+    },
+    "two_panel_split_number": {
+      "post": "week6/d1-salary",
+      "week": "week6"
+    },
+    "mint_statcard_network_web": {
+      "post": "week6/d2-networking",
+      "week": "week6"
+    },
+    "arch_cutout_left_purple": {
+      "post": "week6/d3-personalstatement",
+      "week": "week6"
+    },
+    "coral_two_column_contrast_typography": {
+      "post": "week6/d4-referral",
+      "week": "week6"
+    },
+    "deep_blue_ghost_number_person_bottom_centre": {
+      "post": "week6/d5-firstdays",
+      "week": "week6"
+    },
+    "duotone_chrome_hottake_sticker": {
+      "post": "week7/d1-videointerview",
+      "week": "week7"
+    },
+    "newsprint_halftone_tornpaper_statcard": {
+      "post": "week7/d2-hiddenmarket",
+      "week": "week7"
+    },
+    "y2k_starburst_purple_lime_framework": {
+      "post": "week7/d3-starmethod",
+      "week": "week7"
+    },
+    "imessage_chat_bubble_coral": {
+      "post": "week7/d4-followup",
+      "week": "week7"
+    },
+    "chartreuse_navy_italic_annotated": {
+      "post": "week7/d5-burnout",
+      "week": "week7"
+    },
+    "terminal_ide_monospace_syntax": {
+      "post": "week8/d1-colddm",
+      "week": "week8"
+    },
+    "redlined_document_editorial_markup": {
+      "post": "week8/d2-jobspecs",
+      "week": "week8"
+    },
+    "holographic_trading_card_panini": {
+      "post": "week8/d3-portfolio",
+      "week": "week8"
+    },
+    "led_scoreboard_vs_matchup": {
+      "post": "week8/d4-offers",
+      "week": "week8"
+    },
+    "detective_corkboard_red_string": {
+      "post": "week8/d5-research",
+      "week": "week8"
+    },
+    "3d_claymorphism_soft_icons": {
+      "post": "week9/d1-elevatorpitch",
+      "week": "week9"
+    },
+    "warm_journal_scrapbook_polaroid": {
+      "post": "week9/d2-imposter",
+      "week": "week9"
+    },
+    "poker_card_table_tells": {
+      "post": "week9/d3-readtheroom",
+      "week": "week9"
+    },
+    "phone_mockup_social_feed": {
+      "post": "week9/d4-linkedincontent",
+      "week": "week9"
+    },
+    "isometric_3d_skill_towers": {
+      "post": "week9/d5-skills",
+      "week": "week9"
+    },
+    "featured_job_portrait_brand-design": {
+      "post": "featured/brand-design",
+      "week": "featured"
+    },
+    "featured_job_portrait_surveying": {
+      "post": "featured/surveying",
+      "week": "featured"
+    },
+    "featured_job_portrait_marketing": {
+      "post": "featured/marketing",
+      "week": "featured"
+    },
+    "featured_job_portrait_social-content": {
+      "post": "featured/social-content",
+      "week": "featured"
+    },
+    "scifi_ai_hud_neon": {
+      "post": "week10/d1-aijobhunt",
+      "week": "week10"
+    },
+    "retro_desktop_os_windows": {
+      "post": "week10/d2-onlinepresence",
+      "week": "week10"
+    },
+    "theatre_spotlight_stage": {
+      "post": "week10/d3-finalround",
+      "week": "week10"
+    },
+    "comic_book_popart_halftone": {
+      "post": "week10/d4-afterrejection",
+      "week": "week10"
+    },
+    "departure_board_boarding_pass": {
+      "post": "week10/d5-gradtimeline",
+      "week": "week10"
+    }
+  }
+}
