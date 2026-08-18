@@ -1930,6 +1930,66 @@
           }
         }
       ]
+    },
+    {
+      "id": "week12",
+      "label": "Week 12",
+      "weekCommencing": "2026-08-17",
+      "posts": [
+        {
+          "id": "d1-cv",
+          "day": "Monday",
+          "title": "Your CV Gets 7 Seconds",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
+          ],
+          "status": "in-review",
+          "caption": "A recruiter spends about 7 seconds on your CV before deciding yes or no.\n\nMost of that lands on the top third - your name, target role and key skills. Nail that and you earn the proper read.\n\nSwipe for the 7-second CV fix:\n- Win the top third\n- Show impact, not duties ('Grew Instagram 3x in 4 months' beats 'Responsible for socials')\n- Cut the red flags: typos, walls of text, vague duties\n\nFind your internship - link in bio 🔗",
+          "captionThread": [
+            "1/ A recruiter reads your CV in about 7 seconds. That is the whole audition. Here is how to survive the scan.",
+            "2/ Most of those 7 seconds hit the top third of page one - your name, target role and top skills. Miss it there and they never reach the good bits.",
+            "3/ Win the top third: your name + the exact role you want, a two-line summary with your strongest proof, and skills that echo the advert.",
+            "4/ Cut what gets you binned: typos, wonky dates, walls of text, vague 'responsible for...' lines. Show impact instead - 'Grew Instagram 3x in 4 months' beats 'Responsible for socials.'",
+            "5/ Fix the top third, lead with proof, and go get it seen. Find your internship at internwise.co.uk"
+          ],
+          "hashtags": [
+            "#internship",
+            "#cvtips",
+            "#graduatejobs",
+            "#careertips",
+            "#jobsearch"
+          ],
+          "captions": {
+            "ig-fb": "A recruiter spends about 7 seconds on your CV before deciding yes or no.\n\nMost of that lands on the top third - your name, target role and key skills. Nail that and you earn the proper read.\n\nSwipe for the 7-second CV fix:\n- Win the top third\n- Show impact, not duties ('Grew Instagram 3x in 4 months' beats 'Responsible for socials')\n- Cut the red flags: typos, walls of text, vague duties\n\nFind your internship - link in bio 🔗",
+            "linkedin": "Recruiters spend roughly 7 seconds on a first CV scan. That is the whole audition.\n\nAlmost all of that attention lands on the top third of page one - your name, the exact role you are targeting, and the skills that match the advert. Get that right and you buy yourself a proper read.\n\nThree things that survive the scan:\n- Own the top third: name, target role, and a two-line summary led by your strongest proof.\n- Show impact, not duties. 'Grew Instagram 3x in 4 months' beats 'Responsible for socials.'\n- Cut what gets you binned: typos, inconsistent dates, walls of text, and 'responsible for...' lines with nothing to show.\n\nThe full breakdown is in the carousel.\n\nFind your internship at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internship",
+              "#cvtips",
+              "#graduatejobs",
+              "#careertips",
+              "#jobsearch"
+            ],
+            "linkedin": [
+              "#cvtips",
+              "#earlycareers",
+              "#graduatejobs",
+              "#jobsearch"
+            ],
+            "x": [
+              "#cvtips",
+              "#graduatejobs"
+            ]
+          }
+        }
+      ]
     }
   ]
 }
