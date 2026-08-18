@@ -1,0 +1,138 @@
+{
+  "campaign_id": "week3-d2-cv-mistakes",
+  "output_dir": "week3/d2-cv",
+  "slides": [
+
+    {
+      "type": "hook",
+      "badge": "Real talk",
+      "kicker": "CV mistakes",
+      "headline": "Your CV is\ngetting you\nrejected.",
+      "headline_accent": "rejected.",
+      "visual": {
+        "type": "tags",
+        "tags": ["❌ Wrong format", "❌ No numbers", "❌ Copy-paste summary", "❌ Missing keywords", "❌ Walls of text"]
+      },
+      "tagline": "Swipe to fix every one of them →"
+    },
+
+    {
+      "type": "sector",
+      "number": "1",
+      "slide_num_label": "01 / 05",
+      "accent_color": "#FF6B6B",
+      "tag": "Most common mistake",
+      "label": "Generic personal\nstatement",
+      "range": "73%",
+      "facts": [
+        ["Recruiters spend", "6 seconds on a CV"],
+        ["Generic summaries", "rejected in seconds"],
+        ["Tailored statements", "3x more callbacks"]
+      ],
+      "insight": "Paste-and-pray does not work. Recruiters see hundreds a day. Specific beats impressive every time.",
+      "visual": {
+        "type": "stat_block",
+        "primary": "6 SECONDS",
+        "secondary": "Average recruiter CV scan"
+      }
+    },
+
+    {
+      "type": "sector",
+      "number": "2",
+      "slide_num_label": "02 / 05",
+      "accent_color": "#7FDBB6",
+      "tag": "Quickest win",
+      "label": "No numbers\nanywhere",
+      "range": "40%",
+      "facts": [
+        ["CVs with metrics", "40% more interviews"],
+        ["Bad: 'Managed social'", "Good: 'Grew to 4K followers'"],
+        ["Works for any role", "from retail to finance"]
+      ],
+      "insight": "Every bullet should answer: how much, how many, how fast. If you cannot measure it, rewrite it.",
+      "visual": {
+        "type": "illustration",
+        "theme": "upward bar chart with a green tick, clean geometric shapes, mint and deep blue colours"
+      }
+    },
+
+    {
+      "type": "sector",
+      "number": "3",
+      "slide_num_label": "03 / 05",
+      "accent_color": "#7B5CE6",
+      "tag": "ATS killer",
+      "label": "Wrong format\nor file type",
+      "range": "PDF",
+      "facts": [
+        ["ATS systems",        "often choke on tables and columns"],
+        ["Always submit",      "clean single-column PDF"],
+        ["Font size",          "10–12pt, no smaller"]
+      ],
+      "insight": "Fancy design templates look great on screen and score zero on ATS. Simple wins every time.",
+      "visual": {
+        "type": "stat_block",
+        "primary": "ATS FIRST",
+        "secondary": "Most applications screened before human eyes"
+      }
+    },
+
+    {
+      "type": "sector",
+      "number": "4",
+      "slide_num_label": "04 / 05",
+      "accent_color": "#FFB120",
+      "tag": "Biggest oversight",
+      "label": "Missing\nkeywords",
+      "range": "60%",
+      "facts": [
+        ["Job descriptions", "tell you exactly what to include"],
+        ["Mirror their language", "without copy-pasting verbatim"],
+        ["Skills section", "is your keyword anchor"]
+      ],
+      "insight": "Read the job description three times. Every word they repeat is a keyword you need on your CV.",
+      "visual": {
+        "type": "stat_block",
+        "primary": "MATCH IT",
+        "secondary": "Mirror the job description language"
+      }
+    },
+
+    {
+      "type": "sector",
+      "number": "5",
+      "slide_num_label": "05 / 05",
+      "accent_color": "#5FA7E5",
+      "tag": "Final check",
+      "label": "Spelling and\nformatting errors",
+      "range": "58%",
+      "facts": [
+        ["Typos", "instant red flag for 58% of recruiters"],
+        ["Inconsistent formatting", "signals low attention to detail"],
+        ["Fix: read it backwards", "catches errors your brain skips"]
+      ],
+      "insight": "One typo will not always cost you the role. But it gives the recruiter a reason to pick someone else.",
+      "visual": {
+        "type": "illustration",
+        "theme": "magnifying glass over a document with a checkmark, clean geometric, light blue and deep blue"
+      }
+    },
+
+    {
+      "type": "conclusion",
+      "badge": "Fix it today",
+      "kicker": "Now you know",
+      "headline": "One CV.\nUnlimited\ndoors.",
+      "headline_accent": "Unlimited",
+      "stats": [
+        { "num": "6s",   "label": "Recruiter scan time" },
+        { "num": "73%",  "label": "Rejected for generic summary" },
+        { "num": "40%",  "label": "More interviews with metrics" },
+        { "num": "3x",   "label": "Callbacks with tailored CV" }
+      ],
+      "cta": "Find roles worth perfecting your CV for"
+    }
+
+  ]
+}
