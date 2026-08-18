@@ -3,6 +3,52 @@
   "label": "Featured Jobs",
   "posts": [
     {
+      "id": "job-35390",
+      "sourceId": "35390",
+      "sourceUrl": "https://www.internwise.co.uk/job/35390/real-estate-marketing-internship-paid-part-time",
+      "addedAt": "2026-08-18T06:54:05Z",
+      "day": "JBROWN GLOBAL LIMITED",
+      "title": "Real Estate Marketing Internship (Paid Part time)",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35390.png"
+      ],
+      "status": "in-review",
+      "caption": "Want real real estate marketing paid part time experience for your CV? This is where you start.\n\n📍 Manchester, North West England\n\nApply now 👉 https://www.internwise.co.uk/job/35390/real-estate-marketing-internship-paid-part-time",
+      "hashtags": [
+        "#internship",
+        "#londonjobs",
+        "#marketingjobs",
+        "#hiring",
+        "#graduatejobs"
+      ],
+      "captions": {
+        "ig-fb": "Want real real estate marketing paid part time experience for your CV? This is where you start.\n\n📍 Manchester, North West England\n\nApply now 👉 https://www.internwise.co.uk/job/35390/real-estate-marketing-internship-paid-part-time",
+        "linkedin": "Want real real estate marketing paid part time experience for your CV? This is where you start.\n\n📍 Manchester, North West England\n\nApply now 👉 https://www.internwise.co.uk/job/35390/real-estate-marketing-internship-paid-part-time",
+        "x": "Want real real estate marketing paid part time experience for your CV? This is where you start.\n\n📍 Manchester, North West England\n\nApply now 👉 https://www.internwise.co.uk/job/35390/real-estate-marketing-internship-paid-part-time"
+      },
+      "hashtagsByPlatform": {
+        "ig-fb": [
+          "#internship",
+          "#londonjobs",
+          "#marketingjobs",
+          "#hiring",
+          "#graduatejobs"
+        ],
+        "linkedin": [
+          "#hiring",
+          "#internship",
+          "#marketingjobs",
+          "#careers"
+        ],
+        "x": [
+          "#marketingjobs",
+          "#hiring"
+        ]
+      }
+    },
+    {
       "id": "job-34998",
       "sourceId": "34998",
       "sourceUrl": "https://www.internwise.co.uk/job/34998/business-development-administration",
@@ -136,52 +182,6 @@
         ],
         "x": [
           "#marketingjobs",
-          "#hiring"
-        ]
-      }
-    },
-    {
-      "id": "job-35321",
-      "sourceId": "35321",
-      "sourceUrl": "https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging",
-      "addedAt": "2026-08-13T07:43:43Z",
-      "day": "LONDON PROPERTY STAGING LTD",
-      "title": "Social Media and Content Intern",
-      "platform": "Featured Job",
-      "format": "Single",
-      "slides": [
-        "job-35321.png"
-      ],
-      "status": "in-review",
-      "caption": "Looking for your first step in social media and content? Build real skills, not just theory.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging",
-      "hashtags": [
-        "#internship",
-        "#londonjobs",
-        "#socialmediajobs",
-        "#hiring",
-        "#graduatejobs"
-      ],
-      "captions": {
-        "ig-fb": "Looking for your first step in social media and content? Build real skills, not just theory.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging",
-        "linkedin": "Looking for your first step in social media and content? Build real skills, not just theory.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging",
-        "x": "Looking for your first step in social media and content? Build real skills, not just theory.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging"
-      },
-      "hashtagsByPlatform": {
-        "ig-fb": [
-          "#internship",
-          "#londonjobs",
-          "#socialmediajobs",
-          "#hiring",
-          "#graduatejobs"
-        ],
-        "linkedin": [
-          "#hiring",
-          "#internship",
-          "#socialmediajobs",
-          "#careers"
-        ],
-        "x": [
-          "#socialmediajobs",
           "#hiring"
         ]
       }
