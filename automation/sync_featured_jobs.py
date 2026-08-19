@@ -257,7 +257,7 @@ _STYLE_TAG = {
 def build_hashtags_by_platform(job):
     """Different hashtag sets per platform (broad on IG, professional on LinkedIn,
     tight on X). Threads removed."""
-    tag = _STYLE_TAG[fj._pick_style(job.get("fields", ""))]
+    tag = _STYLE_TAG[fj.pick_style_for_job(job)]
     return {
         "ig-fb":    ["#internship", "#londonjobs", tag, "#hiring", "#graduatejobs"],
         "linkedin": ["#hiring", "#internship", tag, "#careers"],
@@ -270,6 +270,30 @@ def load_featured():
         return {"id": "featured", "label": "Featured Jobs", "posts": []}
     with open(FEATURED_JSON) as f:
         return json.load(f)
+
+
+def render_featured_graphic(job, post_id):
+    out_dir = os.path.join(IMAGES_DIR, post_id)
+    os.makedirs(out_dir, exist_ok=True)
+    fname = f"{post_id}.png"
+    cfg = fj.build_config(job)
+    fj.generate(cfg, os.path.join(out_dir, fname), art_mode="graphic")
+    return fname, cfg
+
+
+def needs_palette_refresh(post, cfg):
+    palette = post.get("palette") or {}
+    return (
+        palette.get("version") != fj.SECTOR_PALETTE_VERSION
+        or palette.get("style") != cfg["_style"]
+        or palette.get("accent") != cfg["_palette"]["accent"]
+    )
+
+
+def update_post_palette(post, cfg):
+    post["sector"] = cfg["_palette"]["sector"]
+    post["sectorStyle"] = cfg["_style"]
+    post["palette"] = cfg["_palette"]
 
 
 def main():
@@ -305,19 +329,22 @@ def main():
         if sid in existing_auto:
             p = existing_auto[sid]
             p.setdefault("addedAt", now_iso)  # backfill so sort order is stable
+            cfg = fj.build_config(job)
+            if needs_palette_refresh(p, cfg):
+                post_id = f"job-{sid}"
+                fname, cfg = render_featured_graphic(job, post_id)
+                p["slides"] = [fname]
+                print(f"  * refreshed palette {post_id} ({cfg['_style']}): {_clean_title(job['title'])}")
+            update_post_palette(p, cfg)
             auto_posts.append(p)              # keep graphic + review status
             continue
 
         # New featured job -> generate a graphic
         post_id = f"job-{sid}"
-        out_dir = os.path.join(IMAGES_DIR, post_id)
-        os.makedirs(out_dir, exist_ok=True)
-        fname = f"{post_id}.png"
-        cfg = fj.build_config(job)
-        fj.generate(cfg, os.path.join(out_dir, fname), art_mode="graphic")
+        fname, cfg = render_featured_graphic(job, post_id)
         captions = build_captions(job)
         htags    = build_hashtags_by_platform(job)
-        auto_posts.append({
+        post = {
             "id": post_id,
             "sourceId": sid,
             "sourceUrl": job["url"],
@@ -332,7 +359,9 @@ def main():
             "hashtags": htags["ig-fb"],              # default / fallback
             "captions": captions,                    # per-platform text
             "hashtagsByPlatform": htags,             # per-platform tags
-        })
+        }
+        update_post_palette(post, cfg)
+        auto_posts.append(post)
         new_count += 1
         print(f"  + generated {post_id} ({cfg['_style']}): {_clean_title(job['title'])}")
 

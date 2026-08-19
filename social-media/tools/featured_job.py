@@ -383,8 +383,23 @@ def _cluster_generic(accent):
 # ── Sector -> visual style mapping + config builder for scraped jobs ─────────
 # Each style: (accent, accent_dark, bg1, bg2, spark, cluster_fn, hook)
 # One distinct colour scheme per sector so featured posts read as varied.
+SECTOR_PALETTE_VERSION = "2026-08-19-v3"
+SECTOR_LABELS = {
+    "design": "Design",
+    "tech": "Tech",
+    "social": "Social Content",
+    "property": "Real Estate",
+    "finance": "Finance",
+    "pr": "PR & Communications",
+    "media": "Media",
+    "sales": "Sales",
+    "marketing": "Marketing",
+    "events": "Events & Hospitality",
+    "generic": "General Internship",
+}
+
 SECTOR_STYLES = {
-    "design":    (PURPLE,   "#5B3FC4", "#2B1E63", "#4A2F9E", LIME, _cluster_branddesign,
+    "design":    ("#7B5CE6", "#5B3FC4", "#2B1E63", "#4A2F9E", LIME, _cluster_branddesign,
                   "Love turning ideas into visuals that stop the scroll? Build your portfolio with a real brand."),
     "tech":      ("#3FD0E0", "#2AA9B8", "#141F4A", "#2E3E9E", LIME, _cluster_generic,
                   "Love building things that work? Ship real features with an engineering team."),
@@ -392,7 +407,7 @@ SECTOR_STYLES = {
                   "Love creating scroll-stopping content? Shoot, edit and post for a real brand."),
     "property":  (AMBER,    "#D18E14", "#0E4433", "#1B7B58", LIME, _cluster_surveying,
                   "Curious how property really works? Get hands-on with real projects across London."),
-    "finance":   ("#FFC24A", "#D18E14", "#14233F", "#2A4470", LIME, _cluster_generic,
+    "finance":   ("#37D67A", "#179A52", "#10283A", "#1E5163", LIME, _cluster_generic,
                   "Good with numbers and detail? Get real experience across accounts and finance."),
     "pr":        ("#2FBFB0", "#1E8A80", "#0C3B38", "#17706A", LIME, _cluster_marketing,
                   "Love telling stories that land? Own the press, profile and publicity for a growing brand."),
@@ -402,7 +417,7 @@ SECTOR_STYLES = {
                   "A natural at winning people over? Learn to pitch, close and grow real revenue."),
     "marketing": (CORAL,    "#D2415C", "#7E2038", "#C43F5C", LIME, _cluster_marketing,
                   "Ready to run real campaigns? Own content, socials and growth for a busy team."),
-    "events":    ("#4FD98A", "#2FAF66", "#0A5A32", "#17A85E", LIME, _cluster_marketing,
+    "events":    ("#A855F7", "#7E35C7", "#34145F", "#6427A5", LIME, _cluster_marketing,
                   "Love the buzz of live events? Help plan, promote and run real experiences."),
     "generic":   ("#5FC7A6", "#3FA985", "#26343F", "#43586A", LIME, _cluster_generic,
                   "Kickstart your career with a hands-on internship at a growing UK company."),
@@ -411,14 +426,14 @@ SECTOR_STYLES = {
 # keyword -> style key (first match wins; ordered by specificity). Maps the fixed
 # Internwise sector taxonomy to a distinct colour per sector.
 _SECTOR_KEYWORDS = [
+    ("property", ["real estate", "property", "surveying", "construction", "architecture"]),
     ("tech",     ["information technology", "web development", "software"]),
     ("design",   ["graphic design", "web design", "brand design"]),
     ("social",   ["photography", "videography", "home staging"]),
-    ("property", ["surveying", "real estate", "property management", "construction", "architecture"]),
     ("finance",  ["accountancy", "accounting", "financial services", "banking"]),
     ("pr",       ["public relations", "(pr)", "communications"]),
-    ("sales",    ["sales"]),
     ("events",   ["events", "event management", "hospitality", "catering", "tourism"]),
+    ("sales",    ["business development", "sales"]),
     ("marketing",["marketing", "advertising"]),
     ("media",    ["new media", "journalism", "broadcast"]),  # only pure-media roles
 ]
@@ -429,6 +444,27 @@ def _pick_style(fields_text):
         if any(kw in t for kw in kws):
             return key
     return "generic"
+
+def pick_style_for_job(job):
+    """Classify from the role title first, then sector fields as fallback.
+    This keeps compound roles like 'Real Estate Marketing' in the property
+    palette, while avoiding company-name noise."""
+    title_style = _pick_style(job.get("title", ""))
+    if title_style != "generic":
+        return title_style
+    return _pick_style(job.get("fields", ""))
+
+def style_palette(style):
+    accent, accent_d, bg1, bg2, spark, _art_fn, _hook = SECTOR_STYLES[style]
+    return {
+        "version": SECTOR_PALETTE_VERSION,
+        "style": style,
+        "sector": SECTOR_LABELS.get(style, style.title()),
+        "accent": accent,
+        "accentDark": accent_d,
+        "background": [bg1, bg2],
+        "spark": spark,
+    }
 
 def _sanitize(s):
     """Strip em/en dashes (brand rule) and collapse whitespace."""
@@ -526,7 +562,7 @@ def _job_seed(job):
 
 def pick_hook(job):
     """Deterministic, per-post hook line. Same job id -> same line on graphic + caption."""
-    style = _pick_style(job.get("fields", ""))
+    style = pick_style_for_job(job)
     pool = list(SECTOR_HOOKS.get(style, [])) + GENERIC_HOOKS
     noun = _role_noun(job.get("title", ""))
     line = pool[_job_seed(job) % len(pool)]
@@ -535,7 +571,7 @@ def pick_hook(job):
 def build_config(job):
     """Turn a scraped job dict into a render config compatible with generate().
     job keys: title, company, fields, location, jtype, duration."""
-    style = _pick_style(job.get("fields", ""))
+    style = pick_style_for_job(job)
     accent, accent_d, bg1, bg2, spark, art_fn, _sector_hook = SECTOR_STYLES[style]
     hook = pick_hook(job)
     title_html, title_size = _wrap_title(_sanitize(strip_year(job["title"])))
@@ -561,6 +597,7 @@ def build_config(job):
         "elements": _pick_elements(job),
         "_seed": _job_seed(job),
         "_style": style,
+        "_palette": style_palette(style),
     }
 
 
@@ -1006,7 +1043,7 @@ def _pick_elements(job):
     """Choose 3 distinct, role-relevant 3D elements for this post. A keyword hero
     (if the title matches) leads; the rest rotate through the sector pool by id so
     different posts in the same sector get different objects."""
-    style = _pick_style(job.get("fields", ""))
+    style = pick_style_for_job(job)
     pool  = list(SECTOR_ELEMENTS.get(style, SECTOR_ELEMENTS["generic"]))
     n = len(pool)
     s = _job_seed(job) % n
