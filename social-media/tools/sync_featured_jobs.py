@@ -195,7 +195,8 @@ def main():
         post_id = f"job-{sid}"
         out_dir = os.path.join(IMAGES_DIR, post_id)
         os.makedirs(out_dir, exist_ok=True)
-        fname = f"{post_id}.png"
+        version = re.sub(r"[^a-zA-Z0-9]+", "-", fj.SECTOR_PALETTE_VERSION).strip("-")
+        fname = f"{post_id}-{version}.png"
         cfg = fj.build_config(job)
         fj.generate(cfg, os.path.join(out_dir, fname), art_mode="graphic")
         auto_posts.append({
