@@ -1,0 +1,547 @@
+{
+  "version": "2026-08-19-employers-sm-ads-v1",
+  "sourceWorkbook": "2025 Strategy - Abhishek Jadav.xlsx",
+  "sourceSheet": "Employers_SM_Ads",
+  "sectors": [
+    {
+      "code": "1",
+      "sector": "Accountancy",
+      "color": "#00A676",
+      "style": "finance"
+    },
+    {
+      "code": "2A",
+      "sector": "Administration",
+      "color": "#4F7CAC",
+      "style": "generic"
+    },
+    {
+      "code": "2B",
+      "sector": "PA",
+      "color": "#C02BD4",
+      "style": "generic"
+    },
+    {
+      "code": "2C",
+      "sector": "VA",
+      "color": "#B6D42B",
+      "style": "generic"
+    },
+    {
+      "code": "3",
+      "sector": "Aerospace",
+      "color": "#2B85D4",
+      "style": "tech"
+    },
+    {
+      "code": "4A",
+      "sector": "Agriculture",
+      "color": "#D42B54",
+      "style": "generic"
+    },
+    {
+      "code": "4B",
+      "sector": "Environment",
+      "color": "#2BD434",
+      "style": "generic"
+    },
+    {
+      "code": "5A",
+      "sector": "Architecture",
+      "color": "#10B981",
+      "style": "property"
+    },
+    {
+      "code": "5B",
+      "sector": "Interior Design",
+      "color": "#D4962B",
+      "style": "design"
+    },
+    {
+      "code": "6A",
+      "sector": "Arts",
+      "color": "#2BD4C7",
+      "style": "design"
+    },
+    {
+      "code": "6B",
+      "sector": "Dance",
+      "color": "#D42BAF",
+      "style": "design"
+    },
+    {
+      "code": "6C",
+      "sector": "Theater",
+      "color": "#7ED42B",
+      "style": "design"
+    },
+    {
+      "code": "6D",
+      "sector": "Entertainment",
+      "color": "#2B4DD4",
+      "style": "design"
+    },
+    {
+      "code": "7",
+      "sector": "Music",
+      "color": "#D43B2B",
+      "style": "design"
+    },
+    {
+      "code": "8A",
+      "sector": "Automotive",
+      "color": "#2BD46C",
+      "style": "tech"
+    },
+    {
+      "code": "8B",
+      "sector": "Transportation",
+      "color": "#9D2BD4",
+      "style": "generic"
+    },
+    {
+      "code": "9A",
+      "sector": "Business Management",
+      "color": "#D4CE2B",
+      "style": "sales"
+    },
+    {
+      "code": "9B",
+      "sector": "Business Development",
+      "color": "#FF9F45",
+      "style": "sales"
+    },
+    {
+      "code": "10A",
+      "sector": "Charity",
+      "color": "#D42B77",
+      "style": "generic"
+    },
+    {
+      "code": "10B",
+      "sector": "NGO",
+      "color": "#46D42B",
+      "style": "generic"
+    },
+    {
+      "code": "10C",
+      "sector": "Social Services",
+      "color": "#422BD4",
+      "style": "generic"
+    },
+    {
+      "code": "10D",
+      "sector": "Non Profit",
+      "color": "#D4732B",
+      "style": "generic"
+    },
+    {
+      "code": "11",
+      "sector": "Construction",
+      "color": "#C084FC",
+      "style": "property"
+    },
+    {
+      "code": "12",
+      "sector": "Consulting",
+      "color": "#D42BD2",
+      "style": "marketing"
+    },
+    {
+      "code": "13",
+      "sector": "Customer Service",
+      "color": "#A1D42B",
+      "style": "sales"
+    },
+    {
+      "code": "14A",
+      "sector": "Graphic Design",
+      "color": "#7B5CE6",
+      "style": "design"
+    },
+    {
+      "code": "14B",
+      "sector": "Web Design",
+      "color": "#6251D8",
+      "style": "design"
+    },
+    {
+      "code": "15A",
+      "sector": "Distribution",
+      "color": "#2BD449",
+      "style": "sales"
+    },
+    {
+      "code": "15B",
+      "sector": "Warehouse",
+      "color": "#7B2BD4",
+      "style": "sales"
+    },
+    {
+      "code": "16A",
+      "sector": "Education",
+      "color": "#D4AC2B",
+      "style": "generic"
+    },
+    {
+      "code": "16B",
+      "sector": "Teaching",
+      "color": "#2BCBD4",
+      "style": "generic"
+    },
+    {
+      "code": "17",
+      "sector": "Engineering (Break down in different fiels of Eng - then, code them!)",
+      "color": "#D42B99",
+      "style": "tech"
+    },
+    {
+      "code": "18",
+      "sector": "Events",
+      "color": "#A855F7",
+      "style": "events"
+    },
+    {
+      "code": "19A",
+      "sector": "Fashion",
+      "color": "#2B37D4",
+      "style": "design"
+    },
+    {
+      "code": "19B",
+      "sector": "Luxury",
+      "color": "#D4512B",
+      "style": "design"
+    },
+    {
+      "code": "19C",
+      "sector": "Jewellery",
+      "color": "#2BD482",
+      "style": "design"
+    },
+    {
+      "code": "20A",
+      "sector": "Financial Services",
+      "color": "#37D67A",
+      "style": "finance"
+    },
+    {
+      "code": "20B",
+      "sector": "Banking",
+      "color": "#0EA5A4",
+      "style": "finance"
+    },
+    {
+      "code": "20C",
+      "sector": "Insurance",
+      "color": "#14B8A6",
+      "style": "finance"
+    },
+    {
+      "code": "21A",
+      "sector": "Freight",
+      "color": "#D42B61",
+      "style": "sales"
+    },
+    {
+      "code": "21B",
+      "sector": "Logistics",
+      "color": "#30D42B",
+      "style": "sales"
+    },
+    {
+      "code": "21C",
+      "sector": "Procurement",
+      "color": "#582BD4",
+      "style": "sales"
+    },
+    {
+      "code": "22",
+      "sector": "Health",
+      "color": "#D4892B",
+      "style": "generic"
+    },
+    {
+      "code": "23A",
+      "sector": "Hospitality",
+      "color": "#22C55E",
+      "style": "events"
+    },
+    {
+      "code": "23B",
+      "sector": "Catering",
+      "color": "#16A34A",
+      "style": "events"
+    },
+    {
+      "code": "23C",
+      "sector": "HR",
+      "color": "#8BD42B",
+      "style": "generic"
+    },
+    {
+      "code": "23D",
+      "sector": "Recruitment",
+      "color": "#2B5AD4",
+      "style": "generic"
+    },
+    {
+      "code": "24A",
+      "sector": "Information Technology (IT)",
+      "color": "#3FD0E0",
+      "style": "tech"
+    },
+    {
+      "code": "24B",
+      "sector": "Web Development",
+      "color": "#2E6BE6",
+      "style": "tech"
+    },
+    {
+      "code": "25A",
+      "sector": "Online Business",
+      "color": "#902BD4",
+      "style": "marketing"
+    },
+    {
+      "code": "25B",
+      "sector": "Mobile",
+      "color": "#D4C12B",
+      "style": "marketing"
+    },
+    {
+      "code": "26A",
+      "sector": "Language",
+      "color": "#2BB5D4",
+      "style": "generic"
+    },
+    {
+      "code": "26B",
+      "sector": "Translation",
+      "color": "#D42B84",
+      "style": "generic"
+    },
+    {
+      "code": "27",
+      "sector": "Legal",
+      "color": "#53D42B",
+      "style": "generic"
+    },
+    {
+      "code": "28A",
+      "sector": "Market Research",
+      "color": "#352BD4",
+      "style": "marketing"
+    },
+    {
+      "code": "28B",
+      "sector": "Analysis",
+      "color": "#D4662B",
+      "style": "marketing"
+    },
+    {
+      "code": "29A",
+      "sector": "Marketing",
+      "color": "#FF6B6B",
+      "style": "marketing"
+    },
+    {
+      "code": "29B",
+      "sector": "Advertising",
+      "color": "#E24A68",
+      "style": "marketing"
+    },
+    {
+      "code": "29C",
+      "sector": "Social Media",
+      "color": "#5AA9E8",
+      "style": "social"
+    },
+    {
+      "code": "30A",
+      "sector": "Media",
+      "color": "#FF5CA8",
+      "style": "media"
+    },
+    {
+      "code": "30B",
+      "sector": "New Media",
+      "color": "#D946EF",
+      "style": "media"
+    },
+    {
+      "code": "99",
+      "sector": "Miscellaneous",
+      "color": "#2BD43C",
+      "style": "generic"
+    },
+    {
+      "code": "31A",
+      "sector": "Photography",
+      "color": "#6D2BD4",
+      "style": "social"
+    },
+    {
+      "code": "32",
+      "sector": "Videography",
+      "color": "#D49E2B",
+      "style": "social"
+    },
+    {
+      "code": "33",
+      "sector": "Project Management",
+      "color": "#2BD4CF",
+      "style": "marketing"
+    },
+    {
+      "code": "34A",
+      "sector": "Property Management",
+      "color": "#D18E14",
+      "style": "property"
+    },
+    {
+      "code": "34B",
+      "sector": "Real Estate",
+      "color": "#FFB120",
+      "style": "property"
+    },
+    {
+      "code": "35A",
+      "sector": "Public Relations (PR)",
+      "color": "#2FBFB0",
+      "style": "pr"
+    },
+    {
+      "code": "35B",
+      "sector": "Communications",
+      "color": "#1E8A80",
+      "style": "pr"
+    },
+    {
+      "code": "36A",
+      "sector": "Public Sector",
+      "color": "#2BD474",
+      "style": "generic"
+    },
+    {
+      "code": "36B",
+      "sector": "Government",
+      "color": "#A62BD4",
+      "style": "generic"
+    },
+    {
+      "code": "37",
+      "sector": "Retail",
+      "color": "#D1D42B",
+      "style": "sales"
+    },
+    {
+      "code": "38",
+      "sector": "Sales",
+      "color": "#F97316",
+      "style": "sales"
+    },
+    {
+      "code": "39A",
+      "sector": "Scientific",
+      "color": "#D42B6E",
+      "style": "generic"
+    },
+    {
+      "code": "39B",
+      "sector": "Pharmaceutical",
+      "color": "#3DD42B",
+      "style": "generic"
+    },
+    {
+      "code": "39C",
+      "sector": "Biotech",
+      "color": "#4A2BD4",
+      "style": "generic"
+    },
+    {
+      "code": "40A",
+      "sector": "Security",
+      "color": "#D47C2B",
+      "style": "generic"
+    },
+    {
+      "code": "40B",
+      "sector": "Defence",
+      "color": "#2BD4AD",
+      "style": "generic"
+    },
+    {
+      "code": "41",
+      "sector": "Sports",
+      "color": "#D42BC9",
+      "style": "generic"
+    },
+    {
+      "code": "42",
+      "sector": "Surveying",
+      "color": "#F59E0B",
+      "style": "property"
+    },
+    {
+      "code": "43",
+      "sector": "Telecommunications",
+      "color": "#2B67D4",
+      "style": "tech"
+    },
+    {
+      "code": "44A",
+      "sector": "Training",
+      "color": "#D42B36",
+      "style": "marketing"
+    },
+    {
+      "code": "44B",
+      "sector": "Development",
+      "color": "#2BD452",
+      "style": "marketing"
+    },
+    {
+      "code": "45A",
+      "sector": "Travel",
+      "color": "#832BD4",
+      "style": "events"
+    },
+    {
+      "code": "45B",
+      "sector": "Leisure",
+      "color": "#D4B42B",
+      "style": "events"
+    },
+    {
+      "code": "46A",
+      "sector": "Energy",
+      "color": "#2BC2D4",
+      "style": "tech"
+    },
+    {
+      "code": "46B",
+      "sector": "Water",
+      "color": "#D42B91",
+      "style": "tech"
+    },
+    {
+      "code": "46C",
+      "sector": "Gas",
+      "color": "#60D42B",
+      "style": "tech"
+    },
+    {
+      "code": "47A",
+      "sector": "Blockchain",
+      "color": "#2563EB",
+      "style": "tech"
+    },
+    {
+      "code": "47B",
+      "sector": "Crypto currency",
+      "color": "#06B6D4",
+      "style": "tech"
+    }
+  ]
+}

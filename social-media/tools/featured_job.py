@@ -11,6 +11,7 @@ Mobile-safe type: role title 60px+, body 30px+, labels 20px+.
 """
 import os, base64, sys, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from sector_palette import SECTOR_PALETTE_VERSION, classify_featured_job, sector_palette
 # dedup/pexels are only needed for the photo/character sample variants. The automated
 # featured-job pipeline uses the graphic-cluster mode, which needs none of it, so keep
 # the import optional so this module runs standalone (e.g. in a cloud routine).
@@ -383,7 +384,6 @@ def _cluster_generic(accent):
 # ── Sector -> visual style mapping + config builder for scraped jobs ─────────
 # Each style: (accent, accent_dark, bg1, bg2, spark, cluster_fn, hook)
 # One distinct colour scheme per sector so featured posts read as varied.
-SECTOR_PALETTE_VERSION = "2026-08-19-v3"
 SECTOR_LABELS = {
     "design": "Design",
     "tech": "Tech",
@@ -423,44 +423,24 @@ SECTOR_STYLES = {
                   "Kickstart your career with a hands-on internship at a growing UK company."),
 }
 
-# keyword -> style key (first match wins; ordered by specificity). Maps the fixed
-# Internwise sector taxonomy to a distinct colour per sector.
-_SECTOR_KEYWORDS = [
-    ("property", ["real estate", "property", "surveying", "construction", "architecture"]),
-    ("tech",     ["information technology", "web development", "software"]),
-    ("design",   ["graphic design", "web design", "brand design"]),
-    ("social",   ["photography", "videography", "home staging"]),
-    ("finance",  ["accountancy", "accounting", "financial services", "banking"]),
-    ("pr",       ["public relations", "(pr)", "communications"]),
-    ("events",   ["events", "event management", "hospitality", "catering", "tourism"]),
-    ("sales",    ["business development", "sales"]),
-    ("marketing",["marketing", "advertising"]),
-    ("media",    ["new media", "journalism", "broadcast"]),  # only pure-media roles
-]
-
-def _pick_style(fields_text):
-    t = (fields_text or "").lower()
-    for key, kws in _SECTOR_KEYWORDS:
-        if any(kw in t for kw in kws):
-            return key
-    return "generic"
+# Exact sector taxonomy comes from Employers_SM_Ads. Each sector gets its own
+# colour; style only selects the closest illustration/hook family.
+def pick_sector_for_job(job):
+    return classify_featured_job(job or {})
 
 def pick_style_for_job(job):
-    """Classify from the role title first, then sector fields as fallback.
-    This keeps compound roles like 'Real Estate Marketing' in the property
-    palette, while avoiding company-name noise."""
-    title_style = _pick_style(job.get("title", ""))
-    if title_style != "generic":
-        return title_style
-    return _pick_style(job.get("fields", ""))
+    return pick_sector_for_job(job)["style"]
 
-def style_palette(style):
+def style_palette(style, sector_info=None):
     accent, accent_d, bg1, bg2, spark, _art_fn, _hook = SECTOR_STYLES[style]
+    sector = (sector_info or {}).get("sector") or SECTOR_LABELS.get(style, style.title())
+    exact = sector_palette(sector)
+    exact_accent = exact.get("accent") or accent
     return {
         "version": SECTOR_PALETTE_VERSION,
         "style": style,
-        "sector": SECTOR_LABELS.get(style, style.title()),
-        "accent": accent,
+        "sector": sector,
+        "accent": exact_accent,
         "accentDark": accent_d,
         "background": [bg1, bg2],
         "spark": spark,
@@ -571,12 +551,14 @@ def pick_hook(job):
 def build_config(job):
     """Turn a scraped job dict into a render config compatible with generate().
     job keys: title, company, fields, location, jtype, duration."""
-    style = pick_style_for_job(job)
+    sector_info = pick_sector_for_job(job)
+    style = sector_info["style"]
     accent, accent_d, bg1, bg2, spark, art_fn, _sector_hook = SECTOR_STYLES[style]
+    palette = style_palette(style, sector_info)
+    accent = palette["accent"]
     hook = pick_hook(job)
     title_html, title_size = _wrap_title(_sanitize(strip_year(job["title"])))
-    # primary sector = first comma-group, sanitized
-    primary = _sanitize((job.get("fields", "") or "").split(",")[0]) or "Internship"
+    primary = _sanitize(sector_info["sector"]) or "Internship"
     details = [
         ("field", primary),
         ("location", _sanitize(job.get("location", "")) or "UK"),
@@ -597,7 +579,7 @@ def build_config(job):
         "elements": _pick_elements(job),
         "_seed": _job_seed(job),
         "_style": style,
-        "_palette": style_palette(style),
+        "_palette": palette,
     }
 
 
