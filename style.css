@@ -17,6 +17,7 @@
 
   /* Status colours */
   --status-in-review:   var(--color-amber);
+  --status-script-ready: #8fb7ff;
   --status-approved:    var(--color-mint);
   --status-declined:    var(--color-coral);
 
@@ -428,6 +429,42 @@ a {
   transform: scale(1.03);
 }
 
+.post-card__short-thumb {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-5);
+  color: #fff;
+  background:
+    linear-gradient(145deg, rgba(255, 177, 32, 0.92), rgba(255, 107, 107, 0.72) 42%, rgba(22, 45, 74, 0.98) 43%),
+    var(--color-navy);
+}
+
+.post-card__short-label {
+  align-self: flex-start;
+  margin-bottom: auto;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.post-card__short-thumb strong {
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.post-card__short-thumb small {
+  margin-top: var(--space-2);
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 700;
+}
+
 /* Slide count pill on thumbnail */
 .post-card__slide-pill {
   position: absolute;
@@ -522,6 +559,12 @@ a {
   background-color: rgba(255, 177, 32, 0.12);
   color: #c8870a;
   border-color: rgba(255, 177, 32, 0.3);
+}
+
+.status-badge--script-ready {
+  background-color: rgba(143, 183, 255, 0.16);
+  color: #264d7e;
+  border-color: rgba(143, 183, 255, 0.45);
 }
 
 .status-badge--approved {
@@ -638,6 +681,76 @@ a {
   aspect-ratio: 1 / 1;
   object-fit: contain;
   border-radius: 4px;
+}
+
+.short-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(72%, 430px);
+  aspect-ratio: 9 / 16;
+  color: #fff;
+}
+
+.short-preview__frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  padding: var(--space-6);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 177, 32, 0.35), transparent 36%),
+    linear-gradient(160deg, #264d7e 0%, #162d4a 48%, #0e1f38 100%);
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.35);
+}
+
+.short-preview__eyebrow {
+  align-self: flex-start;
+  margin-bottom: auto;
+  padding: 0.32rem 0.62rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.short-preview h3 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1.05;
+  margin-bottom: var(--space-3);
+}
+
+.short-preview__score {
+  width: fit-content;
+  margin-bottom: var(--space-4);
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+  background-color: var(--color-amber);
+  color: var(--color-navy);
+  font-weight: 800;
+}
+
+.short-preview p {
+  display: -webkit-box;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.92rem;
+  line-height: 1.45;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.short-preview__signals {
+  margin-top: var(--space-4);
+  padding-left: var(--space-4);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.78rem;
+  line-height: 1.35;
 }
 
 .slide-viewer__controls {

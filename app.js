@@ -18,17 +18,19 @@
   ------------------------------------------------------------------------- */
   const DATA_URL      = 'data/weeks.json';
   const FEATURED_URL  = 'data/featured.json';
+  const SHORTS_URL    = 'data/shorts.json';
   const FEATURED_SEEN_KEY = 'iw-content-hub-featured-seen';
   const STATUS_API    = '/api/statuses';   // shared cross-device status store
   const STORAGE_KEY   = 'iw-content-hub-statuses';
   const COMMENTS_KEY  = 'iw-content-hub-comments';
 
   /** Ordered list of status values for cycling on badge click */
-  const STATUS_CYCLE  = ['in-review', 'approved', 'declined'];
+  const STATUS_CYCLE  = ['script-ready', 'in-review', 'approved', 'declined'];
 
   /** Human-readable labels for status values */
   const STATUS_LABELS = {
     'in-review': 'In Review',
+    'script-ready': 'Script Ready',
     'approved':  'Approved',
     'declined':  'Declined',
   };
@@ -48,7 +50,8 @@
   ------------------------------------------------------------------------- */
   let allWeeks        = [];      // Full weeks array from JSON
   let featuredWeek    = null;    // Featured Jobs pseudo-week (from featured.json)
-  let currentMode     = 'weekly';// 'weekly' | 'featured'
+  let shortsWeek      = null;    // Shorts/Reels pseudo-week (from shorts.json)
+  let currentMode     = 'weekly';// 'weekly' | 'shorts' | 'featured'
   let featuredSeen    = new Set();// auto-post ids the user has already seen (localStorage)
   let featuredNewIds  = new Set();// auto-post ids new since last visit (for badge + ribbon)
   let currentWeek     = null;    // Currently displayed week object
@@ -96,6 +99,7 @@
   let elContentSidebar;
   let elModeTabs;
   let elModeWeekly;
+  let elModeShorts;
   let elModeFeatured;
   let elFeaturedBadge;
 
@@ -108,6 +112,7 @@
     loadComments();
     loadFeaturedSeen();
     fetchWeeks();
+    fetchShorts();
     fetchFeatured();
     fetchRemoteStatuses();   // pull shared statuses, then refresh what's on screen
     bindGlobalEvents();
@@ -148,6 +153,7 @@
     elContentSidebar    = document.getElementById('content-sidebar');
     elModeTabs          = document.getElementById('mode-tabs');
     elModeWeekly        = document.getElementById('mode-weekly');
+    elModeShorts        = document.getElementById('mode-shorts');
     elModeFeatured      = document.getElementById('mode-featured');
     elFeaturedBadge     = document.getElementById('featured-badge');
   }
@@ -268,6 +274,46 @@
   }
 
   /* -------------------------------------------------------------------------
+     Shorts / Reels
+  ------------------------------------------------------------------------- */
+  async function fetchShorts() {
+    try {
+      const response = await fetch(SHORTS_URL, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      shortsWeek = await response.json();
+    } catch (err) {
+      console.error('[IW Content Hub] Failed to load shorts.json:', err);
+      shortsWeek = null;
+    }
+  }
+
+  function renderShorts() {
+    if (!shortsWeek) {
+      elWeekMeta.innerHTML = '<span class="week-meta__label">Shorts / Reels</span>';
+      elPostGrid.innerHTML = '';
+      elEmptyState.hidden = false;
+      return;
+    }
+    currentWeek = {
+      id: shortsWeek.id || 'shorts',
+      label: shortsWeek.label || 'Shorts / Reels',
+      posts: shortsWeek.posts || [],
+    };
+
+    const generated = shortsWeek.generatedAt ? new Date(shortsWeek.generatedAt) : null;
+    const generatedLabel = generated && !isNaN(generated)
+      ? 'Generated ' + generated.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
+      : 'Automated topic research';
+
+    elWeekMeta.innerHTML = `
+      <span class="week-meta__label">${escapeHtml(currentWeek.label)}</span>
+      <span class="week-meta__date">${escapeHtml(generatedLabel)}</span>
+    `;
+
+    renderPostGrid(currentWeek.posts);
+  }
+
+  /* -------------------------------------------------------------------------
      Featured "new graphics" notification
      - Tracks which auto-generated (sourceId) posts the user has already seen,
        in localStorage. New ones drive the tab badge + a NEW ribbon on cards.
@@ -347,16 +393,19 @@
     renderPostGrid(posts);
   }
 
-  /** Switch between 'weekly' and 'featured' content modes. */
+  /** Switch between 'weekly', 'shorts', and 'featured' content modes. */
   function setMode(mode) {
-    if (mode !== 'weekly' && mode !== 'featured') return;
+    if (mode !== 'weekly' && mode !== 'shorts' && mode !== 'featured') return;
     currentMode = mode;
 
     const isWeekly = (mode === 'weekly');
+    const isShorts = (mode === 'shorts');
     elModeWeekly.classList.toggle('is-active', isWeekly);
-    elModeFeatured.classList.toggle('is-active', !isWeekly);
+    elModeShorts.classList.toggle('is-active', isShorts);
+    elModeFeatured.classList.toggle('is-active', mode === 'featured');
     elModeWeekly.setAttribute('aria-selected', String(isWeekly));
-    elModeFeatured.setAttribute('aria-selected', String(!isWeekly));
+    elModeShorts.setAttribute('aria-selected', String(isShorts));
+    elModeFeatured.setAttribute('aria-selected', String(mode === 'featured'));
 
     // Week selector is only meaningful in weekly mode
     elWeekSelector.classList.toggle('is-hidden', !isWeekly);
@@ -364,6 +413,8 @@
     if (isWeekly) {
       const weekId = elWeekSelector.value || (allWeeks[0] && allWeeks[0].id);
       if (weekId) renderWeek(weekId);
+    } else if (isShorts) {
+      renderShorts();
     } else {
       renderFeatured();
       // Opening the tab counts as reviewing: clear the badge (NEW ribbons remain
@@ -393,8 +444,11 @@
 
   function buildPostCard(post) {
     const status     = getStatus(post.id, post.status);
-    const thumbSrc   = buildImagePath(currentWeek.id, post.id, post.slides[0]);
-    const slideCount = post.slides.length;
+    const slides     = post.slides || [];
+    const isShort    = post.format === 'Short/Reel';
+    const thumbSrc   = post.thumbnailPath || (slides[0] ? buildImagePath(currentWeek.id, post.id, slides[0]) : '');
+    const slideCount = slides.length;
+    const scoreLabel = typeof post.viralScore === 'number' ? Math.round(post.viralScore) + ' score' : 'Script ready';
 
     // Outer wrapper — role="listitem" matches the grid's role="list"
     const article = document.createElement('article');
@@ -406,15 +460,24 @@
 
     article.innerHTML = `
       <div class="post-card__thumb">
-        <img
-          class="post-card__thumb-img"
-          src="${thumbSrc}"
-          alt="${escapeHtml(post.title)} — slide 1"
-          loading="lazy"
-          width="400"
-          height="400"
-        >
+        ${thumbSrc ? `
+          <img
+            class="post-card__thumb-img"
+            src="${thumbSrc}"
+            alt="${escapeHtml(post.title)} — slide 1"
+            loading="lazy"
+            width="400"
+            height="400"
+          >
+        ` : `
+          <div class="post-card__short-thumb" aria-hidden="true">
+            <span class="post-card__short-label">Short</span>
+            <strong>${escapeHtml(scoreLabel)}</strong>
+            <small>${escapeHtml(post.heygenStatus || 'Ready for HeyGen')}</small>
+          </div>
+        `}
         ${slideCount > 1 ? `<span class="post-card__slide-pill" aria-label="${slideCount} slides">${slideCount} slides</span>` : ''}
+        ${isShort && post.durationTargetSeconds ? `<span class="post-card__slide-pill" aria-label="${post.durationTargetSeconds} seconds">${post.durationTargetSeconds}s</span>` : ''}
         ${featuredNewIds.has(post.id) ? '<span class="post-card__new-ribbon">New</span>' : ''}
       </div>
       <div class="post-card__body">
@@ -565,6 +628,9 @@
 
     // Load first slide
     renderSlide(post, 0);
+    const hasSlides = Array.isArray(post.slides) && post.slides.length > 0;
+    elDownloadSlideBtn.hidden = !hasSlides;
+    elDownloadAllBtn.hidden = !hasSlides;
 
     // Load comments for this post
     renderComments(postId);
@@ -630,9 +696,18 @@
   }
 
   function renderSlide(post, idx) {
-    const slide    = post.slides[idx];
+    const slides = post.slides || [];
+    const total  = slides.length;
+
+    if (post.format === 'Short/Reel' && total === 0) {
+      renderShortPreview(post);
+      return;
+    }
+
+    removeShortPreview();
+    elSlideImg.hidden = false;
+    const slide    = slides[idx];
     const src      = buildImagePath(currentWeek.id, post.id, slide);
-    const total    = post.slides.length;
 
     elSlideImg.src = src;
     elSlideImg.alt = `${post.title} — slide ${idx + 1} of ${total}`;
@@ -643,11 +718,47 @@
     elSlideNext.disabled = (idx === total - 1);
   }
 
+  function renderShortPreview(post) {
+    const stage = elSlideImg.parentElement;
+    if (!stage) return;
+    elSlideImg.hidden = true;
+    elSlideImg.removeAttribute('src');
+    removeShortPreview();
+
+    const preview = document.createElement('div');
+    preview.className = 'short-preview';
+    const score = typeof post.viralScore === 'number' ? Math.round(post.viralScore) + '/100' : 'Ready';
+    const signals = (post.sourceSignals || []).slice(0, 3).map(function (signal) {
+      return '<li>' + escapeHtml(signal.title || signal.source || 'Signal') + '</li>';
+    }).join('');
+    preview.innerHTML = `
+      <div class="short-preview__frame">
+        <span class="short-preview__eyebrow">Script-ready short</span>
+        <h3>${escapeHtml(post.title)}</h3>
+        <div class="short-preview__score">${escapeHtml(score)}</div>
+        <p>${escapeHtml(post.spokenScript || 'Open the caption panel for the generated script and source signals.')}</p>
+        ${signals ? '<ul class="short-preview__signals">' + signals + '</ul>' : ''}
+      </div>
+    `;
+    stage.appendChild(preview);
+
+    elSlideCounter.textContent = post.durationTargetSeconds ? post.durationTargetSeconds + 's' : 'Short';
+    elSlidePrev.disabled = true;
+    elSlideNext.disabled = true;
+  }
+
+  function removeShortPreview() {
+    const stage = elSlideImg.parentElement;
+    if (!stage) return;
+    const existing = stage.querySelector('.short-preview');
+    if (existing) existing.remove();
+  }
+
   function navigateSlide(direction) {
     if (!overlayPostId || !currentWeek) return;
     const post  = currentWeek.posts.find(function (p) { return p.id === overlayPostId; });
     if (!post) return;
-    const total = post.slides.length;
+    const total = (post.slides || []).length;
     const next  = currentSlideIdx + direction;
 
     if (next < 0 || next >= total) return;
@@ -695,6 +806,7 @@
     if (!overlayPostId || !currentWeek) return;
     const post = currentWeek.posts.find(function (p) { return p.id === overlayPostId; });
     if (!post) return;
+    if (!post.slides || post.slides.length === 0) return;
 
     const url      = buildImagePath(currentWeek.id, post.id, post.slides[currentSlideIdx]);
     const filename = post.id + '_slide_' + (currentSlideIdx + 1) + '.png';
@@ -743,6 +855,7 @@
     if (!overlayPostId || !currentWeek) return;
     const post = currentWeek.posts.find(function (p) { return p.id === overlayPostId; });
     if (!post) return;
+    if (!post.slides || post.slides.length === 0) return;
 
     // Single slide — reuse single-slide path
     if (post.slides.length === 1) {
@@ -878,6 +991,7 @@
 
     // Mode toggle: Weekly Graphics / Featured Jobs
     elModeWeekly.addEventListener('click', function () { setMode('weekly'); });
+    elModeShorts.addEventListener('click', function () { setMode('shorts'); });
     elModeFeatured.addEventListener('click', function () { setMode('featured'); });
 
     // Overlay: close button
@@ -1005,7 +1119,8 @@
   }
 
   function renderCaptionForPlatform(post, platform) {
-    const isCarousel       = post.slides.length > 1;
+    const slides           = post.slides || [];
+    const isCarousel       = slides.length > 1;
     const isThreadPlatform = THREAD_PLATFORMS.includes(platform);
     const hasThread        = isCarousel && isThreadPlatform &&
                              Array.isArray(post.captionThread) && post.captionThread.length > 0;
@@ -1018,7 +1133,7 @@
       elCaptionStandard.hidden = false;
       elCaptionThread.hidden   = true;
       // Prefer a platform-specific caption (featured jobs), else the single caption.
-      currentCaption = (post.captions && post.captions[platform]) || post.caption || '';
+      currentCaption = (post.captions && post.captions[platform]) || post.caption || post.spokenScript || '';
       elDetailCaption.textContent = currentCaption;
     }
   }

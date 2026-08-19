@@ -1,0 +1,85 @@
+{
+  "id": "d2-interview-flashcards",
+  "week_id": "week12",
+  "title": "Interview Flashcards",
+  "source_post": "d2-interview",
+  "status": "script-ready",
+  "created_at": "2026-08-18",
+  "viral_score": 92.7,
+  "selection_rationale": [
+    "High candidate pain, likely to stop the scroll.",
+    "Concrete enough to feel immediately useful.",
+    "Creates an open loop that earns the next few seconds.",
+    "Has comment/share potential.",
+    "Save-worthy practical takeaway."
+  ],
+  "recommended_platforms": [
+    "tiktok",
+    "instagram-reels",
+    "youtube-shorts",
+    "linkedin-video"
+  ],
+  "duration_target_seconds": 42,
+  "estimated_spoken_seconds": 29,
+  "heygen_settings": {
+    "format": "9:16",
+    "resolution": "1080p",
+    "presenter": "approved founder/avatar",
+    "captions": "burned-in for TikTok/Reels, sidecar optional for archive",
+    "rendering": "manual for now"
+  },
+  "spoken_script": "Stop memorising interview answers. Build proof cards instead. Turn common interview questions into proof cards instead of memorised speeches. First: For tell me about yourself: role, proof, direction. Second: For why us: product, people, mission. Third: For a challenge: situation, action, result, lesson. The rule is simple: Prepare flexible proof blocks for tell me about yourself, why us, and a challenge. Find the internship you are preparing for at internwise.co.uk",
+  "beats": [
+    {
+      "time": "0-3s",
+      "type": "hook",
+      "on_screen_text": "Stop memorising interview answers. Build proof cards instead."
+    },
+    {
+      "time": "3-8s",
+      "type": "promise",
+      "on_screen_text": "Turn common interview questions into proof cards instead of memorised speeches."
+    },
+    {
+      "time": "8-18s",
+      "type": "point",
+      "on_screen_text": "For tell me about yourself: role, proof, direction."
+    },
+    {
+      "time": "18-28s",
+      "type": "point",
+      "on_screen_text": "For why us: product, people, mission."
+    },
+    {
+      "time": "28-36s",
+      "type": "point",
+      "on_screen_text": "For a challenge: situation, action, result, lesson."
+    },
+    {
+      "time": "36-45s",
+      "type": "cta",
+      "on_screen_text": "Find the internship you are preparing for at internwise.co.uk"
+    }
+  ],
+  "on_screen_text": [
+    "Stop memorising interview answers. Build proof cards instead.",
+    "Turn common interview questions into proof cards instead of memorised speeches.",
+    "For tell me about yourself: role, proof, direction.",
+    "For why us: product, people, mission.",
+    "For a challenge: situation, action, result, lesson.",
+    "Find the internship you are preparing for at internwise.co.uk"
+  ],
+  "caption_pack": {
+    "instagram": "Stop memorising interview answers. Build proof cards instead.\n\nPrepare flexible proof blocks for tell me about yourself, why us, and a challenge.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+    "tiktok": "Stop memorising interview answers. Build proof cards instead.\n\nPrepare flexible proof blocks for tell me about yourself, why us, and a challenge.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+    "youtube": "Stop memorising interview answers. Build proof cards instead.\n\nPrepare flexible proof blocks for tell me about yourself, why us, and a challenge.\n\n#internship #careeradvice #graduatejobs",
+    "linkedin": "Stop memorising interview answers. Build proof cards instead.\n\nPrepare flexible proof blocks for tell me about yourself, why us, and a challenge.\n\nShort, practical, and built for students preparing for the next step.\n\n#careeradvice #earlycareers #graduatejobs"
+  },
+  "production_notes": [
+    "Open with direct eye contact and no intro logo.",
+    "Keep cuts every 2-4 seconds using zooms, captions, or B-roll cards.",
+    "Use the first on-screen text line as the thumbnail/title frame.",
+    "Do not say 'link in bio' in the video. Put it only in IG/TikTok captions if needed.",
+    "No em dashes in captions or overlays."
+  ]
+}

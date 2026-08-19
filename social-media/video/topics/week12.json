@@ -1,0 +1,149 @@
+{
+  "week_id": "week12",
+  "week_label": "Week 12",
+  "audience": "UK students, recent graduates, and international applicants looking for internships or entry-level roles",
+  "default_duration_seconds": 42,
+  "topics": [
+    {
+      "id": "d1-cv-7-seconds",
+      "source_post": "d1-cv",
+      "title": "Your CV Gets 7 Seconds",
+      "pillar": "practical career advice",
+      "promise": "Fix the top third of your CV so a recruiter sees the right proof first.",
+      "core_takeaway": "Lead with target role, strongest proof, and matching skills before anything else.",
+      "target_emotion": "urgent but fixable",
+      "format": "myth_bust",
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 3,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "Your CV is not being read. It is being scanned.",
+        "If your best proof is halfway down your CV, recruiters may never see it.",
+        "The top third of your CV is doing more work than you think."
+      ],
+      "proof_points": [
+        "Recruiters scan fast before deciding whether to keep reading.",
+        "The top third should show name, target role, strongest proof, and matching skills.",
+        "Impact lines beat vague duties."
+      ],
+      "cta": "Find live UK internships at internwise.co.uk"
+    },
+    {
+      "id": "d2-interview-flashcards",
+      "source_post": "d2-interview",
+      "title": "Interview Flashcards",
+      "pillar": "practical career advice",
+      "promise": "Turn common interview questions into proof cards instead of memorised speeches.",
+      "core_takeaway": "Prepare flexible proof blocks for tell me about yourself, why us, and a challenge.",
+      "target_emotion": "prepared, calmer",
+      "format": "checklist",
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "Stop memorising interview answers. Build proof cards instead.",
+        "If your interview prep is just a script, it will crack under pressure.",
+        "Here are the three interview flashcards every intern should have."
+      ],
+      "proof_points": [
+        "For tell me about yourself: role, proof, direction.",
+        "For why us: product, people, mission.",
+        "For a challenge: situation, action, result, lesson."
+      ],
+      "cta": "Find the internship you are preparing for at internwise.co.uk"
+    },
+    {
+      "id": "d3-first-week-onboarding",
+      "source_post": "d3-onboarding",
+      "title": "Your First Internship Week",
+      "pillar": "career inspiration",
+      "promise": "Know what to do in week one so you look thoughtful without pretending to know everything.",
+      "core_takeaway": "Ask better questions, keep a decision log, and clarify what good looks like.",
+      "target_emotion": "reassured, capable",
+      "format": "pov_coach",
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "Your first week as an intern is not about knowing everything.",
+        "Do these three things in week one and you will look switched on fast.",
+        "Nobody tells interns this, but week one has a hidden job."
+      ],
+      "proof_points": [
+        "Write down names, systems, decisions, and acronyms.",
+        "Ask what good looks like before you start a task.",
+        "Send a tiny end-of-week recap to your manager."
+      ],
+      "cta": "Start your next internship search at internwise.co.uk"
+    },
+    {
+      "id": "d4-hidden-job-market",
+      "source_post": "d4-hidden-market",
+      "title": "The Hidden Internship Market",
+      "pillar": "internship & job market insights",
+      "promise": "Show candidates how to find opportunities before everyone else piles into the same portals.",
+      "core_takeaway": "Warm intros, speculative notes, and smaller employers can bypass crowded application funnels.",
+      "target_emotion": "curious, empowered",
+      "format": "contrarian",
+      "pain": 5,
+      "specificity": 4,
+      "curiosity": 5,
+      "utility": 4,
+      "timeliness": 4,
+      "discussion": 5,
+      "brand_fit": 4,
+      "hook_candidates": [
+        "The best internship may never hit the job board.",
+        "Everyone is applying to the same graduate schemes. That is the problem.",
+        "If your job search is only portals, you are missing a whole market."
+      ],
+      "proof_points": [
+        "Smaller employers often hire when the need appears.",
+        "A warm intro can skip the cold queue.",
+        "A short speculative note works best when it names a useful contribution."
+      ],
+      "cta": "Browse live roles and build your shortlist at internwise.co.uk"
+    },
+    {
+      "id": "d5-rejection-reset",
+      "source_post": "d5-rejection",
+      "title": "After a Rejection",
+      "pillar": "career inspiration",
+      "promise": "Turn rejection into a better next application without spiralling.",
+      "core_takeaway": "Separate signal from story: log what happened, adjust one thing, keep moving.",
+      "target_emotion": "seen, resilient",
+      "format": "reframe",
+      "pain": 5,
+      "specificity": 4,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 5,
+      "discussion": 5,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "A rejection is data. It is not your identity.",
+        "Before you send another application after a rejection, do this.",
+        "The worst thing after a rejection is making up a story with no evidence."
+      ],
+      "proof_points": [
+        "Log where you dropped out: CV, test, interview, final round.",
+        "Change one controllable thing before the next attempt.",
+        "Keep a rejection-safe pipeline so one no does not stop everything."
+      ],
+      "cta": "Keep going. Search your next opportunity at internwise.co.uk"
+    }
+  ]
+}
+

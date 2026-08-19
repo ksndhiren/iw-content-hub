@@ -1,0 +1,63 @@
+{
+  "audience": "UK internship and graduate job seekers",
+  "refresh": {
+    "default_top": 5,
+    "country": "GB",
+    "google_trends_provider": "pytrends",
+    "youtube_provider": "youtube_data_api"
+  },
+  "reddit_rss": [
+    {
+      "id": "reddit-ukjobs-internship-cv",
+      "label": "UK jobs - internship CV",
+      "url": "https://www.reddit.com/r/UKJobs/search.rss?q=internship%20cv&restrict_sr=1&sort=new",
+      "weight": 1.1
+    },
+    {
+      "id": "reddit-careerguidance-interview",
+      "label": "Career guidance - interview pain",
+      "url": "https://www.reddit.com/r/careerguidance/search.rss?q=interview%20rejected&restrict_sr=1&sort=new",
+      "weight": 1.0
+    },
+    {
+      "id": "reddit-jobs-graduate-rejection",
+      "label": "Jobs - graduate rejection",
+      "url": "https://www.reddit.com/r/jobs/search.rss?q=graduate%20rejection&restrict_sr=1&sort=new",
+      "weight": 1.0
+    },
+    {
+      "id": "reddit-resumes-internship",
+      "label": "Resumes - internship",
+      "url": "https://www.reddit.com/r/resumes/search.rss?q=internship&restrict_sr=1&sort=new",
+      "weight": 1.15
+    }
+  ],
+  "google_trends": {
+    "terms": [
+      "internship cv",
+      "graduate jobs",
+      "cover letter internship",
+      "assessment centre",
+      "interview rejection",
+      "no experience cv",
+      "linkedin profile graduate"
+    ]
+  },
+  "youtube_competitors": {
+    "queries": [
+      "internship cv advice shorts",
+      "graduate job interview tips shorts",
+      "no experience cv graduate",
+      "assessment centre tips",
+      "linkedin profile job search"
+    ],
+    "channel_ids": []
+  },
+  "search_questions": [
+    "why is my internship CV rejected",
+    "how to answer tell me about yourself internship",
+    "what to put on CV with no experience",
+    "how to get graduate job with no experience",
+    "why do I keep failing interviews"
+  ]
+}
