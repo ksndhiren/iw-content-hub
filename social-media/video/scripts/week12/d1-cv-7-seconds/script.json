@@ -1,0 +1,117 @@
+{
+  "id": "d1-cv-7-seconds",
+  "week_id": "week12",
+  "title": "Your CV Gets 7 Seconds",
+  "source_post": "d1-cv",
+  "status": "script-ready",
+  "created_at": "2026-08-18",
+  "viral_score": 93.6,
+  "selection_rationale": [
+    "High candidate pain, likely to stop the scroll.",
+    "Concrete enough to feel immediately useful.",
+    "Creates an open loop that earns the next few seconds.",
+    "Save-worthy practical takeaway."
+  ],
+  "recommended_platforms": [
+    "tiktok",
+    "instagram-reels",
+    "youtube-shorts",
+    "linkedin-video"
+  ],
+  "duration_target_seconds": 52,
+  "estimated_spoken_seconds": 52,
+  "heygen_settings": {
+    "format": "9:16",
+    "resolution": "1080p",
+    "presenter": "approved founder/avatar",
+    "captions": "burned-in for TikTok/Reels, sidecar optional for archive",
+    "rendering": "manual for now",
+    "single_shot_limit_seconds": 15,
+    "workflow": "Generate four separate HeyGen shots, then stitch in Canva or CapCut.",
+    "background_music": "Light, warm, modern, low-volume bed under voice. No lyrics.",
+    "transitions": "Clean professional transitions between shots: match cut, soft zoom, paper swipe, short fade to end card.",
+    "on_screen_text": "none, except final end card URL if needed"
+  },
+  "spoken_script": "Imagine this. You are waiting outside the interview room, and your CV is already inside. Before anyone meets you, a recruiter is scanning one page and making a fast call: relevant, or not relevant. That is why the top third matters so much. Do not bury the good stuff halfway down. Put the role you want near your name. Add two lines that prove why you fit. Then match the skills from the job ad, using the same words they are looking for. And swap vague duties for proof. Not responsible for social media. Say grew Instagram three times in four months. Make the first seven seconds obvious, and the rest of your CV finally gets a chance. Find live UK internships at internwise.co.uk",
+  "beats": [],
+  "on_screen_text": [],
+  "caption_pack": {
+    "instagram": "Your CV enters the room before you do.\n\nMake the first 7 seconds obvious: target role, proof, matching skills.\n\nSave this before your next application.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+    "tiktok": "Your CV enters the room before you do.\n\nMake the first 7 seconds obvious: target role, proof, matching skills.\n\nSave this before your next application.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+    "youtube": "Your CV enters the room before you do.\n\nMake the first 7 seconds obvious: target role, proof, matching skills.\n\n#internship #careeradvice #graduatejobs",
+    "linkedin": "Your CV enters the room before you do.\n\nThe top third has to earn the proper read: target role, strongest proof, and matching skills.\n\nShort, practical, and built for students preparing for the next step.\n\n#careeradvice #earlycareers #graduatejobs"
+  },
+  "production_notes": [
+    "Generate each shot separately in HeyGen because single-shot output is limited to 15 seconds.",
+    "Do not use on-screen text during the main video. Let Nuno and the scene carry the message.",
+    "Add light background music in Canva or CapCut after stitching. Keep it low enough that the voice remains crisp.",
+    "Use short transitions between shots: match cut, soft zoom, paper swipe, and final fade. Avoid flashy effects.",
+    "Keep Nuno visible in each HeyGen shot. Use CV close-ups as edit inserts only if needed during stitching.",
+    "End card may show the Internwise logo and internwise.co.uk only.",
+    "Do not say link in bio in the video. Put it only in IG/TikTok captions if needed.",
+    "No em dashes in captions or overlays."
+  ],
+  "creative_direction": {
+    "concept": "Nuno walks the viewer through the seven-second CV scan as if we are inside the recruitment process.",
+    "tone": "urgent, cinematic, mentor-like, practical",
+    "visual_style": "vertical 9:16, premium navy and amber brand palette, quick scene changes, shallow depth of field, crisp CV close-ups, burned-in captions",
+    "nuno_role": "Nuno is the guide in every main scene. He appears in the waiting room, beside the interview room door, and in close-up talking directly to camera.",
+    "core_metaphor": "Your CV is not an essay. It is a search result that has to earn the click."
+  },
+  "asset_prompts": [
+    {
+      "name": "waiting_room_open",
+      "purpose": "Opening scene",
+      "prompt": "Vertical 9:16 cinematic waiting room outside an interview room, diverse early-career candidates waiting with folders, Nuno as the confident mentor in foreground looking at camera, navy and amber Internwise brand accents, realistic office lighting, shallow depth of field, no readable brand names."
+    },
+    {
+      "name": "recruiter_scan_background",
+      "purpose": "Recruiter stakes scene",
+      "prompt": "Vertical 9:16 modern interview room, recruiter seated at table reading a CV in soft focus, Nuno in foreground explaining to camera, glass wall, subtle navy and amber accents, professional UK office, cinematic but natural, no readable personal details."
+    },
+    {
+      "name": "cv_closeup_highlights",
+      "purpose": "CV teaching insert",
+      "prompt": "Macro close-up of a clean one-page graduate CV on a desk, amber highlight boxes around top third, target role, proof summary, and skills section, crisp readable generic labels only, no real personal data."
+    },
+    {
+      "name": "job_ad_match_split",
+      "purpose": "Keyword matching insert",
+      "prompt": "Vertical split-screen graphic, generic internship job advert keywords on left and CV skills section on right, matching phrases connected by amber lines, premium navy background, clean editorial motion graphic style."
+    }
+  ],
+  "shot_plan": [
+    {
+      "shot": 1,
+      "duration": "0-12s",
+      "heygen_max_seconds": 15,
+      "scene": "Modern interview waiting room. Nuno is seated with candidates waiting nearby. He leans slightly toward camera, calm and confidential. A printed CV is carried toward an interview room door in the background.",
+      "spoken_script": "Imagine this. You are waiting outside the interview room, and your CV is already inside. Before anyone meets you, a recruiter is scanning one page and making a fast call.",
+      "edit_notes": "Start with a subtle room-tone ambience under light music. Cut in on the line \u201cyour CV is already inside\u201d. No on-screen text."
+    },
+    {
+      "shot": 2,
+      "duration": "12-24s",
+      "heygen_max_seconds": 15,
+      "scene": "Interview room. Nuno stands in the foreground, speaking to camera. Behind him, softly out of focus, a recruiter reads a CV at a table. The mood is cinematic but realistic.",
+      "spoken_script": "Relevant, or not relevant. That is why the top third matters so much. Do not bury the good stuff halfway down. Put the role you want near your name.",
+      "edit_notes": "Use a clean match cut from waiting room door to interview room. Keep background music low and steady."
+    },
+    {
+      "shot": 3,
+      "duration": "24-38s",
+      "heygen_max_seconds": 15,
+      "scene": "Nuno beside a large floating CV graphic or desk-level CV close-up. The visual focus is the top third of a generic CV, with no personal data. Use natural hand gestures as if explaining the layout.",
+      "spoken_script": "Add two lines that prove why you fit. Then match the skills from the job ad, using the same words they are looking for. And swap vague duties for proof.",
+      "edit_notes": "Transition with a quick paper-swipe or soft zoom into the CV. Add gentle highlight animation in Canva or CapCut, but no text overlays."
+    },
+    {
+      "shot": 4,
+      "duration": "38-52s",
+      "heygen_max_seconds": 15,
+      "scene": "Close-up of Nuno near the interview room doorway. Warm, direct, reassuring. End with a clean branded end card after Nuno finishes speaking.",
+      "spoken_script": "Not responsible for social media. Say grew Instagram three times in four months. Make the first seven seconds obvious, and the rest of your CV finally gets a chance. Find live UK internships at internwise.co.uk",
+      "edit_notes": "Use a gentle push-in during the proof example. Fade music slightly under the final URL. End card shows logo and internwise.co.uk only."
+    }
+  ]
+}
