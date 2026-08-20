@@ -1988,6 +1988,198 @@
               "#graduatejobs"
             ]
           }
+        },
+        {
+          "id": "d2-interview",
+          "day": "Tuesday",
+          "title": "Interview Proof Cards",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
+          ],
+          "status": "in-review",
+          "caption": "Stop memorising interview answers - build proof cards instead.\n\nPrep three flexible blocks and you can answer almost anything:\n1. Tell me about yourself -> Role, Proof, Direction\n2. Why us? -> Product, People, Mission\n3. Give me a challenge -> Situation, Action, Result, Lesson\n\nA real result beats a memorised speech every time.\n\nSave this before your next interview.\nFind your internship - link in bio 🔗",
+          "captionThread": [
+            "1/ Stop memorising interview answers. Build proof cards instead - flexible blocks you can adapt to any question. Here is the system.",
+            "2/ Prep 3 cards: 'tell me about yourself', 'why us?', and 'give me a challenge'. Each backed by a real result, not a memorised speech.",
+            "3/ Card 1 - Tell me about yourself: Role, Proof, Direction. Who you are, one result that proves it, and why this role next.",
+            "4/ Card 2 - Why us: Product, People, Mission. Card 3 - A challenge: Situation, Action, Result, Lesson. Same trick, applied twice.",
+            "5/ Walk in with proof, not a script, and have questions ready for them. Find your internship at internwise.co.uk"
+          ],
+          "hashtags": [
+            "#internship",
+            "#interviewtips",
+            "#graduatejobs",
+            "#careeradvice",
+            "#jobsearch"
+          ],
+          "captions": {
+            "ig-fb": "Stop memorising interview answers - build proof cards instead.\n\nPrep three flexible blocks and you can answer almost anything:\n1. Tell me about yourself -> Role, Proof, Direction\n2. Why us? -> Product, People, Mission\n3. Give me a challenge -> Situation, Action, Result, Lesson\n\nA real result beats a memorised speech every time.\n\nSave this before your next interview.\nFind your internship - link in bio 🔗",
+            "linkedin": "Memorised interview answers fall apart the moment the question is worded differently. Build proof cards instead.\n\nPrepare three flexible blocks and you can handle almost any question:\n- Tell me about yourself: Role, Proof, Direction.\n- Why us: Product, People, Mission.\n- Give me a challenge: Situation, Action, Result, Lesson.\n\nEach one is anchored to a real result, so you are recalling evidence, not reciting a script. Have two or three questions ready for them too, and you finish strong.\n\nThe full breakdown is in the carousel.\n\nFind your internship at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internship",
+              "#interviewtips",
+              "#graduatejobs",
+              "#careeradvice",
+              "#jobsearch"
+            ],
+            "linkedin": [
+              "#interviewtips",
+              "#earlycareers",
+              "#graduatejobs",
+              "#jobsearch"
+            ],
+            "x": [
+              "#interviewtips",
+              "#graduatejobs"
+            ]
+          }
+        },
+        {
+          "id": "d3-internship",
+          "day": "Wednesday",
+          "title": "Your Internship Is a 12-Week Audition",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
+          ],
+          "status": "in-review",
+          "caption": "Your internship is a 12-week audition. Treat it like one.\n\nWeek 1: learn names fast, ask the 'dumb' questions while you still can, and find out what good actually looks like.\nStand out: be the reliable one, take the boring jobs and improve them, follow up in writing.\nThe endgame: show impact in numbers, build real relationships, and ask before you leave - 'what would it take to stay?'\n\nDo that and the offer looks after itself.\n\nFind your internship - link in bio 🔗",
+          "captionThread": [
+            "1/ Your internship is a 12-week audition for a job offer. Treat it like one from day one. Here is how to convert.",
+            "2/ Week 1: learn names fast, ask the 'dumb' questions while you still can, and find out what good actually looks like.",
+            "3/ Stand out: be the reliable one, take the boring jobs and improve them, and follow up in writing so your work is seen.",
+            "4/ The endgame: show impact in numbers, build real relationships, and ask before you leave - 'what would it take to stay?'",
+            "5/ Make the 12 weeks count and the offer looks after itself. Find your internship at internwise.co.uk"
+          ],
+          "hashtags": [
+            "#internship",
+            "#graduatejobs",
+            "#careeradvice",
+            "#firstjob",
+            "#earlycareers"
+          ],
+          "captions": {
+            "ig-fb": "Your internship is a 12-week audition. Treat it like one.\n\nWeek 1: learn names fast, ask the 'dumb' questions while you still can, and find out what good actually looks like.\nStand out: be the reliable one, take the boring jobs and improve them, follow up in writing.\nThe endgame: show impact in numbers, build real relationships, and ask before you leave - 'what would it take to stay?'\n\nDo that and the offer looks after itself.\n\nFind your internship - link in bio 🔗",
+            "linkedin": "An internship is a 12-week audition for a job offer. The people who convert treat it that way from day one.\n\nWeek one: learn names quickly, ask the questions you can only ask when you are new, and find out what 'good' looks like in the role.\n\nStand out: be the reliable one who does what they said on time, take the boring jobs and quietly improve them, and follow up in writing so your work is visible.\n\nThe endgame: show impact in numbers rather than tasks, build genuine relationships, and near the end, ask directly - 'what would it take to stay?'\n\nThe full playbook is in the carousel.\n\nFind your internship at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internship",
+              "#graduatejobs",
+              "#careeradvice",
+              "#firstjob",
+              "#earlycareers"
+            ],
+            "linkedin": [
+              "#internships",
+              "#earlycareers",
+              "#graduatejobs",
+              "#careeradvice"
+            ],
+            "x": [
+              "#internship",
+              "#earlycareers"
+            ]
+          }
+        },
+        {
+          "id": "d4-hidden",
+          "day": "Thursday",
+          "title": "The Hidden Job Market",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "The jobs you see advertised are the tip of the iceberg.\n\nMost roles are filled through people, not portals:\n- Referrals - a warm intro beats the application queue.\n- Speculative emails - reach out before a role even exists.\n- SMEs and startups - they hire all year with far less competition.\n- Your network - tutors, alumni and past managers.\n\nStop only applying to what is advertised. Go find the rest.\n\nFind your internship - link in bio 🔗",
+          "hashtags": [
+            "#internship",
+            "#jobsearch",
+            "#hiddenjobmarket",
+            "#graduatejobs",
+            "#careeradvice"
+          ],
+          "captions": {
+            "ig-fb": "The jobs you see advertised are the tip of the iceberg.\n\nMost roles are filled through people, not portals:\n- Referrals - a warm intro beats the application queue.\n- Speculative emails - reach out before a role even exists.\n- SMEs and startups - they hire all year with far less competition.\n- Your network - tutors, alumni and past managers.\n\nStop only applying to what is advertised. Go find the rest.\n\nFind your internship - link in bio 🔗",
+            "linkedin": "If you only apply to advertised roles, you are fishing in the most crowded pond there is. Those postings are the tip of the iceberg.\n\nA large share of roles are filled through people, not job boards:\n- Referrals: a warm introduction beats the application queue.\n- Speculative outreach: email a company before a role is posted.\n- SMEs and startups: they hire year-round, with far less competition.\n- Your network: tutors, alumni, and past managers you have worked with.\n\nKeep applying to what is advertised, but spend just as much energy on the hidden market.\n\nFind your internship at internwise.co.uk",
+            "x": "The advertised jobs are the tip of the iceberg. Most roles are filled through people, not portals: referrals, speculative emails, SMEs and startups, and your own network. Stop only applying to what is posted. Find your internship at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internship",
+              "#jobsearch",
+              "#hiddenjobmarket",
+              "#graduatejobs",
+              "#careeradvice"
+            ],
+            "linkedin": [
+              "#jobsearch",
+              "#networking",
+              "#earlycareers",
+              "#graduatejobs"
+            ],
+            "x": [
+              "#jobsearch",
+              "#graduatejobs"
+            ]
+          }
+        },
+        {
+          "id": "d5-rejection",
+          "day": "Friday",
+          "title": "Rejected? Reset.",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "A 'no' is data, not a verdict.\n\nThree moves after a rejection:\n1. Ask for one specific fix - 'what would have made me a yes?'\n2. Change one thing, not everything.\n3. Send the next application. Momentum beats moping.\n\nMost offers arrive after a string of no's. Keep going.\n\nFind your internship - link in bio 🔗",
+          "hashtags": [
+            "#internship",
+            "#jobsearch",
+            "#rejection",
+            "#careeradvice",
+            "#graduatejobs"
+          ],
+          "captions": {
+            "ig-fb": "A 'no' is data, not a verdict.\n\nThree moves after a rejection:\n1. Ask for one specific fix - 'what would have made me a yes?'\n2. Change one thing, not everything.\n3. Send the next application. Momentum beats moping.\n\nMost offers arrive after a string of no's. Keep going.\n\nFind your internship - link in bio 🔗",
+            "linkedin": "Every rejection feels like a verdict. It is closer to data.\n\nThree moves that turn a 'no' into progress:\n1. Ask for one specific piece of feedback: 'what would have made me a yes?'\n2. Change one thing based on it, not everything at once.\n3. Send the next application. Momentum beats sitting with it.\n\nAlmost every offer sits at the end of a run of rejections. The people who get there are simply the ones who kept adjusting and kept going.\n\nFind your internship at internwise.co.uk",
+            "x": "A 'no' is data, not a verdict. Three moves after a rejection: ask for one specific fix ('what would have made me a yes?'), change one thing not everything, then send the next application. Momentum beats moping. Find your internship at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internship",
+              "#jobsearch",
+              "#rejection",
+              "#careeradvice",
+              "#graduatejobs"
+            ],
+            "linkedin": [
+              "#jobsearch",
+              "#resilience",
+              "#earlycareers",
+              "#careeradvice"
+            ],
+            "x": [
+              "#jobsearch",
+              "#careeradvice"
+            ]
+          }
         }
       ]
     }

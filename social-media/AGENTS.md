@@ -17,7 +17,7 @@ Graphics are HTML/CSS/SVG rendered to PNG via **Playwright headless Chromium** a
 
 ## Current state (as of 2026-08-18)
 - **Week 12 D1 "The CV Clinic"** is BUILT and LIVE on the dashboard (5-slide carousel, `tools/wk12.py`). It is the template for the week.
-- **Next: build D2–D5** for Week 12 on the same upgraded template. Planned: D2 interview flashcards (carousel), D3 first-internship onboarding (carousel), D4 hidden job market (single), D5 rejection/resilience (single). Weekly mix rule = **3 carousels + 2 singles**.
+- **Week 12 D1–D5 are all BUILT**, each a distinct design world (see above), wired into the dashboard. Weekly mix = **3 carousels + 2 singles**; Nuno features in the carousels only.
 
 ## The Nuno system (founder as the face)
 From Week 12, weekly graphics feature the founder **Nuno** instead of stock photos. AI clones generated in Google Gemini (identity-consistent, from a fixed reference) live in `~/Downloads/Nuno Pictures/` (`Solo/`, `Situational/`, `Full Scene/`). Cutouts are pre-processed into `assets/nuno/*.png` (a vetted library — pick the best pose per slide topic; no live gen).
@@ -35,7 +35,7 @@ From Week 12, weekly graphics feature the founder **Nuno** instead of stock phot
 - **No em dashes** anywhere (use "-"). **No mid-word hyphenation** in headlines (`word-break:keep-all`).
 - **Bespoke art directions** — real CSS/SVG devices, never plain gradient+text.
 - **Distinct design language per post** (pitch topics + languages together first).
-- **Premium furniture** (Week 12 template, learned from a gpt-image-2 study, in our exact brand): amber arc behind the subject, icon-badge lists (circular outlined icon + label + desc), eyebrow label + underline accent, progress counter (0N/05), brand footer (amber roundel + internwise.co.uk), callout box, halftone dot accents, URL pill on CTA. Helpers in `tools/wk12.py`: `arc, badgelist, eyebrow, head, footer, callout, dots, svg/ic, cv_card, nuno`.
+- **Composition, not a template.** The gpt-image-2 study taught COMPOSITION only: clear hierarchy, a subject + a topic-specific device, icon-badge lists, an eyebrow+underline, a progress counter, a brand footer, a URL pill. **Every post gets its OWN design language** - a distinct palette, background and device. NEVER clone one post's skin onto another. Week 12 proves it: D1 dark-navy/CV-scan, D2 cream index-cards/teal, D3 coral sunrise/welcome-pass, D4 deep-ocean/iceberg, D5 plum/reset-line. Reusable helpers (`svg/ic`, per-post `bg/head/eyebrow/footer/list/nuno`) live in `tools/wk12.py`, but their colours/shapes are re-authored per post.
 - **Empty-space watermark:** fill any slide that is ≥50% empty with a large faint `iw_icon_mark.svg` bleeding off the bottom-right (~5% opacity); skip full slides.
 - **Align with flex rows**, not guessed absolute pixel offsets.
 
