@@ -231,6 +231,9 @@ a {
   color: var(--color-navy);
 }
 
+/* Responsive tab labels: full on desktop, abbreviated on mobile */
+.tab-abbr { display: none; }
+
 /* "new graphics" count badge on the Featured Jobs tab */
 .mode-tab {
   position: relative;
@@ -283,6 +286,8 @@ a {
     padding: var(--space-2) var(--space-3);
     font-size: 0.8125rem;
   }
+  .tab-full { display: none; }
+  .tab-abbr { display: inline; }
 
   /* Header stacks: row 1 = brand + week selector, row 2 = mode tabs (full width).
      Prevents the single-row header from overflowing on narrow screens. */
@@ -304,10 +309,14 @@ a {
   .mode-tabs {
     order: 3;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
+  .mode-tabs::-webkit-scrollbar { display: none; }
   .mode-tab {
-    flex: 1;
+    flex: 0 0 auto;
     text-align: center;
   }
   .site-header__title {
