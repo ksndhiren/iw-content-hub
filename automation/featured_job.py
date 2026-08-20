@@ -455,15 +455,15 @@ def _sanitize(s):
 def strip_year(s):
     """Reduce a scraped listing title to just the job role. Drops:
       - a trailing employer mention: '... at M&K Accountants'
-      - a trailing parenthetical: a year '(2026)' or type '(Part-Time)'/'(Full Time)'.
+      - ANY parenthetical: '(2026)', '(Paid Part time)', '(Backend)', etc.
+        (client rule: no text in brackets appears in the title).
     Keeps the role itself intact. Rule applies to all future graphics + captions."""
     if not s: return ""
     # strip a trailing " at <employer>" (case-insensitive)
     s = re.sub(r"\s+\bat\b\s+.+$", "", s, flags=re.I)
-    # strip a trailing year or employment-type in parentheses
-    s = re.sub(r"\s*\(\s*(?:(?:19|20)\d{2}|(?:part|full)[\s-]?time)\s*\)\s*$",
-               "", s, flags=re.I)
-    return s.strip()
+    # strip every parenthetical group and its contents
+    s = re.sub(r"\s*\([^)]*\)", "", s)
+    return re.sub(r"\s+", " ", s).strip()
 
 def _wrap_title(title):
     """Balance the title into up to 3 lines; return (html_with_br, font_size)."""
