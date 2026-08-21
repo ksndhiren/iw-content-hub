@@ -3,6 +3,66 @@
   "label": "Featured Jobs",
   "posts": [
     {
+      "id": "job-35395",
+      "sourceId": "35395",
+      "sourceUrl": "https://www.internwise.co.uk/job/35395/project-management-intern",
+      "addedAt": "2026-08-21T06:56:59Z",
+      "day": "HACKETT & HACKETT INTERNATIONAL GROUP LIMITED",
+      "title": "Project Management Intern",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35395-2026-08-19-employers-sm-ads-v1.png"
+      ],
+      "status": "in-review",
+      "caption": "Swap the lecture hall for real project management projects and a team that backs you.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35395/project-management-intern",
+      "hashtags": [
+        "#internship",
+        "#londonjobs",
+        "#marketingjobs",
+        "#hiring",
+        "#graduatejobs"
+      ],
+      "captions": {
+        "ig-fb": "Swap the lecture hall for real project management projects and a team that backs you.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35395/project-management-intern",
+        "linkedin": "Swap the lecture hall for real project management projects and a team that backs you.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35395/project-management-intern",
+        "x": "Swap the lecture hall for real project management projects and a team that backs you.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35395/project-management-intern"
+      },
+      "hashtagsByPlatform": {
+        "ig-fb": [
+          "#internship",
+          "#londonjobs",
+          "#marketingjobs",
+          "#hiring",
+          "#graduatejobs"
+        ],
+        "linkedin": [
+          "#hiring",
+          "#internship",
+          "#marketingjobs",
+          "#careers"
+        ],
+        "x": [
+          "#marketingjobs",
+          "#hiring"
+        ]
+      },
+      "sector": "Project Management",
+      "sectorStyle": "marketing",
+      "palette": {
+        "version": "2026-08-19-employers-sm-ads-v1",
+        "style": "marketing",
+        "sector": "Project Management",
+        "accent": "#2BD4CF",
+        "accentDark": "#D2415C",
+        "background": [
+          "#7E2038",
+          "#C43F5C"
+        ],
+        "spark": "#D4FF3D"
+      }
+    },
+    {
       "id": "job-35394",
       "sourceId": "35394",
       "sourceUrl": "https://www.internwise.co.uk/job/35394/group-intern-manager",
