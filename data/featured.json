@@ -123,66 +123,6 @@
       }
     },
     {
-      "id": "job-35393",
-      "sourceId": "35393",
-      "sourceUrl": "https://www.internwise.co.uk/job/35393/software-intern",
-      "addedAt": "2026-08-19T10:11:57Z",
-      "day": "HACKETT & HACKETT INTERNATIONAL GROUP LIMITED",
-      "title": "Software Intern",
-      "platform": "Featured Job",
-      "format": "Single",
-      "slides": [
-        "job-35393-2026-08-19-employers-sm-ads-v1.png"
-      ],
-      "status": "in-review",
-      "caption": "Looking for your first step in software? Build real skills, not just theory.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35393/software-intern",
-      "hashtags": [
-        "#internship",
-        "#londonjobs",
-        "#techjobs",
-        "#hiring",
-        "#graduatejobs"
-      ],
-      "captions": {
-        "ig-fb": "Looking for your first step in software? Build real skills, not just theory.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35393/software-intern",
-        "linkedin": "Looking for your first step in software? Build real skills, not just theory.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35393/software-intern",
-        "x": "Looking for your first step in software? Build real skills, not just theory.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35393/software-intern"
-      },
-      "hashtagsByPlatform": {
-        "ig-fb": [
-          "#internship",
-          "#londonjobs",
-          "#techjobs",
-          "#hiring",
-          "#graduatejobs"
-        ],
-        "linkedin": [
-          "#hiring",
-          "#internship",
-          "#techjobs",
-          "#careers"
-        ],
-        "x": [
-          "#techjobs",
-          "#hiring"
-        ]
-      },
-      "sector": "Information Technology (IT)",
-      "sectorStyle": "tech",
-      "palette": {
-        "version": "2026-08-19-employers-sm-ads-v1",
-        "style": "tech",
-        "sector": "Information Technology (IT)",
-        "accent": "#3FD0E0",
-        "accentDark": "#2AA9B8",
-        "background": [
-          "#141F4A",
-          "#2E3E9E"
-        ],
-        "spark": "#D4FF3D"
-      }
-    },
-    {
       "id": "job-35392",
       "sourceId": "35392",
       "sourceUrl": "https://www.internwise.co.uk/job/35392/property-management-intern",
@@ -358,66 +298,6 @@
         "background": [
           "#0E4433",
           "#1B7B58"
-        ],
-        "spark": "#D4FF3D"
-      }
-    },
-    {
-      "id": "job-30422",
-      "sourceId": "30422",
-      "sourceUrl": "https://www.internwise.co.uk/job/30422/internship-in-business-development-and-marketing",
-      "addedAt": "2026-08-14T07:41:27Z",
-      "day": "URBAN FOOD FEST LIMITED",
-      "title": "Internship in Business Development and Marketing",
-      "platform": "Featured Job",
-      "format": "Single",
-      "slides": [
-        "job-30422-2026-08-19-employers-sm-ads-v1.png"
-      ],
-      "status": "in-review",
-      "caption": "Want real in business development and marketing experience for your CV? This is where you start.\n\n📍 162-167 Shoreditch High St, London E1 6HU, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/30422/internship-in-business-development-and-marketing",
-      "hashtags": [
-        "#internship",
-        "#londonjobs",
-        "#marketingjobs",
-        "#hiring",
-        "#graduatejobs"
-      ],
-      "captions": {
-        "ig-fb": "Want real in business development and marketing experience for your CV? This is where you start.\n\n📍 162-167 Shoreditch High St, London E1 6HU, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/30422/internship-in-business-development-and-marketing",
-        "linkedin": "Want real in business development and marketing experience for your CV? This is where you start.\n\n📍 162-167 Shoreditch High St, London E1 6HU, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/30422/internship-in-business-development-and-marketing",
-        "x": "Want real in business development and marketing experience for your CV? This is where you start.\n\n📍 162-167 Shoreditch High St, London E1 6HU, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/30422/internship-in-business-development-and-marketing"
-      },
-      "hashtagsByPlatform": {
-        "ig-fb": [
-          "#internship",
-          "#londonjobs",
-          "#marketingjobs",
-          "#hiring",
-          "#graduatejobs"
-        ],
-        "linkedin": [
-          "#hiring",
-          "#internship",
-          "#marketingjobs",
-          "#careers"
-        ],
-        "x": [
-          "#marketingjobs",
-          "#hiring"
-        ]
-      },
-      "sector": "Business Development",
-      "sectorStyle": "sales",
-      "palette": {
-        "version": "2026-08-19-employers-sm-ads-v1",
-        "style": "sales",
-        "sector": "Business Development",
-        "accent": "#FF9F45",
-        "accentDark": "#E5771E",
-        "background": [
-          "#5A2A12",
-          "#A85A1E"
         ],
         "spark": "#D4FF3D"
       }
