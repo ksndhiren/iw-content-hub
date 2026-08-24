@@ -1,0 +1,69 @@
+name: Daily-5 Build
+
+# The full hands-free content build. Weekly it sources content (RSS + banks +
+# topic engine), has the LLM write every on-screen text + caption, renders all
+# 25 posts (5 lanes x 5 days) from their design libraries, and commits the week
+# to data/weeks.json as `in-review`. That auto-redeploys the dashboard, where
+# the ONE human gate lives: review + approve before anything goes to Ayrshare.
+#
+# Targets the UPCOMING week automatically (build_week.target_week). Override with
+# a WEEK_ID input on manual runs.
+#
+# Requires repo secret: OPENAI_API_KEY  (optional repo variable OPENAI_MODEL).
+
+on:
+  schedule:
+    - cron: "0 7 * * 3"       # every Wednesday 07:00 UTC (queues next week for review)
+  workflow_dispatch:
+    inputs:
+      week_id:
+        description: "Week id to build (e.g. week15). Blank = upcoming week."
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily5-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install openai
+          python -m playwright install --with-deps chromium
+
+      - name: Build the week (source -> LLM copy -> render -> weeks.json)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          WEEK_ID: ${{ github.event.inputs.week_id }}
+        run: python social-media/tools/build_week.py | tee /tmp/build.log
+
+      - name: Commit and push to main if there are changes
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes - nothing built. Done."
+            exit 0
+          fi
+
+          git config user.name  "internwise-content-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A images data/weeks.json
+          git commit -m "Daily-5 build ($(date -u +%Y-%m-%d))"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+          echo "Pushed the week as in-review; Cloudflare Pages will redeploy. Review on the dashboard before Ayrshare."

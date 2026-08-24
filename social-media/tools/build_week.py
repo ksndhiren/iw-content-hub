@@ -1,168 +1,186 @@
-"""Week 14 (w/c 31 Aug 2026) orchestrator - non-education lanes.
+"""Week orchestrator - the full Daily-5 build (all 5 lanes, LLM-written).
 
-Renders the 20 non-education posts (5 days x news/quote/fun/employer), each in a
-rotating design world, and patches the day-based `data/weeks.json`. Education
-(5 bespoke posts) is added separately later to complete each day's 5.
+For each day it sources content, has the LLM (writer.py) write all on-screen copy
++ captions, renders each lane from its design library, and patches the day-based
+`data/weeks.json` as `in-review`. Runs locally or in the cloud (daily5-build.yml).
 
-    python3 tools/build_week.py            # render + patch weeks.json
-    python3 tools/build_week.py --dry      # render only, no weeks.json write
+    python3 tools/build_week.py                 # full 5-day week
+    python3 tools/build_week.py --days 1         # just Monday (cheap validation)
+    python3 tools/build_week.py --dry            # plan only, no render/write
 """
 import os, sys, json, datetime
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lanes_common as L
-import lane_quote, lane_fun, lane_employer, news_card
 
-HUB   = os.path.dirname(L.BASE)                       # iw-content-hub
-IMG   = os.path.join(HUB, "images", "week14")
+
+def _load_env():
+    """Load social-media/.env (and repo .env) so OPENAI_API_KEY etc. are present
+    when run locally. Cloud secrets are already in os.environ and win (setdefault)."""
+    for path in (os.path.join(L.BASE, ".env"), os.path.join(os.path.dirname(L.BASE), ".env")):
+        if os.path.exists(path):
+            for line in open(path):
+                line = line.strip()
+                if line and not line.startswith("#") and "=" in line:
+                    k, v = line.split("=", 1)
+                    os.environ.setdefault(k.strip(), v.strip())
+_load_env()
+
+import writer, news_fetch, news_card
+import lane_quote, lane_fun, lane_employer, lane_education
+
+HUB   = os.path.dirname(L.BASE)
 WEEKS = os.path.join(HUB, "data", "weeks.json")
-WID   = "week14"
+AUTO  = os.path.join(L.BASE, "video", "topics", "auto.json")
+DKEYS = ["mon", "tue", "wed", "thu", "fri"]
 
-DAYS = [("mon", "Mon 31 Aug"), ("tue", "Tue 1 Sep"), ("wed", "Wed 2 Sep"),
-        ("thu", "Thu 3 Sep"), ("fri", "Fri 4 Sep")]
 
-# ----- content assignments (world/pose/quote rotate so nothing repeats) -----
+def target_week():
+    """Which week to build. Env WEEK_ID/WEEK_WC/WEEK_LABEL override; otherwise the
+    UPCOMING week (next Monday), numbered relative to week14 = w/c 2026-08-31."""
+    wid = os.getenv("WEEK_ID")
+    if wid:
+        wc = os.getenv("WEEK_WC", "")
+        mon = datetime.date.fromisoformat(wc) if wc else datetime.date.today()
+        return wid, os.getenv("WEEK_LABEL", "Week " + wid.replace("week", "")), mon.isoformat(), mon
+    ref, refn = datetime.date(2026, 8, 31), 14
+    today = datetime.date.today()
+    ahead = (0 - today.weekday()) % 7 or 7          # next Monday
+    mon = today + datetime.timedelta(days=ahead)
+    n = refn + (mon - ref).days // 7
+    return f"week{n}", f"Week {n}", mon.isoformat(), mon
+
 QUOTE = [("editorial", "q001"), ("spotlight", "q002"), ("colorblock", "q003"),
          ("split", "q004"), ("paper", "q005")]
 FUN = [("bingo", "bingo"), ("tierlist", "tier_list"), ("greenflags", "green_flags"),
        ("pov", "pov"), ("starterpack", "checklist")]
 EMPLOYER = [("benefits", "e001"), ("bigstat", "e004"), ("process", "e003"),
             ("trust", "e005"), ("statement", "e002")]
+# education: 3 carousels + 2 singles, rotating worlds
+EDU_WORLDS = [("navy", "carousel"), ("plum", "carousel"), ("teal", "carousel"),
+              ("tipcard", "single"), ("statement", "single")]
 
-# News: real current stories, ALL copy reworded in Internwise's voice (no paste).
-NEWS = [
-    {"kicker": "JOB MARKET", "title": "Graduate vacancies slump to a decade low",
-     "brief": ["New figures point to one of the toughest graduate markets in years - recruitment data suggests only around 8,000 graduate roles were advertised in July, the fewest since 2016.",
-               "It is a hard backdrop for this year's leavers, but not a hopeless one. When fewer roles are advertised, applying early, searching wider and showing real proof of skills matter more than ever.",
-               "Internships are one of the clearest routes through a squeeze like this: they build experience employers can see, and they often lead to a first full-time role."],
-     "sidebar": ["Start early and apply consistently", "Widen your search beyond big-name schemes", "Use internships to build real proof"],
-     "pull": "Fewer roles means standing out matters more, not less.", "source": "The Guardian / Adzuna"},
-    {"kicker": "SKILLS", "title": "Skills are becoming the new currency",
-     "brief": ["This summer's education reforms sent a clear signal - technical skills and practical pathways are moving to the centre of how the UK trains and hires.",
-               "For students and graduates the takeaway is simple: what you can actually do is starting to matter as much as where you studied.",
-               "Internships are one of the fastest ways to turn learning into a demonstrable skill, and to show an employer you can apply it."],
-     "sidebar": ["Focus on skills you can demonstrate", "Build a portfolio of real work", "Treat an internship as skill-building"],
-     "pull": "What you can do is becoming as important as where you studied.", "source": "FE News"},
-    {"kicker": "CAREERS", "title": "A tougher market needs a sharper plan",
-     "brief": ["With hiring slower than usual, this year's cohort faces a real question: how to aim their energy so it actually lands.",
-               "The answer is rarely 'apply to everything'. It is a focused search - fewer, better-matched applications, backed by evidence of skill.",
-               "A well-chosen internship narrows the gap between study and work, and gives your applications something concrete to point to."],
-     "sidebar": ["Target roles that fit, not every role", "Quality applications over quantity", "Let an internship give you proof"],
-     "pull": "In a slow market, focus beats volume.", "source": "FE News"},
-    {"kicker": "SKILLS", "title": "Employers are hungry for tech skills",
-     "brief": ["Fresh investment in tech-skills training across UK regions underlines what employers keep saying - demand for digital and technical ability is only growing.",
-               "You do not need a computer science degree to benefit. Practical, job-ready tech skills are increasingly valued across almost every sector.",
-               "An internship is a low-risk way to build those skills on real projects, and to prove them to your next employer."],
-     "sidebar": ["Build job-ready digital skills", "You don't need a tech degree to start", "Prove skills on real projects"],
-     "pull": "Digital skills are in demand across every sector, not just tech.", "source": "FE News"},
-    {"kicker": "JOB MARKET", "title": "When big employers trim, read it right",
-     "brief": ["Headlines about large-scale job cuts at major firms can be unsettling when you are just starting out.",
-               "But restructures at big companies rarely close the door on early-career talent - they often shift where the opportunities are, toward smaller, faster-growing teams.",
-               "Internships at growing companies are a smart place to look when the giants are cutting back."],
-     "sidebar": ["Don't be put off by big-company cuts", "Look at smaller, growing teams", "Internships open doors headlines miss"],
-     "pull": "When the giants trim, growing teams are where early-career doors open.", "source": "Personnel Today"},
-]
+FUN_ONSCREEN = {"bingo": "Graduate job-hunt bingo - the shared truths of the search",
+                "tierlist": "Interview questions ranked by dread (S to B tier)",
+                "greenflags": "Green flags in a good internship: real tasks, a mentor, honest feedback, fair pay",
+                "pov": "POV: you just got the 'we'd love to offer you the role' email",
+                "starterpack": "The 'I'm basically a pro now' starter pack"}
 
-TAGS = {
-    "news":     {"ig-fb": ["#GraduateJobs", "#UKJobs", "#JobMarket", "#Careers", "#Internships", "#Internwise"],
-                 "linkedin": ["#GraduateJobs", "#JobMarket", "#EarlyCareers"], "x": ["#GraduateJobs", "#UKJobs"]},
-    "quote":    {"ig-fb": ["#CareerMotivation", "#Internships", "#GraduateJobs", "#CareerAdvice", "#Internwise"],
-                 "linkedin": ["#CareerAdvice", "#Internships"], "x": ["#CareerMotivation", "#Internships"]},
-    "fun":      {"ig-fb": ["#InternLife", "#GraduateLife", "#JobHunt", "#Relatable", "#Internwise"],
-                 "linkedin": ["#EarlyCareers", "#JobHunt"], "x": ["#InternLife", "#JobHunt"]},
-    "employer": {"ig-fb": ["#Hiring", "#Internships", "#EarlyCareers", "#Recruitment", "#Internwise"],
-                 "linkedin": ["#Hiring", "#EarlyCareers", "#Recruitment"], "x": ["#Hiring", "#Internships"]},
-}
+PAID_BLOCK = ("paid", "unpaid", "internship-rights")   # never make paid-vs-unpaid content
 
 
-def _cap_news(n):
-    body = " ".join(n["brief"])
-    igfb = (f"\U0001F4F0 {n['title']}.\n\n{body}\n\nRead the full story - link in bio.\n\n"
-            f"Source: {n['source']}.")
-    li = f"{n['title']}.\n\n{body}\n\nRead more: internwise.co.uk\n\nSource: {n['source']}."
-    x = f"{n['title']}. {n['brief'][1][:120].rsplit(' ',1)[0]}... internwise.co.uk (via {n['source']})"
-    return {"ig-fb": igfb, "linkedin": li, "x": x}
-
-def _cap_quote(q):
-    t, a, cta = q["text"], q["author"], q.get("cta", "internwise.co.uk")
-    igfb = f"“{t}”\n- {a}\n\nYour next opportunity starts with one step. Find your internship - link in bio.\n\n\U0001F517"
-    li = f"“{t}” - {a}\n\nEvery career starts somewhere. Browse internships and graduate roles at internwise.co.uk"
-    x = f"“{t}” - {a}\n\ninternwise.co.uk"
-    return {"ig-fb": igfb, "linkedin": li, "x": x}
-
-def _cap_fun(title, line):
-    igfb = f"{title} \U0001F643\n\n{line}\n\nLooking for the real thing? Find your internship - link in bio."
-    li = f"{title}\n\n{line}\n\nStart your search at internwise.co.uk"
-    x = f"{title} {line} internwise.co.uk"
-    return {"ig-fb": igfb, "linkedin": li, "x": x}
-
-def _cap_employer(a):
-    b = " ".join(a.get("benefits", [a.get("body", "")]))
-    igfb = f"\U0001F4BC {a['headline']}.\n\n{a.get('body','')} {b}.\n\nPost your internship - link in bio."
-    li = f"{a['headline']}.\n\n{a.get('body','')} {b}.\n\nPost a role and reach early-career talent: internwise.co.uk"
-    x = f"{a['headline']}. Reach early-career talent at internwise.co.uk"
-    return {"ig-fb": igfb, "linkedin": li, "x": x}
+def pick_education(n):
+    topics = json.load(open(AUTO)).get("topics", [])
+    out = []
+    for t in topics:
+        hay = (t.get("title", "") + " " + t.get("source_cluster", "")).lower()
+        if any(b in hay for b in PAID_BLOCK):
+            continue                                   # brand: all internships should be paid
+        out.append(t)
+        if len(out) >= n:
+            break
+    return out
 
 
-FUN_TITLES = {"bingo": ("Graduate job-hunt bingo", "How many have you ticked off? We've all been there."),
-              "tierlist": ("Interview questions, ranked by dread", "Which one makes you sweat the most?"),
-              "greenflags": ("Green flags in a good internship", "Know your worth - a good internship gives you real tasks, feedback and fair pay."),
-              "pov": ("POV: you just got the offer email", "That screenshot-to-group-chat speed run is unmatched."),
-              "starterpack": ("The 'I'm basically a pro now' starter pack", "New job energy is a feeling like no other.")}
+def _post(pid, day, lane, title, fmt, slides, captions, hashtags):
+    return {"id": pid, "day": day, "lane": lane, "title": title,
+            "platform": "Multi-Platform", "format": fmt, "slides": slides,
+            "status": "in-review", "caption": captions.get("ig-fb", ""),
+            "hashtags": hashtags.get("ig-fb", []), "captions": captions,
+            "hashtagsByPlatform": hashtags}
 
 
-def build(dry=False):
+def build(days=5, dry=False):
     quotes = {q["id"]: q for q in L.load("quotes_bank.json")["quotes"]}
     ideas  = {i["format"]: i for i in L.load("fun_ideas.json")["ideas"]}
     angles = {a["id"]: a for a in L.load("employer_angles.json")["angles"]}
+    wid, wlabel, wc, mon = target_week()
+    img = os.path.join(HUB, "images", wid)
+    daylist = [(DKEYS[i], (mon + datetime.timedelta(days=i)).strftime("%a %d %b").replace(" 0", " ")) for i in range(5)]
+    news_pool = news_fetch.fetch(limit=15)
+    edu_topics = pick_education(days)
     posts = []
+    print(f"Building {wid} (w/c {wc}) - {days} day(s)")
 
-    for di, (dkey, dlabel) in enumerate(DAYS):
-        # NEWS
-        n = NEWS[di]
-        pid = f"w14-{dkey}-news"
-        pdate = datetime.datetime(2026, 8, 31) + datetime.timedelta(days=di)   # Mon 31 Aug -> Fri 4 Sep
-        news_card.render_news({"kicker": n["kicker"], "date": pdate}, os.path.join(IMG, pid),
-                              issue_no=di + 1, headline=n["title"], brief=n["brief"],
-                              sidebar=n["sidebar"], pull=n["pull"])
-        posts.append(_post(pid, dlabel, "news", n["title"], _cap_news(n), TAGS["news"]))
+    for di in range(days):
+        dkey, dlabel = daylist[di]
+        print(f"\n=== {dlabel} ===")
+
+        # NEWS - LLM reworded
+        item = news_pool[di] if di < len(news_pool) else news_fetch.sample_item()
+        nc = writer.write_news(item)
+        pdate = datetime.datetime.combine(mon, datetime.time()) + datetime.timedelta(days=di)
+        pid = f"{wid}-{dkey}-news"
+        if not dry:
+            news_card.render_news({"kicker": nc.get("kicker", "JOB MARKET"), "date": pdate},
+                                  os.path.join(img, pid), issue_no=di + 1,
+                                  headline=nc["headline"], brief=nc["brief"],
+                                  sidebar=nc["sidebar"], pull=nc["pull"])
+        posts.append(_post(pid, dlabel, "news", nc["headline"], "Single", ["slide_1.png"],
+                           nc["captions"], nc["hashtags"]))
 
         # QUOTE
         world, qid = QUOTE[di]; q = quotes[qid]
-        pid = f"w14-{dkey}-quote"
-        lane_quote.render_quote(q, world, os.path.join(IMG, pid))
-        posts.append(_post(pid, dlabel, "quote", f"Quote: {q['author']}", _cap_quote(q), TAGS["quote"]))
+        cap = writer.write_captions("quote", f"Quote by {q['author']}", q["text"], q.get("cta"))
+        pid = f"{wid}-{dkey}-quote"
+        if not dry:
+            lane_quote.render_quote(q, world, os.path.join(img, pid))
+        posts.append(_post(pid, dlabel, "quote", f"Quote: {q['author']}", "Single", ["slide_1.png"],
+                           cap["captions"], cap["hashtags"]))
 
         # FUN
         world, fkey = FUN[di]; idea = ideas.get(fkey, {})
-        pid = f"w14-{dkey}-fun"
-        lane_fun.render_fun(idea, world, os.path.join(IMG, pid))
-        ft, fl = FUN_TITLES[world]
-        posts.append(_post(pid, dlabel, "fun", ft, _cap_fun(ft, fl), TAGS["fun"]))
+        cap = writer.write_captions("fun", FUN_ONSCREEN[world], FUN_ONSCREEN[world])
+        pid = f"{wid}-{dkey}-fun"
+        if not dry:
+            lane_fun.render_fun(idea, world, os.path.join(img, pid))
+        posts.append(_post(pid, dlabel, "fun", FUN_ONSCREEN[world].split(" - ")[0].split(":")[0],
+                           "Single", ["slide_1.png"], cap["captions"], cap["hashtags"]))
 
         # EMPLOYER
         world, aid = EMPLOYER[di]; a = angles[aid]
-        pid = f"w14-{dkey}-employer"
-        lane_employer.render_employer(a, world, os.path.join(IMG, pid))
-        posts.append(_post(pid, dlabel, "employer", a["headline"], _cap_employer(a), TAGS["employer"]))
+        onscreen = a["headline"] + ". " + a.get("body", "") + " " + " ".join(a.get("benefits", []))
+        cap = writer.write_captions("employer", a["headline"], onscreen)
+        pid = f"{wid}-{dkey}-employer"
+        if not dry:
+            lane_employer.render_employer(a, world, os.path.join(img, pid))
+        posts.append(_post(pid, dlabel, "employer", a["headline"], "Single", ["slide_1.png"],
+                           cap["captions"], cap["hashtags"]))
+
+        # EDUCATION - LLM carousel/single
+        world, fmt = EDU_WORLDS[di]
+        topic = edu_topics[di] if di < len(edu_topics) else {"title": "Career tips", "hook": "", "promise": "", "core_takeaway": "", "proof_points": []}
+        tp = {"title": topic.get("title", ""), "hook": (topic.get("hook_candidates") or [""])[0],
+              "promise": topic.get("promise", ""), "core_takeaway": topic.get("core_takeaway", ""),
+              "proof_points": topic.get("proof_points", [])}
+        ec = writer.write_education(tp, fmt=fmt, slides=3)   # cover + 3 teaching + CTA = 5-slide carousel
+        pid = f"{wid}-{dkey}-education"
+        if not dry:
+            paths = lane_education.render_education(ec, world, os.path.join(img, pid))
+            slides = [os.path.basename(p) for p in sorted(paths)]
+        else:
+            slides = ["slide_1.png"] * (7 if fmt == "carousel" else 1)
+        posts.append(_post(pid, dlabel, "education", ec.get("headline", tp["title"]),
+                           "Carousel" if fmt == "carousel" else "Single", slides,
+                           ec["captions"], ec["hashtags"]))
+
+    if not dry:
+        news_fetch.mark_used(news_pool[:days])
 
     if dry:
-        print(f"\nDRY: rendered {len(posts)} posts, weeks.json NOT written.")
+        print(f"\nDRY: planned {len(posts)} posts.")
         return posts
 
     data = json.load(open(WEEKS))
-    data["weeks"] = [w for w in data["weeks"] if w.get("id") != WID]
-    data["weeks"].append({"id": WID, "label": "Week 14", "weekCommencing": "2026-08-31", "posts": posts})
+    data["weeks"] = [w for w in data["weeks"] if w.get("id") != wid]
+    data["weeks"].append({"id": wid, "label": wlabel, "weekCommencing": wc, "posts": posts})
     json.dump(data, open(WEEKS, "w"), indent=2, ensure_ascii=False)
-    print(f"\nWrote {len(posts)} posts to {WEEKS} (week14).")
+    print(f"\nWrote {len(posts)} posts to weeks.json ({wid}).")
     return posts
 
 
-def _post(pid, day, lane, title, captions, tags):
-    return {"id": pid, "day": day, "lane": lane, "title": title,
-            "platform": "Multi-Platform", "format": "Single", "slides": ["slide_1.png"],
-            "status": "in-review", "caption": captions["ig-fb"], "hashtags": tags["ig-fb"],
-            "captions": captions, "hashtagsByPlatform": tags}
-
-
 if __name__ == "__main__":
-    build(dry="--dry" in sys.argv)
+    days = 5
+    for i, a in enumerate(sys.argv):
+        if a == "--days" and i + 1 < len(sys.argv):
+            days = int(sys.argv[i + 1])
+    build(days=days, dry="--dry" in sys.argv)
