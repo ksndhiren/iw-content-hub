@@ -1,11 +1,11 @@
 {
-  "week_id": "auto-2026-08-19",
-  "generated_at": "2026-08-19T09:49:10.962170+00:00",
+  "week_id": "auto-2026-08-24",
+  "generated_at": "2026-08-24T19:07:50.044912+00:00",
   "default_duration_seconds": 52,
   "source_summary": {
     "reddit_rss_signals": 50,
-    "google_trends_signals": 14,
-    "youtube_signals": 40,
+    "google_trends_signals": 0,
+    "youtube_signals": 0,
     "seed_question_signals": 5,
     "warnings": [
       {
@@ -17,11 +17,6 @@
         "source": "reddit-resumes-internship",
         "title": "Reddit RSS unavailable: Resumes - internship",
         "detail": "HTTP Error 429: Too Many Requests"
-      },
-      {
-        "source": "pytrends",
-        "title": "pytrends unavailable",
-        "detail": "The request failed: Google returned a response with code 429"
       }
     ]
   },
@@ -31,7 +26,7 @@
       "title": "The CV Line Recruiters Skip",
       "source_post": "automated-topic-engine",
       "source_cluster": "cv",
-      "signal_score": 88.9,
+      "signal_score": 88.1,
       "pain": 5,
       "specificity": 5,
       "curiosity": 5,
@@ -72,8 +67,8 @@
         },
         {
           "source": "reddit_rss",
-          "title": "Just had a nightmare interview, why do hiring managers make you feel like you\u2019re worthless?",
-          "url": "https://www.reddit.com/r/careerguidance/comments/1vofcqm/just_had_a_nightmare_interview_why_do_hiring/",
+          "title": "Should I take up a customer service role as my first job?",
+          "url": "https://www.reddit.com/r/careerguidance/comments/1vwjsbu/should_i_take_up_a_customer_service_role_as_my/",
           "score": 66.0,
           "meta": {
             "feed": "Career guidance - interview pain"
@@ -99,11 +94,11 @@
         },
         {
           "source": "reddit_rss",
-          "title": "Nervous about background check - advice needed!",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1jisafj/nervous_about_background_check_advice_needed/",
-          "score": 60.5,
+          "title": "General Business Admin Majors, how are you guys getting your foot in the door?",
+          "url": "https://www.reddit.com/r/careerguidance/comments/1vtu8vw/general_business_admin_majors_how_are_you_guys/",
+          "score": 54.0,
           "meta": {
-            "feed": "UK jobs - internship CV"
+            "feed": "Career guidance - interview pain"
           }
         }
       ]
@@ -113,7 +108,7 @@
       "title": "The Interview Answer That Sounds Too Generic",
       "source_post": "automated-topic-engine",
       "source_cluster": "interview",
-      "signal_score": 87.0,
+      "signal_score": 85.1,
       "pain": 5,
       "specificity": 5,
       "curiosity": 5,
@@ -145,49 +140,129 @@
         },
         {
           "source": "reddit_rss",
-          "title": "Was sending this a waste of my time?",
-          "url": "https://www.reddit.com/r/careerguidance/comments/1vhoojf/was_sending_this_a_waste_of_my_time/",
-          "score": 60.0,
+          "title": "At 27, with a master's degree and a stack of rejections, why can I not get past the interview stage?",
+          "url": "https://www.reddit.com/r/careerguidance/comments/1vv7o7y/at_27_with_a_masters_degree_and_a_stack_of/",
+          "score": 71.0,
           "meta": {
             "feed": "Career guidance - interview pain"
           }
         },
         {
           "source": "reddit_rss",
-          "title": "Quitting right after joining?",
-          "url": "https://www.reddit.com/r/careerguidance/comments/1viq3vy/quitting_right_after_joining/",
-          "score": 59.0,
-          "meta": {
-            "feed": "Career guidance - interview pain"
-          }
-        },
-        {
-          "source": "youtube",
-          "title": "Grad pro tip: When answering interview questions, keep your answers cocky and super f**king weird",
-          "url": "https://www.youtube.com/watch?v=s1gli2doLc8",
-          "score": 58.0,
-          "meta": {
-            "query": "graduate job interview tips shorts",
-            "views": 1546092,
-            "views_per_day": 18189.3
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "Interview nightmare - what went wrong ???",
-          "url": "https://www.reddit.com/r/careerguidance/comments/1vnnsnj/interview_nightmare_what_went_wrong/",
-          "score": 57.0,
+          "title": "Where to get interview feedback and coaching?",
+          "url": "https://www.reddit.com/r/careerguidance/comments/1vvj1oe/where_to_get_interview_feedback_and_coaching/",
+          "score": 54.0,
           "meta": {
             "feed": "Career guidance - interview pain"
           }
         },
         {
           "source": "reddit_rss",
-          "title": "Should I give up?",
-          "url": "https://www.reddit.com/r/careerguidance/comments/1vhlk89/should_i_give_up/",
-          "score": 56.0,
+          "title": "Graduated July 2025 and got unlucky - Am I cooked? Need advice on next Steps!",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1vvdyeq/graduated_july_2025_and_got_unlucky_am_i_cooked/",
+          "score": 53.9,
+          "meta": {
+            "feed": "UK jobs - internship CV"
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "What career advice would you give to a 22-year-old?",
+          "url": "https://www.reddit.com/r/careerguidance/comments/1vrkeq7/what_career_advice_would_you_give_to_a_22yearold/",
+          "score": 52.0,
           "meta": {
             "feed": "Career guidance - interview pain"
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "How to make an actionable plan after internal job rejections?",
+          "url": "https://www.reddit.com/r/careerguidance/comments/1vt9zvw/how_to_make_an_actionable_plan_after_internal_job/",
+          "score": 49.0,
+          "meta": {
+            "feed": "Career guidance - interview pain"
+          }
+        }
+      ]
+    },
+    {
+      "id": "auto-no-experience-is-not-the-real-problem",
+      "title": "No Experience Is Not The Real Problem",
+      "source_post": "automated-topic-engine",
+      "source_cluster": "experience",
+      "signal_score": 84.8,
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 5,
+      "discussion": 5,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "No experience is not the reason your CV feels empty.",
+        "If you are stuck on experience, watch this before your next application."
+      ],
+      "promise": "Let me show you what to put on your CV when you think you have nothing.",
+      "proof_points": [
+        "Experience is evidence, not just formal internships.",
+        "Projects and part-time work can prove teamwork, ownership, and problem solving.",
+        "The phrasing matters: show what changed because you were involved."
+      ],
+      "core_takeaway": "Translate projects, societies, part-time work, and coursework into evidence.",
+      "cta": "Save this and rewrite one bullet today.",
+      "source_signals": [
+        {
+          "source": "reddit_rss",
+          "title": "Job offer 2x current salary but....?",
+          "url": "https://www.reddit.com/r/careerguidance/comments/1vtybuh/job_offer_2x_current_salary_but/",
+          "score": 106.0,
+          "meta": {
+            "feed": "Career guidance - interview pain"
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "Difficult graduate job search.",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1jtotio/difficult_graduate_job_search/",
+          "score": 91.3,
+          "meta": {
+            "feed": "UK jobs - internship CV"
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "What are the ways to make yourself more employable as an engineering graduate?",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1osoxqw/what_are_the_ways_to_make_yourself_more/",
+          "score": 75.9,
+          "meta": {
+            "feed": "UK jobs - internship CV"
+          }
+        },
+        {
+          "source": "seed_question",
+          "title": "how to get graduate job with no experience",
+          "url": "",
+          "score": 47.0,
+          "meta": {
+            "configured": true
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "MSc HR + CIPD Level 7 grad seeking entry-level role - willing to relocate (Visa expires in 17mo)",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1lpu0tc/msc_hr_cipd_level_7_grad_seeking_entrylevel_role/",
+          "score": 45.1,
+          "meta": {
+            "feed": "UK jobs - internship CV"
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "Looking for a industry shift",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1krzkqh/looking_for_a_industry_shift/",
+          "score": 35.2,
+          "meta": {
+            "feed": "UK jobs - internship CV"
           }
         }
       ]
@@ -248,90 +323,6 @@
       ]
     },
     {
-      "id": "auto-no-experience-is-not-the-real-problem",
-      "title": "No Experience Is Not The Real Problem",
-      "source_post": "automated-topic-engine",
-      "source_cluster": "experience",
-      "signal_score": 70.9,
-      "pain": 4,
-      "specificity": 4,
-      "curiosity": 5,
-      "utility": 5,
-      "timeliness": 4,
-      "discussion": 4,
-      "brand_fit": 5,
-      "hook_candidates": [
-        "No experience is not the reason your CV feels empty.",
-        "If you are stuck on experience, watch this before your next application."
-      ],
-      "promise": "Let me show you what to put on your CV when you think you have nothing.",
-      "proof_points": [
-        "Experience is evidence, not just formal internships.",
-        "Projects and part-time work can prove teamwork, ownership, and problem solving.",
-        "The phrasing matters: show what changed because you were involved."
-      ],
-      "core_takeaway": "Translate projects, societies, part-time work, and coursework into evidence.",
-      "cta": "Save this and rewrite one bullet today.",
-      "source_signals": [
-        {
-          "source": "reddit_rss",
-          "title": "Difficult graduate job search.",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1jtotio/difficult_graduate_job_search/",
-          "score": 91.3,
-          "meta": {
-            "feed": "UK jobs - internship CV"
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "What are the ways to make yourself more employable as an engineering graduate?",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1osoxqw/what_are_the_ways_to_make_yourself_more/",
-          "score": 75.9,
-          "meta": {
-            "feed": "UK jobs - internship CV"
-          }
-        },
-        {
-          "source": "seed_question",
-          "title": "how to get graduate job with no experience",
-          "url": "",
-          "score": 47.0,
-          "meta": {
-            "configured": true
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "MSc HR + CIPD Level 7 grad seeking entry-level role - willing to relocate (Visa expires in 17mo)",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1lpu0tc/msc_hr_cipd_level_7_grad_seeking_entrylevel_role/",
-          "score": 45.1,
-          "meta": {
-            "feed": "UK jobs - internship CV"
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "Looking for a industry shift",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1krzkqh/looking_for_a_industry_shift/",
-          "score": 35.2,
-          "meta": {
-            "feed": "UK jobs - internship CV"
-          }
-        },
-        {
-          "source": "youtube",
-          "title": "Laitkam ha Faith Foundation Shillong | Graduate passed | No Experience | Jobs in Meghalaya",
-          "url": "https://www.youtube.com/watch?v=kNTCZIScAP0",
-          "score": 23.1,
-          "meta": {
-            "query": "no experience cv graduate",
-            "views": 2147,
-            "views_per_day": 24.4
-          }
-        }
-      ]
-    },
-    {
       "id": "auto-is-this-internship-worth-taking",
       "title": "Is This Internship Worth Taking?",
       "source_post": "automated-topic-engine",
@@ -378,72 +369,14 @@
       ]
     },
     {
-      "id": "auto-assessment-centres-are-not-looking-for-the-loudest-person",
-      "title": "Assessment Centres Are Not Looking For The Loudest Person",
+      "id": "auto-fk-this-job-market-i-ll-give-my-first-2-months-salary-to-anyone-",
+      "title": "FK THIS JOB MARKET. I'LL GIVE MY FIRST 2 MONTHS' SALARY TO ANYONE WHO HE",
       "source_post": "automated-topic-engine",
-      "source_cluster": "assessment-centre",
-      "signal_score": 58.7,
+      "source_cluster": "graduate-jobs",
+      "signal_score": 62.6,
       "pain": 3,
       "specificity": 3,
       "curiosity": 4,
-      "utility": 4,
-      "timeliness": 3,
-      "discussion": 3,
-      "brand_fit": 5,
-      "hook_candidates": [
-        "The loudest person rarely wins the assessment centre.",
-        "If you are stuck on assessment centre, watch this before your next application."
-      ],
-      "promise": "Here is what assessors actually notice in group tasks.",
-      "proof_points": [
-        "Assessors look for useful behaviour under pressure.",
-        "Include quiet people and summarise decisions to show leadership.",
-        "Do not dominate the room just to look confident."
-      ],
-      "core_takeaway": "Make the group better: clarify, include, summarise, and move decisions forward.",
-      "cta": "Save this before your next assessment centre.",
-      "source_signals": [
-        {
-          "source": "google_trends_pytrends",
-          "title": "police now assessment centre",
-          "url": "",
-          "score": 53.0,
-          "meta": {
-            "seed": "assessment centre",
-            "rising_value": 69950.0
-          }
-        },
-        {
-          "source": "google_trends_serpapi",
-          "title": "fetal assessment centre",
-          "url": "",
-          "score": 53.0,
-          "meta": {
-            "seed": "assessment centre",
-            "rising_value": 5000.0
-          }
-        },
-        {
-          "source": "google_trends_pytrends",
-          "title": "marylebone assessment centre",
-          "url": "",
-          "score": 43.0,
-          "meta": {
-            "seed": "assessment centre",
-            "rising_value": 300.0
-          }
-        }
-      ]
-    },
-    {
-      "id": "auto-graduate-jobs-2026",
-      "title": "graduate jobs 2026",
-      "source_post": "automated-topic-engine",
-      "source_cluster": "graduate-jobs",
-      "signal_score": 42.7,
-      "pain": 3,
-      "specificity": 3,
-      "curiosity": 3,
       "utility": 4,
       "timeliness": 3,
       "discussion": 3,
@@ -462,13 +395,12 @@
       "cta": "Save this for your next application session.",
       "source_signals": [
         {
-          "source": "google_trends_serpapi",
-          "title": "graduate jobs 2026",
-          "url": "",
-          "score": 49.0,
+          "source": "reddit_rss",
+          "title": "FK THIS JOB MARKET. I'LL GIVE MY FIRST 2 MONTHS' SALARY TO ANYONE WHO HELPS ME LAND A SOFTWARE ENGINEERING JOB.(India) ?",
+          "url": "https://www.reddit.com/r/careerguidance/comments/1vtfcpo/fk_this_job_market_ill_give_my_first_2_months/",
+          "score": 66.0,
           "meta": {
-            "seed": "graduate jobs",
-            "rising_value": 1400.0
+            "feed": "Career guidance - interview pain"
           }
         },
         {
@@ -479,118 +411,9 @@
           "meta": {
             "feed": "UK jobs - internship CV"
           }
-        },
-        {
-          "source": "google_trends_serpapi",
-          "title": "history graduate jobs",
-          "url": "",
-          "score": 15.0,
-          "meta": {
-            "seed": "graduate jobs",
-            "rising_value": 60.0
-          }
-        },
-        {
-          "source": "google_trends_pytrends",
-          "title": "mi5 graduate jobs",
-          "url": "",
-          "score": 14.0,
-          "meta": {
-            "seed": "graduate jobs",
-            "rising_value": 50.0
-          }
-        },
-        {
-          "source": "youtube",
-          "title": "Fresh Graduates: Internship Nahi Mil Rahi? Ye 4 Mistakes Band Karo \ud83d\ude80",
-          "url": "https://www.youtube.com/watch?v=kubhmKmbpiw",
-          "score": 13.06,
-          "meta": {
-            "query": "no experience cv graduate",
-            "views": 1076,
-            "views_per_day": 14.0
-          }
-        }
-      ]
-    },
-    {
-      "id": "auto-your-linkedin-profile-is-too-empty-to-trust",
-      "title": "Your LinkedIn Profile Is Too Empty To Trust",
-      "source_post": "automated-topic-engine",
-      "source_cluster": "linkedin",
-      "signal_score": 26.9,
-      "pain": 3,
-      "specificity": 3,
-      "curiosity": 3,
-      "utility": 4,
-      "timeliness": 3,
-      "discussion": 3,
-      "brand_fit": 5,
-      "hook_candidates": [
-        "Your LinkedIn profile needs proof, not more adjectives.",
-        "If you are stuck on linkedin, watch this before your next application."
-      ],
-      "promise": "Three small changes make a student profile look credible.",
-      "proof_points": [
-        "A vague headline makes you harder to place.",
-        "Visible projects reduce risk for recruiters.",
-        "Your about section should point to the kind of work you want next."
-      ],
-      "core_takeaway": "Make your headline specific, your about section useful, and your projects visible.",
-      "cta": "Save this and fix your headline first.",
-      "source_signals": [
-        {
-          "source": "youtube",
-          "title": "Don\u2019t Apply for Jobs on LinkedIn | Claude for Job Search",
-          "url": "https://www.youtube.com/watch?v=TyYZT0BitvE",
-          "score": 23.86,
-          "meta": {
-            "query": "linkedin profile job search",
-            "views": 68027,
-            "views_per_day": 465.9
-          }
-        }
-      ]
-    },
-    {
-      "id": "auto-why-your-job-search-feels-random",
-      "title": "Why Your Job Search Feels Random",
-      "source_post": "automated-topic-engine",
-      "source_cluster": "job-search",
-      "signal_score": 13.8,
-      "pain": 3,
-      "specificity": 3,
-      "curiosity": 3,
-      "utility": 4,
-      "timeliness": 3,
-      "discussion": 3,
-      "brand_fit": 5,
-      "hook_candidates": [
-        "Your job search feels random because nothing is being tracked.",
-        "If you are stuck on job search, watch this before your next application."
-      ],
-      "promise": "If applications feel chaotic, the problem may be your tracking system.",
-      "proof_points": [
-        "Without tracking, every rejection feels like a mystery.",
-        "Patterns only appear when you separate CV drop-offs from interview drop-offs.",
-        "A simple tracker stops you changing everything at once."
-      ],
-      "core_takeaway": "Track role fit, CV version, application date, and response stage so you can see the real bottleneck.",
-      "cta": "Save this before your next application batch.",
-      "source_signals": [
-        {
-          "source": "youtube",
-          "title": "Easy Job Search in Claude | Claude Latest Updates | Claude Connectors",
-          "url": "https://www.youtube.com/watch?v=4bjkJBBmzJ8",
-          "score": 10.81,
-          "meta": {
-            "query": "linkedin profile job search",
-            "views": 67488,
-            "views_per_day": 452.9
-          }
         }
       ]
     }
   ],
-  "fingerprint": "0a204e5832354c5e"
+  "fingerprint": "5c25ed4592ec74bc"
 }
