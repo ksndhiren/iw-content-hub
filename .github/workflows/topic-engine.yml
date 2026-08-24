@@ -1,0 +1,59 @@
+name: Topic Engine
+
+# Hands-free short-form topic discovery. On a weekly schedule it pulls fresh
+# signals (Reddit pain points, Google Trends via SerpApi, YouTube breakouts,
+# seed questions), scores them for short-form potential, generates Nuno-led
+# scripts + briefs, and commits the ranked topics + dashboard-ready
+# data/shorts.json straight to main. That auto-redeploys the Cloudflare Pages
+# dashboard, where review happens.
+#
+# Requires two repo secrets (Settings -> Secrets and variables -> Actions):
+#   YOUTUBE_API_KEY, SERPAPI_API_KEY
+# Missing keys are handled gracefully (those sources are simply skipped), but
+# add both for full signal (Google Trends + YouTube).
+
+on:
+  schedule:
+    - cron: "0 5 * * 1"      # every Monday 05:00 UTC
+  workflow_dispatch: {}       # manual "Run workflow" button
+
+permissions:
+  contents: write
+
+concurrency:
+  group: topic-engine
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run topic engine
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+        run: python social-media/tools/shorts_topic_engine.py | tee /tmp/topics.log
+
+      - name: Commit and push to main if there are changes
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes - nothing new this run. Done."
+            exit 0
+          fi
+
+          git config user.name  "internwise-content-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A data/shorts.json social-media/video/topics social-media/video/scripts
+          git commit -m "Topic engine refresh ($(date -u +%Y-%m-%d))"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+          echo "Pushed refreshed topics; Cloudflare Pages will redeploy."
