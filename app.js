@@ -49,6 +49,7 @@
      Module state
   ------------------------------------------------------------------------- */
   let allWeeks        = [];      // Full weeks array from JSON
+  let currentDayLabel = null;    // when set, the day-grid is drilled into that day
   let featuredWeek    = null;    // Featured Jobs pseudo-week (from featured.json)
   let shortsWeek      = null;    // Shorts/Reels pseudo-week (from shorts.json)
   let currentMode     = 'weekly';// 'weekly' | 'shorts' | 'featured'
@@ -246,15 +247,96 @@
     if (!week) return;
     currentWeek = week;
 
-    // Update meta bar
+    currentDayLabel = null;
+    renderWeekMeta(week);
+    renderDays(week);
+  }
+
+  function renderWeekMeta(week, dayLabel) {
     const wcLabel = formatWC(week.weekCommencing);
     elWeekMeta.innerHTML = `
       <span class="week-meta__label">${escapeHtml(week.label)}</span>
       ${wcLabel ? `<span class="week-meta__date">${escapeHtml(wcLabel)}</span>` : ''}
+      ${dayLabel ? `<span class="week-meta__day">${escapeHtml(dayLabel)}</span>` : ''}
+    `;
+  }
+
+  /* Group a week's posts into days, preserving first-seen order. */
+  function groupByDay(posts) {
+    const order = [];
+    const map = {};
+    (posts || []).forEach(function (p) {
+      const d = p.day || 'Unscheduled';
+      if (!map[d]) { map[d] = []; order.push(d); }
+      map[d].push(p);
+    });
+    return order.map(function (d) { return { day: d, posts: map[d] }; });
+  }
+
+  /* Render the week as DAY cards; clicking a day drills into its posts. */
+  function renderDays(week) {
+    currentDayLabel = null;
+    elPostGrid.innerHTML = '';
+    const days = groupByDay(week.posts);
+    if (days.length === 0) { elEmptyState.hidden = false; return; }
+    elEmptyState.hidden = true;
+    days.forEach(function (grp) {
+      elPostGrid.appendChild(buildDayCard(week, grp.day, grp.posts));
+    });
+  }
+
+  function buildDayCard(week, dayLabel, dayPosts) {
+    const article = document.createElement('article');
+    article.className = 'post-card day-card';
+    article.setAttribute('role', 'listitem');
+    article.setAttribute('tabindex', '0');
+    article.setAttribute('aria-label', `${dayLabel}, ${dayPosts.length} posts`);
+
+    const thumbs = dayPosts.slice(0, 4).map(function (p) {
+      const s = (p.slides || [])[0];
+      const src = p.thumbnailPath || (s ? buildImagePath(week.id, p.id, s) : '');
+      return src
+        ? `<img class="day-card__cell" src="${src}" alt="" loading="lazy">`
+        : `<div class="day-card__cell day-card__cell--empty"></div>`;
+    }).join('');
+
+    const lanes = dayPosts.map(function (p) {
+      return `<span class="lane-chip lane-chip--${escapeHtml(p.lane || 'post')}">${escapeHtml(p.lane || 'post')}</span>`;
+    }).join('');
+
+    article.innerHTML = `
+      <div class="post-card__thumb day-card__thumb">
+        <div class="day-card__grid">${thumbs}</div>
+        <span class="post-card__slide-pill">${dayPosts.length} posts</span>
+      </div>
+      <div class="post-card__body">
+        <h2 class="post-card__title">${escapeHtml(dayLabel)}</h2>
+        <div class="post-card__meta day-card__lanes">${lanes}</div>
+      </div>
     `;
 
-    // Render cards
-    renderPostGrid(week.posts || []);
+    article.addEventListener('click', function () { openDay(week, dayLabel, dayPosts); });
+    article.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDay(week, dayLabel, dayPosts); }
+    });
+    return article;
+  }
+
+  /* Drill into one day: show its posts, with a back-to-days control. */
+  function openDay(week, dayLabel, dayPosts) {
+    currentDayLabel = dayLabel;
+    renderWeekMeta(week, dayLabel);
+    elPostGrid.innerHTML = '';
+    elEmptyState.hidden = true;
+
+    const back = document.createElement('button');
+    back.type = 'button';
+    back.className = 'grid-back';
+    back.innerHTML = '&larr; All days';
+    back.addEventListener('click', function () { renderWeekMeta(week); renderDays(week); });
+    elPostGrid.appendChild(back);
+
+    dayPosts.forEach(function (post) { elPostGrid.appendChild(buildPostCard(post)); });
   }
 
   /* -------------------------------------------------------------------------

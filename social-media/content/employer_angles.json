@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "lane": "employer",
+    "purpose": "B2B lane - posts aimed at EMPLOYERS to get them to post roles / hire early-career talent on Internwise. The generator picks one unused angle per day and authors a bespoke design around it. Audience = hiring managers, founders, HR at UK SMEs and scale-ups.",
+    "source": "Benefits verified from internwise.co.uk (homepage + /employers), fetched 24 Aug 2026.",
+    "verified_facts": {
+      "active_candidates": "398,291 active candidates",
+      "active_employers": "14,096 active employers",
+      "process": "Post in minutes -> access pre-screened candidates -> shortlist & interview -> onboard & track progress",
+      "register": "Register in ~3 minutes and post unlimited vacancies",
+      "featured": "Featured Employer option boosts number of applications",
+      "trusted_by": ["Nike", "Oracle", "O2", "Man Utd", "Penguin Books", "Cancer Research UK"]
+    },
+    "rules": [
+      "No em dashes (use '-').",
+      "Only use benefits/stats from `verified_facts` (from the live site). Do NOT invent pricing - posting cost is not published, so never claim 'free' or a commission %.",
+      "CTA is employer-facing: post your internship / register at internwise.co.uk.",
+      "Tone: confident, useful, not salesy. Lead with the benefit to the employer."
+    ]
+  },
+  "angles": [
+    {"id": "e001", "angle": "talent_pool", "headline": "Your next intern is already here", "body": "Post your role and reach a talent pool built for early careers.", "benefits": ["398,000+ pre-screened candidates", "Post in minutes, unlimited vacancies", "Shortlist, interview & onboard in one place"], "trust": true, "cta": "Post your internship", "used": null},
+    {"id": "e002", "angle": "pre_screened", "headline": "Skip the CV pile. Start with pre-screened talent", "body": "We surface quality, pre-screened candidates so you review the best, faster.", "benefits": ["Quality, pre-screened candidates", "Shortlist & interview in-platform", "Track your intern's progress"], "trust": true, "cta": "Find your intern", "used": null},
+    {"id": "e003", "angle": "speed", "headline": "From role posted to intern onboarded", "body": "Register in 3 minutes, post unlimited vacancies, and manage it all in one place.", "benefits": ["Register in ~3 minutes", "Post unlimited vacancies", "Onboard & track progress"], "trust": false, "cta": "Register free account", "used": null},
+    {"id": "e004", "angle": "reach", "headline": "Reach 398,000+ early-career candidates", "body": "One focused platform, a UK-wide pool of students and graduates ready to work.", "benefits": ["398,000+ active candidates", "14,000+ employers already onboard", "Featured Employer boosts applications"], "trust": true, "cta": "Post your internship", "used": null},
+    {"id": "e005", "angle": "trust", "headline": "In good company", "body": "From global brands to fast-growing teams, employers hire early talent on Internwise.", "benefits": ["Trusted by Nike, Oracle & O2", "Man Utd, Penguin & Cancer Research UK", "Pre-screened, ready-to-work talent"], "trust": false, "cta": "Join them, post a role", "used": null},
+    {"id": "e006", "angle": "manage", "headline": "Hiring interns, all in one place", "body": "Post, shortlist, interview, onboard and track progress without leaving the platform.", "benefits": ["Shortlist & interview candidates", "Onboard your intern", "Track progress as they grow"], "trust": false, "cta": "Start hiring today", "used": null}
+  ]
+}
