@@ -1,7 +1,7 @@
 {
   "id": "shorts",
   "label": "Shorts / Reels",
-  "generatedAt": "2026-08-24T19:07:50.044912+00:00",
+  "generatedAt": "2026-08-24T19:41:41.933914+00:00",
   "status": "automated-topic-research",
   "posts": [
     {
@@ -149,7 +149,7 @@
       "status": "script-ready",
       "durationTargetSeconds": 52,
       "viralScore": 100.0,
-      "signalScore": 85.1,
+      "signalScore": 86.5,
       "scriptPath": "social-media/video/scripts/auto-2026-08-24/auto-the-interview-answer-that-sounds-too-generic/script.json",
       "briefPath": "social-media/video/scripts/auto-2026-08-24/auto-the-interview-answer-that-sounds-too-generic/brief.md",
       "videoPath": null,
@@ -235,6 +235,17 @@
           }
         },
         {
+          "source": "youtube",
+          "title": "Grad pro tip: When answering interview questions, keep your answers cocky and super f**king weird",
+          "url": "https://www.youtube.com/watch?v=s1gli2doLc8",
+          "score": 58.0,
+          "meta": {
+            "query": "graduate job interview tips shorts",
+            "views": 1546723,
+            "views_per_day": 16997.0
+          }
+        },
+        {
           "source": "reddit_rss",
           "title": "Where to get interview feedback and coaching?",
           "url": "https://www.reddit.com/r/careerguidance/comments/1vvj1oe/where_to_get_interview_feedback_and_coaching/",
@@ -260,15 +271,6 @@
           "meta": {
             "feed": "Career guidance - interview pain"
           }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "How to make an actionable plan after internal job rejections?",
-          "url": "https://www.reddit.com/r/careerguidance/comments/1vt9zvw/how_to_make_an_actionable_plan_after_internal_job/",
-          "score": 49.0,
-          "meta": {
-            "feed": "Career guidance - interview pain"
-          }
         }
       ]
     },
@@ -283,7 +285,7 @@
       "status": "script-ready",
       "durationTargetSeconds": 52,
       "viralScore": 100.0,
-      "signalScore": 84.8,
+      "signalScore": 81.5,
       "scriptPath": "social-media/video/scripts/auto-2026-08-24/auto-no-experience-is-not-the-real-problem/script.json",
       "briefPath": "social-media/video/scripts/auto-2026-08-24/auto-no-experience-is-not-the-real-problem/brief.md",
       "videoPath": null,

@@ -1,11 +1,11 @@
 {
   "week_id": "auto-2026-08-24",
-  "generated_at": "2026-08-24T19:07:50.044912+00:00",
+  "generated_at": "2026-08-24T19:41:41.933914+00:00",
   "default_duration_seconds": 52,
   "source_summary": {
     "reddit_rss_signals": 50,
-    "google_trends_signals": 0,
-    "youtube_signals": 0,
+    "google_trends_signals": 10,
+    "youtube_signals": 40,
     "seed_question_signals": 5,
     "warnings": [
       {
@@ -17,6 +17,11 @@
         "source": "reddit-resumes-internship",
         "title": "Reddit RSS unavailable: Resumes - internship",
         "detail": "HTTP Error 429: Too Many Requests"
+      },
+      {
+        "source": "serpapi-assessment centre",
+        "title": "SerpApi Trends unavailable",
+        "detail": "The read operation timed out"
       }
     ]
   },
@@ -108,7 +113,7 @@
       "title": "The Interview Answer That Sounds Too Generic",
       "source_post": "automated-topic-engine",
       "source_cluster": "interview",
-      "signal_score": 85.1,
+      "signal_score": 86.5,
       "pain": 5,
       "specificity": 5,
       "curiosity": 5,
@@ -148,6 +153,17 @@
           }
         },
         {
+          "source": "youtube",
+          "title": "Grad pro tip: When answering interview questions, keep your answers cocky and super f**king weird",
+          "url": "https://www.youtube.com/watch?v=s1gli2doLc8",
+          "score": 58.0,
+          "meta": {
+            "query": "graduate job interview tips shorts",
+            "views": 1546723,
+            "views_per_day": 16997.0
+          }
+        },
+        {
           "source": "reddit_rss",
           "title": "Where to get interview feedback and coaching?",
           "url": "https://www.reddit.com/r/careerguidance/comments/1vvj1oe/where_to_get_interview_feedback_and_coaching/",
@@ -173,15 +189,6 @@
           "meta": {
             "feed": "Career guidance - interview pain"
           }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "How to make an actionable plan after internal job rejections?",
-          "url": "https://www.reddit.com/r/careerguidance/comments/1vt9zvw/how_to_make_an_actionable_plan_after_internal_job/",
-          "score": 49.0,
-          "meta": {
-            "feed": "Career guidance - interview pain"
-          }
         }
       ]
     },
@@ -190,7 +197,7 @@
       "title": "No Experience Is Not The Real Problem",
       "source_post": "automated-topic-engine",
       "source_cluster": "experience",
-      "signal_score": 84.8,
+      "signal_score": 81.5,
       "pain": 5,
       "specificity": 5,
       "curiosity": 5,
@@ -373,7 +380,7 @@
       "title": "FK THIS JOB MARKET. I'LL GIVE MY FIRST 2 MONTHS' SALARY TO ANYONE WHO HE",
       "source_post": "automated-topic-engine",
       "source_cluster": "graduate-jobs",
-      "signal_score": 62.6,
+      "signal_score": 53.5,
       "pain": 3,
       "specificity": 3,
       "curiosity": 4,
@@ -404,6 +411,16 @@
           }
         },
         {
+          "source": "google_trends_serpapi",
+          "title": "graduate jobs 2026",
+          "url": "",
+          "score": 49.0,
+          "meta": {
+            "seed": "graduate jobs",
+            "rising_value": 1450.0
+          }
+        },
+        {
           "source": "reddit_rss",
           "title": "Graduation into cyber, I feel a bit late",
           "url": "https://www.reddit.com/r/UKJobs/comments/1n0zrh0/graduation_into_cyber_i_feel_a_bit_late/",
@@ -411,9 +428,176 @@
           "meta": {
             "feed": "UK jobs - internship CV"
           }
+        },
+        {
+          "source": "google_trends_serpapi",
+          "title": "history graduate jobs",
+          "url": "",
+          "score": 16.0,
+          "meta": {
+            "seed": "graduate jobs",
+            "rising_value": 70.0
+          }
+        },
+        {
+          "source": "google_trends_serpapi",
+          "title": "milkround graduate jobs",
+          "url": "",
+          "score": 14.0,
+          "meta": {
+            "seed": "graduate jobs",
+            "rising_value": 50.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "auto-your-cover-letter-is-too-polite",
+      "title": "Your Cover Letter Is Too Polite",
+      "source_post": "automated-topic-engine",
+      "source_cluster": "cover-letter",
+      "signal_score": 35.5,
+      "pain": 3,
+      "specificity": 3,
+      "curiosity": 3,
+      "utility": 4,
+      "timeliness": 3,
+      "discussion": 3,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "Your cover letter should not start with politeness.",
+        "If you are stuck on cover letter, watch this before your next application."
+      ],
+      "promise": "Most students waste the first paragraph. Use it to prove fit.",
+      "proof_points": [
+        "The opening line should connect to the role, not repeat your enthusiasm.",
+        "One specific company or role detail beats five generic compliments.",
+        "The letter should make the CV easier to believe."
+      ],
+      "core_takeaway": "Lead with the role problem, then connect one specific proof point.",
+      "cta": "Save this before writing your next cover letter.",
+      "source_signals": [
+        {
+          "source": "google_trends_serpapi",
+          "title": "cover letter for internship examples",
+          "url": "",
+          "score": 32.0,
+          "meta": {
+            "seed": "cover letter internship",
+            "rising_value": 60.0
+          }
+        },
+        {
+          "source": "google_trends_serpapi",
+          "title": "cover letter format",
+          "url": "",
+          "score": 27.0,
+          "meta": {
+            "seed": "cover letter internship",
+            "rising_value": 140.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "auto-your-linkedin-profile-is-too-empty-to-trust",
+      "title": "Your LinkedIn Profile Is Too Empty To Trust",
+      "source_post": "automated-topic-engine",
+      "source_cluster": "linkedin",
+      "signal_score": 30.2,
+      "pain": 3,
+      "specificity": 3,
+      "curiosity": 3,
+      "utility": 4,
+      "timeliness": 3,
+      "discussion": 3,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "Your LinkedIn profile needs proof, not more adjectives.",
+        "If you are stuck on linkedin, watch this before your next application."
+      ],
+      "promise": "Three small changes make a student profile look credible.",
+      "proof_points": [
+        "A vague headline makes you harder to place.",
+        "Visible projects reduce risk for recruiters.",
+        "Your about section should point to the kind of work you want next."
+      ],
+      "core_takeaway": "Make your headline specific, your about section useful, and your projects visible.",
+      "cta": "Save this and fix your headline first.",
+      "source_signals": [
+        {
+          "source": "youtube",
+          "title": "Don\u2019t Apply for Jobs on LinkedIn | Claude for Job Search",
+          "url": "https://www.youtube.com/watch?v=TyYZT0BitvE",
+          "score": 23.82,
+          "meta": {
+            "query": "linkedin profile job search",
+            "views": 68554,
+            "views_per_day": 454.0
+          }
+        },
+        {
+          "source": "google_trends_serpapi",
+          "title": "linkedin",
+          "url": "",
+          "score": 22.0,
+          "meta": {
+            "seed": "no experience cv",
+            "rising_value": 90.0
+          }
+        },
+        {
+          "source": "youtube",
+          "title": "Optimize Your LinkedIn w/ Claude & Apify #linkedintips #linkedin #linkedinstrategy",
+          "url": "https://www.youtube.com/watch?v=18BoaxAWXpA",
+          "score": 17.75,
+          "meta": {
+            "query": "linkedin profile job search",
+            "views": 35996,
+            "views_per_day": 188.5
+          }
+        }
+      ]
+    },
+    {
+      "id": "auto-why-your-job-search-feels-random",
+      "title": "Why Your Job Search Feels Random",
+      "source_post": "automated-topic-engine",
+      "source_cluster": "job-search",
+      "signal_score": 13.8,
+      "pain": 3,
+      "specificity": 3,
+      "curiosity": 3,
+      "utility": 4,
+      "timeliness": 3,
+      "discussion": 3,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "Your job search feels random because nothing is being tracked.",
+        "If you are stuck on job search, watch this before your next application."
+      ],
+      "promise": "If applications feel chaotic, the problem may be your tracking system.",
+      "proof_points": [
+        "Without tracking, every rejection feels like a mystery.",
+        "Patterns only appear when you separate CV drop-offs from interview drop-offs.",
+        "A simple tracker stops you changing everything at once."
+      ],
+      "core_takeaway": "Track role fit, CV version, application date, and response stage so you can see the real bottleneck.",
+      "cta": "Save this before your next application batch.",
+      "source_signals": [
+        {
+          "source": "youtube",
+          "title": "Easy Job Search in Claude | Claude Latest Updates | Claude Connectors",
+          "url": "https://www.youtube.com/watch?v=4bjkJBBmzJ8",
+          "score": 10.77,
+          "meta": {
+            "query": "linkedin profile job search",
+            "views": 68060,
+            "views_per_day": 441.9
+          }
         }
       ]
     }
   ],
-  "fingerprint": "5c25ed4592ec74bc"
+  "fingerprint": "a7b1a6ac15b2816b"
 }
