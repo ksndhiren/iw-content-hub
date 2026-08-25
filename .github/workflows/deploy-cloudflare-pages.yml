@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - main
+  # Human pushes trigger the deploy above. Bot commits (GITHUB_TOKEN) do NOT
+  # trigger `push`, so also deploy after the automated build workflows finish -
+  # workflow_run fires even for GITHUB_TOKEN-authored runs.
+  workflow_run:
+    workflows: ["Daily-5 Build", "Topic Engine", "Featured Jobs Sync"]
+    types: [completed]
+    branches: [main]
   workflow_dispatch: {}
 
 permissions:
