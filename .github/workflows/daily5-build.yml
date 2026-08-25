@@ -42,7 +42,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install openai
+          pip install openai playwright pillow
           python -m playwright install --with-deps chromium
 
       - name: Build the week (source -> LLM copy -> render -> weeks.json)
