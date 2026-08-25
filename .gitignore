@@ -24,3 +24,6 @@ social-media/jma-graphic-studio/.env
 social-media/jma-graphic-studio/node_modules/
 social-media/jma-graphic-studio/dist/
 social-media/jma-graphic-studio/.wrangler/
+
+# Local render byproducts (duplicated into images/ on publish)
+social-media/campaigns/outputs/
