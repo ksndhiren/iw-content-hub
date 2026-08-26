@@ -27,3 +27,6 @@ social-media/jma-graphic-studio/.wrangler/
 
 # Local render byproducts (duplicated into images/ on publish)
 social-media/campaigns/outputs/
+
+# Weekly generated graphics now live in Cloudflare R2, not git
+images/week*/
