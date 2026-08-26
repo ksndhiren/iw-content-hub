@@ -42,7 +42,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install openai playwright pillow
+          pip install openai playwright pillow boto3
           python -m playwright install --with-deps chromium
 
       - name: Build the week (source -> LLM copy -> render -> weeks.json)
@@ -50,6 +50,10 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
           WEEK_ID: ${{ github.event.inputs.week_id }}
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
         run: python social-media/tools/build_week.py | tee /tmp/build.log
 
       - name: Commit and push to main if there are changes
