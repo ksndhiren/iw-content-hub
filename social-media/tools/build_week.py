@@ -165,6 +165,14 @@ def build(days=5, dry=False):
 
     if not dry:
         news_fetch.mark_used(news_pool[:days])
+        try:
+            import r2                                     # normalises R2_* env on import
+            if os.getenv("R2_ACCESS_KEY_ID"):
+                r2.ensure_bucket()
+                print(f"uploading {wid} slides to R2 ...")
+                r2.upload_tree(img, prefix=wid + "/")
+        except Exception as e:
+            print("R2 upload skipped:", e)
 
     if dry:
         print(f"\nDRY: planned {len(posts)} posts.")

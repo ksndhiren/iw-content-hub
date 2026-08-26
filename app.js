@@ -17,6 +17,9 @@
      Constants
   ------------------------------------------------------------------------- */
   const DATA_URL      = 'data/weeks.json';
+  // Generated graphics live in Cloudflare R2 (not git). Swap this for a custom
+  // domain later if desired; empty string falls back to the local images/ path.
+  const IMAGE_BASE    = 'https://pub-5f843c240ef6453bba67e131500424af.r2.dev';
   const FEATURED_URL  = 'data/featured.json';
   const SHORTS_URL    = 'data/shorts.json';
   const FEATURED_SEEN_KEY = 'iw-content-hub-featured-seen';
@@ -1176,7 +1179,8 @@
      Utility: build image path
   ------------------------------------------------------------------------- */
   function buildImagePath(weekId, postId, filename) {
-    return `images/${weekId}/${postId}/${filename}`;
+    const base = IMAGE_BASE ? IMAGE_BASE.replace(/\/$/, '') : 'images';
+    return `${base}/${weekId}/${postId}/${filename}`;
   }
 
   /* -------------------------------------------------------------------------
