@@ -70,6 +70,13 @@ def _render(html, path):
         pg.set_content(html, wait_until="networkidle")
         pg.screenshot(path=path, type="png")
         br.close()
+    # Shrink the 2160x2700 render (~3.8 MB) to a ~0.6 MB dithered PNG before it
+    # ever leaves this process; featured graphics are served from R2, not git.
+    try:
+        import r2util
+        r2util.optimize_png(path)
+    except Exception as e:
+        print(f"  (optimize skipped: {e})")
     print(f"  ok {path}")
 
 GRAIN = ".grain{position:absolute;inset:0;z-index:2;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px);background-size:3px 3px;}"

@@ -31,18 +31,29 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install dependencies
+        # No browser needed (prune never renders); the package imports and boto3
+        # are enough to edit the manifests and delete pruned graphics from R2.
+        run: pip install -r automation/requirements.txt
+
       - name: Prune approved featured posts
+        # Deletes each approved post's graphic from R2 as it prunes the manifest.
+        env:
+          R2_ACCOUNT_ID:        ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID:     ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET:            ${{ secrets.R2_BUCKET }}
         run: python automation/prune_approved.py | tee /tmp/prune.log
 
       - name: Commit and push if anything was pruned
         run: |
-          if [ -z "$(git status --porcelain)" ]; then
+          if [ -z "$(git status --porcelain data/featured.json data/featured_published.json)" ]; then
             echo "Nothing approved to prune."
             exit 0
           fi
           git config user.name  "internwise-content-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A data/featured.json data/featured_published.json images/featured
+          git add -A data/featured.json data/featured_published.json
           git commit -m "Prune approved featured jobs ($(date -u +%Y-%m-%dT%H:%MZ))"
           # Rebase on top of any concurrent change before pushing.
           git pull --rebase origin main

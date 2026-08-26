@@ -23,6 +23,7 @@ sys.path.insert(0, _HERE)
 os.environ.setdefault("IW_BRANDING_DIR", os.path.join(_HERE, "branding"))
 os.environ.setdefault("IW_FONTS_DIR",    os.path.join(_HERE, "assets", "fonts"))
 import featured_job as fj
+import r2util
 from playwright.sync_api import sync_playwright
 
 SEARCH_URL = "https://www.internwise.co.uk/internship-search"
@@ -118,6 +119,7 @@ def prune_approved(data, statuses, pub):
             img = os.path.join(IMAGES_DIR, p["id"])
             if os.path.isdir(img):
                 shutil.rmtree(img, ignore_errors=True)
+            r2util.delete_prefix(f"featured/{p['id']}/")
             pub["ids"].add(str(sid))
             pub["keys"].add(_job_key(p.get("title", ""), p.get("day", "")))
             removed += 1
@@ -278,7 +280,11 @@ def render_featured_graphic(job, post_id):
     version = re.sub(r"[^a-zA-Z0-9]+", "-", fj.SECTOR_PALETTE_VERSION).strip("-")
     fname = f"{post_id}-{version}.png"
     cfg = fj.build_config(job)
-    fj.generate(cfg, os.path.join(out_dir, fname), art_mode="graphic")
+    out_path = os.path.join(out_dir, fname)
+    fj.generate(cfg, out_path, art_mode="graphic")
+    # Featured graphics live in R2, not git. Push the freshly shrunk render up so
+    # the dashboard (which resolves images against IMAGE_BASE) can see it.
+    r2util.upload_file(out_path, f"featured/{post_id}/{fname}")
     return fname, cfg
 
 
@@ -326,6 +332,7 @@ def main():
             leftover = os.path.join(IMAGES_DIR, f"job-{sid}")
             if os.path.isdir(leftover):
                 shutil.rmtree(leftover, ignore_errors=True)
+            r2util.delete_prefix(f"featured/job-{sid}/")
             continue
         if sid in existing_auto:
             p = existing_auto[sid]
@@ -374,6 +381,7 @@ def main():
             old = os.path.join(IMAGES_DIR, p["id"])
             if os.path.isdir(old):
                 shutil.rmtree(old, ignore_errors=True)
+            r2util.delete_prefix(f"featured/{p['id']}/")
             removed += 1
 
     # Newest first: most recently added, then by numeric job id.

@@ -30,3 +30,5 @@ social-media/campaigns/outputs/
 
 # Weekly generated graphics now live in Cloudflare R2, not git
 images/week*/
+# Featured-job graphics now live in Cloudflare R2, not git
+images/featured/
