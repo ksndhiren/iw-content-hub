@@ -2187,7 +2187,7 @@
       "id": "week14",
       "label": "Week 14",
       "weekCommencing": "2026-08-31",
-      "builtAt": 1787810183,
+      "builtAt": 1787836650,
       "posts": [
         {
           "id": "week14-mon-news",
@@ -2631,41 +2631,41 @@
           "id": "week14-wed-news",
           "day": "Wed 2 Sep",
           "lane": "news",
-          "title": "Graduate Job Openings Hit Seven-Year Low",
+          "title": "Top Skills Employers Value in the 2020s",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Graduate job vacancies have plummeted to their lowest since 2016, according to Adzuna. This means tougher competition for fewer roles. But don't lose heart! Internships are a great way to gain experience and make your CV shine. Read the full story - link in bio. Source: BBC Business.",
+          "caption": "Employers are now placing as much importance on skills as they do on qualifications. Six key skills have been identified that will be crucial for job success in the coming decade. As a student or graduate, it's essential to develop these skills alongside your studies. Internships can be a perfect opportunity to build these competencies. Don't just rely on your degree - make sure your skill set shines. Read the full story - link in bio. Source: BBC Business.",
           "hashtags": [
-            "#GraduateJobs",
+            "#JobSkills",
+            "#GraduateTips",
             "#Internships",
-            "#CareerAdvice",
-            "#UKJobs",
-            "#JobMarket"
+            "#CareerGrowth",
+            "#Employability"
           ],
           "captions": {
-            "ig-fb": "Graduate job vacancies have plummeted to their lowest since 2016, according to Adzuna. This means tougher competition for fewer roles. But don't lose heart! Internships are a great way to gain experience and make your CV shine. Read the full story - link in bio. Source: BBC Business.",
-            "linkedin": "Adzuna reports a sharp drop in graduate job vacancies, now at their lowest level since 2016. This creates a more competitive job market for recent graduates. Consider internships as a way to gain skills and stand out. Read more: internwise.co.uk. Source: BBC Business.",
-            "x": "Graduate job vacancies have hit a seven-year low, says Adzuna. Internships can help you stand out in this competitive market. Find out more at internwise.co.uk (via BBC Business)"
+            "ig-fb": "Employers are now placing as much importance on skills as they do on qualifications. Six key skills have been identified that will be crucial for job success in the coming decade. As a student or graduate, it's essential to develop these skills alongside your studies. Internships can be a perfect opportunity to build these competencies. Don't just rely on your degree - make sure your skill set shines. Read the full story - link in bio. Source: BBC Business.",
+            "linkedin": "In the evolving job market, employers are prioritising skills alongside qualifications. Experts have identified six crucial skills needed for job success over the next decade. For students and graduates, it's vital to focus on these skills to enhance employability. Internships offer a practical way to develop these skills and stand out to employers. Read more: internwise.co.uk Source: BBC Business.",
+            "x": "Skills are as essential as qualifications for jobs now. Six key skills identified for the next decade. Develop them through internships. More at internwise.co.uk (via BBC Business)"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#GraduateJobs",
+              "#JobSkills",
+              "#GraduateTips",
               "#Internships",
-              "#CareerAdvice",
-              "#UKJobs",
-              "#JobMarket"
+              "#CareerGrowth",
+              "#Employability"
             ],
             "linkedin": [
-              "#GraduateJobs",
-              "#Internships",
-              "#CareerAdvice"
+              "#JobSkills",
+              "#CareerDevelopment",
+              "#Internships"
             ],
             "x": [
-              "#GraduateJobs",
+              "#JobSkills",
               "#Internships"
             ]
           }

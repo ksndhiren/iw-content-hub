@@ -8,7 +8,7 @@ For each day it sources content, has the LLM (writer.py) write all on-screen cop
     python3 tools/build_week.py --days 1         # just Monday (cheap validation)
     python3 tools/build_week.py --dry            # plan only, no render/write
 """
-import os, sys, json, datetime
+import os, sys, json, re, datetime
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lanes_common as L
 
@@ -68,6 +68,41 @@ FUN_ONSCREEN = {"bingo": "Graduate job-hunt bingo - the shared truths of the sea
 PAID_BLOCK = ("paid", "unpaid", "internship-rights")   # never make paid-vs-unpaid content
 
 
+_NEWS_STOP = {"with", "from", "your", "this", "that", "will", "says", "said",
+              "survey", "suggests", "amid", "after", "over", "into", "more", "most",
+              "than", "have", "been", "could", "would", "should", "their", "them",
+              "they", "what", "when", "which", "where", "about", "just", "year",
+              "years", "week", "month", "new", "uk", "gov"}
+
+
+def _news_words(title):
+    return {w for w in re.findall(r"[a-z]+", (title or "").lower())
+            if len(w) >= 4 and w not in _NEWS_STOP}
+
+
+def pick_distinct_news(pool, n, thresh=0.4):
+    """Greedily pick `n` news items whose headlines don't repeat a topic already
+    chosen this week. Two items count as the same story when their significant
+    headline words overlap >= `thresh` (overlap coefficient) - e.g. the two
+    'graduate vacancies at a multi-year low' stories that used to land twice in
+    one week. Backfills from the pool if fewer than `n` distinct items exist."""
+    picked, picked_sets = [], []
+    for it in pool:
+        ws = _news_words(it.get("title", ""))
+        if any(ws and ps and len(ws & ps) / min(len(ws), len(ps)) >= thresh
+               for ps in picked_sets):
+            continue
+        picked.append(it); picked_sets.append(ws)
+        if len(picked) >= n:
+            return picked
+    for it in pool:                                   # backfill if too few distinct
+        if it not in picked:
+            picked.append(it)
+            if len(picked) >= n:
+                break
+    return picked
+
+
 def pick_education(n):
     topics = json.load(open(AUTO)).get("topics", [])
     out = []
@@ -96,7 +131,7 @@ def build(days=5, dry=False):
     wid, wlabel, wc, mon = target_week()
     img = os.path.join(HUB, "images", wid)
     daylist = [(DKEYS[i], (mon + datetime.timedelta(days=i)).strftime("%a %d %b").replace(" 0", " ")) for i in range(5)]
-    news_pool = news_fetch.fetch(limit=15)
+    news_pool = pick_distinct_news(news_fetch.fetch(limit=20), days)
     edu_topics = pick_education(days)
     posts = []
     print(f"Building {wid} (w/c {wc}) - {days} day(s)")
