@@ -90,9 +90,12 @@ def w_process(a):
         rows += (f"<div style='display:flex;gap:18px;align-items:center;margin-bottom:20px;'>"
                  f"<div style='flex:0 0 54px;width:54px;height:54px;border-radius:14px;background:{GREEN};display:flex;align-items:center;justify-content:center;'>"
                  f"<span style=\"font-family:Inter;font-weight:800;font-size:28px;color:{DEEP};\">{i}</span></div>"
-                 f"<span style=\"font-family:Inter;font-weight:700;font-size:29px;color:{INK};letter-spacing:-.3px;\">{s}</span></div>")
-    flow = f"<div style='position:absolute;left:58px;top:400px;width:600px;'>{rows}</div>"
-    return _bg("#1c2433","#12161f")+_nuno("nuno_planning_1")+L.logo_tl()+_tag()+head+flow+_cta(a["cta"])+L.url_footer(color=SUBT)
+                 f"<span style=\"font-family:Inter;font-weight:700;font-size:27px;color:{INK};letter-spacing:-.3px;line-height:1.15;\">{s}</span></div>")
+    # Steps stay one line each in a column sized to the longest label, and Nuno
+    # is pushed further off the right edge, so the longest step ("Onboard and
+    # track progress") clears the figure instead of colliding with his shoulder.
+    flow = f"<div style='position:absolute;left:58px;top:400px;width:548px;'>{rows}</div>"
+    return _bg("#1c2433","#12161f")+_nuno("nuno_planning_1", right=-120)+L.logo_tl()+_tag()+head+flow+_cta(a["cta"])+L.url_footer(color=SUBT)
 
 # ---- trust (logo wall) ----
 def w_trust(a):

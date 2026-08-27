@@ -1180,7 +1180,14 @@
   ------------------------------------------------------------------------- */
   function buildImagePath(weekId, postId, filename) {
     const base = IMAGE_BASE ? IMAGE_BASE.replace(/\/$/, '') : 'images';
-    return `${base}/${weekId}/${postId}/${filename}`;
+    const url = `${base}/${weekId}/${postId}/${filename}`;
+    // R2 serves images with an immutable, one-year cache. When a slide is
+    // re-rendered under the same filename, browsers would otherwise keep the
+    // stale copy. Each week carries a `builtAt` version stamped at build time;
+    // appending it as ?v= makes a re-render a fresh URL so viewers see updates.
+    const wk = allWeeks.find(function (w) { return w.id === weekId; });
+    const v = wk && wk.builtAt;
+    return v ? `${url}?v=${encodeURIComponent(v)}` : url;
   }
 
   /* -------------------------------------------------------------------------

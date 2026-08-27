@@ -95,23 +95,26 @@ def render_news(item, out_dir, filename="slide_1.png", issue_no=1,
            f"font-family:{SERIF};font-weight:700;font-size:44px;color:{INK};letter-spacing:2px;'>{kicker} NEWS</div>"
            + _rule(X, 324, W, "heavy"))
 
-    # --- Headline (full width) ---
-    head = (f"<div style='position:absolute;left:{X}px;top:340px;width:{W}px;text-align:center;"
-            f"font-family:{SERIF};font-weight:700;font-size:{hsize}px;line-height:1.02;color:{INK};"
-            f"letter-spacing:-.5px;word-break:keep-all;'>{title_disp}</div>")
-    lines = 2 if len(title) > 34 else 1
-    by_y = int(340 + hsize * 1.02 * lines + 16)
-    byline = (_rule(X, by_y, W, "thin")
-              + f"<div style='position:absolute;left:{X}px;top:{by_y+11}px;width:{W}px;text-align:center;"
-                f"font-family:'DM Sans';font-weight:700;font-size:18px;color:{SUB};letter-spacing:3px;'>"
-                f"THE INTERNWISE WIRE &nbsp;&#10022;&nbsp; {kicker.title()} Briefing</div>")
+    # --- Headline + byline + two columns as ONE top-anchored flex column ---
+    # The wrapped height of a proportional serif headline cannot be predicted
+    # from a character count, so any guessed byline/column offset silently
+    # overlaps when a headline wraps to more lines than assumed (the old bug).
+    # Instead: headline and byline take their natural height, and the two
+    # columns take whatever vertical space remains and clip to it. Nothing
+    # below the section rule can ever be stamped on top of the headline.
+    HEAD_TOP = 340
+    stack_h = FOOT_Y - HEAD_TOP
 
-    # --- Two columns (both clipped to the footer line so they can never overlap) ---
-    col_top = by_y + 52
-    col_h = FOOT_Y - col_top
-    colL_x, colL_w = 48, 452
-    div_x = 524
-    colR_x, colR_w = 548, 484
+    head = (f"<div style='flex:0 0 auto;text-align:center;font-family:{SERIF};font-weight:700;"
+            f"font-size:{hsize}px;line-height:1.02;color:{INK};letter-spacing:-.5px;word-break:keep-all;'>{title_disp}</div>")
+
+    byline = (f"<div style='flex:0 0 auto;margin-top:16px;'>"
+              f"<div style='width:100%;height:1.5px;background:{RULE};opacity:.55;'></div>"
+              f"<div style=\"margin-top:11px;text-align:center;font-family:'DM Sans';font-weight:700;"
+              f"font-size:18px;color:{SUB};letter-spacing:3px;\">"
+              f"THE INTERNWISE WIRE &nbsp;&#10022;&nbsp; {kicker.title()} Briefing</div></div>")
+
+    # left column: drop cap + justified body paragraphs
     drop = brief[0][:1] if brief and brief[0] else ""
     rest0 = brief[0][1:] if brief and brief[0] else ""
     paras = ""
@@ -121,10 +124,9 @@ def render_news(item, out_dir, filename="slide_1.png", issue_no=1,
                   f"{rest0}</p>")
     for p in brief[1:]:
         paras += f"<p style='margin:0 0 13px;text-align:justify;font-family:{SERIF};font-size:22px;line-height:1.32;color:{INK};'>{p}</p>"
-    colL = (f"<div style='position:absolute;left:{colL_x}px;top:{col_top}px;width:{colL_w}px;"
-            f"height:{col_h}px;overflow:hidden;'>{paras}</div>")
+    colL = f"<div style='flex:0 0 452px;height:100%;overflow:hidden;'>{paras}</div>"
 
-    divider = f"<div style='position:absolute;left:{div_x}px;top:{col_top}px;width:1.5px;height:{col_h}px;background:{RULE};opacity:.5;'></div>"
+    divider = f"<div style='flex:0 0 1.5px;align-self:stretch;background:{RULE};opacity:.5;'></div>"
 
     bullets = "".join(
         f"<div style='display:flex;gap:10px;margin-bottom:10px;'>"
@@ -136,8 +138,13 @@ def render_news(item, out_dir, filename="slide_1.png", issue_no=1,
            f"{bullets}</div>")
     pq = (f"<div style='margin-top:20px;border-top:3px solid {INK};border-bottom:3px solid {INK};padding:15px 4px;'>"
           f"<div style='font-family:{SERIF};font-style:italic;font-weight:700;font-size:27px;line-height:1.22;color:{INK};text-align:center;'>&ldquo;{pull}&rdquo;</div></div>")
-    colR = (f"<div style='position:absolute;left:{colR_x}px;top:{col_top}px;width:{colR_w}px;"
-            f"height:{col_h}px;overflow:hidden;'>{box}{pq}</div>")
+    colR = f"<div style='flex:0 0 484px;height:100%;overflow:hidden;'>{box}{pq}</div>"
+
+    cols = (f"<div style='flex:1 1 auto;min-height:0;margin-top:20px;display:flex;"
+            f"justify-content:space-between;'>{colL}{divider}{colR}</div>")
+
+    stack = (f"<div style='position:absolute;left:{X}px;top:{HEAD_TOP}px;width:{W}px;height:{stack_h}px;"
+             f"display:flex;flex-direction:column;'>{head}{byline}{cols}</div>")
 
     # --- Foot: continued in caption ---
     foot = (_rule(X, FOOT_Y + 6, W, "double")
@@ -146,7 +153,7 @@ def render_news(item, out_dir, filename="slide_1.png", issue_no=1,
               f"The full story continues in the caption &darr;</span>"
               f"<span style=\"font-family:'DM Sans';font-weight:700;font-size:21px;color:{INK};letter-spacing:1px;\">INTERNWISE.CO.UK</span></div>")
 
-    inner = paper + m + info + sec + head + byline + colL + divider + colR + foot
+    inner = paper + m + info + sec + stack + foot
     return L.render(out_dir, filename, inner)
 
 

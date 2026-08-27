@@ -80,8 +80,8 @@ def _content(p, n, total, slide):
     return (_bg(p) + num + _head(p, n, total) + _eyebrow(p, slide.get("tag", "STEP " + str(n - 1)))
             + f"<div style=\"position:absolute;left:56px;top:280px;width:840px;font-family:Inter;font-weight:700;"
               f"font-size:58px;line-height:1.02;letter-spacing:-1.5px;color:{p['ink']};word-break:keep-all;\">{slide['title']}</div>"
-            + f"<div style=\"position:absolute;left:58px;top:470px;width:820px;font-family:'DM Sans';font-weight:500;"
-              f"font-size:33px;line-height:1.4;color:{p['mut']};\">{slide['body']}</div>"
+            + f"<div style=\"position:absolute;left:58px;top:470px;width:840px;font-family:'DM Sans';font-weight:500;"
+              f"font-size:41px;line-height:1.4;color:{p['mut']};\">{slide['body']}</div>"
             + L.dots("left:58px;bottom:150px;", color=f"{p['accent']}55")
             + L.watermark(w=440, right=-70, bottom=-110, op=.05) + _footer(p, swipe=True))
 
@@ -89,8 +89,8 @@ def _cta(p, copy, total):
     return (_bg(p) + _nuno(p, p["cta"], h=780) + _head(p, total, total) + _eyebrow(p, "YOUR MOVE")
             + f"<div style=\"position:absolute;left:56px;top:274px;width:490px;font-family:Inter;font-weight:700;"
               f"font-size:60px;line-height:1.02;letter-spacing:-2px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>"
-            + f"<div style=\"position:absolute;left:58px;top:500px;width:480px;font-family:'DM Sans';font-weight:500;"
-              f"font-size:30px;line-height:1.35;color:{p['mut']};\">{copy.get('cta','')}</div>"
+            + f"<div style=\"position:absolute;left:58px;top:500px;width:490px;font-family:'DM Sans';font-weight:500;"
+              f"font-size:36px;line-height:1.35;color:{p['mut']};\">{copy.get('cta','')}</div>"
             + f"<div style='position:absolute;left:58px;top:640px;'>{_urlpill(p)}</div>"
             + _footer(p, swipe=False))
 

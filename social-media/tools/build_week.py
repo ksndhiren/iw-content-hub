@@ -180,7 +180,9 @@ def build(days=5, dry=False):
 
     data = json.load(open(WEEKS))
     data["weeks"] = [w for w in data["weeks"] if w.get("id") != wid]
-    data["weeks"].append({"id": wid, "label": wlabel, "weekCommencing": wc, "posts": posts})
+    built_at = int(datetime.datetime.now(datetime.timezone.utc).timestamp())
+    data["weeks"].append({"id": wid, "label": wlabel, "weekCommencing": wc,
+                          "builtAt": built_at, "posts": posts})
     json.dump(data, open(WEEKS, "w"), indent=2, ensure_ascii=False)
     print(f"\nWrote {len(posts)} posts to weeks.json ({wid}).")
     return posts
