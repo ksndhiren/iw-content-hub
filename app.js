@@ -896,7 +896,11 @@
     const url      = buildImagePath(currentWeek.id, post.id, post.slides[currentSlideIdx]);
     const filename = post.id + '_slide_' + (currentSlideIdx + 1) + '.png';
 
-    fetch(url)
+    // cache:'reload' forces a fresh CORS request. The <img> that displays the
+    // slide loads it no-CORS, caching a response with no Access-Control-Allow-
+    // Origin header; a default fetch would reuse that and the browser would
+    // block reading the blob. Reloading gets R2's CORS-enabled response.
+    fetch(url, { cache: 'reload' })
       .then(function (r) { return r.blob(); })
       .then(function (blob) {
         const file = new File([blob], filename, { type: 'image/png' });
@@ -959,7 +963,7 @@
       for (let i = 0; i < total; i++) {
         elDownloadAllLabel.textContent = 'Loading ' + (i + 1) + ' / ' + total + '...';
         const url = buildImagePath(currentWeek.id, post.id, post.slides[i]);
-        const res = await fetch(url);
+        const res = await fetch(url, { cache: 'reload' });  // fresh CORS request (see downloadCurrentSlide)
         blobs.push(await res.blob());
       }
 
