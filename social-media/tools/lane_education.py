@@ -20,8 +20,11 @@ PAL = {
     "plum": {"bg": "background:linear-gradient(160deg,#2a1840,#180d24);", "grid": False, "accent": CORAL,
              "ink": "#F4EAF9", "mut": "#B9A6CC", "deep": "#150a1f", "cover": "nuno_thoughtful_1", "cta": "nuno_dothis_1"},
     "teal": {"bg": "background:linear-gradient(160deg,#0c3038,#0a1d24);", "grid": True, "accent": GREEN,
-             "ink": INK, "mut": "#9FC2C9", "deep": "#081418", "cover": "nuno_welcoming_1", "cta": "nuno_offers_1"},
+             "ink": INK, "mut": "#9FC2C9", "deep": "#081418", "cover": "nuno_cv_3", "cta": "nuno_offers_1"},
 }
+# NOTE: a cover pose must be RIGHT-WEIGHTED (head/torso hug the right edge) so it
+# clears the left headline column (_cover: left:56, width:520). Wide arms-spread
+# poses (nuno_welcoming_*) put the face under the headline - never use them here.
 
 
 def _bg(p):

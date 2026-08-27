@@ -459,6 +459,39 @@ def _sanitize(s):
     s = s.replace("—", "-").replace("–", "-").replace("&", "&amp;")
     return re.sub(r"\s+", " ", s).strip()
 
+# UK postcode (full, e.g. "E1 6HU") and street-suffix tokens for address shortening.
+_UK_POSTCODE = re.compile(r"\b[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}\b", re.I)
+_STREET_SUFFIX = re.compile(
+    r"\b(?:street|st|road|rd|avenue|ave|lane|ln|close|drive|dr|terrace|"
+    r"mews|wharf|embankment|quay|boulevard|blvd|highway)\b", re.I)
+
+def _short_location(loc):
+    """Collapse a full office address to just the town + region.
+      '162-167 Shoreditch High St, London E1 6HU, Central London' -> 'London, Central London'
+    Already-short values ('Central London', 'Manchester, North West England') pass
+    through unchanged. Never returns empty - falls back to the original string."""
+    if not loc or "," not in loc:
+        return loc
+    parts = [p.strip() for p in loc.split(",") if p.strip()]
+    kept = []
+    for part in parts:
+        seg = _sanitize(_UK_POSTCODE.sub("", part)).strip(" ,")
+        if not seg:
+            continue                                   # was only a postcode
+        # A street-address segment starts with a building number, or ends in a
+        # street-suffix word (e.g. "Shoreditch High St"). Drop it - but never a
+        # segment that merely starts with "St " ("St Albans" is a town).
+        starts_number = bool(re.match(r"^\d", seg))
+        street_suffix = bool(_STREET_SUFFIX.search(seg)) and not re.match(r"^st\.?\s", seg, re.I)
+        if starts_number or street_suffix:
+            continue
+        kept.append(seg)
+    seen, out = set(), []
+    for k in kept:
+        if k.lower() not in seen:
+            seen.add(k.lower()); out.append(k)
+    return ", ".join(out) or loc
+
 def strip_year(s):
     """Reduce a scraped listing title to just the job role. Drops:
       - a trailing employer mention: '... at M&K Accountants'
@@ -568,7 +601,7 @@ def build_config(job):
     primary = _sanitize(sector_info["sector"]) or "Internship"
     details = [
         ("field", primary),
-        ("location", _sanitize(job.get("location", "")) or "UK"),
+        ("location", _short_location(_sanitize(job.get("location", ""))) or "UK"),
         ("type", _sanitize(job.get("jtype", "")) or "Internship"),
         ("duration", _sanitize(job.get("duration", "")) or "Flexible"),
     ]

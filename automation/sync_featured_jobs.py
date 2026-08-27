@@ -241,7 +241,7 @@ def build_captions(job):
     """Featured caption: the sector hook line, the location, and the apply link to
     the job's own page. No title, no company. Same clean format across platforms
     (Threads removed - users cross-post from Instagram)."""
-    loc  = _plain(job.get("location", ""))
+    loc  = fj._short_location(_plain(job.get("location", "")))  # town+region, not full address
     hook = fj.pick_hook(job)   # per-post line, matches the graphic
     url  = job["url"]
     text = f"{hook}\n\n\U0001F4CD {loc}\n\nApply now \U0001F449 {url}"
