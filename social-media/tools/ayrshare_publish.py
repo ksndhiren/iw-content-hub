@@ -24,6 +24,7 @@ Notes:
 from __future__ import annotations
 import os, sys, json, argparse, datetime
 import urllib.request, urllib.error
+from zoneinfo import ZoneInfo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SM   = os.path.dirname(HERE)
@@ -95,7 +96,11 @@ def media_for(post, week_id):
 
 
 def schedule_iso(week, post):
-    """Future UTC ISO for this post's lane time on its day (skips past times)."""
+    """Future UTC ISO for this post's lane time (UK local) on its day.
+
+    LANE_TIME is UK wall-clock; we localise to Europe/London (handles BST/GMT
+    automatically) then convert to UTC for Ayrshare. Past times return None so
+    the caller posts immediately instead of getting rejected."""
     wc = week.get("weekCommencing")
     if not wc:
         return None
@@ -103,32 +108,52 @@ def schedule_iso(week, post):
     dkey = post["id"].split("-")[-2] if post["id"].count("-") >= 2 else None
     di = DAY_INDEX.get(dkey, 0)
     hh, mm = (LANE_TIME.get(post.get("lane"), "09:00")).split(":")
-    when = datetime.datetime.combine(mon + datetime.timedelta(days=di),
-                                     datetime.time(int(hh), int(mm)))
-    if when <= datetime.datetime.now():
+    when_uk = datetime.datetime.combine(
+        mon + datetime.timedelta(days=di), datetime.time(int(hh), int(mm)),
+        tzinfo=ZoneInfo("Europe/London"))
+    if when_uk <= datetime.datetime.now(datetime.timezone.utc):
         return None  # in the past - Ayrshare rejects; caller posts immediately
-    return when.strftime("%Y-%m-%dT%H:%M:%SZ")
+    return when_uk.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-def build_jobs(week, connected, want_status, use_schedule):
+def _dkey(post):
+    return post["id"].split("-")[-2] if post["id"].count("-") >= 2 else None
+
+
+def build_jobs(week, connected, want_status, use_schedule, only=None, days=None, stories=False):
     jobs = []
     for post in week.get("posts", []):
-        if post.get("status") != want_status:
+        if only:
+            if post["id"] != only:
+                continue           # --only names one post; post it regardless of status
+        elif post.get("status") != want_status:
+            continue
+        if days and _dkey(post) not in days:
             continue
         lane = post.get("lane")
         nets = [n for n in LANE_NETWORKS.get(lane, []) if n in connected]
         media = media_for(post, week["id"])
+        sched = schedule_iso(week, post) if use_schedule else None
         for net in nets:
             text, trimmed = caption_for(post, net)
-            jobs.append({"pid": post["id"], "lane": lane, "network": net,
+            jobs.append({"pid": post["id"], "lane": lane, "network": net, "kind": "feed",
                          "text": text, "trimmed": trimmed, "mediaUrls": media,
-                         "scheduleDate": schedule_iso(week, post) if use_schedule else None})
+                         "extra": {}, "scheduleDate": sched})
+        # Instagram Story companion: a dedicated 1080x1920 story.png (IG caps
+        # Story width at 1920; the 2160 feed slides are rejected). No caption.
+        if stories and "instagram" in nets and media:
+            story_url = f"{R2_BASE}/{week['id']}/{post['id']}/story.png"
+            jobs.append({"pid": post["id"], "lane": lane, "network": "instagram", "kind": "story",
+                         "text": post.get("title", " ")[:60], "trimmed": False,
+                         "mediaUrls": [story_url], "extra": {"instagramOptions": {"stories": True}},
+                         "scheduleDate": sched})
     return jobs
 
 
 def post_job(job):
     body = {"post": job["text"], "platforms": [job["network"]],
             "mediaUrls": job["mediaUrls"]}
+    body.update(job.get("extra") or {})
     if job.get("scheduleDate"):
         body["scheduleDate"] = job["scheduleDate"]
     data = json.dumps(body).encode()
@@ -153,7 +178,11 @@ def main():
     ap.add_argument("--live", action="store_true", help="actually post (default: dry-run)")
     ap.add_argument("--schedule", action="store_true", help="schedule at lane times instead of now")
     ap.add_argument("--status", default="approved", help="which post status is eligible")
+    ap.add_argument("--only", default=None, help="post just this one post id (ignores status gate)")
+    ap.add_argument("--days", default=None, help="comma list of day keys to include, e.g. tue,wed,thu,fri")
+    ap.add_argument("--stories", action="store_true", help="also post an IG Story (cover image) per post")
     args = ap.parse_args()
+    days = set(d.strip() for d in args.days.split(",")) if args.days else None
 
     if not KEY:
         sys.exit("No AYRSHARE_API_KEY in env (.env).")
@@ -164,7 +193,8 @@ def main():
 
     connected = active_networks()
     posted = load_posted()
-    jobs = build_jobs(week, connected, args.status, args.schedule)
+    jobs = build_jobs(week, connected, args.status, args.schedule, only=args.only,
+                      days=days, stories=args.stories)
 
     print(f"Week {args.week} | connected: {sorted(connected)} | status='{args.status}' "
           f"| {'LIVE' if args.live else 'DRY-RUN'}")
@@ -172,10 +202,11 @@ def main():
     key_seen = set()
     todo = []
     for j in jobs:
-        pkey = f"{j['pid']}:{j['network']}"
+        kind = j.get("kind", "feed")
+        pkey = f"{j['pid']}:{j['network']}" + (":story" if kind == "story" else "")
         already = pkey in posted
         flag = "ALREADY POSTED" if already else ("sched " + j["scheduleDate"] if j["scheduleDate"] else "now")
-        print(f"  {j['pid']:22} -> {j['network']:10} [{len(j['text'])}c"
+        print(f"  {j['pid']:22} -> {j['network']:10} {kind:5} [{len(j['text'])}c"
               f"{' TRIMMED' if j['trimmed'] else ''}] {len(j['mediaUrls'])} img | {flag}")
         if not already:
             todo.append((pkey, j))
