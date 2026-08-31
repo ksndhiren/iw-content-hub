@@ -50,6 +50,12 @@ def write_news(item):
     """item: {title, summary, source}. Returns reworded on-screen copy + captions."""
     user = f"""Rewrite this UK job-market news story for Internwise (anti-plagiarism: your own words, facts unchanged).
 
+RULES (must follow):
+- UK ONLY: this is a UK job board. The story must be about the UK job market. If it is about another country (US, etc.), do not frame it as UK news.
+- NO NAMES / NO ENDORSEMENTS: do NOT name, endorse or publicise any individual person or private organisation (company, employer, university, college, recruiter, etc.). Report the facts generically instead ("a major UK employer", "a UK university", "a graduate"). The ONLY exception is UK government job schemes and government bodies (e.g. the Jobs Guarantee scheme, DWP, Ofsted) - these may be named. Never build a story around one named company's or person's success.
+- NO STEREOTYPES: never frame jobs, skills or traits by gender, age or industry stereotype (e.g. do not say a job is "for men"/"for women"). Report roles and demand neutrally.
+- SELF-CONTAINED CAPTIONS: the caption must tell the WHOLE story - every key fact, figure and piece of context - so the reader gets the full news without clicking away. NEVER write "link in bio", "read the full story", "read more", "see link", or any phrase that sends them elsewhere to read it.
+
 SOURCE TITLE: {item.get('title','')}
 SOURCE SUMMARY: {item.get('summary','')}
 SOURCE NAME: {item.get('source','')}
@@ -61,12 +67,12 @@ Return JSON with:
   "pull": one punchy pull-quote line (max ~60 chars),
   "kicker": one of "JOB MARKET","SKILLS","CAREERS",
   "captions": {{
-     "ig-fb": full caption, ending with "Read the full story - link in bio." then "Source: {item.get('source','')}." (<=2200 chars),
-     "linkedin": professional caption ending with "Read more: internwise.co.uk" then "Source: {item.get('source','')}." (<=3000 chars),
-     "x": one tweet under 280 chars ending with "internwise.co.uk (via {item.get('source','')})"
+     "ig-fb": a self-contained caption that tells the whole story (all key facts and figures) in Internwise's voice, then one short line on how internships help early-career jobseekers. No link-teasing. End with "Source: {item.get('source','')}." (<=2200 chars),
+     "linkedin": a professional, self-contained caption telling the whole story (all key facts and figures), then a brief internships angle. No link-teasing. End with "Source: {item.get('source','')}." (<=3000 chars),
+     "x": one tweet under 280 chars giving the most important fact(s) plainly - no teaser, no "link in bio" - ending with "(Source: {item.get('source','')})"
   }},
   "hashtags": {{"ig-fb": [5 tags], "linkedin": [3 tags], "x": [2 tags]}}"""
-    return _chat(user, max_tokens=1200)
+    return _chat(user, max_tokens=1400)
 
 
 # --------------------------------------------------------------------- captions only

@@ -23,7 +23,8 @@ FEEDS = [
     ("The Guardian",       "https://www.theguardian.com/education/students/rss"),
     ("BBC Business",       "https://feeds.bbci.co.uk/news/business/rss.xml"),
     ("BBC Education",      "https://feeds.bbci.co.uk/news/education/rss.xml"),
-    ("Indeed Hiring Lab",  "https://www.hiringlab.org/feed/"),
+    # NB: US/international feeds (e.g. Indeed Hiring Lab US) are intentionally
+    # excluded - Internwise news is UK job-market ONLY. See _is_uk() below.
     ("FE News",            "https://www.fenews.co.uk/feed/"),
     ("WonkHE",             "https://wonkhe.com/feed/"),
     ("GOV.UK",             "https://www.gov.uk/search/news-and-communications.atom?organisations%5B%5D=department-for-work-pensions"),
@@ -35,6 +36,31 @@ KEYWORDS = re.compile(
     r"recruit|recruitment|vacan|employ|labour market|labor market|"
     r"skills|wage|salary|pay|workforce|early careers?|entry.?level|"
     r"talent|unemploy|redundan|remote work|hybrid work|gen z)\b", re.I)
+
+# --- UK-ONLY GUARD -----------------------------------------------------------
+# Internwise news is about the UK job market only. Even UK publications carry the
+# odd US/overseas story, so every candidate is screened: an item is dropped when
+# it clearly concerns another country UNLESS it also carries a clear UK signal.
+_FOREIGN_CI = re.compile(
+    r"\b(united states|america\w*|canad\w+|australia\w*|new zealand|"
+    r"india\b|indian|chin(?:a|ese)|japan\w*|german\w*|france|french|"
+    r"spain|spanish|itali\w+|silicon valley|wall street|federal reserve|"
+    r"abroad|overseas)\b", re.I)
+_FOREIGN_CS = re.compile(r"\b(?:U\.?S\.?A?|US)\b")     # case-sensitive: US, USA, U.S.
+_UK_HINT = re.compile(
+    r"\b(u\.?k\.?|united kingdom|britain|british|england|scotland|scottish|"
+    r"wales|welsh|northern ireland|london|manchester|birmingham|nhs|dwp|hmrc|"
+    r"westminster|whitehall|ofsted|ucas|russell group|a-?levels?|gcses?|"
+    r"apprenticeship|universal credit|£)\b", re.I)
+
+
+def _is_uk(hay):
+    """True if the story is UK-relevant. Foreign-market stories are kept only
+    when they also mention the UK (e.g. 'US firms expand UK graduate hiring')."""
+    if _UK_HINT.search(hay):
+        return True
+    return not (_FOREIGN_CI.search(hay) or _FOREIGN_CS.search(hay))
+
 
 UA = {"User-Agent": "Mozilla/5.0 (Internwise news-fetch; +https://internwise.co.uk)"}
 
@@ -132,6 +158,8 @@ def fetch(max_age_days=5, limit=8):
             if it["date"] and (now - it["date"]).days > max_age_days:
                 continue
             hay = it["title"] + " " + it["summary"]
+            if not _is_uk(hay):          # UK job market ONLY - drop foreign stories
+                continue
             it["score"] = len(KEYWORDS.findall(hay))
             if it["score"] == 0:
                 continue

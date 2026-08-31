@@ -19,7 +19,10 @@
   const DATA_URL      = 'data/weeks.json';
   // Generated graphics live in Cloudflare R2 (not git). Swap this for a custom
   // domain later if desired; empty string falls back to the local images/ path.
-  const IMAGE_BASE    = 'https://pub-5f843c240ef6453bba67e131500424af.r2.dev';
+  // On localhost we prefer the local images/ folder so freshly-rendered slides
+  // are reviewable before they've been uploaded to R2 by the cloud build.
+  const IS_LOCAL      = ['localhost', '127.0.0.1'].includes(location.hostname);
+  const IMAGE_BASE    = IS_LOCAL ? '' : 'https://pub-5f843c240ef6453bba67e131500424af.r2.dev';
   const FEATURED_URL  = 'data/featured.json';
   const SHORTS_URL    = 'data/shorts.json';
   const FEATURED_SEEN_KEY = 'iw-content-hub-featured-seen';

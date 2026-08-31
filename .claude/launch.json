@@ -4,7 +4,7 @@
     {
       "name": "iw-content-hub",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "4200"],
+      "runtimeArgs": [".claude/devserver.py", "4200"],
       "port": 4200
     }
   ]
