@@ -85,7 +85,7 @@ ON-SCREEN TEXT: {on_screen_text}{extra}
 
 Return JSON:
   "captions": {{
-     "ig-fb": caption ending with a soft call to find internships and "link in bio" (<=2200),
+     "ig-fb": caption ending with a soft call to find internships at www.internwise.co.uk - write the URL out in full; do NOT say "link in bio" (<=2200),
      "linkedin": professional caption ending with "internwise.co.uk" (<=3000),
      "x": one tweet under 280 ending with "internwise.co.uk"
   }},
@@ -117,7 +117,7 @@ Return JSON with:
   {shape},
   "cta": one line pointing to internwise.co.uk,
   "captions": {{
-     "ig-fb": value-packed caption ending with "link in bio" (<=2200),
+     "ig-fb": value-packed caption ending with a CTA to www.internwise.co.uk - write the URL out in full; do NOT say "link in bio" (<=2200),
      "linkedin": professional caption ending with "internwise.co.uk" (<=3000),
      "x": one tweet under 280 ending with "internwise.co.uk"
   }},
