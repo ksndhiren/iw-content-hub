@@ -83,6 +83,11 @@ def _trim(text, limit):
 def caption_for(post, net):
     caps = post.get("captions") or {}
     tags = post.get("hashtagsByPlatform") or {}
+    # Threads uses a purpose-written short caption when present (500-char limit);
+    # otherwise it falls back to the ig-fb caption (trimmed only if needed).
+    if net == "threads" and caps.get("threads"):
+        # Dedicated Threads caption is written complete + length-budgeted; use as-is.
+        return _trim(caps["threads"], NET_LIMIT.get(net, 5000))
     ckey = NET_CAPTION[net]
     text = caps.get(ckey) or post.get("caption", "")
     hs = tags.get(ckey) or post.get("hashtags", [])

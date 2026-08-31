@@ -69,10 +69,11 @@ Return JSON with:
   "captions": {{
      "ig-fb": a self-contained caption that tells the whole story (all key facts and figures) in Internwise's voice, then one short line on how internships help early-career jobseekers. No link-teasing. End with "Source: {item.get('source','')}." (<=2200 chars),
      "linkedin": a professional, self-contained caption telling the whole story (all key facts and figures), then a brief internships angle. No link-teasing. End with "Source: {item.get('source','')}." (<=3000 chars),
-     "x": one tweet under 280 chars giving the most important fact(s) plainly - no teaser, no "link in bio" - ending with "(Source: {item.get('source','')})"
+     "x": one tweet under 280 chars giving the most important fact(s) plainly - no teaser, no "link in bio" - ending with "(Source: {item.get('source','')})",
+     "threads": a SELF-CONTAINED caption UNDER 480 characters (Threads limit) that still tells the story's key facts in Internwise's voice, ending with the URL www.internwise.co.uk (written out, no "link in bio", no trailing period). Do NOT just truncate the ig-fb caption - write a tighter one.
   }},
   "hashtags": {{"ig-fb": [5 tags], "linkedin": [3 tags], "x": [2 tags]}}"""
-    return _chat(user, max_tokens=1400)
+    return _chat(user, max_tokens=1500)
 
 
 # --------------------------------------------------------------------- captions only
