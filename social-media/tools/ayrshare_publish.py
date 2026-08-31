@@ -100,19 +100,20 @@ def media_for(post, week_id):
     return [f"{R2_BASE}/{week_id}/{post['id']}/{s}" for s in post.get("slides", [])]
 
 
-def schedule_iso(week, post):
+def schedule_iso(week, post, at=None):
     """Future UTC ISO for this post's lane time (UK local) on its day.
 
     LANE_TIME is UK wall-clock; we localise to Europe/London (handles BST/GMT
     automatically) then convert to UTC for Ayrshare. Past times return None so
-    the caller posts immediately instead of getting rejected."""
+    the caller posts immediately instead of getting rejected. `at` (\"HH:MM\")
+    overrides the lane time for a one-off custom slot."""
     wc = week.get("weekCommencing")
     if not wc:
         return None
     mon = datetime.date.fromisoformat(wc)
     dkey = post["id"].split("-")[-2] if post["id"].count("-") >= 2 else None
     di = DAY_INDEX.get(dkey, 0)
-    hh, mm = (LANE_TIME.get(post.get("lane"), "09:00")).split(":")
+    hh, mm = (at or LANE_TIME.get(post.get("lane"), "09:00")).split(":")
     when_uk = datetime.datetime.combine(
         mon + datetime.timedelta(days=di), datetime.time(int(hh), int(mm)),
         tzinfo=ZoneInfo("Europe/London"))
@@ -125,7 +126,7 @@ def _dkey(post):
     return post["id"].split("-")[-2] if post["id"].count("-") >= 2 else None
 
 
-def build_jobs(week, connected, want_status, use_schedule, only=None, days=None, stories=False):
+def build_jobs(week, connected, want_status, use_schedule, only=None, days=None, stories=False, at=None):
     jobs = []
     for post in week.get("posts", []):
         if only:
@@ -138,7 +139,7 @@ def build_jobs(week, connected, want_status, use_schedule, only=None, days=None,
         lane = post.get("lane")
         nets = [n for n in LANE_NETWORKS.get(lane, []) if n in connected]
         media = media_for(post, week["id"])
-        sched = schedule_iso(week, post) if use_schedule else None
+        sched = schedule_iso(week, post, at=at) if use_schedule else None
         for net in nets:
             text, trimmed = caption_for(post, net)
             jobs.append({"pid": post["id"], "lane": lane, "network": net, "kind": "feed",
@@ -186,6 +187,7 @@ def main():
     ap.add_argument("--only", default=None, help="post just this one post id (ignores status gate)")
     ap.add_argument("--days", default=None, help="comma list of day keys to include, e.g. tue,wed,thu,fri")
     ap.add_argument("--stories", action="store_true", help="also post an IG Story (cover image) per post")
+    ap.add_argument("--at", default=None, help="one-off UK HH:MM time override for scheduling")
     args = ap.parse_args()
     days = set(d.strip() for d in args.days.split(",")) if args.days else None
 
@@ -199,7 +201,7 @@ def main():
     connected = active_networks()
     posted = load_posted()
     jobs = build_jobs(week, connected, args.status, args.schedule, only=args.only,
-                      days=days, stories=args.stories)
+                      days=days, stories=args.stories, at=args.at)
 
     print(f"Week {args.week} | connected: {sorted(connected)} | status='{args.status}' "
           f"| {'LIVE' if args.live else 'DRY-RUN'}")
