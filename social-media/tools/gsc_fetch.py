@@ -2,31 +2,24 @@
 
 Pulls what people search on Google to reach internwise.co.uk (top + rising
 queries, top pages) and writes data/search_console.json, which the dashboard's
-Insights tab and the topic engine read. Uses a Google service account (headless,
-cloud-friendly - no interactive OAuth), so it runs unattended in CI.
+Insights tab and the topic engine read.
 
-Setup (one-off, done in the user's Google Cloud + Search Console):
-  1. Google Cloud console -> create a project (or reuse) -> enable
-     "Google Search Console API".
-  2. Create a Service Account -> add a JSON key -> download it.
-  3. In Search Console (search.google.com/search-console) open the
-     internwise.co.uk property -> Settings -> Users and permissions ->
-     add the service account's email (…iam.gserviceaccount.com) as a
-     Full or Restricted user.
-  4. Save the JSON key to social-media/secrets/gsc-service-account.json
-     (gitignored) and set GSC_SITE_URL in .env.
+Auth reuses the OAuth refresh-token already set up for the site-monitor project
+(GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET / GOOGLE_REFRESH_TOKEN) - a long-lived
+token for the user's Google account, so it can read every Search Console
+property that account owns, no service-account key needed. Headless/cloud-safe.
 
-    python3 tools/gsc_fetch.py --list-sites     # confirm the property string
+    python3 tools/gsc_fetch.py --list-sites     # show properties -> confirm string
     python3 tools/gsc_fetch.py                  # write data/search_console.json
 """
 from __future__ import annotations
-import os, sys, json, datetime
+import os, sys, json, datetime, urllib.request, urllib.error, urllib.parse
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SM   = os.path.dirname(HERE)
 HUB  = os.path.dirname(SM)
 OUT  = os.path.join(HUB, "data", "search_console.json")
-SCOPE = "https://www.googleapis.com/auth/webmasters.readonly"
+TOKEN_URL = "https://oauth2.googleapis.com/token"
 API = "https://searchconsole.googleapis.com/webmasters/v3"
 
 
@@ -37,40 +30,52 @@ def _load_env():
                 line = line.strip()
                 if line and not line.startswith("#") and "=" in line:
                     k, v = line.split("=", 1)
-                    os.environ.setdefault(k.strip(), v.strip())
+                    os.environ.setdefault(k.strip(), v.strip().strip('"'))
 _load_env()
 
-SA_JSON  = os.getenv("GSC_SA_JSON", os.path.join(SM, "secrets", "gsc-service-account.json"))
 SITE_URL = os.getenv("GSC_SITE_URL", "sc-domain:internwise.co.uk")
 
 
-def _session():
-    """Authorised requests session from the service-account key."""
-    import requests
-    from google.oauth2 import service_account
-    from google.auth.transport.requests import AuthorizedSession
-    if not os.path.exists(SA_JSON):
-        sys.exit(f"Service-account key not found at {SA_JSON} "
-                 f"(set GSC_SA_JSON or drop the file there).")
-    creds = service_account.Credentials.from_service_account_file(SA_JSON, scopes=[SCOPE])
-    return AuthorizedSession(creds)
+def _access_token():
+    for k in ("GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET", "GOOGLE_REFRESH_TOKEN"):
+        if not os.getenv(k):
+            sys.exit(f"Missing {k} in env (.env).")
+    body = urllib.parse.urlencode({
+        "grant_type": "refresh_token",
+        "refresh_token": os.environ["GOOGLE_REFRESH_TOKEN"],
+        "client_id": os.environ["GOOGLE_CLIENT_ID"],
+        "client_secret": os.environ["GOOGLE_CLIENT_SECRET"],
+    }).encode()
+    req = urllib.request.Request(TOKEN_URL, data=body,
+        headers={"Content-Type": "application/x-www-form-urlencoded"})
+    try:
+        return json.load(urllib.request.urlopen(req, timeout=30))["access_token"]
+    except urllib.error.HTTPError as e:
+        sys.exit(f"Token refresh failed ({e.code}): {e.read().decode()[:300]}")
+
+
+def _api(token, path, body=None):
+    url = f"{API}/{path}"
+    data = json.dumps(body).encode() if body is not None else None
+    req = urllib.request.Request(url, data=data, method="POST" if body is not None else "GET",
+        headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"})
+    try:
+        return json.load(urllib.request.urlopen(req, timeout=60))
+    except urllib.error.HTTPError as e:
+        sys.exit(f"GSC {path} failed ({e.code}): {e.read().decode()[:300]}")
 
 
 def list_sites():
-    s = _session()
-    r = s.get(f"{API}/sites"); r.raise_for_status()
-    for site in r.json().get("siteEntry", []):
-        print(f"  {site.get('permissionLevel'):20} {site.get('siteUrl')}")
+    token = _access_token()
+    for s in _api(token, "sites").get("siteEntry", []):
+        print(f"  {s.get('permissionLevel',''):22} {s.get('siteUrl')}")
 
 
-def _query(s, start, end, dimensions, row_limit=100):
+def _query(token, start, end, dimensions, row_limit=100):
     body = {"startDate": start, "endDate": end, "dimensions": dimensions,
             "rowLimit": row_limit, "dataState": "final"}
-    r = s.post(f"{API}/sites/{SITE_URL.replace('/', '%2F') if not SITE_URL.startswith('sc-domain') else SITE_URL}/searchAnalytics/query",
-               json=body)
-    if r.status_code != 200:
-        sys.exit(f"GSC query failed ({r.status_code}): {r.text[:300]}")
-    return r.json().get("rows", [])
+    path = f"sites/{urllib.parse.quote(SITE_URL, safe='')}/searchAnalytics/query"
+    return _api(token, path, body).get("rows", [])
 
 
 def _row(r):
@@ -80,16 +85,16 @@ def _row(r):
 
 
 def fetch():
-    s = _session()
+    token = _access_token()
     today = datetime.date.today()
-    end = today - datetime.timedelta(days=3)          # GSC lags ~2-3 days
-    start = end - datetime.timedelta(days=27)          # last 28 days
+    end = today - datetime.timedelta(days=3)             # GSC lags ~2-3 days
+    start = end - datetime.timedelta(days=27)             # last 28 days
     prev_end = start - datetime.timedelta(days=1)
-    prev_start = prev_end - datetime.timedelta(days=27)  # prior 28 days
+    prev_start = prev_end - datetime.timedelta(days=27)   # prior 28 days
 
-    cur = {r["keys"][0]: _row(r) for r in _query(s, start.isoformat(), end.isoformat(), ["query"])}
-    prev = {r["keys"][0]: _row(r) for r in _query(s, prev_start.isoformat(), prev_end.isoformat(), ["query"])}
-    pages = [_row(r) for r in _query(s, start.isoformat(), end.isoformat(), ["page"], row_limit=50)]
+    cur = {r["keys"][0]: _row(r) for r in _query(token, start.isoformat(), end.isoformat(), ["query"])}
+    prev = {r["keys"][0]: _row(r) for r in _query(token, prev_start.isoformat(), prev_end.isoformat(), ["query"])}
+    pages = [_row(r) for r in _query(token, start.isoformat(), end.isoformat(), ["page"], row_limit=50)]
 
     top = sorted(cur.values(), key=lambda x: (x["clicks"], x["impressions"]), reverse=True)[:50]
     rising = []
@@ -113,13 +118,9 @@ def fetch():
     json.dump(data, open(OUT, "w"), indent=2, ensure_ascii=False)
     print(f"Wrote {OUT}: {len(top)} top queries, {len(rising)} rising, {len(pages)} pages "
           f"({start} to {end}).")
-    print("Top 10 by clicks:")
     for r in top[:10]:
         print(f"  {r['clicks']:4} clicks | {r['impressions']:6} impr | pos {r['position']:4} | {r['key']}")
 
 
 if __name__ == "__main__":
-    if "--list-sites" in sys.argv:
-        list_sites()
-    else:
-        fetch()
+    (list_sites if "--list-sites" in sys.argv else fetch)()
