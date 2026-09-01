@@ -76,12 +76,12 @@ def eyebrow(tag, left, top, color=AMBER):
             f"<div style='position:absolute;left:{left}px;top:{top+34}px;width:64px;height:4px;"
             f"background:{color};border-radius:2px;'></div>")
 
-def url_footer(left=56, bottom=44, color=MUT, roundel=AMBER, ink=DEEP):
+def url_footer(left=56, bottom=44, color=MUT, roundel=AMBER, ink=DEEP, text=URL):
     return (f"<div style='position:absolute;left:{left}px;bottom:{bottom}px;display:flex;align-items:center;gap:13px;'>"
             f"<div style='width:34px;height:34px;border-radius:50%;background:{roundel};display:flex;align-items:center;justify-content:center;'>"
             f"<svg width='17' height='17' viewBox='0 0 24 24' fill='none' stroke='{ink}' stroke-width='2.6' "
             f"stroke-linecap='round' stroke-linejoin='round'><path d='M7 17L17 7M9 7h8v8'/></svg></div>"
-            f"<span style=\"font-family:'DM Sans';font-weight:700;font-size:20px;color:{color};letter-spacing:1px;\">{URL}</span></div>")
+            f"<span style=\"font-family:'DM Sans';font-weight:700;font-size:20px;color:{color};letter-spacing:1px;\">{text}</span></div>")
 
 def url_pill(right=56, bottom=44, bg=AMBER, ink=DEEP):
     return (f"<div style='position:absolute;right:{right}px;bottom:{bottom}px;display:inline-flex;align-items:center;gap:11px;"

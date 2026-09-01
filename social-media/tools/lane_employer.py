@@ -9,8 +9,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lanes_common as L
 
 NAVY, DEEP, INK = L.NAVY, L.DEEP, L.INK
-AMBER, CORAL, GREEN = L.AMBER, L.CORAL, L.GREEN
-LOGOS = ["nike", "oracle", "o-1", "manutd"]
+AMBER, CORAL = L.AMBER, L.CORAL
+GREEN = "#5B9291"          # IW UK teal — employer accent (replaces off-brand mint)
+BG1, BG2 = "#12213f", "#0A1830"   # IW UK navy background pair (all employer worlds)
+EMP_URL = "internwise.co.uk/employers"
 
 
 def _bg(c1, c2):
@@ -34,17 +36,23 @@ def _tag():
             f"{L.svg('briefcase',GREEN,22)}<span style=\"font-family:Inter;font-weight:700;font-size:19px;color:{INK};letter-spacing:2px;\">FOR EMPLOYERS</span></div>")
 
 def _cta(text):
+    # IW UK yellow button with navy text
     return (f"<div style='position:absolute;left:58px;bottom:120px;display:inline-flex;align-items:center;gap:14px;"
-            f"height:66px;padding:0 32px;border-radius:33px;background:{GREEN};'>"
+            f"height:66px;padding:0 32px;border-radius:33px;background:{AMBER};'>"
             f"<span style=\"font-family:Inter;font-weight:800;font-size:26px;color:{DEEP};\">{text}</span>"
             f"<svg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='{DEEP}' stroke-width='2.8' "
             f"stroke-linecap='round' stroke-linejoin='round'><path d='M5 12h14M13 6l6 6-6 6'/></svg></div>")
 
-def _chip(name, w=132, h=66):
-    src = L.img(os.path.join(L.BASE, "assets", "employer_logos", name+".png"))
-    return (f"<div style='display:inline-flex;align-items:center;justify-content:center;height:{h}px;width:{w}px;"
-            f"background:#FFFFFF;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.22);'>"
-            f"<img src='{src}' style='max-width:{w-32}px;max-height:{h-22}px;object-fit:contain;'></div>")
+def _sectorchips(items):
+    chips = ""
+    for i, s in enumerate(items):
+        pop = i % 4 == 1
+        col = DEEP if pop else INK
+        bg = f"{AMBER}" if pop else f"{GREEN}1f"
+        bd = "transparent" if pop else f"{GREEN}66"
+        chips += (f"<span style=\"font-family:Inter;font-weight:700;font-size:24px;color:{col};background:{bg};"
+                  f"border:1.5px solid {bd};border-radius:100px;padding:12px 24px;display:inline-block;margin:0 12px 14px 0;\">{s}</span>")
+    return chips
 
 
 # ---- benefits (approved sample) ----
@@ -52,7 +60,7 @@ def w_benefits(a):
     SUBT="#9FC2C9"
     head = (f"<div style='position:absolute;left:58px;top:242px;width:580px;'>"
             f"<div style=\"font-family:Inter;font-weight:800;font-size:60px;line-height:1.04;letter-spacing:-1.5px;color:{INK};word-break:keep-all;\">"
-            f"Your next intern is <span style='color:{GREEN};'>already here.</span></div></div>")
+            f"Your next intern is <span style='color:{AMBER};'>already here.</span></div></div>")
     icons = ["users", "rocket", "clipboard"]
     rows = "".join(
         f"<div style='display:flex;gap:18px;align-items:center;margin-bottom:22px;'>"
@@ -61,10 +69,10 @@ def w_benefits(a):
         f"<div style=\"font-family:Inter;font-weight:700;font-size:30px;color:{INK};letter-spacing:-.4px;line-height:1.12;\">{bn}</div></div>"
         for ic, bn in zip(icons, a["benefits"]))
     blist = f"<div style='position:absolute;left:58px;top:400px;width:600px;'>{rows}</div>"
-    trust = (f"<div style='position:absolute;left:58px;top:678px;'>"
-             f"<div style=\"font-family:'DM Sans';font-weight:700;font-size:19px;color:{SUBT};letter-spacing:2px;\">TRUSTED BY</div>"
-             f"<div style='display:flex;gap:12px;margin-top:12px;'>{''.join(_chip(n) for n in LOGOS)}</div></div>")
-    return _bg("#0B2B33","#0A1D24")+_nuno("nuno_authority_1")+L.logo_tl()+_tag()+head+blist+trust+_cta(a["cta"])+L.url_footer(color=SUBT)
+    trust = (f"<div style='position:absolute;left:58px;top:690px;display:inline-flex;align-items:center;gap:12px;"
+             f"height:52px;padding:0 24px;border-radius:26px;background:{GREEN}1f;border:1.5px solid {GREEN}55;'>"
+             f"{L.svg('users',GREEN,24)}<span style=\"font-family:Inter;font-weight:700;font-size:22px;color:{INK};\">Trusted by 14,000+ UK employers</span></div>")
+    return _bg(BG1,BG2)+_nuno("nuno_authority_1")+L.logo_tl()+head+blist+trust+_cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL)
 
 # ---- big stat ----
 def w_bigstat(a):
@@ -72,16 +80,16 @@ def w_bigstat(a):
     head = (f"<div style='position:absolute;left:58px;top:230px;width:560px;'>"
             f"<div style=\"font-family:Inter;font-weight:700;font-size:44px;line-height:1.1;letter-spacing:-1px;color:{INK};\">Reach early-career talent</div></div>")
     stat = (f"<div style='position:absolute;left:58px;top:330px;'>"
-            f"<div style=\"font-family:Inter;font-weight:800;font-size:150px;line-height:.82;color:{AMBER};letter-spacing:-5px;\">398K+</div>"
-            f"<div style=\"font-family:Inter;font-weight:700;font-size:34px;color:{INK};margin-top:16px;\">active candidates,</div>"
-            f"<div style=\"font-family:Inter;font-weight:700;font-size:34px;color:{INK};\">ready to work</div>"
+            f"<div style=\"font-family:Inter;font-weight:800;font-size:150px;line-height:.82;color:{AMBER};letter-spacing:-5px;\">400K</div>"
+            f"<div style=\"font-family:Inter;font-weight:700;font-size:34px;color:{INK};margin-top:16px;\">UK students &amp;</div>"
+            f"<div style=\"font-family:Inter;font-weight:700;font-size:34px;color:{INK};\">graduates</div>"
             f"<div style=\"font-family:'DM Sans';font-weight:600;font-size:26px;color:{SUBT};margin-top:18px;\">14,000+ employers already hiring here</div></div>")
-    return _bg("#12213f","#0A1830")+_nuno("nuno_authority_3", right=-55)+L.logo_tl()+_tag()+head+stat+_cta(a["cta"])+L.url_footer(color=SUBT)
+    return _bg(BG1,BG2)+_nuno("nuno_authority_3", right=-55)+L.logo_tl()+head+stat+_cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL)
 
 # ---- process ----
 def w_process(a):
     SUBT="#9FB4B0"
-    steps = [("Post your role in minutes"), ("We surface pre-screened talent"),
+    steps = [("Post your role in minutes"), ("Find candidates that fit"),
              ("Shortlist and interview"), ("Onboard and track progress")]
     head = (f"<div style='position:absolute;left:58px;top:230px;width:560px;'>"
             f"<div style=\"font-family:Inter;font-weight:800;font-size:56px;line-height:1.04;letter-spacing:-1.5px;color:{INK};\">From role posted<br>to intern onboarded</div></div>")
@@ -89,32 +97,32 @@ def w_process(a):
     for i, s in enumerate(steps, 1):
         rows += (f"<div style='display:flex;gap:18px;align-items:center;margin-bottom:20px;'>"
                  f"<div style='flex:0 0 54px;width:54px;height:54px;border-radius:14px;background:{GREEN};display:flex;align-items:center;justify-content:center;'>"
-                 f"<span style=\"font-family:Inter;font-weight:800;font-size:28px;color:{DEEP};\">{i}</span></div>"
+                 f"<span style=\"font-family:Inter;font-weight:800;font-size:28px;color:#fff;\">{i}</span></div>"
                  f"<span style=\"font-family:Inter;font-weight:700;font-size:27px;color:{INK};letter-spacing:-.3px;line-height:1.15;\">{s}</span></div>")
     # Steps stay one line each in a column sized to the longest label, and Nuno
     # is pushed further off the right edge, so the longest step ("Onboard and
     # track progress") clears the figure instead of colliding with his shoulder.
     flow = f"<div style='position:absolute;left:58px;top:400px;width:548px;'>{rows}</div>"
-    return _bg("#1c2433","#12161f")+_nuno("nuno_planning_1", right=-120)+L.logo_tl()+_tag()+head+flow+_cta(a["cta"])+L.url_footer(color=SUBT)
+    return _bg(BG1,BG2)+_nuno("nuno_planning_1", right=-120)+L.logo_tl()+head+flow+_cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL)
 
 # ---- trust (logo wall) ----
 def w_trust(a):
     SUBT="#A9C7A9"
-    head = (f"<div style='position:absolute;left:58px;top:240px;width:560px;'>"
-            f"<div style=\"font-family:Inter;font-weight:800;font-size:64px;line-height:1.02;letter-spacing:-1.5px;color:{INK};\">In good<br>company.</div>"
-            f"<div style=\"font-family:'DM Sans';font-weight:500;font-size:28px;color:{SUBT};line-height:1.34;margin-top:22px;\">From global brands to fast-growing teams, employers hire early talent on Internwise.</div></div>")
-    grid = "".join(_chip(n, w=150, h=80) for n in LOGOS)
-    wall = (f"<div style='position:absolute;left:58px;top:560px;width:640px;display:grid;grid-template-columns:1fr 1fr;gap:16px;'>{grid}</div>")
-    return _bg("#123528","#0A1A14")+_nuno("nuno_authority_2")+L.logo_tl()+_tag()+head+wall+_cta(a["cta"])+L.url_footer(color=SUBT)
+    head = (f"<div style='position:absolute;left:58px;top:236px;width:600px;'>"
+            f"<div style=\"font-family:Inter;font-weight:800;font-size:64px;line-height:1.02;letter-spacing:-1.5px;color:{INK};\"><span style='color:{AMBER};'>14,000+</span><br>UK employers<br>hire here.</div>"
+            f"<div style=\"font-family:'DM Sans';font-weight:500;font-size:28px;color:{SUBT};line-height:1.34;margin-top:22px;width:560px;\">From startups to household names, teams across every sector build their pipeline on Internwise.</div></div>")
+    sectors = ["Finance","Marketing","Technology","Engineering","Healthcare","Media","Consulting","Design"]
+    wall = (f"<div style='position:absolute;left:58px;top:640px;width:640px;'>{_sectorchips(sectors)}</div>")
+    return _bg(BG1,BG2)+_nuno("nuno_authority_2")+L.logo_tl()+head+wall+_cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL)
 
 # ---- statement ----
 def w_statement(a):
     SUBT="#9FC2C9"
     head = (f"<div style='position:absolute;left:58px;top:280px;width:600px;'>"
             f"<div style=\"font-family:Inter;font-weight:800;font-size:66px;line-height:1.06;letter-spacing:-1.5px;color:{INK};\">"
-            f"Skip the CV pile. Start with <span style='color:{GREEN};'>pre-screened</span> talent.</div>"
-            f"<div style=\"font-family:'DM Sans';font-weight:500;font-size:29px;color:{SUBT};line-height:1.34;margin-top:24px;\">We surface quality, ready-to-work candidates so you review the best, faster.</div></div>")
-    return _bg("#0B2B33","#0A1D24")+_nuno("nuno_thoughtful_1")+L.logo_tl()+_tag()+head+_cta(a["cta"])+L.url_footer(color=SUBT)
+            f"Skip the CV pile. Go straight to the <span style='color:{AMBER};'>right candidate.</span></div>"
+            f"<div style=\"font-family:'DM Sans';font-weight:500;font-size:29px;color:{SUBT};line-height:1.34;margin-top:24px;\">Search candidates by course, skills and location so you find the right fit, faster.</div></div>")
+    return _bg(BG1,BG2)+_nuno("nuno_thoughtful_1")+L.logo_tl()+head+_cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL)
 
 
 WORLDS = {"benefits": w_benefits, "bigstat": w_bigstat, "process": w_process,
