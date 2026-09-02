@@ -34,6 +34,29 @@ def _client():
     return OpenAI()   # reads OPENAI_API_KEY from env
 
 
+def _lc_hashtags(obj):
+    """Force every generated hashtag to lowercase (#techjobs, never #TechJobs).
+    Brand rule: on-screen + caption hashtags stay lowercase. Applied to every
+    writer output so no capitalised tag ever reaches weeks.json."""
+    def lc(t):
+        return "#" + t[1:].lower() if isinstance(t, str) and t.startswith("#") else t
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            if k == "hashtags":
+                if isinstance(v, list):
+                    obj[k] = [lc(x) for x in v]
+                elif isinstance(v, dict):
+                    for pk, pv in v.items():
+                        if isinstance(pv, list):
+                            v[pk] = [lc(x) for x in pv]
+            else:
+                _lc_hashtags(v)
+    elif isinstance(obj, list):
+        for x in obj:
+            _lc_hashtags(x)
+    return obj
+
+
 def _chat(user, max_tokens=900):
     resp = _client().chat.completions.create(
         model=MODEL,
@@ -42,7 +65,7 @@ def _chat(user, max_tokens=900):
         temperature=0.7,
         max_tokens=max_tokens,
     )
-    return json.loads(resp.choices[0].message.content)
+    return _lc_hashtags(json.loads(resp.choices[0].message.content))
 
 
 # --------------------------------------------------------------------------- news

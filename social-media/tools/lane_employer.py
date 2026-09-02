@@ -121,7 +121,7 @@ def w_statement(a):
     head = (f"<div style='position:absolute;left:58px;top:280px;width:600px;'>"
             f"<div style=\"font-family:Inter;font-weight:800;font-size:66px;line-height:1.06;letter-spacing:-1.5px;color:{INK};\">"
             f"Skip the CV pile. Go straight to the <span style='color:{AMBER};'>right candidate.</span></div>"
-            f"<div style=\"font-family:'DM Sans';font-weight:500;font-size:29px;color:{SUBT};line-height:1.34;margin-top:24px;\">Search candidates by course, skills and location so you find the right fit, faster.</div></div>")
+            f"<div style=\"font-family:'DM Sans';font-weight:500;font-size:29px;color:{SUBT};line-height:1.34;margin-top:24px;\">Search candidates by sector, skills and location so you find the right fit, faster.</div></div>")
     return _bg(BG1,BG2)+_nuno("nuno_thoughtful_1")+L.logo_tl()+head+_cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL)
 
 

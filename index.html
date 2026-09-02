@@ -22,6 +22,7 @@
         <button class="mode-tab is-active" id="mode-weekly" data-mode="weekly" role="tab" aria-selected="true"><span class="tab-full">Weekly Graphics</span><span class="tab-abbr">Weekly</span></button>
         <button class="mode-tab" id="mode-shorts" data-mode="shorts" role="tab" aria-selected="false"><span class="tab-full">Shorts / Reels</span><span class="tab-abbr">Shorts</span></button>
         <button class="mode-tab" id="mode-featured" data-mode="featured" role="tab" aria-selected="false"><span class="tab-full">Featured Jobs</span><span class="tab-abbr">Featured</span><span class="mode-tab__badge" id="featured-badge" hidden></span></button>
+        <button class="mode-tab" id="mode-analytics" data-mode="analytics" role="tab" aria-selected="false"><span class="tab-full">Analytics</span><span class="tab-abbr">Stats</span></button>
       </div>
 
       <div class="site-header__controls">
@@ -48,6 +49,9 @@
     <div class="empty-state" id="empty-state" hidden>
       <p>No posts found for this week.</p>
     </div>
+
+    <!-- Analytics view (injected by JS; hidden unless the Analytics tab is active) -->
+    <div class="analytics-view" id="analytics-view" hidden aria-live="polite"></div>
 
   </main>
 

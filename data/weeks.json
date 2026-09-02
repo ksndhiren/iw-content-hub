@@ -1475,7 +1475,7 @@
             ],
             "x": [
               "#jobhunt",
-              "#AItools"
+              "#aitools"
             ]
           }
         },
@@ -2217,7 +2217,7 @@
       "id": "week14",
       "label": "Week 14",
       "weekCommencing": "2026-08-31",
-      "builtAt": 1788268784,
+      "builtAt": 1788289696,
       "posts": [
         {
           "id": "week14-mon-news",
@@ -2232,11 +2232,11 @@
           "status": "in-review",
           "caption": "In the UK, over one-third of employers have cut back on entry-level jobs for young people aged 16-24. This comes as the number of Neets (young people not in education, employment, or training) continues to grow. This reduction in opportunities means that students and recent graduates might face more competition in landing their first job. However, internships are a great way to gain experience and make your CV stand out. They can provide the skills and connections needed to navigate this challenging job market. Source: Personnel Today.",
           "hashtags": [
-            "#UKJobs",
-            "#EntryLevel",
-            "#Internships",
-            "#CareerStart",
-            "#JobMarket"
+            "#ukjobs",
+            "#entrylevel",
+            "#internships",
+            "#careerstart",
+            "#jobmarket"
           ],
           "captions": {
             "ig-fb": "In the UK, over one-third of employers have cut back on entry-level jobs for young people aged 16-24. This comes as the number of Neets (young people not in education, employment, or training) continues to grow. This reduction in opportunities means that students and recent graduates might face more competition in landing their first job. However, internships are a great way to gain experience and make your CV stand out. They can provide the skills and connections needed to navigate this challenging job market. Source: Personnel Today.",
@@ -2246,20 +2246,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#UKJobs",
-              "#EntryLevel",
-              "#Internships",
-              "#CareerStart",
-              "#JobMarket"
+              "#ukjobs",
+              "#entrylevel",
+              "#internships",
+              "#careerstart",
+              "#jobmarket"
             ],
             "linkedin": [
-              "#UKJobs",
-              "#EntryLevel",
-              "#Internships"
+              "#ukjobs",
+              "#entrylevel",
+              "#internships"
             ],
             "x": [
-              "#UKJobs",
-              "#Internships"
+              "#ukjobs",
+              "#internships"
             ]
           }
         },
@@ -2276,11 +2276,11 @@
           "status": "in-review",
           "caption": "Feeling stuck? Remember, opportunities aren't just handed to you - you have to make them happen. Whether it's that dream internship or the start of a new career path, you have the power to shape your future. Start creating your opportunities today. Find your internship through www.internwise.co.uk",
           "hashtags": [
-            "#CreateOpportunities",
-            "#CareerGrowth",
-            "#InternshipJourney",
-            "#FutureReady",
-            "#InternwiseUK"
+            "#createopportunities",
+            "#careergrowth",
+            "#internshipjourney",
+            "#futureready",
+            "#internwiseuk"
           ],
           "captions": {
             "ig-fb": "Feeling stuck? Remember, opportunities aren't just handed to you - you have to make them happen. Whether it's that dream internship or the start of a new career path, you have the power to shape your future. Start creating your opportunities today. Find your internship through www.internwise.co.uk",
@@ -2289,20 +2289,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#CreateOpportunities",
-              "#CareerGrowth",
-              "#InternshipJourney",
-              "#FutureReady",
-              "#InternwiseUK"
+              "#createopportunities",
+              "#careergrowth",
+              "#internshipjourney",
+              "#futureready",
+              "#internwiseuk"
             ],
             "linkedin": [
-              "#CareerOpportunities",
-              "#Internships",
-              "#Internwise"
+              "#careeropportunities",
+              "#internships",
+              "#internwise"
             ],
             "x": [
-              "#CreateOpportunities",
-              "#Internships"
+              "#createopportunities",
+              "#internships"
             ]
           }
         },
@@ -2319,11 +2319,11 @@
           "status": "approved",
           "caption": "Bingo! 🎉 We've all been there - the ups, the downs, and the in-betweens of the graduate job hunt. From 'refreshing your email 10 times a day' to 'nailing the Zoom interview' - how many can you tick off? 🤔 Dive into the shared truths of the search and find your next step with us. Ready to play? Head to www.internwise.co.uk for opportunities waiting just for you!",
           "hashtags": [
-            "#GradLife",
-            "#JobHunt",
-            "#CareerGoals",
-            "#GraduateJobs",
-            "#Internships"
+            "#gradlife",
+            "#jobhunt",
+            "#careergoals",
+            "#graduatejobs",
+            "#internships"
           ],
           "captions": {
             "ig-fb": "Bingo! 🎉 We've all been there - the ups, the downs, and the in-betweens of the graduate job hunt. From 'refreshing your email 10 times a day' to 'nailing the Zoom interview' - how many can you tick off? 🤔 Dive into the shared truths of the search and find your next step with us. Ready to play? Head to www.internwise.co.uk for opportunities waiting just for you!",
@@ -2332,20 +2332,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#GradLife",
-              "#JobHunt",
-              "#CareerGoals",
-              "#GraduateJobs",
-              "#Internships"
+              "#gradlife",
+              "#jobhunt",
+              "#careergoals",
+              "#graduatejobs",
+              "#internships"
             ],
             "linkedin": [
-              "#GraduateJobs",
-              "#CareerSearch",
-              "#Internships"
+              "#graduatejobs",
+              "#careersearch",
+              "#internships"
             ],
             "x": [
-              "#GradJobs",
-              "#CareerSearch"
+              "#gradjobs",
+              "#careersearch"
             ]
           }
         },
@@ -2362,11 +2362,11 @@
           "status": "approved",
           "caption": "Finding the right intern can feel like searching for a needle in a haystack - but your next star may already be here. With 400,000 registered candidates, Internwise helps you source early-career talent fast. Post your role in minutes and manage everything from shortlisting to onboarding in one place. Ready to meet your future team member? internwise.co.uk/employers",
           "hashtags": [
-            "#InternshipUK",
-            "#GraduateJobs",
-            "#EarlyCareers",
-            "#HiringNow",
-            "#TalentSearch"
+            "#internshipuk",
+            "#graduatejobs",
+            "#earlycareers",
+            "#hiringnow",
+            "#talentsearch"
           ],
           "captions": {
             "ig-fb": "Finding the right intern can feel like searching for a needle in a haystack - but your next star may already be here. With 400,000 registered candidates, Internwise helps you source early-career talent fast. Post your role in minutes and manage everything from shortlisting to onboarding in one place. Ready to meet your future team member? internwise.co.uk/employers",
@@ -2375,20 +2375,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#InternshipUK",
-              "#GraduateJobs",
-              "#EarlyCareers",
-              "#HiringNow",
-              "#TalentSearch"
+              "#internshipuk",
+              "#graduatejobs",
+              "#earlycareers",
+              "#hiringnow",
+              "#talentsearch"
             ],
             "linkedin": [
-              "#EarlyCareers",
-              "#TalentAcquisition",
-              "#InternshipUK"
+              "#earlycareers",
+              "#talentacquisition",
+              "#internshipuk"
             ],
             "x": [
-              "#HiringNow",
-              "#InternshipUK"
+              "#hiringnow",
+              "#internshipuk"
             ]
           }
         },
@@ -2409,11 +2409,11 @@
           "status": "approved",
           "caption": "Your CV might not be getting the attention it deserves. Recruiters scan for role fit before they dive deep. A task without a result feels like a job description, not proof of your skills. Ensure your most compelling achievements appear on the first page - don't bury them on page two. Rework those vague lines into clear evidence of your potential. Want more tips? Check www.internwise.co.uk for insights!",
           "hashtags": [
-            "#CVTips",
-            "#CareerAdvice",
-            "#JobHunt",
-            "#GraduateJobs",
-            "#Internships"
+            "#cvtips",
+            "#careeradvice",
+            "#jobhunt",
+            "#graduatejobs",
+            "#internships"
           ],
           "captions": {
             "ig-fb": "Your CV might not be getting the attention it deserves. Recruiters scan for role fit before they dive deep. A task without a result feels like a job description, not proof of your skills. Ensure your most compelling achievements appear on the first page - don't bury them on page two. Rework those vague lines into clear evidence of your potential. Want more tips? Check www.internwise.co.uk for insights!",
@@ -2422,20 +2422,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#CVTips",
-              "#CareerAdvice",
-              "#JobHunt",
-              "#GraduateJobs",
-              "#Internships"
+              "#cvtips",
+              "#careeradvice",
+              "#jobhunt",
+              "#graduatejobs",
+              "#internships"
             ],
             "linkedin": [
-              "#CVWriting",
-              "#CareerDevelopment",
-              "#Internships"
+              "#cvwriting",
+              "#careerdevelopment",
+              "#internships"
             ],
             "x": [
-              "#CVTips",
-              "#GraduateJobs"
+              "#cvtips",
+              "#graduatejobs"
             ]
           }
         },
@@ -2452,11 +2452,11 @@
           "status": "approved",
           "caption": "A study forecasts that by 2026, care work and software development will rank among the most common full-time jobs in the UK. This reflects the increasing demand for skills in both the care sector and technology. For students and graduates, this trend means more opportunities are emerging in these fields. If you're looking to build a rewarding career, focusing on care or tech could be a wise choice. Internships offer a fantastic way to gain relevant experience and learn the skills employers are seeking. Embrace these opportunities to kickstart your career. Source: FE News.",
           "hashtags": [
-            "#UKJobs",
-            "#Careers",
-            "#TechJobs",
-            "#Internships",
-            "#FutureSkills"
+            "#ukjobs",
+            "#careers",
+            "#techjobs",
+            "#internships",
+            "#futureskills"
           ],
           "captions": {
             "ig-fb": "A study forecasts that by 2026, care work and software development will rank among the most common full-time jobs in the UK. This reflects the increasing demand for skills in both the care sector and technology. For students and graduates, this trend means more opportunities are emerging in these fields. If you're looking to build a rewarding career, focusing on care or tech could be a wise choice. Internships offer a fantastic way to gain relevant experience and learn the skills employers are seeking. Embrace these opportunities to kickstart your career. Source: FE News.",
@@ -2466,20 +2466,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#UKJobs",
-              "#Careers",
-              "#TechJobs",
-              "#Internships",
-              "#FutureSkills"
+              "#ukjobs",
+              "#careers",
+              "#techjobs",
+              "#internships",
+              "#futureskills"
             ],
             "linkedin": [
-              "#UKJobMarket",
-              "#CareerGrowth",
-              "#Internships"
+              "#ukjobmarket",
+              "#careergrowth",
+              "#internships"
             ],
             "x": [
-              "#UKJobs",
-              "#FutureCareers"
+              "#ukjobs",
+              "#futurecareers"
             ]
           }
         },
@@ -2496,11 +2496,11 @@
           "status": "approved",
           "caption": "Steve Jobs once said, 'The only way to do great work is to love what you do.' Finding that passion can make all the difference. Whether you're just starting out or looking for a fresh path, we've got an array of paid internships waiting for you. Explore opportunities and discover what you love doing. Check out www.internwise.co.uk to get started!",
           "hashtags": [
-            "#CareerAdvice",
-            "#SteveJobsQuote",
-            "#LoveWhatYouDo",
-            "#InternshipOpportunities",
-            "#Internwise"
+            "#careeradvice",
+            "#stevejobsquote",
+            "#lovewhatyoudo",
+            "#internshipopportunities",
+            "#internwise"
           ],
           "captions": {
             "ig-fb": "Steve Jobs once said, 'The only way to do great work is to love what you do.' Finding that passion can make all the difference. Whether you're just starting out or looking for a fresh path, we've got an array of paid internships waiting for you. Explore opportunities and discover what you love doing. Check out www.internwise.co.uk to get started!",
@@ -2509,20 +2509,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#CareerAdvice",
-              "#SteveJobsQuote",
-              "#LoveWhatYouDo",
-              "#InternshipOpportunities",
-              "#Internwise"
+              "#careeradvice",
+              "#stevejobsquote",
+              "#lovewhatyoudo",
+              "#internshipopportunities",
+              "#internwise"
             ],
             "linkedin": [
-              "#CareerInspiration",
-              "#InternshipOpportunities",
-              "#Internwise"
+              "#careerinspiration",
+              "#internshipopportunities",
+              "#internwise"
             ],
             "x": [
-              "#CareerAdvice",
-              "#Internwise"
+              "#careeradvice",
+              "#internwise"
             ]
           }
         },
@@ -2539,11 +2539,11 @@
           "status": "approved",
           "caption": "Ever had your mind go blank when asked about your biggest weakness? You're not alone! We've ranked interview questions from S (super stressful) to B (barely bothersome). Swipe through and see where your least favourite lands. Ready to tackle them head-on? Your next paid internship could be just a click away - find it in our www.internwise.co.uk",
           "hashtags": [
-            "#InterviewTips",
-            "#InternshipUK",
-            "#CareerAdvice",
-            "#JobSearch",
-            "#GraduateOpportunities"
+            "#interviewtips",
+            "#internshipuk",
+            "#careeradvice",
+            "#jobsearch",
+            "#graduateopportunities"
           ],
           "captions": {
             "ig-fb": "Ever had your mind go blank when asked about your biggest weakness? You're not alone! We've ranked interview questions from S (super stressful) to B (barely bothersome). Swipe through and see where your least favourite lands. Ready to tackle them head-on? Your next paid internship could be just a click away - find it in our www.internwise.co.uk",
@@ -2552,20 +2552,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#InterviewTips",
-              "#InternshipUK",
-              "#CareerAdvice",
-              "#JobSearch",
-              "#GraduateOpportunities"
+              "#interviewtips",
+              "#internshipuk",
+              "#careeradvice",
+              "#jobsearch",
+              "#graduateopportunities"
             ],
             "linkedin": [
-              "#InterviewPreparation",
-              "#CareerGrowth",
-              "#InternshipOpportunities"
+              "#interviewpreparation",
+              "#careergrowth",
+              "#internshipopportunities"
             ],
             "x": [
-              "#InterviewTips",
-              "#Internship"
+              "#interviewtips",
+              "#internship"
             ]
           }
         },
@@ -2582,11 +2582,11 @@
           "status": "approved",
           "caption": "Looking for fresh talent? With 400,000 registered candidates, Internwise connects you with students and graduates across the UK. Join 14,000+ employers who use our platform to find their next hire. Want to boost your applications as a Featured Employer? Head to internwise.co.uk/employers to discover more.",
           "hashtags": [
-            "#InternshipUK",
-            "#GraduateJobs",
-            "#UKTalent",
-            "#FeaturedEmployer",
-            "#CareerGrowth"
+            "#internshipuk",
+            "#graduatejobs",
+            "#uktalent",
+            "#featuredemployer",
+            "#careergrowth"
           ],
           "captions": {
             "ig-fb": "Looking for fresh talent? With 400,000 registered candidates, Internwise connects you with students and graduates across the UK. Join 14,000+ employers who use our platform to find their next hire. Want to boost your applications as a Featured Employer? Head to internwise.co.uk/employers to discover more.",
@@ -2595,20 +2595,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#InternshipUK",
-              "#GraduateJobs",
-              "#UKTalent",
-              "#FeaturedEmployer",
-              "#CareerGrowth"
+              "#internshipuk",
+              "#graduatejobs",
+              "#uktalent",
+              "#featuredemployer",
+              "#careergrowth"
             ],
             "linkedin": [
-              "#GraduateTalent",
-              "#UKEmployers",
-              "#InternshipOpportunities"
+              "#graduatetalent",
+              "#ukemployers",
+              "#internshipopportunities"
             ],
             "x": [
-              "#UKJobs",
-              "#CareerStart"
+              "#ukjobs",
+              "#careerstart"
             ]
           }
         },
@@ -2629,11 +2629,11 @@
           "status": "approved",
           "caption": "Ever left an interview feeling like your answers were too generic? You're not alone. It's all about crafting responses that are memorable and specific. Use one situation, one decision, one result - and stop. This approach not only keeps you on point but also showcases your judgement. Remember, ending your answer cleanly exudes confidence. Want more tips? Check www.internwise.co.uk",
           "hashtags": [
-            "#InterviewTips",
-            "#JobSearch",
-            "#CareerAdvice",
-            "#StandOut",
-            "#Internwise"
+            "#interviewtips",
+            "#jobsearch",
+            "#careeradvice",
+            "#standout",
+            "#internwise"
           ],
           "captions": {
             "ig-fb": "Ever left an interview feeling like your answers were too generic? You're not alone. It's all about crafting responses that are memorable and specific. Use one situation, one decision, one result - and stop. This approach not only keeps you on point but also showcases your judgement. Remember, ending your answer cleanly exudes confidence. Want more tips? Check www.internwise.co.uk",
@@ -2642,20 +2642,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#InterviewTips",
-              "#JobSearch",
-              "#CareerAdvice",
-              "#StandOut",
-              "#Internwise"
+              "#interviewtips",
+              "#jobsearch",
+              "#careeradvice",
+              "#standout",
+              "#internwise"
             ],
             "linkedin": [
-              "#InterviewAdvice",
-              "#CareerGrowth",
-              "#Internwise"
+              "#interviewadvice",
+              "#careergrowth",
+              "#internwise"
             ],
             "x": [
-              "#InterviewTips",
-              "#Internwise"
+              "#interviewtips",
+              "#internwise"
             ]
           }
         },
@@ -2672,11 +2672,11 @@
           "status": "approved",
           "caption": "The UK Government has kicked off the Jobs Guarantee scheme, targeting young adults aged 18-24 who have been claiming Universal Credit and seeking employment for 18 months. With the promise of 90,000 fully funded jobs by 2029, this initiative is set to provide a much-needed boost to young jobseekers. This scheme offers a vital opportunity for those struggling to secure work, helping them transition into paid roles and build a foundation for their careers. Paid internships can further enhance your employability by providing essential skills and experience. Source: FE News.",
           "hashtags": [
-            "#UKJobs",
-            "#YouthEmployment",
-            "#JobsGuarantee",
-            "#PaidInternships",
-            "#CareerStart"
+            "#ukjobs",
+            "#youthemployment",
+            "#jobsguarantee",
+            "#paidinternships",
+            "#careerstart"
           ],
           "captions": {
             "ig-fb": "The UK Government has kicked off the Jobs Guarantee scheme, targeting young adults aged 18-24 who have been claiming Universal Credit and seeking employment for 18 months. With the promise of 90,000 fully funded jobs by 2029, this initiative is set to provide a much-needed boost to young jobseekers. This scheme offers a vital opportunity for those struggling to secure work, helping them transition into paid roles and build a foundation for their careers. Paid internships can further enhance your employability by providing essential skills and experience. Source: FE News.",
@@ -2686,20 +2686,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#UKJobs",
-              "#YouthEmployment",
-              "#JobsGuarantee",
-              "#PaidInternships",
-              "#CareerStart"
+              "#ukjobs",
+              "#youthemployment",
+              "#jobsguarantee",
+              "#paidinternships",
+              "#careerstart"
             ],
             "linkedin": [
-              "#JobsGuarantee",
-              "#YouthEmployment",
-              "#CareerOpportunities"
+              "#jobsguarantee",
+              "#youthemployment",
+              "#careeropportunities"
             ],
             "x": [
-              "#JobsGuarantee",
-              "#UKJobs"
+              "#jobsguarantee",
+              "#ukjobs"
             ]
           }
         },
@@ -2716,11 +2716,11 @@
           "status": "approved",
           "caption": "Finding a job you love is like discovering a career cheat code. You wake up excited, and the day just flies by. Why not start that journey with an internship you actually enjoy? Check out the opportunities that align with your passion. Start today and let every day feel less like work. Find your ideal internship through www.internwise.co.uk",
           "hashtags": [
-            "#CareerGoals",
-            "#Internship",
-            "#LoveYourJob",
-            "#JobHunt",
-            "#Confucius"
+            "#careergoals",
+            "#internship",
+            "#loveyourjob",
+            "#jobhunt",
+            "#confucius"
           ],
           "captions": {
             "ig-fb": "Finding a job you love is like discovering a career cheat code. You wake up excited, and the day just flies by. Why not start that journey with an internship you actually enjoy? Check out the opportunities that align with your passion. Start today and let every day feel less like work. Find your ideal internship through www.internwise.co.uk",
@@ -2729,20 +2729,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#CareerGoals",
-              "#Internship",
-              "#LoveYourJob",
-              "#JobHunt",
-              "#Confucius"
+              "#careergoals",
+              "#internship",
+              "#loveyourjob",
+              "#jobhunt",
+              "#confucius"
             ],
             "linkedin": [
-              "#CareerDevelopment",
-              "#Internship",
-              "#JobSatisfaction"
+              "#careerdevelopment",
+              "#internship",
+              "#jobsatisfaction"
             ],
             "x": [
-              "#Internship",
-              "#CareerAdvice"
+              "#internship",
+              "#careeradvice"
             ]
           }
         },
@@ -2759,11 +2759,11 @@
           "status": "approved",
           "caption": "Looking for an internship that ticks all the right boxes? Keep an eye out for these green flags: real tasks that push your skills, a mentor who cheers you on, honest feedback to help you grow, and fair pay that respects your worth. Ready to find an internship that values you? Check out www.internwise.co.uk!",
           "hashtags": [
-            "#InternshipGoals",
-            "#CareerGrowth",
-            "#MentorshipMatters",
-            "#FairPay",
-            "#Internwise"
+            "#internshipgoals",
+            "#careergrowth",
+            "#mentorshipmatters",
+            "#fairpay",
+            "#internwise"
           ],
           "captions": {
             "ig-fb": "Looking for an internship that ticks all the right boxes? Keep an eye out for these green flags: real tasks that push your skills, a mentor who cheers you on, honest feedback to help you grow, and fair pay that respects your worth. Ready to find an internship that values you? Check out www.internwise.co.uk!",
@@ -2772,20 +2772,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#InternshipGoals",
-              "#CareerGrowth",
-              "#MentorshipMatters",
-              "#FairPay",
-              "#Internwise"
+              "#internshipgoals",
+              "#careergrowth",
+              "#mentorshipmatters",
+              "#fairpay",
+              "#internwise"
             ],
             "linkedin": [
-              "#InternshipOpportunities",
-              "#CareerDevelopment",
-              "#Internwise"
+              "#internshipopportunities",
+              "#careerdevelopment",
+              "#internwise"
             ],
             "x": [
-              "#Internship",
-              "#CareerTips"
+              "#internship",
+              "#careertips"
             ]
           }
         },
@@ -2802,11 +2802,11 @@
           "status": "approved",
           "caption": "Hiring managers, streamline your hiring process with Internwise! 🚀 Register in just 3 minutes, post unlimited vacancies, and manage everything from one convenient platform. From posting a role to having an intern ready to contribute, we've got you covered. Check out the easiest way to bring fresh talent into your team. Find your next intern with us today - internwise.co.uk/employers",
           "hashtags": [
-            "#Internship",
-            "#HiringMadeSimple",
-            "#Recruitment",
-            "#Internwise",
-            "#TalentAcquisition"
+            "#internship",
+            "#hiringmadesimple",
+            "#recruitment",
+            "#internwise",
+            "#talentacquisition"
           ],
           "captions": {
             "ig-fb": "Hiring managers, streamline your hiring process with Internwise! 🚀 Register in just 3 minutes, post unlimited vacancies, and manage everything from one convenient platform. From posting a role to having an intern ready to contribute, we've got you covered. Check out the easiest way to bring fresh talent into your team. Find your next intern with us today - internwise.co.uk/employers",
@@ -2815,20 +2815,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#Internship",
-              "#HiringMadeSimple",
-              "#Recruitment",
-              "#Internwise",
-              "#TalentAcquisition"
+              "#internship",
+              "#hiringmadesimple",
+              "#recruitment",
+              "#internwise",
+              "#talentacquisition"
             ],
             "linkedin": [
-              "#Hiring",
-              "#Internship",
-              "#Recruitment"
+              "#hiring",
+              "#internship",
+              "#recruitment"
             ],
             "x": [
-              "#Internship",
-              "#Hiring"
+              "#internship",
+              "#hiring"
             ]
           }
         },
@@ -2849,11 +2849,11 @@
           "status": "approved",
           "caption": "Think your CV is empty? It's not about lacking experience, but about showcasing what you've got. Part-time jobs, uni projects, and societies can all shine on your CV. Highlight teamwork, problem-solving, and what changed because of you. Need more guidance? We've got your back - www.internwise.co.uk",
           "hashtags": [
-            "#CVTips",
-            "#GraduateAdvice",
-            "#JobHunt",
-            "#CareerGrowth",
-            "#Internships"
+            "#cvtips",
+            "#graduateadvice",
+            "#jobhunt",
+            "#careergrowth",
+            "#internships"
           ],
           "captions": {
             "ig-fb": "Think your CV is empty? It's not about lacking experience, but about showcasing what you've got. Part-time jobs, uni projects, and societies can all shine on your CV. Highlight teamwork, problem-solving, and what changed because of you. Need more guidance? We've got your back - www.internwise.co.uk",
@@ -2862,20 +2862,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#CVTips",
-              "#GraduateAdvice",
-              "#JobHunt",
-              "#CareerGrowth",
-              "#Internships"
+              "#cvtips",
+              "#graduateadvice",
+              "#jobhunt",
+              "#careergrowth",
+              "#internships"
             ],
             "linkedin": [
-              "#CVAdvice",
-              "#GraduateJobs",
-              "#CareerDevelopment"
+              "#cvadvice",
+              "#graduatejobs",
+              "#careerdevelopment"
             ],
             "x": [
-              "#CVAdvice",
-              "#JobSearch"
+              "#cvadvice",
+              "#jobsearch"
             ]
           }
         },
@@ -2892,11 +2892,11 @@
           "status": "approved",
           "caption": "A new study from the Department for Work and Pensions reveals that just 17% of UK employers think a wage subsidy would motivate them to hire young workers. Despite the potential allure of financial support, most employers still see hurdles in recruiting younger talent. This insight is feeding into a government review on youth employment. For students and recent graduates, this points to ongoing challenges in the job market. Internships, especially paid ones, can play a crucial role in overcoming these challenges by providing valuable experience and skills. Source: FE News.",
           "hashtags": [
-            "#YouthEmployment",
-            "#UKJobs",
-            "#Internships",
-            "#CareerStart",
-            "#JobMarket"
+            "#youthemployment",
+            "#ukjobs",
+            "#internships",
+            "#careerstart",
+            "#jobmarket"
           ],
           "captions": {
             "ig-fb": "A new study from the Department for Work and Pensions reveals that just 17% of UK employers think a wage subsidy would motivate them to hire young workers. Despite the potential allure of financial support, most employers still see hurdles in recruiting younger talent. This insight is feeding into a government review on youth employment. For students and recent graduates, this points to ongoing challenges in the job market. Internships, especially paid ones, can play a crucial role in overcoming these challenges by providing valuable experience and skills. Source: FE News.",
@@ -2906,20 +2906,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#YouthEmployment",
-              "#UKJobs",
-              "#Internships",
-              "#CareerStart",
-              "#JobMarket"
+              "#youthemployment",
+              "#ukjobs",
+              "#internships",
+              "#careerstart",
+              "#jobmarket"
             ],
             "linkedin": [
-              "#YouthEmployment",
-              "#UKJobs",
-              "#CareerDevelopment"
+              "#youthemployment",
+              "#ukjobs",
+              "#careerdevelopment"
             ],
             "x": [
-              "#YouthEmployment",
-              "#UKJobs"
+              "#youthemployment",
+              "#ukjobs"
             ]
           }
         },
@@ -2936,11 +2936,11 @@
           "status": "approved",
           "caption": "Remember, your career journey is like a marathon. It's about pacing yourself and keeping the learning momentum going. Every step counts, and we're here to support you. When you're ready to take that next step, find an exciting internship opportunity through www.internwise.co.uk",
           "hashtags": [
-            "#CareerJourney",
-            "#KeepLearning",
-            "#InternshipOpportunities",
-            "#GradLife",
-            "#Internwise"
+            "#careerjourney",
+            "#keeplearning",
+            "#internshipopportunities",
+            "#gradlife",
+            "#internwise"
           ],
           "captions": {
             "ig-fb": "Remember, your career journey is like a marathon. It's about pacing yourself and keeping the learning momentum going. Every step counts, and we're here to support you. When you're ready to take that next step, find an exciting internship opportunity through www.internwise.co.uk",
@@ -2949,20 +2949,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#CareerJourney",
-              "#KeepLearning",
-              "#InternshipOpportunities",
-              "#GradLife",
-              "#Internwise"
+              "#careerjourney",
+              "#keeplearning",
+              "#internshipopportunities",
+              "#gradlife",
+              "#internwise"
             ],
             "linkedin": [
-              "#CareerDevelopment",
-              "#Internships",
-              "#ContinuousLearning"
+              "#careerdevelopment",
+              "#internships",
+              "#continuouslearning"
             ],
             "x": [
-              "#CareerJourney",
-              "#Internwise"
+              "#careerjourney",
+              "#internwise"
             ]
           }
         },
@@ -2979,11 +2979,11 @@
           "status": "approved",
           "caption": "🎉 That moment when you see 'we'd love to offer you the role' in your inbox! It's the culmination of your hard work, persistence, and a bit of faith. This is your time to shine in the professional world. Ready to be the next one celebrating? Dive into a world of opportunities and find your perfect internship now - www.internwise.co.uk",
           "hashtags": [
-            "#JobOffer",
-            "#InternSuccess",
-            "#CareerGoals",
-            "#InternshipOpportunities",
-            "#Internwise"
+            "#joboffer",
+            "#internsuccess",
+            "#careergoals",
+            "#internshipopportunities",
+            "#internwise"
           ],
           "captions": {
             "ig-fb": "🎉 That moment when you see 'we'd love to offer you the role' in your inbox! It's the culmination of your hard work, persistence, and a bit of faith. This is your time to shine in the professional world. Ready to be the next one celebrating? Dive into a world of opportunities and find your perfect internship now - www.internwise.co.uk",
@@ -2992,20 +2992,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#JobOffer",
-              "#InternSuccess",
-              "#CareerGoals",
-              "#InternshipOpportunities",
-              "#Internwise"
+              "#joboffer",
+              "#internsuccess",
+              "#careergoals",
+              "#internshipopportunities",
+              "#internwise"
             ],
             "linkedin": [
-              "#InternSuccess",
-              "#CareerGrowth",
-              "#Internwise"
+              "#internsuccess",
+              "#careergrowth",
+              "#internwise"
             ],
             "x": [
-              "#JobOffer",
-              "#Internwise"
+              "#joboffer",
+              "#internwise"
             ]
           }
         },
@@ -3022,11 +3022,11 @@
           "status": "approved",
           "caption": "You're in good company when you hire with Internwise. From fast-growing startups to household names, employers across every sector find early-career talent here. Connect with graduates eager to bring fresh ideas to your team. Start your search today and find the perfect fit! internwise.co.uk/employers",
           "hashtags": [
-            "#EarlyTalent",
-            "#GraduateJobs",
-            "#Internships",
-            "#Hiring",
-            "#CareerStart"
+            "#earlytalent",
+            "#graduatejobs",
+            "#internships",
+            "#hiring",
+            "#careerstart"
           ],
           "captions": {
             "ig-fb": "You're in good company when you hire with Internwise. From fast-growing startups to household names, employers across every sector find early-career talent here. Connect with graduates eager to bring fresh ideas to your team. Start your search today and find the perfect fit! internwise.co.uk/employers",
@@ -3035,20 +3035,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#EarlyTalent",
-              "#GraduateJobs",
-              "#Internships",
-              "#Hiring",
-              "#CareerStart"
+              "#earlytalent",
+              "#graduatejobs",
+              "#internships",
+              "#hiring",
+              "#careerstart"
             ],
             "linkedin": [
-              "#HiringTalent",
-              "#GraduateOpportunities",
-              "#EarlyCareer"
+              "#hiringtalent",
+              "#graduateopportunities",
+              "#earlycareer"
             ],
             "x": [
-              "#GraduateJobs",
-              "#Internships"
+              "#graduatejobs",
+              "#internships"
             ]
           }
         },
@@ -3065,11 +3065,11 @@
           "status": "approved",
           "caption": "Not every internship is worth your time. Before jumping in, make sure it’s a stepping stone, not a dead end. Look for roles with real tasks and a manager who gives feedback. Titles matter less than the evidence you build. If the role sounds vague, ask what you’ll actually do each week. A good internship sets you up for the future. Ready to find the right one? Check what's out there - www.internwise.co.uk",
           "hashtags": [
-            "#InternshipAdvice",
-            "#CareerGrowth",
-            "#GraduateJobs",
-            "#InternwiseUK",
-            "#FutureReady"
+            "#internshipadvice",
+            "#careergrowth",
+            "#graduatejobs",
+            "#internwiseuk",
+            "#futureready"
           ],
           "captions": {
             "ig-fb": "Not every internship is worth your time. Before jumping in, make sure it’s a stepping stone, not a dead end. Look for roles with real tasks and a manager who gives feedback. Titles matter less than the evidence you build. If the role sounds vague, ask what you’ll actually do each week. A good internship sets you up for the future. Ready to find the right one? Check what's out there - www.internwise.co.uk",
@@ -3078,20 +3078,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#InternshipAdvice",
-              "#CareerGrowth",
-              "#GraduateJobs",
-              "#InternwiseUK",
-              "#FutureReady"
+              "#internshipadvice",
+              "#careergrowth",
+              "#graduatejobs",
+              "#internwiseuk",
+              "#futureready"
             ],
             "linkedin": [
-              "#InternshipAdvice",
-              "#CareerGrowth",
-              "#InternwiseUK"
+              "#internshipadvice",
+              "#careergrowth",
+              "#internwiseuk"
             ],
             "x": [
-              "#InternshipAdvice",
-              "#InternwiseUK"
+              "#internshipadvice",
+              "#internwiseuk"
             ]
           }
         },
@@ -3108,11 +3108,11 @@
           "status": "approved",
           "caption": "The UK government has introduced major reforms in further education this summer. These changes target the development of technical skills starting at age 14, creating new pathways to practical skills and better job market preparation. For students and graduates, this means earlier access to essential technical knowledge and a smoother transition from education to employment. Internships play a key role here, offering vital hands-on experience that complements your educational journey. Source: FE News.",
           "hashtags": [
-            "#UKJobs",
-            "#EducationReforms",
-            "#SkillsDevelopment",
-            "#Internships",
-            "#FutureCareers"
+            "#ukjobs",
+            "#educationreforms",
+            "#skillsdevelopment",
+            "#internships",
+            "#futurecareers"
           ],
           "captions": {
             "ig-fb": "The UK government has introduced major reforms in further education this summer. These changes target the development of technical skills starting at age 14, creating new pathways to practical skills and better job market preparation. For students and graduates, this means earlier access to essential technical knowledge and a smoother transition from education to employment. Internships play a key role here, offering vital hands-on experience that complements your educational journey. Source: FE News.",
@@ -3122,20 +3122,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#UKJobs",
-              "#EducationReforms",
-              "#SkillsDevelopment",
-              "#Internships",
-              "#FutureCareers"
+              "#ukjobs",
+              "#educationreforms",
+              "#skillsdevelopment",
+              "#internships",
+              "#futurecareers"
             ],
             "linkedin": [
-              "#UKJobs",
-              "#EducationReforms",
-              "#CareerDevelopment"
+              "#ukjobs",
+              "#educationreforms",
+              "#careerdevelopment"
             ],
             "x": [
-              "#UKJobs",
-              "#EducationReforms"
+              "#ukjobs",
+              "#educationreforms"
             ]
           }
         },
@@ -3152,11 +3152,11 @@
           "status": "approved",
           "caption": "Gandhi reminds us that what you do today shapes your tomorrow. Why not take a step towards your future? Start your journey with a paid internship. Find opportunities that match your passion and skills. Check out what's waiting for you. Make today count, and see where it takes you. Find your next internship - www.internwise.co.uk",
           "hashtags": [
-            "#CareerJourney",
-            "#InternshipOpportunities",
-            "#FutureStartsToday",
-            "#CareerGrowth",
-            "#InternshipUK"
+            "#careerjourney",
+            "#internshipopportunities",
+            "#futurestartstoday",
+            "#careergrowth",
+            "#internshipuk"
           ],
           "captions": {
             "ig-fb": "Gandhi reminds us that what you do today shapes your tomorrow. Why not take a step towards your future? Start your journey with a paid internship. Find opportunities that match your passion and skills. Check out what's waiting for you. Make today count, and see where it takes you. Find your next internship - www.internwise.co.uk",
@@ -3165,20 +3165,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#CareerJourney",
-              "#InternshipOpportunities",
-              "#FutureStartsToday",
-              "#CareerGrowth",
-              "#InternshipUK"
+              "#careerjourney",
+              "#internshipopportunities",
+              "#futurestartstoday",
+              "#careergrowth",
+              "#internshipuk"
             ],
             "linkedin": [
-              "#CareerDevelopment",
-              "#InternshipOpportunities",
-              "#FutureFocused"
+              "#careerdevelopment",
+              "#internshipopportunities",
+              "#futurefocused"
             ],
             "x": [
-              "#CareerGrowth",
-              "#InternshipUK"
+              "#careergrowth",
+              "#internshipuk"
             ]
           }
         },
@@ -3195,11 +3195,11 @@
           "status": "approved",
           "caption": "You've mastered the art of coffee-making, nailed the office lingo, and can navigate spreadsheets like a breeze. Welcome to the 'I'm basically a pro now' club! Ready to take your skills to a real-world setting? Dive into a paid internship and let's get that career rolling. Find your match in www.internwise.co.uk",
           "hashtags": [
-            "#InternLife",
-            "#CareerGoals",
-            "#WorkplacePro",
-            "#PaidInternships",
-            "#InternwiseJourney"
+            "#internlife",
+            "#careergoals",
+            "#workplacepro",
+            "#paidinternships",
+            "#internwisejourney"
           ],
           "captions": {
             "ig-fb": "You've mastered the art of coffee-making, nailed the office lingo, and can navigate spreadsheets like a breeze. Welcome to the 'I'm basically a pro now' club! Ready to take your skills to a real-world setting? Dive into a paid internship and let's get that career rolling. Find your match in www.internwise.co.uk",
@@ -3208,20 +3208,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#InternLife",
-              "#CareerGoals",
-              "#WorkplacePro",
-              "#PaidInternships",
-              "#InternwiseJourney"
+              "#internlife",
+              "#careergoals",
+              "#workplacepro",
+              "#paidinternships",
+              "#internwisejourney"
             ],
             "linkedin": [
-              "#InternshipExperience",
-              "#CareerDevelopment",
-              "#Internwise"
+              "#internshipexperience",
+              "#careerdevelopment",
+              "#internwise"
             ],
             "x": [
-              "#InternLife",
-              "#CareerGrowth"
+              "#internlife",
+              "#careergrowth"
             ]
           }
         },
@@ -3236,35 +3236,35 @@
             "slide_1.png"
           ],
           "status": "approved",
-          "caption": "Tired of sifting through endless CVs? Internwise helps you go straight to the right candidate. Search by course, skills and location to find your fit, then shortlist and interview candidates directly on our platform and track their progress with ease. Find your next intern today - internwise.co.uk/employers",
+          "caption": "Tired of sifting through endless CVs? Internwise helps you go straight to the right candidate. Search by sector, skills and location to find your fit, then shortlist and interview candidates directly on our platform and track their progress with ease. Find your next intern today - internwise.co.uk/employers",
           "hashtags": [
-            "#Internship",
-            "#Hiring",
-            "#Recruitment",
-            "#TalentAcquisition",
-            "#Internwise"
+            "#internship",
+            "#hiring",
+            "#recruitment",
+            "#talentacquisition",
+            "#internwise"
           ],
           "captions": {
-            "ig-fb": "Tired of sifting through endless CVs? Internwise helps you go straight to the right candidate. Search by course, skills and location to find your fit, then shortlist and interview candidates directly on our platform and track their progress with ease. Find your next intern today - internwise.co.uk/employers",
-            "linkedin": "Skip the CV chaos. Internwise lets you search candidates by course, skills and location, so you can focus on the right talent faster, without the hassle. Our platform lets you shortlist, interview, and track your intern's journey all in one place. Streamline your hiring and bring on the right talent with ease at internwise.co.uk/employers",
-            "x": "Say goodbye to CV overload. Search candidates by course, skills and location and hire the right fit faster with Internwise: internwise.co.uk/employers"
+            "ig-fb": "Tired of sifting through endless CVs? Internwise helps you go straight to the right candidate. Search by sector, skills and location to find your fit, then shortlist and interview candidates directly on our platform and track their progress with ease. Find your next intern today - internwise.co.uk/employers",
+            "linkedin": "Skip the CV chaos. Internwise lets you search candidates by sector, skills and location, so you can focus on the right talent faster, without the hassle. Our platform lets you shortlist, interview, and track your intern's journey all in one place. Streamline your hiring and bring on the right talent with ease at internwise.co.uk/employers",
+            "x": "Say goodbye to CV overload. Search candidates by sector, skills and location and hire the right fit faster with Internwise: internwise.co.uk/employers"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#Internship",
-              "#Hiring",
-              "#Recruitment",
-              "#TalentAcquisition",
-              "#Internwise"
+              "#internship",
+              "#hiring",
+              "#recruitment",
+              "#talentacquisition",
+              "#internwise"
             ],
             "linkedin": [
-              "#Recruitment",
-              "#HiringSolutions",
-              "#Internwise"
+              "#recruitment",
+              "#hiringsolutions",
+              "#internwise"
             ],
             "x": [
-              "#Hiring",
-              "#Internwise"
+              "#hiring",
+              "#internwise"
             ]
           }
         },
@@ -3281,11 +3281,11 @@
           "status": "approved",
           "caption": "Feeling stuck in your job search? You might be tackling the wrong problem. Before you rewrite your CV or send out more applications, take a step back. Identify the real issue first. Is it your CV, your interview skills, or the roles you're targeting? Once you know, focus on making one visible improvement. Maybe it's tailoring your CV for each role or practising interview questions. Track your progress. Did the change lead to more interview calls? If not, try a different tweak. The key is small, specific actions you can take today. Ready to make a change? Head to our site for more job search tips. #JobSearch #GraduateJobs #CareerAdvice #Internwise #UKJobs",
           "hashtags": [
-            "#JobSearch",
-            "#GraduateJobs",
-            "#CareerAdvice",
-            "#Internwise",
-            "#UKJobs"
+            "#jobsearch",
+            "#graduatejobs",
+            "#careeradvice",
+            "#internwise",
+            "#ukjobs"
           ],
           "captions": {
             "ig-fb": "Feeling stuck in your job search? You might be tackling the wrong problem. Before you rewrite your CV or send out more applications, take a step back. Identify the real issue first. Is it your CV, your interview skills, or the roles you're targeting? Once you know, focus on making one visible improvement. Maybe it's tailoring your CV for each role or practising interview questions. Track your progress. Did the change lead to more interview calls? If not, try a different tweak. The key is small, specific actions you can take today. Ready to make a change? Head to our site for more job search tips. #JobSearch #GraduateJobs #CareerAdvice #Internwise #UKJobs",
@@ -3294,20 +3294,20 @@
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#JobSearch",
-              "#GraduateJobs",
-              "#CareerAdvice",
-              "#Internwise",
-              "#UKJobs"
+              "#jobsearch",
+              "#graduatejobs",
+              "#careeradvice",
+              "#internwise",
+              "#ukjobs"
             ],
             "linkedin": [
-              "#JobSearch",
-              "#CareerAdvice",
-              "#GraduateJobs"
+              "#jobsearch",
+              "#careeradvice",
+              "#graduatejobs"
             ],
             "x": [
-              "#JobSearch",
-              "#GraduateJobs"
+              "#jobsearch",
+              "#graduatejobs"
             ]
           }
         }

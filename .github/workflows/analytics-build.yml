@@ -1,0 +1,52 @@
+name: Analytics Build
+
+# Pulls Ayrshare analytics (account metrics + recent-post engagement), computes
+# the performance + decision-making aggregates, and commits data/analytics.json.
+# The dashboard's Analytics tab reads that file directly (same pattern as
+# weeks.json / featured.json). Auto-redeploys on commit.
+#
+# Requires repo secret: AYRSHARE_API_KEY.
+
+on:
+  schedule:
+    - cron: "30 6 * * *"     # daily at 06:30 UTC (before the working day)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: analytics-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # No third-party deps: build_analytics.py uses only the standard library.
+      - name: Build analytics.json from Ayrshare
+        env:
+          AYRSHARE_API_KEY: ${{ secrets.AYRSHARE_API_KEY }}
+        run: python social-media/tools/build_analytics.py --records 80 | tee /tmp/analytics.log
+
+      - name: Commit and push if analytics changed
+        run: |
+          if [ -z "$(git status --porcelain data/analytics.json)" ]; then
+            echo "No analytics change this run."
+            exit 0
+          fi
+          git config user.name  "internwise-content-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A data/analytics.json
+          git commit -m "Analytics refresh ($(date -u +%Y-%m-%d))"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "Pushed analytics; Cloudflare Pages will redeploy."

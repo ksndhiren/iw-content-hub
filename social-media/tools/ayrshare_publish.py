@@ -13,6 +13,8 @@ re-run never double-posts.
     python3 tools/ayrshare_publish.py --week week14 --schedule   # dry-run + times
     python3 tools/ayrshare_publish.py --week week14 --live       # actually post
     python3 tools/ayrshare_publish.py --week week14 --live --schedule
+    python3 tools/ayrshare_publish.py --featured                 # dry-run approved featured jobs
+    python3 tools/ayrshare_publish.py --featured --live          # post approved featured jobs
 
 Notes:
 - Networks connected today: instagram, linkedin, threads (+ youtube/gmb unused).
@@ -30,10 +32,14 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SM   = os.path.dirname(HERE)
 HUB  = os.path.dirname(SM)
 WEEKS = os.path.join(HUB, "data", "weeks.json")
+FEATURED = os.path.join(HUB, "data", "featured.json")
 POSTED = os.path.join(SM, "content", "ayrshare_posted.json")
 R2_BASE = "https://pub-5f843c240ef6453bba67e131500424af.r2.dev"
 API = "https://api.ayrshare.com/api/post"
 USER_API = "https://api.ayrshare.com/api/user"
+# Live dashboard KV endpoint: { "<postId>": "approved" | "in-review" | ... }.
+# For featured jobs the dashboard approval (not the file status) is the gate.
+STATUSES_URL = "https://iw-content-hub.pages.dev/api/statuses"
 
 
 def _load_env():
@@ -60,11 +66,40 @@ LANE_NETWORKS = {
     "fun":       ["instagram", "threads", "twitter"],
     "employer":  ["linkedin", "facebook"],
     "education": ["instagram", "linkedin", "facebook", "threads"],
+    # Featured job ads: candidate-facing + employer-credible.
+    "featured":  ["instagram", "facebook", "linkedin", "threads"],
 }
 # Recommended local posting time per lane (UK), used with --schedule.
 LANE_TIME = {"quote": "08:00", "news": "09:30", "employer": "11:00",
-             "education": "12:30", "fun": "17:30"}
+             "education": "12:30", "fun": "17:30", "featured": "10:00"}
 DAY_INDEX = {"mon": 0, "tue": 1, "wed": 2, "thu": 3, "fri": 4}
+
+
+def fetch_statuses():
+    """Read shared post statuses from the live dashboard KV endpoint. On any
+    failure, return {} (nothing treated as approved) so we never over-post."""
+    try:
+        # Cloudflare blocks the default python-urllib agent (403); send a real UA.
+        req = urllib.request.Request(STATUSES_URL, headers={
+            "cache-control": "no-store",
+            "User-Agent": "Mozilla/5.0 (compatible; internwise-content-bot/1.0)",
+        })
+        return json.load(urllib.request.urlopen(req, timeout=20)) or {}
+    except Exception as e:
+        print(f"  (statuses fetch failed: {e}); treating none as approved")
+        return {}
+
+
+def load_featured_week():
+    """featured.json is shaped like a week (id + posts). Featured posts carry no
+    lane and their file status stays 'in-review'; the real gate is the dashboard
+    KV approval, so we stamp lane='featured' and overlay each post's live status."""
+    fw = json.load(open(FEATURED))
+    statuses = fetch_statuses()
+    for p in fw.get("posts", []):
+        p["lane"] = "featured"
+        p["status"] = statuses.get(p["id"], p.get("status"))
+    return fw
 
 
 def active_networks():
@@ -91,6 +126,8 @@ def caption_for(post, net):
     ckey = NET_CAPTION[net]
     text = caps.get(ckey) or post.get("caption", "")
     hs = tags.get(ckey) or post.get("hashtags", [])
+    # Brand rule: hashtags always lowercase (#techjobs, never #TechJobs).
+    hs = ["#" + t[1:].lower() if isinstance(t, str) and t.startswith("#") else t for t in hs]
     if hs:
         text = text.rstrip() + "\n\n" + " ".join(hs)
     return _trim(text, NET_LIMIT.get(net, 5000))
@@ -180,7 +217,9 @@ def load_posted():
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--week", required=True)
+    ap.add_argument("--week", help="week id in weeks.json (e.g. week14)")
+    ap.add_argument("--featured", action="store_true",
+                    help="publish approved FEATURED jobs (data/featured.json, KV-gated) instead of a week")
     ap.add_argument("--live", action="store_true", help="actually post (default: dry-run)")
     ap.add_argument("--schedule", action="store_true", help="schedule at lane times instead of now")
     ap.add_argument("--status", default="approved", help="which post status is eligible")
@@ -193,17 +232,24 @@ def main():
 
     if not KEY:
         sys.exit("No AYRSHARE_API_KEY in env (.env).")
-    data = json.load(open(WEEKS))
-    week = next((w for w in data["weeks"] if w["id"] == args.week), None)
-    if not week:
-        sys.exit(f"Week {args.week} not found.")
+    if bool(args.week) == bool(args.featured):
+        sys.exit("Pass exactly one of --week <id> or --featured.")
+    if args.featured:
+        week = load_featured_week()
+        label = "featured"
+    else:
+        data = json.load(open(WEEKS))
+        week = next((w for w in data["weeks"] if w["id"] == args.week), None)
+        if not week:
+            sys.exit(f"Week {args.week} not found.")
+        label = args.week
 
     connected = active_networks()
     posted = load_posted()
     jobs = build_jobs(week, connected, args.status, args.schedule, only=args.only,
                       days=days, stories=args.stories, at=args.at)
 
-    print(f"Week {args.week} | connected: {sorted(connected)} | status='{args.status}' "
+    print(f"Target {label} | connected: {sorted(connected)} | status='{args.status}' "
           f"| {'LIVE' if args.live else 'DRY-RUN'}")
     print(f"{len(jobs)} post-jobs planned:\n")
     key_seen = set()

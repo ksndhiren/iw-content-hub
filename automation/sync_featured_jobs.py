@@ -99,23 +99,42 @@ def is_published(pub, sid, title="", company=""):
 
 
 def seed_published_from_statuses(statuses, pub):
-    """Add any approved featured id (like 'job-12345') to the published set, even
-    if it is not currently in featured.json. Prevents resurrection on a later scrape."""
-    for pid, st in (statuses or {}).items():
+    """Add any featured job that has actually been POSTED to social (recorded in
+    ayrshare_posted.json) to the published set by sourceId, so a later scrape can't
+    resurrect it. Posting - not mere approval - is what counts as published now,
+    so an approved job that has not yet gone out is left in place for the
+    publisher. (`statuses` kept for call-site compatibility.)"""
+    for pid in posted_post_ids():
         m = re.match(r"^job-(\d+)$", pid or "")
-        if m and st == "approved":
+        if m:
             pub["ids"].add(m.group(1))
     return pub
 
 
-def prune_approved(data, statuses, pub):
-    """Remove auto posts whose dashboard status is 'approved' (they are published).
-    Deletes each one's images and records its sourceId AND content key so a later
-    scrape can't resurrect it (even re-listed under a new id). Returns count pruned."""
+def posted_post_ids():
+    """Featured post ids confirmed POSTED to social via Ayrshare. The publisher
+    records every successful send in social-media/content/ayrshare_posted.json
+    keyed 'job-<id>:<network>'; we return the set of 'job-<id>' prefixes."""
+    path = os.path.join(HUB_DIR, "social-media", "content", "ayrshare_posted.json")
+    try:
+        with open(path) as f:
+            return {k.split(":", 1)[0] for k in json.load(f).keys()}
+    except Exception:
+        return set()
+
+
+def prune_approved(data, statuses, pub, posted_ids=None):
+    """Remove auto posts that are approved on the dashboard AND have actually been
+    posted to social (recorded in ayrshare_posted.json). Removal waits for the
+    post to go out - approval alone never drops a job now that posting is
+    automated. Deletes each one's images and records its sourceId AND content key
+    so a later scrape can't resurrect it. Returns count pruned."""
+    if posted_ids is None:
+        posted_ids = posted_post_ids()
     kept, removed = [], 0
     for p in data.get("posts", []):
         sid = p.get("sourceId")
-        if sid and statuses.get(p.get("id")) == "approved":
+        if sid and statuses.get(p.get("id")) == "approved" and p.get("id") in posted_ids:
             img = os.path.join(IMAGES_DIR, p["id"])
             if os.path.isdir(img):
                 shutil.rmtree(img, ignore_errors=True)

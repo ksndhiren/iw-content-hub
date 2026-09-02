@@ -7,14 +7,15 @@
       "candidates": "~398k records in the database; show rounded as 400,000 (NOT '400K+' - the true figure is under 400k). Call them 'registered candidates' or 'students & graduates', never 'active'.",
       "employers": "14,096 employers; show as '14,000+'.",
       "process": "Post in minutes -> browse candidates -> shortlist & interview -> onboard & track progress",
-      "register": "Register in ~3 minutes (free account) and post unlimited vacancies",
+      "register": "Register in ~3 minutes and post unlimited vacancies",
       "featured": "Featured Employer option boosts number of applications",
       "no_prescreen": "Internwise does NOT pre-screen/vet candidates - never claim 'pre-screened', 'vetted' or 'ready to work'.",
       "no_named_orgs": "Never name specific companies (e.g. Nike/Oracle/O2/Man Utd/Penguin) - use generic 'household names' / '14,000+ UK employers'."
     },
     "rules": [
       "No em dashes (use '-').",
-      "Only use benefits/stats from `verified_facts`. Do NOT invent pricing - never claim 'free to post' or a commission %; 'free account' is OK.",
+      "Only use benefits/stats from `verified_facts`. Do NOT invent pricing - never claim 'free to post', a commission %, or 'free account' (there is no free account tier any more).",
+      "Candidate search/filter is by SECTOR, skills and location - never say 'by course' (that filter does not exist).",
       "Never say candidates are 'active', 'pre-screened', 'vetted' or 'ready to work'.",
       "Never name specific employers/companies.",
       "Candidate count = 400,000 (no '+').",
@@ -24,8 +25,8 @@
   },
   "angles": [
     {"id": "e001", "angle": "talent_pool", "headline": "Your next intern is already here", "body": "Post your role and reach a talent pool built for early careers.", "benefits": ["400,000 registered candidates", "Post in minutes, unlimited vacancies", "Shortlist, interview & onboard in one place"], "trust": true, "cta": "Post your internship", "used": null},
-    {"id": "e002", "angle": "search", "headline": "Skip the CV pile. Go straight to the right candidate", "body": "Search candidates by course, skills and location so you find the right fit, faster.", "benefits": ["Search by course, skills & location", "Shortlist & interview in-platform", "Track your intern's progress"], "trust": true, "cta": "Find your intern", "used": null},
-    {"id": "e003", "angle": "speed", "headline": "From role posted to intern onboarded", "body": "Register in 3 minutes, post unlimited vacancies, and manage it all in one place.", "benefits": ["Register in ~3 minutes", "Post unlimited vacancies", "Onboard & track progress"], "trust": false, "cta": "Register free account", "used": null},
+    {"id": "e002", "angle": "search", "headline": "Skip the CV pile. Go straight to the right candidate", "body": "Search candidates by sector, skills and location so you find the right fit, faster.", "benefits": ["Search by sector, skills & location", "Shortlist & interview in-platform", "Track your intern's progress"], "trust": true, "cta": "Find your intern", "used": null},
+    {"id": "e003", "angle": "speed", "headline": "From role posted to intern onboarded", "body": "Register in 3 minutes, post unlimited vacancies, and manage it all in one place.", "benefits": ["Register in ~3 minutes", "Post unlimited vacancies", "Onboard & track progress"], "trust": false, "cta": "Register in minutes", "used": null},
     {"id": "e004", "angle": "reach", "headline": "Reach 400,000 early-career candidates", "body": "One focused platform, a UK-wide pool of students and graduates.", "benefits": ["400,000 registered candidates", "14,000+ employers already onboard", "Featured Employer boosts applications"], "trust": true, "cta": "Post your internship", "used": null},
     {"id": "e005", "angle": "trust", "headline": "In good company", "body": "From startups to household names, employers across every sector hire early talent on Internwise.", "benefits": ["Trusted by 14,000+ UK employers", "From startups to household names", "Post in minutes, hire in one place"], "trust": false, "cta": "Join them, post a role", "used": null},
     {"id": "e006", "angle": "manage", "headline": "Hiring interns, all in one place", "body": "Post, shortlist, interview, onboard and track progress without leaving the platform.", "benefits": ["Shortlist & interview candidates", "Onboard your intern", "Track progress as they grow"], "trust": false, "cta": "Start hiring today", "used": null}

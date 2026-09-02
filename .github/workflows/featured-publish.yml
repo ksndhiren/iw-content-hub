@@ -1,0 +1,67 @@
+name: Featured Jobs - Publish & Prune
+
+# Automates featured job-ad posting. Reads the shared dashboard statuses from the
+# live KV endpoint; every featured job APPROVED on the dashboard is published to
+# the connected social networks via Ayrshare (immediately - job ads are time-
+# sensitive), then REMOVED from data/featured.json once it has actually posted
+# (recorded in social-media/content/ayrshare_posted.json). Removal waits for the
+# post to go out, so approval alone never drops a job. New featured jobs keep
+# flowing in from the daily scrape to take their place.
+#
+# Requires repo secrets: AYRSHARE_API_KEY + the R2_* set (to delete posted
+# graphics from R2). Runs a few times a day and on demand.
+
+on:
+  schedule:
+    - cron: "0 8,11,14,17 * * 1-5"   # UK working hours, Mon-Fri (08/11/14/17 UTC)
+  workflow_dispatch: {}               # manual "Run workflow" button
+
+permissions:
+  contents: write
+
+concurrency:
+  # Share a group with the daily sync so the two never push over each other.
+  group: featured-jobs-sync
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        # No browser needed (publish never renders); boto3 (in requirements) is
+        # enough to delete posted graphics from R2. Ayrshare calls use urllib.
+        run: pip install -r automation/requirements.txt
+
+      - name: Publish approved featured jobs, then prune posted ones
+        env:
+          AYRSHARE_API_KEY:     ${{ secrets.AYRSHARE_API_KEY }}
+          R2_ACCOUNT_ID:        ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID:     ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET:            ${{ secrets.R2_BUCKET }}
+        run: python automation/publish_featured.py --live | tee /tmp/featured_publish.log
+
+      - name: Commit and push if anything changed
+        run: |
+          FILES="data/featured.json data/featured_published.json social-media/content/ayrshare_posted.json"
+          if [ -z "$(git status --porcelain $FILES)" ]; then
+            echo "Nothing published or pruned this run."
+            exit 0
+          fi
+          git config user.name  "internwise-content-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A $FILES
+          git commit -m "Featured: publish approved + prune posted ($(date -u +%Y-%m-%dT%H:%MZ))"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "Published approved featured jobs and pruned posted ones; Cloudflare Pages will redeploy."
+          grep -E 'OK |pruned posted' /tmp/featured_publish.log || true

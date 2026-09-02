@@ -25,6 +25,7 @@
   const IMAGE_BASE    = IS_LOCAL ? '' : 'https://pub-5f843c240ef6453bba67e131500424af.r2.dev';
   const FEATURED_URL  = 'data/featured.json';
   const SHORTS_URL    = 'data/shorts.json';
+  const ANALYTICS_URL = 'data/analytics.json';
   const FEATURED_SEEN_KEY = 'iw-content-hub-featured-seen';
   const STATUS_API    = '/api/statuses';   // shared cross-device status store
   const STORAGE_KEY   = 'iw-content-hub-statuses';
@@ -58,7 +59,8 @@
   let currentDayLabel = null;    // when set, the day-grid is drilled into that day
   let featuredWeek    = null;    // Featured Jobs pseudo-week (from featured.json)
   let shortsWeek      = null;    // Shorts/Reels pseudo-week (from shorts.json)
-  let currentMode     = 'weekly';// 'weekly' | 'shorts' | 'featured'
+  let analyticsData   = null;    // Ayrshare analytics summary (from analytics.json)
+  let currentMode     = 'weekly';// 'weekly' | 'shorts' | 'featured' | 'analytics'
   let featuredSeen    = new Set();// auto-post ids the user has already seen (localStorage)
   let featuredNewIds  = new Set();// auto-post ids new since last visit (for badge + ribbon)
   let currentWeek     = null;    // Currently displayed week object
@@ -108,7 +110,9 @@
   let elModeWeekly;
   let elModeShorts;
   let elModeFeatured;
+  let elModeAnalytics;
   let elFeaturedBadge;
+  let elAnalyticsView;
 
   /* -------------------------------------------------------------------------
      Initialisation
@@ -121,6 +125,7 @@
     fetchWeeks();
     fetchShorts();
     fetchFeatured();
+    fetchAnalytics();
     fetchRemoteStatuses();   // pull shared statuses, then refresh what's on screen
     bindGlobalEvents();
   }
@@ -162,7 +167,9 @@
     elModeWeekly        = document.getElementById('mode-weekly');
     elModeShorts        = document.getElementById('mode-shorts');
     elModeFeatured      = document.getElementById('mode-featured');
+    elModeAnalytics     = document.getElementById('mode-analytics');
     elFeaturedBadge     = document.getElementById('featured-badge');
+    elAnalyticsView     = document.getElementById('analytics-view');
   }
 
   /* -------------------------------------------------------------------------
@@ -375,6 +382,122 @@
     }
   }
 
+  /* -------------------------------------------------------------------------
+     Analytics (Ayrshare) - data/analytics.json, built by build_analytics.py
+  ------------------------------------------------------------------------- */
+  async function fetchAnalytics() {
+    try {
+      const response = await fetch(ANALYTICS_URL, { cache: 'no-store' });
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      analyticsData = await response.json();
+    } catch (err) {
+      console.error('[IW Content Hub] Failed to load analytics.json:', err);
+      analyticsData = null;
+    }
+    if (currentMode === 'analytics') renderAnalytics();
+  }
+
+  function renderAnalytics() {
+    if (!elAnalyticsView) return;
+    if (!analyticsData) {
+      elAnalyticsView.innerHTML =
+        '<div class="analytics-empty"><h2>Analytics</h2>' +
+        '<p>No analytics yet. They are generated from Ayrshare once posts have gone out ' +
+        '(the scheduled build writes <code>data/analytics.json</code>).</p></div>';
+      return;
+    }
+
+    var d = analyticsData;
+    var labels = d.laneLabels || {};
+    var fmt = function (n) {
+      return (n === null || n === undefined) ? '—' : Number(n).toLocaleString();
+    };
+    var when = d.generatedAt ? new Date(d.generatedAt).toLocaleString('en-GB',
+      { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : '';
+
+    var PLAT = {
+      instagram: { name: 'Instagram' },
+      linkedin:  { name: 'LinkedIn' },
+      threads:   { name: 'Threads' },
+    };
+
+    // ---- PRESENT: per-platform performance cards ----
+    var platforms = d.platforms || {};
+    var platCards = Object.keys(PLAT).filter(function (k) { return platforms[k]; })
+      .map(function (k) {
+        var p = platforms[k];
+        function metric(label, val) {
+          return '<div class="an-metric"><span class="an-metric__val">' + fmt(val) +
+                 '</span><span class="an-metric__label">' + label + '</span></div>';
+        }
+        return '<div class="an-card an-platform an-platform--' + k + '">' +
+          '<div class="an-platform__head"><span class="an-platform__name">' + PLAT[k].name + '</span>' +
+          '<span class="an-platform__followers">' + fmt(p.followers) + ' followers</span></div>' +
+          '<div class="an-metrics">' +
+            metric('Reach', p.reach) + metric('Views', p.views) +
+            metric('Likes', p.likes) + metric('Comments', p.comments) +
+          '</div></div>';
+      }).join('');
+
+    // ---- horizontal bar chart helper ----
+    function barChart(obj, order, keyLabel) {
+      var entries = order
+        ? order.filter(function (k) { return obj[k]; }).map(function (k) { return [k, obj[k]]; })
+        : Object.entries(obj).sort(function (a, b) { return b[1].avg - a[1].avg; });
+      if (!entries.length) return '<p class="an-note">Not enough data yet.</p>';
+      var max = Math.max.apply(null, entries.map(function (e) { return e[1].avg; }).concat([0.0001]));
+      return '<div class="an-bars">' + entries.map(function (e) {
+        var k = e[0], v = e[1];
+        var pct = Math.max(2, Math.round((v.avg / max) * 100));
+        var name = keyLabel ? keyLabel(k) : (labels[k] || k);
+        return '<div class="an-bar-row">' +
+          '<span class="an-bar-row__label">' + escapeHtml(name) + '</span>' +
+          '<span class="an-bar-row__track"><span class="an-bar-row__fill" style="width:' + pct + '%"></span></span>' +
+          '<span class="an-bar-row__val">' + v.avg + ' <small>(' + v.posts + ' post' + (v.posts === 1 ? '' : 's') + ')</small></span>' +
+        '</div>';
+      }).join('') + '</div>';
+    }
+
+    var DOW = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    var hourOrder = Object.keys(d.byHour || {}).sort(function (a, b) { return a - b; });
+
+    // ---- DECISION-MAKING: insights + charts + top posts ----
+    var insights = (d.insights || []).map(function (t) {
+      return '<li>' + escapeHtml(t) + '</li>';
+    }).join('') || '<li>Not enough data yet - insights appear once more posts have gone out.</li>';
+
+    var topPosts = (d.topPosts || []).map(function (p) {
+      var lane = labels[p.lane] || p.lane || 'Post';
+      var date = p.created ? new Date(p.created).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) : '';
+      return '<li class="an-toppost">' +
+        '<span class="an-toppost__eng">' + fmt(p.engagement) + '</span>' +
+        '<span class="an-toppost__body"><span class="an-toppost__meta">' +
+          escapeHtml(lane) + ' · ' + escapeHtml(p.network || '') + ' · ' + date +
+        '</span><span class="an-toppost__cap">' + escapeHtml(p.caption || '') + '</span></span></li>';
+    }).join('') || '<li class="an-note">No posts analysed yet.</li>';
+
+    elAnalyticsView.innerHTML =
+      '<div class="an-head">' +
+        '<h2>Analytics</h2>' +
+        '<span class="an-sub">Ayrshare · last ' + (d.windowRecords || '') + ' posts' +
+        (when ? ' · updated ' + when : '') + '</span>' +
+      '</div>' +
+
+      '<section class="an-section"><h3 class="an-h3">Performance</h3>' +
+        '<div class="an-platforms">' + (platCards || '<p class="an-note">No platform data yet.</p>') + '</div>' +
+      '</section>' +
+
+      '<section class="an-section"><h3 class="an-h3">What to do next</h3>' +
+        '<ul class="an-insights">' + insights + '</ul>' +
+        '<div class="an-grid">' +
+          '<div class="an-card"><h4 class="an-h4">Best topics</h4>' + barChart(d.byLane || {}, null, function (k) { return labels[k] || k; }) + '</div>' +
+          '<div class="an-card"><h4 class="an-h4">Best day to post</h4>' + barChart(d.byDay || {}, DOW, function (k) { return k; }) + '</div>' +
+          '<div class="an-card"><h4 class="an-h4">Best time to post (UTC)</h4>' + barChart(d.byHour || {}, hourOrder, function (k) { return ('0' + k).slice(-2) + ':00'; }) + '</div>' +
+          '<div class="an-card"><h4 class="an-h4">Top posts</h4><ul class="an-toplist">' + topPosts + '</ul></div>' +
+        '</div>' +
+      '</section>';
+  }
+
   function renderShorts() {
     if (!shortsWeek) {
       elWeekMeta.innerHTML = '<span class="week-meta__label">Shorts / Reels</span>';
@@ -483,31 +606,44 @@
 
   /** Switch between 'weekly', 'shorts', and 'featured' content modes. */
   function setMode(mode) {
-    if (mode !== 'weekly' && mode !== 'shorts' && mode !== 'featured') return;
+    if (['weekly', 'shorts', 'featured', 'analytics'].indexOf(mode) === -1) return;
     currentMode = mode;
 
-    const isWeekly = (mode === 'weekly');
-    const isShorts = (mode === 'shorts');
+    const isWeekly    = (mode === 'weekly');
+    const isShorts    = (mode === 'shorts');
+    const isFeatured  = (mode === 'featured');
+    const isAnalytics = (mode === 'analytics');
     elModeWeekly.classList.toggle('is-active', isWeekly);
     elModeShorts.classList.toggle('is-active', isShorts);
-    elModeFeatured.classList.toggle('is-active', mode === 'featured');
+    elModeFeatured.classList.toggle('is-active', isFeatured);
+    if (elModeAnalytics) elModeAnalytics.classList.toggle('is-active', isAnalytics);
     elModeWeekly.setAttribute('aria-selected', String(isWeekly));
     elModeShorts.setAttribute('aria-selected', String(isShorts));
-    elModeFeatured.setAttribute('aria-selected', String(mode === 'featured'));
+    elModeFeatured.setAttribute('aria-selected', String(isFeatured));
+    if (elModeAnalytics) elModeAnalytics.setAttribute('aria-selected', String(isAnalytics));
 
     // Week selector is only meaningful in weekly mode
     elWeekSelector.classList.toggle('is-hidden', !isWeekly);
+
+    // Analytics has its own full-width view; the post grid / week meta belong to
+    // the content modes. Toggle which surface is visible.
+    if (elAnalyticsView) elAnalyticsView.hidden = !isAnalytics;
+    elPostGrid.hidden = isAnalytics;
+    elWeekMeta.hidden = isAnalytics;
+    if (isAnalytics && elEmptyState) elEmptyState.hidden = true;
 
     if (isWeekly) {
       const weekId = elWeekSelector.value || (allWeeks[0] && allWeeks[0].id);
       if (weekId) renderWeek(weekId);
     } else if (isShorts) {
       renderShorts();
-    } else {
+    } else if (isFeatured) {
       renderFeatured();
       // Opening the tab counts as reviewing: clear the badge (NEW ribbons remain
       // for this session so the user can still spot which ones are new).
       markFeaturedSeen();
+    } else {
+      renderAnalytics();
     }
   }
 
@@ -1085,6 +1221,7 @@
     elModeWeekly.addEventListener('click', function () { setMode('weekly'); });
     elModeShorts.addEventListener('click', function () { setMode('shorts'); });
     elModeFeatured.addEventListener('click', function () { setMode('featured'); });
+    if (elModeAnalytics) elModeAnalytics.addEventListener('click', function () { setMode('analytics'); });
 
     // Overlay: close button
     elOverlayClose.addEventListener('click', closeOverlay);
@@ -1242,7 +1379,10 @@
     const limit     = PLATFORM_HASHTAG_LIMIT[platform] || 5;
     // Prefer a platform-specific hashtag set (featured jobs), else the shared list.
     const source    = (post.hashtagsByPlatform && post.hashtagsByPlatform[platform]) || post.hashtags || [];
-    currentHashtags = source.slice(0, limit);
+    // Brand rule: hashtags are always lowercase (#techjobs, never #TechJobs).
+    currentHashtags = source.slice(0, limit).map(function (t) {
+      return typeof t === 'string' && t.charAt(0) === '#' ? '#' + t.slice(1).toLowerCase() : t;
+    });
 
     elDetailHashtags.innerHTML = '';
     currentHashtags.forEach(function (tag) {
