@@ -424,5 +424,53 @@
     "at": "2026-08-31T12:55:44.533229",
     "network": "instagram",
     "scheduleDate": "2026-08-31T14:30:00Z"
+  },
+  "week14-thu-news:facebook": {
+    "id": "ozzTc5fVIN6FN02WqdX1",
+    "at": "2026-09-03T05:42:14.667612",
+    "network": "facebook",
+    "scheduleDate": "2026-09-03T08:30:00Z"
+  },
+  "week14-thu-quote:facebook": {
+    "id": "byXz1HXDdrGP43i8mqtq",
+    "at": "2026-09-03T05:42:18.258409",
+    "network": "facebook",
+    "scheduleDate": "2026-09-03T07:00:00Z"
+  },
+  "week14-thu-employer:facebook": {
+    "id": "J8FwwKkqF0tbXi9R667g",
+    "at": "2026-09-03T05:42:21.408326",
+    "network": "facebook",
+    "scheduleDate": "2026-09-03T10:00:00Z"
+  },
+  "week14-thu-education:facebook": {
+    "id": "6uOSybjmvNDJldWcbOx9",
+    "at": "2026-09-03T05:42:23.923770",
+    "network": "facebook",
+    "scheduleDate": "2026-09-03T11:30:00Z"
+  },
+  "week14-fri-news:facebook": {
+    "id": "JZGNGHkKEoCLl0J6Z9ic",
+    "at": "2026-09-03T05:42:25.958420",
+    "network": "facebook",
+    "scheduleDate": "2026-09-04T08:30:00Z"
+  },
+  "week14-fri-quote:facebook": {
+    "id": "5lRq7XkiI9Ai58OejLMs",
+    "at": "2026-09-03T05:42:36.441424",
+    "network": "facebook",
+    "scheduleDate": "2026-09-04T07:00:00Z"
+  },
+  "week14-fri-employer:facebook": {
+    "id": "bGTM9XspIMKmBHgx4Ibe",
+    "at": "2026-09-03T05:42:41.708685",
+    "network": "facebook",
+    "scheduleDate": "2026-09-04T10:00:00Z"
+  },
+  "week14-fri-education:facebook": {
+    "id": "3WjQzscVdtM6EcP7Uo0h",
+    "at": "2026-09-03T05:42:44.256987",
+    "network": "facebook",
+    "scheduleDate": "2026-09-04T11:30:00Z"
   }
 }

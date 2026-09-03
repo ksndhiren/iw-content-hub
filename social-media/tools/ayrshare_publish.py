@@ -163,7 +163,7 @@ def _dkey(post):
     return post["id"].split("-")[-2] if post["id"].count("-") >= 2 else None
 
 
-def build_jobs(week, connected, want_status, use_schedule, only=None, days=None, stories=False, at=None):
+def build_jobs(week, connected, want_status, use_schedule, only=None, days=None, stories=False, at=None, networks=None):
     jobs = []
     for post in week.get("posts", []):
         if only:
@@ -175,6 +175,8 @@ def build_jobs(week, connected, want_status, use_schedule, only=None, days=None,
             continue
         lane = post.get("lane")
         nets = [n for n in LANE_NETWORKS.get(lane, []) if n in connected]
+        if networks:               # --network limits the send to specific platform(s)
+            nets = [n for n in nets if n in networks]
         media = media_for(post, week["id"])
         sched = schedule_iso(week, post, at=at) if use_schedule else None
         for net in nets:
@@ -227,8 +229,10 @@ def main():
     ap.add_argument("--days", default=None, help="comma list of day keys to include, e.g. tue,wed,thu,fri")
     ap.add_argument("--stories", action="store_true", help="also post an IG Story (cover image) per post")
     ap.add_argument("--at", default=None, help="one-off UK HH:MM time override for scheduling")
+    ap.add_argument("--network", default=None, help="comma list of networks to send to (e.g. facebook); default: all connected for the lane")
     args = ap.parse_args()
     days = set(d.strip() for d in args.days.split(",")) if args.days else None
+    networks = set(n.strip() for n in args.network.split(",")) if args.network else None
 
     if not KEY:
         sys.exit("No AYRSHARE_API_KEY in env (.env).")
@@ -247,7 +251,7 @@ def main():
     connected = active_networks()
     posted = load_posted()
     jobs = build_jobs(week, connected, args.status, args.schedule, only=args.only,
-                      days=days, stories=args.stories, at=args.at)
+                      days=days, stories=args.stories, at=args.at, networks=networks)
 
     print(f"Target {label} | connected: {sorted(connected)} | status='{args.status}' "
           f"| {'LIVE' if args.live else 'DRY-RUN'}")
