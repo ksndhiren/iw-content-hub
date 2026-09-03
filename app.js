@@ -417,6 +417,7 @@
 
     var PLAT = {
       instagram: { name: 'Instagram' },
+      facebook:  { name: 'Facebook' },
       linkedin:  { name: 'LinkedIn' },
       threads:   { name: 'Threads' },
     };

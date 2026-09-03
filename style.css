@@ -1430,6 +1430,7 @@ a {
 .an-platform__followers { font-size: 0.8rem; font-weight: 600; color: var(--color-text-muted); }
 .an-platform { border-top: 3px solid var(--color-blue); }
 .an-platform--instagram { border-top-color: #E1306C; }
+.an-platform--facebook  { border-top-color: #1877F2; }
 .an-platform--linkedin  { border-top-color: #0A66C2; }
 .an-platform--threads   { border-top-color: #111; }
 .an-metrics { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }

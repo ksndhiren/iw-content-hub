@@ -17,9 +17,10 @@ re-run never double-posts.
     python3 tools/ayrshare_publish.py --featured --live          # post approved featured jobs
 
 Notes:
-- Networks connected today: instagram, linkedin, threads (+ youtube/gmb unused).
-  Facebook, X/Twitter and TikTok are NOT connected, so lanes that would target
-  them simply skip those networks until they're linked in Ayrshare.
+- Networks connected today: instagram, facebook, linkedin, threads
+  (+ youtube/gmb unused). X/Twitter and TikTok are NOT connected, so lanes that
+  would target them simply skip those networks until they're linked in Ayrshare.
+  Connected accounts are resolved dynamically via active_networks().
 - Threads has a 500-char limit; long captions are trimmed for Threads only
   (and flagged). All other networks receive the full caption.
 """

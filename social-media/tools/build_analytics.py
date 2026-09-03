@@ -60,7 +60,7 @@ def _api(path, body=None, method="GET"):
 
 
 # Platforms we actually publish to and want reviewed.
-PLATFORMS = ["instagram", "linkedin", "threads"]
+PLATFORMS = ["instagram", "facebook", "linkedin", "threads"]
 
 
 def social_summary():
