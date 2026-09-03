@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-03T10:35:53Z",
+  "generatedAt": "2026-09-03T11:36:32Z",
   "windowRecords": 80,
   "platforms": {
     "instagram": {
       "followers": 341,
       "reach": 128,
-      "views": 2089,
-      "likes": 749,
+      "views": 2101,
+      "likes": 747,
       "comments": 102,
       "shares": null,
-      "posts": 737,
+      "posts": 738,
       "name": "Internwise"
     },
     "facebook": {
@@ -404,7 +404,7 @@
         },
         {
           "d": "2026-09-03",
-          "v": 7
+          "v": 9
         }
       ]
     },
@@ -768,7 +768,7 @@
         },
         {
           "d": "2026-09-04",
-          "v": 83
+          "v": 136
         }
       ],
       "engagement": [
@@ -1130,7 +1130,7 @@
         },
         {
           "d": "2026-09-04",
-          "v": 3
+          "v": 4
         }
       ]
     },

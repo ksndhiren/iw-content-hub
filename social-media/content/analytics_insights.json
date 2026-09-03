@@ -1,7 +1,12 @@
 {
-  "generatedAt": "2026-09-03T10:35:53Z",
+  "generatedAt": "2026-09-03T11:36:32Z",
   "windowRecords": 80,
   "byLane": {
+    "education": {
+      "posts": 13,
+      "engagement": 3,
+      "avg": 0.2
+    },
     "employer": {
       "posts": 4,
       "engagement": 0,
@@ -21,35 +26,30 @@
       "posts": 6,
       "engagement": 1,
       "avg": 0.2
-    },
-    "education": {
-      "posts": 8,
-      "engagement": 3,
-      "avg": 0.4
     }
   },
   "byDay": {
     "Mon": {
-      "posts": 34,
+      "posts": 38,
       "engagement": 8,
       "avg": 0.2
     },
     "Thu": {
-      "posts": 3,
+      "posts": 4,
       "engagement": 1,
-      "avg": 0.3
+      "avg": 0.2
     }
   },
   "byHour": {
     "12": {
-      "posts": 34,
+      "posts": 38,
       "engagement": 8,
       "avg": 0.2
     },
     "5": {
-      "posts": 3,
+      "posts": 4,
       "engagement": 1,
-      "avg": 0.3
+      "avg": 0.2
     }
   },
   "topPosts": [
@@ -112,8 +112,8 @@
   ],
   "insights": [
     "Your strongest topic is Quote (0.4 avg engagement/post). Make more of it.",
-    "Thu is your best posting day (0.3 avg engagement/post).",
-    "Posts around 05:00 UTC perform best (0.3 avg engagement/post).",
+    "Mon is your best posting day (0.2 avg engagement/post).",
+    "Posts around 12:00 UTC perform best (0.2 avg engagement/post).",
     "Employer is underperforming (0.0 avg) - rework the angle or post it at a stronger time."
   ],
   "laneLabels": {
