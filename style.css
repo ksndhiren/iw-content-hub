@@ -1411,6 +1411,29 @@ a {
 .an-head h2 { font-size: 1.5rem; font-weight: 800; color: var(--color-text); }
 .an-sub { font-size: 0.8rem; color: var(--color-text-muted); }
 
+/* Date-range toolbar */
+.an-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem; }
+.an-range { display: inline-flex; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px; padding: 3px; gap: 2px; }
+.an-range__btn {
+  border: 0; background: transparent; cursor: pointer;
+  font-size: 0.82rem; font-weight: 600; color: var(--color-text-muted);
+  padding: 0.4rem 0.85rem; border-radius: 7px; line-height: 1;
+}
+.an-range__btn:hover { color: var(--color-text); }
+.an-range__btn.is-active { background: var(--color-blue); color: #fff; }
+.an-custom { display: inline-flex; align-items: center; gap: 0.5rem; }
+.an-date {
+  font: inherit; font-size: 0.82rem; color: var(--color-text);
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: 8px; padding: 0.35rem 0.55rem;
+}
+.an-custom__sep { font-size: 0.8rem; color: var(--color-text-muted); }
+.an-apply {
+  border: 0; cursor: pointer; background: var(--color-amber); color: var(--color-text);
+  font-size: 0.82rem; font-weight: 700; padding: 0.42rem 0.9rem; border-radius: 8px;
+}
+.an-foot { margin-top: 1rem; font-size: 0.76rem; line-height: 1.5; color: var(--color-text-muted); max-width: 60ch; }
+
 .an-section { margin-bottom: 2rem; }
 .an-h3 { font-size: 1.05rem; font-weight: 700; color: var(--color-text); margin-bottom: 0.85rem; }
 .an-h4 { font-size: 0.9rem; font-weight: 700; color: var(--color-text); margin-bottom: 0.75rem; }
@@ -1454,6 +1477,7 @@ a {
 .an-platform--linkedin  { border-top-color: #0A66C2; }
 .an-platform--threads   { border-top-color: #111; }
 .an-metrics { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.9rem 0.75rem; padding-top: 0.9rem; border-top: 1px solid var(--color-border); }
+.an-metrics--3 { grid-template-columns: repeat(3, 1fr); }
 .an-metric { display: flex; flex-direction: column; gap: 0.15rem; }
 .an-metric__val { font-size: 1.35rem; font-weight: 800; color: var(--color-text); line-height: 1; }
 .an-metric__label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-text-muted); }

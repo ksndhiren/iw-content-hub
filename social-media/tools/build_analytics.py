@@ -97,6 +97,47 @@ def social_summary():
     return out
 
 
+# Which daily time-series field maps to our normalised metric, per platform.
+# (Ayrshare exposes different daily metrics per network; LinkedIn has none.)
+SERIES_MAP = {
+    "instagram": {"reach": "reach"},
+    "facebook":  {"views": "pageMediaView", "engagement": "pagePostEngagements"},
+    "threads":   {"views": "views"},
+}
+
+
+def _series_points(block):
+    """Normalise Ayrshare's {period, values:[{value, endTime}]} into
+    [{"d": "YYYY-MM-DD", "v": number}], skipping non-numeric (nested) values."""
+    pts = []
+    for row in (block or {}).get("values") or []:
+        v = row.get("value")
+        end = row.get("endTime") or ""
+        if isinstance(v, (int, float)) and len(end) >= 10:
+            pts.append({"d": end[:10], "v": v})
+    return pts
+
+
+def daily_series(quarters=1):
+    """Per-platform daily time-series (~90 days/quarter) for the range filter.
+    Requires the daily=true flavour of /analytics/social."""
+    res = _api("analytics/social",
+               {"platforms": list(SERIES_MAP), "daily": True, "quarters": quarters}, "POST")
+    out = {}
+    for net, metrics in SERIES_MAP.items():
+        a = ((res.get(net) or {}).get("analytics")) or {}
+        if not a:
+            continue
+        series = {}
+        for metric, field in metrics.items():
+            pts = _series_points(a.get(field))
+            if pts:
+                series[metric] = pts
+        if series:
+            out[net] = series
+    return out
+
+
 def _lane_from_media(urls):
     """Recover our lane/topic from the R2 path in a post's mediaUrls.
     .../week14/week14-fri-fun/slide_1.png -> 'fun'; .../featured/job-1/... -> 'featured'."""
@@ -213,6 +254,7 @@ def main():
 
     print(f"Fetching Ayrshare analytics (last {args.records} posts) ...")
     social = social_summary()
+    series = daily_series()
     by_lane, by_day, by_hour, top = decision_making(args.records)
     insights = make_insights(by_lane, by_day, by_hour)
 
@@ -223,11 +265,13 @@ def main():
         "generatedAt": now,
         "windowRecords": args.records,
         "platforms": social,
+        "series": series,
     }
     with open(OUT, "w") as f:
         json.dump(public, f, indent=2, ensure_ascii=False)
         f.write("\n")
-    print(f"Wrote {OUT} (platforms: {list(social)})")
+    print(f"Wrote {OUT} (platforms: {list(social)} | series: "
+          + ", ".join(f"{k}:{'+'.join(v)}" for k, v in series.items()) + ")")
 
     # BACKEND — decision-making aggregates, not served to the public site.
     backend = {

@@ -60,6 +60,7 @@
   let featuredWeek    = null;    // Featured Jobs pseudo-week (from featured.json)
   let shortsWeek      = null;    // Shorts/Reels pseudo-week (from shorts.json)
   let analyticsData   = null;    // Ayrshare analytics summary (from analytics.json)
+  let analyticsRange  = { mode: 'current', start: null, end: null }; // date filter
   let currentMode     = 'weekly';// 'weekly' | 'shorts' | 'featured' | 'analytics'
   let featuredSeen    = new Set();// auto-post ids the user has already seen (localStorage)
   let featuredNewIds  = new Set();// auto-post ids new since last visit (for badge + ribbon)
@@ -427,41 +428,79 @@
       { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : '';
 
     var platforms = d.platforms || {};
+    var series = d.series || {};
     var keys = Object.keys(PLAT_META).filter(function (k) { return platforms[k]; });
 
-    // Sum a metric across the platforms that report it (null = not reported).
-    function total(fn) {
-      var t = null;
-      keys.forEach(function (k) {
-        var v = fn(platforms[k]);
-        if (typeof v === 'number') { t = (t || 0) + v; }
-      });
+    // ---- Date-range filter --------------------------------------------------
+    var ymd = function (dt) { return dt.toISOString().slice(0, 10); };
+    var todayStr = ymd(new Date());
+    var defStart = (function () { var s = new Date(); s.setUTCDate(s.getUTCDate() - 29); return ymd(s); })();
+    var RANGES = [['current', 'Current'], ['7d', '7 days'], ['30d', '30 days'], ['90d', '90 days'], ['custom', 'Custom']];
+
+    // Resolved [startStr, endStr] for the active mode, or null for "Current" (snapshot).
+    function bounds() {
+      var mode = analyticsRange.mode;
+      if (mode === 'current') return null;
+      if (mode === 'custom') return [analyticsRange.start || defStart, analyticsRange.end || todayStr];
+      var days = mode === '7d' ? 7 : mode === '90d' ? 90 : 30;
+      var start = new Date(); start.setUTCDate(start.getUTCDate() - (days - 1));
+      return [ymd(start), todayStr];
+    }
+    var win = bounds();
+
+    // Sum a daily series over the window; null if the network has no such series.
+    function windowed(net, metric) {
+      var s = series[net]; if (!s || !s[metric]) return null;
+      var t = 0;
+      s[metric].forEach(function (pt) { if (pt.d >= win[0] && pt.d <= win[1]) t += pt.v; });
       return t;
     }
-    var totFollowers    = total(function (p) { return p.followers; });
-    var totReach        = total(function (p) { return p.reach; });
-    var totViews        = total(function (p) { return p.views; });
-    var totInteractions = total(function (p) {
-      var s = 0, any = false;
-      ['likes', 'comments', 'shares'].forEach(function (m) {
-        if (typeof p[m] === 'number') { s += p[m]; any = true; }
-      });
-      return any ? s : null;
-    });
+    // Per-account {reach, views, engagement}: snapshot totals in "Current",
+    // else summed from the daily series over the window.
+    function metricsFor(k) {
+      var p = platforms[k];
+      if (!win) {
+        var s = 0, any = false;
+        ['likes', 'comments', 'shares'].forEach(function (m) {
+          if (typeof p[m] === 'number') { s += p[m]; any = true; }
+        });
+        return {
+          reach: (typeof p.reach === 'number' ? p.reach : null),
+          views: (typeof p.views === 'number' ? p.views : null),
+          engagement: any ? s : null,
+        };
+      }
+      return { reach: windowed(k, 'reach'), views: windowed(k, 'views'), engagement: windowed(k, 'engagement') };
+    }
+    var perPlat = {};
+    keys.forEach(function (k) { perPlat[k] = metricsFor(k); });
 
-    // ---- Overview tiles (aggregated across connected accounts) ----
-    function tile(val, label) {
-      return '<div class="an-tile"><span class="an-tile__val">' + fmt(val) + '</span>' +
+    // Sum one metric across accounts; returns {val, reporting}.
+    function agg(pick) {
+      var t = null, n = 0;
+      keys.forEach(function (k) {
+        var v = pick(k); if (typeof v === 'number') { t = (t || 0) + v; n++; }
+      });
+      return { val: t, reporting: n };
+    }
+    var aFollowers = agg(function (k) { return platforms[k].followers; });
+    var aReach     = agg(function (k) { return perPlat[k].reach; });
+    var aViews     = agg(function (k) { return perPlat[k].views; });
+    var aEng       = agg(function (k) { return perPlat[k].engagement; });
+
+    // ---- Overview tiles -----------------------------------------------------
+    function tile(a, label) {
+      return '<div class="an-tile"><span class="an-tile__val">' + fmt(a.val) + '</span>' +
              '<span class="an-tile__label">' + label + '</span>' +
-             '<span class="an-tile__note">' + keys.length + ' account' + (keys.length === 1 ? '' : 's') + '</span></div>';
+             '<span class="an-tile__note">' + a.reporting + ' of ' + keys.length + ' accounts</span></div>';
     }
     var overview =
-      tile(totFollowers, 'Followers') + tile(totReach, 'Reach') +
-      tile(totViews, 'Views') + tile(totInteractions, 'Interactions');
+      tile(aFollowers, win ? 'Followers (now)' : 'Followers') +
+      tile(aReach, 'Reach') + tile(aViews, 'Views') + tile(aEng, 'Engagement');
 
-    // ---- Per-platform cards ----
+    // ---- Per-account cards --------------------------------------------------
     var platCards = keys.map(function (k) {
-      var p = platforms[k], m = PLAT_META[k];
+      var p = platforms[k], m = PLAT_META[k], mx = perPlat[k];
       function metric(label, val) {
         return '<div class="an-metric"><span class="an-metric__val">' + fmt(val) +
                '</span><span class="an-metric__label">' + label + '</span></div>';
@@ -474,24 +513,66 @@
           '<span class="an-platform__id"><span class="an-platform__name">' + m.name + '</span>' + handle + '</span>' +
           '<span class="an-platform__followers">' + fmt(p.followers) + '<small>followers</small></span>' +
         '</div>' +
-        '<div class="an-metrics">' +
-          metric('Reach', p.reach) + metric('Views', p.views) +
-          metric('Likes', p.likes) + metric('Comments', p.comments) +
+        '<div class="an-metrics an-metrics--3">' +
+          metric('Reach', mx.reach) + metric('Views', mx.views) + metric('Engagement', mx.engagement) +
         '</div></div>';
     }).join('');
+
+    // ---- Range selector -----------------------------------------------------
+    var seg = '<div class="an-range" role="tablist">' + RANGES.map(function (r) {
+      return '<button class="an-range__btn' + (analyticsRange.mode === r[0] ? ' is-active' : '') +
+        '" data-range="' + r[0] + '" role="tab" aria-selected="' + (analyticsRange.mode === r[0]) + '">' + r[1] + '</button>';
+    }).join('') + '</div>';
+    var custom = analyticsRange.mode === 'custom'
+      ? '<div class="an-custom">' +
+          '<input type="date" class="an-date" id="an-date-start" value="' + (analyticsRange.start || defStart) + '" max="' + todayStr + '">' +
+          '<span class="an-custom__sep">to</span>' +
+          '<input type="date" class="an-date" id="an-date-end" value="' + (analyticsRange.end || todayStr) + '" max="' + todayStr + '">' +
+          '<button class="an-apply" id="an-apply">Apply</button>' +
+        '</div>'
+      : '';
+    var rangeLabel = win ? win[0] + ' → ' + win[1] : 'current totals';
+    var foot = win
+      ? '<p class="an-foot">Period figures use each network\'s daily data: Reach from Instagram, Views from Facebook &amp; Threads, Engagement from Facebook. A blank means that network doesn\'t report the metric for a date range. Followers is always the current total.</p>'
+      : '<p class="an-foot">Current totals as each network reports them. Pick a date range to see reach, views and engagement for that period.</p>';
 
     elAnalyticsView.innerHTML =
       '<div class="an-head">' +
         '<h2>Analytics</h2>' +
-        '<span class="an-sub">Meta Business Suite view · Ayrshare' +
+        '<span class="an-sub">Meta Business Suite view · Ayrshare · ' + escapeHtml(rangeLabel) +
         (when ? ' · updated ' + when : '') + '</span>' +
       '</div>' +
+
+      '<div class="an-toolbar">' + seg + custom + '</div>' +
 
       '<div class="an-overview">' + overview + '</div>' +
 
       '<section class="an-section"><h3 class="an-h3">By account</h3>' +
         '<div class="an-platforms">' + (platCards || '<p class="an-note">No platform data yet.</p>') + '</div>' +
+        foot +
       '</section>';
+
+    // ---- Wire the selector (re-renders in place, no refetch) -----------------
+    Array.prototype.forEach.call(elAnalyticsView.querySelectorAll('.an-range__btn'), function (b) {
+      b.addEventListener('click', function () {
+        analyticsRange.mode = b.getAttribute('data-range');
+        if (analyticsRange.mode === 'custom' && !analyticsRange.start) {
+          analyticsRange.start = defStart; analyticsRange.end = todayStr;
+        }
+        renderAnalytics();
+      });
+    });
+    var applyBtn = elAnalyticsView.querySelector('#an-apply');
+    if (applyBtn) {
+      applyBtn.addEventListener('click', function () {
+        var s = elAnalyticsView.querySelector('#an-date-start').value;
+        var e = elAnalyticsView.querySelector('#an-date-end').value;
+        if (s && e) {
+          if (s > e) { var t = s; s = e; e = t; }
+          analyticsRange.start = s; analyticsRange.end = e; renderAnalytics();
+        }
+      });
+    }
   }
 
   function renderShorts() {
