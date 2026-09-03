@@ -63,7 +63,7 @@ NET_LIMIT = {"twitter": 280, "threads": 500, "instagram": 2200,
 LANE_NETWORKS = {
     "news":      ["instagram", "facebook", "linkedin", "twitter", "threads"],
     "quote":     ["instagram", "facebook", "threads", "twitter"],
-    "fun":       ["instagram", "threads", "twitter"],
+    "fun":       ["instagram", "facebook", "threads", "twitter"],
     "employer":  ["linkedin", "facebook"],
     "education": ["instagram", "linkedin", "facebook", "threads"],
     # Featured job ads: candidate-facing + employer-credible.
