@@ -39,13 +39,13 @@ jobs:
 
       - name: Commit and push if analytics changed
         run: |
-          if [ -z "$(git status --porcelain data/analytics.json)" ]; then
+          if [ -z "$(git status --porcelain data/analytics.json social-media/content/analytics_insights.json)" ]; then
             echo "No analytics change this run."
             exit 0
           fi
           git config user.name  "internwise-content-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A data/analytics.json
+          git add -A data/analytics.json social-media/content/analytics_insights.json
           git commit -m "Analytics refresh ($(date -u +%Y-%m-%d))"
           git pull --rebase origin main
           git push origin HEAD:main

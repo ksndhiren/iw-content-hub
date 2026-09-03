@@ -397,6 +397,18 @@
     if (currentMode === 'analytics') renderAnalytics();
   }
 
+  // Brand marks for each network (inline SVG, drawn white on a brand-colour chip).
+  var PLAT_META = {
+    instagram: { name: 'Instagram', colour: '#E1306C',
+      icon: '<path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.42.56.21.96.47 1.38.89.42.42.68.82.9 1.38.16.42.36 1.05.41 2.22.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.22-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.05-.41-2.22C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.22.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.89.43-.17 1.06-.37 2.23-.42C8.42 2.17 8.8 2.16 12 2.16zm0 5.68A4.16 4.16 0 1016.16 12 4.16 4.16 0 0012 7.84zm0 6.86A2.7 2.7 0 1114.7 12 2.7 2.7 0 0112 14.7zm5.31-7.02a.97.97 0 11-.97-.97.97.97 0 01.97.97z"/>' },
+    facebook:  { name: 'Facebook', colour: '#1877F2',
+      icon: '<path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/>' },
+    linkedin:  { name: 'LinkedIn', colour: '#0A66C2',
+      icon: '<path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 112.06-2.07 2.07 2.07 0 01-2.06 2.07zm1.78 13.02H3.55V9h3.57v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.2.8 24 1.77 24h20.45c.98 0 1.78-.8 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/>' },
+    threads:   { name: 'Threads', colour: '#111111',
+      icon: '<path d="M17.3 11.13c-.09-.04-.18-.08-.27-.12-.16-2.94-1.77-4.62-4.47-4.64h-.04c-1.61 0-2.95.69-3.78 1.94l1.48 1.02c.62-.94 1.6-1.14 2.3-1.14h.02c.87 0 1.53.25 1.96.75.31.36.52.87.63 1.51-.82-.14-1.7-.18-2.65-.13-2.66.15-4.37 1.7-4.26 3.85.06 1.09.6 2.03 1.53 2.64.78.52 1.79.77 2.84.71 1.38-.07 2.47-.6 3.23-1.57.58-.74.94-1.7 1.11-2.9.68.41 1.18.95 1.46 1.6.47 1.1.5 2.9-.97 4.37-1.29 1.29-2.84 1.85-5.17 1.86-2.59-.02-4.55-.85-5.82-2.47C4.71 16.4 4.1 14.36 4.09 11.99c.01-2.37.62-4.41 1.81-6.05C7.17 4.33 9.13 3.5 11.72 3.48c2.61.02 4.58.85 5.86 2.48.63.8 1.11 1.81 1.42 3l1.86-.5c-.38-1.45-.98-2.7-1.8-3.74C17.3 2.6 14.79 1.5 11.73 1.48h-.02c-3.05.02-5.5 1.13-7.24 3.29C2.87 6.66 2.14 9.11 2.13 11.98v.01c.01 2.87.74 5.32 2.34 7.22 1.74 2.16 4.19 3.27 7.24 3.29h.02c2.72-.02 4.64-.73 6.22-2.31 2.07-2.06 2-4.65 1.32-6.24-.49-1.14-1.42-2.07-2.7-2.67z"/>' },
+  };
+
   function renderAnalytics() {
     if (!elAnalyticsView) return;
     if (!analyticsData) {
@@ -408,94 +420,77 @@
     }
 
     var d = analyticsData;
-    var labels = d.laneLabels || {};
     var fmt = function (n) {
       return (n === null || n === undefined) ? '—' : Number(n).toLocaleString();
     };
     var when = d.generatedAt ? new Date(d.generatedAt).toLocaleString('en-GB',
       { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : '';
 
-    var PLAT = {
-      instagram: { name: 'Instagram' },
-      facebook:  { name: 'Facebook' },
-      linkedin:  { name: 'LinkedIn' },
-      threads:   { name: 'Threads' },
-    };
-
-    // ---- PRESENT: per-platform performance cards ----
     var platforms = d.platforms || {};
-    var platCards = Object.keys(PLAT).filter(function (k) { return platforms[k]; })
-      .map(function (k) {
-        var p = platforms[k];
-        function metric(label, val) {
-          return '<div class="an-metric"><span class="an-metric__val">' + fmt(val) +
-                 '</span><span class="an-metric__label">' + label + '</span></div>';
-        }
-        return '<div class="an-card an-platform an-platform--' + k + '">' +
-          '<div class="an-platform__head"><span class="an-platform__name">' + PLAT[k].name + '</span>' +
-          '<span class="an-platform__followers">' + fmt(p.followers) + ' followers</span></div>' +
-          '<div class="an-metrics">' +
-            metric('Reach', p.reach) + metric('Views', p.views) +
-            metric('Likes', p.likes) + metric('Comments', p.comments) +
-          '</div></div>';
-      }).join('');
+    var keys = Object.keys(PLAT_META).filter(function (k) { return platforms[k]; });
 
-    // ---- horizontal bar chart helper ----
-    function barChart(obj, order, keyLabel) {
-      var entries = order
-        ? order.filter(function (k) { return obj[k]; }).map(function (k) { return [k, obj[k]]; })
-        : Object.entries(obj).sort(function (a, b) { return b[1].avg - a[1].avg; });
-      if (!entries.length) return '<p class="an-note">Not enough data yet.</p>';
-      var max = Math.max.apply(null, entries.map(function (e) { return e[1].avg; }).concat([0.0001]));
-      return '<div class="an-bars">' + entries.map(function (e) {
-        var k = e[0], v = e[1];
-        var pct = Math.max(2, Math.round((v.avg / max) * 100));
-        var name = keyLabel ? keyLabel(k) : (labels[k] || k);
-        return '<div class="an-bar-row">' +
-          '<span class="an-bar-row__label">' + escapeHtml(name) + '</span>' +
-          '<span class="an-bar-row__track"><span class="an-bar-row__fill" style="width:' + pct + '%"></span></span>' +
-          '<span class="an-bar-row__val">' + v.avg + ' <small>(' + v.posts + ' post' + (v.posts === 1 ? '' : 's') + ')</small></span>' +
-        '</div>';
-      }).join('') + '</div>';
+    // Sum a metric across the platforms that report it (null = not reported).
+    function total(fn) {
+      var t = null;
+      keys.forEach(function (k) {
+        var v = fn(platforms[k]);
+        if (typeof v === 'number') { t = (t || 0) + v; }
+      });
+      return t;
     }
+    var totFollowers    = total(function (p) { return p.followers; });
+    var totReach        = total(function (p) { return p.reach; });
+    var totViews        = total(function (p) { return p.views; });
+    var totInteractions = total(function (p) {
+      var s = 0, any = false;
+      ['likes', 'comments', 'shares'].forEach(function (m) {
+        if (typeof p[m] === 'number') { s += p[m]; any = true; }
+      });
+      return any ? s : null;
+    });
 
-    var DOW = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-    var hourOrder = Object.keys(d.byHour || {}).sort(function (a, b) { return a - b; });
+    // ---- Overview tiles (aggregated across connected accounts) ----
+    function tile(val, label) {
+      return '<div class="an-tile"><span class="an-tile__val">' + fmt(val) + '</span>' +
+             '<span class="an-tile__label">' + label + '</span>' +
+             '<span class="an-tile__note">' + keys.length + ' account' + (keys.length === 1 ? '' : 's') + '</span></div>';
+    }
+    var overview =
+      tile(totFollowers, 'Followers') + tile(totReach, 'Reach') +
+      tile(totViews, 'Views') + tile(totInteractions, 'Interactions');
 
-    // ---- DECISION-MAKING: insights + charts + top posts ----
-    var insights = (d.insights || []).map(function (t) {
-      return '<li>' + escapeHtml(t) + '</li>';
-    }).join('') || '<li>Not enough data yet - insights appear once more posts have gone out.</li>';
-
-    var topPosts = (d.topPosts || []).map(function (p) {
-      var lane = labels[p.lane] || p.lane || 'Post';
-      var date = p.created ? new Date(p.created).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) : '';
-      return '<li class="an-toppost">' +
-        '<span class="an-toppost__eng">' + fmt(p.engagement) + '</span>' +
-        '<span class="an-toppost__body"><span class="an-toppost__meta">' +
-          escapeHtml(lane) + ' · ' + escapeHtml(p.network || '') + ' · ' + date +
-        '</span><span class="an-toppost__cap">' + escapeHtml(p.caption || '') + '</span></span></li>';
-    }).join('') || '<li class="an-note">No posts analysed yet.</li>';
+    // ---- Per-platform cards ----
+    var platCards = keys.map(function (k) {
+      var p = platforms[k], m = PLAT_META[k];
+      function metric(label, val) {
+        return '<div class="an-metric"><span class="an-metric__val">' + fmt(val) +
+               '</span><span class="an-metric__label">' + label + '</span></div>';
+      }
+      var chip = '<span class="an-chip" style="background:' + m.colour + '">' +
+        '<svg viewBox="0 0 24 24" width="18" height="18" fill="#fff" aria-hidden="true">' + m.icon + '</svg></span>';
+      var handle = p.name ? '<span class="an-platform__handle">' + escapeHtml(p.name) + '</span>' : '';
+      return '<div class="an-card an-platform an-platform--' + k + '">' +
+        '<div class="an-platform__head">' + chip +
+          '<span class="an-platform__id"><span class="an-platform__name">' + m.name + '</span>' + handle + '</span>' +
+          '<span class="an-platform__followers">' + fmt(p.followers) + '<small>followers</small></span>' +
+        '</div>' +
+        '<div class="an-metrics">' +
+          metric('Reach', p.reach) + metric('Views', p.views) +
+          metric('Likes', p.likes) + metric('Comments', p.comments) +
+        '</div></div>';
+    }).join('');
 
     elAnalyticsView.innerHTML =
       '<div class="an-head">' +
         '<h2>Analytics</h2>' +
-        '<span class="an-sub">Ayrshare · last ' + (d.windowRecords || '') + ' posts' +
+        '<span class="an-sub">Meta Business Suite view · Ayrshare' +
         (when ? ' · updated ' + when : '') + '</span>' +
       '</div>' +
 
-      '<section class="an-section"><h3 class="an-h3">Performance</h3>' +
-        '<div class="an-platforms">' + (platCards || '<p class="an-note">No platform data yet.</p>') + '</div>' +
-      '</section>' +
+      '<div class="an-overview">' + overview + '</div>' +
 
-      '<section class="an-section"><h3 class="an-h3">What to do next</h3>' +
-        '<ul class="an-insights">' + insights + '</ul>' +
-        '<div class="an-grid">' +
-          '<div class="an-card"><h4 class="an-h4">Best topics</h4>' + barChart(d.byLane || {}, null, function (k) { return labels[k] || k; }) + '</div>' +
-          '<div class="an-card"><h4 class="an-h4">Best day to post</h4>' + barChart(d.byDay || {}, DOW, function (k) { return k; }) + '</div>' +
-          '<div class="an-card"><h4 class="an-h4">Best time to post (UTC)</h4>' + barChart(d.byHour || {}, hourOrder, function (k) { return ('0' + k).slice(-2) + ':00'; }) + '</div>' +
-          '<div class="an-card"><h4 class="an-h4">Top posts</h4><ul class="an-toplist">' + topPosts + '</ul></div>' +
-        '</div>' +
+      '<section class="an-section"><h3 class="an-h3">By account</h3>' +
+        '<div class="an-platforms">' + (platCards || '<p class="an-note">No platform data yet.</p>') + '</div>' +
       '</section>';
   }
 

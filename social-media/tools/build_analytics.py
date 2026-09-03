@@ -13,8 +13,11 @@ Two jobs, matching what the Analytics tab shows:
       - topPosts: the individual posts that worked
       - insights: plain-English takeaways derived from the above
 
-Reads AYRSHARE_API_KEY from env (or social-media/.env). Writes data/analytics.json,
-which the dashboard reads directly - same pattern as weeks.json / featured.json.
+Reads AYRSHARE_API_KEY from env (or social-media/.env). Writes two files:
+  - data/analytics.json                       (PUBLIC: per-platform performance;
+    the Meta-style dashboard reads this - same pattern as weeks.json / featured.json)
+  - social-media/content/analytics_insights.json  (BACKEND: best time/topics,
+    insights, top posts - feeds content planning, never served to the public site)
 
     python3 social-media/tools/build_analytics.py            # write data/analytics.json
     python3 social-media/tools/build_analytics.py --records 80
@@ -26,7 +29,11 @@ import urllib.request, urllib.error
 HERE = os.path.dirname(os.path.abspath(__file__))
 SM   = os.path.dirname(HERE)
 HUB  = os.path.dirname(SM)
+# Public: the Meta-style performance dashboard reads this (served to the browser).
 OUT  = os.path.join(HUB, "data", "analytics.json")
+# Backend: decision-making aggregates (best time/topics, insights, top posts).
+# Kept out of the public site - it feeds our content planning, not the dashboard.
+INSIGHTS_OUT = os.path.join(SM, "content", "analytics_insights.json")
 BASE = "https://api.ayrshare.com/api"
 DOW  = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 # Lane label + display order for the topic breakdown.
@@ -209,10 +216,23 @@ def main():
     by_lane, by_day, by_hour, top = decision_making(args.records)
     insights = make_insights(by_lane, by_day, by_hour)
 
-    payload = {
-        "generatedAt": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+    now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    # PUBLIC — Meta-style performance dashboard (per-platform account metrics only).
+    public = {
+        "generatedAt": now,
         "windowRecords": args.records,
         "platforms": social,
+    }
+    with open(OUT, "w") as f:
+        json.dump(public, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+    print(f"Wrote {OUT} (platforms: {list(social)})")
+
+    # BACKEND — decision-making aggregates, not served to the public site.
+    backend = {
+        "generatedAt": now,
+        "windowRecords": args.records,
         "byLane": by_lane,
         "byDay": by_day,
         "byHour": by_hour,
@@ -220,11 +240,11 @@ def main():
         "insights": insights,
         "laneLabels": LANE_LABELS,
     }
-    with open(OUT, "w") as f:
-        json.dump(payload, f, indent=2, ensure_ascii=False)
+    os.makedirs(os.path.dirname(INSIGHTS_OUT), exist_ok=True)
+    with open(INSIGHTS_OUT, "w") as f:
+        json.dump(backend, f, indent=2, ensure_ascii=False)
         f.write("\n")
-    print(f"Wrote {OUT}")
-    print(f"  platforms: {list(social)} | lanes: {list(by_lane)} | topPosts: {len(top)}")
+    print(f"Wrote {INSIGHTS_OUT} (lanes: {list(by_lane)} | topPosts: {len(top)})")
     for i in insights:
         print("  -", i)
 
