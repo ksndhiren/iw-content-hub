@@ -233,12 +233,6 @@
     "network": "threads",
     "scheduleDate": "2026-09-04T16:30:00Z"
   },
-  "week14-fri-employer:linkedin": {
-    "id": "0bfAwi6zHHracGdQQWID",
-    "at": "2026-08-31T12:16:44.633794",
-    "network": "linkedin",
-    "scheduleDate": "2026-09-04T10:00:00Z"
-  },
   "week14-fri-education:instagram": {
     "id": "uXcVzyklv52Ewyr8Eqsi",
     "at": "2026-08-31T12:16:51.644067",
@@ -461,12 +455,6 @@
     "network": "facebook",
     "scheduleDate": "2026-09-04T07:00:00Z"
   },
-  "week14-fri-employer:facebook": {
-    "id": "bGTM9XspIMKmBHgx4Ibe",
-    "at": "2026-09-03T05:42:41.708685",
-    "network": "facebook",
-    "scheduleDate": "2026-09-04T10:00:00Z"
-  },
   "week14-fri-education:facebook": {
     "id": "3WjQzscVdtM6EcP7Uo0h",
     "at": "2026-09-03T05:42:44.256987",
@@ -549,6 +537,18 @@
     "id": "Eerc0Irr1tVxcEJ0pKYd",
     "at": "2026-09-03T17:38:12.633514",
     "network": "threads",
+    "scheduleDate": null
+  },
+  "week14-fri-employer:linkedin": {
+    "id": "AbWarKuhhDJ1PojgFyu2",
+    "at": "2026-09-04T13:09:31.954091",
+    "network": "linkedin",
+    "scheduleDate": null
+  },
+  "week14-fri-employer:facebook": {
+    "id": "LsrHciNX88sK2VxngtDE",
+    "at": "2026-09-04T13:32:12.853601",
+    "network": "facebook",
     "scheduleDate": null
   }
 }
