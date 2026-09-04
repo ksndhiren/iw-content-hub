@@ -3,19 +3,19 @@
   "label": "Featured Jobs",
   "posts": [
     {
-      "id": "job-35395",
-      "sourceId": "35395",
-      "sourceUrl": "https://www.internwise.co.uk/job/35395/project-management-intern",
-      "addedAt": "2026-08-21T06:56:59Z",
-      "day": "HACKETT & HACKETT INTERNATIONAL GROUP LIMITED",
-      "title": "Project Management Intern",
+      "id": "job-35396",
+      "sourceId": "35396",
+      "sourceUrl": "https://www.internwise.co.uk/job/35396/sales-marketing-internship",
+      "addedAt": "2026-09-04T11:00:44Z",
+      "day": "KARMAH LTD",
+      "title": "Sales & Marketing Internship",
       "platform": "Featured Job",
       "format": "Single",
       "slides": [
-        "job-35395-2026-08-19-employers-sm-ads-v1.png"
+        "job-35396-2026-08-19-employers-sm-ads-v1.png"
       ],
       "status": "in-review",
-      "caption": "Swap the lecture hall for real project management projects and a team that backs you.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35395/project-management-intern",
+      "caption": "Kickstart your sales and marketing journey with a hands-on internship in the UK.\n\n📍 London, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35396/sales-marketing-internship",
       "hashtags": [
         "#internship",
         "#londonjobs",
@@ -24,9 +24,9 @@
         "#graduatejobs"
       ],
       "captions": {
-        "ig-fb": "Swap the lecture hall for real project management projects and a team that backs you.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35395/project-management-intern",
-        "linkedin": "Swap the lecture hall for real project management projects and a team that backs you.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35395/project-management-intern",
-        "x": "Swap the lecture hall for real project management projects and a team that backs you.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35395/project-management-intern"
+        "ig-fb": "Kickstart your sales and marketing journey with a hands-on internship in the UK.\n\n📍 London, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35396/sales-marketing-internship",
+        "linkedin": "Kickstart your sales and marketing journey with a hands-on internship in the UK.\n\n📍 London, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35396/sales-marketing-internship",
+        "x": "Kickstart your sales and marketing journey with a hands-on internship in the UK.\n\n📍 London, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35396/sales-marketing-internship"
       },
       "hashtagsByPlatform": {
         "ig-fb": [
@@ -47,137 +47,17 @@
           "#hiring"
         ]
       },
-      "sector": "Project Management",
+      "sector": "Marketing",
       "sectorStyle": "marketing",
       "palette": {
         "version": "2026-08-19-employers-sm-ads-v1",
         "style": "marketing",
-        "sector": "Project Management",
-        "accent": "#2BD4CF",
+        "sector": "Marketing",
+        "accent": "#FF6B6B",
         "accentDark": "#D2415C",
         "background": [
           "#7E2038",
           "#C43F5C"
-        ],
-        "spark": "#D4FF3D"
-      }
-    },
-    {
-      "id": "job-35394",
-      "sourceId": "35394",
-      "sourceUrl": "https://www.internwise.co.uk/job/35394/group-intern-manager",
-      "addedAt": "2026-08-19T10:11:57Z",
-      "day": "HACKETT & HACKETT INTERNATIONAL GROUP LIMITED",
-      "title": "Group Intern Manager",
-      "platform": "Featured Job",
-      "format": "Single",
-      "slides": [
-        "job-35394-2026-08-19-employers-sm-ads-v1.png"
-      ],
-      "status": "in-review",
-      "caption": "Serious about a group manager career? Get the experience employers actually look for.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35394/group-intern-manager",
-      "hashtags": [
-        "#internship",
-        "#londonjobs",
-        "#marketingjobs",
-        "#hiring",
-        "#graduatejobs"
-      ],
-      "captions": {
-        "ig-fb": "Serious about a group manager career? Get the experience employers actually look for.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35394/group-intern-manager",
-        "linkedin": "Serious about a group manager career? Get the experience employers actually look for.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35394/group-intern-manager",
-        "x": "Serious about a group manager career? Get the experience employers actually look for.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35394/group-intern-manager"
-      },
-      "hashtagsByPlatform": {
-        "ig-fb": [
-          "#internship",
-          "#londonjobs",
-          "#marketingjobs",
-          "#hiring",
-          "#graduatejobs"
-        ],
-        "linkedin": [
-          "#hiring",
-          "#internship",
-          "#marketingjobs",
-          "#careers"
-        ],
-        "x": [
-          "#marketingjobs",
-          "#hiring"
-        ]
-      },
-      "sector": "Business Management",
-      "sectorStyle": "sales",
-      "palette": {
-        "version": "2026-08-19-employers-sm-ads-v1",
-        "style": "sales",
-        "sector": "Business Management",
-        "accent": "#D4CE2B",
-        "accentDark": "#E5771E",
-        "background": [
-          "#5A2A12",
-          "#A85A1E"
-        ],
-        "spark": "#D4FF3D"
-      }
-    },
-    {
-      "id": "job-35392",
-      "sourceId": "35392",
-      "sourceUrl": "https://www.internwise.co.uk/job/35392/property-management-intern",
-      "addedAt": "2026-08-19T10:11:57Z",
-      "day": "HACKETT & HACKETT INTERNATIONAL GROUP LIMITED",
-      "title": "Property Management Intern",
-      "platform": "Featured Job",
-      "format": "Single",
-      "slides": [
-        "job-35392-2026-08-19-employers-sm-ads-v1.png"
-      ],
-      "status": "in-review",
-      "caption": "Turn what you have learned into real property management work with a team that mentors you.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35392/property-management-intern",
-      "hashtags": [
-        "#internship",
-        "#londonjobs",
-        "#realestatejobs",
-        "#hiring",
-        "#graduatejobs"
-      ],
-      "captions": {
-        "ig-fb": "Turn what you have learned into real property management work with a team that mentors you.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35392/property-management-intern",
-        "linkedin": "Turn what you have learned into real property management work with a team that mentors you.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35392/property-management-intern",
-        "x": "Turn what you have learned into real property management work with a team that mentors you.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35392/property-management-intern"
-      },
-      "hashtagsByPlatform": {
-        "ig-fb": [
-          "#internship",
-          "#londonjobs",
-          "#realestatejobs",
-          "#hiring",
-          "#graduatejobs"
-        ],
-        "linkedin": [
-          "#hiring",
-          "#internship",
-          "#realestatejobs",
-          "#careers"
-        ],
-        "x": [
-          "#realestatejobs",
-          "#hiring"
-        ]
-      },
-      "sector": "Property Management",
-      "sectorStyle": "property",
-      "palette": {
-        "version": "2026-08-19-employers-sm-ads-v1",
-        "style": "property",
-        "sector": "Property Management",
-        "accent": "#D18E14",
-        "accentDark": "#D18E14",
-        "background": [
-          "#0E4433",
-          "#1B7B58"
         ],
         "spark": "#D4FF3D"
       }
