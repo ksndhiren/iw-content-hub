@@ -1,32 +1,35 @@
 {
   "week": "week15",
-  "generatedAt": "2026-09-05T04:47:35Z",
-  "shortfalls": [
-    {
-      "label": "employer/benefits",
-      "family": "authority",
-      "cutout": "nuno_authority_1"
-    },
-    {
-      "label": "education/teal/cta",
-      "family": "thumbsup",
-      "cutout": "nuno_thumbsup"
-    },
-    {
-      "label": "employer/trust",
-      "family": "authority",
-      "cutout": "nuno_authority_2"
-    },
-    {
-      "label": "employer/statement",
-      "family": "cvpile",
-      "cutout": "nuno_cvpile"
-    }
-  ],
+  "generatedAt": "2026-09-05T04:58:52Z",
   "needByFamily": {
     "authority": 2,
     "thumbsup": 1,
     "cvpile": 1
   },
-  "ok": false
+  "repeats": [
+    {
+      "label": "employer/benefits",
+      "cutout": "nuno_authority_1",
+      "family": "authority",
+      "week": "week15"
+    },
+    {
+      "label": "education/teal/cta",
+      "cutout": "nuno_thumbsup",
+      "family": "thumbsup",
+      "week": "week15"
+    },
+    {
+      "label": "employer/trust",
+      "cutout": "nuno_authority_2",
+      "family": "authority",
+      "week": "week15"
+    },
+    {
+      "label": "employer/statement",
+      "cutout": "nuno_cvpile",
+      "family": "cvpile",
+      "week": "week15"
+    }
+  ]
 }
