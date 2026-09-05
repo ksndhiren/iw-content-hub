@@ -52,6 +52,7 @@ jobs:
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_BUCKET: ${{ secrets.R2_BUCKET }}
         run: |
+          set -o pipefail   # a build_news_day crash must fail the job, not be masked by tee
           if [ -n "${{ github.event.inputs.date }}" ]; then
             python social-media/tools/build_news_day.py --date "${{ github.event.inputs.date }}" | tee /tmp/news.log
           else

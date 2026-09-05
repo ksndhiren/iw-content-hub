@@ -105,7 +105,13 @@ def w_paper(q):
 WORLDS = {"editorial": w_editorial, "spotlight": w_spotlight, "colorblock": w_colorblock,
           "split": w_split, "paper": w_paper}
 
+# Only q001-q005 in the bank carry a "cta"; the rest (exposed once quotes rotate
+# weekly) don't, so fall back to an on-brand default rather than KeyError.
+_DEFAULT_CTA = "Find your internship at internwise.co.uk"
+
+
 def render_quote(q, world, out_dir, filename="slide_1.png"):
+    q = {**q, "cta": q.get("cta") or _DEFAULT_CTA}
     inner = WORLDS[world](q)
     return L.render(out_dir, filename, inner)
 
