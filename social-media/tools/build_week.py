@@ -43,12 +43,18 @@ DKEYS = ["mon", "tue", "wed", "thu", "fri"]
 def target_week():
     """Which week to build. Env WEEK_ID/WEEK_WC/WEEK_LABEL override; otherwise the
     UPCOMING week (next Monday), numbered relative to week14 = w/c 2026-08-31."""
+    ref, refn = datetime.date(2026, 8, 31), 14        # week14 = w/c 2026-08-31
     wid = os.getenv("WEEK_ID")
     if wid:
         wc = os.getenv("WEEK_WC", "")
-        mon = datetime.date.fromisoformat(wc) if wc else datetime.date.today()
+        if wc:
+            mon = datetime.date.fromisoformat(wc)
+        else:                                          # derive Monday from the week number
+            try:
+                mon = ref + datetime.timedelta(weeks=int(wid.replace("week", "")) - refn)
+            except ValueError:
+                mon = datetime.date.today()
         return wid, os.getenv("WEEK_LABEL", "Week " + wid.replace("week", "")), mon.isoformat(), mon
-    ref, refn = datetime.date(2026, 8, 31), 14
     today = datetime.date.today()
     ahead = (0 - today.weekday()) % 7 or 7          # next Monday
     mon = today + datetime.timedelta(days=ahead)
