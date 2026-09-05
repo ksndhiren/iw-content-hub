@@ -7,7 +7,7 @@ them. Used by the build step; runs unattended in the cloud (needs OPENAI_API_KEY
 
     from writer import write_news, write_captions, write_education
 """
-import os, json, sys
+import os, json, sys, re
 
 MODEL = os.getenv("OPENAI_MODEL") or "gpt-4o"   # empty-string safe (cloud var may be unset)
 
@@ -57,6 +57,34 @@ def _lc_hashtags(obj):
     return obj
 
 
+# Brand rule (feedback): never write "paid"/"unpaid" next to internship/opportunity/
+# role/job wording - Internwise says just "internship". The system prompt asks for
+# this, but the LLM still slips "paid internships" into CTAs, so we scrub every
+# output deterministically as a hard backstop.
+_PAID_ADJ = re.compile(r"\b(?:un)?paid\s+(?=intern|opportunit|role|position|job|vacanc|placement|work\b)", re.I)
+_PAID_POST = re.compile(r"\s*[,-]?\s*(?:that are|which are|are|is|and)\s+(?:un)?paid\b", re.I)
+
+
+def _scrub_text(s):
+    if not isinstance(s, str):
+        return s
+    s = _PAID_ADJ.sub("", s)
+    s = _PAID_POST.sub("", s)
+    return re.sub(r"  +", " ", s)
+
+
+def _scrub(obj):
+    """Recursively strip paid/unpaid-vs-internship wording from every string."""
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            obj[k] = _scrub(v)
+    elif isinstance(obj, list):
+        return [_scrub(x) for x in obj]
+    else:
+        return _scrub_text(obj)
+    return obj
+
+
 def _chat(user, max_tokens=900):
     resp = _client().chat.completions.create(
         model=MODEL,
@@ -65,7 +93,7 @@ def _chat(user, max_tokens=900):
         temperature=0.7,
         max_tokens=max_tokens,
     )
-    return _lc_hashtags(json.loads(resp.choices[0].message.content))
+    return _scrub(_lc_hashtags(json.loads(resp.choices[0].message.content)))
 
 
 # --------------------------------------------------------------------------- news
