@@ -27,14 +27,17 @@ PAL = {
 # A cover pose must be RIGHT-WEIGHTED / compact (head+torso hug the right edge) so
 # it clears the left headline column (_cover: left:56, width:520). Wide arms-spread
 # or left-reaching poses put the figure under the headline - kept OUT of COVER_POOL.
-COVER_POOL = ["nuno_cv", "nuno_cv_1", "nuno_cv_2", "nuno_cv_3",
+# NOTE: nuno_cv_1 excluded - its rembg cutout loses the laptop against dark
+# backgrounds (needs re-cutting before it goes back in).
+COVER_POOL = ["nuno_cv", "nuno_cv_2", "nuno_cv_3",
               "nuno_thoughtful_1", "nuno_thoughtful_2", "nuno_thoughtful_3",
               "nuno_authority_1", "nuno_authority_2", "nuno_authority_3",
               "nuno_planning_1", "nuno_planning_2", "nuno_planning_3",
               "nuno_cvpile", "nuno_utility_2", "nuno_utility_3"]
-# CTA poses read as positive / action, compact enough for the right anchor.
-CTA_POOL = ["nuno_thumbsup", "nuno_dothis_1", "nuno_dothis_2",
-            "nuno_offers_1", "nuno_welcoming_2"]
+# CTA poses read as CONFIDENT / positive (not celebratory) so they don't clash
+# with evaluative topics. welcoming_2 (hand-on-heart, laughing) removed for that
+# reason. Pool is thin - more CTA cutouts needed (see nuno_check).
+CTA_POOL = ["nuno_thumbsup", "nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1"]
 
 
 def _bg(p):

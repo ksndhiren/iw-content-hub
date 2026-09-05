@@ -61,8 +61,9 @@ def target_week():
     n = refn + (mon - ref).days // 7
     return f"week{n}", f"Week {n}", mon.isoformat(), mon
 
-QUOTE = [("editorial", "q001"), ("spotlight", "q002"), ("colorblock", "q003"),
-         ("split", "q004"), ("paper", "q005")]
+# Visual worlds cycle every day; the QUOTE TEXT rotates weekly through the whole
+# bank (see build()) so no two consecutive weeks repeat the same 5 quotes.
+QUOTE_WORLDS = ["editorial", "spotlight", "colorblock", "split", "paper"]
 EMPLOYER = [("benefits", "e001"), ("bigstat", "e004"), ("process", "e003"),
             ("trust", "e005"), ("statement", "e002")]
 # education: 3 carousels + 2 singles, rotating worlds
@@ -174,6 +175,14 @@ def build(days=5, dry=False):
     quotes = {q["id"]: q for q in L.load("quotes_bank.json")["quotes"]}
     angles = {a["id"]: a for a in L.load("employer_angles.json")["angles"]}
     wid, wlabel, wc, mon = target_week()
+    # Rotate the quote bank by week so consecutive weeks never share quotes.
+    qids = sorted(quotes.keys())
+    try:
+        wn = int(wid.replace("week", ""))
+    except ValueError:
+        wn = 14
+    qstart = ((wn - 14) * 5) % len(qids)
+    week_quotes = [qids[(qstart + i) % len(qids)] for i in range(5)]
     img = os.path.join(HUB, "images", wid)
     daylist = [(DKEYS[i], (mon + datetime.timedelta(days=i)).strftime("%a %d %b").replace(" 0", " ")) for i in range(5)]
     edu_topics = pick_education(days)
@@ -187,7 +196,7 @@ def build(days=5, dry=False):
         # NEWS is built day-prior by build_news_day.py so it is never stale.
 
         # QUOTE
-        world, qid = QUOTE[di]; q = quotes[qid]
+        world = QUOTE_WORLDS[di]; qid = week_quotes[di]; q = quotes[qid]
         cap = writer.write_captions("quote", f"Quote by {q['author']}", q["text"], q.get("cta"))
         pid = f"{wid}-{dkey}-quote"
         if not dry:
