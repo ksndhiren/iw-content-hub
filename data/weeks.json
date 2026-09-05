@@ -3317,48 +3317,48 @@
       "id": "week15",
       "label": "Week 15",
       "weekCommencing": "2026-09-07",
-      "builtAt": 1788584890,
+      "builtAt": 1788588336,
       "posts": [
         {
           "id": "week15-mon-quote",
           "day": "Mon 7 Sep",
           "lane": "quote",
-          "title": "Quote: Chris Grosser",
+          "title": "Quote: Robert Collier",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Ever felt like you're waiting for that big break? Chris Grosser reminds us that opportunities aren't just handed out - they're crafted by you. Whether it's through networking, skill-building, or grabbing the right internship, you're in control. Ready to start creating? Check out internships at www.internwise.co.uk.",
+          "caption": "Robert Collier reminds us that success isn't about one big leap, but the small steps we take every day. So, keep at it! Every little effort counts towards your future. Looking for a place to start? Check out the internships at www.internwise.co.uk.",
           "hashtags": [
-            "#opportunityknocks",
+            "#successtips",
             "#careergrowth",
-            "#internship",
-            "#makeithappen",
-            "#futureready"
+            "#dailyeffort",
+            "#internships",
+            "#internwise"
           ],
           "captions": {
-            "ig-fb": "Ever felt like you're waiting for that big break? Chris Grosser reminds us that opportunities aren't just handed out - they're crafted by you. Whether it's through networking, skill-building, or grabbing the right internship, you're in control. Ready to start creating? Check out internships at www.internwise.co.uk.",
-            "linkedin": "Chris Grosser hits the nail on the head - opportunities aren't just out there waiting for you. They're made by you. Take charge of your career path by building your skills, expanding your network, and seizing the internships that align with your goals. Discover your next step at internwise.co.uk.",
-            "x": "Opportunities don't just come to you. You create them. Take control of your career and explore internships at internwise.co.uk."
+            "ig-fb": "Robert Collier reminds us that success isn't about one big leap, but the small steps we take every day. So, keep at it! Every little effort counts towards your future. Looking for a place to start? Check out the internships at www.internwise.co.uk.",
+            "linkedin": "Robert Collier wisely said that success is the sum of small efforts repeated daily. It's a reminder that consistency and dedication in your career journey pay off. Whether you're looking to start your career or advance it, explore internships that match your goals at internwise.co.uk.",
+            "x": "Success is about the small efforts we make daily, as Robert Collier said. Keep going and explore internships at internwise.co.uk!"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#opportunityknocks",
+              "#successtips",
               "#careergrowth",
-              "#internship",
-              "#makeithappen",
-              "#futureready"
+              "#dailyeffort",
+              "#internships",
+              "#internwise"
             ],
             "linkedin": [
-              "#careerdevelopment",
+              "#careeradvice",
               "#internships",
-              "#opportunitycreation"
+              "#professionalgrowth"
             ],
             "x": [
-              "#careeradvice",
-              "#internship"
+              "#success",
+              "#internships"
             ]
           }
         },
@@ -3366,42 +3366,42 @@
           "id": "week15-mon-employer",
           "day": "Mon 7 Sep",
           "lane": "employer",
-          "title": "Your next intern is already here",
+          "title": "In good company",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Ready to welcome tomorrow's star into your team? With Internwise, you can connect with over 400,000 eager candidates who are just starting their careers. Post your internship openings in minutes, manage unlimited vacancies, and handle everything from shortlisting to onboarding all in one place. Start your journey to find the perfect intern today at www.internwise.co.uk.",
+          "caption": "From promising startups to iconic household names, thousands of UK employers trust Internwise to find their next generation of talent. Whether you're a small business or a well-known brand, our platform makes it simple to connect with the best and brightest. Post your opportunities with ease and manage applications seamlessly. Discover how easy hiring can be at www.internwise.co.uk.",
           "hashtags": [
-            "#hiringnow",
-            "#internshipopportunities",
-            "#earlycareers",
-            "#internwiseuk",
-            "#futureleaders"
+            "#ukemployers",
+            "#earlytalent",
+            "#internwise",
+            "#graduatejobs",
+            "#hiringmadeeasy"
           ],
           "captions": {
-            "ig-fb": "Ready to welcome tomorrow's star into your team? With Internwise, you can connect with over 400,000 eager candidates who are just starting their careers. Post your internship openings in minutes, manage unlimited vacancies, and handle everything from shortlisting to onboarding all in one place. Start your journey to find the perfect intern today at www.internwise.co.uk.",
-            "linkedin": "Looking to bring fresh talent into your team? At Internwise, you can tap into a pool of over 400,000 registered candidates, all ready to kickstart their professional journeys. Post your internship roles in just a few minutes, manage as many vacancies as you need, and take care of shortlisting, interviewing, and onboarding all from one platform. Discover how easy it is to find your next intern at internwise.co.uk.",
-            "x": "Need a bright new intern? Internwise has 400,000 candidates ready for you. Post your role, manage vacancies, and handle everything from shortlisting to onboarding in one place. internwise.co.uk"
+            "ig-fb": "From promising startups to iconic household names, thousands of UK employers trust Internwise to find their next generation of talent. Whether you're a small business or a well-known brand, our platform makes it simple to connect with the best and brightest. Post your opportunities with ease and manage applications seamlessly. Discover how easy hiring can be at www.internwise.co.uk.",
+            "linkedin": "Join over 14,000 UK employers who trust Internwise to connect them with top early talent. From budding startups to established household names, our platform supports organisations across every sector. Post your job openings in minutes and manage your hiring process all in one place. Discover the benefits today at internwise.co.uk.",
+            "x": "Trusted by 14,000+ UK employers, #Startups to household names use Internwise for hiring early talent. Post in minutes, hire with ease. internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#hiringnow",
-              "#internshipopportunities",
-              "#earlycareers",
-              "#internwiseuk",
-              "#futureleaders"
+              "#ukemployers",
+              "#earlytalent",
+              "#internwise",
+              "#graduatejobs",
+              "#hiringmadeeasy"
             ],
             "linkedin": [
-              "#internshipopportunities",
-              "#earlycareers",
-              "#internwiseuk"
+              "#ukemployers",
+              "#earlytalent",
+              "#graduatejobs"
             ],
             "x": [
-              "#internshipopportunities",
-              "#internwiseuk"
+              "#ukemployers",
+              "#earlytalent"
             ]
           }
         },
@@ -3409,7 +3409,7 @@
           "id": "week15-mon-education",
           "day": "Mon 7 Sep",
           "lane": "education",
-          "title": "Why No Experience Isn't an Issue",
+          "title": "Fill Your CV Without Experience",
           "platform": "Multi-Platform",
           "format": "Carousel",
           "slides": [
@@ -3420,35 +3420,35 @@
             "slide_5.png"
           ],
           "status": "in-review",
-          "caption": "Feeling like your CV is lacking because you haven't had an official internship? Time to think again! Your projects, coursework, and part-time work hold the key to showcasing your skills. The trick is in how you present them. Highlight teamwork, ownership, and problem-solving. Frame your experiences as evidence of your skills and the impact you made. Tap into your unique experiences and boost your CV today by visiting www.internwise.co.uk",
+          "caption": "Think your CV is empty because you lack experience? It’s time to rethink what experience means. Projects, societies, and even part-time jobs count! They showcase your skills and ability to make an impact. Remember, it’s about showing the difference you made. Start crafting a CV that stands out. Visit www.internwise.co.uk for more insights and get started on your journey to success.",
           "hashtags": [
             "#cvtips",
-            "#graduatesuccess",
-            "#internship",
+            "#studentlife",
             "#careeradvice",
-            "#studentlife"
+            "#internships",
+            "#graduatejobs"
           ],
           "captions": {
-            "ig-fb": "Feeling like your CV is lacking because you haven't had an official internship? Time to think again! Your projects, coursework, and part-time work hold the key to showcasing your skills. The trick is in how you present them. Highlight teamwork, ownership, and problem-solving. Frame your experiences as evidence of your skills and the impact you made. Tap into your unique experiences and boost your CV today by visiting www.internwise.co.uk",
-            "linkedin": "Worried about a sparse CV due to a lack of formal internships? Rethink what you consider as experience. Projects, part-time jobs, and even coursework can serve as evidence of your skills. What matters is how you present them. Highlight your contributions and the changes you facilitated. Your CV should be a reflection of your skills and impact, not just job titles. Find out how to enhance your CV at internwise.co.uk",
-            "x": "No formal internships? No problem! Projects and part-time work can showcase your skills too. Highlight your impact and boost your CV at internwise.co.uk"
+            "ig-fb": "Think your CV is empty because you lack experience? It’s time to rethink what experience means. Projects, societies, and even part-time jobs count! They showcase your skills and ability to make an impact. Remember, it’s about showing the difference you made. Start crafting a CV that stands out. Visit www.internwise.co.uk for more insights and get started on your journey to success.",
+            "linkedin": "Feeling like your CV lacks content because you haven't had a formal internship? It's time to redefine what experience means. Everything from projects to part-time work can demonstrate valuable skills like teamwork, ownership, and problem-solving. The key is to highlight how you made a difference. Learn how to transform your activities into impactful CV content at internwise.co.uk.",
+            "x": "No experience? No problem. Projects and part-time work show skills and impact. Learn how to fill your CV at internwise.co.uk."
           },
           "hashtagsByPlatform": {
             "ig-fb": [
               "#cvtips",
-              "#graduatesuccess",
-              "#internship",
+              "#studentlife",
               "#careeradvice",
-              "#studentlife"
+              "#internships",
+              "#graduatejobs"
             ],
             "linkedin": [
-              "#careerdevelopment",
-              "#graduatejobs",
-              "#cvadvice"
+              "#careeradvice",
+              "#cvwriting",
+              "#internships"
             ],
             "x": [
-              "#careertips",
-              "#cvhelp"
+              "#cvtips",
+              "#internships"
             ]
           }
         },
@@ -3456,85 +3456,42 @@
           "id": "week15-tue-quote",
           "day": "Tue 8 Sep",
           "lane": "quote",
-          "title": "Quote: Steve Jobs",
+          "title": "Quote: Nelson Mandela",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Steve Jobs said it best: 'The only way to do great work is to love what you do.' Whether you're just starting out or looking to pivot, finding a role that excites you is key. Ready to discover your passion? Browse opportunities at www.internwise.co.uk and start your journey.",
+          "caption": "Feeling overwhelmed by the challenges ahead? Remember, even the toughest tasks seem impossible until they're conquered. Embrace each step, and soon enough you'll look back and wonder why you ever doubted yourself. Ready to take that first step in your career journey? Explore opportunities at www.internwise.co.uk.",
           "hashtags": [
-            "#careeradvice",
-            "#loveyourwork",
-            "#internships",
-            "#stevejobs",
-            "#careerjourney"
+            "#careergoals",
+            "#internship",
+            "#motivationmonday",
+            "#studentlife",
+            "#internwise"
           ],
           "captions": {
-            "ig-fb": "Steve Jobs said it best: 'The only way to do great work is to love what you do.' Whether you're just starting out or looking to pivot, finding a role that excites you is key. Ready to discover your passion? Browse opportunities at www.internwise.co.uk and start your journey.",
-            "linkedin": "Steve Jobs once shared a powerful truth: 'The only way to do great work is to love what you do.' As you embark on your career journey, remember the importance of loving what you do. Explore internships that align with your passion at internwise.co.uk and take the first step towards a fulfilling career.",
-            "x": "Steve Jobs nailed it: 'The only way to do great work is to love what you do.' Discover internships that fuel your passion at internwise.co.uk"
+            "ig-fb": "Feeling overwhelmed by the challenges ahead? Remember, even the toughest tasks seem impossible until they're conquered. Embrace each step, and soon enough you'll look back and wonder why you ever doubted yourself. Ready to take that first step in your career journey? Explore opportunities at www.internwise.co.uk.",
+            "linkedin": "Nelson Mandela once said, 'It always seems impossible until it's done.' This powerful reminder encourages us to tackle the seemingly insurmountable with determination and courage. Whether you're just starting your career or looking for the next step, the path may seem daunting. But remember, with each action, you're closer to achieving your goals. Discover opportunities that can shape your future at internwise.co.uk.",
+            "x": "Remember Mandela's words: 'It always seems impossible until it's done.' Take that first step towards your career goals today. Visit internwise.co.uk."
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#careeradvice",
-              "#loveyourwork",
-              "#internships",
-              "#stevejobs",
-              "#careerjourney"
+              "#careergoals",
+              "#internship",
+              "#motivationmonday",
+              "#studentlife",
+              "#internwise"
             ],
             "linkedin": [
               "#careeradvice",
               "#internships",
-              "#stevejobs"
+              "#professionalgrowth"
             ],
             "x": [
               "#careeradvice",
-              "#internships"
-            ]
-          }
-        },
-        {
-          "id": "week15-tue-employer",
-          "day": "Tue 8 Sep",
-          "lane": "employer",
-          "title": "Reach 400,000 early-career candidates",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Finding the right talent can be challenging, but with Internwise, you're connected to a UK-wide pool of 400,000 students and graduates. Join 14,000+ employers who trust our platform to help them find the perfect early-career candidates. Our Featured Employer option gives your listings a boost and attracts more applications. Ready to find your next star employee? Visit www.internwise.co.uk.",
-          "hashtags": [
-            "#ukjobs",
-            "#graduaterecruitment",
-            "#earlycareers",
-            "#internshipopportunities",
-            "#employernetwork"
-          ],
-          "captions": {
-            "ig-fb": "Finding the right talent can be challenging, but with Internwise, you're connected to a UK-wide pool of 400,000 students and graduates. Join 14,000+ employers who trust our platform to help them find the perfect early-career candidates. Our Featured Employer option gives your listings a boost and attracts more applications. Ready to find your next star employee? Visit www.internwise.co.uk.",
-            "linkedin": "Discover the ease of recruiting early-career talent with Internwise. With access to 400,000 registered students and graduates across the UK, you can find the perfect candidates for your organisation. Over 14,000 employers are already benefiting from our focused platform. Want to stand out even more? Our Featured Employer service boosts your visibility and applications. Explore the possibilities at internwise.co.uk.",
-            "x": "Connect with 400,000 early-career candidates on Internwise. Join 14,000+ employers and use our Featured Employer boost for more applications. internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#ukjobs",
-              "#graduaterecruitment",
-              "#earlycareers",
-              "#internshipopportunities",
-              "#employernetwork"
-            ],
-            "linkedin": [
-              "#talentacquisition",
-              "#graduatejobs",
-              "#ukrecruitment"
-            ],
-            "x": [
-              "#ukjobs",
-              "#graduaterecruitment"
+              "#internship"
             ]
           }
         },
@@ -3553,31 +3510,31 @@
             "slide_5.png"
           ],
           "status": "in-review",
-          "caption": "Not every internship is worth it. Before you say yes, make sure it offers real tasks, feedback, and a named manager. Ask what you'll do each week, and look for opportunities to build a portfolio over just a title. Choose wisely and head over to www.internwise.co.uk to find internships that truly move you forward.",
+          "caption": "Choosing an internship? Make sure it's worth your time. Look for real tasks, regular feedback, and a clear manager. It's about the skills and evidence you gain, not just the title. Want to make a smart choice? Visit www.internwise.co.uk.",
           "hashtags": [
             "#internshipadvice",
-            "#careertips",
-            "#studentlife",
-            "#internwiseuk",
-            "#graduatejobs"
+            "#careergrowth",
+            "#internshiptips",
+            "#graduatejobs",
+            "#futureready"
           ],
           "captions": {
-            "ig-fb": "Not every internship is worth it. Before you say yes, make sure it offers real tasks, feedback, and a named manager. Ask what you'll do each week, and look for opportunities to build a portfolio over just a title. Choose wisely and head over to www.internwise.co.uk to find internships that truly move you forward.",
-            "linkedin": "Before you accept an internship, consider its value. Real tasks, constructive feedback, and a manager who knows your name are essential. If the role seems vague, ask for specifics on your weekly tasks. Remember, the evidence you build is more valuable than a fancy title. Look for internships that offer growth and exposure. Discover more at internwise.co.uk.",
-            "x": "Not all internships are equal. Ensure yours offers real tasks, feedback, and evidence for your portfolio. Learn more at internwise.co.uk"
+            "ig-fb": "Choosing an internship? Make sure it's worth your time. Look for real tasks, regular feedback, and a clear manager. It's about the skills and evidence you gain, not just the title. Want to make a smart choice? Visit www.internwise.co.uk.",
+            "linkedin": "Before you dive into an internship, ask yourself: Is it really worth it? Look beyond the title. Focus on the tasks you'll handle, the feedback you'll receive, and the evidence you can build for your career. A strong internship offers you real-world experience and tangible skills. Discover roles that truly benefit you at internwise.co.uk.",
+            "x": "Is your internship worth it? Look for real tasks, feedback, and evidence. Explore opportunities at internwise.co.uk."
           },
           "hashtagsByPlatform": {
             "ig-fb": [
               "#internshipadvice",
-              "#careertips",
-              "#studentlife",
-              "#internwiseuk",
-              "#graduatejobs"
+              "#careergrowth",
+              "#internshiptips",
+              "#graduatejobs",
+              "#futureready"
             ],
             "linkedin": [
-              "#internshiptips",
-              "#careeradvice",
-              "#internwiseuk"
+              "#internshipadvice",
+              "#careerdevelopment",
+              "#graduatejobs"
             ],
             "x": [
               "#internshipadvice",
@@ -3589,42 +3546,42 @@
           "id": "week15-wed-quote",
           "day": "Wed 9 Sep",
           "lane": "quote",
-          "title": "Quote: Confucius",
+          "title": "Quote: Helen Hayes",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Confucius knew a thing or two about finding joy in your work. Imagine waking up excited to start your day because you're doing what you love! That's the dream, right? Your career should feel like something you get to do, not have to do. Start your journey with a meaningful internship that sets you on the right path. Explore opportunities now at www.internwise.co.uk.",
+          "caption": "Feeling unsure about starting something new? Remember, every expert started as a beginner. Embrace the journey and take that first step! 🌟 Explore internships at www.internwise.co.uk and start building your expertise today.",
           "hashtags": [
-            "#careerjoy",
-            "#lovewhatyoudo",
+            "#careerjourney",
             "#internships",
-            "#confuciuswisdom",
+            "#startsomewhere",
+            "#beginnertoexpert",
             "#internwiseuk"
           ],
           "captions": {
-            "ig-fb": "Confucius knew a thing or two about finding joy in your work. Imagine waking up excited to start your day because you're doing what you love! That's the dream, right? Your career should feel like something you get to do, not have to do. Start your journey with a meaningful internship that sets you on the right path. Explore opportunities now at www.internwise.co.uk.",
-            "linkedin": "Confucius once said, 'Choose a job you love, and you will never have to work a day in your life.' This timeless wisdom rings true in today's world. Finding a career that aligns with your passions can transform work from a chore into a joy. Internships are a fantastic way to explore different fields and discover what truly makes you tick. Find the right internship to start your journey at internwise.co.uk.",
-            "x": "Confucius nailed it: 'Choose a job you love, and you will never have to work a day in your life.' Ready to find your passion? Start with the right internship. Visit internwise.co.uk."
+            "ig-fb": "Feeling unsure about starting something new? Remember, every expert started as a beginner. Embrace the journey and take that first step! 🌟 Explore internships at www.internwise.co.uk and start building your expertise today.",
+            "linkedin": "Helen Hayes once said, 'The expert in anything was once a beginner.' This is a great reminder that every professional journey starts with a single step. Whether you're starting an internship or entering your first job, every experience is a building block. Discover opportunities at internwise.co.uk.",
+            "x": "Every expert started as a beginner. Take the first step on your career journey with Internwise. Explore internships today at internwise.co.uk."
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#careerjoy",
-              "#lovewhatyoudo",
+              "#careerjourney",
               "#internships",
-              "#confuciuswisdom",
+              "#startsomewhere",
+              "#beginnertoexpert",
               "#internwiseuk"
             ],
             "linkedin": [
               "#careeradvice",
-              "#internships",
-              "#loveyourwork"
+              "#professionalgrowth",
+              "#internwise"
             ],
             "x": [
-              "#careerwisdom",
-              "#internships"
+              "#careerstart",
+              "#internwise"
             ]
           }
         },
@@ -3632,42 +3589,42 @@
           "id": "week15-wed-employer",
           "day": "Wed 9 Sep",
           "lane": "employer",
-          "title": "From role posted to intern onboarded",
+          "title": "Skip the CV pile. Go straight to the right candidate",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Looking for a hassle-free way to bring fresh talent into your team? With Internwise, you can register in just 3 minutes and start posting unlimited vacancies. Our platform makes it easy to onboard interns and track their progress all in one place. Say goodbye to complicated processes and hello to simplicity. Head over to www.internwise.co.uk to get started today!",
+          "caption": "Why wade through endless CVs when you can pinpoint the perfect intern in no time? 🎯 Our platform lets you search by sector, skills, and location, so you can connect with candidates who really fit your needs. Plus, handle everything from shortlisting to interviewing, all in one place. Ready to find your next star intern? Explore opportunities at www.internwise.co.uk",
           "hashtags": [
-            "#internship",
-            "#hiringmadeeasy",
-            "#graduatetalent",
-            "#ukjobs",
-            "#internwise"
+            "#internhiring",
+            "#talentsearch",
+            "#graduatejobs",
+            "#internshipuk",
+            "#careergrowth"
           ],
           "captions": {
-            "ig-fb": "Looking for a hassle-free way to bring fresh talent into your team? With Internwise, you can register in just 3 minutes and start posting unlimited vacancies. Our platform makes it easy to onboard interns and track their progress all in one place. Say goodbye to complicated processes and hello to simplicity. Head over to www.internwise.co.uk to get started today!",
-            "linkedin": "Streamline your hiring process with Internwise. In just 3 minutes, you can register and start posting unlimited internship vacancies. Our user-friendly platform allows you to manage everything from onboarding to tracking progress, all in one convenient location. Simplify your recruitment and connect with the brightest talent. Visit internwise.co.uk to learn more.",
-            "x": "Simplify your internship recruitment with Internwise. Register in 3 minutes and post unlimited vacancies. Manage everything in one place. Visit internwise.co.uk today!"
+            "ig-fb": "Why wade through endless CVs when you can pinpoint the perfect intern in no time? 🎯 Our platform lets you search by sector, skills, and location, so you can connect with candidates who really fit your needs. Plus, handle everything from shortlisting to interviewing, all in one place. Ready to find your next star intern? Explore opportunities at www.internwise.co.uk",
+            "linkedin": "Tired of sifting through heaps of CVs? Streamline your hiring process with Internwise. Our platform lets you search for candidates by sector, skills, and location, ensuring you find the right fit faster. Manage shortlisting and interviews directly within the platform, and keep track of your intern's progress seamlessly. Make your next hire a breeze with us. Visit internwise.co.uk",
+            "x": "Skip the CV chaos. Search by sector, skills, and location to find your ideal intern faster. Manage interviews and track progress all in one place. internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#internship",
-              "#hiringmadeeasy",
-              "#graduatetalent",
-              "#ukjobs",
-              "#internwise"
+              "#internhiring",
+              "#talentsearch",
+              "#graduatejobs",
+              "#internshipuk",
+              "#careergrowth"
             ],
             "linkedin": [
-              "#internshiphiring",
-              "#graduatejobs",
-              "#internwise"
+              "#internshipopportunities",
+              "#talentacquisition",
+              "#futureleaders"
             ],
             "x": [
-              "#internship",
-              "#internwise"
+              "#internshipuk",
+              "#hiresmart"
             ]
           }
         },
@@ -3675,7 +3632,7 @@
           "id": "week15-wed-education",
           "day": "Wed 9 Sep",
           "lane": "education",
-          "title": "Avoid Generic Interview Answers",
+          "title": "Avoid Generic Answers",
           "platform": "Multi-Platform",
           "format": "Carousel",
           "slides": [
@@ -3686,35 +3643,35 @@
             "slide_5.png"
           ],
           "status": "in-review",
-          "caption": "Are your interview answers falling flat? Learn to avoid generic responses and make a lasting impression. Use one clear situation, one decision, and one result to shine. Confidence is key - finish strong and leave them remembering you. Dive in for more insights at www.internwise.co.uk.",
+          "caption": "Ever feel like your interview answers blend into the background? It's because generic responses, although safe, are often forgettable. \n\nTo truly stand out, focus on one specific moment that showcases your judgement and outcomes. Describe the situation, the decision you made, and the result. This approach not only highlights your unique experiences but also proves your capabilities. \n\nAnd remember, knowing when to stop is part of showing confidence!\n\nFor more tips, visit www.internwise.co.uk",
           "hashtags": [
             "#interviewtips",
-            "#graduatejobs",
+            "#graduatelife",
+            "#bespecific",
             "#careeradvice",
-            "#jobinterviews",
-            "#internwise"
+            "#internwiseuk"
           ],
           "captions": {
-            "ig-fb": "Are your interview answers falling flat? Learn to avoid generic responses and make a lasting impression. Use one clear situation, one decision, and one result to shine. Confidence is key - finish strong and leave them remembering you. Dive in for more insights at www.internwise.co.uk.",
-            "linkedin": "Interviews can be nerve-wracking, but generic answers won't help you stand out. Instead, focus on telling the story of one situation, one decision, and one result. By being specific, you not only demonstrate your judgement but also make yourself memorable. Remember, a confident finish is as important as a strong start. Explore more tips at internwise.co.uk.",
-            "x": "Generic interview answers are forgettable. Share one situation, decision, and result to stand out. Finish strong. Visit internwise.co.uk."
+            "ig-fb": "Ever feel like your interview answers blend into the background? It's because generic responses, although safe, are often forgettable. \n\nTo truly stand out, focus on one specific moment that showcases your judgement and outcomes. Describe the situation, the decision you made, and the result. This approach not only highlights your unique experiences but also proves your capabilities. \n\nAnd remember, knowing when to stop is part of showing confidence!\n\nFor more tips, visit www.internwise.co.uk",
+            "linkedin": "Interviews can be daunting, especially when you're trying to make a lasting impression. Generic answers might feel safe, but they often don't stick in the interviewer's mind. Instead, choose a specific situation and explain the decision you made and the result it led to. This not only showcases your judgement but also highlights your unique experiences. \n\nRemember, a clean ending to your answer signals confidence. \n\nDiscover more interview strategies at internwise.co.uk",
+            "x": "Generic answers blend in. Stand out by sharing a specific situation, decision, and result. Be memorable and confident. internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
               "#interviewtips",
-              "#graduatejobs",
+              "#graduatelife",
+              "#bespecific",
               "#careeradvice",
-              "#jobinterviews",
-              "#internwise"
+              "#internwiseuk"
             ],
             "linkedin": [
-              "#interviewtips",
-              "#graduatejobs",
-              "#careeradvice"
+              "#interviewadvice",
+              "#careertips",
+              "#internwiseuk"
             ],
             "x": [
-              "#interviewtips",
-              "#careeradvice"
+              "#interviewadvice",
+              "#internwiseuk"
             ]
           }
         },
@@ -3729,77 +3686,34 @@
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Your career journey is like a marathon. It takes time, effort, and the willingness to keep learning. Don't rush through it. Embrace every experience and stay curious. If you're ready to take that first step, explore opportunities at www.internwise.co.uk.",
+          "caption": "Are you waiting for that 'perfect' job to knock on your door? Sometimes, the best opportunities come disguised as stepping stones. Embrace the role that challenges you, teaches you, and opens new doors. Growth is where the magic happens. Explore internships that push your boundaries at www.internwise.co.uk.",
           "hashtags": [
-            "#careerjourney",
-            "#keeplearning",
-            "#internships",
-            "#graduatejobs",
-            "#internwise"
+            "#careergrowth",
+            "#internshipopportunities",
+            "#jobsearch",
+            "#careeradvice",
+            "#internwiseuk"
           ],
           "captions": {
-            "ig-fb": "Your career journey is like a marathon. It takes time, effort, and the willingness to keep learning. Don't rush through it. Embrace every experience and stay curious. If you're ready to take that first step, explore opportunities at www.internwise.co.uk.",
-            "linkedin": "Think of your career as a marathon, not a sprint. It's all about consistent effort and continuous learning. Every step you take builds your path forward. Ready to begin your journey? Discover internships and graduate roles at internwise.co.uk.",
-            "x": "Your career is a marathon. Pace yourself and keep learning along the way. Begin your journey today at internwise.co.uk."
+            "ig-fb": "Are you waiting for that 'perfect' job to knock on your door? Sometimes, the best opportunities come disguised as stepping stones. Embrace the role that challenges you, teaches you, and opens new doors. Growth is where the magic happens. Explore internships that push your boundaries at www.internwise.co.uk.",
+            "linkedin": "In the quest for a career, waiting for the 'perfect' job can sometimes hold you back. Instead, focus on roles that stretch your skills and expand your horizons. The path to success isn't always straight, but each step is valuable. Discover opportunities that encourage growth at internwise.co.uk.",
+            "x": "Don't wait for the 'perfect' job to appear. Choose the one that challenges you and nurtures your growth. Start your journey with us at internwise.co.uk."
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#careerjourney",
-              "#keeplearning",
-              "#internships",
-              "#graduatejobs",
-              "#internwise"
+              "#careergrowth",
+              "#internshipopportunities",
+              "#jobsearch",
+              "#careeradvice",
+              "#internwiseuk"
             ],
             "linkedin": [
               "#careerdevelopment",
               "#internships",
-              "#graduateopportunities"
+              "#growthmindset"
             ],
             "x": [
               "#careeradvice",
-              "#internships"
-            ]
-          }
-        },
-        {
-          "id": "week15-thu-employer",
-          "day": "Thu 10 Sep",
-          "lane": "employer",
-          "title": "In good company",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Looking to bring fresh talent into your team? Internwise is the go-to platform for 14,000+ UK employers, from innovative startups to well-known brands. Post your opportunities in minutes and connect with driven graduates eager to make a difference. Discover the future of your workforce today at www.internwise.co.uk",
-          "hashtags": [
-            "#internshipuk",
-            "#graduatejobs",
-            "#hiretalent",
-            "#ukemployers",
-            "#internwise"
-          ],
-          "captions": {
-            "ig-fb": "Looking to bring fresh talent into your team? Internwise is the go-to platform for 14,000+ UK employers, from innovative startups to well-known brands. Post your opportunities in minutes and connect with driven graduates eager to make a difference. Discover the future of your workforce today at www.internwise.co.uk",
-            "linkedin": "Join 14,000+ UK employers who trust Internwise to connect them with driven graduates ready to make an impact. From dynamic startups to established brands, we offer a streamlined process to post your opportunities and find the right talent in one place. Start building your future team with ease at internwise.co.uk",
-            "x": "14,000+ UK employers trust Internwise to hire early talent. From startups to household names, find driven graduates ready to join your team. Explore more at internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#internshipuk",
-              "#graduatejobs",
-              "#hiretalent",
-              "#ukemployers",
-              "#internwise"
-            ],
-            "linkedin": [
-              "#ukemployers",
-              "#graduatetalent",
-              "#internwise"
-            ],
-            "x": [
-              "#uktalent",
               "#internwise"
             ]
           }
@@ -3808,25 +3722,25 @@
           "id": "week15-thu-education",
           "day": "Thu 10 Sep",
           "lane": "education",
-          "title": "Nail Your CV's Impact",
+          "title": "The Line Recruiters Skip",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Your CV might not be getting the attention you think it deserves. Here's a crucial tip: recruiters aren't reading every line. They're scanning for role fit and proof of impact. Replace vague responsibilities with specifics: what you did, how you did it, and the result. A job title isn't enough - show them why you're the right fit. And remember, your strongest proof should be front and centre, not buried on page two. Want more CV tips? Head over to www.internwise.co.uk.",
+          "caption": "Your CV isn't getting the attention it deserves! Many recruiters skim for role fit before diving into every detail. If your CV is filled with vague responsibilities, you might be quietly losing interviews. Transform those lines - show actions, skills, and results. A task without a result is just a job description. Make your strongest proof stand out at a glance, not buried on the second page. Need more tips to make your CV stand out? Visit www.internwise.co.uk.",
           "hashtags": [
             "#cvtips",
             "#jobsearch",
             "#careeradvice",
             "#graduatejobs",
-            "#internwise"
+            "#internships"
           ],
           "captions": {
-            "ig-fb": "Your CV might not be getting the attention you think it deserves. Here's a crucial tip: recruiters aren't reading every line. They're scanning for role fit and proof of impact. Replace vague responsibilities with specifics: what you did, how you did it, and the result. A job title isn't enough - show them why you're the right fit. And remember, your strongest proof should be front and centre, not buried on page two. Want more CV tips? Head over to www.internwise.co.uk.",
-            "linkedin": "Think your CV is being read line by line? Think again. Recruiters often scan for role fit before delving into every detail. This means vague responsibility lines can quietly cost you interviews. Instead, provide proof with action, skill, and result. A task without a result feels like a job description - not evidence of your value. Make sure your strongest proof is above the fold, not hidden away. For more CV insights, visit internwise.co.uk.",
-            "x": "Recruiters scan CVs for role fit. Avoid vague tasks. Show action, skill, and results. Find more tips at internwise.co.uk."
+            "ig-fb": "Your CV isn't getting the attention it deserves! Many recruiters skim for role fit before diving into every detail. If your CV is filled with vague responsibilities, you might be quietly losing interviews. Transform those lines - show actions, skills, and results. A task without a result is just a job description. Make your strongest proof stand out at a glance, not buried on the second page. Need more tips to make your CV stand out? Visit www.internwise.co.uk.",
+            "linkedin": "Think your CV is being read thoroughly? Think again. Recruiters often scan for role fit, and if your CV is packed with vague responsibilities, you may be losing interviews. Transform those lines into evidence of your achievements. Show actions, skills, and results. A task without a result is just a job description, not proof of what you can do. Ensure your strongest examples are visible immediately, not hidden on page two. Need help crafting a standout CV? Visit internwise.co.uk.",
+            "x": "Recruiters scan CVs for role fit. Avoid vague lines - show actions, skills, and results. Strongest proof comes first. internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
@@ -3834,16 +3748,16 @@
               "#jobsearch",
               "#careeradvice",
               "#graduatejobs",
-              "#internwise"
+              "#internships"
             ],
             "linkedin": [
-              "#cvtips",
-              "#careeradvice",
-              "#internwise"
+              "#cvadvice",
+              "#graduatejobs",
+              "#careergrowth"
             ],
             "x": [
               "#cvtips",
-              "#internwise"
+              "#jobsearch"
             ]
           }
         },
@@ -3851,42 +3765,42 @@
           "id": "week15-fri-quote",
           "day": "Fri 11 Sep",
           "lane": "quote",
-          "title": "Quote: Mahatma Gandhi",
+          "title": "Quote: Karen Lamb",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Mahatma Gandhi reminded us that the steps we take today shape the world we'll step into tomorrow. Whether you're dreaming of a career in marketing, engineering, or any field in between, your journey begins with a single choice. Ready to start? Discover internships that align with your goals at www.internwise.co.uk.",
+          "caption": "Karen Lamb reminds us all: 'A year from now you may wish you had started today.' Whether you're still figuring things out or ready to dive in, today is the day to start. Explore new opportunities, learn, and grow. You’ve got this! Find internships that match your passion at www.internwise.co.uk.",
           "hashtags": [
+            "#starttoday",
             "#careerjourney",
-            "#gandhiwisdom",
             "#internshipgoals",
-            "#paidinternships",
+            "#graduatelife",
             "#internwiseuk"
           ],
           "captions": {
-            "ig-fb": "Mahatma Gandhi reminded us that the steps we take today shape the world we'll step into tomorrow. Whether you're dreaming of a career in marketing, engineering, or any field in between, your journey begins with a single choice. Ready to start? Discover internships that align with your goals at www.internwise.co.uk.",
-            "linkedin": "Mahatma Gandhi once said, 'The future depends on what you do today.' In the professional world, this rings especially true. Every decision, every opportunity you seize, builds the foundation for your career. Seeking a meaningful start? Explore internships that match your ambitions at internwise.co.uk.",
-            "x": "Gandhi's words remind us: today's actions shape tomorrow's reality. Start your career journey by finding a internship. Head to internwise.co.uk to begin."
+            "ig-fb": "Karen Lamb reminds us all: 'A year from now you may wish you had started today.' Whether you're still figuring things out or ready to dive in, today is the day to start. Explore new opportunities, learn, and grow. You’ve got this! Find internships that match your passion at www.internwise.co.uk.",
+            "linkedin": "Karen Lamb's words ring true: 'A year from now you may wish you had started today.' The best time to start is now. Whether it's gaining experience, building your network, or finding a role that excites you, today is the day to take that step. Check out opportunities at internwise.co.uk.",
+            "x": "Karen Lamb said it best: 'A year from now you may wish you had started today.' Start your journey now. Find your internship match at internwise.co.uk."
           },
           "hashtagsByPlatform": {
             "ig-fb": [
+              "#starttoday",
               "#careerjourney",
-              "#gandhiwisdom",
               "#internshipgoals",
-              "#paidinternships",
+              "#graduatelife",
               "#internwiseuk"
             ],
             "linkedin": [
-              "#careerdevelopment",
+              "#careeradvice",
               "#internships",
-              "#gandhiwisdom"
+              "#graduateopportunities"
             ],
             "x": [
-              "#careerpath",
-              "#internships"
+              "#startnow",
+              "#internship"
             ]
           }
         },
@@ -3894,42 +3808,42 @@
           "id": "week15-fri-employer",
           "day": "Fri 11 Sep",
           "lane": "employer",
-          "title": "Skip the CV pile. Go straight to the right candidate",
+          "title": "Your next intern is already here",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Sifting through endless CVs? Skip the hassle and find the perfect candidate faster with Internwise. Our platform lets you search by sector, skills, and location, so you can focus on what really matters - hiring the right person for the job. Shortlist, interview, and track your intern's progress all in one place. Explore how simple hiring can be at www.internwise.co.uk",
+          "caption": "Looking to bring fresh energy and ideas into your team? 🌟 Your next intern is just a post away. With 400,000 registered candidates eager to start their careers, you'll find the perfect match in no time. Post your vacancy in minutes, and manage everything from shortlisting to onboarding all in one place. Ready to discover new talent? Find your next intern at www.internwise.co.uk.",
           "hashtags": [
             "#internshiphiring",
-            "#findtalent",
-            "#recruitment",
-            "#careergrowth",
-            "#ukjobs"
+            "#earlycareers",
+            "#graduatetalent",
+            "#internwiseuk",
+            "#talentsearch"
           ],
           "captions": {
-            "ig-fb": "Sifting through endless CVs? Skip the hassle and find the perfect candidate faster with Internwise. Our platform lets you search by sector, skills, and location, so you can focus on what really matters - hiring the right person for the job. Shortlist, interview, and track your intern's progress all in one place. Explore how simple hiring can be at www.internwise.co.uk",
-            "linkedin": "Why wade through a mountain of CVs when you can go straight to the right candidate? Internwise lets you search by sector, skills, and location, helping you find the best fit quickly. Manage your hiring process with ease - shortlist, interview, and track your intern's progress all within our platform. Discover a smarter way to hire at internwise.co.uk",
-            "x": "Skip the CV pile! Find the right candidate fast with Internwise. Search by skills, sector, and location, then shortlist and interview in-platform. Check it out at internwise.co.uk"
+            "ig-fb": "Looking to bring fresh energy and ideas into your team? 🌟 Your next intern is just a post away. With 400,000 registered candidates eager to start their careers, you'll find the perfect match in no time. Post your vacancy in minutes, and manage everything from shortlisting to onboarding all in one place. Ready to discover new talent? Find your next intern at www.internwise.co.uk.",
+            "linkedin": "Expand your team with early career talent! At Internwise, you can connect with 400,000 registered candidates ready to kickstart their professional journey. Post your role in just a few minutes and manage everything from shortlisting to onboarding seamlessly. Dive into a talent pool that's eager to learn and contribute. Start your search at internwise.co.uk.",
+            "x": "Looking for fresh talent? Discover your next intern on Internwise. Post your role and tap into a talent pool of 400,000 eager candidates. Start now: internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
               "#internshiphiring",
-              "#findtalent",
-              "#recruitment",
-              "#careergrowth",
-              "#ukjobs"
+              "#earlycareers",
+              "#graduatetalent",
+              "#internwiseuk",
+              "#talentsearch"
             ],
             "linkedin": [
               "#talentacquisition",
               "#internshipopportunities",
-              "#graduaterecruitment"
+              "#careergrowth"
             ],
             "x": [
-              "#recruitment",
-              "#talentsearch"
+              "#internships",
+              "#graduatejobs"
             ]
           }
         },
@@ -3937,42 +3851,42 @@
           "id": "week15-fri-education",
           "day": "Fri 11 Sep",
           "lane": "education",
-          "title": "Quiet Wins in Assessment Centres",
+          "title": "Quiet Wins Assessment Centres",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "The loudest voice isn't always the winner in assessment centres. It's about showing useful behaviour under pressure. Include the quieter voices and summarise decisions to demonstrate leadership. Remember, dominating the room isn't a sign of confidence. Instead, strive to clarify, include, and keep the group moving forward. It's these qualities that assessors notice. Learn how to shine in your next assessment centre at www.internwise.co.uk.",
+          "caption": "The loudest voice in the room doesn't always lead to success in assessment centres. Instead, focus on making your group shine. Assessors notice those who clarify goals, include quieter voices, summarise decisions, and move discussions forward. It's about how you handle pressure, not how loud you can be. Discover more strategies at www.internwise.co.uk",
           "hashtags": [
-            "#assessmentsuccess",
-            "#leadership",
+            "#assessmentcentre",
+            "#leadershipskills",
+            "#careertips",
             "#graduatejobs",
-            "#internshipadvice",
-            "#careerdevelopment"
+            "#internwiseuk"
           ],
           "captions": {
-            "ig-fb": "The loudest voice isn't always the winner in assessment centres. It's about showing useful behaviour under pressure. Include the quieter voices and summarise decisions to demonstrate leadership. Remember, dominating the room isn't a sign of confidence. Instead, strive to clarify, include, and keep the group moving forward. It's these qualities that assessors notice. Learn how to shine in your next assessment centre at www.internwise.co.uk.",
-            "linkedin": "In assessment centres, the loudest voice often isn't the most successful. Assessors pay attention to useful behaviour under pressure. Include those who are quieter and summarise group decisions to showcase true leadership. Dominating the room to appear confident isn't effective. Focus on making the group better by clarifying, including, and moving decisions forward. Discover how to excel in your next assessment centre experience at internwise.co.uk.",
-            "x": "Loud isn't always best in assessment centres. Show leadership by including others and summarising decisions. Learn more at internwise.co.uk"
+            "ig-fb": "The loudest voice in the room doesn't always lead to success in assessment centres. Instead, focus on making your group shine. Assessors notice those who clarify goals, include quieter voices, summarise decisions, and move discussions forward. It's about how you handle pressure, not how loud you can be. Discover more strategies at www.internwise.co.uk",
+            "linkedin": "In assessment centres, success isn't about being the loudest. It's about being the most useful. Assessors are looking for those who clarify goals, include quieter voices, summarise decisions, and push the group forward. This shows real leadership and the ability to work under pressure. Remember, effective communication and collaboration are key. Learn more at internwise.co.uk",
+            "x": "Assessment centres value useful behaviour over loudness. Include, summarise, and lead discussions effectively. More tips at internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#assessmentsuccess",
-              "#leadership",
+              "#assessmentcentre",
+              "#leadershipskills",
+              "#careertips",
               "#graduatejobs",
-              "#internshipadvice",
-              "#careerdevelopment"
+              "#internwiseuk"
             ],
             "linkedin": [
-              "#assessmenttips",
-              "#careergrowth",
-              "#internshipadvice"
+              "#assessmentcentre",
+              "#leadership",
+              "#internwiseuk"
             ],
             "x": [
-              "#assessmentsuccess",
-              "#leadership"
+              "#assessmentcentre",
+              "#internwiseuk"
             ]
           }
         }
