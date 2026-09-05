@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-09-04T11:38:57Z",
+  "generatedAt": "2026-09-05T10:53:52Z",
   "windowRecords": 80,
   "platforms": {
     "instagram": {
       "followers": 340,
       "reach": 128,
-      "views": 2150,
-      "likes": 734,
+      "views": 2163,
+      "likes": 737,
       "comments": 102,
       "shares": null,
-      "posts": 745,
+      "posts": 746,
       "name": "Internwise"
     },
     "facebook": {
-      "followers": 13395,
+      "followers": 13393,
       "reach": null,
       "views": null,
       "likes": null,
@@ -23,13 +23,13 @@
       "name": "Internwise"
     },
     "linkedin": {
-      "followers": 488,
+      "followers": 489,
       "reach": null,
-      "views": null,
-      "likes": 132,
-      "comments": null,
+      "views": 678,
+      "likes": 32,
+      "comments": 1,
       "shares": null,
-      "posts": null,
+      "posts": 46,
       "name": null
     },
     "threads": {
@@ -46,10 +46,6 @@
   "series": {
     "instagram": {
       "reach": [
-        {
-          "d": "2026-06-07",
-          "v": 1
-        },
         {
           "d": "2026-06-08",
           "v": 8
@@ -404,16 +400,16 @@
         },
         {
           "d": "2026-09-04",
-          "v": 7
+          "v": 14
+        },
+        {
+          "d": "2026-09-05",
+          "v": 4
         }
       ]
     },
     "facebook": {
       "views": [
-        {
-          "d": "2026-06-08",
-          "v": 13
-        },
         {
           "d": "2026-06-09",
           "v": 39
@@ -768,14 +764,14 @@
         },
         {
           "d": "2026-09-05",
-          "v": 111
+          "v": 419
+        },
+        {
+          "d": "2026-09-06",
+          "v": 78
         }
       ],
       "engagement": [
-        {
-          "d": "2026-06-08",
-          "v": 1
-        },
         {
           "d": "2026-06-09",
           "v": 0
@@ -1130,16 +1126,16 @@
         },
         {
           "d": "2026-09-05",
+          "v": 8
+        },
+        {
+          "d": "2026-09-06",
           "v": 1
         }
       ]
     },
     "threads": {
       "views": [
-        {
-          "d": "2026-06-06",
-          "v": 0
-        },
         {
           "d": "2026-06-07",
           "v": 0
@@ -1498,9 +1494,148 @@
         },
         {
           "d": "2026-09-04",
-          "v": 7
+          "v": 28
+        },
+        {
+          "d": "2026-09-05",
+          "v": 0
         }
       ]
     }
-  }
+  },
+  "search": {
+    "instagram": {
+      "clicks": 14,
+      "impressions": 2406,
+      "topQueries": [
+        {
+          "q": "internwise",
+          "impressions": 247,
+          "clicks": 1,
+          "position": "6.92"
+        },
+        {
+          "q": "interwise",
+          "impressions": 38,
+          "clicks": 0,
+          "position": "21.53"
+        },
+        {
+          "q": "internwise uk",
+          "impressions": 35,
+          "clicks": 0,
+          "position": "5.94"
+        },
+        {
+          "q": "gradwiz",
+          "impressions": 13,
+          "clicks": 0,
+          "position": "4.92"
+        },
+        {
+          "q": "is internwise legit",
+          "impressions": 13,
+          "clicks": 0,
+          "position": "9.54"
+        },
+        {
+          "q": "intern wise",
+          "impressions": 12,
+          "clicks": 0,
+          "position": "10"
+        },
+        {
+          "q": "jorb ai",
+          "impressions": 7,
+          "clicks": 0,
+          "position": "5.14"
+        },
+        {
+          "q": "internwise.co.uk",
+          "impressions": 7,
+          "clicks": 0,
+          "position": "28.57"
+        },
+        {
+          "q": "internswipe",
+          "impressions": 6,
+          "clicks": 0,
+          "position": "76.33"
+        },
+        {
+          "q": "linkedin jobs belgium videographer content creator social media manager \naugust 2026",
+          "impressions": 3,
+          "clicks": 0,
+          "position": "6.67"
+        }
+      ]
+    },
+    "youtube": {
+      "clicks": 13,
+      "impressions": 30859,
+      "topQueries": [
+        {
+          "q": "about me section on resume",
+          "impressions": 352,
+          "clicks": 0,
+          "position": "20.57"
+        },
+        {
+          "q": "does internship count as work experience",
+          "impressions": 258,
+          "clicks": 0,
+          "position": "8.01"
+        },
+        {
+          "q": "about me in cv",
+          "impressions": 197,
+          "clicks": 0,
+          "position": "16.98"
+        },
+        {
+          "q": "resume contact information",
+          "impressions": 189,
+          "clicks": 0,
+          "position": "54.52"
+        },
+        {
+          "q": "career goals",
+          "impressions": 184,
+          "clicks": 0,
+          "position": "74.4"
+        },
+        {
+          "q": "do internships count as work experience",
+          "impressions": 182,
+          "clicks": 0,
+          "position": "9.41"
+        },
+        {
+          "q": "contact information in resume",
+          "impressions": 177,
+          "clicks": 0,
+          "position": "7.8"
+        },
+        {
+          "q": "creative cv",
+          "impressions": 138,
+          "clicks": 0,
+          "position": "37.49"
+        },
+        {
+          "q": "contact information on resume",
+          "impressions": 135,
+          "clicks": 0,
+          "position": "11.44"
+        },
+        {
+          "q": "does an internship count as employment",
+          "impressions": 134,
+          "clicks": 0,
+          "position": "7.99"
+        }
+      ]
+    }
+  },
+  "manualCapturedAt": "2026-09-05"
 }
