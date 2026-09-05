@@ -22,6 +22,40 @@ LEDGER = os.path.join(SM, "content", "nuno_ledger.json")
 NUNO_DIR = os.path.join(SM, "assets", "nuno")
 FRESH_DAYS = 30
 
+# Tone tags per cutout, so a serious topic never gets a celebratory pose. A slot
+# asks for a tone; we pick the freshest candidate that carries it (falling back
+# to the full candidate list if none match, so a render never fails).
+TONES = {
+    "nuno_thoughtful_1": {"serious", "thoughtful"}, "nuno_thoughtful_2": {"serious", "thoughtful"},
+    "nuno_thoughtful_3": {"serious", "thoughtful"},
+    "nuno_authority_1": {"confident", "serious"}, "nuno_authority_2": {"confident", "serious"},
+    "nuno_authority_3": {"confident", "serious"},
+    "nuno_planning_1": {"serious", "practical"}, "nuno_planning_2": {"serious", "practical"},
+    "nuno_planning_3": {"serious", "practical"},
+    "nuno_cvpile": {"serious"}, "nuno_cv": {"practical", "confident"},
+    "nuno_cv_1": {"practical"}, "nuno_cv_2": {"practical"}, "nuno_cv_3": {"practical", "serious"},
+    "nuno_thumbsup": {"positive"}, "nuno_dothis_1": {"confident", "practical"},
+    "nuno_dothis_2": {"confident", "positive"}, "nuno_dothis_3": {"practical"},
+    "nuno_offers_1": {"positive", "confident"}, "nuno_offers_2": {"positive"},
+    "nuno_offers_3": {"confident", "serious"},
+    "nuno_welcoming_1": {"warm", "positive"}, "nuno_welcoming_2": {"warm", "positive"},
+    "nuno_welcoming_3": {"warm", "positive"},
+    "nuno_utility_1": {"practical"}, "nuno_utility_2": {"practical"}, "nuno_utility_3": {"practical"},
+    "nuno_howto_1": {"practical", "confident"}, "nuno_howto_2": {"practical", "confident"},
+    "nuno_howto_3": {"practical", "confident"},
+    "nuno_attention_1": {"positive", "confident"}, "nuno_attention_2": {"positive", "confident"},
+}
+
+
+def by_tone(pool, tone):
+    """Filter a candidate pool to cutouts carrying any of `tone`; if that leaves
+    nothing, return the pool unchanged so a render never fails."""
+    if not tone:
+        return pool
+    want = {tone} if isinstance(tone, str) else set(tone)
+    hit = [c for c in pool if TONES.get(c, set()) & want]
+    return hit or pool
+
 # Repeats recorded during the current process (build_week reads this to warn +
 # write nuno_needed.json). Reset per run.
 REPEATS: list[dict] = []
@@ -84,11 +118,12 @@ def _choose(candidates, week_id, log, today, fresh_days):
     return best, is_repeat
 
 
-def pick(candidates, week_id, label=None, today=None, fresh_days=FRESH_DAYS):
-    """Pick + record the freshest layout-safe cutout for a render slot."""
+def pick(candidates, week_id, label=None, tone=None, today=None, fresh_days=FRESH_DAYS):
+    """Pick + record the freshest layout-safe cutout for a render slot, preferring
+    one whose tone matches `tone` (falls back to the full pool if none match)."""
     today = today or datetime.date.today().isoformat()
     log = _load()
-    cutout, is_repeat = _choose(candidates, week_id, log, today, fresh_days)
+    cutout, is_repeat = _choose(by_tone(candidates, tone), week_id, log, today, fresh_days)
     if cutout:
         log.setdefault("uses", []).append({"cutout": cutout, "week": week_id, "date": today})
         _save(log)
@@ -104,8 +139,10 @@ def capacity(sequence, week_id, today=None, fresh_days=FRESH_DAYS):
     today = today or datetime.date.today().isoformat()
     log = copy.deepcopy(_load())
     shortfalls = []
-    for label, cands in sequence:
-        cutout, is_repeat = _choose(cands, week_id, log, today, fresh_days)
+    for entry in sequence:
+        label, cands = entry[0], entry[1]
+        tone = entry[2] if len(entry) > 2 else None
+        cutout, is_repeat = _choose(by_tone(cands, tone), week_id, log, today, fresh_days)
         log.setdefault("uses", []).append({"cutout": cutout, "week": week_id, "date": today})
         if is_repeat:
             shortfalls.append({"label": label, "family": family(cutout) if cutout else None,

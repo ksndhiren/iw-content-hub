@@ -166,6 +166,7 @@ PROOF POINTS: {topic.get('proof_points', [])}
 Return JSON with:
   "eyebrow": a 1-3 word section label,
   "headline": the cover headline (max ~40 chars),
+  "tone": ONE of "serious" (evaluative/cautionary/analytical), "practical" (how-to/steps/tips), or "upbeat" (encouraging/celebratory) - pick the one that best fits how this topic should feel,
   {shape},
   "cta": one line pointing to internwise.co.uk,
   "captions": {{

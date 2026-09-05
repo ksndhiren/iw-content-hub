@@ -64,8 +64,13 @@ def target_week():
 # Visual worlds cycle every day; the QUOTE TEXT rotates weekly through the whole
 # bank (see build()) so no two consecutive weeks repeat the same 5 quotes.
 QUOTE_WORLDS = ["editorial", "spotlight", "colorblock", "split", "paper"]
-EMPLOYER = [("benefits", "e001"), ("bigstat", "e004"), ("process", "e003"),
-            ("trust", "e005"), ("statement", "e002")]
+# Employer dropped to 3 posts/week (Mon/Wed/Fri) - it underperformed, repeated
+# weekly and strained the Nuno library. Each world stays paired with its
+# compatible angle; which 3 of the 5 pairs run rotates by week for variety. The
+# freed Tue/Thu slots are carried by the daily featured job (separate pipeline).
+EMPLOYER_DAYS = {0, 2, 4}
+EMPLOYER_PAIRS = [("benefits", "e001"), ("bigstat", "e004"), ("process", "e003"),
+                  ("trust", "e005"), ("statement", "e002")]
 # education: 3 carousels + 2 singles, rotating worlds
 EDU_WORLDS = [("navy", "carousel"), ("plum", "carousel"), ("teal", "carousel"),
               ("tipcard", "single"), ("statement", "single")]
@@ -183,6 +188,12 @@ def build(days=5, dry=False):
         wn = 14
     qstart = ((wn - 14) * 5) % len(qids)
     week_quotes = [qids[(qstart + i) % len(qids)] for i in range(5)]
+    # Which employer world+angle pairs run this week (3 of 5, rotating weekly),
+    # assigned in order to the EMPLOYER_DAYS.
+    n_emp = len(EMPLOYER_DAYS)
+    estart = ((wn - 14) * n_emp) % len(EMPLOYER_PAIRS)
+    week_emp = {d: EMPLOYER_PAIRS[(estart + i) % len(EMPLOYER_PAIRS)]
+                for i, d in enumerate(sorted(EMPLOYER_DAYS))}
     img = os.path.join(HUB, "images", wid)
     daylist = [(DKEYS[i], (mon + datetime.timedelta(days=i)).strftime("%a %d %b").replace(" 0", " ")) for i in range(5)]
     edu_topics = pick_education(days)
@@ -206,15 +217,17 @@ def build(days=5, dry=False):
 
         # FUN lane retired (Week 15) - underperformed on every platform.
 
-        # EMPLOYER
-        world, aid = EMPLOYER[di]; a = angles[aid]
-        onscreen = a["headline"] + ". " + a.get("body", "") + " " + " ".join(a.get("benefits", []))
-        cap = writer.write_captions("employer", a["headline"], onscreen)
-        pid = f"{wid}-{dkey}-employer"
-        if not dry:
-            lane_employer.render_employer(a, world, os.path.join(img, pid), week_id=wid)
-        posts.append(_post(pid, dlabel, "employer", a["headline"], "Single", ["slide_1.png"],
-                           cap["captions"], cap["hashtags"]))
+        # EMPLOYER - only on EMPLOYER_DAYS (Mon/Wed/Fri); other days carried by
+        # the daily featured job.
+        if di in EMPLOYER_DAYS:
+            world, aid = week_emp[di]; a = angles[aid]
+            onscreen = a["headline"] + ". " + a.get("body", "") + " " + " ".join(a.get("benefits", []))
+            cap = writer.write_captions("employer", a["headline"], onscreen)
+            pid = f"{wid}-{dkey}-employer"
+            if not dry:
+                lane_employer.render_employer(a, world, os.path.join(img, pid), week_id=wid)
+            posts.append(_post(pid, dlabel, "employer", a["headline"], "Single", ["slide_1.png"],
+                               cap["captions"], cap["hashtags"]))
 
         # EDUCATION - LLM carousel/single
         world, fmt = EDU_WORLDS[di]

@@ -17,13 +17,24 @@ import lane_employer as emp
 import nuno_ledger
 
 
-def upcoming_sequence():
+def upcoming_sequence(wid):
     """The ordered Nuno slots next week's build will fill (matches build_week:
-    per day -> employer world, then education carousel cover + cta)."""
+    employer only on EMPLOYER_DAYS with week-rotated pairs, then education
+    carousel cover + cta). Tone isn't known until write-time, so the capacity
+    check counts general pool availability (conservative)."""
+    try:
+        wn = int(wid.replace("week", ""))
+    except ValueError:
+        wn = 14
+    n_emp = len(bw.EMPLOYER_DAYS)
+    estart = ((wn - 14) * n_emp) % len(bw.EMPLOYER_PAIRS)
+    week_emp = {d: bw.EMPLOYER_PAIRS[(estart + i) % len(bw.EMPLOYER_PAIRS)]
+                for i, d in enumerate(sorted(bw.EMPLOYER_DAYS))}
     seq = []
     for di in range(5):
-        ework = bw.EMPLOYER[di][0]
-        seq.append((f"employer/{ework}", emp.EMP_POOLS.get(ework, ["nuno_authority_1"])))
+        if di in bw.EMPLOYER_DAYS:
+            ework = week_emp[di][0]
+            seq.append((f"employer/{ework}", emp.EMP_POOLS.get(ework, ["nuno_authority_1"])))
         world, fmt = bw.EDU_WORLDS[di]
         if fmt == "carousel":
             seq.append((f"education/{world}/cover", edu.COVER_POOL))
@@ -37,7 +48,7 @@ def main():
     args = p.parse_args()
     wid = args.week or bw.target_week()[0]
 
-    rep = nuno_ledger.capacity(upcoming_sequence(), wid)
+    rep = nuno_ledger.capacity(upcoming_sequence(wid), wid)
     out = os.path.join(bw.L.BASE, "content", "nuno_needed.json")
     os.makedirs(os.path.dirname(out), exist_ok=True)
     payload = {"week": wid, "generatedAt": datetime.datetime.now(datetime.timezone.utc)

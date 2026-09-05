@@ -148,14 +148,25 @@ CAROUSEL = {"navy", "plum", "teal"}
 SINGLE = {"tipcard": w_tipcard, "statement": w_statement}
 
 
+# Map the topic's tone to the poses each slot should prefer.
+COVER_TONE = {"serious": ["serious", "thoughtful", "practical"],
+              "practical": ["practical", "confident", "serious"],
+              "upbeat": ["confident", "positive", "practical"]}
+CTA_TONE = {"serious": ["confident"], "practical": ["confident", "positive"],
+            "upbeat": ["positive", "confident"]}
+
+
 def render_education(copy, world, out_dir, week_id="adhoc"):
     os.makedirs(out_dir, exist_ok=True)
     if world in CAROUSEL:
         p = PAL[world]
         slides = copy.get("slides", [])
         total = len(slides) + 2                       # cover + content slides + cta
-        cover_pose = nuno_ledger.pick(COVER_POOL, week_id, label=f"education/{world}/cover")
-        cta_pose   = nuno_ledger.pick(CTA_POOL,   week_id, label=f"education/{world}/cta")
+        tone = copy.get("tone", "practical")
+        cover_pose = nuno_ledger.pick(COVER_POOL, week_id, label=f"education/{world}/cover",
+                                      tone=COVER_TONE.get(tone))
+        cta_pose   = nuno_ledger.pick(CTA_POOL, week_id, label=f"education/{world}/cta",
+                                      tone=CTA_TONE.get(tone))
         paths = [L.render(out_dir, "slide_1.png", _cover(p, copy, total, cover_pose))]
         for i, s in enumerate(slides, start=2):
             paths.append(L.render(out_dir, f"slide_{i}.png", _content(p, i, total, s)))
