@@ -17,8 +17,9 @@ Safe by default: DRY-RUN unless --live is given. A job is only pruned once it is
 confirmed posted (present in ayrshare_posted.json) — a failed send is left in
 place for the next run, never silently dropped.
 
-    python3 automation/publish_featured.py            # dry-run: show the plan
-    python3 automation/publish_featured.py --live      # post approved + prune posted
+    python3 automation/publish_featured.py                 # dry-run: show the plan
+    python3 automation/publish_featured.py --live           # post ALL approved + prune posted
+    python3 automation/publish_featured.py --live --per-day 1  # post at most one job/day
 """
 import os, sys, json, argparse, datetime
 
@@ -36,7 +37,35 @@ def _posted_pids(posted):
     return {k.split(":", 1)[0] for k in posted.keys()}
 
 
-def publish(live):
+def _pids_posted_today(posted):
+    """Distinct featured job ids with at least one send recorded today (UTC).
+    Lets us cap posting to N jobs/day even across multiple runs."""
+    today = datetime.datetime.utcnow().date().isoformat()
+    return {k.split(":", 1)[0] for k, v in posted.items()
+            if str((v or {}).get("at", ""))[:10] == today}
+
+
+def _cap_per_day(todo, posted, per_day):
+    """Trim the send list so at most `per_day` distinct jobs post today - finishing
+    any job already started today first, then admitting new ones up to the budget.
+    per_day <= 0 means no cap (post everything approved)."""
+    if per_day <= 0:
+        return todo
+    started = _pids_posted_today(posted)
+    budget = max(0, per_day - len(started))
+    admitted, out = set(), []
+    for pkey, j in todo:
+        pid = j["pid"]
+        if pid in started or pid in admitted:
+            out.append((pkey, j))            # finish this job's remaining networks
+        elif budget > 0:
+            admitted.add(pid); budget -= 1
+            out.append((pkey, j))
+        # else: over the daily cap - leave for a future day
+    return out
+
+
+def publish(live, per_day=0):
     if not ap.KEY:
         sys.exit("No AYRSHARE_API_KEY in env (.env).")
 
@@ -61,6 +90,13 @@ def publish(live):
               f"{'ALREADY POSTED' if already else 'now'}")
         if not already:
             todo.append((pkey, j))
+
+    if per_day > 0:
+        before = len({j["pid"] for _, j in todo})
+        todo = _cap_per_day(todo, posted, per_day)
+        after = len({j["pid"] for _, j in todo})
+        print(f"\nDaily cap: {per_day}/day | posting {after} job(s) now "
+              f"({before} approved & waiting){' - already met today' if after == 0 else ''}.")
 
     if not live:
         print(f"\nDRY-RUN: nothing sent, nothing pruned. {len(todo)} would post. Add --live.")
@@ -100,8 +136,10 @@ def prune_posted(posted):
 def main():
     ap_ = argparse.ArgumentParser()
     ap_.add_argument("--live", action="store_true", help="actually post + prune (default: dry-run)")
+    ap_.add_argument("--per-day", type=int, default=0,
+                     help="max distinct featured jobs to post per day (0 = no cap)")
     args = ap_.parse_args()
-    publish(args.live)
+    publish(args.live, per_day=args.per_day)
 
 
 if __name__ == "__main__":

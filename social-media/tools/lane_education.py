@@ -9,22 +9,32 @@ Carousel worlds: navy, plum, teal.  Single worlds: tipcard, statement.
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lanes_common as L
+import nuno_ledger
 
 INK, MUT, DEEP = L.INK, L.MUT, L.DEEP
 AMBER, CORAL, GREEN, NAVY = L.AMBER, L.CORAL, L.GREEN, L.NAVY
 
-# palette per carousel world
+# palette per carousel world (Nuno pose is no longer fixed here - the ledger picks
+# a fresh one each week from the pools below)
 PAL = {
     "navy": {"bg": f"background-color:{NAVY};", "grid": True, "accent": AMBER, "ink": INK, "mut": MUT,
-             "deep": DEEP, "cover": "nuno_cv", "cta": "nuno_thumbsup"},
+             "deep": DEEP},
     "plum": {"bg": "background:linear-gradient(160deg,#2a1840,#180d24);", "grid": False, "accent": CORAL,
-             "ink": "#F4EAF9", "mut": "#B9A6CC", "deep": "#150a1f", "cover": "nuno_thoughtful_1", "cta": "nuno_dothis_1"},
+             "ink": "#F4EAF9", "mut": "#B9A6CC", "deep": "#150a1f"},
     "teal": {"bg": "background:linear-gradient(160deg,#0c3038,#0a1d24);", "grid": True, "accent": GREEN,
-             "ink": INK, "mut": "#9FC2C9", "deep": "#081418", "cover": "nuno_cv_3", "cta": "nuno_offers_1"},
+             "ink": INK, "mut": "#9FC2C9", "deep": "#081418"},
 }
-# NOTE: a cover pose must be RIGHT-WEIGHTED (head/torso hug the right edge) so it
-# clears the left headline column (_cover: left:56, width:520). Wide arms-spread
-# poses (nuno_welcoming_*) put the face under the headline - never use them here.
+# A cover pose must be RIGHT-WEIGHTED / compact (head+torso hug the right edge) so
+# it clears the left headline column (_cover: left:56, width:520). Wide arms-spread
+# or left-reaching poses put the figure under the headline - kept OUT of COVER_POOL.
+COVER_POOL = ["nuno_cv", "nuno_cv_1", "nuno_cv_2", "nuno_cv_3",
+              "nuno_thoughtful_1", "nuno_thoughtful_2", "nuno_thoughtful_3",
+              "nuno_authority_1", "nuno_authority_2", "nuno_authority_3",
+              "nuno_planning_1", "nuno_planning_2", "nuno_planning_3",
+              "nuno_cvpile", "nuno_utility_2", "nuno_utility_3"]
+# CTA poses read as positive / action, compact enough for the right anchor.
+CTA_POOL = ["nuno_thumbsup", "nuno_dothis_1", "nuno_dothis_2",
+            "nuno_offers_1", "nuno_welcoming_2"]
 
 
 def _bg(p):
@@ -68,8 +78,8 @@ def _urlpill(p):
             f"<span style=\"font-family:Inter;font-weight:700;font-size:30px;color:{p['accent']};\">internwise.co.uk</span></div>")
 
 
-def _cover(p, copy, total):
-    return (_bg(p) + _nuno(p, p["cover"]) + _head(p, 1, total) + _eyebrow(p, copy.get("eyebrow", "INTERNWISE"))
+def _cover(p, copy, total, nuno_pose):
+    return (_bg(p) + _nuno(p, nuno_pose) + _head(p, 1, total) + _eyebrow(p, copy.get("eyebrow", "INTERNWISE"))
             + f"<div style=\"position:absolute;left:56px;top:274px;width:520px;font-family:Inter;font-weight:700;"
               f"font-size:64px;line-height:1.02;letter-spacing:-2px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>"
             + _footer(p, swipe=True))
@@ -85,8 +95,8 @@ def _content(p, n, total, slide):
             + L.dots("left:58px;bottom:150px;", color=f"{p['accent']}55")
             + L.watermark(w=440, right=-70, bottom=-110, op=.05) + _footer(p, swipe=True))
 
-def _cta(p, copy, total):
-    return (_bg(p) + _nuno(p, p["cta"], h=780) + _head(p, total, total) + _eyebrow(p, "YOUR MOVE")
+def _cta(p, copy, total, nuno_pose):
+    return (_bg(p) + _nuno(p, nuno_pose, h=780) + _head(p, total, total) + _eyebrow(p, "YOUR MOVE")
             + f"<div style=\"position:absolute;left:56px;top:274px;width:490px;font-family:Inter;font-weight:700;"
               f"font-size:60px;line-height:1.02;letter-spacing:-2px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>"
             + f"<div style=\"position:absolute;left:58px;top:500px;width:490px;font-family:'DM Sans';font-weight:500;"
@@ -135,16 +145,18 @@ CAROUSEL = {"navy", "plum", "teal"}
 SINGLE = {"tipcard": w_tipcard, "statement": w_statement}
 
 
-def render_education(copy, world, out_dir):
+def render_education(copy, world, out_dir, week_id="adhoc"):
     os.makedirs(out_dir, exist_ok=True)
     if world in CAROUSEL:
         p = PAL[world]
         slides = copy.get("slides", [])
         total = len(slides) + 2                       # cover + content slides + cta
-        paths = [L.render(out_dir, "slide_1.png", _cover(p, copy, total))]
+        cover_pose = nuno_ledger.pick(COVER_POOL, week_id, label=f"education/{world}/cover")
+        cta_pose   = nuno_ledger.pick(CTA_POOL,   week_id, label=f"education/{world}/cta")
+        paths = [L.render(out_dir, "slide_1.png", _cover(p, copy, total, cover_pose))]
         for i, s in enumerate(slides, start=2):
             paths.append(L.render(out_dir, f"slide_{i}.png", _content(p, i, total, s)))
-        paths.append(L.render(out_dir, f"slide_{total}.png", _cta(p, copy, total)))
+        paths.append(L.render(out_dir, f"slide_{total}.png", _cta(p, copy, total, cta_pose)))
         return paths
     return [L.render(out_dir, "slide_1.png", SINGLE[world](copy))]
 

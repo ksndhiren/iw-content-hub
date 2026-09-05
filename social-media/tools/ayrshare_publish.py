@@ -71,8 +71,9 @@ LANE_NETWORKS = {
     "featured":  ["instagram", "facebook", "linkedin", "threads"],
 }
 # Recommended local posting time per lane (UK), used with --schedule.
+# (fun retired Week 15; its 17:30 evening slot now carries a featured job.)
 LANE_TIME = {"quote": "08:00", "news": "09:30", "employer": "11:00",
-             "education": "12:30", "fun": "17:30", "featured": "10:00"}
+             "education": "12:30", "featured": "17:30"}
 DAY_INDEX = {"mon": 0, "tue": 1, "wed": 2, "thu": 3, "fri": 4}
 
 

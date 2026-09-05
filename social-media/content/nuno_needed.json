@@ -1,0 +1,32 @@
+{
+  "week": "week15",
+  "generatedAt": "2026-09-05T04:47:35Z",
+  "shortfalls": [
+    {
+      "label": "employer/benefits",
+      "family": "authority",
+      "cutout": "nuno_authority_1"
+    },
+    {
+      "label": "education/teal/cta",
+      "family": "thumbsup",
+      "cutout": "nuno_thumbsup"
+    },
+    {
+      "label": "employer/trust",
+      "family": "authority",
+      "cutout": "nuno_authority_2"
+    },
+    {
+      "label": "employer/statement",
+      "family": "cvpile",
+      "cutout": "nuno_cvpile"
+    }
+  ],
+  "needByFamily": {
+    "authority": 2,
+    "thumbsup": 1,
+    "cvpile": 1
+  },
+  "ok": false
+}

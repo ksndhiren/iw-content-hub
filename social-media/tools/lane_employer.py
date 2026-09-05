@@ -7,6 +7,18 @@ device and Nuno pose. Worlds: benefits, bigstat, process, trust, statement.
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lanes_common as L
+import nuno_ledger
+
+# Layout-safe pose candidates per world (professional / compact, no wide left
+# reach that would collide with the left copy column). The ledger picks the
+# freshest each week; the world keeps its own `right` offset below.
+EMP_POOLS = {
+    "benefits":  ["nuno_authority_1", "nuno_authority_2", "nuno_authority_3", "nuno_thoughtful_1", "nuno_planning_1"],
+    "bigstat":   ["nuno_authority_3", "nuno_authority_1", "nuno_authority_2", "nuno_offers_3", "nuno_planning_1"],
+    "process":   ["nuno_planning_1", "nuno_planning_2", "nuno_planning_3"],
+    "trust":     ["nuno_authority_2", "nuno_authority_1", "nuno_authority_3", "nuno_thoughtful_1"],
+    "statement": ["nuno_cvpile"],
+}
 
 NAVY, DEEP, INK = L.NAVY, L.DEEP, L.INK
 AMBER, CORAL = L.AMBER, L.CORAL
@@ -56,7 +68,7 @@ def _sectorchips(items):
 
 
 # ---- benefits (approved sample) ----
-def w_benefits(a):
+def w_benefits(a, pose="nuno_authority_1"):
     SUBT="#9FC2C9"
     head = (f"<div style='position:absolute;left:58px;top:242px;width:580px;'>"
             f"<div style=\"font-family:Inter;font-weight:800;font-size:60px;line-height:1.04;letter-spacing:-1.5px;color:{INK};word-break:keep-all;\">"
@@ -72,10 +84,10 @@ def w_benefits(a):
     trust = (f"<div style='position:absolute;left:58px;top:690px;display:inline-flex;align-items:center;gap:12px;"
              f"height:52px;padding:0 24px;border-radius:26px;background:{GREEN}1f;border:1.5px solid {GREEN}55;'>"
              f"{L.svg('users',GREEN,24)}<span style=\"font-family:Inter;font-weight:700;font-size:22px;color:{INK};\">Trusted by 14,000+ UK employers</span></div>")
-    return _bg(BG1,BG2)+_nuno("nuno_authority_1")+L.logo_tl()+head+blist+trust+_cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL)
+    return _bg(BG1,BG2)+_nuno(pose)+L.logo_tl()+head+blist+trust+_cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL)
 
 # ---- big stat ----
-def w_bigstat(a):
+def w_bigstat(a, pose="nuno_authority_3"):
     SUBT="#9FB0C9"
     head = (f"<div style='position:absolute;left:58px;top:230px;width:560px;'>"
             f"<div style=\"font-family:Inter;font-weight:700;font-size:44px;line-height:1.1;letter-spacing:-1px;color:{INK};\">Reach early-career talent</div></div>")
@@ -84,10 +96,10 @@ def w_bigstat(a):
             f"<div style=\"font-family:Inter;font-weight:700;font-size:34px;color:{INK};margin-top:16px;\">UK students &amp;</div>"
             f"<div style=\"font-family:Inter;font-weight:700;font-size:34px;color:{INK};\">graduates</div>"
             f"<div style=\"font-family:'DM Sans';font-weight:600;font-size:26px;color:{SUBT};margin-top:18px;\">14,000+ employers already hiring here</div></div>")
-    return _bg(BG1,BG2)+_nuno("nuno_authority_3", right=-55)+L.logo_tl()+head+stat+_cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL)
+    return _bg(BG1,BG2)+_nuno(pose, right=-55)+L.logo_tl()+head+stat+_cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL)
 
 # ---- process ----
-def w_process(a):
+def w_process(a, pose="nuno_planning_1"):
     SUBT="#9FB4B0"
     steps = [("Post your role in minutes"), ("Find candidates that fit"),
              ("Shortlist and interview"), ("Onboard and track progress")]
@@ -103,33 +115,34 @@ def w_process(a):
     # is pushed further off the right edge, so the longest step ("Onboard and
     # track progress") clears the figure instead of colliding with his shoulder.
     flow = f"<div style='position:absolute;left:58px;top:400px;width:548px;'>{rows}</div>"
-    return _bg(BG1,BG2)+_nuno("nuno_planning_1", right=-120)+L.logo_tl()+head+flow+_cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL)
+    return _bg(BG1,BG2)+_nuno(pose, right=-120)+L.logo_tl()+head+flow+_cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL)
 
 # ---- trust (logo wall) ----
-def w_trust(a):
+def w_trust(a, pose="nuno_authority_2"):
     SUBT="#A9C7A9"
     head = (f"<div style='position:absolute;left:58px;top:236px;width:600px;'>"
             f"<div style=\"font-family:Inter;font-weight:800;font-size:64px;line-height:1.02;letter-spacing:-1.5px;color:{INK};\"><span style='color:{AMBER};'>14,000+</span><br>UK employers<br>hire here.</div>"
             f"<div style=\"font-family:'DM Sans';font-weight:500;font-size:28px;color:{SUBT};line-height:1.34;margin-top:22px;width:560px;\">From startups to household names, teams across every sector build their pipeline on Internwise.</div></div>")
     sectors = ["Finance","Marketing","Technology","Engineering","Healthcare","Media","Consulting","Design"]
     wall = (f"<div style='position:absolute;left:58px;top:640px;width:640px;'>{_sectorchips(sectors)}</div>")
-    return _bg(BG1,BG2)+_nuno("nuno_authority_2")+L.logo_tl()+head+wall+_cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL)
+    return _bg(BG1,BG2)+_nuno(pose)+L.logo_tl()+head+wall+_cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL)
 
 # ---- statement ----
-def w_statement(a):
+def w_statement(a, pose="nuno_cvpile"):
     SUBT="#9FC2C9"
     head = (f"<div style='position:absolute;left:58px;top:280px;width:600px;'>"
             f"<div style=\"font-family:Inter;font-weight:800;font-size:66px;line-height:1.06;letter-spacing:-1.5px;color:{INK};\">"
             f"Skip the CV pile. Go straight to the <span style='color:{AMBER};'>right candidate.</span></div>"
             f"<div style=\"font-family:'DM Sans';font-weight:500;font-size:29px;color:{SUBT};line-height:1.34;margin-top:24px;\">Search candidates by sector, skills and location so you find the right fit, faster.</div></div>")
-    return _bg(BG1,BG2)+_nuno("nuno_cvpile")+L.logo_tl()+head+_cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL)
+    return _bg(BG1,BG2)+_nuno(pose)+L.logo_tl()+head+_cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL)
 
 
 WORLDS = {"benefits": w_benefits, "bigstat": w_bigstat, "process": w_process,
           "trust": w_trust, "statement": w_statement}
 
-def render_employer(angle, world, out_dir, filename="slide_1.png"):
-    return L.render(out_dir, filename, WORLDS[world](angle))
+def render_employer(angle, world, out_dir, filename="slide_1.png", week_id="adhoc"):
+    pose = nuno_ledger.pick(EMP_POOLS.get(world, ["nuno_authority_1"]), week_id, label=f"employer/{world}")
+    return L.render(out_dir, filename, WORLDS[world](angle, pose))
 
 
 if __name__ == "__main__":

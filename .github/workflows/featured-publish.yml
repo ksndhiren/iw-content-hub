@@ -8,12 +8,16 @@ name: Featured Jobs - Publish & Prune
 # post to go out, so approval alone never drops a job. New featured jobs keep
 # flowing in from the daily scrape to take their place.
 #
+# ONE job per day: even if every featured job is approved on the dashboard, only
+# a single job posts each day (--per-day 1), in the evening slot freed by the
+# retired fun lane. The rest wait their turn on following days.
+#
 # Requires repo secrets: AYRSHARE_API_KEY + the R2_* set (to delete posted
-# graphics from R2). Runs a few times a day and on demand.
+# graphics from R2). Runs once a day (17:00 UTC) and on demand.
 
 on:
   schedule:
-    - cron: "0 8,11,14,17 * * 1-5"   # UK working hours, Mon-Fri (08/11/14/17 UTC)
+    - cron: "0 17 * * *"    # daily 17:00 UTC (evening slot) - posts ONE approved job/day
   workflow_dispatch: {}               # manual "Run workflow" button
 
 permissions:
@@ -48,7 +52,7 @@ jobs:
           R2_ACCESS_KEY_ID:     ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_BUCKET:            ${{ secrets.R2_BUCKET }}
-        run: python automation/publish_featured.py --live | tee /tmp/featured_publish.log
+        run: python automation/publish_featured.py --live --per-day 1 | tee /tmp/featured_publish.log
 
       - name: Commit and push if anything changed
         run: |

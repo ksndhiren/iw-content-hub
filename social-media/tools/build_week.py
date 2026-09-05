@@ -1,8 +1,13 @@
-"""Week orchestrator - the full Daily-5 build (all 5 lanes, LLM-written).
+"""Week orchestrator - the weekly evergreen build (quote, employer, education).
 
 For each day it sources content, has the LLM (writer.py) write all on-screen copy
 + captions, renders each lane from its design library, and patches the day-based
 `data/weeks.json` as `in-review`. Runs locally or in the cloud (daily5-build.yml).
+
+NEWS is deliberately NOT built here - it is generated the day before it posts by
+build_news_day.py (news-daily.yml) so headlines are never stale. This batch
+preserves any news posts already present for the week when it rewrites the entry.
+The FUN lane was retired (Week 15) after it underperformed on every platform.
 
     python3 tools/build_week.py                 # full 5-day week
     python3 tools/build_week.py --days 1         # just Monday (cheap validation)
@@ -26,7 +31,8 @@ def _load_env():
 _load_env()
 
 import writer, news_fetch, news_card
-import lane_quote, lane_fun, lane_employer, lane_education
+import lane_quote, lane_employer, lane_education
+import nuno_ledger
 
 HUB   = os.path.dirname(L.BASE)
 WEEKS = os.path.join(HUB, "data", "weeks.json")
@@ -51,19 +57,11 @@ def target_week():
 
 QUOTE = [("editorial", "q001"), ("spotlight", "q002"), ("colorblock", "q003"),
          ("split", "q004"), ("paper", "q005")]
-FUN = [("bingo", "bingo"), ("tierlist", "tier_list"), ("greenflags", "green_flags"),
-       ("pov", "pov"), ("starterpack", "checklist")]
 EMPLOYER = [("benefits", "e001"), ("bigstat", "e004"), ("process", "e003"),
             ("trust", "e005"), ("statement", "e002")]
 # education: 3 carousels + 2 singles, rotating worlds
 EDU_WORLDS = [("navy", "carousel"), ("plum", "carousel"), ("teal", "carousel"),
               ("tipcard", "single"), ("statement", "single")]
-
-FUN_ONSCREEN = {"bingo": "Graduate job-hunt bingo - the shared truths of the search",
-                "tierlist": "Interview questions ranked by dread (S to B tier)",
-                "greenflags": "Green flags in a good internship: real tasks, a mentor, honest feedback, fair pay",
-                "pov": "POV: you just got the 'we'd love to offer you the role' email",
-                "starterpack": "The 'I'm basically a pro now' starter pack"}
 
 PAID_BLOCK = ("paid", "unpaid", "internship-rights")   # never make paid-vs-unpaid content
 
@@ -103,17 +101,42 @@ def pick_distinct_news(pool, n, thresh=0.4):
     return picked
 
 
+SIGNALS = os.path.join(L.BASE, "content", "planning_signals.json")
+
+
+def _demand_terms():
+    """Significant words from the operator's weekly GSC search-demand topics
+    (planning_signals.json, written by ingest_analytics.py). Empty if not present
+    yet - education planning then falls back to plain topic order."""
+    try:
+        sig = json.load(open(SIGNALS))
+    except Exception:
+        return []
+    terms = []
+    for t in sig.get("searchDemandTopics", []):
+        ws = {w for w in re.findall(r"[a-z]+", t.get("query", "").lower()) if len(w) >= 4}
+        if ws:
+            terms.append((ws, t.get("impressions", 0)))
+    return terms
+
+
 def pick_education(n):
     topics = json.load(open(AUTO)).get("topics", [])
-    out = []
-    for t in topics:
-        hay = (t.get("title", "") + " " + t.get("source_cluster", "")).lower()
-        if any(b in hay for b in PAID_BLOCK):
-            continue                                   # brand: all internships should be paid
-        out.append(t)
-        if len(out) >= n:
-            break
-    return out
+    demand = _demand_terms()
+
+    def demand_score(t):
+        """Higher when a topic matches what people actually search (GSC)."""
+        hay = {w for w in re.findall(r"[a-z]+", (t.get("title", "") + " " +
+               t.get("source_cluster", "")).lower()) if len(w) >= 4}
+        return sum(impr for ws, impr in demand if hay & ws)
+
+    eligible = [t for t in topics
+                if not any(b in (t.get("title", "") + " " + t.get("source_cluster", "")).lower()
+                           for b in PAID_BLOCK)]                # all internships should be paid
+    if demand:
+        # Stable sort: demand-matching topics first (by search volume), order kept otherwise.
+        eligible = sorted(eligible, key=demand_score, reverse=True)
+    return eligible[:n]
 
 
 def _post(pid, day, lane, title, fmt, slides, captions, hashtags):
@@ -124,14 +147,29 @@ def _post(pid, day, lane, title, fmt, slides, captions, hashtags):
             "hashtagsByPlatform": hashtags}
 
 
+def build_news_post(wid, dkey, dlabel, pdate, img, item, issue_no=1, dry=False):
+    """Build ONE news post: LLM rewrite + rendered news card -> post dict.
+
+    Shared by the day-prior news job (build_news_day.py) so news is generated
+    close to posting and never goes stale. The weekly batch (build) no longer
+    builds news itself."""
+    nc = writer.write_news(item)
+    pid = f"{wid}-{dkey}-news"
+    if not dry:
+        news_card.render_news({"kicker": nc.get("kicker", "JOB MARKET"), "date": pdate},
+                              os.path.join(img, pid), issue_no=issue_no,
+                              headline=nc["headline"], brief=nc["brief"],
+                              sidebar=nc["sidebar"], pull=nc["pull"])
+    return _post(pid, dlabel, "news", nc["headline"], "Single", ["slide_1.png"],
+                 nc["captions"], nc["hashtags"])
+
+
 def build(days=5, dry=False):
     quotes = {q["id"]: q for q in L.load("quotes_bank.json")["quotes"]}
-    ideas  = {i["format"]: i for i in L.load("fun_ideas.json")["ideas"]}
     angles = {a["id"]: a for a in L.load("employer_angles.json")["angles"]}
     wid, wlabel, wc, mon = target_week()
     img = os.path.join(HUB, "images", wid)
     daylist = [(DKEYS[i], (mon + datetime.timedelta(days=i)).strftime("%a %d %b").replace(" 0", " ")) for i in range(5)]
-    news_pool = pick_distinct_news(news_fetch.fetch(limit=20), days)
     edu_topics = pick_education(days)
     posts = []
     print(f"Building {wid} (w/c {wc}) - {days} day(s)")
@@ -140,18 +178,7 @@ def build(days=5, dry=False):
         dkey, dlabel = daylist[di]
         print(f"\n=== {dlabel} ===")
 
-        # NEWS - LLM reworded
-        item = news_pool[di] if di < len(news_pool) else news_fetch.sample_item()
-        nc = writer.write_news(item)
-        pdate = datetime.datetime.combine(mon, datetime.time()) + datetime.timedelta(days=di)
-        pid = f"{wid}-{dkey}-news"
-        if not dry:
-            news_card.render_news({"kicker": nc.get("kicker", "JOB MARKET"), "date": pdate},
-                                  os.path.join(img, pid), issue_no=di + 1,
-                                  headline=nc["headline"], brief=nc["brief"],
-                                  sidebar=nc["sidebar"], pull=nc["pull"])
-        posts.append(_post(pid, dlabel, "news", nc["headline"], "Single", ["slide_1.png"],
-                           nc["captions"], nc["hashtags"]))
+        # NEWS is built day-prior by build_news_day.py so it is never stale.
 
         # QUOTE
         world, qid = QUOTE[di]; q = quotes[qid]
@@ -162,14 +189,7 @@ def build(days=5, dry=False):
         posts.append(_post(pid, dlabel, "quote", f"Quote: {q['author']}", "Single", ["slide_1.png"],
                            cap["captions"], cap["hashtags"]))
 
-        # FUN
-        world, fkey = FUN[di]; idea = ideas.get(fkey, {})
-        cap = writer.write_captions("fun", FUN_ONSCREEN[world], FUN_ONSCREEN[world])
-        pid = f"{wid}-{dkey}-fun"
-        if not dry:
-            lane_fun.render_fun(idea, world, os.path.join(img, pid))
-        posts.append(_post(pid, dlabel, "fun", FUN_ONSCREEN[world].split(" - ")[0].split(":")[0],
-                           "Single", ["slide_1.png"], cap["captions"], cap["hashtags"]))
+        # FUN lane retired (Week 15) - underperformed on every platform.
 
         # EMPLOYER
         world, aid = EMPLOYER[di]; a = angles[aid]
@@ -177,7 +197,7 @@ def build(days=5, dry=False):
         cap = writer.write_captions("employer", a["headline"], onscreen)
         pid = f"{wid}-{dkey}-employer"
         if not dry:
-            lane_employer.render_employer(a, world, os.path.join(img, pid))
+            lane_employer.render_employer(a, world, os.path.join(img, pid), week_id=wid)
         posts.append(_post(pid, dlabel, "employer", a["headline"], "Single", ["slide_1.png"],
                            cap["captions"], cap["hashtags"]))
 
@@ -190,7 +210,7 @@ def build(days=5, dry=False):
         ec = writer.write_education(tp, fmt=fmt, slides=3)   # cover + 3 teaching + CTA = 5-slide carousel
         pid = f"{wid}-{dkey}-education"
         if not dry:
-            paths = lane_education.render_education(ec, world, os.path.join(img, pid))
+            paths = lane_education.render_education(ec, world, os.path.join(img, pid), week_id=wid)
             slides = [os.path.basename(p) for p in sorted(paths)]
         else:
             slides = ["slide_1.png"] * (7 if fmt == "carousel" else 1)
@@ -198,8 +218,20 @@ def build(days=5, dry=False):
                            "Carousel" if fmt == "carousel" else "Single", slides,
                            ec["captions"], ec["hashtags"]))
 
+    if not dry and nuno_ledger.REPEATS:
+        need = {}
+        for r in nuno_ledger.REPEATS:
+            need[r["family"]] = need.get(r["family"], 0) + 1
+        report = {"week": wid, "generatedAt": datetime.datetime.now(datetime.timezone.utc)
+                  .strftime("%Y-%m-%dT%H:%M:%SZ"), "needByFamily": need,
+                  "repeats": nuno_ledger.REPEATS}
+        os.makedirs(os.path.join(L.BASE, "content"), exist_ok=True)
+        json.dump(report, open(os.path.join(L.BASE, "content", "nuno_needed.json"), "w"),
+                  indent=2, ensure_ascii=False)
+        print("\n⚠ Nuno library short - poses REPEATED (need fresh cutouts): "
+              + ", ".join(f"{n}×{fam}" for fam, n in need.items()))
+
     if not dry:
-        news_fetch.mark_used(news_pool[:days])
         try:
             import r2                                     # normalises R2_* env on import
             if os.getenv("R2_ACCESS_KEY_ID"):
@@ -214,12 +246,17 @@ def build(days=5, dry=False):
         return posts
 
     data = json.load(open(WEEKS))
+    # Preserve any news posts already added for this week by the day-prior news
+    # job, so a batch re-run never wipes news that has been built/approved.
+    prev = next((w for w in data["weeks"] if w.get("id") == wid), None)
+    carry = [p for p in (prev or {}).get("posts", []) if p.get("lane") == "news"]
     data["weeks"] = [w for w in data["weeks"] if w.get("id") != wid]
     built_at = int(datetime.datetime.now(datetime.timezone.utc).timestamp())
     data["weeks"].append({"id": wid, "label": wlabel, "weekCommencing": wc,
-                          "builtAt": built_at, "posts": posts})
+                          "builtAt": built_at, "posts": posts + carry})
     json.dump(data, open(WEEKS, "w"), indent=2, ensure_ascii=False)
-    print(f"\nWrote {len(posts)} posts to weeks.json ({wid}).")
+    print(f"\nWrote {len(posts)} posts to weeks.json ({wid})"
+          + (f" (+{len(carry)} existing news preserved)" if carry else "") + ".")
     return posts
 
 

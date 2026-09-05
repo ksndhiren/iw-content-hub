@@ -1,9 +1,12 @@
 name: Daily-5 Build
 
-# The full hands-free content build. Weekly it sources content (RSS + banks +
-# topic engine), has the LLM write every on-screen text + caption, renders all
-# 25 posts (5 lanes x 5 days) from their design libraries, and commits the week
-# to data/weeks.json as `in-review`. That auto-redeploys the dashboard, where
+# The hands-free weekly content build. Runs Saturday (once the full past-week
+# analytics are in) and sources content (banks + topic engine), has the LLM write
+# every on-screen text + caption, renders the evergreen lanes (quote, employer,
+# education) x 5 days from their design libraries, and commits the week to
+# data/weeks.json as `in-review`. NEWS is built separately by news-daily.yml the
+# day before it posts (so it is never stale); this batch preserves any news posts
+# already added for the week on a re-run. That auto-redeploys the dashboard, where
 # the ONE human gate lives: review + approve before anything goes to Ayrshare.
 #
 # Targets the UPCOMING week automatically (build_week.target_week). Override with
@@ -13,7 +16,7 @@ name: Daily-5 Build
 
 on:
   schedule:
-    - cron: "0 7 * * 3"       # every Wednesday 07:00 UTC (queues next week for review)
+    - cron: "0 7 * * 6"       # every Saturday 07:00 UTC (past-week data is complete by Fri; queues next week for review)
   workflow_dispatch:
     inputs:
       week_id:
@@ -65,7 +68,8 @@ jobs:
 
           git config user.name  "internwise-content-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A images data/weeks.json
+          git add -A images data/weeks.json \
+            social-media/content/nuno_ledger.json social-media/content/nuno_needed.json
           git commit -m "Daily-5 build ($(date -u +%Y-%m-%d))"
           git pull --rebase origin main
           git push origin HEAD:main

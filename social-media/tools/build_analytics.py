@@ -34,6 +34,10 @@ OUT  = os.path.join(HUB, "data", "analytics.json")
 # Backend: decision-making aggregates (best time/topics, insights, top posts).
 # Kept out of the public site - it feeds our content planning, not the dashboard.
 INSIGHTS_OUT = os.path.join(SM, "content", "analytics_insights.json")
+# The operator's weekly manual exports (LinkedIn per-post + GSC search demand),
+# normalised by ingest_analytics.py. Folded into analytics.json so the dashboard
+# stays comprehensive even though this daily job otherwise sees only Ayrshare.
+HISTORY = os.path.join(SM, "content", "analytics_history.json")
 BASE = "https://api.ayrshare.com/api"
 DOW  = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 # Lane label + display order for the topic breakdown.
@@ -218,6 +222,36 @@ def decision_making(records):
     return by_lane, by_day, by_hour, top[:8]
 
 
+def _latest_snapshot():
+    """Most recent weekly manual snapshot from ingest_analytics.py, or None."""
+    try:
+        snaps = json.load(open(HISTORY)).get("snapshots", [])
+        return snaps[-1] if snaps else None
+    except Exception:
+        return None
+
+
+def merge_manual(public):
+    """Fold the latest LinkedIn per-post totals + GSC search demand into the
+    public dashboard payload. Ayrshare returns nulls for LinkedIn engagement and
+    has no search data at all, so the manual snapshot is the fuller truth."""
+    snap = _latest_snapshot()
+    if not snap:
+        return
+    lk = (snap.get("linkedin") or {}).get("totals") or {}
+    if lk:
+        li = public["platforms"].setdefault("linkedin", {})
+        li["views"] = lk.get("impressions", li.get("views"))
+        li["likes"] = lk.get("likes", li.get("likes"))
+        li["comments"] = lk.get("comments", li.get("comments"))
+        li["posts"] = lk.get("posts", li.get("posts"))
+    if snap.get("gsc"):
+        public["search"] = {net: {"clicks": b.get("clicks"), "impressions": b.get("impressions"),
+                                  "topQueries": b.get("topQueries", [])[:10]}
+                            for net, b in snap["gsc"].items()}
+    public["manualCapturedAt"] = snap.get("capturedAt")
+
+
 def make_insights(by_lane, by_day, by_hour):
     """Plain-English takeaways the team can act on."""
     out = []
@@ -267,6 +301,7 @@ def main():
         "platforms": social,
         "series": series,
     }
+    merge_manual(public)         # fold in the latest weekly LinkedIn + GSC snapshot
     with open(OUT, "w") as f:
         json.dump(public, f, indent=2, ensure_ascii=False)
         f.write("\n")

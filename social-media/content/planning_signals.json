@@ -1,0 +1,239 @@
+{
+  "generatedAt": "2026-09-05T04:24:24Z",
+  "capturedAt": "2026-09-05",
+  "searchDemandTopics": [
+    {
+      "query": "about me section on resume",
+      "impressions": 352,
+      "source": "youtube"
+    },
+    {
+      "query": "does internship count as work experience",
+      "impressions": 258,
+      "source": "youtube"
+    },
+    {
+      "query": "about me in cv",
+      "impressions": 197,
+      "source": "youtube"
+    },
+    {
+      "query": "resume contact information",
+      "impressions": 189,
+      "source": "youtube"
+    },
+    {
+      "query": "career goals",
+      "impressions": 184,
+      "source": "youtube"
+    },
+    {
+      "query": "do internships count as work experience",
+      "impressions": 182,
+      "source": "youtube"
+    },
+    {
+      "query": "contact information in resume",
+      "impressions": 177,
+      "source": "youtube"
+    },
+    {
+      "query": "creative cv",
+      "impressions": 138,
+      "source": "youtube"
+    },
+    {
+      "query": "contact information on resume",
+      "impressions": 135,
+      "source": "youtube"
+    },
+    {
+      "query": "does an internship count as employment",
+      "impressions": 134,
+      "source": "youtube"
+    },
+    {
+      "query": "is internship considered work experience",
+      "impressions": 124,
+      "source": "youtube"
+    },
+    {
+      "query": "long term career goals",
+      "impressions": 119,
+      "source": "youtube"
+    },
+    {
+      "query": "is internship considered as work experience",
+      "impressions": 96,
+      "source": "youtube"
+    },
+    {
+      "query": "digital presence",
+      "impressions": 92,
+      "source": "youtube"
+    },
+    {
+      "query": "creative resume",
+      "impressions": 85,
+      "source": "youtube"
+    },
+    {
+      "query": "career goals examples",
+      "impressions": 74,
+      "source": "youtube"
+    },
+    {
+      "query": "cv creative",
+      "impressions": 73,
+      "source": "youtube"
+    },
+    {
+      "query": "about me in resume",
+      "impressions": 73,
+      "source": "youtube"
+    },
+    {
+      "query": "contact info in resume",
+      "impressions": 69,
+      "source": "youtube"
+    }
+  ],
+  "bestDayLinkedIn": "Saturday",
+  "followerMix": {
+    "newFollowersInWindow": 3,
+    "byLocation": [
+      {
+        "label": "London Area, United Kingdom, United Kingdom",
+        "value": 122
+      },
+      {
+        "label": "Pune/Pimpri-Chinchwad Area, India",
+        "value": 11
+      },
+      {
+        "label": "Manchester Area, United Kingdom, United Kingdom",
+        "value": 9
+      },
+      {
+        "label": "Greater Delhi Area, India",
+        "value": 8
+      },
+      {
+        "label": "Greater Bengaluru Area, India",
+        "value": 8
+      }
+    ],
+    "bySeniority": [
+      {
+        "label": "Entry",
+        "value": 157
+      },
+      {
+        "label": "Senior",
+        "value": 130
+      },
+      {
+        "label": "Director",
+        "value": 28
+      },
+      {
+        "label": "Manager",
+        "value": 25
+      },
+      {
+        "label": "Training",
+        "value": 22
+      },
+      {
+        "label": "Owner",
+        "value": 14
+      },
+      {
+        "label": "CXO",
+        "value": 6
+      },
+      {
+        "label": "VP",
+        "value": 3
+      }
+    ],
+    "byFunction": [
+      {
+        "label": "Human Resources",
+        "value": 49
+      },
+      {
+        "label": "Business Development",
+        "value": 40
+      },
+      {
+        "label": "Engineering",
+        "value": 36
+      },
+      {
+        "label": "Operations",
+        "value": 35
+      },
+      {
+        "label": "Marketing",
+        "value": 28
+      }
+    ],
+    "byIndustry": [
+      {
+        "label": "IT Services and IT Consulting",
+        "value": 49
+      },
+      {
+        "label": "Software Development",
+        "value": 27
+      },
+      {
+        "label": "Business Consulting and Services",
+        "value": 18
+      },
+      {
+        "label": "Staffing and Recruiting",
+        "value": 17
+      },
+      {
+        "label": "Technology, Information and Internet",
+        "value": 16
+      }
+    ],
+    "byCompanySize": [
+      {
+        "label": "10001+",
+        "value": 64
+      },
+      {
+        "label": "11-50",
+        "value": 53
+      },
+      {
+        "label": "2-10",
+        "value": 51
+      },
+      {
+        "label": "51-200",
+        "value": 49
+      },
+      {
+        "label": "1001-5000",
+        "value": 47
+      },
+      {
+        "label": "201-500",
+        "value": 24
+      },
+      {
+        "label": "501-1000",
+        "value": 23
+      },
+      {
+        "label": "5001-10000",
+        "value": 16
+      }
+    ]
+  }
+}
