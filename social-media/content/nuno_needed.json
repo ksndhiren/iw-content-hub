@@ -1,17 +1,24 @@
 {
   "week": "week15",
-  "generatedAt": "2026-09-05T06:05:33Z",
+  "generatedAt": "2026-09-05T11:15:42Z",
   "needByFamily": {
-    "authority": 2,
-    "thumbsup": 1,
+    "authority": 1,
+    "offers": 1,
+    "thumbsup": 2,
     "cvpile": 1,
-    "dothis": 1
+    "thoughtful": 1
   },
   "repeats": [
     {
       "label": "employer/trust",
-      "cutout": "nuno_authority_2",
+      "cutout": "nuno_authority_3",
       "family": "authority",
+      "week": "week15"
+    },
+    {
+      "label": "education/navy/cta",
+      "cutout": "nuno_offers_1",
+      "family": "offers",
       "week": "week15"
     },
     {
@@ -28,14 +35,14 @@
     },
     {
       "label": "education/teal/cta",
-      "cutout": "nuno_dothis_1",
-      "family": "dothis",
+      "cutout": "nuno_thumbsup",
+      "family": "thumbsup",
       "week": "week15"
     },
     {
       "label": "employer/benefits",
-      "cutout": "nuno_authority_1",
-      "family": "authority",
+      "cutout": "nuno_thoughtful_1",
+      "family": "thoughtful",
       "week": "week15"
     }
   ]
