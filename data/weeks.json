@@ -3889,6 +3889,50 @@
               "#leadershipskills"
             ]
           }
+        },
+        {
+          "id": "week15-mon-news",
+          "day": "Mon 7 Sep",
+          "lane": "news",
+          "title": "Jobseekers Hit by Fake Recruitment Apps",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Jobseekers, especially from the Gen Z crowd, are falling victim to fake recruitment apps that resemble legitimate job platforms but are crafted to steal personal info and money. This growing issue highlights the importance of verifying the authenticity of job sites. Look for red flags and ensure you're applying through reliable channels. Internships can offer a more secure route into the job market by connecting you with trustworthy organisations. Source: BBC Business. #JobScamAlert #GenZ #JobSafety #Internships #CareerTips",
+          "hashtags": [
+            "#jobscamalert",
+            "#genz",
+            "#jobsafety",
+            "#internships",
+            "#careertips"
+          ],
+          "captions": {
+            "ig-fb": "Jobseekers, especially from the Gen Z crowd, are falling victim to fake recruitment apps that resemble legitimate job platforms but are crafted to steal personal info and money. This growing issue highlights the importance of verifying the authenticity of job sites. Look for red flags and ensure you're applying through reliable channels. Internships can offer a more secure route into the job market by connecting you with trustworthy organisations. Source: BBC Business. #JobScamAlert #GenZ #JobSafety #Internships #CareerTips",
+            "linkedin": "A concerning trend has emerged where jobseekers, particularly from Gen Z, are being targeted by scams involving fraudulent recruitment apps. These apps pose as genuine job platforms but are designed to siphon off personal information and money. It's crucial for students and graduates to verify the authenticity of job platforms and be wary of potential red flags during the recruitment process. Internships can serve as a safer entry point into the workforce, providing experience with reputable organisations. Source: BBC Business. #JobMarket #CareerSecurity #Internships",
+            "x": "Gen Z jobseekers are being scammed by fake recruitment apps mimicking real platforms to steal info and money. Stay cautious and verify job sites' authenticity. (Source: BBC Business) #JobScam #GenZ",
+            "threads": "Gen Z jobseekers face scams from fake recruitment apps designed to steal from them. Verify the authenticity of job sites and be cautious. Internships offer a safer, reliable entry into the job market. www.internwise.co.uk #JobSafety #Internships #CareerAdvice"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#jobscamalert",
+              "#genz",
+              "#jobsafety",
+              "#internships",
+              "#careertips"
+            ],
+            "linkedin": [
+              "#jobmarket",
+              "#careersecurity",
+              "#internships"
+            ],
+            "x": [
+              "#jobscam",
+              "#genz"
+            ]
+          }
         }
       ]
     }
