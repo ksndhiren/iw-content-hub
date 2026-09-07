@@ -41,9 +41,10 @@ UA = "Mozilla/5.0 (compatible; internwise-content-bot/1.0)"
 # in Ayrshare - until then active_networks() won't contain it and it's skipped.
 BLOG_NETWORKS = ["linkedin", "facebook", "threads", "gmb"]
 NET_LIMIT = {"threads": 500, "facebook": 63000, "linkedin": 3000, "gmb": 1500}
-# One blog per weekday, spaced so they don't clash with lane posts.
-BLOG_DAY_TIME = [("mon", "13:30"), ("tue", "13:30"), ("wed", "13:30"),
-                 ("thu", "13:30"), ("fri", "13:30")]
+# One blog per weekday at 10:30 UK - a late-morning slot clear of the lane posts
+# (news 08:00, education 13:30, quote 20:00, employer 20:30).
+BLOG_DAY_TIME = [("mon", "10:30"), ("tue", "10:30"), ("wed", "10:30"),
+                 ("thu", "10:30"), ("fri", "10:30")]
 
 
 def _load_env():
