@@ -29,11 +29,15 @@ PAL = {
 # or left-reaching poses put the figure under the headline - kept OUT of COVER_POOL.
 # NOTE: nuno_cv_1 excluded - its rembg cutout loses the laptop against dark
 # backgrounds (needs re-cutting before it goes back in).
+# NOTE: nuno_utility_2 excluded - it holds a BLANK WHITE sheet against a near-white
+# studio wall, so rembg drops the sheet with the background and the held object
+# renders invisible (the "book/tab not visible" bug on a Wed education cover).
+# Can't be recovered by alpha-matting (the base mask never includes the sheet).
 COVER_POOL = ["nuno_cv", "nuno_cv_2", "nuno_cv_3",
               "nuno_thoughtful_1", "nuno_thoughtful_2", "nuno_thoughtful_3",
               "nuno_authority_1", "nuno_authority_2", "nuno_authority_3",
               "nuno_planning_1", "nuno_planning_2", "nuno_planning_3",
-              "nuno_cvpile", "nuno_utility_2", "nuno_utility_3"]
+              "nuno_cvpile", "nuno_utility_3"]
 # CTA poses read as CONFIDENT / positive (not celebratory) so they don't clash
 # with evaluative topics. welcoming_2 (hand-on-heart, laughing) removed for that
 # reason. Pool is thin - more CTA cutouts needed (see nuno_check).
@@ -97,6 +101,24 @@ def _content(p, n, total, slide):
               f"font-size:41px;line-height:1.4;color:{p['mut']};\">{slide['body']}</div>"
             + L.dots("left:58px;bottom:150px;", color=f"{p['accent']}55")
             + L.watermark(w=440, right=-70, bottom=-110, op=.05) + _footer(p, swipe=True))
+
+def _cta_tablet(p, copy, total, fig_h=1010, right=-150):
+    """CTA variant: Nuno holding a tablet that shows the internwise.co.uk homepage
+    (asset assets/nuno/nuno_tablet.png), text column kept narrow on the left so the
+    device sits clear of it. Mirrors the Wed-2-Sep 'homepage on the tablet' slide."""
+    src = L.nuno_src("nuno_tablet")
+    ground = (f"<div style='position:absolute;right:210px;bottom:24px;width:520px;height:60px;border-radius:50%;"
+              f"background:radial-gradient(ellipse,rgba(0,0,0,.45),rgba(0,0,0,0) 70%);'></div>")
+    fig = (f"<img src='{src}' style='position:absolute;right:{right}px;bottom:0;height:{fig_h}px;"
+           f"filter:drop-shadow(0 22px 34px rgba(0,0,0,.5));'>")
+    return (_bg(p) + ground + fig + _head(p, total, total) + _eyebrow(p, "YOUR MOVE")
+            + f"<div style=\"position:absolute;left:56px;top:274px;width:500px;font-family:Inter;font-weight:700;"
+              f"font-size:60px;line-height:1.02;letter-spacing:-2px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>"
+            + f"<div style=\"position:absolute;left:58px;top:500px;width:470px;font-family:'DM Sans';font-weight:500;"
+              f"font-size:36px;line-height:1.35;color:{p['mut']};\">{copy.get('cta','')}</div>"
+            + f"<div style='position:absolute;left:58px;top:648px;'>{_urlpill(p)}</div>"
+            + _footer(p, swipe=False))
+
 
 def _cta(p, copy, total, nuno_pose):
     return (_bg(p) + _nuno(p, nuno_pose, h=780) + _head(p, total, total) + _eyebrow(p, "YOUR MOVE")

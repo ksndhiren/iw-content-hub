@@ -5,7 +5,7 @@ automation pick a fresh world each time).
 Each world takes q = {text, author, cta} and renders one 1080x1080 slide.
     render_quote(q, world, out_dir, "slide_1.png")   # world in WORLDS
 """
-import os, sys
+import os, sys, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lanes_common as L
 import wk11_base as b
@@ -105,14 +105,72 @@ def w_paper(q):
 WORLDS = {"editorial": w_editorial, "spotlight": w_spotlight, "colorblock": w_colorblock,
           "split": w_split, "paper": w_paper}
 
+# --- author photo watermark ----------------------------------------------
+# Drop a photo in assets/quote_authors/<slug>.<ext>; we rembg it once (cached in
+# _cutout/) and place the cut-out author on their quote slide, like a signature.
+_AUTH_DIR = os.path.join(L.BASE, "assets", "quote_authors")
+_AUTH_CACHE = os.path.join(_AUTH_DIR, "_cutout")
+# Per-world placement of the author cut-out (CSS on an absolute <img>), chosen so
+# it lands in each layout's empty zone and clears the text/CTA.
+AUTHOR_POS = {
+    "spotlight":  "right:70px;bottom:0;height:452px;",
+    "colorblock": "right:64px;bottom:0;height:470px;",
+    "split":      "left:44px;bottom:0;height:486px;",
+    "paper":      "right:70px;bottom:56px;height:360px;",
+    "editorial":  "right:70px;bottom:0;height:430px;",
+}
+
+
+def _slug(s):
+    return re.sub(r"[^a-z0-9]+", "-", (s or "").lower()).strip("-")
+
+
+def author_cutout(author):
+    """data-URI cut-out for a quote author if a photo exists, else None.
+    rembg the raw photo once and cache the transparent, tight-cropped PNG."""
+    slug = _slug(author)
+    if not slug:
+        return None
+    os.makedirs(_AUTH_CACHE, exist_ok=True)
+    cache = os.path.join(_AUTH_CACHE, slug + ".png")
+    if not os.path.exists(cache):
+        raw = next((os.path.join(_AUTH_DIR, slug + "." + e)
+                    for e in ("jpg", "jpeg", "png", "webp")
+                    if os.path.exists(os.path.join(_AUTH_DIR, slug + "." + e))), None)
+        if not raw:
+            return None
+        from rembg import remove
+        from PIL import Image
+        import numpy as np
+        out = remove(Image.open(raw).convert("RGBA"))
+        a = np.asarray(out)[..., 3]
+        ys, xs = np.where(a > 40)
+        if len(xs) == 0:
+            return None
+        out.crop((int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1)).save(cache)
+    return L.img(cache)
+
+
+def _author_overlay(author, world):
+    src = author_cutout(author)
+    if not src:
+        return ""
+    pos = AUTHOR_POS.get(world, "right:70px;bottom:0;height:430px;")
+    return (f"<img src='{src}' style='position:absolute;{pos}"
+            f"filter:drop-shadow(0 16px 26px rgba(0,0,0,.45));pointer-events:none;'>")
+
 # Only q001-q005 in the bank carry a "cta"; the rest (exposed once quotes rotate
 # weekly) don't, so fall back to an on-brand default rather than KeyError.
 _DEFAULT_CTA = "Find your internship at internwise.co.uk"
 
 
 def render_quote(q, world, out_dir, filename="slide_1.png"):
-    q = {**q, "cta": q.get("cta") or _DEFAULT_CTA}
-    inner = WORLDS[world](q)
+    overlay = _author_overlay(q.get("author", ""), world)
+    # When the author cut-out occupies a bottom corner, use the SHORT url CTA so
+    # the (otherwise long) CTA line clears the photo.
+    cta = "internwise.co.uk" if overlay else (q.get("cta") or _DEFAULT_CTA)
+    q = {**q, "cta": cta}
+    inner = WORLDS[world](q) + overlay
     return L.render(out_dir, filename, inner)
 
 

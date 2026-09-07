@@ -3317,7 +3317,7 @@
       "id": "week15",
       "label": "Week 15",
       "weekCommencing": "2026-09-07",
-      "builtAt": 1788606946,
+      "builtAt": 1788779225,
       "posts": [
         {
           "id": "week15-mon-quote",
@@ -3409,7 +3409,7 @@
           "id": "week15-mon-education",
           "day": "Mon 7 Sep",
           "lane": "education",
-          "title": "Filling CV Gaps: No Experience? No Problem!",
+          "title": "Make Your Profile Trustworthy",
           "platform": "Multi-Platform",
           "format": "Carousel",
           "slides": [
@@ -3420,35 +3420,35 @@
             "slide_5.png"
           ],
           "status": "in-review",
-          "caption": "Your CV isn't empty just because you lack formal experience. Projects, societies, and coursework can demonstrate your skills. Focus on evidence: how did you solve problems, work in teams, or take ownership? Show what changed thanks to your involvement. Start translating your experiences into evidence. Learn more at www.internwise.co.uk",
+          "caption": "Your LinkedIn profile is your professional storefront. Make it inviting with proof, not just adjectives. Be specific in your headline, stay relevant in your about section, and show off your projects. These small tweaks can make a big difference. Head to www.internwise.co.uk to get started.",
           "hashtags": [
-            "#cvtips",
-            "#graduatelife",
+            "#linkedintips",
+            "#studentsuccess",
             "#careeradvice",
-            "#internships",
-            "#skills"
+            "#internwise",
+            "#profileperfection"
           ],
           "captions": {
-            "ig-fb": "Your CV isn't empty just because you lack formal experience. Projects, societies, and coursework can demonstrate your skills. Focus on evidence: how did you solve problems, work in teams, or take ownership? Show what changed thanks to your involvement. Start translating your experiences into evidence. Learn more at www.internwise.co.uk",
-            "linkedin": "No experience? That's not the real issue. Your CV can still shine. Use projects, societies, and coursework to highlight your skills. Experience is about evidence, not just formal internships. Demonstrate teamwork, ownership, and problem-solving from part-time work or projects. The key is to show impact: what changed because of you? Discover more ways to enhance your CV at internwise.co.uk",
-            "x": "Think your CV's empty? Experience is more than internships. Turn projects and coursework into proof of skills. Learn more at internwise.co.uk"
+            "ig-fb": "Your LinkedIn profile is your professional storefront. Make it inviting with proof, not just adjectives. Be specific in your headline, stay relevant in your about section, and show off your projects. These small tweaks can make a big difference. Head to www.internwise.co.uk to get started.",
+            "linkedin": "A compelling LinkedIn profile is more than a collection of adjectives. It's a showcase of your credibility. Make your headline specific to your field or role, ensure your about section is aligned with your career goals, and highlight your best projects. These changes can make you stand out to recruiters. For more tips, visit internwise.co.uk.",
+            "x": "Your LinkedIn needs proof, not fluff. Be specific, relevant, and showcase your projects. Check out internwise.co.uk for more tips."
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#cvtips",
-              "#graduatelife",
+              "#linkedintips",
+              "#studentsuccess",
               "#careeradvice",
-              "#internships",
-              "#skills"
+              "#internwise",
+              "#profileperfection"
             ],
             "linkedin": [
-              "#careeradvice",
-              "#skillsdevelopment",
-              "#graduatejobs"
+              "#linkedinprofile",
+              "#careergrowth",
+              "#internwise"
             ],
             "x": [
-              "#careeradvice",
-              "#graduatejobs"
+              "#linkedinsuccess",
+              "#internwise"
             ]
           }
         },
@@ -3499,7 +3499,7 @@
           "id": "week15-tue-education",
           "day": "Tue 8 Sep",
           "lane": "education",
-          "title": "Is This Internship Worth It?",
+          "title": "Make Your Cover Letter Count",
           "platform": "Multi-Platform",
           "format": "Carousel",
           "slides": [
@@ -3510,35 +3510,35 @@
             "slide_5.png"
           ],
           "status": "in-review",
-          "caption": "Not every internship is worth your time. Before you say yes, make sure it's the right fit. Real tasks, feedback, and clear roles are key. Check the details and move forward with confidence. 🌟 Explore opportunities at www.internwise.co.uk",
+          "caption": "Your cover letter is your first impression. Don’t waste it with generic politeness. Dive into the role’s challenges right away and show how you can be the solution. Skip the fluff and focus on one specific detail that makes you the perfect fit. Your cover letter should support your CV, making it easier for employers to believe in your potential. Ready to make your application stand out? Visit www.internwise.co.uk today.",
           "hashtags": [
-            "#internshipadvice",
-            "#careergrowth",
-            "#internwise",
-            "#internshiptips",
-            "#futureready"
+            "#coverlettertips",
+            "#careeradvice",
+            "#jobsearch",
+            "#internships",
+            "#graduatejobs"
           ],
           "captions": {
-            "ig-fb": "Not every internship is worth your time. Before you say yes, make sure it's the right fit. Real tasks, feedback, and clear roles are key. Check the details and move forward with confidence. 🌟 Explore opportunities at www.internwise.co.uk",
-            "linkedin": "Before accepting any internship offer, ensure it provides clear tasks, consistent feedback, and a manager to guide you. Ask specific questions about your role to avoid ambiguity. Build your career with meaningful experiences. Visit internwise.co.uk for quality internships.",
-            "x": "Check if an internship offers real tasks, feedback, and a clear role before accepting. Find meaningful opportunities at internwise.co.uk"
+            "ig-fb": "Your cover letter is your first impression. Don’t waste it with generic politeness. Dive into the role’s challenges right away and show how you can be the solution. Skip the fluff and focus on one specific detail that makes you the perfect fit. Your cover letter should support your CV, making it easier for employers to believe in your potential. Ready to make your application stand out? Visit www.internwise.co.uk today.",
+            "linkedin": "Think your cover letter should start with politeness? Think again. Many students waste their first paragraph with generic pleasantries. Instead, delve straight into the role’s challenges and demonstrate your fit. Highlight one specific detail about the company or role that sets you apart. This approach not only showcases your understanding but also supports your CV, making your application more compelling. Discover more tips at internwise.co.uk.",
+            "x": "Your cover letter should lead with the role's challenge, not politeness. Be specific and make your CV believable. Check out internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#internshipadvice",
-              "#careergrowth",
-              "#internwise",
-              "#internshiptips",
-              "#futureready"
+              "#coverlettertips",
+              "#careeradvice",
+              "#jobsearch",
+              "#internships",
+              "#graduatejobs"
             ],
             "linkedin": [
-              "#internshipadvice",
-              "#careerdevelopment",
-              "#internwise"
+              "#coverletteradvice",
+              "#jobhunting",
+              "#careerdevelopment"
             ],
             "x": [
-              "#internshipadvice",
-              "#careergrowth"
+              "#coverlettertips",
+              "#jobadvice"
             ]
           }
         },
@@ -3632,7 +3632,7 @@
           "id": "week15-wed-education",
           "day": "Wed 9 Sep",
           "lane": "education",
-          "title": "Avoid Generic Answers",
+          "title": "Feel Less Random!",
           "platform": "Multi-Platform",
           "format": "Carousel",
           "slides": [
@@ -3643,30 +3643,30 @@
             "slide_5.png"
           ],
           "status": "in-review",
-          "caption": "Ever felt like your interview answers get lost in the crowd? It's time to make them memorable! Generic answers might seem safe, but they rarely leave a lasting impression. Instead, focus on sharing a specific moment that showcases your judgement. Remember, stopping cleanly is just as important - it screams confidence.\n\nReady to nail your next interview? Explore more tips at www.internwise.co.uk",
+          "caption": "Does your job search feel all over the place? You're not alone. The secret weapon? Tracking. It sounds simple, but keeping tabs on role fit, CV tweaks, and response stages can pinpoint exactly where things go awry. This approach helps you spot patterns and make informed adjustments rather than overhauling everything. Ready to streamline your search? Head to www.internwise.co.uk.",
           "hashtags": [
-            "#interviewtips",
-            "#standout",
-            "#jobhunt",
+            "#jobsearchtips",
             "#careeradvice",
+            "#graduatejobs",
+            "#internshiphelp",
             "#internwise"
           ],
           "captions": {
-            "ig-fb": "Ever felt like your interview answers get lost in the crowd? It's time to make them memorable! Generic answers might seem safe, but they rarely leave a lasting impression. Instead, focus on sharing a specific moment that showcases your judgement. Remember, stopping cleanly is just as important - it screams confidence.\n\nReady to nail your next interview? Explore more tips at www.internwise.co.uk",
-            "linkedin": "Feeling like your interview responses don't stand out? You're not alone. Generic answers might feel safe, but they often fade into the background. To truly impress, share a specific situation where your decisions made an impact. And don't forget: ending your answer cleanly is a mark of confidence. For more on how to leave a lasting impression, visit internwise.co.uk",
-            "x": "Tired of generic interview answers? Stand out by sharing a specific situation. Confidence shines when you stop cleanly. Learn more at internwise.co.uk"
+            "ig-fb": "Does your job search feel all over the place? You're not alone. The secret weapon? Tracking. It sounds simple, but keeping tabs on role fit, CV tweaks, and response stages can pinpoint exactly where things go awry. This approach helps you spot patterns and make informed adjustments rather than overhauling everything. Ready to streamline your search? Head to www.internwise.co.uk.",
+            "linkedin": "Is your job hunt feeling chaotic? It could be your tracking system. Without tracking, every rejection feels mysterious. By logging role fit, CV versions, and response stages, you can identify where the real bottlenecks are - whether it's the CV or the interview stage. A simple tracker can prevent you from making sweeping changes and help you focus on what truly needs adjustment. Discover more at internwise.co.uk.",
+            "x": "Feeling lost in your job search? Try tracking role fit, CV versions, and response stages to find the real bottleneck. Learn more at internwise.co.uk."
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#interviewtips",
-              "#standout",
-              "#jobhunt",
+              "#jobsearchtips",
               "#careeradvice",
+              "#graduatejobs",
+              "#internshiphelp",
               "#internwise"
             ],
             "linkedin": [
-              "#interviewadvice",
-              "#careergrowth",
+              "#jobsearch",
+              "#careertips",
               "#internwise"
             ],
             "x": [
@@ -3894,43 +3894,43 @@
           "id": "week15-mon-news",
           "day": "Mon 7 Sep",
           "lane": "news",
-          "title": "Jobseekers Hit by Fake Recruitment Apps",
+          "title": "UK Sees Surge in Permanent Jobs",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Jobseekers, especially from the Gen Z crowd, are falling victim to fake recruitment apps that resemble legitimate job platforms but are crafted to steal personal info and money. This growing issue highlights the importance of verifying the authenticity of job sites. Look for red flags and ensure you're applying through reliable channels. Internships can offer a more secure route into the job market by connecting you with trustworthy organisations. Source: BBC Business. #JobScamAlert #GenZ #JobSafety #Internships #CareerTips",
+          "caption": "Great news for job seekers! The UK job market has seen an increase in permanent job roles for the first time in almost two years. This signals a positive change, opening more stable opportunities for students and graduates stepping into the workforce. Internships continue to play a crucial role in preparing for these opportunities, providing valuable experience that can lead to permanent jobs. Source: Personnel Today.",
           "hashtags": [
-            "#jobscamalert",
-            "#genz",
-            "#jobsafety",
+            "#ukjobs",
+            "#careers",
             "#internships",
-            "#careertips"
+            "#graduatejobs",
+            "#jobmarket"
           ],
           "captions": {
-            "ig-fb": "Jobseekers, especially from the Gen Z crowd, are falling victim to fake recruitment apps that resemble legitimate job platforms but are crafted to steal personal info and money. This growing issue highlights the importance of verifying the authenticity of job sites. Look for red flags and ensure you're applying through reliable channels. Internships can offer a more secure route into the job market by connecting you with trustworthy organisations. Source: BBC Business. #JobScamAlert #GenZ #JobSafety #Internships #CareerTips",
-            "linkedin": "A concerning trend has emerged where jobseekers, particularly from Gen Z, are being targeted by scams involving fraudulent recruitment apps. These apps pose as genuine job platforms but are designed to siphon off personal information and money. It's crucial for students and graduates to verify the authenticity of job platforms and be wary of potential red flags during the recruitment process. Internships can serve as a safer entry point into the workforce, providing experience with reputable organisations. Source: BBC Business. #JobMarket #CareerSecurity #Internships",
-            "x": "Gen Z jobseekers are being scammed by fake recruitment apps mimicking real platforms to steal info and money. Stay cautious and verify job sites' authenticity. (Source: BBC Business) #JobScam #GenZ",
-            "threads": "Gen Z jobseekers face scams from fake recruitment apps designed to steal from them. Verify the authenticity of job sites and be cautious. Internships offer a safer, reliable entry into the job market. www.internwise.co.uk #JobSafety #Internships #CareerAdvice"
+            "ig-fb": "Great news for job seekers! The UK job market has seen an increase in permanent job roles for the first time in almost two years. This signals a positive change, opening more stable opportunities for students and graduates stepping into the workforce. Internships continue to play a crucial role in preparing for these opportunities, providing valuable experience that can lead to permanent jobs. Source: Personnel Today.",
+            "linkedin": "The UK job market has finally turned a corner, with a rise in permanent job opportunities for the first time in nearly two years. This change is a beacon of hope for students and graduates looking for stability as they start their careers. Internships are an essential way to gain the skills and experience needed to secure these roles. Source: Personnel Today.",
+            "x": "Permanent job roles in the UK have increased for the first time in nearly two years. A promising sign for students and grads! (Source: Personnel Today)",
+            "threads": "UK job market alert: Permanent roles have increased for the first time in nearly two years! This is great news for students and graduates entering the workforce. Internships can pave the way by building experience and skills. www.internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#jobscamalert",
-              "#genz",
-              "#jobsafety",
+              "#ukjobs",
+              "#careers",
               "#internships",
-              "#careertips"
+              "#graduatejobs",
+              "#jobmarket"
             ],
             "linkedin": [
-              "#jobmarket",
-              "#careersecurity",
-              "#internships"
+              "#ukjobmarket",
+              "#graduateopportunities",
+              "#careergrowth"
             ],
             "x": [
-              "#jobscam",
-              "#genz"
+              "#ukjobs",
+              "#jobmarket"
             ]
           }
         },

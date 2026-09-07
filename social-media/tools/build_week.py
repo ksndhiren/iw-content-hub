@@ -37,6 +37,8 @@ import nuno_ledger
 HUB   = os.path.dirname(L.BASE)
 WEEKS = os.path.join(HUB, "data", "weeks.json")
 AUTO  = os.path.join(L.BASE, "video", "topics", "auto.json")
+EDU_USED = os.path.join(L.BASE, "content", "education_used.json")   # cross-week topic dedup
+EDU_DEDUP_WEEKS = 2                                                  # don't reuse a topic within N weeks
 DKEYS = ["mon", "tue", "wed", "thu", "fri"]
 
 
@@ -71,9 +73,36 @@ QUOTE_WORLDS = ["editorial", "spotlight", "colorblock", "split", "paper"]
 EMPLOYER_DAYS = {0, 2, 4}
 EMPLOYER_PAIRS = [("benefits", "e001"), ("bigstat", "e004"), ("process", "e003"),
                   ("trust", "e005"), ("statement", "e002")]
-# education: 3 carousels + 2 singles, rotating worlds
-EDU_WORLDS = [("navy", "carousel"), ("plum", "carousel"), ("teal", "carousel"),
-              ("tipcard", "single"), ("statement", "single")]
+# education: 3 carousels + 2 singles. The FORMAT is fixed per weekday (Mon-Wed
+# carousels, Thu/Fri singles) so the weekly mix never drifts; the visual WORLD
+# rotates by week (see week_offset / build) so the same weekday never looks the
+# same two weeks running.
+EDU_FORMAT_BY_DAY = ["carousel", "carousel", "carousel", "single", "single"]
+EDU_CAROUSEL_WORLDS = ["navy", "plum", "teal"]
+EDU_SINGLE_WORLDS = ["tipcard", "statement"]
+
+
+def week_offset(wid):
+    """Per-week rotation step (0 for week14, +1 each week after) used to advance
+    the quote/education visual worlds so consecutive weeks never share a look."""
+    try:
+        return int(wid.replace("week", "")) - 14
+    except ValueError:
+        return 0
+
+
+def quote_world(di, wid):
+    return QUOTE_WORLDS[(di + week_offset(wid)) % len(QUOTE_WORLDS)]
+
+
+def education_world(di, wid):
+    """(world, fmt) for a given weekday, rotating the world within its format
+    group so Mon/Wed stay carousels but land on a fresh colour world each week."""
+    off = week_offset(wid)
+    fmt = EDU_FORMAT_BY_DAY[di]
+    if fmt == "carousel":
+        return EDU_CAROUSEL_WORLDS[(di + off) % len(EDU_CAROUSEL_WORLDS)], fmt
+    return EDU_SINGLE_WORLDS[((di - EDU_FORMAT_BY_DAY.index("single")) + off) % len(EDU_SINGLE_WORLDS)], fmt
 
 PAID_BLOCK = ("paid", "unpaid", "internship-rights")   # never make paid-vs-unpaid content
 
@@ -132,9 +161,46 @@ def _demand_terms():
     return terms
 
 
-def pick_education(n):
+_EDU_STOP = {"your", "the", "that", "this", "with", "without", "into", "from",
+             "what", "when", "why", "how", "are", "not", "too", "keep", "feels",
+             "is", "a", "an", "and", "for", "of", "to"}
+
+
+def _edu_words(title):
+    return {w for w in re.findall(r"[a-z]+", (title or "").lower())
+            if len(w) >= 4 and w not in _EDU_STOP}
+
+
+def load_edu_used(weeks=EDU_DEDUP_WEEKS):
+    """Word-sets of education topics used in the last `weeks` build weeks, so we
+    never repeat a topic (or a near-duplicate) two weeks running - the way the
+    11-topic bank used to resurface the same 5 every week."""
+    try:
+        rows = json.load(open(EDU_USED)).get("used", [])
+    except Exception:
+        return []
+    recent = sorted({r.get("week", "") for r in rows}, reverse=True)[:weeks]
+    return [_edu_words(r.get("title", "")) for r in rows if r.get("week") in recent]
+
+
+def record_edu_used(wid, titles):
+    try:
+        data = json.load(open(EDU_USED))
+    except Exception:
+        data = {"used": []}
+    data["used"] = [r for r in data.get("used", []) if r.get("week") != wid]
+    data["used"] += [{"week": wid, "title": t} for t in titles]
+    os.makedirs(os.path.dirname(EDU_USED), exist_ok=True)
+    json.dump(data, open(EDU_USED, "w"), indent=2, ensure_ascii=False)
+
+
+def pick_education(n, used_sets=None, thresh=0.5):
+    """Pick `n` education topics, demand-ranked, skipping any that repeat a topic
+    used in the recent weeks (`used_sets`; defaults to the last EDU_DEDUP_WEEKS).
+    Backfills from the skipped pool if the fresh bank is too thin."""
     topics = json.load(open(AUTO)).get("topics", [])
     demand = _demand_terms()
+    used_sets = load_edu_used() if used_sets is None else used_sets
 
     def demand_score(t):
         """Higher when a topic matches what people actually search (GSC)."""
@@ -148,7 +214,17 @@ def pick_education(n):
     if demand:
         # Stable sort: demand-matching topics first (by search volume), order kept otherwise.
         eligible = sorted(eligible, key=demand_score, reverse=True)
-    return eligible[:n]
+
+    def is_recent(t):
+        ws = _edu_words(t.get("title", ""))
+        return any(ws and us and len(ws & us) / min(len(ws), len(us)) >= thresh
+                   for us in used_sets)
+
+    fresh = [t for t in eligible if not is_recent(t)]
+    picked = fresh[:n]
+    if len(picked) < n:                                        # backfill if bank too thin
+        picked += [t for t in eligible if t not in picked][: n - len(picked)]
+    return picked
 
 
 def _post(pid, day, lane, title, fmt, slides, captions, hashtags):
@@ -197,6 +273,8 @@ def build(days=5, dry=False):
     img = os.path.join(HUB, "images", wid)
     daylist = [(DKEYS[i], (mon + datetime.timedelta(days=i)).strftime("%a %d %b").replace(" 0", " ")) for i in range(5)]
     edu_topics = pick_education(days)
+    if not dry:
+        record_edu_used(wid, [t.get("title", "") for t in edu_topics])
     posts = []
     print(f"Building {wid} (w/c {wc}) - {days} day(s)")
 
@@ -207,7 +285,7 @@ def build(days=5, dry=False):
         # NEWS is built day-prior by build_news_day.py so it is never stale.
 
         # QUOTE
-        world = QUOTE_WORLDS[di]; qid = week_quotes[di]; q = quotes[qid]
+        world = quote_world(di, wid); qid = week_quotes[di]; q = quotes[qid]
         cap = writer.write_captions("quote", f"Quote by {q['author']}", q["text"], q.get("cta"))
         pid = f"{wid}-{dkey}-quote"
         if not dry:
@@ -230,7 +308,7 @@ def build(days=5, dry=False):
                                cap["captions"], cap["hashtags"]))
 
         # EDUCATION - LLM carousel/single
-        world, fmt = EDU_WORLDS[di]
+        world, fmt = education_world(di, wid)
         topic = edu_topics[di] if di < len(edu_topics) else {"title": "Career tips", "hook": "", "promise": "", "core_takeaway": "", "proof_points": []}
         tp = {"title": topic.get("title", ""), "hook": (topic.get("hook_candidates") or [""])[0],
               "promise": topic.get("promise", ""), "core_takeaway": topic.get("core_takeaway", ""),

@@ -32,3 +32,10 @@ social-media/campaigns/outputs/
 images/week*/
 # Featured-job graphics now live in Cloudflare R2, not git
 images/featured/
+
+# Quote-author source photos (copyrighted third-party images) stay local only.
+social-media/assets/quote_authors/*.jpg
+social-media/assets/quote_authors/*.jpeg
+social-media/assets/quote_authors/*.png
+social-media/assets/quote_authors/*.webp
+social-media/assets/quote_authors/_cutout/
