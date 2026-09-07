@@ -149,6 +149,11 @@
       "cutout": "nuno_planning_3",
       "week": "week15",
       "date": "2026-09-07"
+    },
+    {
+      "cutout": "nuno_cvpile",
+      "week": "week15",
+      "date": "2026-09-07"
     }
   ]
 }

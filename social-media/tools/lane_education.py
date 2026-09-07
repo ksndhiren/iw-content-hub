@@ -191,12 +191,15 @@ def _spine(p, n, total):
 
 def cover_spine(p, copy, total, pose):
     x = SPINE_W + 48
-    return (_bg(p) + _spine(p, 1, total) + _arc(p) + _nuno_whole(pose, h=800)
+    # Canvas is 1080px wide. After the 132px spine the text starts at x~180, and
+    # Nuno's head sits at ~x>=700, so the headline is bounded to width 460 (ends
+    # ~x=640) and Nuno is nudged right, keeping the type clear of his face.
+    return (_bg(p) + _spine(p, 1, total) + _arc(p) + _nuno_whole(pose, h=800, right=-70)
             + _logo(left=x, top=48)
             + f"<div style=\"position:absolute;left:{x}px;top:250px;font-family:'DM Sans';font-weight:700;font-size:22px;"
               f"color:{p['accent']};letter-spacing:4px;\">{copy.get('eyebrow','INTERNWISE')[:26].upper()}</div>"
-            + f"<div style=\"position:absolute;left:{x}px;top:300px;width:540px;font-family:Inter;font-weight:700;"
-              f"font-size:66px;line-height:1.03;letter-spacing:-2px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>"
+            + f"<div style=\"position:absolute;left:{x}px;top:300px;width:460px;font-family:Inter;font-weight:700;"
+              f"font-size:58px;line-height:1.05;letter-spacing:-1.5px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>"
             + f"<div style=\"position:absolute;left:{x}px;bottom:48px;font-family:'DM Sans';font-weight:600;font-size:23px;"
               f"color:{p['accent']};\">Swipe to begin &rarr;</div>")
 
@@ -214,12 +217,12 @@ def content_spine(p, n, total, slide):
 
 def cta_spine(p, copy, total, pose):
     x = SPINE_W + 48
-    return (_bg(p) + _spine(p, total, total) + _arc(p) + _nuno_whole(pose, h=760)
+    return (_bg(p) + _spine(p, total, total) + _arc(p) + _nuno_whole(pose, h=760, right=-70)
             + f"<div style=\"position:absolute;left:{x}px;top:250px;font-family:'DM Sans';font-weight:700;font-size:22px;"
               f"color:{p['accent']};letter-spacing:4px;\">YOUR MOVE</div>"
-            + f"<div style=\"position:absolute;left:{x}px;top:300px;width:470px;font-family:Inter;font-weight:700;"
-              f"font-size:58px;line-height:1.03;letter-spacing:-2px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>"
-            + f"<div style=\"position:absolute;left:{x}px;top:520px;width:450px;font-family:'DM Sans';font-weight:500;"
+            + f"<div style=\"position:absolute;left:{x}px;top:300px;width:450px;font-family:Inter;font-weight:700;"
+              f"font-size:58px;line-height:1.05;letter-spacing:-1.5px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>"
+            + f"<div style=\"position:absolute;left:{x}px;top:520px;width:430px;font-family:'DM Sans';font-weight:500;"
               f"font-size:34px;line-height:1.35;color:{p['mut']};\">{copy.get('cta','')}</div>"
             + f"<div style='position:absolute;left:{x}px;top:660px;'>{_pill(p)}</div>")
 
