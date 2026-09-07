@@ -80,9 +80,11 @@ LANE_NETWORKS = {
     "featured":  ["instagram", "facebook", "linkedin", "threads"],
 }
 # Recommended local posting time per lane (UK), used with --schedule.
-# (fun retired Week 15; its 17:30 evening slot now carries a featured job.)
-LANE_TIME = {"quote": "08:00", "news": "09:30", "employer": "11:00",
-             "education": "12:30", "featured": "17:30"}
+# Times set from the founder's reach observation (Sept 2026): the quote takes the
+# 8pm reach slot, news opens the day, education runs early afternoon, employer
+# closes the evening.
+LANE_TIME = {"news": "08:00", "education": "13:30", "quote": "20:00",
+             "employer": "20:30", "featured": "17:30"}
 DAY_INDEX = {"mon": 0, "tue": 1, "wed": 2, "thu": 3, "fri": 4}
 
 
