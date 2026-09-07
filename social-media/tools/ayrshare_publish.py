@@ -17,9 +17,11 @@ re-run never double-posts.
     python3 tools/ayrshare_publish.py --featured --live          # post approved featured jobs
 
 Notes:
-- Networks connected today: instagram, facebook, linkedin, threads
-  (+ youtube/gmb unused). X/Twitter and TikTok are NOT connected, so lanes that
-  would target them simply skip those networks until they're linked in Ayrshare.
+- Networks connected in Ayrshare: instagram, facebook, linkedin, threads,
+  gmb (Google Business Profile), pinterest, youtube. The lane routing below only
+  targets ig/fb/li/threads today; gmb/pinterest/youtube are connected but no lane
+  sends to them yet. X/Twitter and TikTok are NOT connected, so lanes that would
+  target them simply skip those networks until they're linked in Ayrshare.
   Connected accounts are resolved dynamically via active_networks().
 - Threads has a 500-char limit; long captions are trimmed for Threads only
   (and flagged). All other networks receive the full caption.
@@ -55,18 +57,25 @@ _load_env()
 KEY = os.getenv("AYRSHARE_API_KEY", "")
 
 # Ayrshare network -> which caption/hashtag key in weeks.json it should use.
+# gmb (Google Business Profile) is customer-facing local content; it reuses the
+# ig-fb caption.
 NET_CAPTION = {"instagram": "ig-fb", "facebook": "ig-fb", "threads": "ig-fb",
-               "linkedin": "linkedin", "twitter": "x"}
+               "linkedin": "linkedin", "twitter": "x", "gmb": "ig-fb"}
 # Rough per-network caption character ceilings (trim only where needed).
 NET_LIMIT = {"twitter": 280, "threads": 500, "instagram": 2200,
-             "facebook": 63000, "linkedin": 3000}
+             "facebook": 63000, "linkedin": 3000, "gmb": 1500}
+# GMB only accepts a SINGLE image per post (no carousels); these lanes send just
+# their cover slide to GMB (see build_jobs).
+SINGLE_IMAGE_NETS = {"gmb"}
 # Lane -> the networks we WANT it on (before intersecting with connected ones).
+# gmb added to the substantive, business-relevant lanes only (news/employer/
+# education); quote/fun/featured stay off GMB.
 LANE_NETWORKS = {
-    "news":      ["instagram", "facebook", "linkedin", "twitter", "threads"],
+    "news":      ["instagram", "facebook", "linkedin", "twitter", "threads", "gmb"],
     "quote":     ["instagram", "facebook", "threads", "twitter"],
     "fun":       ["instagram", "facebook", "threads", "twitter"],
-    "employer":  ["linkedin", "facebook"],
-    "education": ["instagram", "linkedin", "facebook", "threads"],
+    "employer":  ["linkedin", "facebook", "gmb"],
+    "education": ["instagram", "linkedin", "facebook", "threads", "gmb"],
     # Featured job ads: candidate-facing + employer-credible.
     "featured":  ["instagram", "facebook", "linkedin", "threads"],
 }
@@ -183,17 +192,28 @@ def build_jobs(week, connected, want_status, use_schedule, only=None, days=None,
         sched = schedule_iso(week, post, at=at) if use_schedule else None
         for net in nets:
             text, trimmed = caption_for(post, net)
+            # GMB accepts only one image; send the cover slide alone.
+            net_media = media[:1] if net in SINGLE_IMAGE_NETS else media
             jobs.append({"pid": post["id"], "lane": lane, "network": net, "kind": "feed",
-                         "text": text, "trimmed": trimmed, "mediaUrls": media,
+                         "text": text, "trimmed": trimmed, "mediaUrls": net_media,
                          "extra": {}, "scheduleDate": sched})
-        # Instagram Story companion: a dedicated 1080x1920 story.png (IG caps
-        # Story width at 1920; the 2160 feed slides are rejected). No caption.
-        if stories and "instagram" in nets and media:
+        # Story companions: a dedicated 1080x1920 story.png (IG/FB cap Story
+        # width at 1920; the 2160 feed slides are rejected). No caption. The
+        # same story.png is reused for both Instagram and Facebook Stories.
+        if stories and media:
             story_url = f"{R2_BASE}/{week['id']}/{post['id']}/story.png"
-            jobs.append({"pid": post["id"], "lane": lane, "network": "instagram", "kind": "story",
-                         "text": post.get("title", " ")[:60], "trimmed": False,
-                         "mediaUrls": [story_url], "extra": {"instagramOptions": {"stories": True}},
-                         "scheduleDate": sched})
+            if "instagram" in nets:
+                jobs.append({"pid": post["id"], "lane": lane, "network": "instagram", "kind": "story",
+                             "text": post.get("title", " ")[:60], "trimmed": False,
+                             "mediaUrls": [story_url], "extra": {"instagramOptions": {"stories": True}},
+                             "scheduleDate": sched})
+            # Facebook Story companion, mirroring Instagram (requires a connected
+            # Facebook Page; Ayrshare posts a single-image Story via faceBookOptions).
+            if "facebook" in nets:
+                jobs.append({"pid": post["id"], "lane": lane, "network": "facebook", "kind": "story",
+                             "text": post.get("title", " ")[:60], "trimmed": False,
+                             "mediaUrls": [story_url], "extra": {"faceBookOptions": {"stories": True}},
+                             "scheduleDate": sched})
     return jobs
 
 

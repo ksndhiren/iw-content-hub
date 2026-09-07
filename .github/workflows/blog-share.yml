@@ -1,0 +1,65 @@
+name: Blog Re-share
+
+# Every Saturday (alongside the Daily-5 content build), surface the 5 most recent
+# internwise.com/blog posts and schedule them out across the upcoming week to
+# LinkedIn, Facebook, Threads and Google Business Profile via Ayrshare. Recency
+# comes from the site sitemap (<lastmod>); each post is a link share (no image).
+#
+# These are auto-scheduled LIVE (no dashboard gate) - blog re-shares are low-risk
+# link posts. The dedupe file (blog_shared.json) is committed back so the same
+# article is never shared to the same network twice.
+#
+# Requires repo secret: AYRSHARE_API_KEY.
+
+on:
+  schedule:
+    - cron: "0 8 * * 6"       # Saturday 08:00 UTC (just after the Daily-5 build)
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "How many recent blog posts to share"
+        required: false
+        default: "5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: blog-share
+  cancel-in-progress: false
+
+jobs:
+  share:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # blog_share.py uses only the Python standard library - nothing to install.
+
+      - name: Schedule the latest blog posts to socials
+        env:
+          AYRSHARE_API_KEY: ${{ secrets.AYRSHARE_API_KEY }}
+        run: |
+          python social-media/tools/blog_share.py \
+            --limit "${{ github.event.inputs.limit || '5' }}" \
+            --live --schedule | tee /tmp/blog_share.log
+
+      - name: Commit the dedupe record if it changed
+        run: |
+          FILE="social-media/content/blog_shared.json"
+          if [ -z "$(git status --porcelain $FILE)" ]; then
+            echo "Nothing newly shared this run."
+            exit 0
+          fi
+          git config user.name  "internwise-content-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "$FILE"
+          git commit -m "Blog re-share: scheduled latest posts ($(date -u +%Y-%m-%d))"
+          git pull --rebase origin main
+          git push origin HEAD:main

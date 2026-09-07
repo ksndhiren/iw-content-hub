@@ -16,7 +16,7 @@ Nuno is always placed WHOLE (never cropped, zoomed or distorted).
 
     render_education(copy, world, out_dir)   # writes slide_1..N.png
 """
-import os, sys
+import os, sys, json, datetime
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lanes_common as L
 import nuno_ledger
@@ -42,6 +42,87 @@ COVER_POOL = ["nuno_cv", "nuno_cv_2", "nuno_cv_3",
               "nuno_planning_1", "nuno_planning_2", "nuno_planning_3",
               "nuno_cvpile", "nuno_utility_3"]
 CTA_POOL = ["nuno_thumbsup", "nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1"]
+
+# ------------------------------------------------------------ topic-matched hook
+# The hook (cover) is the scroll-stopper, so its Nuno must MATCH the topic - not
+# just the tone. We narrow the cover pool to the family that fits the carousel's
+# subject; the ledger then picks the freshest one in that family (no-repeat).
+# Only COVER-SAFE poses appear here (right-weighted, they clear the left text
+# column). Topics with no fitting cover-safe pose map to "__need:<family>", which
+# logs a request for the specific shot we're missing instead of forcing a wrong
+# pose (see request_cover_pose + feedback_request_nuno_pics).
+TOPIC_POSES = {
+    "cv":         ["nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cvpile"],
+    "apply":      ["nuno_cv", "nuno_cv_2", "nuno_cv_3"],
+    "interview":  ["nuno_authority_1", "nuno_authority_2", "nuno_authority_3"],
+    "confidence": ["nuno_authority_1", "nuno_authority_2", "nuno_authority_3"],
+    "plan":       ["nuno_planning_1", "nuno_planning_2", "nuno_planning_3"],
+    "mistake":    ["nuno_thoughtful_1", "nuno_thoughtful_2", "nuno_thoughtful_3"],
+    "think":      ["nuno_thoughtful_1", "nuno_thoughtful_2", "nuno_thoughtful_3"],
+    "skills":     ["nuno_utility_3", "nuno_planning_1", "nuno_planning_2"],
+    # No cover-safe pose in the library yet -> request the exact shot we need.
+    "networking": "__need:welcoming",
+    "offer":      "__need:offers",
+    "tech":       "__need:tablet",
+}
+# Substring found in eyebrow/headline/slide text -> topic key above.
+TOPIC_KEYWORDS = [
+    ("cover letter", "cv"), ("resume", "cv"), ("cv", "cv"),
+    ("application", "apply"), ("apply", "apply"), ("ats", "apply"),
+    ("interview", "interview"), ("assessment", "interview"),
+    ("imposter", "confidence"), ("confidence", "confidence"), ("nerv", "confidence"),
+    ("timeline", "plan"), ("deadline", "plan"), ("schedule", "plan"),
+    ("plan", "plan"), ("first day", "plan"),
+    ("mistake", "mistake"), ("avoid", "mistake"), ("reject", "mistake"), ("wrong", "mistake"),
+    ("strategy", "think"), ("research", "think"), ("hidden", "think"), ("think", "think"),
+    ("skill", "skills"), ("portfolio", "tech"), ("project", "skills"), ("experience", "skills"),
+    ("network", "networking"), ("linkedin", "networking"), ("referral", "networking"),
+    ("offer", "offer"), ("salary", "offer"), ("negotiat", "offer"),
+]
+# Human-readable description of the shot to generate when a topic has no pose.
+NEED_DESC = {
+    "welcoming": "Nuno warm/open, greeting - for networking & LinkedIn topics (right-weighted so it clears the left text column)",
+    "offers": "Nuno celebrating a win / holding an offer letter - for offer & salary topics (compact, right side)",
+    "tablet": "Nuno holding a tablet/laptop showing a portfolio - for tech & portfolio topics (right-weighted)",
+}
+COVER_REQUESTS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                              "content", "nuno_cover_requests.json")
+
+
+def request_cover_pose(family, copy, week_id):
+    """Record that this topic needs a specific cover pose we don't have yet, so it
+    surfaces in the Saturday build for the operator to generate (or hand to the
+    user). Never blocks the render - the caller falls back to the general pool."""
+    try:
+        log = json.load(open(COVER_REQUESTS)) if os.path.exists(COVER_REQUESTS) else {"requests": []}
+    except Exception:
+        log = {"requests": []}
+    log["requests"].append({
+        "week": week_id, "family": family, "topic": copy.get("eyebrow", ""),
+        "headline": copy.get("headline", ""), "need": NEED_DESC.get(family, family),
+        "at": datetime.datetime.utcnow().isoformat() + "Z"})
+    try:
+        os.makedirs(os.path.dirname(COVER_REQUESTS), exist_ok=True)
+        json.dump(log, open(COVER_REQUESTS, "w"), indent=2, ensure_ascii=False)
+    except Exception:
+        pass
+
+
+def cover_pool_for(copy, week_id):
+    """Return the topic-relevant cover-pose pool for this carousel, falling back to
+    the full COVER_POOL when nothing matches (and logging a request when the topic
+    fits a family we don't stock a cover-safe pose for)."""
+    hay = " ".join([copy.get("eyebrow", ""), copy.get("headline", "")]
+                   + [s.get("title", "") + " " + s.get("tag", "") for s in copy.get("slides", [])]).lower()
+    for kw, topic in TOPIC_KEYWORDS:
+        if kw in hay:
+            poses = TOPIC_POSES.get(topic)
+            if isinstance(poses, str) and poses.startswith("__need:"):
+                request_cover_pose(poses.split(":", 1)[1], copy, week_id)
+                return COVER_POOL          # graceful fallback until the shot exists
+            if poses:
+                return poses
+    return COVER_POOL
 
 
 # --------------------------------------------------------------- shared bits
@@ -147,20 +228,20 @@ def cta_spine(p, copy, total, pose):
 #  WORLD 2  -  "poster"  (plum)  : type-led editorial poster, NO photo on cover
 # =================================================================================
 def cover_poster(p, copy, total, pose):
-    # Photo-free, type-led. A big soft accent blob + oversized headline.
-    blob = (f"<div style='position:absolute;right:-160px;top:-120px;width:660px;height:660px;border-radius:50%;"
-            f"background:radial-gradient(circle at 40% 40%,{p['accent']}40,{p['accent']}00 62%);'></div>")
-    blob2 = (f"<div style='position:absolute;left:-140px;bottom:-160px;width:560px;height:560px;border-radius:50%;"
-             f"background:radial-gradient(circle at 60% 40%,{AMBER}22,{AMBER}00 62%);'></div>")
-    mark = (f"<div style='position:absolute;right:64px;top:300px;font-family:Georgia,serif;font-weight:700;font-size:360px;"
-            f"line-height:.6;color:{p['accent']};opacity:.12;'>&rdquo;</div>")
-    eyebrow = (f"<div style='position:absolute;left:56px;top:210px;display:inline-flex;align-items:center;height:48px;padding:0 22px;"
+    # Editorial poster: oversized type on the left, Nuno WHOLE on the right. Kept
+    # type-led (no card chrome, no left rail - distinct from bento/spine) but the
+    # founder now anchors the hook so it stops the scroll. Headline width is
+    # constrained so it always clears Nuno on the right.
+    blob = (f"<div style='position:absolute;right:-140px;top:-130px;width:560px;height:560px;border-radius:50%;"
+            f"background:radial-gradient(circle at 40% 40%,{p['accent']}33,{p['accent']}00 62%);'></div>")
+    eyebrow = (f"<div style='position:absolute;left:56px;top:214px;display:inline-flex;align-items:center;height:48px;padding:0 22px;"
                f"border-radius:24px;background:{p['accent']};'>"
                f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:21px;color:{p['deep']};letter-spacing:3px;\">{copy.get('eyebrow','INTERNWISE')[:24].upper()}</span></div>")
-    head = (f"<div style=\"position:absolute;left:56px;right:70px;top:296px;font-family:Inter;font-weight:800;"
-            f"font-size:104px;line-height:.98;letter-spacing:-3.5px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
-    rule = f"<div style='position:absolute;left:58px;bottom:150px;width:120px;height:8px;background:{p['accent']};border-radius:4px;'></div>"
-    return _bg(p) + blob + blob2 + mark + _logo(left=56, top=44) + eyebrow + head + rule + _footer(p, swipe=True)
+    head = (f"<div style=\"position:absolute;left:56px;width:1010px;top:300px;font-family:Inter;font-weight:800;"
+            f"font-size:92px;line-height:.98;letter-spacing:-3px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
+    rule = f"<div style='position:absolute;left:58px;top:660px;width:120px;height:8px;background:{p['accent']};border-radius:4px;'></div>"
+    return (_bg(p) + blob + _arc(p, right=-40, bottom=-40, size=720) + _nuno_whole(pose, h=800, right=-30)
+            + _logo(left=56, top=44) + eyebrow + head + rule + _footer(p, swipe=True))
 
 def content_poster(p, n, total, slide):
     numeral = (f"<div style=\"position:absolute;left:52px;top:236px;font-family:Inter;font-weight:800;font-size:150px;"
@@ -308,7 +389,8 @@ def render_education(copy, world, out_dir, week_id="adhoc"):
         slides = copy.get("slides", [])
         total = len(slides) + 2
         tone = copy.get("tone", "practical")
-        cover_pose = nuno_ledger.pick(COVER_POOL, week_id, label=f"education/{world}/cover", tone=COVER_TONE.get(tone))
+        cover_pose = nuno_ledger.pick(cover_pool_for(copy, week_id), week_id,
+                                      label=f"education/{world}/cover", tone=COVER_TONE.get(tone))
         cta_pose = nuno_ledger.pick(CTA_POOL, week_id, label=f"education/{world}/cta", tone=CTA_TONE.get(tone))
         paths = [L.render(out_dir, "slide_1.png", w["cover"](p, copy, total, cover_pose))]
         for i, s in enumerate(slides, start=2):
