@@ -338,11 +338,30 @@ def build(days=5, dry=False):
               + ", ".join(f"{n}×{fam}" for fam, n in need.items()))
 
     if not dry:
+        # Render each story-lane post's 1080x1920 Story companion from its cover
+        # slide, so ayrshare_publish --stories has media in R2. Done BEFORE the
+        # upload so upload_tree ships story.png alongside the slides (otherwise
+        # Facebook/Instagram Stories fail at post time with error 164).
+        try:
+            import story_card
+            made = []
+            for p in posts:
+                if p.get("lane") not in story_card.STORY_LANES:
+                    continue
+                cover = (p.get("slides") or ["slide_1.png"])[0]
+                src = os.path.join(img, p["id"], cover)
+                if os.path.exists(src):
+                    story_card.make_story(src, os.path.join(img, p["id"], "story.png"))
+                    made.append(p["id"])
+            print(f"rendered {len(made)} Story companions (story.png)")
+        except Exception as e:
+            print("story render skipped:", e)
+
         try:
             import r2                                     # normalises R2_* env on import
             if os.getenv("R2_ACCESS_KEY_ID"):
                 r2.ensure_bucket()
-                print(f"uploading {wid} slides to R2 ...")
+                print(f"uploading {wid} slides + stories to R2 ...")
                 r2.upload_tree(img, prefix=wid + "/")
         except Exception as e:
             print("R2 upload skipped:", e)
