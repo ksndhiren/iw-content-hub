@@ -3933,6 +3933,50 @@
               "#genz"
             ]
           }
+        },
+        {
+          "id": "week15-tue-news",
+          "day": "Tue 8 Sep",
+          "lane": "news",
+          "title": "UK Youth Unemployment Hits a Million",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Nearly a million young people in the UK, aged 16 to 24, are currently not in education, employment, or training – a situation known as NEET. This alarming figure highlights the urgent need for more opportunities and support for young jobseekers. For students and graduates, this means that gaining relevant skills and experience is more crucial than ever. internships can play a key role in addressing this issue by providing practical experience and opening doors to future employment. Source: FE News.",
+          "hashtags": [
+            "#youthunemployment",
+            "#internships",
+            "#ukjobs",
+            "#careergrowth",
+            "#neet"
+          ],
+          "captions": {
+            "ig-fb": "Nearly a million young people in the UK, aged 16 to 24, are currently not in education, employment, or training – a situation known as NEET. This alarming figure highlights the urgent need for more opportunities and support for young jobseekers. For students and graduates, this means that gaining relevant skills and experience is more crucial than ever. internships can play a key role in addressing this issue by providing practical experience and opening doors to future employment. Source: FE News.",
+            "linkedin": "In the UK, nearly a million young individuals aged 16 to 24 find themselves not in education, employment, or training, contributing to the NEET crisis. This scenario stresses the importance for students and graduates to acquire the skills and experience needed to thrive in a competitive job market. internships can be a vital solution, offering hands-on experience and enhancing employability. Source: FE News.",
+            "x": "UK youth NEET figures hit nearly a million. Essential for students/graduates to gain skills and experience. internships can help. (Source: FE News)",
+            "threads": "Nearly a million UK youths aged 16-24 are NEET (not in education, employment, or training). This highlights the need for students to gain skills and experience. internships provide vital industry exposure and a pathway to jobs. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#youthunemployment",
+              "#internships",
+              "#ukjobs",
+              "#careergrowth",
+              "#neet"
+            ],
+            "linkedin": [
+              "#youthunemployment",
+              "#internships",
+              "#ukjobs"
+            ],
+            "x": [
+              "#youthunemployment",
+              "#internships"
+            ]
+          }
         }
       ]
     }
