@@ -132,10 +132,10 @@ def upcoming_monday():
     return today + datetime.timedelta(days=(7 - today.weekday()) % 7 or 7)
 
 
-def schedule_iso(idx, use_schedule):
+def schedule_iso(idx, use_schedule, week_monday=None):
     if not use_schedule:
         return None
-    mon = upcoming_monday()
+    mon = week_monday or upcoming_monday()
     day_idx = {"mon": 0, "tue": 1, "wed": 2, "thu": 3, "fri": 4}
     dkey, hhmm = BLOG_DAY_TIME[idx % len(BLOG_DAY_TIME)]
     hh, mm = hhmm.split(":")
@@ -173,10 +173,12 @@ def main():
     ap.add_argument("--live", action="store_true", help="actually post (default: dry-run)")
     ap.add_argument("--schedule", action="store_true", help="spread across the upcoming week instead of now")
     ap.add_argument("--network", default=None, help="comma list to limit networks (e.g. linkedin,facebook)")
+    ap.add_argument("--week-monday", default=None, help="ISO date of the Monday to schedule against (default: upcoming Monday). Past slots post immediately.")
     args = ap.parse_args()
     if not KEY:
         sys.exit("No AYRSHARE_API_KEY in env (.env).")
     only_nets = set(n.strip() for n in args.network.split(",")) if args.network else None
+    week_monday = datetime.date.fromisoformat(args.week_monday) if args.week_monday else None
 
     connected = active_networks()
     nets = [n for n in BLOG_NETWORKS if n in connected and (not only_nets or n in only_nets)]
@@ -190,7 +192,7 @@ def main():
     todo = []
     for idx, (url, lastmod) in enumerate(posts):
         meta = article_meta(url)
-        sched = schedule_iso(idx, args.schedule)
+        sched = schedule_iso(idx, args.schedule, week_monday=week_monday)
         done_nets = set(shared.get(url, {}).get("networks", []))
         flag = "sched " + sched if sched else "now"
         print(f"  {lastmod}  {meta.get('title','(no title)')[:60]}")
