@@ -3938,43 +3938,43 @@
           "id": "week15-tue-news",
           "day": "Tue 8 Sep",
           "lane": "news",
-          "title": "UK Youth Unemployment Hits a Million",
+          "title": "Beware Fake Recruitment Apps, Warn Police",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Nearly a million young people in the UK, aged 16 to 24, are currently not in education, employment, or training – a situation known as NEET. This alarming figure highlights the urgent need for more opportunities and support for young jobseekers. For students and graduates, this means that gaining relevant skills and experience is more crucial than ever. internships can play a key role in addressing this issue by providing practical experience and opening doors to future employment. Source: FE News.",
+          "caption": "UK police are alerting jobseekers about fake recruitment apps being used by scammers. These fraudsters pose as legitimate recruiters, asking applicants to complete paid tasks via an app, then demanding deposits to release earnings. Seven recent victims lost around £200,000 collectively, with some losing up to £70,000. Job scams have cost UK victims approximately £17 million in a year, and experts warn these app-based cons will increase through 2026. Verify recruiters independently, never pay to work, and avoid downloading apps from unknown sources. Internships offer a safer way to gain experience with verified employers. Source: Staffing Industry Analysts.",
           "hashtags": [
-            "#youthunemployment",
-            "#internships",
+            "#jobscamalert",
             "#ukjobs",
-            "#careergrowth",
-            "#neet"
+            "#internshipsafety",
+            "#graduateadvice",
+            "#careerprotection"
           ],
           "captions": {
-            "ig-fb": "Nearly a million young people in the UK, aged 16 to 24, are currently not in education, employment, or training – a situation known as NEET. This alarming figure highlights the urgent need for more opportunities and support for young jobseekers. For students and graduates, this means that gaining relevant skills and experience is more crucial than ever. internships can play a key role in addressing this issue by providing practical experience and opening doors to future employment. Source: FE News.",
-            "linkedin": "In the UK, nearly a million young individuals aged 16 to 24 find themselves not in education, employment, or training, contributing to the NEET crisis. This scenario stresses the importance for students and graduates to acquire the skills and experience needed to thrive in a competitive job market. internships can be a vital solution, offering hands-on experience and enhancing employability. Source: FE News.",
-            "x": "UK youth NEET figures hit nearly a million. Essential for students/graduates to gain skills and experience. internships can help. (Source: FE News)",
-            "threads": "Nearly a million UK youths aged 16-24 are NEET (not in education, employment, or training). This highlights the need for students to gain skills and experience. internships provide vital industry exposure and a pathway to jobs. www.internwise.co.uk"
+            "ig-fb": "UK police are alerting jobseekers about fake recruitment apps being used by scammers. These fraudsters pose as legitimate recruiters, asking applicants to complete paid tasks via an app, then demanding deposits to release earnings. Seven recent victims lost around £200,000 collectively, with some losing up to £70,000. Job scams have cost UK victims approximately £17 million in a year, and experts warn these app-based cons will increase through 2026. Verify recruiters independently, never pay to work, and avoid downloading apps from unknown sources. Internships offer a safer way to gain experience with verified employers. Source: Staffing Industry Analysts.",
+            "linkedin": "Scammers are exploiting UK jobseekers with fake recruitment apps. They pose as reputable recruiters, encouraging applicants to perform paid tasks within an app, only to demand deposits to unlock earnings. Seven individuals recently lost about £200,000, with some losing as much as £70,000. Job scams have cost UK victims roughly £17 million over the past year, and experts warn of a rise in app-based and AI-driven scams through 2026. Always verify recruiters independently and avoid downloading apps shared by unknown 'employers'. internships provide a secure way to gain experience with trustworthy companies, protecting you from scam risks. Source: Staffing Industry Analysts.",
+            "x": "UK jobseekers face risks from fake recruitment apps. Scammers pose as recruiters, leading to £200,000 in losses for seven victims. Verify recruiters independently and avoid suspicious apps. (Source: Staffing Industry Analysts)",
+            "threads": "UK jobseekers are being targeted by fake recruitment apps. Scammers posing as recruiters have led to losses of £200,000 for seven victims. Verify recruiters independently and avoid downloading unknown apps. Internships with verified employers offer a safer path. www.internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#youthunemployment",
-              "#internships",
+              "#jobscamalert",
               "#ukjobs",
-              "#careergrowth",
-              "#neet"
+              "#internshipsafety",
+              "#graduateadvice",
+              "#careerprotection"
             ],
             "linkedin": [
-              "#youthunemployment",
-              "#internships",
-              "#ukjobs"
+              "#jobscamalert",
+              "#careersafety",
+              "#graduateadvice"
             ],
             "x": [
-              "#youthunemployment",
-              "#internships"
+              "#jobscam",
+              "#ukjobs"
             ]
           }
         }
