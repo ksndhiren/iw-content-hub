@@ -237,10 +237,13 @@ def cover_poster(p, copy, total, pose):
     eyebrow = (f"<div style='position:absolute;left:56px;top:214px;display:inline-flex;align-items:center;height:48px;padding:0 22px;"
                f"border-radius:24px;background:{p['accent']};'>"
                f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:21px;color:{p['deep']};letter-spacing:3px;\">{copy.get('eyebrow','INTERNWISE')[:24].upper()}</span></div>")
-    head = (f"<div style=\"position:absolute;left:56px;width:1010px;top:300px;font-family:Inter;font-weight:800;"
-            f"font-size:92px;line-height:.98;letter-spacing:-3px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
+    # Canvas is 1080px wide (screenshot 2x). Nuno's head/shoulder sit at ~x>=500
+    # in canvas space, so the headline is bounded to the left column (width 430)
+    # and sized so even the longest word clears him - no overlap on any pose.
+    head = (f"<div style=\"position:absolute;left:56px;width:430px;top:300px;font-family:Inter;font-weight:800;"
+            f"font-size:60px;line-height:1.05;letter-spacing:-2px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
     rule = f"<div style='position:absolute;left:58px;top:660px;width:120px;height:8px;background:{p['accent']};border-radius:4px;'></div>"
-    return (_bg(p) + blob + _arc(p, right=-40, bottom=-40, size=720) + _nuno_whole(pose, h=800, right=-30)
+    return (_bg(p) + blob + _arc(p, right=-40, bottom=-40, size=720) + _nuno_whole(pose, h=800, right=-70)
             + _logo(left=56, top=44) + eyebrow + head + rule + _footer(p, swipe=True))
 
 def content_poster(p, n, total, slide):
@@ -263,9 +266,9 @@ def cta_poster(p, copy, total, pose):
     return (_bg(p) + _arc(p) + _nuno_whole(pose, h=780)
             + f"<div style='position:absolute;left:56px;top:250px;display:inline-flex;align-items:center;height:48px;padding:0 22px;border-radius:24px;background:{p['accent']};'>"
               f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:21px;color:{p['deep']};letter-spacing:3px;\">YOUR MOVE</span></div>"
-            + f"<div style=\"position:absolute;left:56px;top:326px;width:500px;font-family:Inter;font-weight:800;"
-              f"font-size:66px;line-height:1.0;letter-spacing:-2.5px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>"
-            + f"<div style=\"position:absolute;left:58px;top:560px;width:470px;font-family:'DM Sans';font-weight:500;"
+            + f"<div style=\"position:absolute;left:56px;top:326px;width:430px;font-family:Inter;font-weight:800;"
+              f"font-size:60px;line-height:1.03;letter-spacing:-2px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>"
+            + f"<div style=\"position:absolute;left:58px;top:560px;width:410px;font-family:'DM Sans';font-weight:500;"
               f"font-size:34px;line-height:1.35;color:{p['mut']};\">{copy.get('cta','')}</div>"
             + f"<div style='position:absolute;left:58px;top:700px;'>{_pill(p, dark_ink=True)}</div>"
             + _logo(left=56, top=44))
