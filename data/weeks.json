@@ -3977,6 +3977,50 @@
               "#ukjobs"
             ]
           }
+        },
+        {
+          "id": "week15-wed-news",
+          "day": "Wed 9 Sep",
+          "lane": "news",
+          "title": "Judge Supports Pay Difference Appeal",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "A UK judge has ruled that a major employer can offer higher pay to warehouse workers compared to store staff. This decision was based on challenges in recruiting and retaining warehouse employees. Understanding such market dynamics is essential for students and graduates as they navigate their career paths. Internships can provide valuable exposure to different job roles and industry needs, helping you make informed decisions. Source: BBC Business.",
+          "hashtags": [
+            "#jobmarket",
+            "#equalpay",
+            "#internships",
+            "#careeradvice",
+            "#gradjobs"
+          ],
+          "captions": {
+            "ig-fb": "A UK judge has ruled that a major employer can offer higher pay to warehouse workers compared to store staff. This decision was based on challenges in recruiting and retaining warehouse employees. Understanding such market dynamics is essential for students and graduates as they navigate their career paths. Internships can provide valuable exposure to different job roles and industry needs, helping you make informed decisions. Source: BBC Business.",
+            "linkedin": "A judge recently supported an appeal allowing a major UK employer to pay warehouse workers more than their store counterparts, citing recruitment and retention difficulties. This ruling underscores the importance of grasping the nuances of job roles and market demands, especially for students and graduates entering the workforce. Internships are a great way to gain exposure to industry-specific challenges and understand different roles, aiding in career decisions. Source: BBC Business.",
+            "x": "A UK judge ruled that a major employer can pay more to warehouse workers due to hiring challenges. Understand your market value! (Source: BBC Business)",
+            "threads": "A UK judge has allowed a major employer to pay warehouse staff more than store workers due to recruitment challenges. Grasping job market dynamics is vital for students and grads. Internships can offer insights into such industry realities. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#jobmarket",
+              "#equalpay",
+              "#internships",
+              "#careeradvice",
+              "#gradjobs"
+            ],
+            "linkedin": [
+              "#jobmarket",
+              "#careerinsights",
+              "#internships"
+            ],
+            "x": [
+              "#jobmarket",
+              "#internships"
+            ]
+          }
         }
       ]
     }
