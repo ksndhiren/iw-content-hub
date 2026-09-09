@@ -4021,6 +4021,50 @@
               "#internships"
             ]
           }
+        },
+        {
+          "id": "week15-thu-news",
+          "day": "Thu 10 Sep",
+          "lane": "news",
+          "title": "New Grants Boost Young Job Skills",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "The Essential Employment Skills Fund (EESF) is now offering grants of up to £500,000 for projects that explore how to best support young people in developing crucial job skills. This initiative aims to tackle barriers faced by young jobseekers in the UK. For students and graduates, this could mean more chances to acquire the skills demanded by employers. internships are a practical pathway to gain experience and stand out in the job market. Source: FE News.",
+          "hashtags": [
+            "#jobskills",
+            "#careergrowth",
+            "#internships",
+            "#youthemployment",
+            "#ukjobs"
+          ],
+          "captions": {
+            "ig-fb": "The Essential Employment Skills Fund (EESF) is now offering grants of up to £500,000 for projects that explore how to best support young people in developing crucial job skills. This initiative aims to tackle barriers faced by young jobseekers in the UK. For students and graduates, this could mean more chances to acquire the skills demanded by employers. internships are a practical pathway to gain experience and stand out in the job market. Source: FE News.",
+            "linkedin": "The Essential Employment Skills Fund (EESF) has launched grants of up to £500,000 to back projects that build evidence on effective ways to help young people enhance their job skills. With a focus on breaking down barriers to employment, this fund provides an opportunity for students and graduates to access the skills training they need. internships remain a key way for young jobseekers to gain valuable experience and improve their career prospects. Source: FE News.",
+            "x": "EESF offers grants up to £500,000 for projects that help young people develop job skills, aiming to overcome employment barriers. internships are key to gaining vital experience. (Source: FE News)",
+            "threads": "The Essential Employment Skills Fund (EESF) offers up to £500,000 for projects helping young people develop job skills, addressing barriers to employment. internships provide crucial experience for young jobseekers. Learn more at www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#jobskills",
+              "#careergrowth",
+              "#internships",
+              "#youthemployment",
+              "#ukjobs"
+            ],
+            "linkedin": [
+              "#jobskills",
+              "#internships",
+              "#ukemployment"
+            ],
+            "x": [
+              "#jobskills",
+              "#internships"
+            ]
+          }
         }
       ]
     }
