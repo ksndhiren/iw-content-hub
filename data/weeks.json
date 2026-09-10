@@ -4065,6 +4065,50 @@
               "#internships"
             ]
           }
+        },
+        {
+          "id": "week15-fri-news",
+          "day": "Fri 11 Sep",
+          "lane": "news",
+          "title": "Hospitality Skills Boost with Bootcamps",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "Aspiring managers in the UK's hospitality industry have received a skills boost through innovative bootcamps. Funded by the Greater London Authority, these programmes equip participants with the necessary skills to step up in their careers. For students and recent graduates, it's a chance to learn directly from industry experts and prepare for future managerial roles. Internships further enhance your career prospects by providing valuable real-world experience. Source: FE News.",
+          "hashtags": [
+            "#hospitalityskills",
+            "#careergrowth",
+            "#internships",
+            "#ukjobs",
+            "#graduateopportunities"
+          ],
+          "captions": {
+            "ig-fb": "Aspiring managers in the UK's hospitality industry have received a skills boost through innovative bootcamps. Funded by the Greater London Authority, these programmes equip participants with the necessary skills to step up in their careers. For students and recent graduates, it's a chance to learn directly from industry experts and prepare for future managerial roles. Internships further enhance your career prospects by providing valuable real-world experience. Source: FE News.",
+            "linkedin": "In the UK, hospitality sector hopefuls are gaining essential skills through bootcamps funded by the Greater London Authority. These programmes offer a pathway to greater responsibility and career progression. For students and graduates, such initiatives provide direct learning from industry experts, preparing them for future leadership roles. Internships play a crucial role in solidifying these skills through hands-on experience in a professional setting. Source: FE News.",
+            "x": "UK hospitality hopefuls gain vital skills via bootcamps funded by the Greater London Authority, preparing them for managerial roles. Internships also boost career readiness. (Source: FE News)",
+            "threads": "In the UK, hospitality sector aspirants are upgrading their skills with GLA-funded bootcamps. These programmes pave the way for future managerial roles. Internships further support your career journey by offering real-world experience. Learn more at www.internwise.co.uk (Source: FE News)"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#hospitalityskills",
+              "#careergrowth",
+              "#internships",
+              "#ukjobs",
+              "#graduateopportunities"
+            ],
+            "linkedin": [
+              "#hospitalityskills",
+              "#careerdevelopment",
+              "#internships"
+            ],
+            "x": [
+              "#hospitalityskills",
+              "#careerboost"
+            ]
+          }
         }
       ]
     }
