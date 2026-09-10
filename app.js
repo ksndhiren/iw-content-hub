@@ -539,7 +539,7 @@
     elAnalyticsView.innerHTML =
       '<div class="an-head">' +
         '<h2>Analytics</h2>' +
-        '<span class="an-sub">Meta Business Suite view · Ayrshare · ' + escapeHtml(rangeLabel) +
+        '<span class="an-sub">Ayrshare · ' + escapeHtml(rangeLabel) +
         (when ? ' · updated ' + when : '') + '</span>' +
       '</div>' +
 
