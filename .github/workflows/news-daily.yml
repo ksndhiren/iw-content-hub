@@ -2,11 +2,18 @@ name: News - Day-Prior Build
 
 # Builds the NEXT posting day's news card the day before it goes out, so headlines
 # are never stale. Fetches fresh UK news, has the LLM reword it, renders the card,
-# and upserts it into data/weeks.json as `in-review` (creating the week entry if
-# the Saturday batch hasn't run yet). Weekends are skipped automatically. The human
-# gate is unchanged: review + approve on the dashboard before it goes to Ayrshare.
+# and upserts it into data/weeks.json as `approved` (creating the week entry if
+# the Saturday batch hasn't run yet). Weekends are skipped automatically.
 #
-# Requires repo secret: OPENAI_API_KEY (+ optional var OPENAI_MODEL) and the R2_* set.
+# News has NO manual approval gate (unlike the evergreen lanes): once built it is
+# auto-approved and SCHEDULED straight to Ayrshare for the 8am UK news slot on its
+# posting day. Because the build runs the day before, that slot is always in the
+# future, so the post is queued (not sent immediately). The dashboard still shows
+# it, now already 'approved', for visibility. The UK-only / no-naming-orgs news
+# rules are enforced in news_fetch + the writer, not by a human click.
+#
+# Requires repo secrets: OPENAI_API_KEY (+ optional var OPENAI_MODEL), AYRSHARE_API_KEY,
+# and the R2_* set.
 
 on:
   schedule:
@@ -44,6 +51,7 @@ jobs:
           python -m playwright install --with-deps chromium
 
       - name: Build the day-prior news post
+        id: build
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
@@ -59,16 +67,32 @@ jobs:
             python social-media/tools/build_news_day.py | tee /tmp/news.log
           fi
 
+      - name: Schedule the news post to Ayrshare (8am UK slot)
+        # Only after a real build (weekend early-return leaves pid unset). --only
+        # names the freshly built post and bypasses the file-status gate; --schedule
+        # queues it at the news lane time on its posting day (always in the future,
+        # since we build the day before) rather than posting immediately.
+        if: steps.build.outputs.pid != ''
+        env:
+          AYRSHARE_API_KEY: ${{ secrets.AYRSHARE_API_KEY }}
+        run: |
+          set -o pipefail
+          python social-media/tools/ayrshare_publish.py \
+            --week "${{ steps.build.outputs.wid }}" \
+            --only "${{ steps.build.outputs.pid }}" \
+            --schedule --live | tee /tmp/news_schedule.log
+
       - name: Commit and push to main if there are changes
         run: |
-          if [ -z "$(git status --porcelain)" ]; then
+          FILES="images data/weeks.json social-media/content/news_used.json social-media/content/ayrshare_posted.json"
+          if [ -z "$(git status --porcelain $FILES)" ]; then
             echo "No changes (weekend, or nothing built). Done."
             exit 0
           fi
           git config user.name  "internwise-content-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A images data/weeks.json social-media/content/news_used.json
-          git commit -m "News day-prior build ($(date -u +%Y-%m-%d))"
+          git add -A $FILES
+          git commit -m "News day-prior build + auto-schedule ($(date -u +%Y-%m-%d))"
           git pull --rebase origin main
           git push origin HEAD:main
-          echo "Pushed the day-prior news as in-review; review on the dashboard before Ayrshare."
+          echo "Pushed the day-prior news (auto-approved) and scheduled it to Ayrshare for the 8am UK slot."

@@ -79,6 +79,19 @@ LANE_NETWORKS = {
     # Featured job ads: candidate-facing + employer-credible.
     "featured":  ["instagram", "facebook", "linkedin", "threads"],
 }
+# Instagram location tagging (IG feed only). Ayrshare tags a location by a
+# Facebook Page ID (or "@pagename") for a place with a physical location - a whole
+# country ("United Kingdom") has no such Page, so we tag the "London, United
+# Kingdom" place as the UK-wide proxy (Facebook place id 106078429431815). Applied
+# to the lanes in LOCATION_LANES, and ONLY to single-image posts: Instagram rejects
+# a location on carousels, so multi-slide education posts are left untagged
+# automatically. Override the Page id with IG_LOCATION_ID in .env if it changes.
+# NB: Ayrshare has no dry-run for the location value - it only validates the id at
+# post time, and errors if the Page has no physical location listed. The first
+# tagged live post is the real confirmation this id resolves.
+IG_LOCATION_ID = os.getenv("IG_LOCATION_ID", "106078429431815").strip()
+LOCATION_LANES = {"news", "education"}
+
 # Recommended local posting time per lane (UK), used with --schedule.
 # Times set from the founder's reach observation (Sept 2026): the quote takes the
 # 8pm reach slot, news opens the day, education runs early afternoon, employer
@@ -196,9 +209,16 @@ def build_jobs(week, connected, want_status, use_schedule, only=None, days=None,
             text, trimmed = caption_for(post, net)
             # GMB accepts only one image; send the cover slide alone.
             net_media = media[:1] if net in SINGLE_IMAGE_NETS else media
+            extra = {}
+            # Instagram location tag: feed only, chosen lanes, single image only
+            # (IG rejects a location on carousels, so >1 slide is left untagged).
+            geo = (net == "instagram" and lane in LOCATION_LANES
+                   and IG_LOCATION_ID and len(net_media) == 1)
+            if geo:
+                extra["instagramOptions"] = {"locationId": IG_LOCATION_ID}
             jobs.append({"pid": post["id"], "lane": lane, "network": net, "kind": "feed",
                          "text": text, "trimmed": trimmed, "mediaUrls": net_media,
-                         "extra": {}, "scheduleDate": sched})
+                         "extra": extra, "geo": bool(geo), "scheduleDate": sched})
         # Story companions: a dedicated 1080x1920 story.png (IG/FB cap Story
         # width at 1920; the 2160 feed slides are rejected). No caption. The
         # same story.png is reused for both Instagram and Facebook Stories.
@@ -288,7 +308,8 @@ def main():
         already = pkey in posted
         flag = "ALREADY POSTED" if already else ("sched " + j["scheduleDate"] if j["scheduleDate"] else "now")
         print(f"  {j['pid']:22} -> {j['network']:10} {kind:5} [{len(j['text'])}c"
-              f"{' TRIMMED' if j['trimmed'] else ''}] {len(j['mediaUrls'])} img | {flag}")
+              f"{' TRIMMED' if j['trimmed'] else ''}] {len(j['mediaUrls'])} img"
+              f"{' +geo' if j.get('geo') else ''} | {flag}")
         if not already:
             todo.append((pkey, j))
 

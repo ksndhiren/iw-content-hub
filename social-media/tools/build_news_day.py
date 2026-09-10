@@ -76,6 +76,12 @@ def main():
     pdate = datetime.datetime.combine(target, datetime.time())
     post = bw.build_news_post(wid, dkey, dlabel, pdate, img, item,
                               issue_no=target.weekday() + 1)
+    # News is auto-approved: unlike the evergreen lanes it carries no manual
+    # dashboard gate. The story is fetched from UK sources, LLM-reworded under the
+    # news rules, and scheduled straight to the 8am slot by news-daily.yml. Born
+    # 'approved' so the publisher's status gate and the dashboard both treat it as
+    # cleared without a human click.
+    post["status"] = "approved"
 
     # Upsert into weeks.json: create the week entry if the Saturday batch hasn't
     # run yet, else replace only this day's news post - never touch other lanes.
@@ -89,7 +95,7 @@ def main():
     week["posts"] = [pp for pp in week["posts"] if pp.get("id") != pid] + [post]
     json.dump(data, open(bw.WEEKS, "w"), indent=2, ensure_ascii=False)
     bw.news_fetch.mark_used([item])
-    print(f"Upserted {pid} into weeks.json ({wid}) as in-review.")
+    print(f"Upserted {pid} into weeks.json ({wid}) as approved (auto-scheduled).")
 
     try:
         import r2                                    # normalises R2_* env on import
@@ -99,6 +105,15 @@ def main():
             print(f"uploaded {pid} to R2.")
     except Exception as e:
         print("R2 upload skipped:", e)
+
+    # Hand the built ids to the workflow so it can schedule this post to Ayrshare
+    # at the news slot (news-daily.yml reads these step outputs). Only emitted on a
+    # real build - the weekend early-return above leaves them unset, so the
+    # scheduling step skips.
+    gho = os.getenv("GITHUB_OUTPUT")
+    if gho:
+        with open(gho, "a") as fh:
+            fh.write(f"pid={pid}\nwid={wid}\n")
 
 
 if __name__ == "__main__":
