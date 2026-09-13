@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-09-12T11:11:24Z",
+  "generatedAt": "2026-09-13T12:14:45Z",
   "windowRecords": 80,
   "byLane": {
     "employer": {
-      "posts": 8,
+      "posts": 4,
+      "engagement": 0,
+      "avg": 0.0
+    },
+    "featured": {
+      "posts": 6,
+      "engagement": 2,
+      "avg": 0.3
+    },
+    "quote": {
+      "posts": 10,
       "engagement": 2,
       "avg": 0.2
     },
-    "featured": {
-      "posts": 8,
-      "engagement": 6,
-      "avg": 0.8
-    },
-    "quote": {
-      "posts": 15,
+    "education": {
+      "posts": 14,
       "engagement": 3,
       "avg": 0.2
-    },
-    "education": {
-      "posts": 20,
-      "engagement": 6,
-      "avg": 0.3
     },
     "news": {
       "posts": 10,
@@ -30,13 +30,13 @@
   },
   "byDay": {
     "Tue": {
-      "posts": 4,
-      "engagement": 1,
-      "avg": 0.2
+      "posts": 2,
+      "engagement": 0,
+      "avg": 0.0
     },
     "Mon": {
-      "posts": 47,
-      "engagement": 11,
+      "posts": 34,
+      "engagement": 6,
       "avg": 0.2
     },
     "Fri": {
@@ -50,26 +50,26 @@
       "avg": 0.4
     },
     "Wed": {
-      "posts": 4,
-      "engagement": 5,
-      "avg": 1.2
+      "posts": 2,
+      "engagement": 1,
+      "avg": 0.5
     }
   },
   "byHour": {
     "14": {
-      "posts": 4,
-      "engagement": 1,
-      "avg": 0.2
+      "posts": 2,
+      "engagement": 0,
+      "avg": 0.0
     },
     "18": {
-      "posts": 39,
-      "engagement": 10,
-      "avg": 0.3
+      "posts": 26,
+      "engagement": 5,
+      "avg": 0.2
     },
     "19": {
-      "posts": 16,
-      "engagement": 7,
-      "avg": 0.4
+      "posts": 14,
+      "engagement": 3,
+      "avg": 0.2
     },
     "10": {
       "posts": 5,
@@ -83,13 +83,6 @@
     }
   },
   "topPosts": [
-    {
-      "lane": "featured",
-      "network": "instagram",
-      "engagement": 3,
-      "created": "2026-09-09T19:35:11Z",
-      "caption": "Kickstart your sales and marketing journey with a hands-on internship in the UK.\n\n📍 London, Central London\n\nApply now 👉 "
-    },
     {
       "lane": "news",
       "network": "instagram",
@@ -138,13 +131,20 @@
       "engagement": 1,
       "created": "2026-09-07T18:54:47Z",
       "caption": "Your CV might not be getting the attention it deserves. Ever wondered why? The secret lies in how you present your exper"
+    },
+    {
+      "lane": "education",
+      "network": "facebook",
+      "engagement": 1,
+      "created": "2026-09-07T18:54:52Z",
+      "caption": "Your CV might not be getting the attention it deserves. Ever wondered why? The secret lies in how you present your exper"
     }
   ],
   "insights": [
-    "Your strongest topic is Featured jobs (0.8 avg engagement/post). Make more of it.",
-    "Wed is your best posting day (1.2 avg engagement/post).",
+    "Your strongest topic is News (0.4 avg engagement/post). Make more of it.",
+    "Wed is your best posting day (0.5 avg engagement/post).",
     "Posts around 09:00 UTC perform best (0.6 avg engagement/post).",
-    "Employer is underperforming (0.2 avg) - rework the angle or post it at a stronger time."
+    "Employer is underperforming (0.0 avg) - rework the angle or post it at a stronger time."
   ],
   "laneLabels": {
     "education": "Education",
