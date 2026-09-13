@@ -4111,6 +4111,58 @@
           }
         }
       ]
+    },
+    {
+      "id": "week16",
+      "label": "Week 16",
+      "weekCommencing": "2026-09-14",
+      "builtAt": 1789296502,
+      "posts": [
+        {
+          "id": "week16-mon-news",
+          "day": "Mon 14 Sep",
+          "lane": "news",
+          "title": "Bristol Hosts Youth Jobs Fair",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "Bristol's inaugural Youth Guarantee Jobs Fair attracted over 900 young individuals eager to explore career opportunities. Featuring some of the UK's largest companies, the event showcased jobs, apprenticeships, and training options. This fair is a significant step for young people seeking to connect with potential employers and explore various career paths. Internships provide practical experience, making them an invaluable part of early career development. Source: GOV.UK.",
+          "hashtags": [
+            "#youthemployment",
+            "#bristoljobs",
+            "#internships",
+            "#careerfair",
+            "#ukjobs"
+          ],
+          "captions": {
+            "ig-fb": "Bristol's inaugural Youth Guarantee Jobs Fair attracted over 900 young individuals eager to explore career opportunities. Featuring some of the UK's largest companies, the event showcased jobs, apprenticeships, and training options. This fair is a significant step for young people seeking to connect with potential employers and explore various career paths. Internships provide practical experience, making them an invaluable part of early career development. Source: GOV.UK.",
+            "linkedin": "Bristol's first Youth Guarantee Jobs Fair was a landmark event, drawing over 900 young attendees to explore career prospects. With representation from some of the UK's largest employers, the fair offered diverse opportunities in jobs, apprenticeships, and training. This event is key for students and graduates aiming to connect with the professional world. Internships further enhance career readiness by providing practical, hands-on experience. Source: GOV.UK.",
+            "x": "Bristol's first Youth Guarantee Jobs Fair saw 900+ young attendees explore career paths with major UK employers. A vital boost for youth employment. (Source: GOV.UK)",
+            "threads": "Over 900 young people attended Bristol's inaugural Youth Guarantee Jobs Fair, meeting major UK employers and exploring jobs, apprenticeships, and training. This event is a significant boost for youth employment. Internships offer vital real-world experience to jumpstart careers. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#youthemployment",
+              "#bristoljobs",
+              "#internships",
+              "#careerfair",
+              "#ukjobs"
+            ],
+            "linkedin": [
+              "#youthemployment",
+              "#bristoljobs",
+              "#careeropportunities"
+            ],
+            "x": [
+              "#youthjobs",
+              "#ukcareers"
+            ]
+          }
+        }
+      ]
     }
   ]
 }
