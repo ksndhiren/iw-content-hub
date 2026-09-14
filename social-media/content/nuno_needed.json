@@ -1,49 +1,61 @@
 {
-  "week": "week15",
-  "generatedAt": "2026-09-05T11:15:42Z",
+  "week": "week16",
+  "generatedAt": "2026-09-14T02:33:43Z",
   "needByFamily": {
-    "authority": 1,
-    "offers": 1,
-    "thumbsup": 2,
-    "cvpile": 1,
-    "thoughtful": 1
+    "authority": 3,
+    "thumbsup": 1,
+    "dothis": 2,
+    "planning": 1,
+    "cv": 1
   },
   "repeats": [
     {
-      "label": "employer/trust",
-      "cutout": "nuno_authority_3",
+      "label": "education/teal/cover",
+      "cutout": "nuno_authority_1",
       "family": "authority",
-      "week": "week15"
-    },
-    {
-      "label": "education/navy/cta",
-      "cutout": "nuno_offers_1",
-      "family": "offers",
-      "week": "week15"
-    },
-    {
-      "label": "education/plum/cta",
-      "cutout": "nuno_thumbsup",
-      "family": "thumbsup",
-      "week": "week15"
-    },
-    {
-      "label": "employer/statement",
-      "cutout": "nuno_cvpile",
-      "family": "cvpile",
-      "week": "week15"
+      "week": "week16"
     },
     {
       "label": "education/teal/cta",
       "cutout": "nuno_thumbsup",
       "family": "thumbsup",
-      "week": "week15"
+      "week": "week16"
     },
     {
-      "label": "employer/benefits",
-      "cutout": "nuno_thoughtful_1",
-      "family": "thoughtful",
-      "week": "week15"
+      "label": "education/navy/cover",
+      "cutout": "nuno_authority_2",
+      "family": "authority",
+      "week": "week16"
+    },
+    {
+      "label": "education/navy/cta",
+      "cutout": "nuno_dothis_1",
+      "family": "dothis",
+      "week": "week16"
+    },
+    {
+      "label": "employer/process",
+      "cutout": "nuno_planning_1",
+      "family": "planning",
+      "week": "week16"
+    },
+    {
+      "label": "education/plum/cover",
+      "cutout": "nuno_cv",
+      "family": "cv",
+      "week": "week16"
+    },
+    {
+      "label": "education/plum/cta",
+      "cutout": "nuno_dothis_2",
+      "family": "dothis",
+      "week": "week16"
+    },
+    {
+      "label": "employer/trust",
+      "cutout": "nuno_authority_3",
+      "family": "authority",
+      "week": "week16"
     }
   ]
 }

@@ -523,7 +523,531 @@
           ]
         }
       }
+    },
+    {
+      "capturedAt": "2026-09-13",
+      "windowDays": 28,
+      "linkedin": {
+        "dateRange": [
+          "2026-08-13",
+          "2026-09-11"
+        ],
+        "totals": {
+          "posts": 63,
+          "impressions": 1140,
+          "clicks": 19,
+          "likes": 31,
+          "comments": 1,
+          "reposts": 0,
+          "follows": 0
+        },
+        "meanImpressions": 18.1,
+        "byWeek": [
+          {
+            "week": 33,
+            "posts": 5,
+            "impressions": 77,
+            "meanImpressions": 15.4
+          },
+          {
+            "week": 34,
+            "posts": 18,
+            "impressions": 268,
+            "meanImpressions": 14.9
+          },
+          {
+            "week": 35,
+            "posts": 5,
+            "impressions": 67,
+            "meanImpressions": 13.4
+          },
+          {
+            "week": 36,
+            "posts": 15,
+            "impressions": 105,
+            "meanImpressions": 7.0
+          },
+          {
+            "week": 37,
+            "posts": 20,
+            "impressions": 623,
+            "meanImpressions": 31.1
+          }
+        ],
+        "byDow": {
+          "Monday": {
+            "posts": 10,
+            "meanImpressions": 32.6,
+            "meanLikes": 1.0
+          },
+          "Tuesday": {
+            "posts": 9,
+            "meanImpressions": 45.1,
+            "meanLikes": 0.56
+          },
+          "Wednesday": {
+            "posts": 12,
+            "meanImpressions": 6.7,
+            "meanLikes": 0.5
+          },
+          "Thursday": {
+            "posts": 14,
+            "meanImpressions": 8.9,
+            "meanLikes": 0.14
+          },
+          "Friday": {
+            "posts": 11,
+            "meanImpressions": 9.0,
+            "meanLikes": 0.09
+          },
+          "Saturday": {
+            "posts": 4,
+            "meanImpressions": 14.0,
+            "meanLikes": 1.0
+          },
+          "Sunday": {
+            "posts": 3,
+            "meanImpressions": 16.0,
+            "meanLikes": 1.0
+          }
+        },
+        "topPosts": [
+          {
+            "date": "2026-09-08",
+            "impressions": 294,
+            "clicks": 1,
+            "likes": 1,
+            "title": "Startup Intern Guide for UK Founders\n\nLearn what a startup intern does, when to hire one, "
+          },
+          {
+            "date": "2026-09-07",
+            "impressions": 119,
+            "clicks": 0,
+            "likes": 1,
+            "title": "Startups Internships: A Practical Guide for UK Founders\n\nLearn when startups internships m"
+          },
+          {
+            "date": "2026-09-07",
+            "impressions": 59,
+            "clicks": 0,
+            "likes": 1,
+            "title": "With Internwise, you're in good company! Over 14,000 UK employers have chosen us to find t"
+          },
+          {
+            "date": "2026-09-07",
+            "impressions": 55,
+            "clicks": 0,
+            "likes": 1,
+            "title": "The UK job market has finally turned a corner, with a rise in permanent job opportunities "
+          },
+          {
+            "date": "2026-09-08",
+            "impressions": 35,
+            "clicks": 0,
+            "likes": 1,
+            "title": "Scammers are exploiting UK jobseekers with fake recruitment apps. They pose as reputable r"
+          },
+          {
+            "date": "2026-08-13",
+            "impressions": 33,
+            "clicks": 1,
+            "likes": 0,
+            "title": "Most founders don’t need more positive feedback.\n\nThey need proof.\n\nBefore scaling your pr"
+          }
+        ],
+        "followers": {
+          "newFollowersInWindow": 3,
+          "byLocation": [
+            {
+              "label": "London Area, United Kingdom, United Kingdom",
+              "value": 124
+            },
+            {
+              "label": "Pune/Pimpri-Chinchwad Area, India",
+              "value": 12
+            },
+            {
+              "label": "Manchester Area, United Kingdom, United Kingdom",
+              "value": 9
+            },
+            {
+              "label": "Porto Metropolitan Area, Portugal",
+              "value": 8
+            },
+            {
+              "label": "Greater Bengaluru Area, India",
+              "value": 8
+            }
+          ],
+          "bySeniority": [
+            {
+              "label": "Entry",
+              "value": 156
+            },
+            {
+              "label": "Senior",
+              "value": 133
+            },
+            {
+              "label": "Director",
+              "value": 26
+            },
+            {
+              "label": "Manager",
+              "value": 25
+            },
+            {
+              "label": "Training",
+              "value": 20
+            },
+            {
+              "label": "Owner",
+              "value": 15
+            },
+            {
+              "label": "CXO",
+              "value": 7
+            },
+            {
+              "label": "VP",
+              "value": 3
+            }
+          ],
+          "byFunction": [
+            {
+              "label": "Human Resources",
+              "value": 49
+            },
+            {
+              "label": "Business Development",
+              "value": 42
+            },
+            {
+              "label": "Operations",
+              "value": 34
+            },
+            {
+              "label": "Engineering",
+              "value": 33
+            },
+            {
+              "label": "Marketing",
+              "value": 28
+            }
+          ],
+          "byIndustry": [
+            {
+              "label": "IT Services and IT Consulting",
+              "value": 49
+            },
+            {
+              "label": "Software Development",
+              "value": 26
+            },
+            {
+              "label": "Staffing and Recruiting",
+              "value": 16
+            },
+            {
+              "label": "Business Consulting and Services",
+              "value": 16
+            },
+            {
+              "label": "Technology, Information and Internet",
+              "value": 15
+            }
+          ],
+          "byCompanySize": [
+            {
+              "label": "10001+",
+              "value": 65
+            },
+            {
+              "label": "11-50",
+              "value": 54
+            },
+            {
+              "label": "2-10",
+              "value": 50
+            },
+            {
+              "label": "51-200",
+              "value": 48
+            },
+            {
+              "label": "1001-5000",
+              "value": 47
+            },
+            {
+              "label": "201-500",
+              "value": 26
+            },
+            {
+              "label": "501-1000",
+              "value": 22
+            },
+            {
+              "label": "5001-10000",
+              "value": 15
+            }
+          ]
+        }
+      },
+      "gsc": {
+        "instagram": {
+          "clicks": 12,
+          "impressions": 2476,
+          "topQueries": [
+            {
+              "q": "internwise",
+              "impressions": 259,
+              "clicks": 1,
+              "position": "7.34"
+            },
+            {
+              "q": "home staging internship",
+              "impressions": 84,
+              "clicks": 0,
+              "position": "5.79"
+            },
+            {
+              "q": "interwise",
+              "impressions": 41,
+              "clicks": 0,
+              "position": "22.17"
+            },
+            {
+              "q": "porsche founder",
+              "impressions": 35,
+              "clicks": 0,
+              "position": "3.11"
+            },
+            {
+              "q": "internwise uk",
+              "impressions": 35,
+              "clicks": 0,
+              "position": "6.6"
+            },
+            {
+              "q": "intern wise",
+              "impressions": 13,
+              "clicks": 0,
+              "position": "10.31"
+            },
+            {
+              "q": "is internwise legit",
+              "impressions": 10,
+              "clicks": 0,
+              "position": "9.4"
+            },
+            {
+              "q": "internwise.co.uk",
+              "impressions": 10,
+              "clicks": 0,
+              "position": "22.5"
+            },
+            {
+              "q": "founder of porsche",
+              "impressions": 6,
+              "clicks": 0,
+              "position": "6.5"
+            },
+            {
+              "q": "job application follow up email",
+              "impressions": 5,
+              "clicks": 0,
+              "position": "10.8"
+            },
+            {
+              "q": "site:instagram.com marketing \"@gmail.com\" \"london\"",
+              "impressions": 4,
+              "clicks": 0,
+              "position": "60.5"
+            },
+            {
+              "q": "internswipe",
+              "impressions": 4,
+              "clicks": 0,
+              "position": "75.25"
+            },
+            {
+              "q": "jorb ai",
+              "impressions": 3,
+              "clicks": 0,
+              "position": "6"
+            },
+            {
+              "q": "linkedin jobs belgium videographer content creator social media manager \naugust 2026",
+              "impressions": 3,
+              "clicks": 0,
+              "position": "6.67"
+            },
+            {
+              "q": "cover letter opening paragraph",
+              "impressions": 3,
+              "clicks": 0,
+              "position": "11.33"
+            },
+            {
+              "q": "porche founder",
+              "impressions": 2,
+              "clicks": 0,
+              "position": "1"
+            },
+            {
+              "q": "be honest is the uk job market bad",
+              "impressions": 2,
+              "clicks": 0,
+              "position": "4"
+            },
+            {
+              "q": "founder porsche",
+              "impressions": 2,
+              "clicks": 0,
+              "position": "6"
+            },
+            {
+              "q": "internwtchucks",
+              "impressions": 2,
+              "clicks": 0,
+              "position": "6"
+            },
+            {
+              "q": "entrepreneur+porsche",
+              "impressions": 2,
+              "clicks": 0,
+              "position": "8.5"
+            }
+          ]
+        },
+        "youtube": {
+          "clicks": 14,
+          "impressions": 26549,
+          "topQueries": [
+            {
+              "q": "about me section on resume",
+              "impressions": 277,
+              "clicks": 0,
+              "position": "24.42"
+            },
+            {
+              "q": "does internship count as work experience",
+              "impressions": 248,
+              "clicks": 0,
+              "position": "7.64"
+            },
+            {
+              "q": "resume contact information",
+              "impressions": 167,
+              "clicks": 0,
+              "position": "61.32"
+            },
+            {
+              "q": "do internships count as work experience",
+              "impressions": 160,
+              "clicks": 0,
+              "position": "9.43"
+            },
+            {
+              "q": "career goals",
+              "impressions": 155,
+              "clicks": 0,
+              "position": "69.26"
+            },
+            {
+              "q": "is internship considered work experience",
+              "impressions": 123,
+              "clicks": 0,
+              "position": "7.38"
+            },
+            {
+              "q": "does an internship count as employment",
+              "impressions": 123,
+              "clicks": 0,
+              "position": "8.89"
+            },
+            {
+              "q": "creative resume",
+              "impressions": 110,
+              "clicks": 0,
+              "position": "83.91"
+            },
+            {
+              "q": "internwise",
+              "impressions": 100,
+              "clicks": 0,
+              "position": "7.33"
+            },
+            {
+              "q": "creative cv",
+              "impressions": 93,
+              "clicks": 0,
+              "position": "52.46"
+            },
+            {
+              "q": "about me in cv",
+              "impressions": 88,
+              "clicks": 0,
+              "position": "25.69"
+            },
+            {
+              "q": "does an internship count as work experience",
+              "impressions": 77,
+              "clicks": 0,
+              "position": "9.03"
+            },
+            {
+              "q": "how to make a cv with reference of contact",
+              "impressions": 74,
+              "clicks": 0,
+              "position": "3.01"
+            },
+            {
+              "q": "is internship considered as work experience",
+              "impressions": 69,
+              "clicks": 0,
+              "position": "13.43"
+            },
+            {
+              "q": "long term career goals",
+              "impressions": 68,
+              "clicks": 0,
+              "position": "80.04"
+            },
+            {
+              "q": "kreativt cv",
+              "impressions": 63,
+              "clicks": 0,
+              "position": "78.41"
+            },
+            {
+              "q": "digital presence",
+              "impressions": 60,
+              "clicks": 0,
+              "position": "56.9"
+            },
+            {
+              "q": "contact information in resume",
+              "impressions": 58,
+              "clicks": 0,
+              "position": "8.83"
+            },
+            {
+              "q": "about me section in cv",
+              "impressions": 54,
+              "clicks": 0,
+              "position": "22.65"
+            },
+            {
+              "q": "cv créatif",
+              "impressions": 51,
+              "clicks": 0,
+              "position": "85.73"
+            }
+          ]
+        }
+      }
     }
   ],
-  "generatedAt": "2026-09-05T04:24:24Z"
+  "generatedAt": "2026-09-13T19:17:36Z"
 }

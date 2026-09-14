@@ -154,6 +154,66 @@
       "cutout": "nuno_cvpile",
       "week": "week15",
       "date": "2026-09-07"
+    },
+    {
+      "cutout": "nuno_planning_2",
+      "week": "wk_preview",
+      "date": "2026-09-14"
+    },
+    {
+      "cutout": "nuno_offers_1",
+      "week": "wk_preview",
+      "date": "2026-09-14"
+    },
+    {
+      "cutout": "nuno_authority_1",
+      "week": "week16",
+      "date": "2026-09-14"
+    },
+    {
+      "cutout": "nuno_authority_4",
+      "week": "week16",
+      "date": "2026-09-14"
+    },
+    {
+      "cutout": "nuno_offers_3",
+      "week": "week16",
+      "date": "2026-09-14"
+    },
+    {
+      "cutout": "nuno_planning_1",
+      "week": "week16",
+      "date": "2026-09-14"
+    },
+    {
+      "cutout": "nuno_thumbsup",
+      "week": "week16",
+      "date": "2026-09-14"
+    },
+    {
+      "cutout": "nuno_thoughtful_1",
+      "week": "week16",
+      "date": "2026-09-14"
+    },
+    {
+      "cutout": "nuno_dothis_1",
+      "week": "week16",
+      "date": "2026-09-14"
+    },
+    {
+      "cutout": "nuno_cv",
+      "week": "week16",
+      "date": "2026-09-14"
+    },
+    {
+      "cutout": "nuno_dothis_2",
+      "week": "week16",
+      "date": "2026-09-14"
+    },
+    {
+      "cutout": "nuno_authority_2",
+      "week": "week16",
+      "date": "2026-09-14"
     }
   ]
 }

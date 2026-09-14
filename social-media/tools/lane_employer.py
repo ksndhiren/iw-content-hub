@@ -18,6 +18,9 @@ EMP_POOLS = {
     "process":   ["nuno_planning_1", "nuno_planning_2", "nuno_planning_3"],
     "trust":     ["nuno_authority_2", "nuno_authority_1", "nuno_authority_3", "nuno_thoughtful_1"],
     "statement": ["nuno_cvpile"],
+    # B2B: the founder should read confident/presenting to employers - authority poses.
+    "kpi":       ["nuno_authority_1", "nuno_authority_4", "nuno_authority_2", "nuno_authority_3"],
+    "cards":     ["nuno_authority_3", "nuno_authority_4", "nuno_authority_1", "nuno_authority_2"],
 }
 
 NAVY, DEEP, INK = L.NAVY, L.DEEP, L.INK
@@ -137,8 +140,40 @@ def w_statement(a, pose="nuno_cvpile"):
     return _bg(BG1,BG2)+_nuno(pose)+L.logo_tl()+head+_cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL)
 
 
+# ---- kpi strip (three tiles) ----
+def w_kpi(a, pose="nuno_authority_1"):
+    SUBT = "#9FC2C9"
+    head = (f"<div style='position:absolute;left:58px;top:236px;width:560px;'>"
+            f"<div style=\"font-family:Inter;font-weight:800;font-size:56px;line-height:1.04;letter-spacing:-1.5px;color:{INK};word-break:keep-all;\">"
+            f"One place to hire <span style='color:{AMBER};'>early-career talent.</span></div></div>")
+    tiles = [("400K", "registered UK candidates"), ("14,000+", "employers hiring here"), ("Every", "sector, skill &amp; location")]
+    cards = ""
+    for i, (big, lab) in enumerate(tiles):
+        cards += (f"<div style='flex:1;background:{GREEN}14;border:1.5px solid {GREEN}55;border-radius:22px;padding:30px 26px;'>"
+                  f"<div style=\"font-family:Inter;font-weight:800;font-size:60px;line-height:.9;color:{AMBER};letter-spacing:-2px;\">{big}</div>"
+                  f"<div style=\"font-family:'DM Sans';font-weight:600;font-size:24px;color:{INK};margin-top:14px;line-height:1.2;\">{lab}</div></div>")
+    strip = (f"<div style='position:absolute;left:58px;width:600px;top:420px;display:flex;gap:16px;'>{cards}</div>")
+    return _bg(BG1, BG2) + _nuno(pose, right=-150) + L.logo_tl() + _tag() + head + strip + _cta(a["cta"]) + L.url_footer(color=SUBT, text=EMP_URL)
+
+# ---- card grid (2x2 benefits) ----
+def w_cards(a, pose="nuno_thoughtful_1"):
+    SUBT = "#9FC2C9"
+    head = (f"<div style='position:absolute;left:58px;top:236px;width:560px;'>"
+            f"<div style=\"font-family:Inter;font-weight:800;font-size:56px;line-height:1.04;letter-spacing:-1.5px;color:{INK};word-break:keep-all;\">Why teams hire with Internwise</div></div>")
+    items = [("rocket", "Post a role in minutes"), ("search", "Search by sector, skills &amp; location"),
+             ("clipboard", "Shortlist in one place"), ("users", "14,000+ employers already here")]
+    cells = ""
+    for ic, tx in items:
+        cells += (f"<div style='background:{GREEN}14;border:1.5px solid {GREEN}55;border-radius:22px;padding:28px 26px;'>"
+                  f"<div style='width:56px;height:56px;border-radius:14px;background:{GREEN};display:flex;align-items:center;justify-content:center;margin-bottom:18px;'>{L.svg(ic,'#fff',28)}</div>"
+                  f"<div style=\"font-family:Inter;font-weight:700;font-size:27px;color:{INK};line-height:1.16;letter-spacing:-.3px;\">{tx}</div></div>")
+    grid = (f"<div style='position:absolute;left:58px;top:400px;width:590px;display:grid;grid-template-columns:1fr 1fr;gap:18px;'>{cells}</div>")
+    return _bg(BG1, BG2) + _nuno(pose, right=-150) + L.logo_tl() + _tag() + head + grid + _cta(a["cta"]) + L.url_footer(color=SUBT, text=EMP_URL)
+
+
 WORLDS = {"benefits": w_benefits, "bigstat": w_bigstat, "process": w_process,
-          "trust": w_trust, "statement": w_statement}
+          "trust": w_trust, "statement": w_statement,
+          "kpi": w_kpi, "cards": w_cards}
 
 def render_employer(angle, world, out_dir, filename="slide_1.png", week_id="adhoc"):
     pose = nuno_ledger.pick(EMP_POOLS.get(world, ["nuno_authority_1"]), week_id, label=f"employer/{world}")

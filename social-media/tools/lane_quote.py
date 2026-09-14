@@ -180,8 +180,107 @@ def w_editorial(q, src=None):
     return bg + tex + wm + glyph + _logo(DARK) + _eyebrow("QUOTE OF THE DAY", COFFEE) + body + _cta_row(q['cta'], NAVYT, CORAL)
 
 
+# ---- World 6: premium amber-arc (navy, wk12 furniture) ----
+def w_arc(q, src=None):
+    bg = f"<div style='position:absolute;inset:0;background:linear-gradient(150deg,#1c3560,{NAVY} 58%,{DEEP});'></div>"
+    # A large amber ring behind the author, bottom-right - the premium arc device.
+    arc = ("<div style='position:absolute;right:-190px;bottom:-190px;width:760px;height:760px;border-radius:50%;"
+           f"border:60px solid {AMBER};opacity:.9;'></div>")
+    ring2 = ("<div style='position:absolute;right:-60px;bottom:-60px;width:470px;height:470px;border-radius:50%;"
+             f"border:3px solid {GREEN};opacity:.55;'></div>")
+    wm = _wm(src, "right:-30px;bottom:0;height:720px;", op=.16, filt="grayscale(1) contrast(1.05) brightness(1.1)")
+    kicker = (f"<div style=\"position:absolute;left:60px;top:210px;font-family:'DM Sans';font-weight:800;"
+              f"font-size:20px;color:{AMBER};letter-spacing:6px;\">QUOTE OF THE DAY</div>")
+    body = (f"<div style='position:absolute;left:60px;right:300px;top:266px;'>"
+            f"<div style=\"font-family:Inter;font-weight:800;font-size:74px;line-height:1.1;letter-spacing:-1.6px;color:{INK};word-break:keep-all;\">{q['text']}</div>"
+            f"<div style='width:84px;height:5px;background:{GREEN};border-radius:3px;margin:34px 0 22px;'></div>"
+            f"<div style=\"font-family:'DM Sans';font-weight:800;font-size:32px;color:{AMBER};letter-spacing:-.3px;\">{q['author']}</div></div>")
+    cta = (f"<div style=\"position:absolute;left:60px;right:300px;bottom:60px;font-family:Inter;font-weight:700;"
+           f"font-size:26px;color:{MUT};\">{q['cta']}</div>")
+    return bg + arc + ring2 + wm + _logo(WHT) + kicker + body + cta
+
+
+# ---- World 7: blueprint / technical (teal ground, measured grid) ----
+def w_blueprint(q, src=None):
+    TEAL = "#1f4f4d"
+    bg = f"<div style='position:absolute;inset:0;background:linear-gradient(160deg,#245a57,{TEAL} 70%,#173b39);'></div>"
+    grid = ("<div style='position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),"
+            "linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:60px 60px;'></div>")
+    ticks = ("<div style='position:absolute;left:0;right:0;top:150px;height:1px;background:rgba(255,255,255,.25);'></div>"
+             "<div style='position:absolute;left:0;right:0;bottom:150px;height:1px;background:rgba(255,255,255,.25);'></div>"
+             "<div style='position:absolute;left:60px;top:0;bottom:0;width:1px;background:rgba(255,255,255,.16);'></div>")
+    wm = _wm(src, "right:-30px;bottom:150px;height:640px;", op=.10, filt="grayscale(1) brightness(1.1)")
+    kicker = (f"<div style=\"position:absolute;left:60px;top:186px;font-family:'DM Mono',monospace;font-weight:700;"
+              f"font-size:19px;color:{AMBER};letter-spacing:6px;\">// QUOTE OF THE DAY</div>")
+    body = (f"<div style='position:absolute;left:60px;right:110px;top:250px;'>"
+            f"<div style=\"font-family:Inter;font-weight:800;font-size:78px;line-height:1.08;letter-spacing:-1.8px;color:#fff;word-break:keep-all;\">{q['text']}</div>"
+            f"<div style='width:120px;height:6px;background:{AMBER};border-radius:2px;margin:36px 0 20px;'></div>"
+            f"<div style=\"font-family:'DM Mono',monospace;font-weight:700;font-size:28px;color:{AMBER};letter-spacing:-.2px;\">{q['author']}</div></div>")
+    cta = (f"<div style=\"position:absolute;left:60px;right:110px;bottom:64px;font-family:'DM Mono',monospace;font-weight:600;"
+           f"font-size:24px;color:rgba(255,255,255,.82);\">{q['cta']}</div>")
+    return bg + grid + ticks + wm + _logo(WHT) + kicker + body + cta
+
+
+# ---- World 8: headline band (cream, bold navy band) ----
+def w_band(q, src=None):
+    CREAM = "#F3EADA"; COFFEE = "#8A7B62"
+    bg = f"<div style='position:absolute;inset:0;background:{CREAM};'></div>"
+    wm = _wm(src, "right:-40px;bottom:0;height:430px;", op=.10, filt="grayscale(1) sepia(.25)")
+    kicker = (f"<div style=\"position:absolute;left:64px;top:170px;font-family:'DM Sans';font-weight:800;"
+              f"font-size:20px;color:{COFFEE};letter-spacing:6px;\">QUOTE OF THE DAY</div>")
+    glyph = f"<div style='position:absolute;right:70px;top:120px;font-family:Georgia,serif;font-weight:700;font-size:170px;line-height:.5;color:{AMBER};opacity:.5;'>{Q}</div>"
+    rule_t = f"<div style='position:absolute;left:0;right:0;top:322px;height:6px;background:{AMBER};'></div>"
+    band = (f"<div style='position:absolute;left:0;right:0;top:328px;background:{NAVY};padding:56px 64px 60px;'>"
+            f"<div style=\"font-family:Inter;font-weight:800;font-size:72px;line-height:1.1;letter-spacing:-1.6px;color:#fff;word-break:keep-all;\">{q['text']}</div></div>")
+    author = (f"<div style='position:absolute;left:64px;bottom:150px;display:flex;align-items:center;gap:16px;'>"
+              f"<div style='width:24px;height:24px;background:{CORAL};'></div>"
+              f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:34px;color:{NAVY};letter-spacing:-.4px;\">{q['author']}</span></div>")
+    cta = (f"<div style=\"position:absolute;left:64px;bottom:64px;font-family:Inter;font-weight:700;font-size:25px;color:{COFFEE};\">{q['cta']}</div>")
+    return bg + wm + kicker + glyph + rule_t + band + author + cta + _logo(DARK)
+
+
+# ---- World 9: minimal serif (calm white, high whitespace) ----
+def w_minimal(q, src=None):
+    INKN = "#152743"
+    bg = "<div style='position:absolute;inset:0;background:#FFFFFF;'></div>"
+    wm = _wm(src, "left:50%;bottom:40px;transform:translateX(-50%);height:520px;", op=.06, filt="grayscale(1)")
+    rule_t = f"<div style='position:absolute;left:180px;right:180px;top:250px;height:2px;background:{GREEN};opacity:.5;'></div>"
+    rule_b = f"<div style='position:absolute;left:180px;right:180px;bottom:250px;height:2px;background:{GREEN};opacity:.5;'></div>"
+    kicker = (f"<div style=\"position:absolute;left:0;right:0;top:290px;text-align:center;font-family:'DM Sans';font-weight:700;"
+              f"font-size:19px;color:{GREEN};letter-spacing:7px;\">QUOTE OF THE DAY</div>")
+    body = (f"<div style='position:absolute;left:110px;right:110px;top:360px;text-align:center;'>"
+            f"<div style=\"font-family:Georgia,serif;font-weight:700;font-size:66px;line-height:1.2;letter-spacing:-.5px;color:{INKN};word-break:keep-all;\">{q['text']}</div>"
+            f"<div style='width:70px;height:4px;background:{AMBER};border-radius:3px;margin:34px auto 20px;'></div>"
+            f"<div style=\"font-family:'DM Sans';font-weight:700;font-size:27px;color:{INKN};letter-spacing:.5px;\">{q['author']}</div></div>")
+    cta = (f"<div style=\"position:absolute;left:0;right:0;bottom:170px;text-align:center;font-family:Inter;font-weight:700;"
+           f"font-size:24px;color:#8A93A3;\">{q['cta']}</div>")
+    return bg + wm + rule_t + rule_b + _logo(DARK) + kicker + body + cta
+
+
+# ---- World 10: speech bubble (teal, conversational) ----
+def w_bubble(q, src=None):
+    TEAL = "#2c6e6a"
+    bg = f"<div style='position:absolute;inset:0;background:linear-gradient(155deg,#34817c,{TEAL} 68%,#1f4f4d);'></div>"
+    dots = L.dots("right:70px;top:150px;", color="rgba(255,255,255,.22)", w=200, h=140)
+    wm = _wm(src, "right:-40px;bottom:0;height:520px;", op=.09, filt="grayscale(1) brightness(1.1)")
+    kicker = (f"<div style=\"position:absolute;left:60px;top:214px;font-family:'DM Sans';font-weight:800;"
+              f"font-size:20px;color:{AMBER};letter-spacing:6px;\">QUOTE OF THE DAY</div>")
+    card = (f"<div style='position:absolute;left:60px;right:110px;top:280px;background:#FBFCFE;border-radius:30px;"
+            f"box-shadow:0 34px 70px rgba(0,0,0,.32);padding:52px 52px 46px;'>"
+            f"<div style='font-family:Georgia,serif;font-weight:700;font-size:120px;line-height:.4;color:{AMBER};height:66px;'>{Q}</div>"
+            f"<div style=\"font-family:Inter;font-weight:800;font-size:62px;line-height:1.12;letter-spacing:-1.3px;color:#1c2740;word-break:keep-all;\">{q['text']}</div></div>")
+    tail = f"<div style='position:absolute;left:150px;top:606px;width:56px;height:56px;background:#FBFCFE;transform:rotate(45deg);box-shadow:0 34px 70px rgba(0,0,0,.10);'></div>"
+    author = (f"<div style='position:absolute;left:60px;bottom:150px;display:flex;align-items:center;gap:14px;'>"
+              f"<div style='width:44px;height:44px;border-radius:50%;background:{AMBER};display:flex;align-items:center;justify-content:center;'>{L.svg('user',TEAL,24)}</div>"
+              f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:32px;color:#fff;letter-spacing:-.3px;\">{q['author']}</span></div>")
+    cta = (f"<div style=\"position:absolute;left:60px;bottom:64px;font-family:Inter;font-weight:700;font-size:25px;color:rgba(255,255,255,.85);\">{q['cta']}</div>")
+    return bg + dots + wm + _logo(WHT) + kicker + card + tail + author + cta
+
+
 WORLDS = {"editorial": w_editorial, "spotlight": w_spotlight, "colorblock": w_colorblock,
-          "split": w_split, "paper": w_paper}
+          "split": w_split, "paper": w_paper,
+          "arc": w_arc, "blueprint": w_blueprint, "band": w_band,
+          "minimal": w_minimal, "bubble": w_bubble}
 
 # Only q001-q005 in the bank carry a "cta"; the rest don't, so fall back on-brand.
 _DEFAULT_CTA = "Find your internship at internwise.co.uk"

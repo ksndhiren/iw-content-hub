@@ -33,6 +33,7 @@ _load_env()
 import writer, news_fetch, news_card
 import lane_quote, lane_employer, lane_education
 import nuno_ledger
+import design_ledger   # enforces the hard rule: a new design per post every week
 
 HUB   = os.path.dirname(L.BASE)
 WEEKS = os.path.join(HUB, "data", "weeks.json")
@@ -65,7 +66,8 @@ def target_week():
 
 # Visual worlds cycle every day; the QUOTE TEXT rotates weekly through the whole
 # bank (see build()) so no two consecutive weeks repeat the same 5 quotes.
-QUOTE_WORLDS = ["editorial", "spotlight", "colorblock", "split", "paper"]
+QUOTE_WORLDS = ["editorial", "spotlight", "colorblock", "split", "paper",
+                "arc", "blueprint", "band", "minimal", "bubble"]
 # Employer dropped to 3 posts/week (Mon/Wed/Fri) - it underperformed, repeated
 # weekly and strained the Nuno library. Each world stays paired with its
 # compatible angle; which 3 of the 5 pairs run rotates by week for variety. The
@@ -73,13 +75,18 @@ QUOTE_WORLDS = ["editorial", "spotlight", "colorblock", "split", "paper"]
 EMPLOYER_DAYS = {0, 2, 4}
 EMPLOYER_PAIRS = [("benefits", "e001"), ("bigstat", "e004"), ("process", "e003"),
                   ("trust", "e005"), ("statement", "e002")]
+# All employer worlds (incl. the week16 additions) + a compatible angle for CTA copy.
+# World SELECTION now goes through the design ledger (no-repeat), not this list's rotation.
+EMPLOYER_WORLDS = ["benefits", "bigstat", "process", "trust", "statement", "kpi", "cards"]
+EMPLOYER_ANGLE = {"benefits": "e001", "bigstat": "e004", "process": "e003",
+                  "trust": "e005", "statement": "e002", "kpi": "e004", "cards": "e001"}
 # education: 3 carousels + 2 singles. The FORMAT is fixed per weekday (Mon-Wed
 # carousels, Thu/Fri singles) so the weekly mix never drifts; the visual WORLD
 # rotates by week (see week_offset / build) so the same weekday never looks the
 # same two weeks running.
 EDU_FORMAT_BY_DAY = ["carousel", "carousel", "carousel", "single", "single"]
-EDU_CAROUSEL_WORLDS = ["navy", "plum", "teal"]
-EDU_SINGLE_WORLDS = ["tipcard", "statement"]
+EDU_CAROUSEL_WORLDS = ["navy", "plum", "teal", "cream", "midnight", "slate"]
+EDU_SINGLE_WORLDS = ["tipcard", "statement", "bigidea", "splitcard"]
 
 
 def week_offset(wid):
@@ -264,12 +271,18 @@ def build(days=5, dry=False):
         wn = 14
     qstart = ((wn - 14) * 5) % len(qids)
     week_quotes = [qids[(qstart + i) % len(qids)] for i in range(5)]
-    # Which employer world+angle pairs run this week (3 of 5, rotating weekly),
-    # assigned in order to the EMPLOYER_DAYS.
-    n_emp = len(EMPLOYER_DAYS)
-    estart = ((wn - 14) * n_emp) % len(EMPLOYER_PAIRS)
-    week_emp = {d: EMPLOYER_PAIRS[(estart + i) % len(EMPLOYER_PAIRS)]
-                for i, d in enumerate(sorted(EMPLOYER_DAYS))}
+
+    # DESIGN SELECTION goes through the no-repeat ledger (the hard rule: a new
+    # design per post every week). Each lane picks worlds NOT used in recent weeks;
+    # recorded after a successful build. Replaces the old week_offset rotation.
+    q_worlds = design_ledger.pick("quote", QUOTE_WORLDS, days, wid)
+    emp_days = sorted(d for d in EMPLOYER_DAYS if d < days)
+    emp_worlds = design_ledger.pick("employer", EMPLOYER_WORLDS, len(emp_days), wid)
+    week_emp = {d: (emp_worlds[i], EMPLOYER_ANGLE[emp_worlds[i]]) for i, d in enumerate(emp_days)}
+    fmts = EDU_FORMAT_BY_DAY[:days]
+    edu_car = design_ledger.pick("edu_carousel", EDU_CAROUSEL_WORLDS, fmts.count("carousel"), wid)
+    edu_sing = design_ledger.pick("edu_single", EDU_SINGLE_WORLDS, fmts.count("single"), wid)
+    car_i = sing_i = 0
     img = os.path.join(HUB, "images", wid)
     daylist = [(DKEYS[i], (mon + datetime.timedelta(days=i)).strftime("%a %d %b").replace(" 0", " ")) for i in range(5)]
     edu_topics = pick_education(days)
@@ -285,13 +298,14 @@ def build(days=5, dry=False):
         # NEWS is built day-prior by build_news_day.py so it is never stale.
 
         # QUOTE
-        world = quote_world(di, wid); qid = week_quotes[di]; q = quotes[qid]
+        world = q_worlds[di]; qid = week_quotes[di]; q = quotes[qid]
         cap = writer.write_captions("quote", f"Quote by {q['author']}", q["text"], q.get("cta"))
         pid = f"{wid}-{dkey}-quote"
         if not dry:
             lane_quote.render_quote(q, world, os.path.join(img, pid))
         posts.append(_post(pid, dlabel, "quote", f"Quote: {q['author']}", "Single", ["slide_1.png"],
                            cap["captions"], cap["hashtags"]))
+        posts[-1]["world"] = world
 
         # FUN lane retired (Week 15) - underperformed on every platform.
 
@@ -306,9 +320,15 @@ def build(days=5, dry=False):
                 lane_employer.render_employer(a, world, os.path.join(img, pid), week_id=wid)
             posts.append(_post(pid, dlabel, "employer", a["headline"], "Single", ["slide_1.png"],
                                cap["captions"], cap["hashtags"]))
+            posts[-1]["world"] = world
 
-        # EDUCATION - LLM carousel/single
-        world, fmt = education_world(di, wid)
+        # EDUCATION - LLM carousel/single. World comes from the ledger; format is
+        # fixed per weekday (Mon-Wed carousel, Thu/Fri single).
+        fmt = EDU_FORMAT_BY_DAY[di]
+        if fmt == "carousel":
+            world = edu_car[car_i]; car_i += 1
+        else:
+            world = edu_sing[sing_i]; sing_i += 1
         topic = edu_topics[di] if di < len(edu_topics) else {"title": "Career tips", "hook": "", "promise": "", "core_takeaway": "", "proof_points": []}
         tp = {"title": topic.get("title", ""), "hook": (topic.get("hook_candidates") or [""])[0],
               "promise": topic.get("promise", ""), "core_takeaway": topic.get("core_takeaway", ""),
@@ -323,6 +343,10 @@ def build(days=5, dry=False):
         posts.append(_post(pid, dlabel, "education", ec.get("headline", tp["title"]),
                            "Carousel" if fmt == "carousel" else "Single", slides,
                            ec["captions"], ec["hashtags"]))
+        # PERSIST the on-slide copy so a later re-render (e.g. a design change) never
+        # has to regenerate it - the not-stored problem that used to force drift.
+        posts[-1]["onSlide"] = {k: ec.get(k) for k in ("eyebrow", "headline", "tone", "slides", "points", "cta")}
+        posts[-1]["world"] = world
 
     if not dry and nuno_ledger.REPEATS:
         need = {}
@@ -336,6 +360,16 @@ def build(days=5, dry=False):
                   indent=2, ensure_ascii=False)
         print("\n⚠ Nuno library short - poses REPEATED (need fresh cutouts): "
               + ", ".join(f"{n}×{fam}" for fam, n in need.items()))
+
+    if not dry:
+        # Commit the design choices so next week's build avoids them (the hard rule).
+        design_ledger.record("quote", wid, q_worlds[:days])
+        if emp_worlds:
+            design_ledger.record("employer", wid, emp_worlds)
+        if edu_car:
+            design_ledger.record("edu_carousel", wid, edu_car)
+        if edu_sing:
+            design_ledger.record("edu_single", wid, edu_sing)
 
     if not dry:
         # Render each story-lane post's 1080x1920 Story companion from its cover
