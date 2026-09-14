@@ -4822,6 +4822,50 @@
             "cta": "Visit internwise.co.uk for more tips."
           },
           "world": "splitcard"
+        },
+        {
+          "id": "week16-tue-news",
+          "day": "Tue 15 Sep",
+          "lane": "news",
+          "title": "Employers Seek AI as Human Skills Dwindle",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "A new report reveals that 38% of UK employers are grappling with a shortage of human skills like communication and problem-solving. As more companies turn to AI recruitment tools that emphasise technical skills, the demand for employability skills has never been higher. For students and graduates, this means honing these abilities is crucial. Internships offer a great pathway to develop these skills in a real-world setting, making you more appealing to employers. Source: FE News.",
+          "hashtags": [
+            "#ukjobs",
+            "#employability",
+            "#internships",
+            "#humanskills",
+            "#careergrowth"
+          ],
+          "captions": {
+            "ig-fb": "A new report reveals that 38% of UK employers are grappling with a shortage of human skills like communication and problem-solving. As more companies turn to AI recruitment tools that emphasise technical skills, the demand for employability skills has never been higher. For students and graduates, this means honing these abilities is crucial. Internships offer a great pathway to develop these skills in a real-world setting, making you more appealing to employers. Source: FE News.",
+            "linkedin": "Over a third of UK employers report a lack of vital human skills such as problem-solving and effective communication, according to a new study. With AI recruitment tools focusing more on technical skills, the need for employability skills is growing. Students and graduates should focus on developing these through internships, which offer valuable experience and skill enhancement. Source: FE News.",
+            "x": "38% of UK employers struggle with shortages in human skills like communication and problem-solving, as AI tools focus on technical abilities. Internships can help you bridge this gap. (Source: FE News)",
+            "threads": "A recent report highlights that 38% of UK employers face shortages in human skills like communication and problem-solving. As AI tools grow, these skills are more crucial. Internships offer a practical way to develop these abilities and boost employability. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#ukjobs",
+              "#employability",
+              "#internships",
+              "#humanskills",
+              "#careergrowth"
+            ],
+            "linkedin": [
+              "#ukjobs",
+              "#employabilityskills",
+              "#internship"
+            ],
+            "x": [
+              "#ukjobs",
+              "#skills"
+            ]
+          }
         }
       ]
     },
