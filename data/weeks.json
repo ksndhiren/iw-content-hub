@@ -4866,6 +4866,50 @@
               "#skills"
             ]
           }
+        },
+        {
+          "id": "week16-wed-news",
+          "day": "Wed 16 Sep",
+          "lane": "news",
+          "title": "London Plan Targets Skills Gap",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "A new Local Skills Improvement Plan has been launched in London to tackle the city's skills shortages as demand for digital talent rises. With London holding the highest regional unemployment rate, this plan is crucial. It's an opportunity for students and graduates to focus on developing digital skills that align with market needs. Internships play a vital role in gaining real-world experience and practical skills. Source: FE News.",
+          "hashtags": [
+            "#skillsgap",
+            "#digitalskills",
+            "#londonjobs",
+            "#internships",
+            "#careergrowth"
+          ],
+          "captions": {
+            "ig-fb": "A new Local Skills Improvement Plan has been launched in London to tackle the city's skills shortages as demand for digital talent rises. With London holding the highest regional unemployment rate, this plan is crucial. It's an opportunity for students and graduates to focus on developing digital skills that align with market needs. Internships play a vital role in gaining real-world experience and practical skills. Source: FE News.",
+            "linkedin": "London's new Local Skills Improvement Plan has been introduced to address the city's skills gaps amid increasing demand for digital expertise. As London reports the highest regional unemployment rate, this initiative is a chance for students and graduates to hone their digital skills and meet current job market demands. Internships offer valuable practical experience and can be instrumental in acquiring these skills. Source: FE News.",
+            "x": "London's new plan aims to bridge skills gaps amid rising digital talent demand and high unemployment. Internships can boost real-world skills. (Source: FE News)",
+            "threads": "London introduces a plan to tackle skills shortages as digital talent demand rises. With the highest regional unemployment rate, it's crucial for students and grads to develop market-ready skills. Internships offer practical experience. Learn more at www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#skillsgap",
+              "#digitalskills",
+              "#londonjobs",
+              "#internships",
+              "#careergrowth"
+            ],
+            "linkedin": [
+              "#skillsdevelopment",
+              "#digitaltalent",
+              "#internships"
+            ],
+            "x": [
+              "#skillsgap",
+              "#internships"
+            ]
+          }
         }
       ]
     },
