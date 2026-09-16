@@ -4910,6 +4910,50 @@
               "#internships"
             ]
           }
+        },
+        {
+          "id": "week16-thu-news",
+          "day": "Thu 17 Sep",
+          "lane": "news",
+          "title": "Young Job Vacancies Vary Across UK",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "Young people in Rotherham are facing a challenging job market, with only 46 online job vacancies for every 1,000 young individuals. In contrast, the Cotswold district area has 288 vacancies available per 1,000 youths. This highlights a significant difference in job opportunities across the UK regions. Students and graduates in areas with fewer job vacancies might experience higher competition, making it crucial to stand out. Internships can be a game-changer, providing valuable experience and networking opportunities that can make you more appealing to employers. Source: The Guardian.",
+          "hashtags": [
+            "#ukjobs",
+            "#youthemployment",
+            "#internships",
+            "#careergrowth",
+            "#jobmarket"
+          ],
+          "captions": {
+            "ig-fb": "Young people in Rotherham are facing a challenging job market, with only 46 online job vacancies for every 1,000 young individuals. In contrast, the Cotswold district area has 288 vacancies available per 1,000 youths. This highlights a significant difference in job opportunities across the UK regions. Students and graduates in areas with fewer job vacancies might experience higher competition, making it crucial to stand out. Internships can be a game-changer, providing valuable experience and networking opportunities that can make you more appealing to employers. Source: The Guardian.",
+            "linkedin": "In the UK, job availability for young people varies significantly by location. Rotherham has just 46 vacancies per 1,000 young people, whereas the Cotswold district offers 288. This stark difference suggests that competition for jobs is tougher in areas with fewer opportunities. For students and graduates, internships can be a strategic way to gain experience and improve employability, especially in regions with limited vacancies. Source: The Guardian.",
+            "x": "Job opportunities for young people in the UK vary widely. Rotherham has 46 vacancies per 1,000 young people, while the Cotswold district offers 288. (Source: The Guardian)",
+            "threads": "In the UK, job vacancies for young people vary by region. Rotherham has 46 vacancies per 1,000 youths, while the Cotswold district boasts 288. This means competition can be stiffer in some areas. Internships can help bridge this gap by providing crucial experience. Learn more at www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#ukjobs",
+              "#youthemployment",
+              "#internships",
+              "#careergrowth",
+              "#jobmarket"
+            ],
+            "linkedin": [
+              "#ukemployment",
+              "#careeropportunities",
+              "#internships"
+            ],
+            "x": [
+              "#ukjobs",
+              "#youthemployment"
+            ]
+          }
         }
       ]
     },
