@@ -1,65 +1,65 @@
 {
-  "generatedAt": "2026-09-15T12:02:22Z",
+  "generatedAt": "2026-09-16T11:59:30Z",
   "windowRecords": 80,
   "byLane": {
     "news": {
       "posts": 10,
-      "engagement": 6,
-      "avg": 0.6
-    },
-    "employer": {
-      "posts": 3,
-      "engagement": 0,
-      "avg": 0.0
+      "engagement": 8,
+      "avg": 0.8
     },
     "quote": {
-      "posts": 3,
-      "engagement": 1,
+      "posts": 6,
+      "engagement": 2,
       "avg": 0.3
     },
     "education": {
-      "posts": 4,
-      "engagement": 3,
-      "avg": 0.8
+      "posts": 8,
+      "engagement": 4,
+      "avg": 0.5
+    },
+    "employer": {
+      "posts": 3,
+      "engagement": 2,
+      "avg": 0.7
     }
   },
   "byDay": {
     "Sat": {
-      "posts": 8,
-      "engagement": 2,
-      "avg": 0.2
+      "posts": 12,
+      "engagement": 4,
+      "avg": 0.3
     },
-    "Mon": {
-      "posts": 15,
-      "engagement": 7,
-      "avg": 0.5
-    },
-    "Sun": {
+    "Tue": {
       "posts": 5,
       "engagement": 3,
+      "avg": 0.6
+    },
+    "Mon": {
+      "posts": 22,
+      "engagement": 13,
       "avg": 0.6
     }
   },
   "byHour": {
     "12": {
-      "posts": 8,
-      "engagement": 2,
-      "avg": 0.2
-    },
-    "11": {
-      "posts": 5,
-      "engagement": 3,
-      "avg": 0.6
-    },
-    "9": {
-      "posts": 10,
+      "posts": 12,
       "engagement": 4,
-      "avg": 0.4
+      "avg": 0.3
     },
     "10": {
       "posts": 5,
       "engagement": 3,
       "avg": 0.6
+    },
+    "9": {
+      "posts": 17,
+      "engagement": 8,
+      "avg": 0.5
+    },
+    "11": {
+      "posts": 5,
+      "engagement": 5,
+      "avg": 1.0
     }
   },
   "topPosts": [
@@ -71,60 +71,60 @@
       "caption": "A new report reveals that 38% of UK employers are grappling with a shortage of human skills like communication and probl"
     },
     {
-      "lane": "quote",
-      "network": "instagram",
-      "engagement": 1,
-      "created": "2026-09-14T09:55:42Z",
-      "caption": "Theodore Roosevelt got it spot on: 'Believe you can and you're halfway there.' Confidence and determination can take you"
-    },
-    {
-      "lane": "education",
-      "network": "instagram",
-      "engagement": 1,
-      "created": "2026-09-14T09:55:54Z",
-      "caption": "Most graduates are trying to solve the wrong job-search problem. Let's fix that. Start by identifying the exact issue - "
-    },
-    {
-      "lane": "education",
-      "network": "facebook",
-      "engagement": 1,
-      "created": "2026-09-14T09:56:00Z",
-      "caption": "Most graduates are trying to solve the wrong job-search problem. Let's fix that. Start by identifying the exact issue - "
-    },
-    {
-      "lane": "education",
+      "lane": "news",
       "network": "linkedin",
       "engagement": 1,
-      "created": "2026-09-14T09:55:57Z",
-      "caption": "Many graduates face the struggle of fixing the wrong job-search problem. Break it down: identify if the issue lies in yo"
+      "created": "2026-09-15T10:41:36Z",
+      "caption": "London's new Local Skills Improvement Plan has been introduced to address the city's skills gaps amid increasing demand "
     },
     {
-      "lane": null,
-      "network": "linkedin",
-      "engagement": 1,
-      "created": "2026-09-12T12:05:55Z",
-      "caption": "Startup Internships for Students: What to Expect and How to Choose\n\nLearn what startup internships for students involve,"
-    },
-    {
-      "lane": null,
+      "lane": "news",
       "network": "facebook",
       "engagement": 1,
-      "created": "2026-09-12T12:05:55Z",
-      "caption": "Startup Internships for Students: What to Expect and How to Choose\n\nLearn what startup internships for students involve,"
+      "created": "2026-09-15T10:41:35Z",
+      "caption": "A new Local Skills Improvement Plan has been launched in London to tackle the city's skills shortages as demand for digi"
     },
     {
       "lane": "news",
       "network": "instagram",
       "engagement": 1,
-      "created": "2026-09-13T10:48:26Z",
-      "caption": "Bristol's inaugural Youth Guarantee Jobs Fair attracted over 900 young individuals eager to explore career opportunities"
+      "created": "2026-09-15T10:41:32Z",
+      "caption": "A new Local Skills Improvement Plan has been launched in London to tackle the city's skills shortages as demand for digi"
+    },
+    {
+      "lane": "quote",
+      "network": "instagram",
+      "engagement": 1,
+      "created": "2026-09-14T09:56:07Z",
+      "caption": "Ever felt overshadowed by someone who's naturally gifted? Remember, it's the effort you put in that truly counts. Talent"
+    },
+    {
+      "lane": "education",
+      "network": "instagram",
+      "engagement": 1,
+      "created": "2026-09-14T09:56:13Z",
+      "caption": "Not all internships are created equal. Some might not help you grow. Before you say yes, check if the internship gives r"
+    },
+    {
+      "lane": null,
+      "network": "linkedin",
+      "engagement": 1,
+      "created": "2026-09-12T12:06:01Z",
+      "caption": "Startup Placement Opportunities: A Practical Guide for UK Startups\n\nLearn what startup placement opportunities are, how "
+    },
+    {
+      "lane": null,
+      "network": "facebook",
+      "engagement": 1,
+      "created": "2026-09-12T12:06:01Z",
+      "caption": "Startup Placement Opportunities: A Practical Guide for UK Startups\n\nLearn what startup placement opportunities are, how "
     }
   ],
   "insights": [
-    "Your strongest topic is Education (0.8 avg engagement/post). Make more of it.",
-    "Sun is your best posting day (0.6 avg engagement/post).",
-    "Posts around 11:00 UTC perform best (0.6 avg engagement/post).",
-    "Employer is underperforming (0.0 avg) - rework the angle or post it at a stronger time."
+    "Your strongest topic is News (0.8 avg engagement/post). Make more of it.",
+    "Tue is your best posting day (0.6 avg engagement/post).",
+    "Posts around 11:00 UTC perform best (1.0 avg engagement/post).",
+    "Quote is underperforming (0.3 avg) - rework the angle or post it at a stronger time."
   ],
   "laneLabels": {
     "education": "Education",
