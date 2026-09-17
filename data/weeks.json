@@ -4954,6 +4954,50 @@
               "#youthemployment"
             ]
           }
+        },
+        {
+          "id": "week16-fri-news",
+          "day": "Fri 18 Sep",
+          "lane": "news",
+          "title": "Networking Leads to Job Success",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "A recent job seeker found success by sending 200 messages on a professional networking platform. This proactive approach highlights the effectiveness of networking in the job search process. For students and graduates, it's a reminder that building connections can be crucial in landing a job. Internships play a vital role, offering a chance to expand your network and gain practical experience. Source: BBC Business.",
+          "hashtags": [
+            "#networking",
+            "#careersuccess",
+            "#internships",
+            "#jobsearch",
+            "#studentlife"
+          ],
+          "captions": {
+            "ig-fb": "A recent job seeker found success by sending 200 messages on a professional networking platform. This proactive approach highlights the effectiveness of networking in the job search process. For students and graduates, it's a reminder that building connections can be crucial in landing a job. Internships play a vital role, offering a chance to expand your network and gain practical experience. Source: BBC Business.",
+            "linkedin": "A job seeker recently demonstrated the power of networking by sending out 200 messages on a professional platform, ultimately landing a job. This case illustrates the importance of proactive engagement in job searching. For students and graduates, creating connections can significantly impact your career prospects. Internships are a key opportunity to build your network and gain real-world experience. Source: BBC Business.",
+            "x": "A job seeker sent 200 messages on a professional networking site and landed a job. Networking pays off for students and grads. (Source: BBC Business)",
+            "threads": "A proactive job seeker secured a position by sending 200 messages on a networking platform, showcasing the power of connections. For students and recent grads, internships offer similar networking opportunities and valuable experience. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#networking",
+              "#careersuccess",
+              "#internships",
+              "#jobsearch",
+              "#studentlife"
+            ],
+            "linkedin": [
+              "#networking",
+              "#careeradvice",
+              "#internships"
+            ],
+            "x": [
+              "#networking",
+              "#internships"
+            ]
+          }
         }
       ]
     },

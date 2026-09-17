@@ -1588,5 +1588,35 @@
     "at": "2026-09-16T10:31:15.924752",
     "network": "gmb",
     "scheduleDate": "2026-09-17T07:00:00Z"
+  },
+  "week16-fri-news:instagram": {
+    "id": "dYrWSLRnYMlUaQo5N6MK",
+    "at": "2026-09-17T10:39:28.109694",
+    "network": "instagram",
+    "scheduleDate": "2026-09-18T07:00:00Z"
+  },
+  "week16-fri-news:facebook": {
+    "id": "wrnzj4qK3ggkZJGX4AW5",
+    "at": "2026-09-17T10:39:29.759336",
+    "network": "facebook",
+    "scheduleDate": "2026-09-18T07:00:00Z"
+  },
+  "week16-fri-news:linkedin": {
+    "id": "31vIFEyV5cxhsDgJtAbq",
+    "at": "2026-09-17T10:39:31.088238",
+    "network": "linkedin",
+    "scheduleDate": "2026-09-18T07:00:00Z"
+  },
+  "week16-fri-news:threads": {
+    "id": "YU5w4Addjfb6TSXExdHs",
+    "at": "2026-09-17T10:39:34.387367",
+    "network": "threads",
+    "scheduleDate": "2026-09-18T07:00:00Z"
+  },
+  "week16-fri-news:gmb": {
+    "id": "eXPQHf4Jy6gZDy3LafQx",
+    "at": "2026-09-17T10:39:36.283103",
+    "network": "gmb",
+    "scheduleDate": "2026-09-18T07:00:00Z"
   }
 }
