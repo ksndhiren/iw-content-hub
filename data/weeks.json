@@ -5669,6 +5669,58 @@
           "world": "splitcard"
         }
       ]
+    },
+    {
+      "id": "week17",
+      "label": "Week 17",
+      "weekCommencing": "2026-09-21",
+      "builtAt": 1789899463,
+      "posts": [
+        {
+          "id": "week17-mon-news",
+          "day": "Mon 21 Sep",
+          "lane": "news",
+          "title": "Skills Compact Backs Upskilling in Finance",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "A major UK initiative, the Skills Compact, is set to tackle skills gaps in financial services by joining forces with the government and industry leaders. As job vacancies fall and unemployment rises, this move aims to enhance employability for students and graduates entering the sector. By focusing on upskilling, it provides new pathways for those stepping into the workforce. Internships remain a key component, offering practical experience to complement formal education. Source: FE News.",
+          "hashtags": [
+            "#financejobs",
+            "#upskilling",
+            "#internships",
+            "#ukcareers",
+            "#graduateopportunities"
+          ],
+          "captions": {
+            "ig-fb": "A major UK initiative, the Skills Compact, is set to tackle skills gaps in financial services by joining forces with the government and industry leaders. As job vacancies fall and unemployment rises, this move aims to enhance employability for students and graduates entering the sector. By focusing on upskilling, it provides new pathways for those stepping into the workforce. Internships remain a key component, offering practical experience to complement formal education. Source: FE News.",
+            "linkedin": "The Skills Compact, a collaborative effort involving the government and financial services leaders, aims to address skills shortages in the industry. With rising unemployment and fewer job vacancies, this initiative supports students and graduates by bolstering their employability in the job market. Internships are integral to this strategy, offering vital, real-world experience and skills development. Source: FE News.",
+            "x": "The Skills Compact aims to close skills gaps in finance, supported by industry leaders and the government, to improve employability as job vacancies decrease. (Source: FE News)",
+            "threads": "The Skills Compact, supported by industry and government, aims to reduce skills gaps in financial services, boosting employability amid rising unemployment. Internships are key, providing essential experience. More at www.internwise.co.uk (Source: FE News)"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#financejobs",
+              "#upskilling",
+              "#internships",
+              "#ukcareers",
+              "#graduateopportunities"
+            ],
+            "linkedin": [
+              "#financialservices",
+              "#skillsdevelopment",
+              "#ukjobs"
+            ],
+            "x": [
+              "#skillscompact",
+              "#employability"
+            ]
+          }
+        }
+      ]
     }
   ]
 }
