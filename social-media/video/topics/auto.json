@@ -1,10 +1,10 @@
 {
-  "week_id": "auto-2026-09-14",
-  "generated_at": "2026-09-14T10:24:55.320613+00:00",
+  "week_id": "auto-2026-09-21",
+  "generated_at": "2026-09-21T10:29:41.512820+00:00",
   "default_duration_seconds": 52,
   "source_summary": {
     "reddit_rss_signals": 50,
-    "google_trends_signals": 13,
+    "google_trends_signals": 25,
     "youtube_signals": 40,
     "seed_question_signals": 5,
     "warnings": [
@@ -14,8 +14,8 @@
         "detail": "HTTP Error 429: Too Many Requests"
       },
       {
-        "source": "reddit-resumes-internship",
-        "title": "Reddit RSS unavailable: Resumes - internship",
+        "source": "reddit-jobs-graduate-rejection",
+        "title": "Reddit RSS unavailable: Jobs - graduate rejection",
         "detail": "HTTP Error 429: Too Many Requests"
       }
     ]
@@ -26,7 +26,7 @@
       "title": "The CV Line Recruiters Skip",
       "source_post": "automated-topic-engine",
       "source_cluster": "cv",
-      "signal_score": 96.4,
+      "signal_score": 97.9,
       "pain": 5,
       "specificity": 5,
       "curiosity": 5,
@@ -49,11 +49,11 @@
       "source_signals": [
         {
           "source": "reddit_rss",
-          "title": "new grad, what am I doing wrong?",
-          "url": "https://www.reddit.com/r/jobs/comments/1vn5d3z/new_grad_what_am_i_doing_wrong/",
-          "score": 109.0,
+          "title": "[3 YoE, Marketing Analyst, Marketing Analyst/Associate, United States remote job]",
+          "url": "https://www.reddit.com/r/resumes/comments/1wj5sai/3_yoe_marketing_analyst_marketing/",
+          "score": 98.9,
           "meta": {
-            "feed": "Jobs - graduate rejection"
+            "feed": "Resumes - internship"
           }
         },
         {
@@ -67,38 +67,38 @@
         },
         {
           "source": "reddit_rss",
-          "title": "Do some folks need to dumb down a resume for jobs that are more basic?",
-          "url": "https://www.reddit.com/r/jobs/comments/1vkqbnq/do_some_folks_need_to_dumb_down_a_resume_for_jobs/",
-          "score": 70.0,
+          "title": "[0 YoE, Unemployed, Electrical Engineering Internship, Canada]",
+          "url": "https://www.reddit.com/r/resumes/comments/1wlxvsl/0_yoe_unemployed_electrical_engineering/",
+          "score": 73.6,
           "meta": {
-            "feed": "Jobs - graduate rejection"
+            "feed": "Resumes - internship"
           }
         },
         {
           "source": "reddit_rss",
-          "title": "Looking for some cv advice pls !",
-          "url": "https://www.reddit.com/r/jobs/comments/1w8y0tp/looking_for_some_cv_advice_pls/",
-          "score": 69.0,
+          "title": "[0 YoE, Student/Unemployed, Marketing Assistant, USA]",
+          "url": "https://www.reddit.com/r/resumes/comments/1wgih8r/0_yoe_studentunemployed_marketing_assistant_usa/",
+          "score": 72.45,
           "meta": {
-            "feed": "Jobs - graduate rejection"
+            "feed": "Resumes - internship"
           }
         },
         {
           "source": "reddit_rss",
-          "title": "Advice for recent college grads?",
-          "url": "https://www.reddit.com/r/jobs/comments/1vocg5b/advice_for_recent_college_grads/",
-          "score": 64.0,
+          "title": "[0 YoE, 5th Semester CSE Student, Cloud/DevOps Intern, India]",
+          "url": "https://www.reddit.com/r/resumes/comments/1wjj5g9/0_yoe_5th_semester_cse_student_clouddevops_intern/",
+          "score": 70.15,
           "meta": {
-            "feed": "Jobs - graduate rejection"
+            "feed": "Resumes - internship"
           }
         },
         {
-          "source": "seed_question",
-          "title": "why is my internship CV rejected",
-          "url": "",
-          "score": 64.0,
+          "source": "reddit_rss",
+          "title": "[0 YoE, Tier 1 Helpdesk, Jr Software Engineer, United States]",
+          "url": "https://www.reddit.com/r/resumes/comments/1wgkiyh/0_yoe_tier_1_helpdesk_jr_software_engineer_united/",
+          "score": 65.55,
           "meta": {
-            "configured": true
+            "feed": "Resumes - internship"
           }
         }
       ]
@@ -108,13 +108,13 @@
       "title": "The Interview Answer That Sounds Too Generic",
       "source_post": "automated-topic-engine",
       "source_cluster": "interview",
-      "signal_score": 91.0,
-      "pain": 5,
-      "specificity": 5,
+      "signal_score": 74.6,
+      "pain": 4,
+      "specificity": 4,
       "curiosity": 5,
       "utility": 5,
-      "timeliness": 5,
-      "discussion": 5,
+      "timeliness": 4,
+      "discussion": 4,
       "brand_fit": 5,
       "hook_candidates": [
         "This is why your interview answer sounds generic.",
@@ -140,49 +140,51 @@
         },
         {
           "source": "reddit_rss",
-          "title": "Laid off from my first job as a fresher, 700+ applications and 1 interview later. Trying to stay positive.",
-          "url": "https://www.reddit.com/r/jobs/comments/1vn63gv/laid_off_from_my_first_job_as_a_fresher_700/",
-          "score": 81.0,
-          "meta": {
-            "feed": "Jobs - graduate rejection"
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "Should I stay in this ETL support role or switch to WordPress developer? Does it have good long-term earning potential?",
-          "url": "https://www.reddit.com/r/jobs/comments/1w5639g/should_i_stay_in_this_etl_support_role_or_switch/",
-          "score": 76.0,
-          "meta": {
-            "feed": "Jobs - graduate rejection"
-          }
-        },
-        {
-          "source": "youtube",
-          "title": "Grad pro tip: When answering interview questions, keep your answers cocky and super f**king weird",
-          "url": "https://www.youtube.com/watch?v=s1gli2doLc8",
-          "score": 58.0,
-          "meta": {
-            "query": "graduate job interview tips shorts",
-            "views": 1548919,
-            "views_per_day": 13954.2
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "Reapplying to the same place with in three weeks.",
-          "url": "https://www.reddit.com/r/jobs/comments/1vgipum/reapplying_to_the_same_place_with_in_three_weeks/",
-          "score": 54.0,
-          "meta": {
-            "feed": "Jobs - graduate rejection"
-          }
-        },
-        {
-          "source": "reddit_rss",
           "title": "Graduated July 2025 and got unlucky - Am I cooked? Need advice on next Steps!",
           "url": "https://www.reddit.com/r/UKJobs/comments/1vvdyeq/graduated_july_2025_and_got_unlucky_am_i_cooked/",
           "score": 53.9,
           "meta": {
             "feed": "UK jobs - internship CV"
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "Quitting low-skilled full-time job - bad look on corporate interviews?",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1k22kh0/quitting_lowskilled_fulltime_job_bad_look_on/",
+          "score": 48.4,
+          "meta": {
+            "feed": "UK jobs - internship CV"
+          }
+        },
+        {
+          "source": "seed_question",
+          "title": "why do I keep failing interviews",
+          "url": "",
+          "score": 44.0,
+          "meta": {
+            "configured": true
+          }
+        },
+        {
+          "source": "youtube",
+          "title": "\ud83d\udd25 Top 10 Government Jobs in 2026 Without Interview | 10th, 12th & Graduate Jobs | Govt Jobs Update",
+          "url": "https://www.youtube.com/watch?v=59D5ZvEa8lg",
+          "score": 43.64,
+          "meta": {
+            "query": "graduate job interview tips shorts",
+            "views": 432896,
+            "views_per_day": 5411.2
+          }
+        },
+        {
+          "source": "youtube",
+          "title": "Use LinkedIn to get Internship!!\ud83d\ude80 #shorts #linkedin #interview",
+          "url": "https://www.youtube.com/watch?v=AFv5WT3xjoI",
+          "score": 43.04,
+          "meta": {
+            "query": "internship cv advice shorts",
+            "views": 1716,
+            "views_per_day": 10.4
           }
         }
       ]
@@ -192,7 +194,7 @@
       "title": "When An Internship Should Be Paid",
       "source_post": "automated-topic-engine",
       "source_cluster": "internship-rights",
-      "signal_score": 76.6,
+      "signal_score": 71.7,
       "pain": 4,
       "specificity": 4,
       "curiosity": 5,
@@ -213,15 +215,6 @@
       "core_takeaway": "If the role has real worker duties, fixed hours, and business value, ask whether pay is legally required.",
       "cta": "Save this before accepting an unpaid internship.",
       "source_signals": [
-        {
-          "source": "reddit_rss",
-          "title": "2021 ECE graduate (25F) with a career gap. What would you do in my situation?",
-          "url": "https://www.reddit.com/r/jobs/comments/1vh8bae/2021_ece_graduate_25f_with_a_career_gap_what/",
-          "score": 64.0,
-          "meta": {
-            "feed": "Jobs - graduate rejection"
-          }
-        },
         {
           "source": "reddit_rss",
           "title": "Unpaid internship: Should I do it then claim NMW at the end?",
@@ -248,24 +241,15 @@
           "meta": {
             "feed": "UK jobs - internship CV"
           }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "College graduate struggling",
-          "url": "https://www.reddit.com/r/jobs/comments/1vvzeir/college_graduate_struggling/",
-          "score": 56.0,
-          "meta": {
-            "feed": "Jobs - graduate rejection"
-          }
         }
       ]
     },
     {
-      "id": "auto-is-this-internship-worth-taking",
-      "title": "Is This Internship Worth Taking?",
+      "id": "auto-1-yoe-technology-analyst-software-engineer-usa",
+      "title": "[1 YoE, Technology Analyst, Software Engineer, USA]",
       "source_post": "automated-topic-engine",
-      "source_cluster": "internship-quality",
-      "signal_score": 70.3,
+      "source_cluster": "graduate-jobs",
+      "signal_score": 69.1,
       "pain": 4,
       "specificity": 4,
       "curiosity": 5,
@@ -274,34 +258,73 @@
       "discussion": 4,
       "brand_fit": 5,
       "hook_candidates": [
-        "Not every internship is worth accepting.",
-        "If you are stuck on internship quality, watch this before your next application."
+        "Most students are trying to fix the wrong job-search problem.",
+        "If you are stuck on graduate jobs, watch this before your next application."
       ],
-      "promise": "Before you accept an internship, check whether it will actually move you forward.",
+      "promise": "Let me turn this common job-search problem into a practical next step.",
       "proof_points": [
-        "The title matters less than the evidence you can build.",
-        "Good internships include feedback, ownership, and useful exposure.",
-        "If the role is vague, ask what you will actually do each week."
+        "Name the exact problem before choosing the fix.",
+        "Make one visible improvement instead of rewriting everything.",
+        "Track the result so you know whether the advice worked."
       ],
-      "core_takeaway": "A useful internship gives real tasks, feedback, a named manager, and evidence you can show later.",
-      "cta": "Save this before saying yes to an internship.",
+      "core_takeaway": "Make the next action specific enough that you can do it today.",
+      "cta": "Save this for your next application session.",
       "source_signals": [
         {
           "source": "reddit_rss",
-          "title": "Is this internship at the European Food Safety Authority a good way into procurement?",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1uwjau7/is_this_internship_at_the_european_food_safety/",
-          "score": 67.1,
+          "title": "[1 YoE, Technology Analyst, Software Engineer, USA]",
+          "url": "https://www.reddit.com/r/resumes/comments/1wjl4v0/1_yoe_technology_analyst_software_engineer_usa/",
+          "score": 62.1,
+          "meta": {
+            "feed": "Resumes - internship"
+          }
+        },
+        {
+          "source": "google_trends_serpapi",
+          "title": "graduate jobs 2026",
+          "url": "",
+          "score": 49.0,
+          "meta": {
+            "seed": "graduate jobs",
+            "rising_value": 1100.0
+          }
+        },
+        {
+          "source": "google_trends_serpapi",
+          "title": "graduate schemes 2027",
+          "url": "",
+          "score": 49.0,
+          "meta": {
+            "seed": "graduate jobs",
+            "rising_value": 950.0
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "Graduation into cyber, I feel a bit late",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1n0zrh0/graduation_into_cyber_i_feel_a_bit_late/",
+          "score": 47.3,
           "meta": {
             "feed": "UK jobs - internship CV"
           }
         },
         {
           "source": "reddit_rss",
-          "title": "Quitting my job due to severe burnout and emotional distress.",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1t4f13n/quitting_my_job_due_to_severe_burnout_and/",
-          "score": 61.6,
+          "title": "[ 2 YOE, Operations & Hospitality, Business Analyst/Project Coordinator, Washington, DC ]",
+          "url": "https://www.reddit.com/r/resumes/comments/1wkyzqg/2_yoe_operations_hospitality_business/",
+          "score": 47.15,
           "meta": {
-            "feed": "UK jobs - internship CV"
+            "feed": "Resumes - internship"
+          }
+        },
+        {
+          "source": "google_trends_serpapi",
+          "title": "graduate schemes 2026",
+          "url": "",
+          "score": 44.0,
+          "meta": {
+            "seed": "graduate jobs",
+            "rising_value": 350.0
           }
         }
       ]
@@ -311,7 +334,7 @@
       "title": "No Experience Is Not The Real Problem",
       "source_post": "automated-topic-engine",
       "source_cluster": "experience",
-      "signal_score": 67.0,
+      "signal_score": 66.1,
       "pain": 4,
       "specificity": 4,
       "curiosity": 5,
@@ -370,30 +393,30 @@
         },
         {
           "source": "reddit_rss",
-          "title": "Trying to get my Career started in Cybersecurity, but it feels impossible",
-          "url": "https://www.reddit.com/r/jobs/comments/1vzk92f/trying_to_get_my_career_started_in_cybersecurity/",
-          "score": 41.0,
-          "meta": {
-            "feed": "Jobs - graduate rejection"
-          }
-        },
-        {
-          "source": "reddit_rss",
           "title": "Looking for a industry shift",
           "url": "https://www.reddit.com/r/UKJobs/comments/1krzkqh/looking_for_a_industry_shift/",
           "score": 35.2,
           "meta": {
             "feed": "UK jobs - internship CV"
           }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "[0 YoE, Unemployed, Undergraduate 3rd Year, Urban Planning (or something environment related), Canada]",
+          "url": "https://www.reddit.com/r/resumes/comments/1wjzatw/0_yoe_unemployed_undergraduate_3rd_year_urban/",
+          "score": 31.05,
+          "meta": {
+            "feed": "Resumes - internship"
+          }
         }
       ]
     },
     {
-      "id": "auto-graduate-schemes-2027",
-      "title": "graduate schemes 2027",
+      "id": "auto-your-cover-letter-is-too-polite",
+      "title": "Your Cover Letter Is Too Polite",
       "source_post": "automated-topic-engine",
-      "source_cluster": "graduate-jobs",
-      "signal_score": 53.9,
+      "source_cluster": "cover-letter",
+      "signal_score": 59.7,
       "pain": 3,
       "specificity": 3,
       "curiosity": 4,
@@ -402,113 +425,103 @@
       "discussion": 3,
       "brand_fit": 5,
       "hook_candidates": [
-        "Most students are trying to fix the wrong job-search problem.",
-        "If you are stuck on graduate jobs, watch this before your next application."
+        "Your cover letter should not start with politeness.",
+        "If you are stuck on cover letter, watch this before your next application."
       ],
-      "promise": "Let me turn this common job-search problem into a practical next step.",
+      "promise": "Most students waste the first paragraph. Use it to prove fit.",
       "proof_points": [
-        "Name the exact problem before choosing the fix.",
-        "Make one visible improvement instead of rewriting everything.",
-        "Track the result so you know whether the advice worked."
+        "The opening line should connect to the role, not repeat your enthusiasm.",
+        "One specific company or role detail beats five generic compliments.",
+        "The letter should make the CV easier to believe."
       ],
-      "core_takeaway": "Make the next action specific enough that you can do it today.",
-      "cta": "Save this for your next application session.",
+      "core_takeaway": "Lead with the role problem, then connect one specific proof point.",
+      "cta": "Save this before writing your next cover letter.",
       "source_signals": [
         {
           "source": "google_trends_serpapi",
-          "title": "graduate schemes 2027",
+          "title": "accounting internship cover letter",
           "url": "",
-          "score": 49.0,
+          "score": 66.0,
           "meta": {
-            "seed": "graduate jobs",
+            "seed": "cover letter internship",
             "rising_value": 5000.0
           }
         },
         {
           "source": "google_trends_serpapi",
-          "title": "graduate jobs 2026",
+          "title": "whats a cover letter",
           "url": "",
-          "score": 49.0,
+          "score": 53.0,
           "meta": {
-            "seed": "graduate jobs",
-            "rising_value": 1150.0
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "Graduation into cyber, I feel a bit late",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1n0zrh0/graduation_into_cyber_i_feel_a_bit_late/",
-          "score": 47.3,
-          "meta": {
-            "feed": "UK jobs - internship CV"
+            "seed": "cover letter internship",
+            "rising_value": 5000.0
           }
         },
         {
           "source": "google_trends_serpapi",
-          "title": "graduate schemes 2026",
+          "title": "internship cover letter examples",
           "url": "",
-          "score": 44.0,
+          "score": 33.0,
           "meta": {
-            "seed": "graduate jobs",
-            "rising_value": 350.0
-          }
-        },
-        {
-          "source": "google_trends_serpapi",
-          "title": "history graduate jobs",
-          "url": "",
-          "score": 17.0,
-          "meta": {
-            "seed": "graduate jobs",
-            "rising_value": 80.0
-          }
-        },
-        {
-          "source": "youtube",
-          "title": "Wipro Hiring Freshers \ud83d\udd25 Graduate Can Apply | Latest Job Update #shorts",
-          "url": "https://www.youtube.com/watch?v=iKMPqkt0ASU",
-          "score": 9.05,
-          "meta": {
-            "query": "graduate job interview tips shorts",
-            "views": 1236,
-            "views_per_day": 11.9
+            "seed": "cover letter internship",
+            "rising_value": 70.0
           }
         }
       ]
     },
     {
-      "id": "auto-why-rejections-keep-repeating",
-      "title": "Why Rejections Keep Repeating",
+      "id": "auto-is-this-internship-worth-taking",
+      "title": "Is This Internship Worth Taking?",
       "source_post": "automated-topic-engine",
-      "source_cluster": "rejection",
-      "signal_score": 32.0,
+      "source_cluster": "internship-quality",
+      "signal_score": 56.4,
       "pain": 3,
       "specificity": 3,
-      "curiosity": 3,
+      "curiosity": 4,
       "utility": 4,
       "timeliness": 3,
       "discussion": 3,
       "brand_fit": 5,
       "hook_candidates": [
-        "A rejection does not always mean your application was bad.",
-        "If you are stuck on rejection, watch this before your next application."
+        "Not every internship is worth accepting.",
+        "If you are stuck on internship quality, watch this before your next application."
       ],
-      "promise": "If every rejection feels random, track this one pattern.",
+      "promise": "Before you accept an internship, check whether it will actually move you forward.",
       "proof_points": [
-        "CV rejection, interview rejection, and timing rejection need different fixes.",
-        "Changing everything after every no makes your process noisier.",
-        "Track where you drop off before deciding what to rewrite."
+        "The title matters less than the evidence you can build.",
+        "Good internships include feedback, ownership, and useful exposure.",
+        "If the role is vague, ask what you will actually do each week."
       ],
-      "core_takeaway": "Separate CV problems, interview problems, and timing problems before changing everything.",
-      "cta": "Save this before you apply again.",
+      "core_takeaway": "A useful internship gives real tasks, feedback, a named manager, and evidence you can show later.",
+      "cta": "Save this before saying yes to an internship.",
       "source_signals": [
         {
           "source": "reddit_rss",
-          "title": "What can I do better to get a job in this job market?",
-          "url": "https://www.reddit.com/r/jobs/comments/1vqq2tj/what_can_i_do_better_to_get_a_job_in_this_job/",
-          "score": 29.0,
+          "title": "Is this internship at the European Food Safety Authority a good way into procurement?",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1uwjau7/is_this_internship_at_the_european_food_safety/",
+          "score": 67.1,
           "meta": {
-            "feed": "Jobs - graduate rejection"
+            "feed": "UK jobs - internship CV"
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "Quitting my job due to severe burnout and emotional distress.",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1t4f13n/quitting_my_job_due_to_severe_burnout_and/",
+          "score": 61.6,
+          "meta": {
+            "feed": "UK jobs - internship CV"
+          }
+        },
+        {
+          "source": "youtube",
+          "title": "10/10 things I did to land my first luxury internship at LVMH Paris",
+          "url": "https://www.youtube.com/watch?v=gaYZB9gR7nY",
+          "score": 13.53,
+          "meta": {
+            "query": "internship cv advice shorts",
+            "views": 1318,
+            "views_per_day": 131.8
           }
         }
       ]
@@ -518,7 +531,7 @@
       "title": "Your LinkedIn Profile Is Too Empty To Trust",
       "source_post": "automated-topic-engine",
       "source_cluster": "linkedin",
-      "signal_score": 28.6,
+      "signal_score": 29.0,
       "pain": 3,
       "specificity": 3,
       "curiosity": 3,
@@ -540,83 +553,34 @@
       "cta": "Save this and fix your headline first.",
       "source_signals": [
         {
-          "source": "youtube",
-          "title": "\ud83d\udcbc MBA Profile Building Strategy 2026 | Internship, LinkedIn & Networking Tips #mba #shorts",
-          "url": "https://www.youtube.com/watch?v=mbtinpvgz38",
-          "score": 26.02,
+          "source": "google_trends_serpapi",
+          "title": "linkedin",
+          "url": "",
+          "score": 24.0,
           "meta": {
-            "query": "internship cv advice shorts",
-            "views": 416,
-            "views_per_day": 6.2
+            "seed": "no experience cv",
+            "rising_value": 110.0
           }
         },
         {
           "source": "google_trends_serpapi",
           "title": "linkedin",
           "url": "",
-          "score": 17.0,
+          "score": 20.0,
           "meta": {
             "seed": "cover letter internship",
-            "rising_value": 40.0
+            "rising_value": 70.0
           }
         },
         {
           "source": "youtube",
           "title": "I literally used Claude (and Apify and LinkedIn) to apply to unlimited jobs",
           "url": "https://www.youtube.com/watch?v=AOgvN2ePeRM",
-          "score": 15.73,
+          "score": 15.87,
           "meta": {
             "query": "linkedin profile job search",
-            "views": 68134,
-            "views_per_day": 681.3
-          }
-        }
-      ]
-    },
-    {
-      "id": "auto-assessment-centres-are-not-looking-for-the-loudest-person",
-      "title": "Assessment Centres Are Not Looking For The Loudest Person",
-      "source_post": "automated-topic-engine",
-      "source_cluster": "assessment-centre",
-      "signal_score": 28.5,
-      "pain": 3,
-      "specificity": 3,
-      "curiosity": 3,
-      "utility": 4,
-      "timeliness": 3,
-      "discussion": 3,
-      "brand_fit": 5,
-      "hook_candidates": [
-        "The loudest person rarely wins the assessment centre.",
-        "If you are stuck on assessment centre, watch this before your next application."
-      ],
-      "promise": "Here is what assessors actually notice in group tasks.",
-      "proof_points": [
-        "Assessors look for useful behaviour under pressure.",
-        "Include quiet people and summarise decisions to show leadership.",
-        "Do not dominate the room just to look confident."
-      ],
-      "core_takeaway": "Make the group better: clarify, include, summarise, and move decisions forward.",
-      "cta": "Save this before your next assessment centre.",
-      "source_signals": [
-        {
-          "source": "google_trends_serpapi",
-          "title": "hsbc assessment centre",
-          "url": "",
-          "score": 27.0,
-          "meta": {
-            "seed": "assessment centre",
-            "rising_value": 140.0
-          }
-        },
-        {
-          "source": "google_trends_serpapi",
-          "title": "online assessment centre",
-          "url": "",
-          "score": 18.0,
-          "meta": {
-            "seed": "assessment centre",
-            "rising_value": 50.0
+            "views": 76877,
+            "views_per_day": 718.5
           }
         }
       ]
@@ -651,15 +615,26 @@
           "source": "youtube",
           "title": "One guy automated his entire job search with Claude Code #ai #automation",
           "url": "https://www.youtube.com/watch?v=2vKU3J29FJw",
-          "score": 16.29,
+          "score": 15.97,
           "meta": {
             "query": "linkedin profile job search",
-            "views": 257088,
-            "views_per_day": 1823.3
+            "views": 257709,
+            "views_per_day": 1741.3
+          }
+        },
+        {
+          "source": "youtube",
+          "title": "Easy Job Search in Claude | Claude Latest Updates | Claude Connectors",
+          "url": "https://www.youtube.com/watch?v=4bjkJBBmzJ8",
+          "score": 10.58,
+          "meta": {
+            "query": "linkedin profile job search",
+            "views": 71704,
+            "views_per_day": 394.0
           }
         }
       ]
     }
   ],
-  "fingerprint": "866cbe3cd05ce576"
+  "fingerprint": "93556ee19c30d89d"
 }
