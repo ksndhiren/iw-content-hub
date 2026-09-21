@@ -5719,6 +5719,50 @@
               "#employability"
             ]
           }
+        },
+        {
+          "id": "week17-tue-news",
+          "day": "Tue 22 Sep",
+          "lane": "news",
+          "title": "UK Needs More Construction Workers",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "The UK is set to see a surge in demand for construction workers, with hundreds of thousands needed for housing, infrastructure, and clean energy projects. This spike in demand signifies a promising opportunity for students and graduates to step into a thriving field. Those with the right skills in construction and sustainable energy will be in high demand. Internships in these areas provide essential hands-on experience, helping you stand out in a competitive job market. Source: FE News.",
+          "hashtags": [
+            "#ukjobs",
+            "#constructioncareers",
+            "#graduateopportunities",
+            "#internships",
+            "#skillsdevelopment"
+          ],
+          "captions": {
+            "ig-fb": "The UK is set to see a surge in demand for construction workers, with hundreds of thousands needed for housing, infrastructure, and clean energy projects. This spike in demand signifies a promising opportunity for students and graduates to step into a thriving field. Those with the right skills in construction and sustainable energy will be in high demand. Internships in these areas provide essential hands-on experience, helping you stand out in a competitive job market. Source: FE News.",
+            "linkedin": "In the coming years, the UK will need hundreds of thousands of new construction workers to meet growing demands in housing, infrastructure, and clean energy. This creates a wealth of opportunities for students and graduates to enter a sector on the rise. With the right skills, you could find yourself at the forefront of these vital projects. Internships offer practical experience and industry insights that can set you apart. Source: FE News.",
+            "x": "The UK needs thousands more construction workers for housing and clean energy projects. A great chance for students and grads to enter a growing field. Internships provide the hands-on experience you need. (Source: FE News)",
+            "threads": "The UK needs more construction workers as demand for housing and clean energy projects rises. This opens doors for students and grads to enter a booming field. Internships in construction can give you the experience and skills to succeed. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#ukjobs",
+              "#constructioncareers",
+              "#graduateopportunities",
+              "#internships",
+              "#skillsdevelopment"
+            ],
+            "linkedin": [
+              "#ukjobs",
+              "#construction",
+              "#graduatecareers"
+            ],
+            "x": [
+              "#ukjobs",
+              "#constructioncareers"
+            ]
+          }
         }
       ]
     }
