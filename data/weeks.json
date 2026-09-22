@@ -5763,6 +5763,50 @@
               "#constructioncareers"
             ]
           }
+        },
+        {
+          "id": "week17-wed-news",
+          "day": "Wed 23 Sep",
+          "lane": "news",
+          "title": "Top Talent in HGV Tech Recognised",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "The UK's heavy vehicle technology talent was showcased in a recent national competition, highlighting emerging skills in the HGV sector. This event not only celebrated top performers but also brought attention to the growing demand for skilled professionals in heavy vehicle technology. For students and recent graduates, this underscores the opportunities available in a sector that's evolving with technological advancements. Internships in this field offer invaluable hands-on experience, serving as a stepping stone into a thriving industry. Source: FE News.",
+          "hashtags": [
+            "#ukjobs",
+            "#hgvtech",
+            "#graduateopportunities",
+            "#skillsdevelopment",
+            "#internships"
+          ],
+          "captions": {
+            "ig-fb": "The UK's heavy vehicle technology talent was showcased in a recent national competition, highlighting emerging skills in the HGV sector. This event not only celebrated top performers but also brought attention to the growing demand for skilled professionals in heavy vehicle technology. For students and recent graduates, this underscores the opportunities available in a sector that's evolving with technological advancements. Internships in this field offer invaluable hands-on experience, serving as a stepping stone into a thriving industry. Source: FE News.",
+            "linkedin": "A recent national competition in the UK celebrated top talent in heavy vehicle technology, putting a spotlight on the skills required in the HGV sector. This event highlights the growing demand for skilled professionals as the industry evolves with technological advancements. For students and graduates, this means burgeoning opportunities in a field that's ripe for innovation. Internships can provide the practical experience needed to succeed in such dynamic sectors. Source: FE News.",
+            "x": "A UK competition in heavy vehicle tech showcased top skills, highlighting the growing demand for skilled professionals in the HGV sector. Great news for students and grads entering this field! (Source: FE News)",
+            "threads": "A UK competition highlighted top talent in heavy vehicle tech, showcasing the skills needed in the HGV sector. This points to growing opportunities for students and grads in a rapidly advancing field. Internships offer vital hands-on experience. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#ukjobs",
+              "#hgvtech",
+              "#graduateopportunities",
+              "#skillsdevelopment",
+              "#internships"
+            ],
+            "linkedin": [
+              "#hgvtech",
+              "#skillsdevelopment",
+              "#internships"
+            ],
+            "x": [
+              "#hgvtech",
+              "#ukjobs"
+            ]
+          }
         }
       ]
     }
