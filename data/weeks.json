@@ -5807,6 +5807,50 @@
               "#ukjobs"
             ]
           }
+        },
+        {
+          "id": "week17-thu-news",
+          "day": "Thu 24 Sep",
+          "lane": "news",
+          "title": "UK Firm Expands with Training Platform Buy",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "A leading UK education provider has broadened its horizons by acquiring a training platform. This strategic move is their first venture beyond recruitment and staffing, aiming to enhance educational offerings. For students and graduates, this means access to new training resources and skills that can improve job prospects. Internships remain a crucial step, providing hands-on experience and easing the transition into the workforce. Source: FE News.",
+          "hashtags": [
+            "#educationnews",
+            "#ukjobs",
+            "#internships",
+            "#graduateopportunities",
+            "#careerdevelopment"
+          ],
+          "captions": {
+            "ig-fb": "A leading UK education provider has broadened its horizons by acquiring a training platform. This strategic move is their first venture beyond recruitment and staffing, aiming to enhance educational offerings. For students and graduates, this means access to new training resources and skills that can improve job prospects. Internships remain a crucial step, providing hands-on experience and easing the transition into the workforce. Source: FE News.",
+            "linkedin": "In a significant step, a major UK education provider has acquired a training platform, marking its entry into areas beyond recruitment and staffing. This acquisition aims to bolster educational resources and skill development for students and graduates. Such moves highlight the growing importance of diverse learning tools. Internships, as always, play a critical role in offering real-world experience and career readiness. Source: FE News.",
+            "x": "A top UK education firm has acquired a training platform to expand beyond recruitment. This offers new resources for students and grads. Internships remain vital for career readiness. (Source: FE News)",
+            "threads": "A UK education leader is expanding by acquiring a training platform, stepping beyond recruitment. This provides new resources and skills for students and grads. Internships continue to be essential for gaining experience. More on www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#educationnews",
+              "#ukjobs",
+              "#internships",
+              "#graduateopportunities",
+              "#careerdevelopment"
+            ],
+            "linkedin": [
+              "#education",
+              "#graduatejobs",
+              "#internships"
+            ],
+            "x": [
+              "#ukeducation",
+              "#internships"
+            ]
+          }
         }
       ]
     }
