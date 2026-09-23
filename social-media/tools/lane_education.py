@@ -813,12 +813,28 @@ def cover_tabs(p, copy, total, pose):
     x = 56
     kicker = (f"<div style=\"position:absolute;left:{x}px;top:300px;font-family:'DM Sans';font-weight:800;font-size:21px;"
               f"color:{p['accent']};letter-spacing:5px;\">{copy.get('eyebrow','INTERNWISE')[:22].upper()}</div>")
-    head = (f"<div style=\"position:absolute;left:{x}px;top:346px;width:460px;font-family:Inter;font-weight:800;"
-            f"font-size:66px;line-height:1.04;letter-spacing:-1.8px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
+    # Headline + an "in this guide" contents preview (fills the cover and reinforces
+    # the folder-tab/chapter concept: each row maps to a numbered tab/slide).
+    rows = ""
+    for i, s in enumerate(copy.get("slides", []), start=2):
+        tag = s.get("tag", "")
+        if not tag:
+            continue
+        rows += (f"<div style='display:flex;align-items:center;gap:16px;margin-bottom:15px;'>"
+                 f"<div style='width:46px;height:46px;border-radius:12px;background:{p['accent']};display:flex;align-items:center;"
+                 f"justify-content:center;font-family:Inter;font-weight:800;font-size:19px;color:{p['deep']};'>{i:02d}</div>"
+                 f"<span style=\"font-family:Inter;font-weight:700;font-size:28px;color:{p['ink']};letter-spacing:-.3px;\">{tag}</span></div>")
+    contents = ("" if not rows else
+                f"<div style='margin-top:38px;'>"
+                f"<div style=\"font-family:'DM Sans';font-weight:800;font-size:15px;color:{p['mut']};letter-spacing:4px;margin-bottom:18px;\">IN THIS GUIDE</div>"
+                f"<div style='width:52px;height:4px;background:{p['accent']};border-radius:2px;margin-bottom:22px;'></div>{rows}</div>")
+    block = (f"<div style='position:absolute;left:{x}px;top:346px;width:560px;'>"
+             f"<div style=\"font-family:Inter;font-weight:800;font-size:66px;line-height:1.04;letter-spacing:-1.8px;"
+             f"color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>{contents}</div>")
     swipe = (f"<div style=\"position:absolute;left:{x}px;bottom:56px;font-family:'DM Sans';font-weight:800;font-size:22px;"
              f"color:{p['accent']};\">Open chapter one &rarr;</div>")
     return (_bg(p) + _folder_tabs(p, 1, total) + _arc(p) + _nuno_whole(pose, h=760, right=-60)
-            + _logo(left=x, top=44) + kicker + head + swipe)
+            + _logo(left=x, top=44) + kicker + block + swipe)
 
 def content_tabs(p, n, total, slide):
     x = 56
