@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-22T12:01:23Z",
+  "generatedAt": "2026-09-23T12:02:52Z",
   "windowRecords": 80,
   "byLane": {
     "news": {
-      "posts": 21,
-      "engagement": 20,
+      "posts": 25,
+      "engagement": 24,
       "avg": 1.0
     },
     "employer": {
@@ -25,9 +25,14 @@
   },
   "byDay": {
     "Sat": {
-      "posts": 16,
-      "engagement": 3,
-      "avg": 0.2
+      "posts": 15,
+      "engagement": 2,
+      "avg": 0.1
+    },
+    "Tue": {
+      "posts": 5,
+      "engagement": 4,
+      "avg": 0.8
     },
     "Mon": {
       "posts": 35,
@@ -48,28 +53,23 @@
       "posts": 5,
       "engagement": 6,
       "avg": 1.2
-    },
-    "Tue": {
-      "posts": 1,
-      "engagement": 0,
-      "avg": 0.0
     }
   },
   "byHour": {
     "12": {
-      "posts": 16,
-      "engagement": 3,
-      "avg": 0.2
+      "posts": 15,
+      "engagement": 2,
+      "avg": 0.1
+    },
+    "10": {
+      "posts": 20,
+      "engagement": 18,
+      "avg": 0.9
     },
     "11": {
       "posts": 5,
       "engagement": 6,
       "avg": 1.2
-    },
-    "10": {
-      "posts": 16,
-      "engagement": 14,
-      "avg": 0.9
     },
     "9": {
       "posts": 30,
@@ -100,6 +100,13 @@
       "caption": "Young people in Rotherham are facing a challenging job market, with only 46 online job vacancies for every 1,000 young i"
     },
     {
+      "lane": "news",
+      "network": "instagram",
+      "engagement": 4,
+      "created": "2026-09-22T10:35:15Z",
+      "caption": "The UK's heavy vehicle technology talent was showcased in a recent national competition, highlighting emerging skills in"
+    },
+    {
       "lane": "education",
       "network": "linkedin",
       "engagement": 2,
@@ -126,13 +133,6 @@
       "engagement": 1,
       "created": "2026-09-20T10:17:48Z",
       "caption": "A major UK initiative, the Skills Compact, is set to tackle skills gaps in financial services by joining forces with the"
-    },
-    {
-      "lane": "news",
-      "network": "linkedin",
-      "engagement": 1,
-      "created": "2026-09-20T10:17:50Z",
-      "caption": "The Skills Compact, a collaborative effort involving the government and financial services leaders, aims to address skil"
     }
   ],
   "insights": [
