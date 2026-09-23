@@ -67,7 +67,8 @@ def target_week():
 # Visual worlds cycle every day; the QUOTE TEXT rotates weekly through the whole
 # bank (see build()) so no two consecutive weeks repeat the same 5 quotes.
 QUOTE_WORLDS = ["editorial", "spotlight", "colorblock", "split", "paper",
-                "arc", "blueprint", "band", "minimal", "bubble"]
+                "arc", "blueprint", "band", "minimal", "bubble",
+                "marquee", "stamp"]
 # Employer dropped to 3 posts/week (Mon/Wed/Fri) - it underperformed, repeated
 # weekly and strained the Nuno library. Each world stays paired with its
 # compatible angle; which 3 of the 5 pairs run rotates by week for variety. The
@@ -85,7 +86,8 @@ EMPLOYER_ANGLE = {"benefits": "e001", "bigstat": "e004", "process": "e003",
 # rotates by week (see week_offset / build) so the same weekday never looks the
 # same two weeks running.
 EDU_FORMAT_BY_DAY = ["carousel", "carousel", "carousel", "single", "single"]
-EDU_CAROUSEL_WORLDS = ["navy", "plum", "teal", "cream", "midnight", "slate"]
+EDU_CAROUSEL_WORLDS = ["navy", "plum", "teal", "cream", "midnight", "slate",
+                       "marker", "flash", "tabs"]
 EDU_SINGLE_WORLDS = ["tipcard", "statement", "bigidea", "splitcard"]
 
 

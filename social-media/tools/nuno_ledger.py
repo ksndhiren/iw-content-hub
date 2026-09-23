@@ -44,6 +44,11 @@ TONES = {
     "nuno_howto_1": {"practical", "confident"}, "nuno_howto_2": {"practical", "confident"},
     "nuno_howto_3": {"practical", "confident"},
     "nuno_attention_1": {"positive", "confident"}, "nuno_attention_2": {"positive", "confident"},
+    # week17 fresh cutouts
+    "nuno_cv_4": {"practical", "serious"}, "nuno_cv_5": {"practical", "confident"},
+    "nuno_utility_4": {"practical", "confident"},
+    "nuno_thumbsup_2": {"positive"}, "nuno_dothis_4": {"confident", "practical"},
+    "nuno_offers_4": {"positive", "confident"},
 }
 
 

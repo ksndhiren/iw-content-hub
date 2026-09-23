@@ -38,6 +38,16 @@ PAL = {
                  "accent": AMBER, "ink": INK, "mut": "#9FB0C8", "deep": "#081020"},
     "slate": {"bg": "background:linear-gradient(155deg,#20504d,#123230 72%);", "grid": False, "accent": AMBER,
               "ink": INK, "mut": "#A9C6C4", "deep": "#0b201f"},
+    # --- added week17 (three NEW art directions; UK palette navy/teal/yellow) ---
+    # marker : LIGHT study-notes, amber highlighter swipe + hand underline
+    "marker": {"bg": "background-color:#F4EFE4;", "grid": False, "accent": AMBER,
+               "ink": "#152743", "mut": "#6F6350", "deep": "#152743"},
+    # flash  : DARK diagonal-energy, corner wedge + slanted step tab
+    "flash": {"bg": "background:linear-gradient(135deg,#152c4f,#0a1830 72%);", "grid": True, "accent": AMBER,
+              "ink": INK, "mut": "#9FB0C8", "deep": "#081020"},
+    # tabs   : TEAL chaptered "folder tabs" progress system
+    "tabs": {"bg": "background:linear-gradient(160deg,#13423f,#0a1f1e 72%);", "grid": False, "accent": AMBER,
+             "ink": INK, "mut": "#A9C6C4", "deep": "#071615"},
 }
 
 # Cover poses hug the RIGHT edge (compact, right-weighted) so they clear the left
@@ -51,7 +61,8 @@ COVER_POOL = ["nuno_cv", "nuno_cv_2", "nuno_cv_3",
 # NOTE: welcoming/offers/tablet cover poses are TOPIC-ONLY (networking/offer/tech) -
 # they must NOT be in the general fallback pool or they land on unrelated topics
 # (e.g. a "welcoming" pose on a Graduate Schemes cover). Kept only in TOPIC_POSES.
-CTA_POOL = ["nuno_thumbsup", "nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1"]
+CTA_POOL = ["nuno_thumbsup", "nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1",
+            "nuno_thumbsup_2", "nuno_dothis_4", "nuno_offers_4"]   # + week17 fresh cutouts
 
 # ------------------------------------------------------------ topic-matched hook
 # The hook (cover) is the scroll-stopper, so its Nuno must MATCH the topic - not
@@ -62,14 +73,14 @@ CTA_POOL = ["nuno_thumbsup", "nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1"]
 # logs a request for the specific shot we're missing instead of forcing a wrong
 # pose (see request_cover_pose + feedback_request_nuno_pics).
 TOPIC_POSES = {
-    "cv":         ["nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cvpile"],
-    "apply":      ["nuno_cv", "nuno_cv_2", "nuno_cv_3"],
+    "cv":         ["nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4", "nuno_cvpile"],
+    "apply":      ["nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4"],
     "interview":  ["nuno_authority_4", "nuno_authority_1", "nuno_authority_2", "nuno_authority_3"],
     "confidence": ["nuno_authority_4", "nuno_authority_1", "nuno_authority_2", "nuno_authority_3"],
     "plan":       ["nuno_planning_1", "nuno_planning_2", "nuno_planning_3"],
     "mistake":    ["nuno_thoughtful_1", "nuno_thoughtful_2", "nuno_thoughtful_3"],
     "think":      ["nuno_thoughtful_1", "nuno_thoughtful_2", "nuno_thoughtful_3"],
-    "skills":     ["nuno_utility_3", "nuno_planning_1", "nuno_planning_2"],
+    "skills":     ["nuno_utility_4", "nuno_utility_3", "nuno_planning_1", "nuno_planning_2"],
     # Cover-safe poses added week16 (compact, right-weighted, verified rembg-clean).
     "networking": ["nuno_welcoming_cover1", "nuno_welcoming_cover2"],
     "offer":      ["nuno_offers_cover"],
@@ -669,6 +680,174 @@ def w_splitcard(copy, week_id='adhoc'):
     return bg + top + body + cta
 
 
+# =================================================================================
+#  WORLD 7  -  "marker"  (cream, LIGHT)  : study-notes, amber highlighter swipe
+# =================================================================================
+def _hl_title(text, ink, accent, size=60):
+    """Title text with a highlighter stripe painted behind the lower two-thirds -
+    the signature 'study notes' device (auto-sizes to any line count)."""
+    return (f"<span style=\"font-family:Inter;font-weight:700;font-size:{size}px;line-height:1.14;letter-spacing:-1.6px;"
+            f"color:{ink};word-break:keep-all;display:inline;"
+            f"background:linear-gradient(transparent 60%,{accent}80 60%);padding:0 4px;\">{text}</span>")
+
+def cover_marker(p, copy, total, pose):
+    x = 56
+    NAVYT = p["deep"]
+    tex = _dot_texture("rgba(21,39,67,.05)")
+    glow = _glow("rgba(255,177,32,.16)", right=-60, bottom=-30, size=560)
+    eyebrow = (f"<div style='position:absolute;left:{x}px;top:206px;display:inline-flex;align-items:center;height:46px;padding:0 20px;"
+               f"border-radius:12px;background:{AMBER};'>"
+               f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:20px;color:{NAVYT};letter-spacing:3px;\">{copy.get('eyebrow','GUIDE')[:22].upper()}</span></div>")
+    headblock = (f"<div style='position:absolute;left:{x}px;top:296px;width:452px;'>"
+                 f"<div style=\"font-family:Inter;font-weight:800;font-size:68px;line-height:1.04;letter-spacing:-2px;"
+                 f"color:{NAVYT};word-break:keep-all;\">{copy['headline']}</div>"
+                 f"<div style='margin-top:20px;width:236px;height:20px;background:{AMBER};opacity:.85;"
+                 f"transform:rotate(-1.4deg);border-radius:3px;'></div></div>")
+    swipe = (f"<div style=\"position:absolute;left:{x}px;bottom:56px;font-family:'DM Sans';font-weight:800;font-size:22px;"
+             f"color:{NAVYT};\">Swipe to begin &rarr;</div>")
+    return (_bg(p) + tex + glow + _nuno_whole(pose, h=770, right=-150)
+            + _logo(L.DARKLOGO, left=x, top=52) + eyebrow + headblock + swipe)
+
+def content_marker(p, n, total, slide):
+    x = 78
+    NAVYT = p["deep"]; GOLD = "#B07A12"
+    icon = _topic_icon(slide.get("tag", "") + " " + slide.get("title", ""))
+    numbadge = (f"<div style='position:absolute;left:{x}px;top:232px;width:84px;height:84px;border-radius:18px;background:{AMBER};"
+                f"display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:800;font-size:44px;color:{NAVYT};'>0{n-1}</div>")
+    tag = (f"<div style=\"position:absolute;left:{x+104}px;top:250px;font-family:'DM Sans';font-weight:800;font-size:22px;"
+           f"color:{GOLD};letter-spacing:4px;\">{slide.get('tag','STEP '+str(n-1))[:24].upper()}</div>"
+           f"<div style='position:absolute;left:{x+104}px;top:290px;width:56px;height:4px;background:{AMBER};border-radius:2px;'></div>")
+    titleblock = (f"<div style='position:absolute;left:{x}px;right:96px;top:372px;'>{_hl_title(slide['title'], NAVYT, AMBER, 60)}</div>")
+    body = (f"<div style=\"position:absolute;left:{x}px;right:110px;top:540px;font-family:'DM Sans';font-weight:500;"
+            f"font-size:41px;line-height:1.42;color:{p['mut']};\">{slide['body']}</div>")
+    prog = (f"<div style=\"position:absolute;right:96px;bottom:92px;font-family:Inter;font-weight:700;font-size:24px;"
+            f"color:{p['mut']};letter-spacing:2px;\"><span style='color:{GOLD};'>0{n}</span> / 0{total}</div>")
+    motif = _icon_motif(icon, "right:-24px;bottom:-30px;", "rgba(21,39,67,.05)", 340)
+    return (_bg(p) + _dot_texture("rgba(21,39,67,.045)") + motif
+            + _logo(L.DARKLOGO, left=x, top=70) + numbadge + tag + titleblock + body + prog)
+
+def cta_marker(p, copy, total, pose):
+    x = 78
+    NAVYT = p["deep"]; GOLD = "#B07A12"
+    eyebrow = (f"<div style=\"position:absolute;left:{x}px;top:250px;font-family:'DM Sans';font-weight:800;font-size:21px;"
+               f"color:{GOLD};letter-spacing:5px;\">YOUR MOVE</div>")
+    headblock = (f"<div style='position:absolute;left:{x}px;top:296px;width:452px;'>"
+                 f"<div style=\"font-family:Inter;font-weight:800;font-size:58px;line-height:1.04;letter-spacing:-1.8px;"
+                 f"color:{NAVYT};word-break:keep-all;\">{copy['headline']}</div>"
+                 f"<div style='margin-top:18px;width:210px;height:18px;background:{AMBER};opacity:.85;"
+                 f"transform:rotate(-1.4deg);border-radius:3px;'></div></div>")
+    sub = (f"<div style=\"position:absolute;left:{x}px;top:560px;width:430px;font-family:'DM Sans';font-weight:500;"
+           f"font-size:33px;line-height:1.34;color:{p['mut']};\">{copy.get('cta','')}</div>")
+    return (_bg(p) + _dot_texture("rgba(21,39,67,.045)") + _glow("rgba(255,177,32,.16)")
+            + _nuno_whole(pose, h=700, right=-40)
+            + _logo(L.DARKLOGO, left=x, top=70) + eyebrow + headblock + sub
+            + f"<div style='position:absolute;left:{x}px;top:700px;'>{_pill(p, dark_ink=True)}</div>")
+
+
+# =================================================================================
+#  WORLD 8  -  "flash"  (dark navy)  : diagonal energy, corner wedge + skew tab
+# =================================================================================
+def _wedge(color, css, size=420, op=.13, corner="bl"):
+    clip = {"bl": "polygon(0 100%,0 0,100% 100%)", "tr": "polygon(0 0,100% 0,100% 100%)"}[corner]
+    return f"<div style='position:absolute;{css}width:{size}px;height:{size}px;background:{color};clip-path:{clip};opacity:{op};'></div>"
+
+def cover_flash(p, copy, total, pose):
+    x = 56
+    wedge = _wedge(p['accent'], "left:0;bottom:0;", 440, .12, "bl")
+    slash = (f"<div style='position:absolute;left:{x}px;top:238px;width:60px;height:12px;background:{p['accent']};transform:skewX(-26deg);'></div>")
+    eyebrow = (f"<div style=\"position:absolute;left:{x+80}px;top:230px;font-family:'DM Sans';font-weight:800;font-size:21px;"
+               f"color:{p['accent']};letter-spacing:5px;\">{copy.get('eyebrow','INTERNWISE')[:22].upper()}</div>")
+    head = (f"<div style=\"position:absolute;left:{x}px;top:298px;width:470px;font-family:Inter;font-weight:800;"
+            f"font-size:66px;line-height:1.04;letter-spacing:-1.8px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
+    rule = f"<div style='position:absolute;left:{x+2}px;top:604px;width:120px;height:7px;background:{p['accent']};border-radius:4px;transform:skewX(-26deg);'></div>"
+    return (_bg(p) + wedge + _arc(p, right=-60, bottom=-120, size=680) + _nuno_whole(pose, h=760, right=-60)
+            + _logo(left=x, top=44) + slash + eyebrow + head + rule
+            + _footer(p, swipe=True))
+
+def content_flash(p, n, total, slide):
+    icon = _topic_icon(slide.get("tag", "") + " " + slide.get("title", ""))
+    tab = (f"<div style='position:absolute;left:44px;top:232px;transform:skewX(-12deg);background:{p['accent']};padding:12px 30px;'>"
+           f"<span style='display:inline-block;transform:skewX(12deg);font-family:Inter;font-weight:800;font-size:44px;color:{p['deep']};'>0{n-1}</span></div>")
+    tag = (f"<div style=\"position:absolute;left:190px;top:250px;font-family:'DM Sans';font-weight:800;font-size:22px;"
+           f"color:{p['accent']};letter-spacing:4px;\">{slide.get('tag','STEP '+str(n-1))[:24].upper()}</div>"
+           f"<div style='position:absolute;left:190px;top:290px;width:56px;height:4px;background:{p['accent']};border-radius:2px;'></div>")
+    head = (f"<div style=\"position:absolute;left:56px;right:90px;top:372px;font-family:Inter;font-weight:700;"
+            f"font-size:60px;line-height:1.04;letter-spacing:-1.6px;color:{p['ink']};word-break:keep-all;\">{slide['title']}</div>")
+    body = (f"<div style=\"position:absolute;left:56px;right:100px;top:560px;font-family:'DM Sans';font-weight:500;"
+            f"font-size:41px;line-height:1.42;color:{p['mut']};\">{slide['body']}</div>")
+    prog = (f"<div style=\"position:absolute;right:58px;top:66px;font-family:Inter;font-weight:700;font-size:24px;"
+            f"color:{p['mut']};letter-spacing:2px;\"><span style='color:{p['accent']};'>0{n}</span> / 0{total}</div>")
+    return (_bg(p) + _wedge(p['accent'], "right:0;top:0;", 300, .08, "tr")
+            + _icon_motif(icon, "right:-20px;bottom:-24px;", "rgba(255,255,255,.05)", 330)
+            + _logo(left=56, top=44) + tab + tag + head + body + prog + _footer(p, swipe=True))
+
+def cta_flash(p, copy, total, pose):
+    x = 56
+    wedge = _wedge(p['accent'], "left:0;bottom:0;", 400, .12, "bl")
+    eyebrow = (f"<div style=\"position:absolute;left:{x}px;top:250px;font-family:'DM Sans';font-weight:800;font-size:21px;"
+               f"color:{p['accent']};letter-spacing:5px;\">YOUR MOVE</div>")
+    head = (f"<div style=\"position:absolute;left:{x}px;top:298px;width:450px;font-family:Inter;font-weight:800;"
+            f"font-size:58px;line-height:1.04;letter-spacing:-1.8px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
+    sub = (f"<div style=\"position:absolute;left:{x}px;top:540px;width:420px;font-family:'DM Sans';font-weight:500;"
+           f"font-size:33px;line-height:1.34;color:{p['mut']};\">{copy.get('cta','')}</div>")
+    return (_bg(p) + wedge + _arc(p, right=-60, bottom=-120, size=640) + _nuno_whole(pose, h=720, right=-60)
+            + _logo(left=x, top=44) + eyebrow + head + sub
+            + f"<div style='position:absolute;left:{x}px;top:690px;'>{_pill(p)}</div>")
+
+
+# =================================================================================
+#  WORLD 9  -  "tabs"  (teal)  : chaptered folder-tab progress system
+# =================================================================================
+def _folder_tabs(p, active, total, x=56, top=210):
+    tabs = ""
+    for i in range(1, total + 1):
+        on = (i == active)
+        tabs += (f"<div style='width:64px;height:{46 if on else 34}px;margin-right:12px;border-radius:13px 13px 0 0;"
+                 f"background:{p['accent'] if on else 'rgba(255,255,255,.10)'};display:flex;align-items:flex-end;justify-content:center;"
+                 f"padding-bottom:6px;font-family:Inter;font-weight:800;font-size:18px;"
+                 f"color:{p['deep'] if on else p['mut']};'>{i:02d}</div>")
+    return (f"<div style='position:absolute;left:{x}px;top:{top}px;display:flex;align-items:flex-end;'>{tabs}</div>"
+            f"<div style='position:absolute;left:{x}px;right:0;top:{top+46}px;height:4px;background:{p['accent']};'></div>")
+
+def cover_tabs(p, copy, total, pose):
+    x = 56
+    kicker = (f"<div style=\"position:absolute;left:{x}px;top:300px;font-family:'DM Sans';font-weight:800;font-size:21px;"
+              f"color:{p['accent']};letter-spacing:5px;\">{copy.get('eyebrow','INTERNWISE')[:22].upper()}</div>")
+    head = (f"<div style=\"position:absolute;left:{x}px;top:346px;width:460px;font-family:Inter;font-weight:800;"
+            f"font-size:66px;line-height:1.04;letter-spacing:-1.8px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
+    swipe = (f"<div style=\"position:absolute;left:{x}px;bottom:56px;font-family:'DM Sans';font-weight:800;font-size:22px;"
+             f"color:{p['accent']};\">Open chapter one &rarr;</div>")
+    return (_bg(p) + _folder_tabs(p, 1, total) + _arc(p) + _nuno_whole(pose, h=760, right=-60)
+            + _logo(left=x, top=44) + kicker + head + swipe)
+
+def content_tabs(p, n, total, slide):
+    x = 56
+    icon = _topic_icon(slide.get("tag", "") + " " + slide.get("title", ""))
+    badge = _icon_badge(icon, p, f"left:{x}px;top:326px;", 76, radius=18, ink=p['deep'])
+    tag = (f"<div style=\"position:absolute;left:{x+98}px;top:336px;font-family:'DM Sans';font-weight:800;font-size:22px;"
+           f"color:{p['accent']};letter-spacing:4px;\">{slide.get('tag','STEP '+str(n-1))[:24].upper()}</div>"
+           f"<div style='position:absolute;left:{x+98}px;top:376px;width:56px;height:4px;background:{p['accent']};border-radius:2px;'></div>")
+    head = (f"<div style=\"position:absolute;left:{x}px;right:90px;top:452px;font-family:Inter;font-weight:700;"
+            f"font-size:58px;line-height:1.04;letter-spacing:-1.5px;color:{p['ink']};word-break:keep-all;\">{slide['title']}</div>")
+    body = (f"<div style=\"position:absolute;left:{x}px;right:100px;top:632px;font-family:'DM Sans';font-weight:500;"
+            f"font-size:40px;line-height:1.42;color:{p['mut']};\">{slide['body']}</div>")
+    return (_bg(p) + _folder_tabs(p, n, total, top=150)
+            + _icon_motif(icon, "right:-20px;bottom:-24px;", "rgba(255,255,255,.05)", 320)
+            + _logo(left=x, top=44) + badge + tag + head + body + _footer(p, swipe=True))
+
+def cta_tabs(p, copy, total, pose):
+    x = 56
+    eyebrow = (f"<div style=\"position:absolute;left:{x}px;top:300px;font-family:'DM Sans';font-weight:800;font-size:21px;"
+               f"color:{p['accent']};letter-spacing:5px;\">YOUR MOVE</div>")
+    head = (f"<div style=\"position:absolute;left:{x}px;top:346px;width:450px;font-family:Inter;font-weight:800;"
+            f"font-size:56px;line-height:1.04;letter-spacing:-1.7px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
+    sub = (f"<div style=\"position:absolute;left:{x}px;top:566px;width:420px;font-family:'DM Sans';font-weight:500;"
+           f"font-size:33px;line-height:1.34;color:{p['mut']};\">{copy.get('cta','')}</div>")
+    return (_bg(p) + _folder_tabs(p, total, total) + _arc(p) + _nuno_whole(pose, h=720, right=-60)
+            + _logo(left=x, top=44) + eyebrow + head + sub
+            + f"<div style='position:absolute;left:{x}px;top:706px;'>{_pill(p)}</div>")
+
+
 CAROUSEL = {
     "teal": {"cover": cover_spine, "content": content_spine, "cta": cta_spine},
     "plum": {"cover": cover_poster, "content": content_poster, "cta": cta_poster},
@@ -676,6 +855,9 @@ CAROUSEL = {
     "cream": {"cover": cover_frame, "content": content_frame, "cta": cta_frame},
     "midnight": {"cover": cover_lens, "content": content_lens, "cta": cta_lens},
     "slate": {"cover": cover_ticket, "content": content_ticket, "cta": cta_ticket},
+    "marker": {"cover": cover_marker, "content": content_marker, "cta": cta_marker},
+    "flash": {"cover": cover_flash, "content": content_flash, "cta": cta_flash},
+    "tabs": {"cover": cover_tabs, "content": content_tabs, "cta": cta_tabs},
 }
 SINGLE = {"tipcard": w_tipcard, "statement": w_statement,
           "bigidea": w_bigidea, "splitcard": w_splitcard}

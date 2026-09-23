@@ -277,10 +277,55 @@ def w_bubble(q, src=None):
     return bg + dots + wm + _logo(WHT) + kicker + card + tail + author + cta
 
 
+# ---- World 11: marquee (dark plaque, amber double-frame + bulbs) ----
+def w_marquee(q, src=None):
+    bg = f"<div style='position:absolute;inset:0;background:radial-gradient(90% 80% at 50% 24%,#183157,{NAVY} 60%,{DEEP});'></div>"
+    wm = _wm(src, "left:50%;bottom:0;transform:translateX(-50%);height:880px;", op=.07,
+             filt="grayscale(1) brightness(1.15)")
+    frame = (f"<div style='position:absolute;left:70px;right:70px;top:250px;bottom:250px;border:3px solid {AMBER};"
+             f"border-radius:26px;box-shadow:inset 0 0 0 10px rgba(255,177,32,.14);'></div>")
+    # corner bulbs
+    bulbs = "".join(
+        f"<div style='position:absolute;{css}width:18px;height:18px;border-radius:50%;background:{AMBER};box-shadow:0 0 16px {AMBER};'></div>"
+        for css in ("left:92px;top:272px;", "right:92px;top:272px;", "left:92px;bottom:272px;", "right:92px;bottom:272px;"))
+    logo = f"<div style='position:absolute;left:0;right:0;top:70px;text-align:center;'><img src='{WHT}' style='height:78px;'></div>"
+    kicker = (f"<div style=\"position:absolute;left:0;right:0;top:322px;text-align:center;font-family:'DM Sans';font-weight:800;"
+              f"font-size:20px;color:{AMBER};letter-spacing:7px;\">QUOTE OF THE DAY</div>")
+    body = (f"<div style='position:absolute;left:130px;right:130px;top:404px;text-align:center;'>"
+            f"<div style=\"font-family:Inter;font-weight:800;font-size:64px;line-height:1.16;letter-spacing:-1.2px;color:{INK};word-break:keep-all;\">{q['text']}</div>"
+            f"<div style='width:76px;height:5px;background:{AMBER};border-radius:3px;margin:34px auto 22px;'></div>"
+            f"<div style=\"font-family:'DM Sans';font-weight:800;font-size:30px;color:{AMBER};letter-spacing:1px;\">{q['author']}</div></div>")
+    cta = (f"<div style=\"position:absolute;left:0;right:0;bottom:150px;text-align:center;font-family:Inter;font-weight:700;"
+           f"font-size:26px;color:{MUT};\">{q['cta']}</div>")
+    return bg + wm + frame + bulbs + logo + kicker + body + cta
+
+
+# ---- World 12: stamp (teal, clean card + circular seal) ----
+def w_stamp(q, src=None):
+    TEAL = "#1f4f4d"; NAVYT = "#152743"; COFFEE = "#5b6b6a"
+    bg = f"<div style='position:absolute;inset:0;background:linear-gradient(158deg,#276460,{TEAL} 70%,#143432);'></div>"
+    dots = L.dots("right:70px;bottom:70px;", color="rgba(255,255,255,.16)", w=180, h=120)
+    wm = _wm(src, "right:-30px;bottom:0;height:520px;", op=.07, filt="grayscale(1) brightness(1.1)")
+    kicker = (f"<div style=\"position:absolute;left:74px;top:186px;font-family:'DM Sans';font-weight:800;"
+              f"font-size:20px;color:{AMBER};letter-spacing:6px;\">QUOTE OF THE DAY</div>")
+    card = (f"<div style='position:absolute;left:70px;right:70px;top:250px;bottom:228px;background:#FBFCFE;border-radius:28px;"
+            f"box-shadow:0 34px 70px rgba(0,0,0,.34);padding:56px 56px 48px;'>"
+            f"<div style='font-family:Georgia,serif;font-weight:700;font-size:130px;line-height:.4;color:{AMBER};height:72px;'>{Q}</div>"
+            f"<div style=\"font-family:Inter;font-weight:700;font-size:58px;line-height:1.14;letter-spacing:-1px;color:{NAVYT};word-break:keep-all;\">{q['text']}</div>"
+            f"<div style=\"position:absolute;left:56px;bottom:46px;font-family:'DM Sans';font-weight:800;font-size:30px;color:{NAVYT};\">{q['author']}</div></div>")
+    seal = (f"<div style='position:absolute;right:104px;top:206px;width:132px;height:132px;border-radius:50%;background:{AMBER};"
+            f"border:5px solid #FBFCFE;box-shadow:0 14px 30px rgba(0,0,0,.28);display:flex;align-items:center;justify-content:center;'>"
+            f"{L.svg('star', NAVYT, 58)}</div>")
+    cta = (f"<div style=\"position:absolute;left:0;right:0;bottom:120px;text-align:center;font-family:Inter;font-weight:700;"
+           f"font-size:25px;color:rgba(255,255,255,.9);\">{q['cta']}</div>")
+    return bg + dots + wm + _logo(WHT) + kicker + card + seal + cta
+
+
 WORLDS = {"editorial": w_editorial, "spotlight": w_spotlight, "colorblock": w_colorblock,
           "split": w_split, "paper": w_paper,
           "arc": w_arc, "blueprint": w_blueprint, "band": w_band,
-          "minimal": w_minimal, "bubble": w_bubble}
+          "minimal": w_minimal, "bubble": w_bubble,
+          "marquee": w_marquee, "stamp": w_stamp}
 
 # Only q001-q005 in the bank carry a "cta"; the rest don't, so fall back on-brand.
 _DEFAULT_CTA = "Find your internship at internwise.co.uk"

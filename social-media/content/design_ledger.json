@@ -144,6 +144,31 @@
       "lane": "employer",
       "week": "week16",
       "world": "bigstat"
+    },
+    {
+      "lane": "edu_carousel",
+      "week": "week17",
+      "world": "tabs"
+    },
+    {
+      "lane": "edu_carousel",
+      "week": "week17",
+      "world": "marker"
+    },
+    {
+      "lane": "edu_carousel",
+      "week": "week17",
+      "world": "flash"
+    },
+    {
+      "lane": "quote",
+      "week": "week17",
+      "world": "marquee"
+    },
+    {
+      "lane": "quote",
+      "week": "week17",
+      "world": "stamp"
     }
   ]
 }
