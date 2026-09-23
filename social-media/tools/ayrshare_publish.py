@@ -98,7 +98,7 @@ LOCATION_LANES = {"news", "education"}
 # closes the evening.
 LANE_TIME = {"news": "08:00", "education": "13:30", "quote": "20:00",
              "employer": "20:30", "featured": "17:30"}
-DAY_INDEX = {"mon": 0, "tue": 1, "wed": 2, "thu": 3, "fri": 4}
+DAY_INDEX = {"mon": 0, "tue": 1, "wed": 2, "thu": 3, "fri": 4, "sat": 5, "sun": 6}
 
 
 def fetch_statuses():
