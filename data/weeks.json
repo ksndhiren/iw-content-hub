@@ -5555,6 +5555,50 @@
               "#internships"
             ]
           }
+        },
+        {
+          "id": "week17-fri-news",
+          "day": "Fri 25 Sep",
+          "lane": "news",
+          "title": "Investing in Workforce Boosts Business",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "UK employers are now investing heavily in their workforce's development, focusing on lifelong learning to build resilient businesses. This shift creates more opportunities for students and graduates to upskill and stay competitive. Internships play a crucial role by providing practical experience and a pathway into the workforce. Source: FE News.",
+          "hashtags": [
+            "#lifelonglearning",
+            "#ukjobs",
+            "#internships",
+            "#careergrowth",
+            "#workforceskills"
+          ],
+          "captions": {
+            "ig-fb": "UK employers are now investing heavily in their workforce's development, focusing on lifelong learning to build resilient businesses. This shift creates more opportunities for students and graduates to upskill and stay competitive. Internships play a crucial role by providing practical experience and a pathway into the workforce. Source: FE News.",
+            "linkedin": "The UK job market sees a significant shift as employers invest in lifelong learning to enhance workforce capabilities. This trend offers students and graduates more chances to gain essential skills and improve employability. Internships are a valuable opportunity to gain practical experience and transition smoothly into full-time roles. Source: FE News.",
+            "x": "UK firms are prioritising workforce development for business resilience, offering more opportunities for students to upskill. Internships help bridge the gap. (Source: FE News)",
+            "threads": "In the UK, employers are investing in workforce development, focusing on lifelong learning for business strength. Students and grads benefit with more chances to upskill and gain experience through internships. Learn more at www.internwise.co.uk Source: FE News."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#lifelonglearning",
+              "#ukjobs",
+              "#internships",
+              "#careergrowth",
+              "#workforceskills"
+            ],
+            "linkedin": [
+              "#lifelonglearning",
+              "#ukjobs",
+              "#internships"
+            ],
+            "x": [
+              "#lifelonglearning",
+              "#ukjobs"
+            ]
+          }
         }
       ]
     }
