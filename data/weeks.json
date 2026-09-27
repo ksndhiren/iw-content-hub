@@ -5601,6 +5601,58 @@
           }
         }
       ]
+    },
+    {
+      "id": "week18",
+      "label": "Week 18",
+      "weekCommencing": "2026-09-28",
+      "builtAt": 1790506910,
+      "posts": [
+        {
+          "id": "week18-mon-news",
+          "day": "Mon 28 Sep",
+          "lane": "news",
+          "title": "UK Students Discuss Loaning Small Sums",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "A survey looked into how small a sum UK friends would ask each other to repay. Opinions varied on what amount is considered worth asking back. This insight encourages students and graduates to consider how they manage small financial interactions and their potential impact on relationships. Internships can be a great way to learn financial skills, preparing you for real-world challenges. Source: BBC Business.",
+          "hashtags": [
+            "#financeskills",
+            "#studentlife",
+            "#internships",
+            "#ukjobs",
+            "#careergrowth"
+          ],
+          "captions": {
+            "ig-fb": "A survey looked into how small a sum UK friends would ask each other to repay. Opinions varied on what amount is considered worth asking back. This insight encourages students and graduates to consider how they manage small financial interactions and their potential impact on relationships. Internships can be a great way to learn financial skills, preparing you for real-world challenges. Source: BBC Business.",
+            "linkedin": "A survey investigated the smallest amounts UK friends would ask each other to repay. The results showed diverse opinions on what constitutes a noteworthy amount. For students and graduates, this highlights the importance of handling small financial matters wisely, as these can influence relationships. Internships offer practical experience in managing finances, a skill that's invaluable in the workplace. Source: BBC Business.",
+            "x": "Survey reveals how small a sum UK friends would ask each other to repay. Insights show varied views, highlighting the importance of financial management for students. Internships can boost these skills. (Source: BBC Business)",
+            "threads": "Survey finds UK friends have varied views on the smallest amounts they'd ask each other to repay. This emphasizes the importance of managing small finances wisely, especially for students. Internships can develop these skills. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#financeskills",
+              "#studentlife",
+              "#internships",
+              "#ukjobs",
+              "#careergrowth"
+            ],
+            "linkedin": [
+              "#financeskills",
+              "#internships",
+              "#ukstudents"
+            ],
+            "x": [
+              "#financeskills",
+              "#internships"
+            ]
+          }
+        }
+      ]
     }
   ]
 }
