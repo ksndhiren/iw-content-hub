@@ -1,9 +1,9 @@
 """News lane - THE fixed template (the only templated lane in the Daily-5 system).
 
 A single 1080x1080 rendered as a real NEWSPAPER FRONT PAGE (per client refs):
-aged newsprint, big serif masthead nameplate, double rules, a VOL/NO/date line,
-a section header, a full-width headline, then TWO justified serif columns plus a
-sidebar box and a pull-quote. On-screen it is a BRIEF - the full story + source
+aged newsprint, big serif masthead nameplate, date/section line,
+a full-width headline, then TWO justified serif columns plus a sidebar box and
+a pull-quote. Do not use fake volume/issue metadata. On-screen it is a BRIEF - the full story + source
 go in the caption, so the foot points the reader there.
 
     from news_card import render_news
@@ -80,19 +80,20 @@ def render_news(item, out_dir, filename="slide_1.png", issue_no=1,
     # --- Masthead ---
     m = (_rule(X, 36, W, "double")
          + f"<div style='position:absolute;left:0;right:0;top:50px;text-align:center;"
-           f"font-family:{SERIF};font-weight:700;font-size:104px;line-height:.9;color:{INK};letter-spacing:3px;'>INTERNWISE</div>"
-         + f"<div style='position:absolute;left:0;right:0;top:162px;text-align:center;"
+           f"font-family:{SERIF};font-weight:700;font-size:96px;line-height:.9;color:{INK};letter-spacing:3px;'>INTERNWISE</div>"
+         + f"<div style='position:absolute;left:0;right:0;top:152px;text-align:center;"
            f"font-family:{SERIF};font-style:italic;font-size:24px;color:{SUB};letter-spacing:2px;'>Your Internship Specialist</div>"
-         + _rule(X, 200, W, "double"))
+         + _rule(X, 190, W, "double"))
     dot = f"<span style='color:{AMBER};font-size:20px;vertical-align:middle;'>&#10022;</span>"
-    info = (f"<div style='position:absolute;left:0;right:0;top:214px;text-align:center;"
-            f"font-family:'DM Sans';font-weight:700;font-size:18px;color:{INK};letter-spacing:2px;'>"
-            f"VOL. I &nbsp; NO. {issue_no:02d} &nbsp;&nbsp;{dot}&nbsp;&nbsp; INTERNWISE.CO.UK &nbsp;&nbsp;{dot}&nbsp;&nbsp; {dstr}</div>"
+    info = (f"<div style='position:absolute;left:{X}px;top:206px;width:{W}px;display:flex;align-items:center;justify-content:space-between;'>"
+            f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:18px;color:{INK};letter-spacing:2px;\">THE INTERNWISE WIRE</span>"
+            f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:18px;color:{INK};letter-spacing:2px;\">{kicker} BRIEFING</span>"
+            f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:18px;color:{INK};letter-spacing:2px;\">{dstr}</span></div>"
             + _rule(X, 246, W, "double"))
 
     # --- Section header ---
     sec = (f"<div style='position:absolute;left:0;right:0;top:260px;text-align:center;"
-           f"font-family:{SERIF};font-weight:700;font-size:44px;color:{INK};letter-spacing:2px;'>{kicker} NEWS</div>"
+           f"font-family:{SERIF};font-weight:700;font-size:44px;color:{INK};letter-spacing:2px;'>NEWS ARTICLE</div>"
            + _rule(X, 324, W, "heavy"))
 
     # --- Headline + byline + two columns as ONE top-anchored flex column ---
