@@ -838,6 +838,7 @@
   /* Shared status store (Cloudflare KV via /api/statuses). Falls back silently to
      localStorage-only if the endpoint isn't configured yet. */
   async function fetchRemoteStatuses() {
+    if (IS_LOCAL) return;
     try {
       const res = await fetch(STATUS_API, { cache: 'no-store' });
       if (!res.ok) return;                         // 501 = KV not bound yet
@@ -852,6 +853,7 @@
   }
 
   function pushRemoteStatus(postId, status) {
+    if (IS_LOCAL) return;
     try {
       fetch(STATUS_API, {
         method: 'POST',

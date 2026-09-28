@@ -9,7 +9,7 @@
  * endpoints return 501 and the dashboard silently falls back to localStorage.
  */
 const KEY = 'statuses';
-const VALID = ['in-review', 'approved', 'declined'];
+const VALID = ['script-ready', 'in-review', 'approved', 'declined'];
 
 export async function onRequestGet({ env }) {
   if (!env.STATUSES) return json({ error: 'kv-not-configured' }, 501);
