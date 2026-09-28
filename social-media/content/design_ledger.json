@@ -169,6 +169,21 @@
       "lane": "quote",
       "week": "week17",
       "world": "stamp"
+    },
+    {
+      "lane": "quote",
+      "week": "week18",
+      "world": "spotlight"
+    },
+    {
+      "lane": "employer",
+      "week": "week18",
+      "world": "process"
+    },
+    {
+      "lane": "edu_carousel",
+      "week": "week18",
+      "world": "plum"
     }
   ]
 }

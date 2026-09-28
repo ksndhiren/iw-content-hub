@@ -275,8 +275,9 @@ def build(days=5, dry=False):
     week_quotes = [qids[(qstart + i) % len(qids)] for i in range(5)]
 
     # DESIGN SELECTION goes through the no-repeat ledger (the hard rule: a new
-    # design per post every week). Each lane picks worlds NOT used in recent weeks;
-    # recorded after a successful build. Replaces the old week_offset rotation.
+    # design direction per post every week). Each lane picks worlds NOT used in
+    # the recent lookback window; if the bank is too shallow, design_ledger raises
+    # instead of silently reusing a stale look. Replaces the old week_offset rotation.
     q_worlds = design_ledger.pick("quote", QUOTE_WORLDS, days, wid)
     emp_days = sorted(d for d in EMPLOYER_DAYS if d < days)
     emp_worlds = design_ledger.pick("employer", EMPLOYER_WORLDS, len(emp_days), wid)

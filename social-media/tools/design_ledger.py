@@ -2,10 +2,9 @@
 
 Every lane picks its per-post art-directions ("worlds") THROUGH this ledger instead
 of a fixed weekly rotation. The ledger records which worlds each lane used each week
-and, when picking, EXCLUDES any world used in the last `avoid_weeks` weeks - so a
-design never repeats week-to-week while the bank is deep enough. When a bank is too
-shallow to avoid all recent worlds, it falls back to the least-recently-used ones
-(and that shortfall is the signal to author more worlds for that lane).
+and, when picking, EXCLUDES any world used in the recent lookback window. If the
+bank is too shallow, the build fails instead of silently shipping stale creative.
+Set IW_ALLOW_STALE_DESIGN=1 only for an explicit emergency fallback.
 
   worlds = design_ledger.pick("quote", QUOTE_WORLDS, 5, "week16")   # choose + reserve
   design_ledger.record("quote", "week16", worlds)                    # commit after render
@@ -18,6 +17,13 @@ import os, json
 HERE = os.path.dirname(os.path.abspath(__file__))
 SM = os.path.dirname(HERE)
 LEDGER = os.path.join(SM, "content", "design_ledger.json")
+DEFAULT_AVOID_WEEKS = 2
+ALLOW_STALE_ENV = "IW_ALLOW_STALE_DESIGN"
+
+
+class DesignFreshnessError(RuntimeError):
+    """Raised when a lane cannot satisfy the weekly fresh-direction rule."""
+
 
 
 def _weeknum(wid):
@@ -49,21 +55,44 @@ def _last_used(used, lane):
     return lu
 
 
-def pick(lane, bank, n, wid, avoid_weeks=1):
-    """Choose `n` worlds for `lane`/`wid`: prefer worlds NOT used in the last
-    `avoid_weeks` weeks, least-recently-used first; top up by LRU if the bank is
-    too shallow. Deterministic given the ledger + bank. Does not write."""
-    used = _load().get("used", [])
+def stale_fallback_allowed():
+    return os.getenv(ALLOW_STALE_ENV, "").strip().lower() in {"1", "true", "yes", "on"}
+
+
+def _recent_weeks(used, lane, wid, avoid_weeks):
     wn = _weeknum(wid)
-    recent_weeks = sorted({_weeknum(u["week"]) for u in used
-                           if u.get("lane") == lane and _weeknum(u["week"]) != wn}, reverse=True)[:avoid_weeks]
-    blocked = {u["world"] for u in used
-               if u.get("lane") == lane and _weeknum(u["week"]) in recent_weeks}
+    return sorted({_weeknum(u["week"]) for u in used
+                   if u.get("lane") == lane and _weeknum(u["week"]) != wn},
+                  reverse=True)[:avoid_weeks]
+
+
+def _blocked_worlds(used, lane, recent_weeks):
+    return {u["world"] for u in used
+            if u.get("lane") == lane and _weeknum(u["week"]) in recent_weeks}
+
+
+def pick(lane, bank, n, wid, avoid_weeks=DEFAULT_AVOID_WEEKS, strict=True):
+    """Choose `n` worlds for `lane`/`wid`: prefer worlds NOT used in the last
+    `avoid_weeks` weeks, least-recently-used first. In strict mode, fail if the
+    bank cannot satisfy the rule. Deterministic given the ledger + bank. Does not
+    write."""
+    used = _load().get("used", [])
+    recent_weeks = _recent_weeks(used, lane, wid, avoid_weeks)
+    blocked = _blocked_worlds(used, lane, recent_weeks)
     lu = _last_used(used, lane)
     fresh = sorted([w for w in bank if w not in blocked], key=lambda w: lu.get(w, -1))
     if len(fresh) >= n:
         return fresh[:n]
-    # bank too shallow to fully avoid recent worlds -> fill remainder by LRU.
+    if strict and not stale_fallback_allowed():
+        missing = n - len(fresh)
+        weeks = ", ".join(f"week{w}" for w in recent_weeks) or "recent weeks"
+        raise DesignFreshnessError(
+            f"{lane} needs {n} fresh design direction(s) for {wid}, but only "
+            f"{len(fresh)} are available after blocking {weeks}. Add at least "
+            f"{missing} new {lane} world(s), or set {ALLOW_STALE_ENV}=1 for an "
+            "explicit one-off stale-design fallback."
+        )
+    print(f"WARNING: stale design fallback for {lane}/{wid}; add {n - len(fresh)} new world(s).")
     rest = sorted([w for w in bank if w in blocked], key=lambda w: lu.get(w, -1))
     return (fresh + rest)[:n]
 
@@ -77,14 +106,11 @@ def record(lane, wid, worlds):
     _save(d)
 
 
-def shortfall(lane, bank, n, wid, avoid_weeks=1):
+def shortfall(lane, bank, n, wid, avoid_weeks=DEFAULT_AVOID_WEEKS):
     """How many posts this week are forced to reuse a recent world (0 = fully fresh).
     A positive number means author that many more worlds for the lane."""
     used = _load().get("used", [])
-    wn = _weeknum(wid)
-    recent_weeks = sorted({_weeknum(u["week"]) for u in used
-                           if u.get("lane") == lane and _weeknum(u["week"]) != wn}, reverse=True)[:avoid_weeks]
-    blocked = {u["world"] for u in used
-               if u.get("lane") == lane and _weeknum(u["week"]) in recent_weeks}
+    recent_weeks = _recent_weeks(used, lane, wid, avoid_weeks)
+    blocked = _blocked_worlds(used, lane, recent_weeks)
     fresh = [w for w in bank if w not in blocked]
     return max(0, n - len(fresh))

@@ -5606,49 +5606,209 @@
       "id": "week18",
       "label": "Week 18",
       "weekCommencing": "2026-09-28",
-      "builtAt": 1790506910,
+      "builtAt": 1790619418,
       "posts": [
+        {
+          "id": "week18-mon-quote",
+          "day": "Mon 28 Sep",
+          "lane": "quote",
+          "title": "Quote: Chris Grosser",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Feeling stuck? Remember, opportunities aren't handed out - they're crafted. Just like Chris Grosser said, 'Opportunities don't happen. You create them.' Dive into building your future by exploring internships that align with your goals. Visit www.internwise.co.uk to start your journey today!",
+          "hashtags": [
+            "#careerjourney",
+            "#internshipopportunities",
+            "#futureready",
+            "#createyourpath",
+            "#internwiseuk"
+          ],
+          "captions": {
+            "ig-fb": "Feeling stuck? Remember, opportunities aren't handed out - they're crafted. Just like Chris Grosser said, 'Opportunities don't happen. You create them.' Dive into building your future by exploring internships that align with your goals. Visit www.internwise.co.uk to start your journey today!",
+            "linkedin": "Chris Grosser nailed it: 'Opportunities don't happen. You create them.' In the world of internships and graduate jobs, taking charge of your career path is essential. Whether it's gaining new skills or building professional networks, you hold the power to shape your future. Ready to carve out your own path? Head over to internwise.co.uk and discover opportunities that suit your ambitions.",
+            "x": "Chris Grosser said it best: 'Opportunities don't happen. You create them.' Take charge of your career journey. Start exploring at internwise.co.uk!"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careerjourney",
+              "#internshipopportunities",
+              "#futureready",
+              "#createyourpath",
+              "#internwiseuk"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internships",
+              "#createopportunities"
+            ],
+            "x": [
+              "#careeradvice",
+              "#internships"
+            ]
+          },
+          "world": "spotlight"
+        },
+        {
+          "id": "week18-mon-employer",
+          "day": "Mon 28 Sep",
+          "lane": "employer",
+          "title": "From role posted to intern onboarded",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Hiring managers, simplify your intern recruitment process with Internwise. From posting a role to onboarding a talented intern, we make it seamless. Register in just 3 minutes, post unlimited vacancies, and manage everything in one place. Start building your next dream team today at www.internwise.co.uk.",
+          "hashtags": [
+            "#internrecruitment",
+            "#hiringsimplified",
+            "#careergrowth",
+            "#futureleaders",
+            "#internwiseuk"
+          ],
+          "captions": {
+            "ig-fb": "Hiring managers, simplify your intern recruitment process with Internwise. From posting a role to onboarding a talented intern, we make it seamless. Register in just 3 minutes, post unlimited vacancies, and manage everything in one place. Start building your next dream team today at www.internwise.co.uk.",
+            "linkedin": "Streamline your intern hiring process with Internwise. From posting roles to onboarding, do it all in one spot. Register in 3 minutes and post unlimited vacancies. Efficient and straightforward, we're here to help you build a strong team effortlessly. Discover more at internwise.co.uk.",
+            "x": "Hiring made easy: From posting roles to onboarding, manage it all with Internwise. Register in 3 mins and post unlimited vacancies. internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internrecruitment",
+              "#hiringsimplified",
+              "#careergrowth",
+              "#futureleaders",
+              "#internwiseuk"
+            ],
+            "linkedin": [
+              "#internrecruitment",
+              "#talentmanagement",
+              "#internwiseuk"
+            ],
+            "x": [
+              "#hiresmart",
+              "#internwiseuk"
+            ]
+          },
+          "world": "process"
+        },
+        {
+          "id": "week18-mon-education",
+          "day": "Mon 28 Sep",
+          "lane": "education",
+          "title": "Is Your Cover Letter Too Polite?",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
+          ],
+          "status": "in-review",
+          "caption": "Stop wasting the first paragraph of your cover letter on politeness. Dive into the role's problem and show how you're the solution. Use specific details to stand out and make your CV believable. Want more practical tips? Visit www.internwise.co.uk.",
+          "hashtags": [
+            "#coverlettertips",
+            "#jobsearch",
+            "#careeradvice",
+            "#graduatejobs",
+            "#internshipadvice"
+          ],
+          "captions": {
+            "ig-fb": "Stop wasting the first paragraph of your cover letter on politeness. Dive into the role's problem and show how you're the solution. Use specific details to stand out and make your CV believable. Want more practical tips? Visit www.internwise.co.uk.",
+            "linkedin": "Your cover letter should get straight to the point. Most students waste the first paragraph being overly polite. Instead, lead with the role problem and connect it to a specific proof point. This makes your CV more believable and your application stronger. For more insights, head to internwise.co.uk.",
+            "x": "Is your cover letter too polite? Skip the niceties and dive into the role's problem. Make your CV more believable. Check internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#coverlettertips",
+              "#jobsearch",
+              "#careeradvice",
+              "#graduatejobs",
+              "#internshipadvice"
+            ],
+            "linkedin": [
+              "#coverlettertips",
+              "#careeradvice",
+              "#internships"
+            ],
+            "x": [
+              "#coverlettertips",
+              "#careeradvice"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Cover Letter",
+            "headline": "Is Your Cover Letter Too Polite?",
+            "tone": "practical",
+            "slides": [
+              {
+                "tag": "Opening Line",
+                "title": "Connect to the Role",
+                "body": "Avoid repeating enthusiasm. Show how you fit."
+              },
+              {
+                "tag": "Be Specific",
+                "title": "Focus on One Detail",
+                "body": "Mention a specific role detail. Skip generic praise."
+              },
+              {
+                "tag": "Support Your CV",
+                "title": "Make CV Believable",
+                "body": "Your letter should reinforce your CV. Prove your skills."
+              }
+            ],
+            "points": null,
+            "cta": "Find more tips at internwise.co.uk"
+          },
+          "world": "plum"
+        },
         {
           "id": "week18-mon-news",
           "day": "Mon 28 Sep",
           "lane": "news",
-          "title": "UK Students Discuss Loaning Small Sums",
+          "title": "Job Boost for Young Disabled People",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "approved",
-          "caption": "A survey looked into how small a sum UK friends would ask each other to repay. Opinions varied on what amount is considered worth asking back. This insight encourages students and graduates to consider how they manage small financial interactions and their potential impact on relationships. Internships can be a great way to learn financial skills, preparing you for real-world challenges. Source: BBC Business.",
+          "caption": "Great news for young disabled people in the UK! The government's Jobs Guarantee scheme is set to fast-track thousands into jobs, providing a much-needed boost for those facing employment barriers. This initiative is a major step towards greater workplace inclusion and offers a direct path to employment for many students and graduates. Internships are also key, offering valuable experience and helping you stand out. Source: Personnel Today.",
           "hashtags": [
-            "#financeskills",
-            "#studentlife",
-            "#internships",
             "#ukjobs",
-            "#careergrowth"
+            "#disabilityinclusion",
+            "#jobopportunities",
+            "#internships",
+            "#inclusiveworkplace"
           ],
           "captions": {
-            "ig-fb": "A survey looked into how small a sum UK friends would ask each other to repay. Opinions varied on what amount is considered worth asking back. This insight encourages students and graduates to consider how they manage small financial interactions and their potential impact on relationships. Internships can be a great way to learn financial skills, preparing you for real-world challenges. Source: BBC Business.",
-            "linkedin": "A survey investigated the smallest amounts UK friends would ask each other to repay. The results showed diverse opinions on what constitutes a noteworthy amount. For students and graduates, this highlights the importance of handling small financial matters wisely, as these can influence relationships. Internships offer practical experience in managing finances, a skill that's invaluable in the workplace. Source: BBC Business.",
-            "x": "Survey reveals how small a sum UK friends would ask each other to repay. Insights show varied views, highlighting the importance of financial management for students. Internships can boost these skills. (Source: BBC Business)",
-            "threads": "Survey finds UK friends have varied views on the smallest amounts they'd ask each other to repay. This emphasizes the importance of managing small finances wisely, especially for students. Internships can develop these skills. www.internwise.co.uk"
+            "ig-fb": "Great news for young disabled people in the UK! The government's Jobs Guarantee scheme is set to fast-track thousands into jobs, providing a much-needed boost for those facing employment barriers. This initiative is a major step towards greater workplace inclusion and offers a direct path to employment for many students and graduates. Internships are also key, offering valuable experience and helping you stand out. Source: Personnel Today.",
+            "linkedin": "The UK government's Jobs Guarantee scheme is offering a promising opportunity for thousands of young disabled people by fast-tracking them into jobs. This initiative aims to break down employment barriers and promote inclusivity in the workforce. For students and graduates, it's a chance to enter the job market with support and confidence. Internships complement this by providing essential experience and skills. Source: Personnel Today.",
+            "x": "UK's Jobs Guarantee scheme to fast-track young disabled people into jobs, supporting greater inclusivity in the workforce. (Source: Personnel Today)",
+            "threads": "Thousands of young disabled people in the UK will be fast-tracked into jobs under the government's Jobs Guarantee scheme. This effort aims to remove barriers to employment and promote inclusivity. Internships also play a vital role by providing practical experience. More at www.internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#financeskills",
-              "#studentlife",
-              "#internships",
               "#ukjobs",
-              "#careergrowth"
+              "#disabilityinclusion",
+              "#jobopportunities",
+              "#internships",
+              "#inclusiveworkplace"
             ],
             "linkedin": [
-              "#financeskills",
-              "#internships",
-              "#ukstudents"
+              "#ukjobs",
+              "#disabilityinclusion",
+              "#careerdevelopment"
             ],
             "x": [
-              "#financeskills",
-              "#internships"
+              "#ukjobs",
+              "#inclusion"
             ]
           }
         }
