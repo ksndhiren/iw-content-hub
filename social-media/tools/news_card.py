@@ -78,12 +78,12 @@ def render_news(item, out_dir, filename="slide_1.png", issue_no=1,
              f"<div style='position:absolute;inset:0;background:radial-gradient(120% 120% at 50% 40%,transparent 60%,rgba(80,60,20,.10));'></div>")
 
     # --- Masthead ---
-    m = (_rule(X, 36, W, "double")
-         + f"<div style='position:absolute;left:0;right:0;top:50px;text-align:center;"
-           f"font-family:{SERIF};font-weight:700;font-size:86px;line-height:.9;color:{INK};letter-spacing:2px;'>INTERNWISE</div>"
-         + f"<div style='position:absolute;left:0;right:0;top:152px;text-align:center;"
-           f"font-family:{SERIF};font-style:italic;font-size:23px;color:{SUB};letter-spacing:2px;'>Your Internship Specialist</div>"
-         + _rule(X, 190, W, "double"))
+    # Brand header only: Internwise blue band + real white logo. The article body
+    # stays on newsprint so the post still reads as a news article, not a poster.
+    m = (f"<div style='position:absolute;left:0;right:0;top:0;height:190px;background:{L.NAVY};'></div>"
+         + f"<div style='position:absolute;left:{X}px;right:{X}px;top:32px;height:3px;background:rgba(255,255,255,.86);'></div>"
+         + f"<img src='{L.WHT}' style='position:absolute;left:50%;top:56px;transform:translateX(-50%);height:86px;'>"
+         + f"<div style='position:absolute;left:{X}px;right:{X}px;top:174px;height:5px;background:{AMBER};'></div>")
     dot = f"<span style='color:{AMBER};font-size:20px;vertical-align:middle;'>&#10022;</span>"
     info = (f"<div style='position:absolute;left:{X}px;top:206px;width:{W}px;display:flex;align-items:center;justify-content:space-between;'>"
             f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:18px;color:{INK};letter-spacing:2px;\">THE INTERNWISE WIRE</span>"
