@@ -3,64 +3,130 @@
   "label": "Featured Jobs",
   "posts": [
     {
-      "id": "job-35397",
-      "sourceId": "35397",
-      "sourceUrl": "https://www.internwise.co.uk/job/35397/events-marketing-assistant",
-      "addedAt": "2026-09-10T11:02:17Z",
-      "day": "Miss Jones Group Ltd",
-      "title": "Events & Marketing Assistant",
+      "id": "job-35390",
+      "sourceId": "35390",
+      "sourceUrl": "https://www.internwise.co.uk/job/35390/real-estate-marketing-internship-paid-part-time",
+      "day": "JBROWN GLOBAL LIMITED",
+      "title": "Real Estate Marketing Internship (Paid Part time)",
       "platform": "Featured Job",
       "format": "Single",
       "slides": [
-        "job-35397-2026-08-19-employers-sm-ads-v1.png"
+        "job-35390-2026-08-19-employers-sm-ads-v1.png"
       ],
       "status": "in-review",
-      "caption": "Ready to run real campaigns? Own content, socials and growth for a busy team.\n\n📍 London, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35397/events-marketing-assistant",
+      "caption": "FEATURED JOB: Real Estate Marketing Internship (Paid Part time) at JBROWN GLOBAL LIMITED\n\nCurious how property really works? Get hands-on with real projects across London.\n\nSector: Marketing / Advertising / Social Media\nLocation: Manchester, North West England\nType: Part-time\nDuration: 1 - 3 months\n\nApply now at internwise.co.uk (link in the post)",
       "hashtags": [
+        "#realestate",
+        "#propertyjobs",
         "#internship",
         "#londonjobs",
-        "#marketingjobs",
-        "#hiring",
         "#graduatejobs"
+      ]
+    },
+    {
+      "id": "job-35270",
+      "sourceId": "35270",
+      "sourceUrl": "https://www.internwise.co.uk/job/35270/real-estate-surveying-internship",
+      "day": "JBROWN GLOBAL LIMITED",
+      "title": "Real Estate Surveying Internship",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35270-2026-08-19-employers-sm-ads-v1.png"
       ],
-      "captions": {
-        "ig-fb": "Ready to run real campaigns? Own content, socials and growth for a busy team.\n\n📍 London, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35397/events-marketing-assistant",
-        "linkedin": "Ready to run real campaigns? Own content, socials and growth for a busy team.\n\n📍 London, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35397/events-marketing-assistant",
-        "x": "Ready to run real campaigns? Own content, socials and growth for a busy team.\n\n📍 London, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35397/events-marketing-assistant"
-      },
-      "hashtagsByPlatform": {
-        "ig-fb": [
-          "#internship",
-          "#londonjobs",
-          "#marketingjobs",
-          "#hiring",
-          "#graduatejobs"
-        ],
-        "linkedin": [
-          "#hiring",
-          "#internship",
-          "#marketingjobs",
-          "#careers"
-        ],
-        "x": [
-          "#marketingjobs",
-          "#hiring"
-        ]
-      },
-      "sector": "Marketing",
-      "sectorStyle": "marketing",
-      "palette": {
-        "version": "2026-08-19-employers-sm-ads-v1",
-        "style": "marketing",
-        "sector": "Marketing",
-        "accent": "#FF6B6B",
-        "accentDark": "#D2415C",
-        "background": [
-          "#7E2038",
-          "#C43F5C"
-        ],
-        "spark": "#D4FF3D"
-      }
+      "status": "in-review",
+      "caption": "FEATURED JOB: Real Estate Surveying Internship at JBROWN GLOBAL LIMITED\n\nCurious how property really works? Get hands-on with real projects across London.\n\nSector: Construction\nLocation: London, Central London\nType: Part-time/Full-time\nDuration: 7 - 12 months\n\nApply now at internwise.co.uk (link in the post)",
+      "hashtags": [
+        "#realestate",
+        "#propertyjobs",
+        "#internship",
+        "#londonjobs",
+        "#graduatejobs"
+      ]
+    },
+    {
+      "id": "job-35387",
+      "sourceId": "35387",
+      "sourceUrl": "https://www.internwise.co.uk/job/35387/marketing-internship",
+      "day": "M N K ACCOUNTANTS LTD",
+      "title": "Marketing Internship",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35387-2026-08-19-employers-sm-ads-v1.png"
+      ],
+      "status": "in-review",
+      "caption": "FEATURED JOB: Marketing Internship at M N K ACCOUNTANTS LTD\n\nReady to run real campaigns? Own content, socials and growth for a busy team.\n\nSector: Marketing / Advertising / Social Media\nLocation: Camden Town / London, Central London\nType: Part-time\nDuration: 7 - 12 months\n\nApply now at internwise.co.uk (link in the post)",
+      "hashtags": [
+        "#marketingjobs",
+        "#socialmedia",
+        "#internship",
+        "#londonjobs",
+        "#graduatejobs"
+      ]
+    },
+    {
+      "id": "job-35321",
+      "sourceId": "35321",
+      "sourceUrl": "https://www.internwise.co.uk/job/35321/social-media-and-content-intern-home-staging",
+      "day": "LONDON PROPERTY STAGING LTD",
+      "title": "Social Media and Content Intern - Home Staging",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35321-2026-08-19-employers-sm-ads-v1.png"
+      ],
+      "status": "in-review",
+      "caption": "FEATURED JOB: Social Media and Content Intern - Home Staging at LONDON PROPERTY STAGING LTD\n\nLove creating scroll-stopping content? Shoot, edit and post for a real brand.\n\nSector: Photography / Videography\nLocation: London, Greater London\nType: Part-time\nDuration: 1 - 3 months\n\nApply now at internwise.co.uk (link in the post)",
+      "hashtags": [
+        "#contentcreator",
+        "#socialmedia",
+        "#internship",
+        "#londonjobs",
+        "#graduatejobs"
+      ]
+    },
+    {
+      "id": "job-35396",
+      "sourceId": "35396",
+      "sourceUrl": "https://www.internwise.co.uk/job/35396/sales-marketing-internship",
+      "day": "KARMAH LTD",
+      "title": "Sales & Marketing Internship",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35396-2026-08-19-employers-sm-ads-v1.png"
+      ],
+      "status": "in-review",
+      "caption": "FEATURED JOB: Sales & Marketing Internship at KARMAH LTD\n\nReady to run real campaigns? Own content, socials and growth for a busy team.\n\nSector: Sales\nLocation: London, Central London\nType: Part-time/Full-time\nDuration: 4 - 6 months\n\nApply now at internwise.co.uk (link in the post)",
+      "hashtags": [
+        "#marketingjobs",
+        "#socialmedia",
+        "#internship",
+        "#londonjobs",
+        "#graduatejobs"
+      ]
+    },
+    {
+      "id": "job-35399",
+      "sourceId": "35399",
+      "sourceUrl": "https://www.internwise.co.uk/job/35399/delegate-relations-executive-sales",
+      "day": "QATALYST GLOBAL LIMITED",
+      "title": "Delegate Relations Executive (Sales)",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35399-2026-08-19-employers-sm-ads-v1.png"
+      ],
+      "status": "in-review",
+      "caption": "FEATURED JOB: Delegate Relations Executive (Sales) at QATALYST GLOBAL LIMITED\n\nA natural at winning people over? Learn to pitch, close and grow real revenue.\n\nSector: Business Management / Development\nLocation: London / Hybrid , Greater London\nType: Part-time/Full-time\nDuration: +12 months\n\nApply now at internwise.co.uk (link in the post)",
+      "hashtags": [
+        "#salesjobs",
+        "#businessdevelopment",
+        "#internship",
+        "#londonjobs",
+        "#graduatejobs"
+      ]
     }
   ]
 }
