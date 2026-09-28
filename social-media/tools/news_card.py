@@ -82,19 +82,18 @@ def render_news(item, out_dir, filename="slide_1.png", issue_no=1,
     # stays on newsprint so the post still reads as a news article, not a poster.
     m = (f"<div style='position:absolute;left:0;right:0;top:0;height:190px;background:{L.NAVY};'></div>"
          + f"<div style='position:absolute;left:{X}px;right:{X}px;top:32px;height:3px;background:rgba(255,255,255,.86);'></div>"
-         + f"<img src='{L.WHT}' style='position:absolute;left:50%;top:56px;transform:translateX(-50%);height:86px;'>"
+         + f"<img src='{L.WHT}' style='position:absolute;left:50%;top:56px;transform:translateX(-50%);height:112px;'>"
          + f"<div style='position:absolute;left:{X}px;right:{X}px;top:174px;height:5px;background:{AMBER};'></div>")
     dot = f"<span style='color:{AMBER};font-size:20px;vertical-align:middle;'>&#10022;</span>"
     info = (f"<div style='position:absolute;left:{X}px;top:206px;width:{W}px;display:flex;align-items:center;justify-content:space-between;'>"
             f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:18px;color:{INK};letter-spacing:2px;\">THE INTERNWISE WIRE</span>"
-            f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:18px;color:{INK};letter-spacing:2px;\">{kicker} BRIEFING</span>"
             f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:18px;color:{INK};letter-spacing:2px;\">{dstr}</span></div>"
             + _rule(X, 246, W, "double"))
 
     # --- Section header ---
-    sec = (f"<div style='position:absolute;left:0;right:0;top:260px;text-align:center;"
-           f"font-family:{SERIF};font-weight:700;font-size:44px;color:{INK};letter-spacing:2px;'>{kicker} NEWS</div>"
-           + _rule(X, 324, W, "heavy"))
+    sec = (f"<div style='position:absolute;left:{X}px;right:{X}px;top:256px;height:76px;background:#fff;"
+           f"border-top:3px solid {RULE};border-bottom:3px solid {RULE};display:flex;align-items:center;justify-content:center;'>"
+           f"<span style='font-family:{SERIF};font-weight:700;font-size:44px;color:{INK};letter-spacing:2px;'>{kicker} NEWS</span></div>")
 
     # --- Headline + byline + two columns as ONE top-anchored flex column ---
     # The wrapped height of a proportional serif headline cannot be predicted
@@ -106,14 +105,14 @@ def render_news(item, out_dir, filename="slide_1.png", issue_no=1,
     HEAD_TOP = 340
     stack_h = FOOT_Y - HEAD_TOP
 
-    head = (f"<div style='flex:0 0 auto;text-align:left;font-family:{SERIF};font-weight:700;"
+    head = (f"<div style='flex:0 0 auto;text-align:center;font-family:{SERIF};font-weight:700;"
             f"font-size:{min(hsize + 8, 82)}px;line-height:.98;color:{INK};letter-spacing:-.5px;word-break:keep-all;text-transform:none;'>{title_disp}</div>")
 
     byline = (f"<div style='flex:0 0 auto;margin-top:16px;'>"
               f"<div style='width:100%;height:1.5px;background:{RULE};opacity:.55;'></div>"
               f"<div style=\"margin-top:11px;text-align:left;font-family:'DM Sans';font-weight:800;"
               f"font-size:18px;color:{SUB};letter-spacing:3px;\">"
-              f"THE INTERNWISE WIRE &nbsp;&#10022;&nbsp; {kicker.title()} Briefing</div></div>")
+              f"THE INTERNWISE WIRE</div></div>")
 
     # left column: drop cap + justified body paragraphs
     drop = brief[0][:1] if brief and brief[0] else ""
