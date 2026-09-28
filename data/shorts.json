@@ -1,13 +1,13 @@
 {
   "id": "shorts",
   "label": "Shorts / Reels",
-  "generatedAt": "2026-09-21T10:29:41.512820+00:00",
+  "generatedAt": "2026-09-28T11:33:02.137389+00:00",
   "status": "automated-topic-research",
   "posts": [
     {
-      "id": "auto-2026-09-21-auto-the-cv-line-recruiters-skip",
+      "id": "auto-2026-09-28-auto-the-cv-line-recruiters-skip",
       "topicId": "auto-the-cv-line-recruiters-skip",
-      "weekId": "auto-2026-09-21",
+      "weekId": "auto-2026-09-28",
       "day": "Auto",
       "title": "The CV Line Recruiters Skip",
       "platform": "TikTok / Reels / Shorts",
@@ -15,9 +15,9 @@
       "status": "script-ready",
       "durationTargetSeconds": 52,
       "viralScore": 100.0,
-      "signalScore": 97.9,
-      "scriptPath": "social-media/video/scripts/auto-2026-09-21/auto-the-cv-line-recruiters-skip/script.json",
-      "briefPath": "social-media/video/scripts/auto-2026-09-21/auto-the-cv-line-recruiters-skip/brief.md",
+      "signalScore": 94.7,
+      "scriptPath": "social-media/video/scripts/auto-2026-09-28/auto-the-cv-line-recruiters-skip/script.json",
+      "briefPath": "social-media/video/scripts/auto-2026-09-28/auto-the-cv-line-recruiters-skip/brief.md",
       "videoPath": null,
       "thumbnailPath": null,
       "heygenStatus": "manual",
@@ -84,11 +84,11 @@
       "sourceSignals": [
         {
           "source": "reddit_rss",
-          "title": "[3 YoE, Marketing Analyst, Marketing Analyst/Associate, United States remote job]",
-          "url": "https://www.reddit.com/r/resumes/comments/1wj5sai/3_yoe_marketing_analyst_marketing/",
-          "score": 98.9,
+          "title": "new grad, what am I doing wrong?",
+          "url": "https://www.reddit.com/r/jobs/comments/1vn5d3z/new_grad_what_am_i_doing_wrong/",
+          "score": 109.0,
           "meta": {
-            "feed": "Resumes - internship"
+            "feed": "Jobs - graduate rejection"
           }
         },
         {
@@ -102,56 +102,56 @@
         },
         {
           "source": "reddit_rss",
-          "title": "[0 YoE, Unemployed, Electrical Engineering Internship, Canada]",
-          "url": "https://www.reddit.com/r/resumes/comments/1wlxvsl/0_yoe_unemployed_electrical_engineering/",
-          "score": 73.6,
+          "title": "I am getting rejected because of visa situation and now I am confused!",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1wq1uca/i_am_getting_rejected_because_of_visa_situation/",
+          "score": 71.5,
           "meta": {
-            "feed": "Resumes - internship"
+            "feed": "UK jobs - internship CV"
           }
         },
         {
           "source": "reddit_rss",
-          "title": "[0 YoE, Student/Unemployed, Marketing Assistant, USA]",
-          "url": "https://www.reddit.com/r/resumes/comments/1wgih8r/0_yoe_studentunemployed_marketing_assistant_usa/",
-          "score": 72.45,
+          "title": "Advice for recent college grads?",
+          "url": "https://www.reddit.com/r/jobs/comments/1vocg5b/advice_for_recent_college_grads/",
+          "score": 64.0,
           "meta": {
-            "feed": "Resumes - internship"
+            "feed": "Jobs - graduate rejection"
+          }
+        },
+        {
+          "source": "seed_question",
+          "title": "why is my internship CV rejected",
+          "url": "",
+          "score": 64.0,
+          "meta": {
+            "configured": true
           }
         },
         {
           "source": "reddit_rss",
-          "title": "[0 YoE, 5th Semester CSE Student, Cloud/DevOps Intern, India]",
-          "url": "https://www.reddit.com/r/resumes/comments/1wjj5g9/0_yoe_5th_semester_cse_student_clouddevops_intern/",
-          "score": 70.15,
+          "title": "Need some Advice",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1tcbujl/need_some_advice/",
+          "score": 60.5,
           "meta": {
-            "feed": "Resumes - internship"
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "[0 YoE, Tier 1 Helpdesk, Jr Software Engineer, United States]",
-          "url": "https://www.reddit.com/r/resumes/comments/1wgkiyh/0_yoe_tier_1_helpdesk_jr_software_engineer_united/",
-          "score": 65.55,
-          "meta": {
-            "feed": "Resumes - internship"
+            "feed": "UK jobs - internship CV"
           }
         }
       ]
     },
     {
-      "id": "auto-2026-09-21-auto-the-interview-answer-that-sounds-too-generic",
+      "id": "auto-2026-09-28-auto-the-interview-answer-that-sounds-too-generic",
       "topicId": "auto-the-interview-answer-that-sounds-too-generic",
-      "weekId": "auto-2026-09-21",
+      "weekId": "auto-2026-09-28",
       "day": "Auto",
       "title": "The Interview Answer That Sounds Too Generic",
       "platform": "TikTok / Reels / Shorts",
       "format": "Short/Reel",
       "status": "script-ready",
       "durationTargetSeconds": 52,
-      "viralScore": 89.2,
-      "signalScore": 74.6,
-      "scriptPath": "social-media/video/scripts/auto-2026-09-21/auto-the-interview-answer-that-sounds-too-generic/script.json",
-      "briefPath": "social-media/video/scripts/auto-2026-09-21/auto-the-interview-answer-that-sounds-too-generic/brief.md",
+      "viralScore": 100.0,
+      "signalScore": 87.7,
+      "scriptPath": "social-media/video/scripts/auto-2026-09-28/auto-the-interview-answer-that-sounds-too-generic/script.json",
+      "briefPath": "social-media/video/scripts/auto-2026-09-28/auto-the-interview-answer-that-sounds-too-generic/brief.md",
       "videoPath": null,
       "thumbnailPath": null,
       "heygenStatus": "manual",
@@ -195,6 +195,8 @@
         }
       ],
       "selectionRationale": [
+        "High candidate pain, likely to stop the scroll.",
+        "Concrete enough to feel immediately useful.",
         "Creates an open loop that earns the next few seconds.",
         "Has comment/share potential.",
         "Save-worthy practical takeaway."
@@ -225,6 +227,24 @@
         },
         {
           "source": "reddit_rss",
+          "title": "Laid off from my first job as a fresher, 700+ applications and 1 interview later. Trying to stay positive.",
+          "url": "https://www.reddit.com/r/jobs/comments/1vn63gv/laid_off_from_my_first_job_as_a_fresher_700/",
+          "score": 81.0,
+          "meta": {
+            "feed": "Jobs - graduate rejection"
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "Should I stay in this ETL support role or switch to WordPress developer? Does it have good long-term earning potential?",
+          "url": "https://www.reddit.com/r/jobs/comments/1w5639g/should_i_stay_in_this_etl_support_role_or_switch/",
+          "score": 76.0,
+          "meta": {
+            "feed": "Jobs - graduate rejection"
+          }
+        },
+        {
+          "source": "reddit_rss",
           "title": "Graduated July 2025 and got unlucky - Am I cooked? Need advice on next Steps!",
           "url": "https://www.reddit.com/r/UKJobs/comments/1vvdyeq/graduated_july_2025_and_got_unlucky_am_i_cooked/",
           "score": 53.9,
@@ -234,50 +254,28 @@
         },
         {
           "source": "reddit_rss",
-          "title": "Quitting low-skilled full-time job - bad look on corporate interviews?",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1k22kh0/quitting_lowskilled_fulltime_job_bad_look_on/",
-          "score": 48.4,
+          "title": "16 Years of Forecasting Experience, Perfect Driving Record: Still Terrified of the \"Interview Filter\u201d And perpetual rejection",
+          "url": "https://www.reddit.com/r/jobs/comments/1vvkyu8/16_years_of_forecasting_experience_perfect/",
+          "score": 51.0,
           "meta": {
-            "feed": "UK jobs - internship CV"
+            "feed": "Jobs - graduate rejection"
           }
         },
         {
-          "source": "seed_question",
-          "title": "why do I keep failing interviews",
-          "url": "",
-          "score": 44.0,
+          "source": "reddit_rss",
+          "title": "Rejected after the 3rd Interview",
+          "url": "https://www.reddit.com/r/jobs/comments/1wk3jr2/rejected_after_the_3rd_interview/",
+          "score": 46.0,
           "meta": {
-            "configured": true
-          }
-        },
-        {
-          "source": "youtube",
-          "title": "\ud83d\udd25 Top 10 Government Jobs in 2026 Without Interview | 10th, 12th & Graduate Jobs | Govt Jobs Update",
-          "url": "https://www.youtube.com/watch?v=59D5ZvEa8lg",
-          "score": 43.64,
-          "meta": {
-            "query": "graduate job interview tips shorts",
-            "views": 432896,
-            "views_per_day": 5411.2
-          }
-        },
-        {
-          "source": "youtube",
-          "title": "Use LinkedIn to get Internship!!\ud83d\ude80 #shorts #linkedin #interview",
-          "url": "https://www.youtube.com/watch?v=AFv5WT3xjoI",
-          "score": 43.04,
-          "meta": {
-            "query": "internship cv advice shorts",
-            "views": 1716,
-            "views_per_day": 10.4
+            "feed": "Jobs - graduate rejection"
           }
         }
       ]
     },
     {
-      "id": "auto-2026-09-21-auto-when-an-internship-should-be-paid",
+      "id": "auto-2026-09-28-auto-when-an-internship-should-be-paid",
       "topicId": "auto-when-an-internship-should-be-paid",
-      "weekId": "auto-2026-09-21",
+      "weekId": "auto-2026-09-28",
       "day": "Auto",
       "title": "When An Internship Should Be Paid",
       "platform": "TikTok / Reels / Shorts",
@@ -285,9 +283,9 @@
       "status": "script-ready",
       "durationTargetSeconds": 52,
       "viralScore": 89.2,
-      "signalScore": 71.7,
-      "scriptPath": "social-media/video/scripts/auto-2026-09-21/auto-when-an-internship-should-be-paid/script.json",
-      "briefPath": "social-media/video/scripts/auto-2026-09-21/auto-when-an-internship-should-be-paid/brief.md",
+      "signalScore": 78.2,
+      "scriptPath": "social-media/video/scripts/auto-2026-09-28/auto-when-an-internship-should-be-paid/script.json",
+      "briefPath": "social-media/video/scripts/auto-2026-09-28/auto-when-an-internship-should-be-paid/brief.md",
       "videoPath": null,
       "thumbnailPath": null,
       "heygenStatus": "manual",
@@ -352,6 +350,15 @@
       "sourceSignals": [
         {
           "source": "reddit_rss",
+          "title": "What can I do to avoid constant rejections and actually get a job?",
+          "url": "https://www.reddit.com/r/jobs/comments/1woyvqa/what_can_i_do_to_avoid_constant_rejections_and/",
+          "score": 72.0,
+          "meta": {
+            "feed": "Jobs - graduate rejection"
+          }
+        },
+        {
+          "source": "reddit_rss",
           "title": "Unpaid internship: Should I do it then claim NMW at the end?",
           "url": "https://www.reddit.com/r/UKJobs/comments/1qhkby2/unpaid_internship_should_i_do_it_then_claim_nmw/",
           "score": 63.8,
@@ -376,33 +383,42 @@
           "meta": {
             "feed": "UK jobs - internship CV"
           }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "College graduate struggling",
+          "url": "https://www.reddit.com/r/jobs/comments/1vvzeir/college_graduate_struggling/",
+          "score": 56.0,
+          "meta": {
+            "feed": "Jobs - graduate rejection"
+          }
         }
       ]
     },
     {
-      "id": "auto-2026-09-21-auto-1-yoe-technology-analyst-software-engineer-usa",
-      "topicId": "auto-1-yoe-technology-analyst-software-engineer-usa",
-      "weekId": "auto-2026-09-21",
+      "id": "auto-2026-09-28-auto-your-cover-letter-is-too-polite",
+      "topicId": "auto-your-cover-letter-is-too-polite",
+      "weekId": "auto-2026-09-28",
       "day": "Auto",
-      "title": "[1 YoE, Technology Analyst, Software Engineer, USA]",
+      "title": "Your Cover Letter Is Too Polite",
       "platform": "TikTok / Reels / Shorts",
       "format": "Short/Reel",
       "status": "script-ready",
       "durationTargetSeconds": 52,
       "viralScore": 89.2,
-      "signalScore": 69.1,
-      "scriptPath": "social-media/video/scripts/auto-2026-09-21/auto-1-yoe-technology-analyst-software-engineer-usa/script.json",
-      "briefPath": "social-media/video/scripts/auto-2026-09-21/auto-1-yoe-technology-analyst-software-engineer-usa/brief.md",
+      "signalScore": 69.0,
+      "scriptPath": "social-media/video/scripts/auto-2026-09-28/auto-your-cover-letter-is-too-polite/script.json",
+      "briefPath": "social-media/video/scripts/auto-2026-09-28/auto-your-cover-letter-is-too-polite/brief.md",
       "videoPath": null,
       "thumbnailPath": null,
       "heygenStatus": "manual",
-      "spokenScript": "Most students are trying to fix the wrong job-search problem. Let me turn this common job-search problem into a practical next step. First: Name the exact problem before choosing the fix. Second: Make one visible improvement instead of rewriting everything. Third: Track the result so you know whether the advice worked. The rule is simple: Make the next action specific enough that you can do it today. Save this for your next application session.",
+      "spokenScript": "Your cover letter should not start with politeness. Most students waste the first paragraph. Use it to prove fit. First: The opening line should connect to the role, not repeat your enthusiasm. Second: One specific company or role detail beats five generic compliments. Third: The letter should make the CV easier to believe. The rule is simple: Lead with the role problem, then connect one specific proof point. Save this before writing your next cover letter.",
       "scenePlan": [
         {
           "scene": 1,
           "target_seconds": 15,
-          "heygen_voiceover": "Most students are trying to fix the wrong job-search problem. Let me turn this common job-search problem into a practical next step.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: graduate-jobs. Scene setting: a modern internship interview waiting room with anxious candidates in soft focus behind Nuno. Camera: medium close-up, Nuno seated forward, direct eye contact, documentary realism. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Most students are trying to fix the wrong job-search problem. Let me turn this common job-search problem into a practical next step.",
+          "heygen_voiceover": "Your cover letter should not start with politeness. Most students waste the first paragraph. Use it to prove fit.",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: cover-letter. Scene setting: a modern internship interview waiting room with anxious candidates in soft focus behind Nuno. Camera: medium close-up, Nuno seated forward, direct eye contact, documentary realism. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Your cover letter should not start with politeness. Most students waste the first paragraph. Use it to prove fit.",
           "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a modern internship interview waiting room with anxious candidates in soft focus behind Nuno, medium close-up, Nuno seated forward, direct eye contact, documentary realism, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
           "effect": "slow push-in from chest-up to close-up",
           "transition_out": "fast whip pan into the next scene"
@@ -410,8 +426,8 @@
         {
           "scene": 2,
           "target_seconds": 15,
-          "heygen_voiceover": "First: Name the exact problem before choosing the fix. Second: Make one visible improvement instead of rewriting everything.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: graduate-jobs. Scene setting: a glass-walled interview room where a recruiter reviews a CV in the blurred background. Camera: over-the-shoulder depth, Nuno half-profile then turns to camera. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: First: Name the exact problem before choosing the fix. Second: Make one visible improvement instead of rewriting everything.",
+          "heygen_voiceover": "First: The opening line should connect to the role, not repeat your enthusiasm. Second: One specific company or role detail beats five generic compliments.",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: cover-letter. Scene setting: a glass-walled interview room where a recruiter reviews a CV in the blurred background. Camera: over-the-shoulder depth, Nuno half-profile then turns to camera. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: First: The opening line should connect to the role, not repeat your enthusiasm. Second: One specific company or role detail beats five generic compliments.",
           "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a glass-walled interview room where a recruiter reviews a CV in the blurred background, over-the-shoulder depth, Nuno half-profile then turns to camera, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
           "effect": "subtle parallax drift with a slow zoom out",
           "transition_out": "blur dissolve into evidence close-up"
@@ -419,8 +435,8 @@
         {
           "scene": 3,
           "target_seconds": 15,
-          "heygen_voiceover": "Third: Track the result so you know whether the advice worked. The rule is simple: Make the next action specific enough that you can do it today.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: graduate-jobs. Scene setting: a close-up CV review board with highlighted sections, sticky notes, and recruiter marks. Camera: Nuno beside the board, pointing to the strongest evidence area without readable text overlays. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Third: Track the result so you know whether the advice worked. The rule is simple: Make the next action specific enough that you can do it today.",
+          "heygen_voiceover": "Third: The letter should make the CV easier to believe. The rule is simple: Lead with the role problem, then connect one specific proof point.",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: cover-letter. Scene setting: a close-up CV review board with highlighted sections, sticky notes, and recruiter marks. Camera: Nuno beside the board, pointing to the strongest evidence area without readable text overlays. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Third: The letter should make the CV easier to believe. The rule is simple: Lead with the role problem, then connect one specific proof point.",
           "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a close-up CV review board with highlighted sections, sticky notes, and recruiter marks, Nuno beside the board, pointing to the strongest evidence area without readable text overlays, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
           "effect": "slow lateral slide from CV detail to Nuno's face",
           "transition_out": "match cut on Nuno's hand movement"
@@ -428,8 +444,8 @@
         {
           "scene": 4,
           "target_seconds": 15,
-          "heygen_voiceover": "Save this for your next application session.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: graduate-jobs. Scene setting: calm office corridor after the interview, warm Internwise navy and amber accents in the environment. Camera: confident close-up, Nuno walking slowly with the camera then stopping for the final line. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Save this for your next application session.",
+          "heygen_voiceover": "Save this before writing your next cover letter.",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: cover-letter. Scene setting: calm office corridor after the interview, warm Internwise navy and amber accents in the environment. Camera: confident close-up, Nuno walking slowly with the camera then stopping for the final line. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Save this before writing your next cover letter.",
           "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in calm office corridor after the interview, warm Internwise navy and amber accents in the environment, confident close-up, Nuno walking slowly with the camera then stopping for the final line, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
           "effect": "slow zoom out, slight background music lift",
           "transition_out": "fade to branded end card"
@@ -440,12 +456,12 @@
         "Has comment/share potential.",
         "Save-worthy practical takeaway."
       ],
-      "caption": "Most students are trying to fix the wrong job-search problem.\n\nMake the next action specific enough that you can do it today.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+      "caption": "Your cover letter should not start with politeness.\n\nLead with the role problem, then connect one specific proof point.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
       "captions": {
-        "instagram": "Most students are trying to fix the wrong job-search problem.\n\nMake the next action specific enough that you can do it today.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
-        "tiktok": "Most students are trying to fix the wrong job-search problem.\n\nMake the next action specific enough that you can do it today.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
-        "youtube": "Most students are trying to fix the wrong job-search problem.\n\nMake the next action specific enough that you can do it today.\n\n#internship #careeradvice #graduatejobs",
-        "linkedin": "Most students are trying to fix the wrong job-search problem.\n\nMake the next action specific enough that you can do it today.\n\nShort, practical, and built for students preparing for the next step.\n\n#careeradvice #earlycareers #graduatejobs"
+        "instagram": "Your cover letter should not start with politeness.\n\nLead with the role problem, then connect one specific proof point.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+        "tiktok": "Your cover letter should not start with politeness.\n\nLead with the role problem, then connect one specific proof point.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+        "youtube": "Your cover letter should not start with politeness.\n\nLead with the role problem, then connect one specific proof point.\n\n#internship #careeradvice #graduatejobs",
+        "linkedin": "Your cover letter should not start with politeness.\n\nLead with the role problem, then connect one specific proof point.\n\nShort, practical, and built for students preparing for the next step.\n\n#careeradvice #earlycareers #graduatejobs"
       },
       "hashtags": [
         "#internship",
@@ -456,68 +472,21 @@
       ],
       "sourceSignals": [
         {
-          "source": "reddit_rss",
-          "title": "[1 YoE, Technology Analyst, Software Engineer, USA]",
-          "url": "https://www.reddit.com/r/resumes/comments/1wjl4v0/1_yoe_technology_analyst_software_engineer_usa/",
-          "score": 62.1,
-          "meta": {
-            "feed": "Resumes - internship"
-          }
-        },
-        {
           "source": "google_trends_serpapi",
-          "title": "graduate jobs 2026",
+          "title": "accounting internship cover letter",
           "url": "",
-          "score": 49.0,
+          "score": 66.0,
           "meta": {
-            "seed": "graduate jobs",
-            "rising_value": 1100.0
-          }
-        },
-        {
-          "source": "google_trends_serpapi",
-          "title": "graduate schemes 2027",
-          "url": "",
-          "score": 49.0,
-          "meta": {
-            "seed": "graduate jobs",
-            "rising_value": 950.0
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "Graduation into cyber, I feel a bit late",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1n0zrh0/graduation_into_cyber_i_feel_a_bit_late/",
-          "score": 47.3,
-          "meta": {
-            "feed": "UK jobs - internship CV"
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "[ 2 YOE, Operations & Hospitality, Business Analyst/Project Coordinator, Washington, DC ]",
-          "url": "https://www.reddit.com/r/resumes/comments/1wkyzqg/2_yoe_operations_hospitality_business/",
-          "score": 47.15,
-          "meta": {
-            "feed": "Resumes - internship"
-          }
-        },
-        {
-          "source": "google_trends_serpapi",
-          "title": "graduate schemes 2026",
-          "url": "",
-          "score": 44.0,
-          "meta": {
-            "seed": "graduate jobs",
-            "rising_value": 350.0
+            "seed": "cover letter internship",
+            "rising_value": 5000.0
           }
         }
       ]
     },
     {
-      "id": "auto-2026-09-21-auto-no-experience-is-not-the-real-problem",
+      "id": "auto-2026-09-28-auto-no-experience-is-not-the-real-problem",
       "topicId": "auto-no-experience-is-not-the-real-problem",
-      "weekId": "auto-2026-09-21",
+      "weekId": "auto-2026-09-28",
       "day": "Auto",
       "title": "No Experience Is Not The Real Problem",
       "platform": "TikTok / Reels / Shorts",
@@ -525,9 +494,9 @@
       "status": "script-ready",
       "durationTargetSeconds": 52,
       "viralScore": 89.2,
-      "signalScore": 66.1,
-      "scriptPath": "social-media/video/scripts/auto-2026-09-21/auto-no-experience-is-not-the-real-problem/script.json",
-      "briefPath": "social-media/video/scripts/auto-2026-09-21/auto-no-experience-is-not-the-real-problem/brief.md",
+      "signalScore": 67.0,
+      "scriptPath": "social-media/video/scripts/auto-2026-09-28/auto-no-experience-is-not-the-real-problem/script.json",
+      "briefPath": "social-media/video/scripts/auto-2026-09-28/auto-no-experience-is-not-the-real-problem/brief.md",
       "videoPath": null,
       "thumbnailPath": null,
       "heygenStatus": "manual",
@@ -628,20 +597,20 @@
         },
         {
           "source": "reddit_rss",
+          "title": "Trying to get my Career started in Cybersecurity, but it feels impossible",
+          "url": "https://www.reddit.com/r/jobs/comments/1vzk92f/trying_to_get_my_career_started_in_cybersecurity/",
+          "score": 41.0,
+          "meta": {
+            "feed": "Jobs - graduate rejection"
+          }
+        },
+        {
+          "source": "reddit_rss",
           "title": "Looking for a industry shift",
           "url": "https://www.reddit.com/r/UKJobs/comments/1krzkqh/looking_for_a_industry_shift/",
           "score": 35.2,
           "meta": {
             "feed": "UK jobs - internship CV"
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "[0 YoE, Unemployed, Undergraduate 3rd Year, Urban Planning (or something environment related), Canada]",
-          "url": "https://www.reddit.com/r/resumes/comments/1wjzatw/0_yoe_unemployed_undergraduate_3rd_year_urban/",
-          "score": 31.05,
-          "meta": {
-            "feed": "Resumes - internship"
           }
         }
       ]
