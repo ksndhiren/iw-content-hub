@@ -40,6 +40,7 @@ WEEKS = os.path.join(HUB, "data", "weeks.json")
 AUTO  = os.path.join(L.BASE, "video", "topics", "auto.json")
 EDU_USED = os.path.join(L.BASE, "content", "education_used.json")   # cross-week topic dedup
 EDU_DEDUP_WEEKS = 2                                                  # don't reuse a topic within N weeks
+QUOTE_DEDUP_WEEKS = 4                                                # do not repeat quote text/author in recent weeks
 DKEYS = ["mon", "tue", "wed", "thu", "fri"]
 
 
@@ -244,6 +245,49 @@ def _post(pid, day, lane, title, fmt, slides, captions, hashtags):
             "hashtagsByPlatform": hashtags}
 
 
+def _recent_quote_blocks(wid, weeks=QUOTE_DEDUP_WEEKS):
+    """Return quote IDs/authors used in recent weeks. Legacy posts may not have
+    quoteId, so use their `Quote: Author` title as a conservative fallback."""
+    try:
+        data = json.load(open(WEEKS))
+    except Exception:
+        return set(), set()
+    current = week_offset(wid) + 14
+    min_week = current - weeks
+    blocked_ids, blocked_authors = set(), set()
+    for week in data.get("weeks", []):
+        wn = week_offset(week.get("id", "")) + 14
+        if wn >= current or wn < min_week:
+            continue
+        for post in week.get("posts", []):
+            if post.get("lane") != "quote":
+                continue
+            if post.get("quoteId"):
+                blocked_ids.add(post["quoteId"])
+            m = re.match(r"Quote:\s*(.+)", post.get("title", ""))
+            if m:
+                blocked_authors.add(m.group(1).strip().lower())
+    return blocked_ids, blocked_authors
+
+
+def pick_quote_ids(quotes, days, wid):
+    """Pick quote IDs from the normal weekly rotation while blocking recent
+    quote IDs/authors. Fallback only after exhausting fresh quote options."""
+    qids = sorted(quotes.keys())
+    try:
+        wn = int(wid.replace("week", ""))
+    except ValueError:
+        wn = 14
+    qstart = ((wn - 14) * 5) % len(qids)
+    rotated = [qids[(qstart + i) % len(qids)] for i in range(len(qids))]
+    blocked_ids, blocked_authors = _recent_quote_blocks(wid)
+    fresh = [qid for qid in rotated
+             if qid not in blocked_ids
+             and quotes[qid].get("author", "").strip().lower() not in blocked_authors]
+    fallback = [qid for qid in rotated if qid not in fresh]
+    return (fresh + fallback)[:days]
+
+
 def build_news_post(wid, dkey, dlabel, pdate, img, item, issue_no=1, dry=False):
     """Build ONE news post: LLM rewrite + rendered news card -> post dict.
 
@@ -265,14 +309,9 @@ def build(days=5, dry=False):
     quotes = {q["id"]: q for q in L.load("quotes_bank.json")["quotes"]}
     angles = {a["id"]: a for a in L.load("employer_angles.json")["angles"]}
     wid, wlabel, wc, mon = target_week()
-    # Rotate the quote bank by week so consecutive weeks never share quotes.
-    qids = sorted(quotes.keys())
-    try:
-        wn = int(wid.replace("week", ""))
-    except ValueError:
-        wn = 14
-    qstart = ((wn - 14) * 5) % len(qids)
-    week_quotes = [qids[(qstart + i) % len(qids)] for i in range(5)]
+    # Rotate the quote bank by week, but block recent quote IDs/authors so the
+    # same quote cannot reappear just because the visual world changed.
+    week_quotes = pick_quote_ids(quotes, days, wid)
 
     # DESIGN SELECTION goes through the no-repeat ledger (the hard rule: a new
     # design direction per post every week). Each lane picks worlds NOT used in
@@ -308,6 +347,7 @@ def build(days=5, dry=False):
             lane_quote.render_quote(q, world, os.path.join(img, pid))
         posts.append(_post(pid, dlabel, "quote", f"Quote: {q['author']}", "Single", ["slide_1.png"],
                            cap["captions"], cap["hashtags"]))
+        posts[-1]["quoteId"] = qid
         posts[-1]["world"] = world
 
         # FUN lane retired (Week 15) - underperformed on every platform.

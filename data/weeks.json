@@ -5612,44 +5612,45 @@
           "id": "week18-mon-quote",
           "day": "Mon 28 Sep",
           "lane": "quote",
-          "title": "Quote: Chris Grosser",
+          "title": "Quote: Wayne Gretzky",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Feeling stuck? Remember, opportunities aren't handed out - they're crafted. Just like Chris Grosser said, 'Opportunities don't happen. You create them.' Dive into building your future by exploring internships that align with your goals. Visit www.internwise.co.uk to start your journey today!",
+          "caption": "Wayne Gretzky said it best: 'You miss 100 percent of the shots you don't take.' This is your reminder to seize every opportunity that comes your way. Whether it's an internship or a new career path, don't hold back. Dive into opportunities and see where they lead. Start your journey with us at www.internwise.co.uk.",
           "hashtags": [
-            "#careerjourney",
+            "#careergoals",
             "#internshipopportunities",
-            "#futureready",
-            "#createyourpath",
+            "#taketheleap",
+            "#waynegretzky",
             "#internwiseuk"
           ],
           "captions": {
-            "ig-fb": "Feeling stuck? Remember, opportunities aren't handed out - they're crafted. Just like Chris Grosser said, 'Opportunities don't happen. You create them.' Dive into building your future by exploring internships that align with your goals. Visit www.internwise.co.uk to start your journey today!",
-            "linkedin": "Chris Grosser nailed it: 'Opportunities don't happen. You create them.' In the world of internships and graduate jobs, taking charge of your career path is essential. Whether it's gaining new skills or building professional networks, you hold the power to shape your future. Ready to carve out your own path? Head over to internwise.co.uk and discover opportunities that suit your ambitions.",
-            "x": "Chris Grosser said it best: 'Opportunities don't happen. You create them.' Take charge of your career journey. Start exploring at internwise.co.uk!"
+            "ig-fb": "Wayne Gretzky said it best: 'You miss 100 percent of the shots you don't take.' This is your reminder to seize every opportunity that comes your way. Whether it's an internship or a new career path, don't hold back. Dive into opportunities and see where they lead. Start your journey with us at www.internwise.co.uk.",
+            "linkedin": "Wayne Gretzky's words resonate in both sports and careers: 'You miss 100 percent of the shots you don't take.' It's a powerful reminder to embrace opportunities and step out of your comfort zone. If you're on the hunt for an internship or your first professional role, take the leap. Explore the possibilities with us at internwise.co.uk.",
+            "x": "Wayne Gretzky nailed it: 'You miss 100 percent of the shots you don't take.' Ready to take your shot? Check out internships at internwise.co.uk."
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#careerjourney",
+              "#careergoals",
               "#internshipopportunities",
-              "#futureready",
-              "#createyourpath",
+              "#taketheleap",
+              "#waynegretzky",
               "#internwiseuk"
             ],
             "linkedin": [
               "#careerdevelopment",
-              "#internships",
-              "#createopportunities"
+              "#internshipopportunities",
+              "#waynegretzky"
             ],
             "x": [
               "#careeradvice",
-              "#internships"
+              "#internwiseuk"
             ]
           },
+          "quoteId": "q016",
           "world": "spotlight"
         },
         {
