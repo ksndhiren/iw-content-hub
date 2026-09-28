@@ -80,9 +80,9 @@ def render_news(item, out_dir, filename="slide_1.png", issue_no=1,
     # --- Masthead ---
     m = (_rule(X, 36, W, "double")
          + f"<div style='position:absolute;left:0;right:0;top:50px;text-align:center;"
-           f"font-family:{SERIF};font-weight:700;font-size:96px;line-height:.9;color:{INK};letter-spacing:3px;'>INTERNWISE</div>"
+           f"font-family:{SERIF};font-weight:700;font-size:86px;line-height:.9;color:{INK};letter-spacing:2px;'>INTERNWISE</div>"
          + f"<div style='position:absolute;left:0;right:0;top:152px;text-align:center;"
-           f"font-family:{SERIF};font-style:italic;font-size:24px;color:{SUB};letter-spacing:2px;'>Your Internship Specialist</div>"
+           f"font-family:{SERIF};font-style:italic;font-size:23px;color:{SUB};letter-spacing:2px;'>Your Internship Specialist</div>"
          + _rule(X, 190, W, "double"))
     dot = f"<span style='color:{AMBER};font-size:20px;vertical-align:middle;'>&#10022;</span>"
     info = (f"<div style='position:absolute;left:{X}px;top:206px;width:{W}px;display:flex;align-items:center;justify-content:space-between;'>"
@@ -93,7 +93,7 @@ def render_news(item, out_dir, filename="slide_1.png", issue_no=1,
 
     # --- Section header ---
     sec = (f"<div style='position:absolute;left:0;right:0;top:260px;text-align:center;"
-           f"font-family:{SERIF};font-weight:700;font-size:44px;color:{INK};letter-spacing:2px;'>NEWS ARTICLE</div>"
+           f"font-family:{SERIF};font-weight:700;font-size:44px;color:{INK};letter-spacing:2px;'>{kicker} NEWS</div>"
            + _rule(X, 324, W, "heavy"))
 
     # --- Headline + byline + two columns as ONE top-anchored flex column ---
@@ -106,12 +106,12 @@ def render_news(item, out_dir, filename="slide_1.png", issue_no=1,
     HEAD_TOP = 340
     stack_h = FOOT_Y - HEAD_TOP
 
-    head = (f"<div style='flex:0 0 auto;text-align:center;font-family:{SERIF};font-weight:700;"
-            f"font-size:{hsize}px;line-height:1.02;color:{INK};letter-spacing:-.5px;word-break:keep-all;'>{title_disp}</div>")
+    head = (f"<div style='flex:0 0 auto;text-align:left;font-family:{SERIF};font-weight:700;"
+            f"font-size:{min(hsize + 8, 82)}px;line-height:.98;color:{INK};letter-spacing:-.5px;word-break:keep-all;text-transform:none;'>{title_disp}</div>")
 
     byline = (f"<div style='flex:0 0 auto;margin-top:16px;'>"
               f"<div style='width:100%;height:1.5px;background:{RULE};opacity:.55;'></div>"
-              f"<div style=\"margin-top:11px;text-align:center;font-family:'DM Sans';font-weight:700;"
+              f"<div style=\"margin-top:11px;text-align:left;font-family:'DM Sans';font-weight:800;"
               f"font-size:18px;color:{SUB};letter-spacing:3px;\">"
               f"THE INTERNWISE WIRE &nbsp;&#10022;&nbsp; {kicker.title()} Briefing</div></div>")
 
@@ -120,12 +120,12 @@ def render_news(item, out_dir, filename="slide_1.png", issue_no=1,
     rest0 = brief[0][1:] if brief and brief[0] else ""
     paras = ""
     if brief and brief[0]:
-        paras += (f"<p style='margin:0 0 13px;text-align:justify;font-family:{SERIF};font-size:23px;line-height:1.32;color:{INK};'>"
+        paras += (f"<p style='margin:0 0 13px;text-align:left;font-family:{SERIF};font-size:24px;line-height:1.32;color:{INK};'>"
                   f"<span style='float:left;font-family:{SERIF};font-weight:700;font-size:74px;line-height:.72;color:{AMBER};margin:5px 11px 0 0;'>{drop}</span>"
                   f"{rest0}</p>")
     for p in brief[1:]:
-        paras += f"<p style='margin:0 0 13px;text-align:justify;font-family:{SERIF};font-size:22px;line-height:1.32;color:{INK};'>{p}</p>"
-    colL = f"<div style='flex:0 0 452px;height:100%;overflow:hidden;'>{paras}</div>"
+        paras += f"<p style='margin:0 0 13px;text-align:left;font-family:{SERIF};font-size:23px;line-height:1.32;color:{INK};'>{p}</p>"
+    colL = f"<div style='flex:0 0 490px;height:100%;overflow:hidden;'>{paras}</div>"
 
     divider = f"<div style='flex:0 0 1.5px;align-self:stretch;background:{RULE};opacity:.5;'></div>"
 
@@ -135,11 +135,11 @@ def render_news(item, out_dir, filename="slide_1.png", issue_no=1,
         f"<span style='font-family:{SERIF};font-size:22px;line-height:1.24;color:{INK};'>{b}</span></div>" for b in sidebar)
     box = (f"<div style='border:2.5px solid {INK};padding:18px 20px;'>"
            f"<div style='font-family:{SERIF};font-weight:700;font-size:21px;letter-spacing:2px;color:{INK};"
-           f"text-align:center;border-bottom:2px solid {INK};padding-bottom:9px;margin-bottom:13px;'>WHAT IT MEANS FOR YOU</div>"
+           f"text-align:center;border-bottom:2px solid {INK};padding-bottom:9px;margin-bottom:13px;'>WHAT STUDENTS SHOULD NOTICE</div>"
            f"{bullets}</div>")
     pq = (f"<div style='margin-top:20px;border-top:3px solid {INK};border-bottom:3px solid {INK};padding:15px 4px;'>"
           f"<div style='font-family:{SERIF};font-style:italic;font-weight:700;font-size:27px;line-height:1.22;color:{INK};text-align:center;'>&ldquo;{pull}&rdquo;</div></div>")
-    colR = f"<div style='flex:0 0 484px;height:100%;overflow:hidden;'>{box}{pq}</div>"
+    colR = f"<div style='flex:0 0 446px;height:100%;overflow:hidden;'>{box}{pq}</div>"
 
     cols = (f"<div style='flex:1 1 auto;min-height:0;margin-top:20px;display:flex;"
             f"justify-content:space-between;'>{colL}{divider}{colR}</div>")
