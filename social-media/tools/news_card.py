@@ -1,8 +1,8 @@
 """News lane - THE fixed template (the only templated lane in the Daily-5 system).
 
 A single 1080x1080 rendered as a real NEWSPAPER FRONT PAGE (per client refs):
-aged newsprint, big serif masthead nameplate, date/section line,
-a full-width headline, then TWO justified serif columns plus a sidebar box and
+aged newsprint, branded blue masthead with the white Internwise logo, date/section line,
+a centered full-width headline, then TWO justified serif columns plus a sidebar box and
 a pull-quote. Do not use fake volume/issue metadata. On-screen it is a BRIEF - the full story + source
 go in the caption, so the foot points the reader there.
 

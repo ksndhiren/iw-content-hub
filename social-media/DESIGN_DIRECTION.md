@@ -18,10 +18,18 @@ This is the approved creative direction for future Internwise social graphics. T
 ## News Direction
 
 - News should look like a news article or newspaper page, not a generic briefing card.
-- Keep article cues: masthead, date, section label, headline hierarchy, byline/briefing row, columns, pull quote, and article texture.
+- Keep article cues: branded masthead, date, section label, headline hierarchy, byline row, columns, pull quote, and article texture.
+- The approved news header is locked: Internwise blue band, large centered white Internwise logo, amber rule, then the article starts on newsprint.
+- `JOB MARKET NEWS` sits centered inside a white strip with black rules. Do not add a repeated "Job Market Briefing" label above or below it.
+- The news headline is centered and editorial; the byline row should read `THE INTERNWISE WIRE` only.
 - Do not use fake volume/issue metadata such as `VOL. I` or `NO. 03`; it adds noise without improving trust.
 - Make news more attractive through editorial hierarchy, stronger headline spacing, a useful sidebar, and one pull quote.
 - The graphic is a short article-style front page; full source/detail continues in the caption.
+
+## Topic Freshness
+
+- Education topics, quote IDs/authors, and news stories are strict no-repeat surfaces. If the available bank cannot fill the week without a recent repeat, the build must fail instead of quietly recycling content.
+- The only allowed exception is an operator-visible emergency run with `IW_ALLOW_TOPIC_REPEAT=1`; do not leave that override set in normal local, cloud, or scheduled runs.
 
 ## Weekly Freshness
 

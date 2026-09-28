@@ -10,25 +10,190 @@
     ]
   },
   "quotes": [
-    {"id": "q001", "text": "Opportunities don't happen. You create them.", "author": "Chris Grosser", "theme": "initiative", "cta": "Create yours - find your internship at internwise.co.uk", "used": null},
-    {"id": "q002", "text": "The only way to do great work is to love what you do.", "author": "Steve Jobs", "theme": "purpose", "cta": "Find work you love - browse internships at internwise.co.uk", "used": null},
-    {"id": "q003", "text": "Choose a job you love, and you will never have to work a day in your life.", "author": "Confucius", "theme": "purpose", "cta": "Start with the right internship at internwise.co.uk", "used": null},
-    {"id": "q004", "text": "Your career is a marathon, not a sprint. Pace yourself and keep learning.", "author": "Internwise", "theme": "growth", "cta": "Take your first step at internwise.co.uk", "used": null},
-    {"id": "q005", "text": "The future depends on what you do today.", "author": "Mahatma Gandhi", "theme": "action", "cta": "Do it today - find your internship at internwise.co.uk", "used": null},
-    {"id": "q006", "text": "Success is the sum of small efforts repeated day in and day out.", "author": "Robert Collier", "theme": "consistency", "used": null},
-    {"id": "q007", "text": "It always seems impossible until it's done.", "author": "Nelson Mandela", "theme": "resilience", "used": null},
-    {"id": "q008", "text": "The expert in anything was once a beginner.", "author": "Helen Hayes", "theme": "growth", "used": null},
-    {"id": "q009", "text": "Don't wait for the perfect job. Take the one that grows you.", "author": "Internwise", "theme": "growth", "used": null},
-    {"id": "q010", "text": "A year from now you may wish you had started today.", "author": "Karen Lamb", "theme": "action", "used": null},
-    {"id": "q011", "text": "Believe you can and you're halfway there.", "author": "Theodore Roosevelt", "theme": "confidence", "used": null},
-    {"id": "q012", "text": "Hard work beats talent when talent doesn't work hard.", "author": "Tim Notke", "theme": "effort", "used": null},
-    {"id": "q013", "text": "Every expert you admire started with a first application.", "author": "Internwise", "theme": "confidence", "used": null},
-    {"id": "q014", "text": "The best way to predict your future is to create it.", "author": "Abraham Lincoln", "theme": "action", "used": null},
-    {"id": "q015", "text": "Rejection is redirection. Keep going.", "author": "Internwise", "theme": "resilience", "used": null},
-    {"id": "q016", "text": "You miss 100 percent of the shots you don't take.", "author": "Wayne Gretzky", "theme": "initiative", "used": null},
-    {"id": "q017", "text": "Skills are cheaper to build than most people think and worth more than most people know.", "author": "Internwise", "theme": "growth", "used": null},
-    {"id": "q018", "text": "Great things are done by a series of small things brought together.", "author": "Vincent Van Gogh", "theme": "consistency", "used": null},
-    {"id": "q019", "text": "Do the best you can until you know better. Then when you know better, do better.", "author": "Maya Angelou", "theme": "growth", "used": null},
-    {"id": "q020", "text": "Your first job is not your final destination. It's your launchpad.", "author": "Internwise", "theme": "purpose", "used": null}
+    {
+      "id": "q001",
+      "text": "Opportunities don't happen. You create them.",
+      "author": "Chris Grosser",
+      "theme": "initiative",
+      "cta": "Create yours - find your internship at internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q002",
+      "text": "The only way to do great work is to love what you do.",
+      "author": "Steve Jobs",
+      "theme": "purpose",
+      "cta": "Find work you love - browse internships at internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q003",
+      "text": "Choose a job you love, and you will never have to work a day in your life.",
+      "author": "Confucius",
+      "theme": "purpose",
+      "cta": "Start with the right internship at internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q004",
+      "text": "Your career is a marathon, not a sprint. Pace yourself and keep learning.",
+      "author": "Internwise",
+      "theme": "growth",
+      "cta": "Take your first step at internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q005",
+      "text": "The future depends on what you do today.",
+      "author": "Mahatma Gandhi",
+      "theme": "action",
+      "cta": "Do it today - find your internship at internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q006",
+      "text": "Success is the sum of small efforts repeated day in and day out.",
+      "author": "Robert Collier",
+      "theme": "consistency",
+      "used": null
+    },
+    {
+      "id": "q007",
+      "text": "It always seems impossible until it's done.",
+      "author": "Nelson Mandela",
+      "theme": "resilience",
+      "used": null
+    },
+    {
+      "id": "q008",
+      "text": "The expert in anything was once a beginner.",
+      "author": "Helen Hayes",
+      "theme": "growth",
+      "used": null
+    },
+    {
+      "id": "q009",
+      "text": "Don't wait for the perfect job. Take the one that grows you.",
+      "author": "Internwise",
+      "theme": "growth",
+      "used": null
+    },
+    {
+      "id": "q010",
+      "text": "A year from now you may wish you had started today.",
+      "author": "Karen Lamb",
+      "theme": "action",
+      "used": null
+    },
+    {
+      "id": "q011",
+      "text": "Believe you can and you're halfway there.",
+      "author": "Theodore Roosevelt",
+      "theme": "confidence",
+      "used": null
+    },
+    {
+      "id": "q012",
+      "text": "Hard work beats talent when talent doesn't work hard.",
+      "author": "Tim Notke",
+      "theme": "effort",
+      "used": null
+    },
+    {
+      "id": "q013",
+      "text": "Every expert you admire started with a first application.",
+      "author": "Internwise",
+      "theme": "confidence",
+      "used": null
+    },
+    {
+      "id": "q014",
+      "text": "The best way to predict your future is to create it.",
+      "author": "Abraham Lincoln",
+      "theme": "action",
+      "used": null
+    },
+    {
+      "id": "q015",
+      "text": "Rejection is redirection. Keep going.",
+      "author": "Internwise",
+      "theme": "resilience",
+      "used": null
+    },
+    {
+      "id": "q016",
+      "text": "You miss 100 percent of the shots you don't take.",
+      "author": "Wayne Gretzky",
+      "theme": "initiative",
+      "used": null
+    },
+    {
+      "id": "q017",
+      "text": "Skills are cheaper to build than most people think and worth more than most people know.",
+      "author": "Internwise",
+      "theme": "growth",
+      "used": null
+    },
+    {
+      "id": "q018",
+      "text": "Great things are done by a series of small things brought together.",
+      "author": "Vincent Van Gogh",
+      "theme": "consistency",
+      "used": null
+    },
+    {
+      "id": "q019",
+      "text": "Do the best you can until you know better. Then when you know better, do better.",
+      "author": "Maya Angelou",
+      "theme": "growth",
+      "used": null
+    },
+    {
+      "id": "q020",
+      "text": "Your first job is not your final destination. It's your launchpad.",
+      "author": "Internwise",
+      "theme": "purpose",
+      "used": null
+    },
+    {
+      "id": "q021",
+      "text": "Act as if what you do makes a difference. It does.",
+      "author": "William James",
+      "theme": "agency",
+      "cta": "Make the next move - find your internship at internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q022",
+      "text": "Well done is better than well said.",
+      "author": "Benjamin Franklin",
+      "theme": "proof",
+      "cta": "Build proof through an internship at internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q023",
+      "text": "If opportunity doesn't knock, build a door.",
+      "author": "Milton Berle",
+      "theme": "initiative",
+      "cta": "Open your next door at internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q024",
+      "text": "You don't have to be great to start, but you have to start to be great.",
+      "author": "Zig Ziglar",
+      "theme": "confidence",
+      "cta": "Start with one application at internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q025",
+      "text": "The beginning is the most important part of the work.",
+      "author": "Plato",
+      "theme": "action",
+      "cta": "Begin your search at internwise.co.uk",
+      "used": null
+    }
   ]
 }

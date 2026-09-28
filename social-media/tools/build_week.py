@@ -41,7 +41,16 @@ AUTO  = os.path.join(L.BASE, "video", "topics", "auto.json")
 EDU_USED = os.path.join(L.BASE, "content", "education_used.json")   # cross-week topic dedup
 EDU_DEDUP_WEEKS = 2                                                  # don't reuse a topic within N weeks
 QUOTE_DEDUP_WEEKS = 4                                                # do not repeat quote text/author in recent weeks
+TOPIC_REPEAT_OVERRIDE_ENV = "IW_ALLOW_TOPIC_REPEAT"                      # explicit emergency override only
 DKEYS = ["mon", "tue", "wed", "thu", "fri"]
+
+
+class TopicFreshnessError(RuntimeError):
+    """Raised when content planning would need to repeat a recent topic."""
+
+
+def topic_repeat_allowed():
+    return os.getenv(TOPIC_REPEAT_OVERRIDE_ENV, "").strip().lower() in {"1", "true", "yes", "y"}
 
 
 def target_week():
@@ -207,7 +216,7 @@ def record_edu_used(wid, titles):
 def pick_education(n, used_sets=None, thresh=0.5):
     """Pick `n` education topics, demand-ranked, skipping any that repeat a topic
     used in the recent weeks (`used_sets`; defaults to the last EDU_DEDUP_WEEKS).
-    Backfills from the skipped pool if the fresh bank is too thin."""
+    Raises instead of silently repeating unless IW_ALLOW_TOPIC_REPEAT=1 is set."""
     topics = json.load(open(AUTO)).get("topics", [])
     demand = _demand_terms()
     used_sets = load_edu_used() if used_sets is None else used_sets
@@ -232,7 +241,12 @@ def pick_education(n, used_sets=None, thresh=0.5):
 
     fresh = [t for t in eligible if not is_recent(t)]
     picked = fresh[:n]
-    if len(picked) < n:                                        # backfill if bank too thin
+    if len(picked) < n:
+        if not topic_repeat_allowed():
+            raise TopicFreshnessError(
+                f"Education topic bank has only {len(fresh)} fresh topic(s) for {n} slot(s). "
+                f"Add new education topics or set {TOPIC_REPEAT_OVERRIDE_ENV}=1 for an explicit emergency repeat."
+            )
         picked += [t for t in eligible if t not in picked][: n - len(picked)]
     return picked
 
@@ -272,7 +286,7 @@ def _recent_quote_blocks(wid, weeks=QUOTE_DEDUP_WEEKS):
 
 def pick_quote_ids(quotes, days, wid):
     """Pick quote IDs from the normal weekly rotation while blocking recent
-    quote IDs/authors. Fallback only after exhausting fresh quote options."""
+    quote IDs/authors. Raises instead of silently repeating unless explicitly overridden."""
     qids = sorted(quotes.keys())
     try:
         wn = int(wid.replace("week", ""))
@@ -284,6 +298,12 @@ def pick_quote_ids(quotes, days, wid):
     fresh = [qid for qid in rotated
              if qid not in blocked_ids
              and quotes[qid].get("author", "").strip().lower() not in blocked_authors]
+    if len(fresh) < days and not topic_repeat_allowed():
+        raise TopicFreshnessError(
+            f"Quote bank has only {len(fresh)} fresh quote(s) for {days} slot(s) after the "
+            f"{QUOTE_DEDUP_WEEKS}-week lookback. Add quotes or set {TOPIC_REPEAT_OVERRIDE_ENV}=1 "
+            "for an explicit emergency repeat."
+        )
     fallback = [qid for qid in rotated if qid not in fresh]
     return (fresh + fallback)[:days]
 

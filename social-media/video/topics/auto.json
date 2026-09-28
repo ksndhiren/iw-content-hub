@@ -167,7 +167,7 @@
         },
         {
           "source": "reddit_rss",
-          "title": "16 Years of Forecasting Experience, Perfect Driving Record: Still Terrified of the \"Interview Filter\u201d And perpetual rejection",
+          "title": "16 Years of Forecasting Experience, Perfect Driving Record: Still Terrified of the \"Interview Filter” And perpetual rejection",
           "url": "https://www.reddit.com/r/jobs/comments/1vvkyu8/16_years_of_forecasting_experience_perfect/",
           "score": 51.0,
           "meta": {
@@ -406,7 +406,7 @@
       "source_signals": [
         {
           "source": "youtube",
-          "title": "\ud83d\ude31 ChatGPT KILLED LinkedIn \ud83d\udd25 #shorts",
+          "title": "😱 ChatGPT KILLED LinkedIn 🔥 #shorts",
           "url": "https://www.youtube.com/watch?v=hDtSuF3gAQc",
           "score": 58.0,
           "meta": {
@@ -626,6 +626,114 @@
           }
         }
       ]
+    },
+    {
+      "id": "auto-your-application-tracker-is-lying-to-you",
+      "title": "Your Application Tracker Is Lying To You",
+      "source_post": "operator-topic-topup",
+      "source_cluster": "application-strategy",
+      "signal_score": 76.4,
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "Your application tracker can make you feel productive while hiding the real problem.",
+        "If every application looks the same in your spreadsheet, this is for you."
+      ],
+      "promise": "I will show you how to track the signal that actually improves your search.",
+      "proof_points": [
+        "Counting applications does not show whether your targeting is improving.",
+        "Grouping by role type reveals which CV version is working.",
+        "Recording reply quality helps you change strategy before burnout hits."
+      ],
+      "core_takeaway": "Track role type, CV version, and response quality - not just how many applications you sent.",
+      "cta": "Save this before you send another batch of applications.",
+      "source_signals": []
+    },
+    {
+      "id": "auto-your-portfolio-needs-one-proof-project",
+      "title": "Your Portfolio Needs One Proof Project",
+      "source_post": "operator-topic-topup",
+      "source_cluster": "portfolio",
+      "signal_score": 74.8,
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "A portfolio with one strong project beats five unfinished links.",
+        "If your CV says motivated, your project should prove it."
+      ],
+      "promise": "I will show you how to choose a proof project employers can understand quickly.",
+      "proof_points": [
+        "A good project mirrors the task you want to be hired for.",
+        "Before-and-after evidence is easier to judge than a long explanation.",
+        "A short project note can show judgement, tools, and outcome."
+      ],
+      "core_takeaway": "Build one project that proves the role skill: problem, action, result.",
+      "cta": "Save this for your next portfolio refresh.",
+      "source_signals": []
+    },
+    {
+      "id": "auto-decode-the-role-before-you-apply",
+      "title": "Decode The Role Before You Apply",
+      "source_post": "operator-topic-topup",
+      "source_cluster": "role-fit",
+      "signal_score": 73.9,
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "Most applicants read the job description. Fewer decode it.",
+        "Before you apply, circle the three words that reveal what they really need."
+      ],
+      "promise": "I will show you a quick way to turn a job description into a stronger application.",
+      "proof_points": [
+        "Repeated verbs reveal the work you will actually do.",
+        "Required tools and outcomes should shape your first CV bullets.",
+        "A tailored application is easier when you know the employer's priority."
+      ],
+      "core_takeaway": "Find the repeated verbs, required tools, and desired outcome before writing your CV or cover note.",
+      "cta": "Save this for the next role you want to apply for.",
+      "source_signals": []
+    },
+    {
+      "id": "auto-why-your-first-message-gets-ignored",
+      "title": "Why Your First Message Gets Ignored",
+      "source_post": "operator-topic-topup",
+      "source_cluster": "networking",
+      "signal_score": 72.6,
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "Your networking message may be too easy to ignore.",
+        "If your first message says just checking, try this instead."
+      ],
+      "promise": "I will show you how to write a first message that is specific, light, and easy to answer.",
+      "proof_points": [
+        "Vague asks create work for the person reading them.",
+        "A specific context line proves you did not mass-message them.",
+        "One simple question gets more replies than a broad request for advice."
+      ],
+      "core_takeaway": "Use one context line, one reason for asking, and one easy question.",
+      "cta": "Save this before your next LinkedIn message.",
+      "source_signals": []
     }
   ],
   "fingerprint": "10c997e89d559d2b"

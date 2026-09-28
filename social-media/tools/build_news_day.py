@@ -33,16 +33,27 @@ def week_of(target: datetime.date):
 
 def pick_fresh(exclude_titles):
     """First fresh, unused UK news item whose topic doesn't repeat a headline
-    already used in this week (build_week.pick_distinct_news handles same-story
-    de-duping within the pool; here we also avoid the week's earlier news)."""
+    already used in this week. Raises instead of silently repeating unless
+    IW_ALLOW_TOPIC_REPEAT=1 is set."""
     excl_sets = [bw._news_words(t) for t in exclude_titles]
-    pool = bw.pick_distinct_news(bw.news_fetch.fetch(limit=20), 8)
+    fetched = bw.news_fetch.fetch(limit=20)
+    if not fetched and not bw.topic_repeat_allowed():
+        raise bw.TopicFreshnessError(
+            "No live news items were fetched. Refusing to use sample news unless "
+            f"{bw.TOPIC_REPEAT_OVERRIDE_ENV}=1 is set."
+        )
+    pool = bw.pick_distinct_news(fetched, 8)
     for it in pool:
         ws = bw._news_words(it.get("title", ""))
         if any(ws and es and len(ws & es) / min(len(ws), len(es)) >= 0.4 for es in excl_sets):
             continue
         return it
-    return pool[0] if pool else bw.news_fetch.sample_item()
+    if bw.topic_repeat_allowed():
+        return pool[0] if pool else bw.news_fetch.sample_item()
+    raise bw.TopicFreshnessError(
+        "All fetched news items repeat a story already used this week. Add a fresh source item "
+        f"or set {bw.TOPIC_REPEAT_OVERRIDE_ENV}=1 for an explicit emergency repeat."
+    )
 
 
 def main():
