@@ -148,10 +148,9 @@ def prune_approved(data, statuses, pub, posted_ids=None):
     data["posts"] = kept
     return removed
 
-# JS that returns ONLY the featured-job cards. Featured jobs are the star-marked
-# ones with the grey card background (rgba(38, 77, 126, 0.1)); the general job
-# listings below have a transparent background. We select .list-job cards whose
-# background is not transparent, which excludes non-featured listings.
+# JS that returns ONLY featured-job cards. The search page now renders one job
+# results list and marks promoted listings with an orange "Featured" badge. Use
+# that badge as the source of truth, with the older tinted-card rule as fallback.
 # Read each field from its own element in the card (robust to line-order quirks):
 #   .job-title h4     -> title      .job-title p       -> company
 #   .job-descriptions > p           -> sector/fields
@@ -159,10 +158,12 @@ def prune_approved(data, statuses, pub, posted_ids=None):
 EXTRACT_JS = r"""
 () => {
   const isTransparent = c => !c || c === 'transparent' || c === 'rgba(0, 0, 0, 0)';
-  const cards = [...document.querySelectorAll('.list-job')].filter(card =>
-     !isTransparent(getComputedStyle(card).backgroundColor));
-  if (!cards.length) return [];
   const txt = el => el ? el.textContent.replace(/\s+/g, ' ').trim() : '';
+  const hasFeaturedBadge = card => [...card.querySelectorAll('*')].some(el =>
+     /^Featured$/i.test(txt(el)));
+  const cards = [...document.querySelectorAll('.list-job')].filter(card =>
+     hasFeaturedBadge(card) || !isTransparent(getComputedStyle(card).backgroundColor));
+  if (!cards.length) return [];
   // Only the element's OWN text nodes - skips nested icon/schema spans that would
   // otherwise leak tokens like "GeographicReference" into the location.
   const own = el => el ? [...el.childNodes].filter(n => n.nodeType === 3)
