@@ -5606,7 +5606,7 @@
       "id": "week18",
       "label": "Week 18",
       "weekCommencing": "2026-09-28",
-      "builtAt": 1790674959,
+      "builtAt": 1790687051,
       "posts": [
         {
           "id": "week18-mon-news",
@@ -5817,42 +5817,44 @@
           "id": "week18-mon-engagement",
           "day": "Mon 28 Sep",
           "lane": "engagement",
-          "title": "Graduate job-hunt bingo",
+          "title": "How many job-search tabs is too many?",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Graduate job-hunt bingo\n\nA small career moment worth saving. Explore internships at internwise.co.uk.",
+          "caption": "How many job-search tabs is too many?\n\nA relatable reminder to turn browser chaos into one clear next move. Explore internships at internwise.co.uk.",
           "hashtags": [
             "#internwise",
+            "#jobsearch",
             "#studentlife",
             "#careertips"
           ],
           "captions": {
-            "ig-fb": "Graduate job-hunt bingo\n\nA small career moment worth saving. Explore internships at internwise.co.uk.",
-            "linkedin": "Graduate job-hunt bingo\n\nA small career moment worth saving. Explore internships at internwise.co.uk.",
-            "x": "Graduate job-hunt bingo Find internships at internwise.co.uk."
+            "ig-fb": "How many job-search tabs is too many?\n\nA relatable reminder to turn browser chaos into one clear next move. Explore internships at internwise.co.uk.",
+            "linkedin": "How many job-search tabs is too many? The search can quickly become CV versions, company reviews, LinkedIn profiles and deadline trackers all at once. Save the role, make one clear next move, and keep momentum. Explore internships at internwise.co.uk.",
+            "x": "How many job-search tabs is too many? Save the role, make one clear next move, and keep momentum at internwise.co.uk."
           },
           "hashtagsByPlatform": {
             "ig-fb": [
               "#internwise",
+              "#jobsearch",
               "#studentlife",
               "#careertips"
             ],
             "linkedin": [
+              "#jobsearch",
               "#careerdevelopment",
-              "#internships",
-              "#earlycareers"
+              "#internships"
             ],
             "x": [
-              "#careers",
+              "#jobsearch",
               "#internships"
             ]
           },
-          "world": "bingo",
-          "ideaId": "f003"
+          "world": "tabstack",
+          "ideaId": "f010"
         },
         {
           "id": "week18-tue-news",

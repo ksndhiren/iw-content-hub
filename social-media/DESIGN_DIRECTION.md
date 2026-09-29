@@ -11,6 +11,7 @@ This is the approved creative direction for future Internwise social graphics. T
 - Use expressive typography. Inter can stay for functional text, but hero words should use contrasting treatments such as Georgia serif italic, oversized scale, colour shifts, underlines, or isolated word placement.
 - Design key words differently when they carry the meaning. Example: in "Is your cover letter too polite?", the word "Polite?" should be the visual hook, not just another word in the same font.
 - Nuno must be relevant to the post topic. Use cover-letter poses for cover-letter content, CV poses for CV content, planning poses for workflow/search/process content, and avoid generic founder cutouts when the pose does not support the message.
+- In a carousel, the CTA/outro Nuno pose must not reuse the hook/cover slide pose. Treat hook and CTA as separate beats, not a repeated image.
 - The laughing/welcoming LinkedIn cover pose and thumbs-up CTA pose are banned for education carousels. LinkedIn/profile topics must use a LinkedIn/profile-frame visual motif or another clearly profile-related treatment, never just a generic Nuno cutout.
 - Fonts should not feel uniformly corporate. Mix type roles deliberately: Inter for UI/clarity, DM Sans for labels and small navigation, Georgia serif/italic for editorial emphasis and emotional words.
 - Do not rely on dark navy panels, rounded cards, and Inter-only headlines as the default skin. If two posts in a week look like they came from the same template family, redesign one.
@@ -51,12 +52,14 @@ This is the approved creative direction for future Internwise social graphics. T
 ## Employer Direction
 
 - Nuno must sit above the process/workflow visual layer when the concept implies him presenting or guiding the workflow.
+- Process bars, checklist chips, and workflow graphics must sit behind Nuno or clear him entirely. They must never visually cover his face, torso, hands, or props.
 - Employer graphics must always show `internwise.co.uk/employers`, with the footer kept clear of Nuno, logos, and CTA buttons.
 - Logos cannot overlap headline/body text, and white logos must sit on dark/contrasting areas only.
 
 ## Topic Freshness
 
 - Education topics, quote IDs/authors, and news stories are strict no-repeat surfaces. If the available bank cannot fill the week without a recent repeat, the build must fail instead of quietly recycling content.
+- Engagement/fun ideas are also strict no-repeat surfaces across both current `engagement` posts and legacy `fun` posts. A format can return, but the hook/concept cannot.
 - The only allowed exception is an operator-visible emergency run with `IW_ALLOW_TOPIC_REPEAT=1`; do not leave that override set in normal local, cloud, or scheduled runs.
 
 ## Weekly Freshness

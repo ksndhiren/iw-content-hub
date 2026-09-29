@@ -26,6 +26,7 @@ AUTHORS = SOCIAL / "assets" / "quote_authors"
 
 CORE_LANES = ("news", "education", "quote", "employer", "engagement")
 EXTS = ("jpg", "jpeg", "png", "webp")
+FUN_DEDUP_WEEKS = 8
 
 
 def slug(value: str) -> str:
@@ -106,6 +107,7 @@ def main() -> int:
     args = parser.parse_args()
 
     week = load_week(args.week_id)
+    all_weeks = json.loads(WEEKS.read_text())["weeks"]
     quotes = quote_bank()
     errors: list[str] = []
 
@@ -127,6 +129,24 @@ def main() -> int:
         if count > 1:
             errors.append(f"duplicate post id: {pid}")
 
+    current_num = int(week["id"].replace("week", ""))
+    recent_fun_ids = {}
+    recent_fun_titles = {}
+    for prev in all_weeks:
+        try:
+            prev_num = int(prev.get("id", "").replace("week", ""))
+        except ValueError:
+            continue
+        if prev_num >= current_num or prev_num < current_num - FUN_DEDUP_WEEKS:
+            continue
+        for post in prev.get("posts", []):
+            if post.get("lane") not in {"engagement", "fun"}:
+                continue
+            if post.get("ideaId"):
+                recent_fun_ids[post["ideaId"]] = prev["id"]
+            if post.get("title"):
+                recent_fun_titles[post["title"].strip().lower()] = prev["id"]
+
     for post in week["posts"]:
         slides = post.get("slides") or ["slide_1.png"]
         for slide in slides:
@@ -143,6 +163,14 @@ def main() -> int:
                 errors.append(f"{post['id']}: unknown quote id {post.get('quoteId')}")
             elif not portrait_path(author):
                 errors.append(f"{post['id']}: missing real quote portrait for {author!r}")
+
+        if post.get("lane") == "engagement":
+            idea_id = post.get("ideaId")
+            title = post.get("title", "").strip().lower()
+            if idea_id in recent_fun_ids:
+                errors.append(f"{post['id']}: engagement idea {idea_id} already used in {recent_fun_ids[idea_id]}")
+            if title in recent_fun_titles:
+                errors.append(f"{post['id']}: engagement title already used in {recent_fun_titles[title]}")
 
     sheet = contact_sheet(week, Path("/private/tmp") / f"{week['id']}_overlap_qa.jpg")
     print(f"Overlap contact sheet: {sheet}")

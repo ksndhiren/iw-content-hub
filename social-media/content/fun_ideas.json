@@ -18,6 +18,7 @@
     {"id": "f006", "format": "checklist", "hook": "The 'I'm definitely a professional now' starter pack", "items": ["A LinkedIn banner you spent 2 hrs on", "One (1) blazer", "A notebook you'll use twice", "The confidence of a 3-day-old employee"], "used": null},
     {"id": "f007", "format": "poll", "hook": "Be honest: how many tabs are open during your job search?", "options": ["1-5, I'm zen", "6-15, focused chaos", "16-30, send help", "My laptop is on fire"], "used": null},
     {"id": "f008", "format": "this_or_that", "hook": "Which intern are you?", "options": ["Arrives 15 min early", "Joins the call at 09:00:59"], "used": null},
-    {"id": "f009", "format": "green_flags", "hook": "Green flags in a good internship", "items": ["Real tasks, not just coffee runs", "A named manager who mentors you", "Regular, honest feedback", "You are paid fairly", "Clear goals from day one", "Work you can show off later"], "used": null}
+    {"id": "f009", "format": "green_flags", "hook": "Green flags in a good internship", "items": ["Real tasks, not just coffee runs", "A named manager who mentors you", "Regular, honest feedback", "You are paid fairly", "Clear goals from day one", "Work you can show off later"], "used": null},
+    {"id": "f010", "format": "tab_stack", "hook": "How many job-search tabs is too many?", "tabs": ["Internship saved", "CV v12 FINAL", "Company reviews", "LinkedIn profile", "Email draft", "Deadline tracker"], "used": null}
   ]
 }

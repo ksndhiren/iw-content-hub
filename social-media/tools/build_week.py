@@ -42,6 +42,7 @@ AUTO  = os.path.join(L.BASE, "video", "topics", "auto.json")
 EDU_USED = os.path.join(L.BASE, "content", "education_used.json")   # cross-week topic dedup
 EDU_DEDUP_WEEKS = 2                                                  # don't reuse a topic within N weeks
 QUOTE_DEDUP_WEEKS = 4                                                # do not repeat quote text/author in recent weeks
+FUN_DEDUP_WEEKS = 8                                                  # do not repeat engagement ideas in recent weeks
 TOPIC_REPEAT_OVERRIDE_ENV = "IW_ALLOW_TOPIC_REPEAT"                      # explicit emergency override only
 DKEYS = ["mon", "tue", "wed", "thu", "fri"]
 
@@ -99,7 +100,7 @@ EDU_FORMAT_BY_DAY = ["carousel", "carousel", "carousel", "single", "single"]
 EDU_CAROUSEL_WORLDS = ["navy", "plum", "teal", "cream", "midnight", "slate",
                        "marker", "flash", "tabs"]
 EDU_SINGLE_WORLDS = ["tipcard", "statement", "bigidea", "splitcard", "memo", "scorecard"]
-FUN_WORLDS = ["bingo", "tierlist", "starterpack", "pov", "greenflags"]
+FUN_WORLDS = ["bingo", "tierlist", "starterpack", "pov", "greenflags", "tabstack"]
 
 
 def week_offset(wid):
@@ -309,6 +310,44 @@ def pick_quote_ids(quotes, days, wid):
     return (fresh + fallback)[:days]
 
 
+def _recent_fun_blocks(wid, weeks=FUN_DEDUP_WEEKS):
+    """Return engagement idea IDs/titles used in recent weeks."""
+    try:
+        data = json.load(open(WEEKS))
+    except Exception:
+        return set(), set()
+    current = week_offset(wid) + 14
+    min_week = current - weeks
+    blocked_ids, blocked_titles = set(), set()
+    for week in data.get("weeks", []):
+        wn = week_offset(week.get("id", "")) + 14
+        if wn >= current or wn < min_week:
+            continue
+        for post in week.get("posts", []):
+            if post.get("lane") not in {"engagement", "fun"}:
+                continue
+            if post.get("ideaId"):
+                blocked_ids.add(post["ideaId"])
+            if post.get("title"):
+                blocked_titles.add(post["title"].strip().lower())
+    return blocked_ids, blocked_titles
+
+
+def pick_fun_ideas(fun_ideas, days, wid):
+    blocked_ids, blocked_titles = _recent_fun_blocks(wid)
+    fresh = [idea for idea in fun_ideas
+             if idea.get("id") not in blocked_ids
+             and idea.get("hook", "").strip().lower() not in blocked_titles]
+    if len(fresh) < days and not topic_repeat_allowed():
+        raise TopicFreshnessError(
+            f"Fun/engagement bank has only {len(fresh)} fresh idea(s) for {days} slot(s) after the "
+            f"{FUN_DEDUP_WEEKS}-week lookback. Add fun ideas or set {TOPIC_REPEAT_OVERRIDE_ENV}=1 "
+            "for an explicit emergency repeat."
+        )
+    fallback = [idea for idea in fun_ideas if idea not in fresh]
+    return (fresh + fallback)[:days]
+
+
 def build_news_post(wid, dkey, dlabel, pdate, img, item, issue_no=1, dry=False):
     """Build ONE news post: LLM rewrite + rendered news card -> post dict.
 
@@ -334,6 +373,7 @@ def build(days=5, dry=False):
     # Rotate the quote bank by week, but block recent quote IDs/authors so the
     # same quote cannot reappear just because the visual world changed.
     week_quotes = pick_quote_ids(quotes, days, wid)
+    week_fun = pick_fun_ideas(fun_ideas, days, wid)
 
     # DESIGN SELECTION goes through the no-repeat ledger (the hard rule: a new
     # design direction per post every week). Each lane picks worlds NOT used in
@@ -375,7 +415,7 @@ def build(days=5, dry=False):
 
         # ENGAGEMENT / CONVERSATION lane - the fifth core Daily-5 surface.
         # Keep it useful and brand-safe; featured jobs remain a separate sixth queue.
-        idea = fun_ideas[di % len(fun_ideas)]
+        idea = week_fun[di]
         world = fun_worlds[di]
         visual_hook = idea.get("hook", "Career conversation")
         cap = writer.write_captions("fun", visual_hook, visual_hook)

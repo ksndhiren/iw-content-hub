@@ -950,7 +950,8 @@ def render_education(copy, world, out_dir, week_id="adhoc"):
         tone = copy.get("tone", "practical")
         cover_pose = nuno_ledger.pick(cover_pool_for(copy, week_id), week_id,
                                       label=f"education/{world}/cover", tone=COVER_TONE.get(tone))
-        cta_pose = nuno_ledger.pick(CTA_POOL, week_id, label=f"education/{world}/cta", tone=CTA_TONE.get(tone))
+        cta_pose = nuno_ledger.pick(CTA_POOL, week_id, label=f"education/{world}/cta",
+                                    tone=CTA_TONE.get(tone), exclude={cover_pose})
         paths = [L.render(out_dir, "slide_1.png", w["cover"](p, copy, total, cover_pose))]
         for i, s in enumerate(slides, start=2):
             paths.append(L.render(out_dir, f"slide_{i}.png", w["content"](p, i, total, s)))

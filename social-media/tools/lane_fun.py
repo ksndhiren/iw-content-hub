@@ -1,6 +1,6 @@
 """Fun lane - a LIBRARY of distinct, self-contained relatable formats.
 No polls / vote-bait (socials have little engagement yet); each post stands on
-its own. Worlds: bingo, tierlist, starterpack, pov, greenflags.
+its own. Worlds: bingo, tierlist, starterpack, pov, greenflags, tabstack.
 
     render_fun(idea, world, out_dir, "slide_1.png")
 """
@@ -134,8 +134,44 @@ def w_greenflags(idea):
     return bg+L.logo_tl()+_badge("GREEN FLAGS",GREEN)+_eyebrow("KNOW YOUR WORTH")+title+grid+L.url_footer()
 
 
+# ---- tab stack ----
+def w_tabstack(idea):
+    tabs = idea.get("tabs") or ["CV v12 FINAL", "Company reviews", "LinkedIn profile", "Deadline tracker"]
+    bg = "<div style='position:absolute;inset:0;background:#F3EADA;'></div>"
+    paper = ("<div style='position:absolute;inset:0;opacity:.55;"
+             "background-image:radial-gradient(rgba(21,39,67,.10) 1.5px,transparent 1.5px);background-size:34px 34px;'></div>")
+    browser = (f"<div style='position:absolute;left:58px;right:58px;top:286px;height:612px;border-radius:22px;"
+               f"background:#fff;box-shadow:0 28px 65px rgba(21,39,67,.18);overflow:hidden;border:3px solid #152743;'>"
+               f"<div style='height:78px;background:#152743;display:flex;align-items:center;gap:13px;padding:0 26px;'>"
+               f"<span style='width:18px;height:18px;border-radius:50%;background:{CORAL};'></span>"
+               f"<span style='width:18px;height:18px;border-radius:50%;background:{AMBER};'></span>"
+               f"<span style='width:18px;height:18px;border-radius:50%;background:{GREEN};'></span></div></div>")
+    cards = ""
+    colors = [AMBER, CORAL, GREEN, BLUE, AMBER, CORAL]
+    for i, tab in enumerate(tabs[:6]):
+        top = 374 + i * 76
+        left = 104 + (i % 2) * 24
+        rot = [-1.2, .9, -.7, 1.1, -.9, .6][i]
+        cards += (f"<div style='position:absolute;left:{left}px;right:{104 - (i % 2) * 40}px;top:{top}px;"
+                  f"height:64px;border-radius:14px;background:#F8FBFF;border:2px solid #152743;"
+                  f"box-shadow:0 12px 26px rgba(21,39,67,.12);transform:rotate({rot}deg);"
+                  f"display:flex;align-items:center;gap:18px;padding:0 24px;'>"
+                  f"<div style='width:34px;height:34px;border-radius:10px;background:{colors[i]};display:flex;align-items:center;justify-content:center;"
+                  f"font-family:Inter;font-weight:900;font-size:18px;color:#152743;'>{i+1}</div>"
+                  f"<div style=\"font-family:Inter;font-weight:800;font-size:30px;color:#152743;letter-spacing:-.5px;\">{tab}</div></div>")
+    title = (f"<div style=\"position:absolute;left:58px;top:166px;width:720px;font-family:Inter;font-weight:900;"
+             f"font-size:60px;line-height:1.02;letter-spacing:-1.7px;color:#152743;\">How many job-search tabs is too many?</div>")
+    note = (f"<div style='position:absolute;right:76px;top:188px;width:210px;transform:rotate(3deg);"
+            f"background:{AMBER};padding:18px 20px;box-shadow:0 14px 26px rgba(21,39,67,.16);'>"
+            f"<div style=\"font-family:Georgia,serif;font-weight:700;font-style:italic;font-size:31px;line-height:1;color:#152743;\">all of them.</div></div>")
+    closer = (f"<div style=\"position:absolute;left:58px;bottom:104px;font-family:'DM Sans';font-weight:800;"
+              f"font-size:30px;color:#152743;\">Save the role before the tab disappears.</div>")
+    darklogo = f"<div style='position:absolute;left:56px;top:44px;'><img src='{L.DARKLOGO}' style='height:{L.LOGO}px;'></div>"
+    return bg + paper + darklogo + _badge("REAL TALK", AMBER) + title + note + browser + cards + closer + _footer_dark()
+
+
 WORLDS = {"bingo": w_bingo, "tierlist": w_tierlist, "starterpack": w_starterpack,
-          "pov": w_pov, "greenflags": w_greenflags}
+          "pov": w_pov, "greenflags": w_greenflags, "tabstack": w_tabstack}
 
 def render_fun(idea, world, out_dir, filename="slide_1.png"):
     return L.render(out_dir, filename, WORLDS[world](idea))
@@ -145,6 +181,6 @@ if __name__ == "__main__":
     ideas = {i["format"]: i for i in L.load("fun_ideas.json")["ideas"]}
     demo = {"bingo": ideas.get("bingo", {}), "tierlist": ideas.get("tier_list", {}),
             "starterpack": ideas.get("checklist", {}), "pov": ideas.get("pov", {}),
-            "greenflags": ideas.get("green_flags", {})}
+            "greenflags": ideas.get("green_flags", {}), "tabstack": ideas.get("tab_stack", {})}
     for world, idea in demo.items():
         render_fun(idea, world, os.path.join(L.OUTROOT, "week14", "_ftest", world))

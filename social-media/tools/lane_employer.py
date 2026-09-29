@@ -44,7 +44,7 @@ def _nuno(pose, h=800, right=-40):
            f"background:radial-gradient(circle at 50% 45%,{AMBER}2e,{AMBER}00 66%);'></div>")
     ground = (f"<div style='position:absolute;z-index:5;right:150px;bottom:34px;width:520px;height:70px;border-radius:50%;"
               f"background:radial-gradient(ellipse,rgba(0,0,0,.5),rgba(0,0,0,0) 70%);'></div>")
-    img = f"<img src='{src}' style='position:absolute;z-index:8;right:{right}px;bottom:0;height:{h}px;filter:drop-shadow(0 22px 34px rgba(0,0,0,.5));'>"
+    img = f"<img src='{src}' style='position:absolute;z-index:30;right:{right}px;bottom:0;height:{h}px;filter:drop-shadow(0 22px 34px rgba(0,0,0,.5));'>"
     return arc + ground + img
 
 def _tag():
@@ -119,7 +119,7 @@ def w_process(a, pose="nuno_planning_1"):
     # Steps stay one line each in a column sized to the longest label, and Nuno
     # is pushed further off the right edge, so the longest step ("Onboard and
     # track progress") clears the figure instead of colliding with his shoulder.
-    flow = f"<div style='position:absolute;z-index:3;left:58px;top:400px;width:548px;'>{rows}</div>"
+    flow = f"<div style='position:absolute;z-index:2;left:58px;top:400px;width:548px;'>{rows}</div>"
     return _bg(BG1,BG2)+L.logo_tl()+head+flow+_nuno(pose, right=-120)+_cta(a["cta"])+L.url_footer(left=58, color=SUBT, text=EMP_URL)
 
 # ---- trust (logo wall) ----

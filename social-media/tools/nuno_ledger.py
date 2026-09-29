@@ -99,11 +99,12 @@ def _used_in_week(log, week_id):
     return {u["cutout"] for u in log.get("uses", []) if u.get("week") == week_id}
 
 
-def _choose(candidates, week_id, log, today, fresh_days):
+def _choose(candidates, week_id, log, today, fresh_days, exclude=None):
     """Return (cutout, is_repeat). Freshest layout-safe candidate:
     prefer not-used-this-week, then never-used, then oldest last-use."""
     present = _on_disk()
-    avail = [c for c in candidates if c in present]
+    blocked = set(exclude or [])
+    avail = [c for c in candidates if c in present and c not in blocked]
     if not avail:
         return (candidates[0] if candidates else None), True
     used_wk = _used_in_week(log, week_id)
@@ -123,12 +124,12 @@ def _choose(candidates, week_id, log, today, fresh_days):
     return best, is_repeat
 
 
-def pick(candidates, week_id, label=None, tone=None, today=None, fresh_days=FRESH_DAYS):
+def pick(candidates, week_id, label=None, tone=None, today=None, fresh_days=FRESH_DAYS, exclude=None):
     """Pick + record the freshest layout-safe cutout for a render slot, preferring
     one whose tone matches `tone` (falls back to the full pool if none match)."""
     today = today or datetime.date.today().isoformat()
     log = _load()
-    cutout, is_repeat = _choose(by_tone(candidates, tone), week_id, log, today, fresh_days)
+    cutout, is_repeat = _choose(by_tone(candidates, tone), week_id, log, today, fresh_days, exclude=exclude)
     if cutout:
         log.setdefault("uses", []).append({"cutout": cutout, "week": week_id, "date": today})
         _save(log)
