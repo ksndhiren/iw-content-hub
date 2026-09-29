@@ -159,24 +159,31 @@ EXTRACT_JS = r"""
 () => {
   const isTransparent = c => !c || c === 'transparent' || c === 'rgba(0, 0, 0, 0)';
   const txt = el => el ? el.textContent.replace(/\s+/g, ' ').trim() : '';
-  const hasFeaturedBadge = card => [...card.querySelectorAll('*')].some(el =>
-     /^Featured$/i.test(txt(el)));
-  const cards = [...document.querySelectorAll('.list-job')].filter(card =>
-     hasFeaturedBadge(card) || !isTransparent(getComputedStyle(card).backgroundColor));
-  if (!cards.length) return [];
-  // Only the element's OWN text nodes - skips nested icon/schema spans that would
-  // otherwise leak tokens like "GeographicReference" into the location.
   const own = el => el ? [...el.childNodes].filter(n => n.nodeType === 3)
                          .map(n => n.textContent).join(' ').replace(/\s+/g, ' ').trim() : '';
+  const hasFeaturedBadge = card => [...card.querySelectorAll('*')].some(el =>
+     /^Featured$/i.test(txt(el)));
+
+  // Current Internwise search page: Tailwind `<article>` cards with an orange
+  // "Featured" badge. Keep the old `.list-job` selector as fallback for older
+  // deployments because the cloud job may run across a frontend rollout.
+  const cards = [...document.querySelectorAll('article, .list-job')].filter(card =>
+     hasFeaturedBadge(card) || (card.matches('.list-job') && !isTransparent(getComputedStyle(card).backgroundColor)));
+  if (!cards.length) return [];
+
   return cards.map(card => {
-    const a = card.querySelector('.job-title h4 a') || card.querySelector('a[href*="/job/"]');
-    return {
-      href:      a ? a.getAttribute('href') : '',
-      title:     txt(card.querySelector('.job-title h4')),
-      company:   txt(card.querySelector('.job-title p')),
-      fields:    own(card.querySelector('.job-descriptions > p')),
-      descLines: [...card.querySelectorAll('.job-descriptions .descriptions p')].map(own),
-    };
+    const a = card.querySelector('.job-title h4 a') || card.querySelector('h3 a[href*="/job/"]') || card.querySelector('a[href*="/job/"]');
+    const title = txt(card.querySelector('.job-title h4')) || txt(card.querySelector('h3')) || txt(a);
+    const company = txt(card.querySelector('.job-title p')) || txt(card.querySelector('h3 + p'));
+    const fields = own(card.querySelector('.job-descriptions > p')) || txt([...card.querySelectorAll('p')].at(-1));
+    const descLines = [...card.querySelectorAll('.job-descriptions .descriptions p')].map(own);
+    if (!descLines.length) {
+      const meta = [...card.querySelectorAll('p.flex span')]
+        .map(el => own(el) || txt(el))
+        .filter(Boolean);
+      descLines.push(...meta);
+    }
+    return {href: a ? a.getAttribute('href') : '', title, company, fields, descLines};
   });
 }
 """
@@ -195,7 +202,7 @@ def scrape_featured():
         pg.goto(SEARCH_URL, wait_until="domcontentloaded", timeout=60000)
         # The job cards are rendered client-side; wait for them explicitly rather
         # than networkidle (the site keeps long-lived connections open).
-        pg.wait_for_selector(".list-job", timeout=45000)
+        pg.wait_for_selector("article, .list-job", timeout=45000)
         pg.wait_for_timeout(1500)  # let the featured section settle
         raw = pg.evaluate(EXTRACT_JS)
         br.close()

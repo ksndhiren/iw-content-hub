@@ -28,6 +28,7 @@ HUB_DIR    = os.environ.get(
     os.path.abspath(os.path.join(BASE_DIR, "..", "iw-content-hub"))
 )
 FEATURED_JSON = os.path.join(HUB_DIR, "data", "featured.json")
+PUBLISHED_JSON = os.path.join(HUB_DIR, "data", "featured_published.json")
 IMAGES_DIR    = os.path.join(HUB_DIR, "images", "featured")
 
 # JS that returns ONLY featured-job cards. The search page now renders one job
@@ -147,6 +148,33 @@ def _plain(s):
     return fj._sanitize(s).replace("&amp;", "&")
 
 
+def _job_key(title, company):
+    """Stable title+company key so re-listed jobs do not re-enter the queue."""
+    t = fj._sanitize(fj.strip_year(title or "")).replace("&amp;", "and").lower()
+    c = fj._sanitize(company or "").replace("&amp;", "and").lower()
+    t = re.sub(r"[^a-z0-9 ]", " ", t); c = re.sub(r"[^a-z0-9 ]", " ", c)
+    t = re.sub(r"\s+", " ", t).strip(); c = re.sub(r"\s+", " ", c).strip()
+    return f"{t}|{c}"
+
+
+def load_published():
+    if not os.path.exists(PUBLISHED_JSON):
+        return {"ids": set(), "keys": set()}
+    try:
+        with open(PUBLISHED_JSON) as f:
+            d = json.load(f)
+        return {"ids": set(str(x) for x in d.get("publishedIds", [])),
+                "keys": set(str(x) for x in d.get("publishedKeys", []))}
+    except Exception:
+        return {"ids": set(), "keys": set()}
+
+
+def is_published(pub, sid, title="", company=""):
+    if str(sid) in pub["ids"]:
+        return True
+    return _job_key(title, company) in pub["keys"] if (title or company) else False
+
+
 def build_caption(job):
     return (
         f"FEATURED JOB: {_plain(job['title'])} at {_plain(job['company'])}\n\n"
@@ -197,11 +225,20 @@ def main():
     manual   = [p for p in existing if not p.get("sourceId")]
     existing_auto = {p["sourceId"]: p for p in existing if p.get("sourceId")}
 
+    published = load_published()
+    print(f"Published ledger: {len(published['ids'])} ids, {len(published['keys'])} keys")
+
     fj._load_logos()
     auto_posts, new_count = [], 0
 
     for job in scraped:
         sid = job["id"]
+        if is_published(published, sid, job.get("title", ""), job.get("company", "")):
+            old = os.path.join(IMAGES_DIR, f"job-{sid}")
+            if os.path.isdir(old):
+                shutil.rmtree(old, ignore_errors=True)
+            print(f"  - skipped already published job-{sid}: {_plain(job.get('title', ''))}")
+            continue
         if sid in existing_auto:
             auto_posts.append(existing_auto[sid])  # keep graphic + review status
             continue
@@ -231,7 +268,8 @@ def main():
         print(f"  + generated {post_id} ({cfg['_style']}): {_plain(job['title'])}")
 
     # Drop images for auto jobs no longer featured
-    live_ids = {f"job-{j['id']}" for j in scraped}
+    live_ids = {f"job-{j['id']}" for j in scraped
+                if not is_published(published, j["id"], j.get("title", ""), j.get("company", ""))}
     removed = 0
     for sid, p in existing_auto.items():
         if f"job-{sid}" not in live_ids:
