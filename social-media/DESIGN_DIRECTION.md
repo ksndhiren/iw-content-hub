@@ -1,6 +1,6 @@
 # Internwise Design Direction
 
-Last updated: 2026-09-28
+Last updated: 2026-09-29
 
 This is the approved creative direction for future Internwise social graphics. Treat it as product memory: local tools, Codex agents, and any other generator must preserve this direction unless the user explicitly changes it.
 
@@ -11,9 +11,13 @@ This is the approved creative direction for future Internwise social graphics. T
 - Use expressive typography. Inter can stay for functional text, but hero words should use contrasting treatments such as Georgia serif italic, oversized scale, colour shifts, underlines, or isolated word placement.
 - Design key words differently when they carry the meaning. Example: in "Is your cover letter too polite?", the word "Polite?" should be the visual hook, not just another word in the same font.
 - Nuno must be relevant to the post topic. Use cover-letter poses for cover-letter content, CV poses for CV content, planning poses for workflow/search/process content, and avoid generic founder cutouts when the pose does not support the message.
+- The laughing/welcoming LinkedIn cover pose and thumbs-up CTA pose are banned for education carousels. LinkedIn/profile topics must use a LinkedIn/profile-frame visual motif or another clearly profile-related treatment, never just a generic Nuno cutout.
 - Fonts should not feel uniformly corporate. Mix type roles deliberately: Inter for UI/clarity, DM Sans for labels and small navigation, Georgia serif/italic for editorial emphasis and emotional words.
 - Do not rely on dark navy panels, rounded cards, and Inter-only headlines as the default skin. If two posts in a week look like they came from the same template family, redesign one.
 - Featured jobs can remain utility-led, but should still feel like a premium editorial/job poster, not a generic ad tile.
+- The week must render five reviewable graphics per weekday: News, Education, Quote, Featured Job, and the selected fifth lane. If featured jobs live in a separate dashboard queue, the review UI must still make that visible so a day never appears to have only 3-4 posts.
+- Monday-level typography and highlighted-word treatment is the baseline for every day of the week, not a one-off. Tuesday-Friday should not fall back to plain corporate cards.
+- Every carousel must end with a true outro/CTA slide: explicit action text, `internwise.co.uk`, and CTA-first composition. The final slide cannot read like another content slide.
 
 ## News Direction
 
@@ -25,6 +29,18 @@ This is the approved creative direction for future Internwise social graphics. T
 - Do not use fake volume/issue metadata such as `VOL. I` or `NO. 03`; it adds noise without improving trust.
 - Make news more attractive through editorial hierarchy, stronger headline spacing, a useful sidebar, and one pull quote.
 - The graphic is a short article-style front page; full source/detail continues in the caption.
+- News article body, sidebar, and pull quote must never end mid-sentence or with ellipses. If the copy does not fit, shorten to complete sentences; do not clip with overflow.
+
+## Quote Direction
+
+- Quote graphics must include an author watermark in the design. If a real author portrait is unavailable in `assets/quote_authors/`, use a large low-opacity typographic author watermark rather than shipping a blank background.
+- Keep the author watermark behind the quote as an atmospheric editorial layer; it should support the quote, not become a full-opacity sticker.
+
+## Employer Direction
+
+- Nuno must sit above the process/workflow visual layer when the concept implies him presenting or guiding the workflow.
+- Employer graphics must always show `internwise.co.uk/employers`, with the footer kept clear of Nuno, logos, and CTA buttons.
+- Logos cannot overlap headline/body text, and white logos must sit on dark/contrasting areas only.
 
 ## Topic Freshness
 

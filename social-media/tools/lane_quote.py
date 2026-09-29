@@ -14,7 +14,7 @@ text), not a full-opacity cut-out sticker. Drop a photo in assets/quote_authors/
 
     render_quote(q, world, out_dir, "slide_1.png")   # world in WORLDS
 """
-import os, sys, re
+import os, sys, re, urllib.parse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lanes_common as L
 import wk11_base as b
@@ -77,6 +77,22 @@ def author_cutout(author):
             return None
         out.crop((int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1)).save(cache)
     return L.img(cache)
+
+
+def author_placeholder(author):
+    """Fallback author watermark when no portrait asset exists."""
+    name = (author or "").strip()
+    if not name:
+        return None
+    initials = "".join(part[:1] for part in re.findall(r"[A-Za-z]+", name)[:3]).upper() or "Q"
+    svg = f"""
+    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900">
+      <rect width="900" height="900" fill="none"/>
+      <text x="450" y="390" text-anchor="middle" font-family="Georgia,serif" font-size="260" font-weight="700" fill="white">{initials}</text>
+      <text x="450" y="520" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="62" font-weight="800" letter-spacing="4" fill="white">{name.upper()}</text>
+    </svg>
+    """
+    return "data:image/svg+xml;charset=utf-8," + urllib.parse.quote(svg)
 
 
 def _wm(src, css, op=0.13, filt="grayscale(1)"):
@@ -332,7 +348,7 @@ _DEFAULT_CTA = "Find your internship at internwise.co.uk"
 
 
 def render_quote(q, world, out_dir, filename="slide_1.png"):
-    src = author_cutout(q.get("author", ""))
+    src = author_cutout(q.get("author", "")) or author_placeholder(q.get("author", ""))
     # Author is now a faint watermark, not a corner sticker, so the long CTA no
     # longer collides with a photo - keep the full CTA line.
     cta = q.get("cta") or _DEFAULT_CTA

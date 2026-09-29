@@ -40,11 +40,11 @@ def _bg(c1, c2):
 
 def _nuno(pose, h=800, right=-40):
     src = L.nuno_src(pose)
-    arc = (f"<div style='position:absolute;right:-70px;bottom:-40px;width:760px;height:760px;border-radius:50%;"
+    arc = (f"<div style='position:absolute;z-index:4;right:-70px;bottom:-40px;width:760px;height:760px;border-radius:50%;"
            f"background:radial-gradient(circle at 50% 45%,{AMBER}2e,{AMBER}00 66%);'></div>")
-    ground = (f"<div style='position:absolute;right:150px;bottom:34px;width:520px;height:70px;border-radius:50%;"
+    ground = (f"<div style='position:absolute;z-index:5;right:150px;bottom:34px;width:520px;height:70px;border-radius:50%;"
               f"background:radial-gradient(ellipse,rgba(0,0,0,.5),rgba(0,0,0,0) 70%);'></div>")
-    img = f"<img src='{src}' style='position:absolute;right:{right}px;bottom:0;height:{h}px;filter:drop-shadow(0 22px 34px rgba(0,0,0,.5));'>"
+    img = f"<img src='{src}' style='position:absolute;z-index:8;right:{right}px;bottom:0;height:{h}px;filter:drop-shadow(0 22px 34px rgba(0,0,0,.5));'>"
     return arc + ground + img
 
 def _tag():
@@ -119,8 +119,8 @@ def w_process(a, pose="nuno_planning_1"):
     # Steps stay one line each in a column sized to the longest label, and Nuno
     # is pushed further off the right edge, so the longest step ("Onboard and
     # track progress") clears the figure instead of colliding with his shoulder.
-    flow = f"<div style='position:absolute;left:58px;top:400px;width:548px;'>{rows}</div>"
-    return _bg(BG1,BG2)+_nuno(pose, right=-120)+L.logo_tl()+head+flow+_cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL)
+    flow = f"<div style='position:absolute;z-index:3;left:58px;top:400px;width:548px;'>{rows}</div>"
+    return _bg(BG1,BG2)+L.logo_tl()+head+flow+_nuno(pose, right=-120)+_cta(a["cta"])+L.url_footer(left=58, color=SUBT, text=EMP_URL)
 
 # ---- trust (logo wall) ----
 def w_trust(a, pose="nuno_authority_2"):
@@ -176,11 +176,11 @@ def w_cards(a, pose="nuno_thoughtful_1"):
 def w_pipeline(a, pose="nuno_planning_2"):
     CREAM = "#F3EADA"; NAVYT = "#152743"; COFFEE = "#6F6350"
     bg = f"<div style='position:absolute;inset:0;background:{CREAM};'></div>"
-    rail = f"<div style='position:absolute;left:0;top:0;bottom:0;width:148px;background:{NAVYT};'></div>"
-    logo = f"<img src='{L.WHT}' style='position:absolute;left:36px;top:44px;height:86px;'>"
-    tag = (f"<div style=\"position:absolute;left:188px;top:76px;font-family:'DM Sans';font-weight:800;font-size:20px;color:{COFFEE};letter-spacing:4px;\">HIRING PIPELINE</div>"
-           f"<div style='position:absolute;left:188px;top:118px;width:72px;height:5px;background:{AMBER};border-radius:3px;'></div>")
-    head = (f"<div style=\"position:absolute;left:188px;top:184px;width:500px;font-family:Georgia,serif;font-weight:700;font-size:68px;line-height:1.02;color:{NAVYT};\">"
+    rail = f"<div style='position:absolute;left:0;top:0;bottom:0;width:164px;background:{NAVYT};'></div>"
+    logo = f"<img src='{L.ICONMARK}' style='position:absolute;left:50px;top:46px;width:64px;filter:brightness(0) invert(1);'>"
+    tag = (f"<div style=\"position:absolute;left:218px;top:76px;font-family:'DM Sans';font-weight:800;font-size:20px;color:{COFFEE};letter-spacing:4px;\">HIRING PIPELINE</div>"
+           f"<div style='position:absolute;left:218px;top:118px;width:72px;height:5px;background:{AMBER};border-radius:3px;'></div>")
+    head = (f"<div style=\"position:absolute;left:218px;top:184px;width:470px;font-family:Georgia,serif;font-weight:700;font-size:64px;line-height:1.02;color:{NAVYT};\">"
             f"{a['headline']}</div>")
     steps = ["Role live", "Candidates arrive", "Shortlist fast", "Interview ready"]
     rows = ""
@@ -188,11 +188,11 @@ def w_pipeline(a, pose="nuno_planning_2"):
         rows += (f"<div style='display:flex;align-items:center;gap:18px;margin-bottom:22px;'>"
                  f"<div style='width:50px;height:50px;border-radius:50%;background:{AMBER};display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:800;font-size:22px;color:{NAVYT};'>{i}</div>"
                  f"<div style=\"font-family:Inter;font-weight:800;font-size:31px;color:{NAVYT};letter-spacing:-.4px;\">{st}</div></div>")
-    body = f"<div style='position:absolute;left:188px;top:470px;width:460px;'>{rows}</div>"
+    body = f"<div style='position:absolute;left:218px;top:470px;width:430px;'>{rows}</div>"
     nuno = _nuno(pose, h=700, right=-120)
-    cta = (f"<div style='position:absolute;left:188px;bottom:92px;height:64px;padding:0 30px;border-radius:32px;background:{NAVYT};display:flex;align-items:center;'>"
+    cta = (f"<div style='position:absolute;left:218px;bottom:92px;height:64px;padding:0 30px;border-radius:32px;background:{NAVYT};display:flex;align-items:center;'>"
            f"<span style=\"font-family:Inter;font-weight:800;font-size:25px;color:#fff;\">{a['cta']}</span></div>")
-    return bg + rail + logo + tag + head + body + nuno + cta + L.url_footer(left=188, color=COFFEE, text=EMP_URL)
+    return bg + rail + logo + tag + head + body + nuno + cta + L.url_footer(left=218, color=COFFEE, text=EMP_URL)
 
 # ---- proof board (evidence led) ----
 def w_proofboard(a, pose="nuno_authority_4"):

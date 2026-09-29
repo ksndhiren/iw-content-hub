@@ -9,7 +9,7 @@ go in the caption, so the foot points the reader there.
     from news_card import render_news
     render_news(item, out_dir, "slide_1.png", brief=[...], sidebar=[...], pull="...")
 """
-import os, sys, datetime
+import os, sys, datetime, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lanes_common as L
 
@@ -26,6 +26,47 @@ def _hsize(text):
     if n <= 70:  return 54
     if n <= 96:  return 46
     return 40
+
+
+def _complete_sentences(text, max_chars):
+    """Trim display copy at sentence boundaries so the newspaper never ends mid-thought."""
+    text = re.sub(r"\s+", " ", (text or "").replace("...", ".")).strip()
+    if len(text) <= max_chars and re.search(r"[.!?]$", text):
+        return text
+    bits = re.findall(r"[^.!?]+[.!?]", text)
+    out = ""
+    for bit in bits:
+        cand = (out + " " + bit.strip()).strip()
+        if len(cand) > max_chars:
+            break
+        out = cand
+    if out:
+        return out
+    words = text[:max_chars].split()
+    while words and words[-1].lower().strip(",;:") in {"and", "or", "for", "with", "to", "of", "the", "those"}:
+        words.pop()
+    return (" ".join(words).rstrip(",;:") + ".") if words else ""
+
+
+def _safe_brief(paras):
+    cleaned = []
+    limits = [230, 175, 170]
+    for i, p in enumerate(paras or []):
+        s = _complete_sentences(p, limits[min(i, len(limits) - 1)])
+        if s:
+            cleaned.append(s)
+    return cleaned[:3]
+
+
+def _safe_sidebar(items):
+    cleaned = []
+    for item in items or []:
+        s = re.sub(r"\s+", " ", (item or "").replace("...", "")).strip(" .")
+        if not s:
+            continue
+        words = s.split()
+        cleaned.append(" ".join(words[:6]).rstrip(",;:"))
+    return cleaned[:3]
 
 
 def _rule(x, y, w, kind="double"):
@@ -69,6 +110,9 @@ def render_news(item, out_dir, filename="slide_1.png", issue_no=1,
                           "Target internships, not just graduate schemes",
                           "Show proof of skills over polish"]
     pull = pull or "Internships remain one of the strongest ways into a competitive market."
+    brief = _safe_brief(brief)
+    sidebar = _safe_sidebar(sidebar)
+    pull = _complete_sentences(pull, 120)
 
     X, W = 48, 984
     FOOT_Y = 980          # everything above this; footer strip lives below

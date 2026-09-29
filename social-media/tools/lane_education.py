@@ -61,8 +61,8 @@ COVER_POOL = ["nuno_cv", "nuno_cv_2", "nuno_cv_3",
 # NOTE: welcoming/offers/tablet cover poses are TOPIC-ONLY (networking/offer/tech) -
 # they must NOT be in the general fallback pool or they land on unrelated topics
 # (e.g. a "welcoming" pose on a Graduate Schemes cover). Kept only in TOPIC_POSES.
-CTA_POOL = ["nuno_thumbsup", "nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1",
-            "nuno_thumbsup_2", "nuno_dothis_4", "nuno_offers_4"]   # + week17 fresh cutouts
+CTA_POOL = ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1",
+            "nuno_dothis_4", "nuno_offers_4"]   # + week17 fresh cutouts
 
 # ------------------------------------------------------------ topic-matched hook
 # The hook (cover) is the scroll-stopper, so its Nuno must MATCH the topic - not
@@ -82,7 +82,8 @@ TOPIC_POSES = {
     "think":      ["nuno_thoughtful_1", "nuno_thoughtful_2", "nuno_thoughtful_3"],
     "skills":     ["nuno_utility_4", "nuno_utility_3", "nuno_planning_1", "nuno_planning_2"],
     # Cover-safe poses added week16 (compact, right-weighted, verified rembg-clean).
-    "networking": ["nuno_welcoming_cover1", "nuno_welcoming_cover2"],
+    "linkedin":   ["nuno_tablet_cover", "nuno_cv_5", "nuno_cv_4"],
+    "networking": ["nuno_authority_4", "nuno_authority_1", "nuno_authority_2"],
     "offer":      ["nuno_offers_cover"],
     "tech":       ["nuno_tablet_cover"],
 }
@@ -97,7 +98,7 @@ TOPIC_KEYWORDS = [
     ("mistake", "mistake"), ("avoid", "mistake"), ("reject", "mistake"), ("wrong", "mistake"),
     ("strategy", "think"), ("research", "think"), ("hidden", "think"), ("think", "think"),
     ("skill", "skills"), ("portfolio", "tech"), ("project", "skills"), ("experience", "skills"),
-    ("network", "networking"), ("linkedin", "networking"), ("referral", "networking"),
+    ("linkedin", "linkedin"), ("network", "networking"), ("referral", "networking"),
     ("offer", "offer"), ("salary", "offer"), ("negotiat", "offer"),
     # Career / programme topics -> confident, professional founder (best-fit until a
     # bespoke shot exists). Application-shaped topics -> the CV/apply poses.
@@ -368,15 +369,27 @@ def _card(inner, css, bg="rgba(255,255,255,.05)", bd="rgba(255,255,255,.10)", pa
 
 def cover_bento(p, copy, total, pose):
     # A rounded accent panel on the right; Nuno stands WHOLE in front of it.
+    is_linkedin = "linkedin" in (copy.get("headline", "") + " " + copy.get("eyebrow", "")).lower()
     panel = (f"<div style='position:absolute;right:44px;top:150px;bottom:150px;width:470px;border-radius:34px;"
              f"background:linear-gradient(160deg,{p['accent']}26,{p['accent']}08);border:1px solid {p['accent']}33;'></div>")
+    linkedin_frame = ""
+    if is_linkedin:
+        linkedin_frame = (
+            f"<div style='position:absolute;right:76px;top:198px;width:395px;height:520px;border-radius:30px;background:#F8FBFF;box-shadow:0 28px 60px rgba(0,0,0,.28);overflow:hidden;'>"
+            f"<div style='height:106px;background:#0A66C2;'></div>"
+            f"<div style='position:absolute;left:34px;top:36px;width:58px;height:58px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:900;font-size:33px;color:#0A66C2;'>in</div>"
+            f"<div style='position:absolute;left:34px;top:130px;width:120px;height:120px;border-radius:50%;background:#DDE8F6;border:8px solid #F8FBFF;'></div>"
+            f"<div style='position:absolute;left:34px;right:34px;top:282px;height:16px;border-radius:8px;background:#15274322;'></div>"
+            f"<div style='position:absolute;left:34px;right:92px;top:318px;height:14px;border-radius:7px;background:#15274318;'></div>"
+            f"<div style='position:absolute;left:34px;right:54px;top:368px;height:70px;border-radius:18px;background:#0A66C212;border:1px solid #0A66C233;'></div>"
+            f"</div>")
     chip = (f"<div style='position:absolute;right:64px;top:66px;display:inline-flex;align-items:center;height:42px;padding:0 18px;"
             f"border-radius:21px;background:{p['accent']};'><span style=\"font-family:Inter;font-weight:800;font-size:20px;color:{p['deep']};letter-spacing:1px;\">01 / 0{total}</span></div>")
     headcard = _card(
         f"<div style=\"font-family:'DM Sans';font-weight:700;font-size:22px;color:{p['accent']};letter-spacing:4px;margin-bottom:18px;\">{copy.get('eyebrow','INTERNWISE')[:24].upper()}</div>"
         f"<div style=\"font-family:Inter;font-weight:700;font-size:70px;line-height:1.02;letter-spacing:-2px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>",
         css="left:56px;top:300px;width:520px;", pad="40px 42px")
-    return (_bg(p) + panel + _nuno_whole(pose, h=760, right=10) + _logo(left=56, top=44) + chip + headcard
+    return (_bg(p) + panel + linkedin_frame + _nuno_whole(pose, h=760, right=10) + _logo(left=56, top=44) + chip + headcard
             + _footer(p, swipe=True))
 
 def content_bento(p, n, total, slide):
@@ -923,6 +936,10 @@ CTA_TONE = {"serious": ["confident"], "practical": ["confident", "positive"],
 
 def render_education(copy, world, out_dir, week_id="adhoc"):
     os.makedirs(out_dir, exist_ok=True)
+    copy = {**copy}
+    cta = (copy.get("cta") or "").strip()
+    if "internwise.co.uk" not in cta.lower():
+        copy["cta"] = (cta.rstrip(".") + ". " if cta else "") + "Start at internwise.co.uk"
     if world in CAROUSEL:
         p = PAL[world]; w = CAROUSEL[world]
         slides = copy.get("slides", [])
