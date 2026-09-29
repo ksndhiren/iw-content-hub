@@ -247,7 +247,7 @@ def _nuno_whole(pose, h=820, right=-40, bottom=0):
     return ground + img
 
 def _profile_avatar(left, top, size, border=8):
-    src = L.img(os.path.join(L.BASE, "assets", "nuno", "nuno_profile_avatar.png"))
+    src = L.img(os.path.join(L.BASE, "assets", "nuno", "linkedin_profile_blonde_professional.png"))
     inner = size - border * 2
     return (f"<div style='position:absolute;left:{left}px;top:{top}px;width:{size}px;height:{size}px;border-radius:50%;"
             f"background:#F8FBFF;border:{border}px solid #F8FBFF;overflow:hidden;box-shadow:0 8px 22px rgba(21,39,67,.16);'>"
