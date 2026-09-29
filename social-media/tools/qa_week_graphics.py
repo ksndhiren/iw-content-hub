@@ -24,9 +24,8 @@ WEEKS = HUB / "data" / "weeks.json"
 IMG_ROOT = HUB / "images"
 AUTHORS = SOCIAL / "assets" / "quote_authors"
 
-CORE_LANES = ("news", "education", "quote", "employer", "engagement")
+CORE_LANES = ("education", "quote", "employer", "engagement")
 CORE_LANE_LABELS = {
-    "news": "News",
     "education": "Education",
     "quote": "Quote",
     "employer": "Employer",
@@ -128,7 +127,7 @@ def main() -> int:
         counts = Counter(lanes)
         missing = [lane for lane in CORE_LANES if counts[lane] == 0]
         dupes = [lane for lane, count in counts.items() if count > 1]
-        if len(core) != 5 or missing or dupes:
+        if len(core) != len(CORE_LANES) or missing or dupes:
             expected = ", ".join(CORE_LANE_LABELS[lane] for lane in CORE_LANES)
             missing_labels = [CORE_LANE_LABELS.get(lane, lane) for lane in missing]
             errors.append(f"{day}: expected one each of {expected}; missing={missing_labels} duplicates={dupes}")
@@ -193,7 +192,7 @@ def main() -> int:
             print(f"- {item}")
         return 1
 
-    print(f"QA passed for {week['id']}: five core lanes per weekday incl. Poll/Conversation, quote portraits present, slide files valid, overlap review acknowledged.")
+    print(f"QA passed for {week['id']}: evergreen lanes per weekday incl. Poll/Conversation, quote portraits present, slide files valid, overlap review acknowledged. News is checked by the day-prior news job.")
     return 0
 
 

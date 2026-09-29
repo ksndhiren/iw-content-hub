@@ -5609,50 +5609,6 @@
       "builtAt": 1790688155,
       "posts": [
         {
-          "id": "week18-mon-news",
-          "day": "Mon 28 Sep",
-          "lane": "news",
-          "title": "Job Boost for Young Disabled People",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "approved",
-          "caption": "Great news for young disabled people in the UK! The government's Jobs Guarantee scheme is set to fast-track thousands into jobs, providing a much-needed boost for those facing employment barriers. This initiative is a major step towards greater workplace inclusion and offers a direct path to employment for many students and graduates. Internships are also key, offering valuable experience and helping you stand out. Source: Personnel Today.",
-          "hashtags": [
-            "#ukjobs",
-            "#disabilityinclusion",
-            "#jobopportunities",
-            "#internships",
-            "#inclusiveworkplace"
-          ],
-          "captions": {
-            "ig-fb": "Great news for young disabled people in the UK! The government's Jobs Guarantee scheme is set to fast-track thousands into jobs, providing a much-needed boost for those facing employment barriers. This initiative is a major step towards greater workplace inclusion and offers a direct path to employment for many students and graduates. Internships are also key, offering valuable experience and helping you stand out. Source: Personnel Today.",
-            "linkedin": "The UK government's Jobs Guarantee scheme is offering a promising opportunity for thousands of young disabled people by fast-tracking them into jobs. This initiative aims to break down employment barriers and promote inclusivity in the workforce. For students and graduates, it's a chance to enter the job market with support and confidence. Internships complement this by providing essential experience and skills. Source: Personnel Today.",
-            "x": "UK's Jobs Guarantee scheme to fast-track young disabled people into jobs, supporting greater inclusivity in the workforce. (Source: Personnel Today)",
-            "threads": "Thousands of young disabled people in the UK will be fast-tracked into jobs under the government's Jobs Guarantee scheme. This effort aims to remove barriers to employment and promote inclusivity. Internships also play a vital role by providing practical experience. More at www.internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#ukjobs",
-              "#disabilityinclusion",
-              "#jobopportunities",
-              "#internships",
-              "#inclusiveworkplace"
-            ],
-            "linkedin": [
-              "#ukjobs",
-              "#disabilityinclusion",
-              "#careerdevelopment"
-            ],
-            "x": [
-              "#ukjobs",
-              "#inclusion"
-            ]
-          }
-        },
-        {
           "id": "week18-mon-quote",
           "day": "Mon 28 Sep",
           "lane": "quote",
@@ -5857,50 +5813,6 @@
           "ideaId": "c001"
         },
         {
-          "id": "week18-tue-news",
-          "day": "Tue 29 Sep",
-          "lane": "news",
-          "title": "Northern Jobs Boom Unveils Talent Gap",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "The North of England is transforming with significant investment generating new job opportunities. But, there's a catch - a skills gap is emerging as the region evolves. This is a golden opportunity for students and graduates to step into these roles and shape their careers. Internships play a vital role, offering real-world experience and bridging the skills gap, making you job-ready. Source: FE News.",
-          "hashtags": [
-            "#ukjobs",
-            "#internships",
-            "#skillsgap",
-            "#careergrowth",
-            "#northerninvestment"
-          ],
-          "captions": {
-            "ig-fb": "The North of England is transforming with significant investment generating new job opportunities. But, there's a catch - a skills gap is emerging as the region evolves. This is a golden opportunity for students and graduates to step into these roles and shape their careers. Internships play a vital role, offering real-world experience and bridging the skills gap, making you job-ready. Source: FE News.",
-            "linkedin": "Significant investment in the North of England is creating new jobs, but a skills gap is emerging. This presents an opportunity for students and graduates to seize fresh roles and drive growth. Internships are key, providing the practical experience needed to meet employer demands and succeed. Source: FE News.",
-            "x": "Investment in the North is creating jobs, but a skills gap remains. This is a chance for students and grads to step up. Internships help bridge this gap. (Source: FE News)",
-            "threads": "The North of England sees job creation through major investment, but a skills gap is evident. Students and grads can fill these roles and internships are key to bridging this gap. Learn more at www.internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#ukjobs",
-              "#internships",
-              "#skillsgap",
-              "#careergrowth",
-              "#northerninvestment"
-            ],
-            "linkedin": [
-              "#ukjobs",
-              "#skillsdevelopment",
-              "#internships"
-            ],
-            "x": [
-              "#ukjobs",
-              "#skillsgap"
-            ]
-          }
-        },
-        {
           "id": "week18-tue-quote",
           "day": "Tue 29 Sep",
           "lane": "quote",
@@ -6099,50 +6011,6 @@
           },
           "world": "decision",
           "ideaId": "c002"
-        },
-        {
-          "id": "week18-wed-news",
-          "day": "Wed 30 Sep",
-          "lane": "news",
-          "title": "UK Can Learn from Singapore's Skills Approach",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "England is looking at Singapore's expertise in skills intelligence to enhance economic decision-making. By understanding the specific skills an economy needs, better alignment between education and job markets can be achieved. This means, for students and graduates, more targeted education and informed career choices. Internships play a crucial role here, providing the practical experience needed to meet employer expectations. Source: FE News.",
-          "hashtags": [
-            "#ukjobs",
-            "#skillsdevelopment",
-            "#careergrowth",
-            "#internships",
-            "#education"
-          ],
-          "captions": {
-            "ig-fb": "England is looking at Singapore's expertise in skills intelligence to enhance economic decision-making. By understanding the specific skills an economy needs, better alignment between education and job markets can be achieved. This means, for students and graduates, more targeted education and informed career choices. Internships play a crucial role here, providing the practical experience needed to meet employer expectations. Source: FE News.",
-            "linkedin": "In a bid to improve the alignment of education and economic needs, England is considering insights from Singapore's skills intelligence approach. Better understanding of required skills can help students and graduates make more informed decisions about their education and careers. Internships are a key part of this process, offering valuable experience that is aligned with market needs. Source: FE News.",
-            "x": "England is exploring Singapore's skills intelligence to align education with job market needs, aiding students in career decisions. Internships provide essential experience. (Source: FE News)",
-            "threads": "England is learning from Singapore's skills intelligence to align education with economic needs. This benefits students by aligning skills with market demands and making informed career choices. Internships help bridge the gap with real-world experience. www.internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#ukjobs",
-              "#skillsdevelopment",
-              "#careergrowth",
-              "#internships",
-              "#education"
-            ],
-            "linkedin": [
-              "#skillsdevelopment",
-              "#ukjobs",
-              "#careergrowth"
-            ],
-            "x": [
-              "#ukjobs",
-              "#skills"
-            ]
-          }
         },
         {
           "id": "week18-wed-quote",
@@ -6349,50 +6217,6 @@
           "ideaId": "c003"
         },
         {
-          "id": "week18-thu-news",
-          "day": "Thu 1 Oct",
-          "lane": "news",
-          "title": "UK Employers Show Slight Hiring Confidence",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "A recent report highlights a small increase in hiring confidence among UK employers as they anticipate upcoming budget announcements. This is promising news for students and graduates, signalling potential job opportunities on the horizon. Internships can play a key role in preparing you for these openings by providing essential experience. Source: Personnel Today. #UKJobs #HiringConfidence #StudentOpportunities #GraduateJobs #Internships",
-          "hashtags": [
-            "#ukjobs",
-            "#hiringconfidence",
-            "#studentopportunities",
-            "#graduatejobs",
-            "#internships"
-          ],
-          "captions": {
-            "ig-fb": "A recent report highlights a small increase in hiring confidence among UK employers as they anticipate upcoming budget announcements. This is promising news for students and graduates, signalling potential job opportunities on the horizon. Internships can play a key role in preparing you for these openings by providing essential experience. Source: Personnel Today. #UKJobs #HiringConfidence #StudentOpportunities #GraduateJobs #Internships",
-            "linkedin": "UK employers have shown a slight increase in hiring confidence, according to a recruitment group. This comes ahead of anticipated budget announcements and suggests that new job opportunities may soon be available, especially for students and graduates. Internships are a great way to gain the necessary skills and experience to seize these opportunities. Source: Personnel Today. #UKJobMarket #GraduateOpportunities #Internships",
-            "x": "UK employers are feeling slightly more confident about hiring, signalling potential opportunities for students and graduates. (Source: Personnel Today) #UKJobs #Hiring",
-            "threads": "A recruitment group reports a slight boost in hiring confidence among UK employers. As budget announcements loom, this could mean new opportunities for students and graduates. Internships can be the stepping stone you need. www.internwise.co.uk #UKJobs #GraduateOpportunities #Internships"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#ukjobs",
-              "#hiringconfidence",
-              "#studentopportunities",
-              "#graduatejobs",
-              "#internships"
-            ],
-            "linkedin": [
-              "#ukjobmarket",
-              "#graduateopportunities",
-              "#internships"
-            ],
-            "x": [
-              "#ukjobs",
-              "#hiring"
-            ]
-          }
-        },
-        {
           "id": "week18-thu-quote",
           "day": "Thu 1 Oct",
           "lane": "quote",
@@ -6577,50 +6401,6 @@
           },
           "world": "decision",
           "ideaId": "c004"
-        },
-        {
-          "id": "week18-fri-news",
-          "day": "Fri 2 Oct",
-          "lane": "news",
-          "title": "UK Minister Prepares for AI Job Impact",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "A UK minister emphasises the need for strategies to address possible job losses due to AI developments. There's growing concern about automation's impact on employment, making skill adaptability more crucial than ever for students and graduates. To navigate these changes, internships provide valuable real-world experience that enhances employability. Source: BBC Business.",
-          "hashtags": [
-            "#aiimpact",
-            "#jobmarket",
-            "#internships",
-            "#adaptableskills",
-            "#ukcareers"
-          ],
-          "captions": {
-            "ig-fb": "A UK minister emphasises the need for strategies to address possible job losses due to AI developments. There's growing concern about automation's impact on employment, making skill adaptability more crucial than ever for students and graduates. To navigate these changes, internships provide valuable real-world experience that enhances employability. Source: BBC Business.",
-            "linkedin": "A UK government minister is calling for a plan to handle potential job losses as AI technology advances. The rise of automation may challenge employment, highlighting the importance of adaptable skills for students and graduates. Internships can be a great way to gain the diverse experiences needed to thrive in this evolving job market. Source: BBC Business.",
-            "x": "A UK minister urges a plan for potential AI-driven job losses, highlighting the importance of adaptable skills. Internships help build resilience. (Source: BBC Business)",
-            "threads": "A UK minister stresses the need for a strategy to handle potential job losses from AI advancements. With automation affecting jobs, students should focus on adaptable skills. Internships offer practical experience to navigate these changes. www.internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#aiimpact",
-              "#jobmarket",
-              "#internships",
-              "#adaptableskills",
-              "#ukcareers"
-            ],
-            "linkedin": [
-              "#aiimpact",
-              "#jobmarket",
-              "#internships"
-            ],
-            "x": [
-              "#aiimpact",
-              "#jobmarket"
-            ]
-          }
         },
         {
           "id": "week18-fri-quote",

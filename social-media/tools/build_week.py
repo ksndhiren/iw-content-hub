@@ -349,7 +349,35 @@ def pick_conversation_ideas(conversation_ideas, days, wid):
     return (fresh + fallback)[:days]
 
 
-def build_news_post(wid, dkey, dlabel, pdate, img, item, issue_no=1, dry=False):
+def _news_image_query(item, headline):
+    source = " ".join([
+        headline or "",
+        item.get("title", ""),
+        item.get("summary", ""),
+    ]).lower()
+    if "disabled" in source or "disability" in source:
+        return "disabled young professional workplace support"
+    if "ai" in source or "automation" in source:
+        return "student professional technology workplace artificial intelligence"
+    if "skill" in source or "training" in source:
+        return "young professional skills training workplace"
+    if "north" in source or "investment" in source:
+        return "young professional workplace city office"
+    return "young professional workplace internship office"
+
+
+def _fetch_required_news_image(item, headline):
+    try:
+        from pexels_utils import get_photo
+        return get_photo(_news_image_query(item, headline), index=0, orientation="landscape", size="large")
+    except Exception as exc:
+        raise RuntimeError(
+            "News cards require a relevant image. Add/fix PEXELS_API_KEY or pass an image_path; "
+            f"image fetch failed for {headline!r}: {exc}"
+        )
+
+
+def build_news_post(wid, dkey, dlabel, pdate, img, item, issue_no=1, dry=False, image_path=None):
     """Build ONE news post: LLM rewrite + rendered news card -> post dict.
 
     Shared by the day-prior news job (build_news_day.py) so news is generated
@@ -358,10 +386,12 @@ def build_news_post(wid, dkey, dlabel, pdate, img, item, issue_no=1, dry=False):
     nc = writer.write_news(item)
     pid = f"{wid}-{dkey}-news"
     if not dry:
+        image_path = image_path or _fetch_required_news_image(item, nc["headline"])
         news_card.render_news({"kicker": "JOB MARKET", "date": pdate},
                               os.path.join(img, pid), issue_no=issue_no,
                               headline=nc["headline"], brief=nc["brief"],
-                              sidebar=nc["sidebar"], pull=nc["pull"])
+                              sidebar=nc["sidebar"], pull=nc["pull"],
+                              image_path=image_path)
     return _post(pid, dlabel, "news", nc["headline"], "Single", ["slide_1.png"],
                  nc["captions"], nc["hashtags"])
 

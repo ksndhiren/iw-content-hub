@@ -87,6 +87,8 @@ def render_news(item, out_dir, filename="slide_1.png", issue_no=1,
     Internwise's own voice. Never display the feed's exact headline/summary text
     (that is duplicate content). The raw item fields are a dev-only fallback.
     """
+    if not image_path:
+        raise ValueError("News cards require image_path; do not render text-only news graphics.")
     kicker  = (item.get("kicker") or "JOB MARKET").upper()
     # `title` = display headline. Prefer the reworded `headline`; fall back to
     # the raw feed title only in dev (flagged by the pipeline otherwise).
@@ -231,5 +233,6 @@ if __name__ == "__main__":
                  "Look at internships, not only graduate schemes",
                  "Let proof of skills beat a polished CV"],
         pull="A tougher market rewards the graduates who start early and keep going.",
+        image_path=os.path.join(L.BASE, "assets", "news", "jobs-guarantee-work-placement.png"),
     )
     print("rendered (reworded copy):", item["title"])
