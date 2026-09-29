@@ -1931,12 +1931,6 @@
     "network": "instagram",
     "scheduleDate": "2026-09-30T07:00:00Z"
   },
-  "week18-wed-news:facebook": {
-    "id": "Ar4Hnn7qJBGCgpSlzssU",
-    "at": "2026-09-29T19:12:44.092462",
-    "network": "facebook",
-    "scheduleDate": "2026-09-30T07:00:00Z"
-  },
   "week18-wed-news:linkedin": {
     "id": "ayvy32hM9rhU8rmxj2I8",
     "at": "2026-09-29T19:12:47.947436",
@@ -1967,12 +1961,6 @@
     "network": "linkedin",
     "scheduleDate": "2026-09-30T12:30:00Z"
   },
-  "week18-mon-education:facebook": {
-    "id": "w74MpnyTL6LQ5Im1XKjj",
-    "at": "2026-09-29T19:13:08.284374",
-    "network": "facebook",
-    "scheduleDate": "2026-09-30T12:30:00Z"
-  },
   "week18-mon-education:threads": {
     "id": "AeRoZIevABgUTUtY7XEm",
     "at": "2026-09-29T19:13:11.718866",
@@ -1989,12 +1977,6 @@
     "id": "4ZUdyA2UjAlhw0zl7npI",
     "at": "2026-09-29T19:13:16.223711",
     "network": "instagram",
-    "scheduleDate": "2026-09-30T15:30:00Z"
-  },
-  "week18-mon-engagement:facebook": {
-    "id": "u4MtT5sSnSPLN5RxbDUs",
-    "at": "2026-09-29T19:13:17.965454",
-    "network": "facebook",
     "scheduleDate": "2026-09-30T15:30:00Z"
   },
   "week18-mon-engagement:threads": {
@@ -2015,12 +1997,6 @@
     "network": "instagram",
     "scheduleDate": "2026-09-30T19:00:00Z"
   },
-  "week18-mon-quote:facebook": {
-    "id": "2yGtEt3TFOdrsjLAeEi4",
-    "at": "2026-09-29T19:13:30.718179",
-    "network": "facebook",
-    "scheduleDate": "2026-09-30T19:00:00Z"
-  },
   "week18-mon-quote:threads": {
     "id": "kYOnHY73S9eRZGfda6iY",
     "at": "2026-09-29T19:13:34.481437",
@@ -2033,12 +2009,6 @@
     "network": "linkedin",
     "scheduleDate": "2026-09-30T19:30:00Z"
   },
-  "week18-mon-employer:facebook": {
-    "id": "6ZX6a0AGDtB0UfIXOuBn",
-    "at": "2026-09-29T19:13:45.614631",
-    "network": "facebook",
-    "scheduleDate": "2026-09-30T19:30:00Z"
-  },
   "week18-mon-employer:gmb": {
     "id": "pplHG0nYhoJKrWssIuiz",
     "at": "2026-09-29T19:13:50.427163",
@@ -2049,12 +2019,6 @@
     "id": "u1nRHmUAkhj244j7x1eL",
     "at": "2026-09-29T19:13:54.318782",
     "network": "instagram",
-    "scheduleDate": "2026-10-01T07:00:00Z"
-  },
-  "week18-thu-news:facebook": {
-    "id": "0ZpFwW67LcNgON3OVTRI",
-    "at": "2026-09-29T19:13:58.824094",
-    "network": "facebook",
     "scheduleDate": "2026-10-01T07:00:00Z"
   },
   "week18-thu-news:linkedin": {
@@ -2087,12 +2051,6 @@
     "network": "linkedin",
     "scheduleDate": "2026-10-01T12:30:00Z"
   },
-  "week18-tue-education:facebook": {
-    "id": "JjO1tkJHomb1VZDYSEKt",
-    "at": "2026-09-29T19:14:29.751231",
-    "network": "facebook",
-    "scheduleDate": "2026-10-01T12:30:00Z"
-  },
   "week18-tue-education:threads": {
     "id": "uIhZlNoAolFmgheoV59W",
     "at": "2026-09-29T19:14:34.419387",
@@ -2109,12 +2067,6 @@
     "id": "jF6jl4pvwKnPCSAI4ibH",
     "at": "2026-09-29T19:14:42.247652",
     "network": "instagram",
-    "scheduleDate": "2026-10-01T15:30:00Z"
-  },
-  "week18-tue-engagement:facebook": {
-    "id": "TaWsCWsjgl7bMIfV2V7L",
-    "at": "2026-09-29T19:14:44.545753",
-    "network": "facebook",
     "scheduleDate": "2026-10-01T15:30:00Z"
   },
   "week18-tue-engagement:threads": {
@@ -2135,12 +2087,6 @@
     "network": "instagram",
     "scheduleDate": "2026-10-01T19:00:00Z"
   },
-  "week18-tue-quote:facebook": {
-    "id": "aQcos7m26nydG5RhmhbP",
-    "at": "2026-09-29T19:14:58.218541",
-    "network": "facebook",
-    "scheduleDate": "2026-10-01T19:00:00Z"
-  },
   "week18-tue-quote:threads": {
     "id": "RDd6xISTpTNtZbnB0kGd",
     "at": "2026-09-29T19:15:00.676490",
@@ -2151,12 +2097,6 @@
     "id": "mqhKXPaFjknWuHsdnRh3",
     "at": "2026-09-29T19:15:03.597343",
     "network": "linkedin",
-    "scheduleDate": "2026-10-01T19:30:00Z"
-  },
-  "week18-tue-employer:facebook": {
-    "id": "A4cmsORIXAaVysusbiRn",
-    "at": "2026-09-29T19:15:05.682726",
-    "network": "facebook",
     "scheduleDate": "2026-10-01T19:30:00Z"
   },
   "week18-tue-employer:gmb": {

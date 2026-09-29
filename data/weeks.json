@@ -5606,53 +5606,8 @@
       "id": "week18",
       "label": "Week 18",
       "weekCommencing": "2026-09-28",
-      "builtAt": 1790708743,
+      "builtAt": 1790712071,
       "posts": [
-        {
-          "id": "week18-mon-quote",
-          "day": "Mon 28 Sep",
-          "lane": "quote",
-          "title": "Quote: Wayne Gretzky",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Wayne Gretzky said it best: 'You miss 100 percent of the shots you don't take.' This is your reminder to seize every opportunity that comes your way. Whether it's an internship or a new career path, don't hold back. Dive into opportunities and see where they lead. Start your journey with us at www.internwise.co.uk.",
-          "hashtags": [
-            "#careergoals",
-            "#internshipopportunities",
-            "#taketheleap",
-            "#waynegretzky",
-            "#internwiseuk"
-          ],
-          "captions": {
-            "ig-fb": "Wayne Gretzky said it best: 'You miss 100 percent of the shots you don't take.' This is your reminder to seize every opportunity that comes your way. Whether it's an internship or a new career path, don't hold back. Dive into opportunities and see where they lead. Start your journey with us at www.internwise.co.uk.",
-            "linkedin": "Wayne Gretzky's words resonate in both sports and careers: 'You miss 100 percent of the shots you don't take.' It's a powerful reminder to embrace opportunities and step out of your comfort zone. If you're on the hunt for an internship or your first professional role, take the leap. Explore the possibilities with us at internwise.co.uk.",
-            "x": "Wayne Gretzky nailed it: 'You miss 100 percent of the shots you don't take.' Ready to take your shot? Check out internships at internwise.co.uk."
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#careergoals",
-              "#internshipopportunities",
-              "#taketheleap",
-              "#waynegretzky",
-              "#internwiseuk"
-            ],
-            "linkedin": [
-              "#careerdevelopment",
-              "#internshipopportunities",
-              "#waynegretzky"
-            ],
-            "x": [
-              "#careeradvice",
-              "#internwiseuk"
-            ]
-          },
-          "quoteId": "q016",
-          "world": "spotlight"
-        },
         {
           "id": "week18-mon-education",
           "day": "Mon 28 Sep",
@@ -5726,50 +5681,6 @@
           "world": "plum"
         },
         {
-          "id": "week18-mon-employer",
-          "day": "Mon 28 Sep",
-          "lane": "employer",
-          "title": "From role posted to intern onboarded",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Hiring managers, simplify your intern recruitment process with Internwise. From posting a role to onboarding a talented intern, we make it seamless. Register in just 3 minutes, post unlimited vacancies, and manage everything in one place. Start building your next dream team today at www.internwise.co.uk.",
-          "hashtags": [
-            "#internrecruitment",
-            "#hiringsimplified",
-            "#careergrowth",
-            "#futureleaders",
-            "#internwiseuk"
-          ],
-          "captions": {
-            "ig-fb": "Hiring managers, simplify your intern recruitment process with Internwise. From posting a role to onboarding a talented intern, we make it seamless. Register in just 3 minutes, post unlimited vacancies, and manage everything in one place. Start building your next dream team today at www.internwise.co.uk.",
-            "linkedin": "Streamline your intern hiring process with Internwise. From posting roles to onboarding, do it all in one spot. Register in 3 minutes and post unlimited vacancies. Efficient and straightforward, we're here to help you build a strong team effortlessly. Discover more at internwise.co.uk.",
-            "x": "Hiring made easy: From posting roles to onboarding, manage it all with Internwise. Register in 3 mins and post unlimited vacancies. internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#internrecruitment",
-              "#hiringsimplified",
-              "#careergrowth",
-              "#futureleaders",
-              "#internwiseuk"
-            ],
-            "linkedin": [
-              "#internrecruitment",
-              "#talentmanagement",
-              "#internwiseuk"
-            ],
-            "x": [
-              "#hiresmart",
-              "#internwiseuk"
-            ]
-          },
-          "world": "process"
-        },
-        {
           "id": "week18-mon-engagement",
           "day": "Mon 28 Sep",
           "lane": "engagement",
@@ -5813,49 +5724,93 @@
           "ideaId": "c001"
         },
         {
-          "id": "week18-tue-quote",
-          "day": "Tue 29 Sep",
+          "id": "week18-mon-quote",
+          "day": "Mon 28 Sep",
           "lane": "quote",
-          "title": "Quote: William James",
+          "title": "Quote: Wayne Gretzky",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Ever feel like your efforts are just a drop in the ocean? Remember, every action counts. William James reminds us that what you do truly makes a difference. Ready to make your mark? Start by finding the right internship for you. Explore opportunities at www.internwise.co.uk",
+          "caption": "Wayne Gretzky said it best: 'You miss 100 percent of the shots you don't take.' This is your reminder to seize every opportunity that comes your way. Whether it's an internship or a new career path, don't hold back. Dive into opportunities and see where they lead. Start your journey with us at www.internwise.co.uk.",
           "hashtags": [
-            "#internships",
-            "#careergrowth",
-            "#williamjames",
-            "#makeadifference",
-            "#internwise"
+            "#careergoals",
+            "#internshipopportunities",
+            "#taketheleap",
+            "#waynegretzky",
+            "#internwiseuk"
           ],
           "captions": {
-            "ig-fb": "Ever feel like your efforts are just a drop in the ocean? Remember, every action counts. William James reminds us that what you do truly makes a difference. Ready to make your mark? Start by finding the right internship for you. Explore opportunities at www.internwise.co.uk",
-            "linkedin": "William James once said, 'Act as if what you do makes a difference. It does.' In the world of internships and early careers, every step you take can lead to something greater. It's time to turn your actions into achievements. Discover your next opportunity with us at internwise.co.uk.",
-            "x": "Every action you take counts, says William James. Make your actions matter by starting your internship journey today. internwise.co.uk"
+            "ig-fb": "Wayne Gretzky said it best: 'You miss 100 percent of the shots you don't take.' This is your reminder to seize every opportunity that comes your way. Whether it's an internship or a new career path, don't hold back. Dive into opportunities and see where they lead. Start your journey with us at www.internwise.co.uk.",
+            "linkedin": "Wayne Gretzky's words resonate in both sports and careers: 'You miss 100 percent of the shots you don't take.' It's a powerful reminder to embrace opportunities and step out of your comfort zone. If you're on the hunt for an internship or your first professional role, take the leap. Explore the possibilities with us at internwise.co.uk.",
+            "x": "Wayne Gretzky nailed it: 'You miss 100 percent of the shots you don't take.' Ready to take your shot? Check out internships at internwise.co.uk."
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#internships",
-              "#careergrowth",
-              "#williamjames",
-              "#makeadifference",
-              "#internwise"
+              "#careergoals",
+              "#internshipopportunities",
+              "#taketheleap",
+              "#waynegretzky",
+              "#internwiseuk"
             ],
             "linkedin": [
               "#careerdevelopment",
-              "#internships",
-              "#makeadifference"
+              "#internshipopportunities",
+              "#waynegretzky"
             ],
             "x": [
-              "#careergrowth",
-              "#internships"
+              "#careeradvice",
+              "#internwiseuk"
             ]
           },
-          "quoteId": "q021",
-          "world": "editorial"
+          "quoteId": "q016",
+          "world": "spotlight"
+        },
+        {
+          "id": "week18-mon-employer",
+          "day": "Mon 28 Sep",
+          "lane": "employer",
+          "title": "From role posted to intern onboarded",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Hiring managers, simplify your intern recruitment process with Internwise. From posting a role to onboarding a talented intern, we make it seamless. Register in just 3 minutes, post unlimited vacancies, and manage everything in one place. Start building your next dream team today at www.internwise.co.uk.",
+          "hashtags": [
+            "#internrecruitment",
+            "#hiringsimplified",
+            "#careergrowth",
+            "#futureleaders",
+            "#internwiseuk"
+          ],
+          "captions": {
+            "ig-fb": "Hiring managers, simplify your intern recruitment process with Internwise. From posting a role to onboarding a talented intern, we make it seamless. Register in just 3 minutes, post unlimited vacancies, and manage everything in one place. Start building your next dream team today at www.internwise.co.uk.",
+            "linkedin": "Streamline your intern hiring process with Internwise. From posting roles to onboarding, do it all in one spot. Register in 3 minutes and post unlimited vacancies. Efficient and straightforward, we're here to help you build a strong team effortlessly. Discover more at internwise.co.uk.",
+            "x": "Hiring made easy: From posting roles to onboarding, manage it all with Internwise. Register in 3 mins and post unlimited vacancies. internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internrecruitment",
+              "#hiringsimplified",
+              "#careergrowth",
+              "#futureleaders",
+              "#internwiseuk"
+            ],
+            "linkedin": [
+              "#internrecruitment",
+              "#talentmanagement",
+              "#internwiseuk"
+            ],
+            "x": [
+              "#hiresmart",
+              "#internwiseuk"
+            ]
+          },
+          "world": "process"
         },
         {
           "id": "week18-tue-education",
@@ -5930,46 +5885,6 @@
           "world": "navy-linkedin-profile-frame"
         },
         {
-          "id": "week18-tue-employer",
-          "day": "Tue 29 Sep",
-          "lane": "employer",
-          "title": "Reach 400,000 early-career candidates",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Reach 400,000 early-career candidates\n\nPost internships, shortlist candidates and hire early-career talent at internwise.co.uk/employers.",
-          "hashtags": [
-            "#internwise",
-            "#employers",
-            "#earlycareers"
-          ],
-          "captions": {
-            "ig-fb": "Reach 400,000 early-career candidates\n\nPost internships, shortlist candidates and hire early-career talent at internwise.co.uk/employers.",
-            "linkedin": "Reach 400,000 early-career candidates\n\nPost internships, shortlist candidates and hire early-career talent at internwise.co.uk/employers.",
-            "x": "Reach 400,000 early-career candidates Find internships at internwise.co.uk."
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#internwise",
-              "#employers",
-              "#earlycareers"
-            ],
-            "linkedin": [
-              "#careerdevelopment",
-              "#internships",
-              "#earlycareers"
-            ],
-            "x": [
-              "#careers",
-              "#internships"
-            ]
-          },
-          "world": "distinct-week18"
-        },
-        {
           "id": "week18-tue-engagement",
           "day": "Tue 29 Sep",
           "lane": "engagement",
@@ -6013,49 +5928,133 @@
           "ideaId": "c002"
         },
         {
-          "id": "week18-wed-quote",
-          "day": "Wed 30 Sep",
+          "id": "week18-tue-quote",
+          "day": "Tue 29 Sep",
           "lane": "quote",
-          "title": "Quote: Benjamin Franklin",
+          "title": "Quote: William James",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Benjamin Franklin knew that actions speak louder than words. In your career journey, showing your skills can make all the difference. Dive into an internship and turn your words into achievements. Find yours at www.internwise.co.uk",
+          "caption": "Ever feel like your efforts are just a drop in the ocean? Remember, every action counts. William James reminds us that what you do truly makes a difference. Ready to make your mark? Start by finding the right internship for you. Explore opportunities at www.internwise.co.uk",
           "hashtags": [
-            "#careergoals",
-            "#internship",
-            "#graduatelife",
-            "#benjaminfranklin",
+            "#internships",
+            "#careergrowth",
+            "#williamjames",
+            "#makeadifference",
             "#internwise"
           ],
           "captions": {
-            "ig-fb": "Benjamin Franklin knew that actions speak louder than words. In your career journey, showing your skills can make all the difference. Dive into an internship and turn your words into achievements. Find yours at www.internwise.co.uk",
-            "linkedin": "Benjamin Franklin wisely noted, 'Well done is better than well said.' This holds true in the professional world where tangible results outshine promises. An internship is your chance to demonstrate your abilities and make a real impact. Explore opportunities at internwise.co.uk",
-            "x": "Benjamin Franklin said it well: 'Well done is better than well said.' Prove your skills with a internship. Check out internwise.co.uk"
+            "ig-fb": "Ever feel like your efforts are just a drop in the ocean? Remember, every action counts. William James reminds us that what you do truly makes a difference. Ready to make your mark? Start by finding the right internship for you. Explore opportunities at www.internwise.co.uk",
+            "linkedin": "William James once said, 'Act as if what you do makes a difference. It does.' In the world of internships and early careers, every step you take can lead to something greater. It's time to turn your actions into achievements. Discover your next opportunity with us at internwise.co.uk.",
+            "x": "Every action you take counts, says William James. Make your actions matter by starting your internship journey today. internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#careergoals",
-              "#internship",
-              "#graduatelife",
-              "#benjaminfranklin",
+              "#internships",
+              "#careergrowth",
+              "#williamjames",
+              "#makeadifference",
               "#internwise"
             ],
             "linkedin": [
               "#careerdevelopment",
-              "#internshipopportunities",
-              "#benjaminfranklin"
+              "#internships",
+              "#makeadifference"
             ],
             "x": [
-              "#internship",
-              "#careeradvice"
+              "#careergrowth",
+              "#internships"
             ]
           },
-          "quoteId": "q022",
-          "world": "colorblock"
+          "quoteId": "q021",
+          "world": "editorial"
+        },
+        {
+          "id": "week18-tue-employer",
+          "day": "Tue 29 Sep",
+          "lane": "employer",
+          "title": "Reach 400,000 early-career candidates",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Reach 400,000 early-career candidates\n\nPost internships, shortlist candidates and hire early-career talent at internwise.co.uk/employers.",
+          "hashtags": [
+            "#internwise",
+            "#employers",
+            "#earlycareers"
+          ],
+          "captions": {
+            "ig-fb": "Reach 400,000 early-career candidates\n\nPost internships, shortlist candidates and hire early-career talent at internwise.co.uk/employers.",
+            "linkedin": "Reach 400,000 early-career candidates\n\nPost internships, shortlist candidates and hire early-career talent at internwise.co.uk/employers.",
+            "x": "Reach 400,000 early-career candidates Find internships at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internwise",
+              "#employers",
+              "#earlycareers"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internships",
+              "#earlycareers"
+            ],
+            "x": [
+              "#careers",
+              "#internships"
+            ]
+          },
+          "world": "distinct-week18"
+        },
+        {
+          "id": "week18-wed-news",
+          "day": "Wed 30 Sep",
+          "lane": "news",
+          "title": "UK Awards Highlight Talent Recruitment",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "A UK awards event recently shone a light on game-changing recruitment strategies, recognising innovative approaches in finding and hiring talent across all levels. For students and recent grads, these developments underline the significance of understanding how recruitment evolves and what employers seek. Grasping these can make you a standout candidate. Internships offer a valuable gateway to gaining this insight and experience. Source: Personnel Today.",
+          "hashtags": [
+            "#recruitment",
+            "#ukjobs",
+            "#internships",
+            "#careergrowth",
+            "#talent"
+          ],
+          "captions": {
+            "ig-fb": "A UK awards event recently shone a light on game-changing recruitment strategies, recognising innovative approaches in finding and hiring talent across all levels. For students and recent grads, these developments underline the significance of understanding how recruitment evolves and what employers seek. Grasping these can make you a standout candidate. Internships offer a valuable gateway to gaining this insight and experience. Source: Personnel Today.",
+            "linkedin": "The spotlight was on innovative recruitment at a recent UK awards event, recognising effective strategies for attracting and selecting talent. This is a vital development for students and recent graduates, as understanding these trends can enhance your job prospects. Internships provide a crucial pathway, offering real-world experience and insight into what employers value. Source: Personnel Today.",
+            "x": "UK awards showcased innovative recruitment methods for hiring talent. Students and grads, take note: understanding these trends can boost your job prospects. (Source: Personnel Today)",
+            "threads": "A UK awards event highlighted top recruitment strategies, showcasing effective talent attraction and hiring. For students and grads, it's essential to understand these shifts to stand out. Internships offer key experience and insights. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#recruitment",
+              "#ukjobs",
+              "#internships",
+              "#careergrowth",
+              "#talent"
+            ],
+            "linkedin": [
+              "#recruitment",
+              "#internships",
+              "#careerdevelopment"
+            ],
+            "x": [
+              "#recruitment",
+              "#internships"
+            ]
+          }
         },
         {
           "id": "week18-wed-education",
@@ -6130,6 +6129,94 @@
           "world": "distinct-week18"
         },
         {
+          "id": "week18-wed-engagement",
+          "day": "Wed 30 Sep",
+          "lane": "engagement",
+          "title": "What is stopping the application?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "What is stopping the application?\n\nMost hesitation comes from one missing piece: unclear fit, no recent experience, or not enough confidence. Pick the barrier, then choose one role that lowers it. Start with one role at internwise.co.uk.",
+          "hashtags": [
+            "#internwise",
+            "#internships",
+            "#jobsearch",
+            "#careerdevelopment"
+          ],
+          "captions": {
+            "ig-fb": "What is stopping the application?\n\nMost hesitation comes from one missing piece: unclear fit, no recent experience, or not enough confidence. Pick the barrier, then choose one role that lowers it. Start with one role at internwise.co.uk.",
+            "linkedin": "What is stopping the application? Most hesitation comes from one missing piece, not a lack of ability. If the fit is unclear, the experience feels thin, or confidence is low, choose one role that lowers the barrier. Start at internwise.co.uk.",
+            "x": "What is stopping the application: unclear fit, experience, or confidence? Start with one role at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internwise",
+              "#internships",
+              "#jobsearch",
+              "#careerdevelopment"
+            ],
+            "linkedin": [
+              "#internships",
+              "#careerdevelopment",
+              "#jobsearch"
+            ],
+            "x": [
+              "#internships",
+              "#jobsearch"
+            ]
+          },
+          "world": "decision",
+          "ideaId": "c003"
+        },
+        {
+          "id": "week18-wed-quote",
+          "day": "Wed 30 Sep",
+          "lane": "quote",
+          "title": "Quote: Benjamin Franklin",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Benjamin Franklin knew that actions speak louder than words. In your career journey, showing your skills can make all the difference. Dive into an internship and turn your words into achievements. Find yours at www.internwise.co.uk",
+          "hashtags": [
+            "#careergoals",
+            "#internship",
+            "#graduatelife",
+            "#benjaminfranklin",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Benjamin Franklin knew that actions speak louder than words. In your career journey, showing your skills can make all the difference. Dive into an internship and turn your words into achievements. Find yours at www.internwise.co.uk",
+            "linkedin": "Benjamin Franklin wisely noted, 'Well done is better than well said.' This holds true in the professional world where tangible results outshine promises. An internship is your chance to demonstrate your abilities and make a real impact. Explore opportunities at internwise.co.uk",
+            "x": "Benjamin Franklin said it well: 'Well done is better than well said.' Prove your skills with a internship. Check out internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careergoals",
+              "#internship",
+              "#graduatelife",
+              "#benjaminfranklin",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internshipopportunities",
+              "#benjaminfranklin"
+            ],
+            "x": [
+              "#internship",
+              "#careeradvice"
+            ]
+          },
+          "quoteId": "q022",
+          "world": "colorblock"
+        },
+        {
           "id": "week18-wed-employer",
           "day": "Wed 30 Sep",
           "lane": "employer",
@@ -6174,92 +6261,48 @@
           "world": "distinct-week18"
         },
         {
-          "id": "week18-wed-engagement",
-          "day": "Wed 30 Sep",
-          "lane": "engagement",
-          "title": "What is stopping the application?",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "What is stopping the application?\n\nMost hesitation comes from one missing piece: unclear fit, no recent experience, or not enough confidence. Pick the barrier, then choose one role that lowers it. Start with one role at internwise.co.uk.",
-          "hashtags": [
-            "#internwise",
-            "#internships",
-            "#jobsearch",
-            "#careerdevelopment"
-          ],
-          "captions": {
-            "ig-fb": "What is stopping the application?\n\nMost hesitation comes from one missing piece: unclear fit, no recent experience, or not enough confidence. Pick the barrier, then choose one role that lowers it. Start with one role at internwise.co.uk.",
-            "linkedin": "What is stopping the application? Most hesitation comes from one missing piece, not a lack of ability. If the fit is unclear, the experience feels thin, or confidence is low, choose one role that lowers the barrier. Start at internwise.co.uk.",
-            "x": "What is stopping the application: unclear fit, experience, or confidence? Start with one role at internwise.co.uk."
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#internwise",
-              "#internships",
-              "#jobsearch",
-              "#careerdevelopment"
-            ],
-            "linkedin": [
-              "#internships",
-              "#careerdevelopment",
-              "#jobsearch"
-            ],
-            "x": [
-              "#internships",
-              "#jobsearch"
-            ]
-          },
-          "world": "decision",
-          "ideaId": "c003"
-        },
-        {
-          "id": "week18-thu-quote",
+          "id": "week18-thu-news",
           "day": "Thu 1 Oct",
-          "lane": "quote",
-          "title": "Quote: Milton Berle",
+          "lane": "news",
+          "title": "Jobs Guarantee for Young Disabled People",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
-          "status": "in-review",
-          "caption": "Milton Berle once said, 'If opportunity doesn't knock, build a door.' This is your reminder that sometimes you have to create your own path. Whether you're starting out or switching lanes, there's always a way forward. Explore internships and graduate jobs that match your ambitions. Ready to open your next door? Discover what's out there at www.internwise.co.uk.",
+          "status": "approved",
+          "caption": "The UK government has launched the Jobs Guarantee scheme to support young disabled people and those with long-term health conditions. This initiative aims to provide thousands of individuals with a fast-tracked route to employment. It's a significant step towards inclusivity, offering more secure job prospects for students and graduates facing these challenges. Internships play a crucial role too, helping you gain confidence and skills needed in the workplace. Source: GOV.UK.",
           "hashtags": [
-            "#careergrowth",
-            "#internshiphunt",
-            "#graduatejobs",
-            "#miltonberle",
-            "#buildyourfuture"
+            "#jobsguarantee",
+            "#disabilityinclusion",
+            "#internships",
+            "#ukcareers",
+            "#graduatejobs"
           ],
           "captions": {
-            "ig-fb": "Milton Berle once said, 'If opportunity doesn't knock, build a door.' This is your reminder that sometimes you have to create your own path. Whether you're starting out or switching lanes, there's always a way forward. Explore internships and graduate jobs that match your ambitions. Ready to open your next door? Discover what's out there at www.internwise.co.uk.",
-            "linkedin": "Milton Berle's wisdom rings true: 'If opportunity doesn't knock, build a door.' In your career journey, being proactive can make all the difference. Sometimes, it's about creating your own opportunities and seizing them with confidence. At Internwise, we connect you with internships and graduate roles that align with your goals. Take the first step to open your next door at internwise.co.uk.",
-            "x": "Milton Berle said it best: 'If opportunity doesn't knock, build a door.' Sometimes you have to create your own path. Start by finding internships and graduate roles at internwise.co.uk."
+            "ig-fb": "The UK government has launched the Jobs Guarantee scheme to support young disabled people and those with long-term health conditions. This initiative aims to provide thousands of individuals with a fast-tracked route to employment. It's a significant step towards inclusivity, offering more secure job prospects for students and graduates facing these challenges. Internships play a crucial role too, helping you gain confidence and skills needed in the workplace. Source: GOV.UK.",
+            "linkedin": "In a positive move for inclusivity, the UK government has introduced the Jobs Guarantee scheme. This programme will offer thousands of young disabled individuals and those with long-term health conditions an accelerated pathway to employment. For students and graduates, this means enhanced job security and new opportunities. Internships remain key, providing practical experience and skill development. Source: GOV.UK.",
+            "x": "UK's Jobs Guarantee scheme offers young disabled people a fast-tracked route to employment, promoting inclusivity and opportunity. (Source: GOV.UK)",
+            "threads": "The UK government's Jobs Guarantee scheme offers young disabled people a fast-tracked path to jobs. This boosts career opportunities for many. Internships remain essential for gaining workplace skills. www.internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#careergrowth",
-              "#internshiphunt",
-              "#graduatejobs",
-              "#miltonberle",
-              "#buildyourfuture"
+              "#jobsguarantee",
+              "#disabilityinclusion",
+              "#internships",
+              "#ukcareers",
+              "#graduatejobs"
             ],
             "linkedin": [
-              "#careerdevelopment",
-              "#internships",
-              "#graduateopportunities"
+              "#jobsguarantee",
+              "#disabilityinclusion",
+              "#ukcareers"
             ],
             "x": [
-              "#careeradvice",
-              "#graduatejobs"
+              "#jobsguarantee",
+              "#disabilityinclusion"
             ]
-          },
-          "quoteId": "q023",
-          "world": "split"
+          }
         },
         {
           "id": "week18-thu-education",
@@ -6320,46 +6363,6 @@
           "world": "splitcard"
         },
         {
-          "id": "week18-thu-employer",
-          "day": "Thu 1 Oct",
-          "lane": "employer",
-          "title": "Your next intern is already here",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Your next intern is already here\n\nPost internships, shortlist candidates and hire early-career talent at internwise.co.uk/employers.",
-          "hashtags": [
-            "#internwise",
-            "#employers",
-            "#earlycareers"
-          ],
-          "captions": {
-            "ig-fb": "Your next intern is already here\n\nPost internships, shortlist candidates and hire early-career talent at internwise.co.uk/employers.",
-            "linkedin": "Your next intern is already here\n\nPost internships, shortlist candidates and hire early-career talent at internwise.co.uk/employers.",
-            "x": "Your next intern is already here Find internships at internwise.co.uk."
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#internwise",
-              "#employers",
-              "#earlycareers"
-            ],
-            "linkedin": [
-              "#careerdevelopment",
-              "#internships",
-              "#earlycareers"
-            ],
-            "x": [
-              "#careers",
-              "#internships"
-            ]
-          },
-          "world": "distinct-week18"
-        },
-        {
           "id": "week18-thu-engagement",
           "day": "Thu 1 Oct",
           "lane": "engagement",
@@ -6403,49 +6406,89 @@
           "ideaId": "c004"
         },
         {
-          "id": "week18-fri-quote",
-          "day": "Fri 2 Oct",
+          "id": "week18-thu-quote",
+          "day": "Thu 1 Oct",
           "lane": "quote",
-          "title": "Quote: Zig Ziglar",
+          "title": "Quote: Milton Berle",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Feeling like you're not quite ready to dive into the world of work? Zig Ziglar reminds us that you don't need to be great to start - but starting is key to becoming great. 🌟 Every journey begins with a single step, and your career journey can start right here. Explore internships and make your first move. Find your opportunity at www.internwise.co.uk",
+          "caption": "Milton Berle once said, 'If opportunity doesn't knock, build a door.' This is your reminder that sometimes you have to create your own path. Whether you're starting out or switching lanes, there's always a way forward. Explore internships and graduate jobs that match your ambitions. Ready to open your next door? Discover what's out there at www.internwise.co.uk.",
           "hashtags": [
-            "#careerjourney",
-            "#internships",
-            "#zigziglar",
-            "#startnow",
-            "#internwise"
+            "#careergrowth",
+            "#internshiphunt",
+            "#graduatejobs",
+            "#miltonberle",
+            "#buildyourfuture"
           ],
           "captions": {
-            "ig-fb": "Feeling like you're not quite ready to dive into the world of work? Zig Ziglar reminds us that you don't need to be great to start - but starting is key to becoming great. 🌟 Every journey begins with a single step, and your career journey can start right here. Explore internships and make your first move. Find your opportunity at www.internwise.co.uk",
-            "linkedin": "Zig Ziglar once said, 'You don't have to be great to start, but you have to start to be great.' This rings especially true for those stepping into the workforce for the first time. The path to greatness begins with that initial application. Discover a range of internships tailored to help you grow and succeed. Take the first step today at internwise.co.uk",
-            "x": "Zig Ziglar said it best: 'You don't have to be great to start, but you have to start to be great.' Ready to begin your career journey? Explore internships now at internwise.co.uk"
+            "ig-fb": "Milton Berle once said, 'If opportunity doesn't knock, build a door.' This is your reminder that sometimes you have to create your own path. Whether you're starting out or switching lanes, there's always a way forward. Explore internships and graduate jobs that match your ambitions. Ready to open your next door? Discover what's out there at www.internwise.co.uk.",
+            "linkedin": "Milton Berle's wisdom rings true: 'If opportunity doesn't knock, build a door.' In your career journey, being proactive can make all the difference. Sometimes, it's about creating your own opportunities and seizing them with confidence. At Internwise, we connect you with internships and graduate roles that align with your goals. Take the first step to open your next door at internwise.co.uk.",
+            "x": "Milton Berle said it best: 'If opportunity doesn't knock, build a door.' Sometimes you have to create your own path. Start by finding internships and graduate roles at internwise.co.uk."
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#careerjourney",
-              "#internships",
-              "#zigziglar",
-              "#startnow",
-              "#internwise"
+              "#careergrowth",
+              "#internshiphunt",
+              "#graduatejobs",
+              "#miltonberle",
+              "#buildyourfuture"
             ],
             "linkedin": [
-              "#careergrowth",
+              "#careerdevelopment",
               "#internships",
-              "#startyourcareer"
+              "#graduateopportunities"
             ],
             "x": [
-              "#internships",
-              "#careerstart"
+              "#careeradvice",
+              "#graduatejobs"
             ]
           },
-          "quoteId": "q024",
-          "world": "paper"
+          "quoteId": "q023",
+          "world": "split"
+        },
+        {
+          "id": "week18-thu-employer",
+          "day": "Thu 1 Oct",
+          "lane": "employer",
+          "title": "Your next intern is already here",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Your next intern is already here\n\nPost internships, shortlist candidates and hire early-career talent at internwise.co.uk/employers.",
+          "hashtags": [
+            "#internwise",
+            "#employers",
+            "#earlycareers"
+          ],
+          "captions": {
+            "ig-fb": "Your next intern is already here\n\nPost internships, shortlist candidates and hire early-career talent at internwise.co.uk/employers.",
+            "linkedin": "Your next intern is already here\n\nPost internships, shortlist candidates and hire early-career talent at internwise.co.uk/employers.",
+            "x": "Your next intern is already here Find internships at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internwise",
+              "#employers",
+              "#earlycareers"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internships",
+              "#earlycareers"
+            ],
+            "x": [
+              "#careers",
+              "#internships"
+            ]
+          },
+          "world": "distinct-week18"
         },
         {
           "id": "week18-fri-education",
@@ -6506,50 +6549,6 @@
           "world": "distinct-week18"
         },
         {
-          "id": "week18-fri-employer",
-          "day": "Fri 2 Oct",
-          "lane": "employer",
-          "title": "Reach 400,000 early-career candidates",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Looking to connect with the next generation of talent? With Internwise, you can reach 400,000 eager students and graduates across the UK. Join over 14,000 employers who are already making the most of our focused platform. Whether you're a startup or an established firm, becoming a Featured Employer can give your applications a significant boost. Explore the potential of our dedicated candidate pool and find the perfect fit for your team. Start your search today at www.internwise.co.uk.",
-          "hashtags": [
-            "#internwiseuk",
-            "#graduatejobs",
-            "#hiretalent",
-            "#ukemployers",
-            "#careergrowth"
-          ],
-          "captions": {
-            "ig-fb": "Looking to connect with the next generation of talent? With Internwise, you can reach 400,000 eager students and graduates across the UK. Join over 14,000 employers who are already making the most of our focused platform. Whether you're a startup or an established firm, becoming a Featured Employer can give your applications a significant boost. Explore the potential of our dedicated candidate pool and find the perfect fit for your team. Start your search today at www.internwise.co.uk.",
-            "linkedin": "Unlock a world of talent with Internwise! Our platform connects you with 400,000 early-career candidates across the UK, ready to bring fresh ideas and energy to your business. Join 14,000+ employers who trust Internwise to find their next team member. As a Featured Employer, you'll gain greater visibility and more applications from a focused pool of students and graduates. Let's make your hiring process smooth and successful. Visit internwise.co.uk to get started.",
-            "x": "Access 400,000 UK students & graduates with Internwise. Join 14,000+ employers already benefiting from our focused platform. Explore at internwise.co.uk."
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#internwiseuk",
-              "#graduatejobs",
-              "#hiretalent",
-              "#ukemployers",
-              "#careergrowth"
-            ],
-            "linkedin": [
-              "#internshipopportunities",
-              "#talentacquisition",
-              "#ukrecruitment"
-            ],
-            "x": [
-              "#graduatejobs",
-              "#ukrecruitment"
-            ]
-          },
-          "world": "distinct-week18"
-        },
-        {
           "id": "week18-fri-engagement",
           "day": "Fri 2 Oct",
           "lane": "engagement",
@@ -6593,92 +6592,93 @@
           "ideaId": "c005"
         },
         {
-          "id": "week18-wed-news",
-          "day": "Wed 30 Sep",
-          "lane": "news",
-          "title": "UK Awards Highlight Talent Recruitment",
+          "id": "week18-fri-quote",
+          "day": "Fri 2 Oct",
+          "lane": "quote",
+          "title": "Quote: Zig Ziglar",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
-          "status": "approved",
-          "caption": "A UK awards event recently shone a light on game-changing recruitment strategies, recognising innovative approaches in finding and hiring talent across all levels. For students and recent grads, these developments underline the significance of understanding how recruitment evolves and what employers seek. Grasping these can make you a standout candidate. Internships offer a valuable gateway to gaining this insight and experience. Source: Personnel Today.",
+          "status": "in-review",
+          "caption": "Feeling like you're not quite ready to dive into the world of work? Zig Ziglar reminds us that you don't need to be great to start - but starting is key to becoming great. 🌟 Every journey begins with a single step, and your career journey can start right here. Explore internships and make your first move. Find your opportunity at www.internwise.co.uk",
           "hashtags": [
-            "#recruitment",
-            "#ukjobs",
+            "#careerjourney",
             "#internships",
-            "#careergrowth",
-            "#talent"
+            "#zigziglar",
+            "#startnow",
+            "#internwise"
           ],
           "captions": {
-            "ig-fb": "A UK awards event recently shone a light on game-changing recruitment strategies, recognising innovative approaches in finding and hiring talent across all levels. For students and recent grads, these developments underline the significance of understanding how recruitment evolves and what employers seek. Grasping these can make you a standout candidate. Internships offer a valuable gateway to gaining this insight and experience. Source: Personnel Today.",
-            "linkedin": "The spotlight was on innovative recruitment at a recent UK awards event, recognising effective strategies for attracting and selecting talent. This is a vital development for students and recent graduates, as understanding these trends can enhance your job prospects. Internships provide a crucial pathway, offering real-world experience and insight into what employers value. Source: Personnel Today.",
-            "x": "UK awards showcased innovative recruitment methods for hiring talent. Students and grads, take note: understanding these trends can boost your job prospects. (Source: Personnel Today)",
-            "threads": "A UK awards event highlighted top recruitment strategies, showcasing effective talent attraction and hiring. For students and grads, it's essential to understand these shifts to stand out. Internships offer key experience and insights. www.internwise.co.uk"
+            "ig-fb": "Feeling like you're not quite ready to dive into the world of work? Zig Ziglar reminds us that you don't need to be great to start - but starting is key to becoming great. 🌟 Every journey begins with a single step, and your career journey can start right here. Explore internships and make your first move. Find your opportunity at www.internwise.co.uk",
+            "linkedin": "Zig Ziglar once said, 'You don't have to be great to start, but you have to start to be great.' This rings especially true for those stepping into the workforce for the first time. The path to greatness begins with that initial application. Discover a range of internships tailored to help you grow and succeed. Take the first step today at internwise.co.uk",
+            "x": "Zig Ziglar said it best: 'You don't have to be great to start, but you have to start to be great.' Ready to begin your career journey? Explore internships now at internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#recruitment",
-              "#ukjobs",
+              "#careerjourney",
               "#internships",
-              "#careergrowth",
-              "#talent"
+              "#zigziglar",
+              "#startnow",
+              "#internwise"
             ],
             "linkedin": [
-              "#recruitment",
+              "#careergrowth",
               "#internships",
-              "#careerdevelopment"
+              "#startyourcareer"
             ],
             "x": [
-              "#recruitment",
-              "#internships"
+              "#internships",
+              "#careerstart"
             ]
-          }
+          },
+          "quoteId": "q024",
+          "world": "paper"
         },
         {
-          "id": "week18-thu-news",
-          "day": "Thu 1 Oct",
-          "lane": "news",
-          "title": "Jobs Guarantee for Young Disabled People",
+          "id": "week18-fri-employer",
+          "day": "Fri 2 Oct",
+          "lane": "employer",
+          "title": "Reach 400,000 early-career candidates",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
-          "status": "approved",
-          "caption": "The UK government has launched the Jobs Guarantee scheme to support young disabled people and those with long-term health conditions. This initiative aims to provide thousands of individuals with a fast-tracked route to employment. It's a significant step towards inclusivity, offering more secure job prospects for students and graduates facing these challenges. Internships play a crucial role too, helping you gain confidence and skills needed in the workplace. Source: GOV.UK.",
+          "status": "in-review",
+          "caption": "Looking to connect with the next generation of talent? With Internwise, you can reach 400,000 eager students and graduates across the UK. Join over 14,000 employers who are already making the most of our focused platform. Whether you're a startup or an established firm, becoming a Featured Employer can give your applications a significant boost. Explore the potential of our dedicated candidate pool and find the perfect fit for your team. Start your search today at www.internwise.co.uk.",
           "hashtags": [
-            "#jobsguarantee",
-            "#disabilityinclusion",
-            "#internships",
-            "#ukcareers",
-            "#graduatejobs"
+            "#internwiseuk",
+            "#graduatejobs",
+            "#hiretalent",
+            "#ukemployers",
+            "#careergrowth"
           ],
           "captions": {
-            "ig-fb": "The UK government has launched the Jobs Guarantee scheme to support young disabled people and those with long-term health conditions. This initiative aims to provide thousands of individuals with a fast-tracked route to employment. It's a significant step towards inclusivity, offering more secure job prospects for students and graduates facing these challenges. Internships play a crucial role too, helping you gain confidence and skills needed in the workplace. Source: GOV.UK.",
-            "linkedin": "In a positive move for inclusivity, the UK government has introduced the Jobs Guarantee scheme. This programme will offer thousands of young disabled individuals and those with long-term health conditions an accelerated pathway to employment. For students and graduates, this means enhanced job security and new opportunities. Internships remain key, providing practical experience and skill development. Source: GOV.UK.",
-            "x": "UK's Jobs Guarantee scheme offers young disabled people a fast-tracked route to employment, promoting inclusivity and opportunity. (Source: GOV.UK)",
-            "threads": "The UK government's Jobs Guarantee scheme offers young disabled people a fast-tracked path to jobs. This boosts career opportunities for many. Internships remain essential for gaining workplace skills. www.internwise.co.uk"
+            "ig-fb": "Looking to connect with the next generation of talent? With Internwise, you can reach 400,000 eager students and graduates across the UK. Join over 14,000 employers who are already making the most of our focused platform. Whether you're a startup or an established firm, becoming a Featured Employer can give your applications a significant boost. Explore the potential of our dedicated candidate pool and find the perfect fit for your team. Start your search today at www.internwise.co.uk.",
+            "linkedin": "Unlock a world of talent with Internwise! Our platform connects you with 400,000 early-career candidates across the UK, ready to bring fresh ideas and energy to your business. Join 14,000+ employers who trust Internwise to find their next team member. As a Featured Employer, you'll gain greater visibility and more applications from a focused pool of students and graduates. Let's make your hiring process smooth and successful. Visit internwise.co.uk to get started.",
+            "x": "Access 400,000 UK students & graduates with Internwise. Join 14,000+ employers already benefiting from our focused platform. Explore at internwise.co.uk."
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#jobsguarantee",
-              "#disabilityinclusion",
-              "#internships",
-              "#ukcareers",
-              "#graduatejobs"
+              "#internwiseuk",
+              "#graduatejobs",
+              "#hiretalent",
+              "#ukemployers",
+              "#careergrowth"
             ],
             "linkedin": [
-              "#jobsguarantee",
-              "#disabilityinclusion",
-              "#ukcareers"
+              "#internshipopportunities",
+              "#talentacquisition",
+              "#ukrecruitment"
             ],
             "x": [
-              "#jobsguarantee",
-              "#disabilityinclusion"
+              "#graduatejobs",
+              "#ukrecruitment"
             ]
-          }
+          },
+          "world": "distinct-week18"
         }
       ]
     }
