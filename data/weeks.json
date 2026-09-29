@@ -5606,7 +5606,7 @@
       "id": "week18",
       "label": "Week 18",
       "weekCommencing": "2026-09-28",
-      "builtAt": 1790669795,
+      "builtAt": 1790670459,
       "posts": [
         {
           "id": "week18-mon-news",
@@ -6013,7 +6013,7 @@
             "points": null,
             "cta": "Make your profile shine at internwise.co.uk"
           },
-          "world": "navy"
+          "world": "editorial-week18"
         },
         {
           "id": "week18-tue-employer",
@@ -6053,7 +6053,7 @@
               "#internships"
             ]
           },
-          "world": "kpi"
+          "world": "editorial-week18"
         },
         {
           "id": "week18-tue-engagement",
@@ -6093,7 +6093,7 @@
               "#internships"
             ]
           },
-          "world": "tierlist",
+          "world": "editorial-week18",
           "ideaId": "f005"
         },
         {
@@ -6255,7 +6255,7 @@
             "points": null,
             "cta": "Visit internwise.co.uk for more insights."
           },
-          "world": "teal"
+          "world": "editorial-week18"
         },
         {
           "id": "week18-wed-employer",
@@ -6299,7 +6299,7 @@
               "#hiresmart"
             ]
           },
-          "world": "pipeline"
+          "world": "editorial-week18"
         },
         {
           "id": "week18-wed-engagement",
@@ -6339,7 +6339,7 @@
               "#internships"
             ]
           },
-          "world": "starterpack",
+          "world": "editorial-week18",
           "ideaId": "f006"
         },
         {
@@ -6487,7 +6487,7 @@
             ],
             "cta": "Organise your search at internwise.co.uk"
           },
-          "world": "memo"
+          "world": "editorial-week18"
         },
         {
           "id": "week18-thu-employer",
@@ -6527,7 +6527,7 @@
               "#internships"
             ]
           },
-          "world": "cards"
+          "world": "editorial-week18"
         },
         {
           "id": "week18-thu-engagement",
@@ -6567,7 +6567,7 @@
               "#internships"
             ]
           },
-          "world": "pov",
+          "world": "editorial-week18",
           "ideaId": "f004"
         },
         {
@@ -6715,7 +6715,7 @@
             ],
             "cta": "Track smarter at internwise.co.uk"
           },
-          "world": "scorecard"
+          "world": "editorial-week18"
         },
         {
           "id": "week18-fri-employer",
@@ -6759,7 +6759,7 @@
               "#ukrecruitment"
             ]
           },
-          "world": "proofboard"
+          "world": "editorial-week18"
         },
         {
           "id": "week18-fri-engagement",
@@ -6799,7 +6799,7 @@
               "#internships"
             ]
           },
-          "world": "greenflags",
+          "world": "editorial-week18",
           "ideaId": "f009"
         }
       ]
