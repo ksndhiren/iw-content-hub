@@ -21,6 +21,9 @@ This is the approved creative direction for future Internwise social graphics. T
 - Monday-level typography and highlighted-word treatment is the baseline for every day of the week, not a one-off. Tuesday-Friday should not fall back to plain corporate cards.
 - Direction does not mean template. Do not copy the same diagonal split, Nuno placement, cream/plum palette, serif word treatment, or content blocks across the week. Each post needs a distinct layout metaphor: profile frame, scoreboard, notebook, desk/flatlay, pipeline, newspaper, proof board, checklist, quote poster, etc. If day cards look like siblings at thumbnail size, regenerate until they are visibly different.
 - Every carousel must end with a true outro/CTA slide: explicit action text, `internwise.co.uk`, and CTA-first composition. The final slide cannot read like another content slide.
+- Poll/Conversation posts must use a unique visual world per weekday. Do not force every poll through the same `decision` layout; use the design ledger and maintain at least five distinct poll worlds for a five-day week.
+- LinkedIn/profile education posts must look like LinkedIn/profile content: profile frame, phone/social UI, or another clear social-profile motif. Do not use CV, cover-letter, portfolio-document, or generic laptop poses for LinkedIn topics. If no relevant Nuno pose exists, generate or request a new one instead of reusing an unrelated asset.
+- Do not repeat Nuno inside a carousel unless the repeated appearance serves a different visual beat. Prefer graphic-led CTA slides for platform/profile topics so the final slide does not feel like the hook image recycled.
 
 ## News Direction
 

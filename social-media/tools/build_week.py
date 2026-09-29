@@ -101,7 +101,7 @@ EDU_FORMAT_BY_DAY = ["carousel", "carousel", "carousel", "single", "single"]
 EDU_CAROUSEL_WORLDS = ["navy", "plum", "teal", "cream", "midnight", "slate",
                        "marker", "flash", "tabs"]
 EDU_SINGLE_WORLDS = ["tipcard", "statement", "bigidea", "splitcard", "memo", "scorecard"]
-CONVERSATION_WORLDS = ["decision"]
+CONVERSATION_WORLDS = ["decision", "proofboard", "debate", "scorecard", "signal"]
 
 
 def week_offset(wid):
@@ -414,7 +414,7 @@ def build(days=5, dry=False):
     emp_days = sorted(d for d in EMPLOYER_DAYS if d < days)
     emp_worlds = design_ledger.pick("employer", EMPLOYER_WORLDS, len(emp_days), wid)
     week_emp = {d: (emp_worlds[i], EMPLOYER_ANGLE[emp_worlds[i]]) for i, d in enumerate(emp_days)}
-    conversation_worlds = ["decision"] * days
+    conversation_worlds = design_ledger.pick("conversation", CONVERSATION_WORLDS, days, wid, avoid_weeks=1)
     fmts = EDU_FORMAT_BY_DAY[:days]
     edu_car = design_ledger.pick("edu_carousel", EDU_CAROUSEL_WORLDS, fmts.count("carousel"), wid)
     edu_sing = design_ledger.pick("edu_single", EDU_SINGLE_WORLDS, fmts.count("single"), wid)
@@ -519,6 +519,8 @@ def build(days=5, dry=False):
             design_ledger.record("edu_carousel", wid, edu_car)
         if edu_sing:
             design_ledger.record("edu_single", wid, edu_sing)
+        if conversation_worlds:
+            design_ledger.record("conversation", wid, conversation_worlds[:days])
 
     if not dry:
         # Render each story-lane post's 1080x1920 Story companion from its cover

@@ -234,6 +234,31 @@
       "lane": "edu_single",
       "week": "week18",
       "world": "scorecard"
+    },
+    {
+      "lane": "conversation",
+      "week": "week18",
+      "world": "decision"
+    },
+    {
+      "lane": "conversation",
+      "week": "week18",
+      "world": "proofboard"
+    },
+    {
+      "lane": "conversation",
+      "week": "week18",
+      "world": "debate"
+    },
+    {
+      "lane": "conversation",
+      "week": "week18",
+      "world": "scorecard"
+    },
+    {
+      "lane": "conversation",
+      "week": "week18",
+      "world": "signal"
     }
   ]
 }

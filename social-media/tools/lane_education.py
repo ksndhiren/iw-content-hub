@@ -63,6 +63,11 @@ COVER_POOL = ["nuno_cv", "nuno_cv_2", "nuno_cv_3",
 # (e.g. a "welcoming" pose on a Graduate Schemes cover). Kept only in TOPIC_POSES.
 CTA_POOL = ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1",
             "nuno_dothis_4", "nuno_offers_4"]   # + week17 fresh cutouts
+CTA_TOPIC_POSES = {
+    "linkedin": ["nuno_phone", "nuno_tablet"],
+    "tech": ["nuno_tablet", "nuno_tablet_cover", "nuno_phone"],
+    "networking": ["nuno_phone", "nuno_authority_4", "nuno_authority_1"],
+}
 
 # ------------------------------------------------------------ topic-matched hook
 # The hook (cover) is the scroll-stopper, so its Nuno must MATCH the topic - not
@@ -82,7 +87,7 @@ TOPIC_POSES = {
     "think":      ["nuno_thoughtful_1", "nuno_thoughtful_2", "nuno_thoughtful_3"],
     "skills":     ["nuno_utility_4", "nuno_utility_3", "nuno_planning_1", "nuno_planning_2"],
     # Cover-safe poses added week16 (compact, right-weighted, verified rembg-clean).
-    "linkedin":   ["nuno_tablet_cover", "nuno_cv_5", "nuno_cv_4"],
+    "linkedin":   ["nuno_phone", "nuno_tablet"],
     "networking": ["nuno_authority_4", "nuno_authority_1", "nuno_authority_2"],
     "offer":      ["nuno_offers_cover"],
     "tech":       ["nuno_tablet_cover"],
@@ -154,6 +159,20 @@ def cover_pool_for(copy, week_id):
                 if poses:
                     return poses
     return COVER_POOL
+
+
+def topic_key_for(copy):
+    primary = " ".join([copy.get("eyebrow", ""), copy.get("headline", "")]).lower()
+    body = " ".join(s.get("title", "") + " " + s.get("tag", "") for s in (copy.get("slides") or [])).lower()
+    for hay in (primary, primary + " " + body):
+        for kw, topic in TOPIC_KEYWORDS:
+            if kw in hay:
+                return topic
+    return None
+
+
+def cta_pool_for(copy):
+    return CTA_TOPIC_POSES.get(topic_key_for(copy), CTA_POOL)
 
 
 # --------------------------------------------------------------- shared bits
@@ -405,6 +424,27 @@ def content_bento(p, n, total, slide):
             + _footer(p, swipe=True))
 
 def cta_bento(p, copy, total, pose):
+    is_linkedin = "linkedin" in (copy.get("headline", "") + " " + copy.get("eyebrow", "")).lower()
+    if is_linkedin:
+        profile = (
+            f"<div style='position:absolute;right:74px;top:214px;width:420px;height:600px;border-radius:34px;background:#F8FBFF;"
+            f"box-shadow:0 30px 70px rgba(0,0,0,.30);overflow:hidden;'>"
+            f"<div style='height:128px;background:#0A66C2;'></div>"
+            f"<div style='position:absolute;left:34px;top:38px;width:70px;height:70px;border-radius:14px;background:#fff;"
+            f"display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:950;font-size:38px;color:#0A66C2;'>in</div>"
+            f"<div style='position:absolute;left:34px;top:156px;width:124px;height:124px;border-radius:50%;background:#DDE8F6;border:8px solid #F8FBFF;'></div>"
+            f"<div style='position:absolute;left:34px;right:34px;top:316px;height:18px;border-radius:9px;background:#15274326;'></div>"
+            f"<div style='position:absolute;left:34px;right:118px;top:354px;height:14px;border-radius:7px;background:#15274318;'></div>"
+            f"<div style='position:absolute;left:34px;right:34px;top:418px;height:86px;border-radius:18px;background:#0A66C214;border:1px solid #0A66C233;'></div>"
+            f"<div style='position:absolute;left:34px;right:34px;top:530px;height:34px;border-radius:17px;background:{AMBER};'></div>"
+            f"</div>")
+        card = _card(
+            f"<div style=\"font-family:'DM Sans';font-weight:700;font-size:22px;color:{p['accent']};letter-spacing:4px;margin-bottom:16px;\">YOUR MOVE</div>"
+            f"<div style=\"font-family:Inter;font-weight:700;font-size:56px;line-height:1.02;letter-spacing:-2px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>"
+            f"<div style=\"font-family:'DM Sans';font-weight:500;font-size:33px;line-height:1.34;color:{p['mut']};margin-top:22px;\">{copy.get('cta','')}</div>",
+            css="left:56px;top:280px;width:520px;", pad="40px 42px")
+        return (_bg(p) + profile + _logo(left=56, top=44) + card
+                + f"<div style='position:absolute;left:96px;bottom:120px;'>{_pill(p)}</div>")
     panel = (f"<div style='position:absolute;right:44px;top:170px;bottom:150px;width:460px;border-radius:34px;"
              f"background:linear-gradient(160deg,{p['accent']}26,{p['accent']}08);border:1px solid {p['accent']}33;'></div>")
     card = _card(
@@ -950,7 +990,7 @@ def render_education(copy, world, out_dir, week_id="adhoc"):
         tone = copy.get("tone", "practical")
         cover_pose = nuno_ledger.pick(cover_pool_for(copy, week_id), week_id,
                                       label=f"education/{world}/cover", tone=COVER_TONE.get(tone))
-        cta_pose = nuno_ledger.pick(CTA_POOL, week_id, label=f"education/{world}/cta",
+        cta_pose = nuno_ledger.pick(cta_pool_for(copy), week_id, label=f"education/{world}/cta",
                                     tone=CTA_TONE.get(tone), exclude={cover_pose})
         paths = [L.render(out_dir, "slide_1.png", w["cover"](p, copy, total, cover_pose))]
         for i, s in enumerate(slides, start=2):
