@@ -34,8 +34,19 @@ This is the approved creative direction for future Internwise social graphics. T
 
 ## Quote Direction
 
-- Quote graphics must include an author watermark in the design. If a real author portrait is unavailable in `assets/quote_authors/`, use a large low-opacity typographic author watermark rather than shipping a blank background.
-- Keep the author watermark behind the quote as an atmospheric editorial layer; it should support the quote, not become a full-opacity sticker.
+- Quote graphics must include a real sourced author portrait as a low-opacity watermark. A typographic name/initials fallback is not acceptable for scheduled quote graphics.
+- If a real author portrait is unavailable in `assets/quote_authors/`, the build must fail until the portrait is added or the quote is changed.
+- Keep the author portrait behind the quote as an atmospheric editorial layer; it should support the quote, not become a full-opacity sticker.
+- Quote portrait opacity should stay faint enough that the copy remains dominant. Use the attached Abraham Lincoln reference only for the portrait-watermark feeling, not as a template to copy.
+
+## Layout QA
+
+- Before publishing or scheduling a weekly batch, run the overlap QA gate: `PYTHONPYCACHEPREFIX=/private/tmp/iw-pycache python3 social-media/tools/qa_week_graphics.py week18 --ack-overlap-review`.
+- The QA gate must confirm five core posts per weekday: News, Education, Quote, Employer, and Engagement. Featured jobs are optional sixth posts only.
+- The QA gate must fail on duplicate lanes per day, missing slide files, blank/tiny slide images, or quote posts without real author portraits.
+- The QA gate produces an overlap contact sheet. Review it at dashboard thumbnail size and full size before acknowledging. If text overlaps faces, Nuno, logos, buttons, image edges, or decorative shapes, fix and rerender.
+- Shapes may frame or sit behind images, but they must not slice through faces, hands, primary objects, or readable text. Highlight strokes must never pass through letters unless deliberately designed as an underline with enough clearance.
+- Logos need clear contrast and breathing room. Do not place light logos on light images or let brand marks touch headlines.
 
 ## Employer Direction
 

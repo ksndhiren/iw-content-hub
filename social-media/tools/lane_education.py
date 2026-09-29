@@ -709,23 +709,26 @@ def w_splitcard(copy, week_id='adhoc'):
     NAVYT = "#152743"; CREAM = "#F3EADA"; COFFEE = "#6F6350"
     pose = nuno_ledger.pick(cover_pool_for(copy, week_id), week_id, label="education/splitcard")
     top = (f"<div style='position:absolute;left:0;right:0;top:0;height:470px;background:{NAVYT};overflow:hidden;'>"
-           f"<img src='{L.nuno_src(pose)}' style='position:absolute;right:-30px;bottom:-40px;height:520px;filter:drop-shadow(0 18px 28px rgba(0,0,0,.5));'>"
            f"<img src='{L.WHT}' style='position:absolute;left:56px;top:44px;height:{L.LOGO}px;'>"
            f"<div style='position:absolute;left:56px;top:170px;display:inline-flex;align-items:center;height:44px;padding:0 20px;border-radius:22px;background:{AMBER};'>"
            f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:19px;color:{NAVYT};letter-spacing:3px;\">{copy.get('eyebrow','LEARN')[:20].upper()}</span></div>"
-           f"<div style=\"position:absolute;left:56px;right:400px;top:236px;font-family:Inter;font-weight:800;font-size:56px;line-height:1.02;letter-spacing:-1.8px;color:#fff;word-break:keep-all;\">{copy['headline']}</div></div>")
+           f"<div style=\"position:absolute;left:56px;right:360px;top:236px;font-family:Inter;font-weight:800;font-size:56px;line-height:1.02;letter-spacing:-1.8px;color:#fff;word-break:keep-all;\">{copy['headline']}</div>"
+           f"<img src='{L.nuno_src(pose)}' style='position:absolute;right:-10px;bottom:-32px;height:470px;filter:drop-shadow(0 18px 28px rgba(0,0,0,.5));'></div>")
     bg = f"<div style='position:absolute;inset:0;background:{CREAM};'></div>"
     rows = ""
     for i, pt in enumerate(copy.get("points", [])[:4], 1):
         rows += (f"<div style='display:flex;gap:20px;align-items:center;margin-bottom:24px;'>"
                  f"<div style='flex:0 0 54px;width:54px;height:54px;border-radius:14px;background:{GREEN};display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:800;font-size:26px;color:#fff;'>{i}</div>"
-                 f"<span style=\"font-family:Inter;font-weight:700;font-size:33px;color:{NAVYT};line-height:1.16;\">{pt}</span></div>")
-    body = f"<div style='position:absolute;left:56px;right:64px;top:540px;'>{rows}</div>"
+                 f"<span style=\"font-family:Inter;font-weight:700;font-size:30px;color:{NAVYT};line-height:1.16;\">{pt}</span></div>")
+    body = f"<div style='position:absolute;left:56px;width:560px;top:540px;'>{rows}</div>"
+    portrait = (f"<div style='position:absolute;right:56px;bottom:0;width:360px;height:548px;overflow:hidden;'>"
+                f"<img src='{L.nuno_src(pose)}' style='position:absolute;right:-92px;bottom:-24px;height:560px;filter:drop-shadow(0 18px 28px rgba(21,39,67,.18));'>"
+                f"</div>")
     cta = (f"<div style='position:absolute;left:56px;bottom:46px;display:flex;align-items:center;gap:13px;'>"
            f"<div style='width:34px;height:34px;border-radius:50%;background:{CORAL};display:flex;align-items:center;justify-content:center;'>"
            f"<svg width='17' height='17' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'><path d='M7 17L17 7M9 7h8v8'/></svg></div>"
            f"<span style=\"font-family:Inter;font-weight:700;font-size:26px;color:{NAVYT};\">{copy.get('cta','internwise.co.uk')}</span></div>")
-    return bg + top + body + cta
+    return bg + top + portrait + body + cta
 
 
 # =================================================================================

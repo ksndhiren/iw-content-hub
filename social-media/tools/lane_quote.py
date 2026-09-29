@@ -9,12 +9,13 @@ Each world is its OWN art direction - not the same skeleton recoloured:
   editorial  -> vintage cream broadsheet
 
 The quote AUTHOR is a low-opacity WATERMARK woven into each layout (behind the
-text), not a full-opacity cut-out sticker. Drop a photo in assets/quote_authors/
-<slug>.<ext>; we rembg + cache it once.
+text), not a full-opacity cut-out sticker. Drop a real portrait in
+assets/quote_authors/<slug>.<ext>; quote rendering fails if the portrait is
+missing so scheduled runs cannot silently ship blank or typographic stand-ins.
 
     render_quote(q, world, out_dir, "slide_1.png")   # world in WORLDS
 """
-import os, sys, re, urllib.parse
+import os, sys, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lanes_common as L
 import wk11_base as b
@@ -43,8 +44,8 @@ def _cta_row(cta, ink, accent, left=56, right=70, bottom=50):
 
 
 # --- author watermark -------------------------------------------------------
-# Photo -> rembg cut-out (cached), then placed as a large, FAINT (low-opacity)
-# watermark woven behind the quote text. Each world positions/tints its own.
+# Real author portrait, placed as a large, FAINT (low-opacity) watermark woven
+# behind the quote text. Each world positions/tints its own.
 _AUTH_DIR = os.path.join(L.BASE, "assets", "quote_authors")
 _AUTH_CACHE = os.path.join(_AUTH_DIR, "_cutout")
 
@@ -53,52 +54,22 @@ def _slug(s):
     return re.sub(r"[^a-z0-9]+", "-", (s or "").lower()).strip("-")
 
 
-def author_cutout(author):
-    """data-URI cut-out for a quote author if a photo exists, else None.
-    rembg the raw photo once and cache the transparent, tight-cropped PNG."""
+def author_image(author):
+    """data URI for a real quote-author portrait, or None when missing."""
     slug = _slug(author)
     if not slug:
         return None
-    os.makedirs(_AUTH_CACHE, exist_ok=True)
-    cache = os.path.join(_AUTH_CACHE, slug + ".png")
-    if not os.path.exists(cache):
-        raw = next((os.path.join(_AUTH_DIR, slug + "." + e)
-                    for e in ("jpg", "jpeg", "png", "webp")
-                    if os.path.exists(os.path.join(_AUTH_DIR, slug + "." + e))), None)
-        if not raw:
-            return None
-        from rembg import remove
-        from PIL import Image
-        import numpy as np
-        out = remove(Image.open(raw).convert("RGBA"))
-        a = np.asarray(out)[..., 3]
-        ys, xs = np.where(a > 40)
-        if len(xs) == 0:
-            return None
-        out.crop((int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1)).save(cache)
-    return L.img(cache)
-
-
-def author_placeholder(author):
-    """Fallback author watermark when no portrait asset exists."""
-    name = (author or "").strip()
-    if not name:
-        return None
-    initials = "".join(part[:1] for part in re.findall(r"[A-Za-z]+", name)[:3]).upper() or "Q"
-    svg = f"""
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900">
-      <rect width="900" height="900" fill="none"/>
-      <text x="450" y="390" text-anchor="middle" font-family="Georgia,serif" font-size="260" font-weight="700" fill="white">{initials}</text>
-      <text x="450" y="520" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="62" font-weight="800" letter-spacing="4" fill="white">{name.upper()}</text>
-    </svg>
-    """
-    return "data:image/svg+xml;charset=utf-8," + urllib.parse.quote(svg)
+    raw = next((os.path.join(_AUTH_DIR, slug + "." + e)
+                for e in ("jpg", "jpeg", "png", "webp")
+                if os.path.exists(os.path.join(_AUTH_DIR, slug + "." + e))), None)
+    return L.img(raw) if raw else None
 
 
 def _wm(src, css, op=0.13, filt="grayscale(1)"):
     """One faint author watermark <img>. Empty string when no photo exists."""
     if not src:
         return ""
+    op = min(float(op), 0.06)
     return (f"<img src='{src}' style='position:absolute;{css}opacity:{op};"
             f"filter:{filt};pointer-events:none;'>")
 
@@ -348,7 +319,12 @@ _DEFAULT_CTA = "Find your internship at internwise.co.uk"
 
 
 def render_quote(q, world, out_dir, filename="slide_1.png"):
-    src = author_cutout(q.get("author", "")) or author_placeholder(q.get("author", ""))
+    author = q.get("author", "")
+    src = author_image(author)
+    if not src:
+        raise FileNotFoundError(
+            f"Quote author portrait missing for {author!r}; add assets/quote_authors/{_slug(author)}.(jpg|jpeg|png|webp)"
+        )
     # Author is now a faint watermark, not a corner sticker, so the long CTA no
     # longer collides with a photo - keep the full CTA line.
     cta = q.get("cta") or _DEFAULT_CTA
