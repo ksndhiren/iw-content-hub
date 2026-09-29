@@ -17,6 +17,7 @@ This is the approved creative direction for future Internwise social graphics. T
 - Featured jobs can remain utility-led, but should still feel like a premium editorial/job poster, not a generic ad tile.
 - The core week must render five reviewable graphics per weekday: News, Education, Quote, Employer, and Engagement/Conversation. Featured jobs are a separate optional sixth lane and must not be used to make up the five.
 - Monday-level typography and highlighted-word treatment is the baseline for every day of the week, not a one-off. Tuesday-Friday should not fall back to plain corporate cards.
+- Direction does not mean template. Do not copy the same diagonal split, Nuno placement, cream/plum palette, serif word treatment, or content blocks across the week. Each post needs a distinct layout metaphor: profile frame, scoreboard, notebook, desk/flatlay, pipeline, newspaper, proof board, checklist, quote poster, etc. If day cards look like siblings at thumbnail size, regenerate until they are visibly different.
 - Every carousel must end with a true outro/CTA slide: explicit action text, `internwise.co.uk`, and CTA-first composition. The final slide cannot read like another content slide.
 
 ## News Direction
