@@ -369,6 +369,16 @@
       "cutout": "nuno_planning_2",
       "week": "week18",
       "date": "2026-09-29"
+    },
+    {
+      "cutout": "nuno_authority_3",
+      "week": "week18",
+      "date": "2026-09-29"
+    },
+    {
+      "cutout": "nuno_authority_1",
+      "week": "week18",
+      "date": "2026-09-29"
     }
   ]
 }

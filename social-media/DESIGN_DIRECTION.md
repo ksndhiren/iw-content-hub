@@ -15,7 +15,7 @@ This is the approved creative direction for future Internwise social graphics. T
 - Fonts should not feel uniformly corporate. Mix type roles deliberately: Inter for UI/clarity, DM Sans for labels and small navigation, Georgia serif/italic for editorial emphasis and emotional words.
 - Do not rely on dark navy panels, rounded cards, and Inter-only headlines as the default skin. If two posts in a week look like they came from the same template family, redesign one.
 - Featured jobs can remain utility-led, but should still feel like a premium editorial/job poster, not a generic ad tile.
-- The week must render five reviewable graphics per weekday: News, Education, Quote, Featured Job, and the selected fifth lane. If featured jobs live in a separate dashboard queue, the review UI must still make that visible so a day never appears to have only 3-4 posts.
+- The core week must render five reviewable graphics per weekday: News, Education, Quote, Employer, and Engagement/Conversation. Featured jobs are a separate optional sixth lane and must not be used to make up the five.
 - Monday-level typography and highlighted-word treatment is the baseline for every day of the week, not a one-off. Tuesday-Friday should not fall back to plain corporate cards.
 - Every carousel must end with a true outro/CTA slide: explicit action text, `internwise.co.uk`, and CTA-first composition. The final slide cannot read like another content slide.
 

@@ -7,7 +7,8 @@ For each day it sources content, has the LLM (writer.py) write all on-screen cop
 NEWS is deliberately NOT built here - it is generated the day before it posts by
 build_news_day.py (news-daily.yml) so headlines are never stale. This batch
 preserves any news posts already present for the week when it rewrites the entry.
-The FUN lane was retired (Week 15) after it underperformed on every platform.
+Daily-5 means five core reviewable posts per weekday; featured jobs are separate
+and do not count toward the core five.
 
     python3 tools/build_week.py                 # full 5-day week
     python3 tools/build_week.py --days 1         # just Monday (cheap validation)
@@ -31,7 +32,7 @@ def _load_env():
 _load_env()
 
 import writer, news_fetch, news_card
-import lane_quote, lane_employer, lane_education
+import lane_quote, lane_employer, lane_education, lane_fun
 import nuno_ledger
 import design_ledger   # enforces the hard rule: a new design per post every week
 
@@ -79,11 +80,9 @@ def target_week():
 QUOTE_WORLDS = ["editorial", "spotlight", "colorblock", "split", "paper",
                 "arc", "blueprint", "band", "minimal", "bubble",
                 "marquee", "stamp"]
-# Employer dropped to 3 posts/week (Mon/Wed/Fri) - it underperformed, repeated
-# weekly and strained the Nuno library. Each world stays paired with its
-# compatible angle; which 3 of the 5 pairs run rotates by week for variety. The
-# freed Tue/Thu slots are carried by the daily featured job (separate pipeline).
-EMPLOYER_DAYS = {0, 2, 4}
+# Employer is a core Daily-5 lane and must run every weekday. Featured jobs are
+# a separate sixth queue, never a substitute for missing core-grid posts.
+EMPLOYER_DAYS = {0, 1, 2, 3, 4}
 EMPLOYER_PAIRS = [("benefits", "e001"), ("bigstat", "e004"), ("process", "e003"),
                   ("trust", "e005"), ("statement", "e002")]
 # All employer worlds (incl. the week16 additions) + a compatible angle for CTA copy.
@@ -100,6 +99,7 @@ EDU_FORMAT_BY_DAY = ["carousel", "carousel", "carousel", "single", "single"]
 EDU_CAROUSEL_WORLDS = ["navy", "plum", "teal", "cream", "midnight", "slate",
                        "marker", "flash", "tabs"]
 EDU_SINGLE_WORLDS = ["tipcard", "statement", "bigidea", "splitcard", "memo", "scorecard"]
+FUN_WORLDS = ["bingo", "tierlist", "starterpack", "pov", "greenflags"]
 
 
 def week_offset(wid):
@@ -329,6 +329,7 @@ def build_news_post(wid, dkey, dlabel, pdate, img, item, issue_no=1, dry=False):
 def build(days=5, dry=False):
     quotes = {q["id"]: q for q in L.load("quotes_bank.json")["quotes"]}
     angles = {a["id"]: a for a in L.load("employer_angles.json")["angles"]}
+    fun_ideas = L.load("fun_ideas.json")["ideas"]
     wid, wlabel, wc, mon = target_week()
     # Rotate the quote bank by week, but block recent quote IDs/authors so the
     # same quote cannot reappear just because the visual world changed.
@@ -342,6 +343,7 @@ def build(days=5, dry=False):
     emp_days = sorted(d for d in EMPLOYER_DAYS if d < days)
     emp_worlds = design_ledger.pick("employer", EMPLOYER_WORLDS, len(emp_days), wid)
     week_emp = {d: (emp_worlds[i], EMPLOYER_ANGLE[emp_worlds[i]]) for i, d in enumerate(emp_days)}
+    fun_worlds = design_ledger.pick("fun", FUN_WORLDS, days, wid)
     fmts = EDU_FORMAT_BY_DAY[:days]
     edu_car = design_ledger.pick("edu_carousel", EDU_CAROUSEL_WORLDS, fmts.count("carousel"), wid)
     edu_sing = design_ledger.pick("edu_single", EDU_SINGLE_WORLDS, fmts.count("single"), wid)
@@ -371,10 +373,21 @@ def build(days=5, dry=False):
         posts[-1]["quoteId"] = qid
         posts[-1]["world"] = world
 
-        # FUN lane retired (Week 15) - underperformed on every platform.
+        # ENGAGEMENT / CONVERSATION lane - the fifth core Daily-5 surface.
+        # Keep it useful and brand-safe; featured jobs remain a separate sixth queue.
+        idea = fun_ideas[di % len(fun_ideas)]
+        world = fun_worlds[di]
+        visual_hook = idea.get("hook", "Career conversation")
+        cap = writer.write_captions("fun", visual_hook, visual_hook)
+        pid = f"{wid}-{dkey}-engagement"
+        if not dry:
+            lane_fun.render_fun(idea, world, os.path.join(img, pid))
+        posts.append(_post(pid, dlabel, "engagement", visual_hook, "Single", ["slide_1.png"],
+                           cap["captions"], cap["hashtags"]))
+        posts[-1]["world"] = world
+        posts[-1]["ideaId"] = idea.get("id")
 
-        # EMPLOYER - only on EMPLOYER_DAYS (Mon/Wed/Fri); other days carried by
-        # the daily featured job.
+        # EMPLOYER - core Daily-5 lane. Featured jobs remain separate.
         if di in EMPLOYER_DAYS:
             world, aid = week_emp[di]; a = angles[aid]
             onscreen = a["headline"] + ". " + a.get("body", "") + " " + " ".join(a.get("benefits", []))

@@ -5606,8 +5606,52 @@
       "id": "week18",
       "label": "Week 18",
       "weekCommencing": "2026-09-28",
-      "builtAt": 1790668965,
+      "builtAt": 1790669795,
       "posts": [
+        {
+          "id": "week18-mon-news",
+          "day": "Mon 28 Sep",
+          "lane": "news",
+          "title": "Job Boost for Young Disabled People",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "Great news for young disabled people in the UK! The government's Jobs Guarantee scheme is set to fast-track thousands into jobs, providing a much-needed boost for those facing employment barriers. This initiative is a major step towards greater workplace inclusion and offers a direct path to employment for many students and graduates. Internships are also key, offering valuable experience and helping you stand out. Source: Personnel Today.",
+          "hashtags": [
+            "#ukjobs",
+            "#disabilityinclusion",
+            "#jobopportunities",
+            "#internships",
+            "#inclusiveworkplace"
+          ],
+          "captions": {
+            "ig-fb": "Great news for young disabled people in the UK! The government's Jobs Guarantee scheme is set to fast-track thousands into jobs, providing a much-needed boost for those facing employment barriers. This initiative is a major step towards greater workplace inclusion and offers a direct path to employment for many students and graduates. Internships are also key, offering valuable experience and helping you stand out. Source: Personnel Today.",
+            "linkedin": "The UK government's Jobs Guarantee scheme is offering a promising opportunity for thousands of young disabled people by fast-tracking them into jobs. This initiative aims to break down employment barriers and promote inclusivity in the workforce. For students and graduates, it's a chance to enter the job market with support and confidence. Internships complement this by providing essential experience and skills. Source: Personnel Today.",
+            "x": "UK's Jobs Guarantee scheme to fast-track young disabled people into jobs, supporting greater inclusivity in the workforce. (Source: Personnel Today)",
+            "threads": "Thousands of young disabled people in the UK will be fast-tracked into jobs under the government's Jobs Guarantee scheme. This effort aims to remove barriers to employment and promote inclusivity. Internships also play a vital role by providing practical experience. More at www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#ukjobs",
+              "#disabilityinclusion",
+              "#jobopportunities",
+              "#internships",
+              "#inclusiveworkplace"
+            ],
+            "linkedin": [
+              "#ukjobs",
+              "#disabilityinclusion",
+              "#careerdevelopment"
+            ],
+            "x": [
+              "#ukjobs",
+              "#inclusion"
+            ]
+          }
+        },
         {
           "id": "week18-mon-quote",
           "day": "Mon 28 Sep",
@@ -5652,50 +5696,6 @@
           },
           "quoteId": "q016",
           "world": "spotlight"
-        },
-        {
-          "id": "week18-mon-employer",
-          "day": "Mon 28 Sep",
-          "lane": "employer",
-          "title": "From role posted to intern onboarded",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Hiring managers, simplify your intern recruitment process with Internwise. From posting a role to onboarding a talented intern, we make it seamless. Register in just 3 minutes, post unlimited vacancies, and manage everything in one place. Start building your next dream team today at www.internwise.co.uk.",
-          "hashtags": [
-            "#internrecruitment",
-            "#hiringsimplified",
-            "#careergrowth",
-            "#futureleaders",
-            "#internwiseuk"
-          ],
-          "captions": {
-            "ig-fb": "Hiring managers, simplify your intern recruitment process with Internwise. From posting a role to onboarding a talented intern, we make it seamless. Register in just 3 minutes, post unlimited vacancies, and manage everything in one place. Start building your next dream team today at www.internwise.co.uk.",
-            "linkedin": "Streamline your intern hiring process with Internwise. From posting roles to onboarding, do it all in one spot. Register in 3 minutes and post unlimited vacancies. Efficient and straightforward, we're here to help you build a strong team effortlessly. Discover more at internwise.co.uk.",
-            "x": "Hiring made easy: From posting roles to onboarding, manage it all with Internwise. Register in 3 mins and post unlimited vacancies. internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#internrecruitment",
-              "#hiringsimplified",
-              "#careergrowth",
-              "#futureleaders",
-              "#internwiseuk"
-            ],
-            "linkedin": [
-              "#internrecruitment",
-              "#talentmanagement",
-              "#internwiseuk"
-            ],
-            "x": [
-              "#hiresmart",
-              "#internwiseuk"
-            ]
-          },
-          "world": "process"
         },
         {
           "id": "week18-mon-education",
@@ -5770,48 +5770,89 @@
           "world": "plum"
         },
         {
-          "id": "week18-mon-news",
+          "id": "week18-mon-employer",
           "day": "Mon 28 Sep",
-          "lane": "news",
-          "title": "Job Boost for Young Disabled People",
+          "lane": "employer",
+          "title": "From role posted to intern onboarded",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
-          "status": "approved",
-          "caption": "Great news for young disabled people in the UK! The government's Jobs Guarantee scheme is set to fast-track thousands into jobs, providing a much-needed boost for those facing employment barriers. This initiative is a major step towards greater workplace inclusion and offers a direct path to employment for many students and graduates. Internships are also key, offering valuable experience and helping you stand out. Source: Personnel Today.",
+          "status": "in-review",
+          "caption": "Hiring managers, simplify your intern recruitment process with Internwise. From posting a role to onboarding a talented intern, we make it seamless. Register in just 3 minutes, post unlimited vacancies, and manage everything in one place. Start building your next dream team today at www.internwise.co.uk.",
           "hashtags": [
-            "#ukjobs",
-            "#disabilityinclusion",
-            "#jobopportunities",
-            "#internships",
-            "#inclusiveworkplace"
+            "#internrecruitment",
+            "#hiringsimplified",
+            "#careergrowth",
+            "#futureleaders",
+            "#internwiseuk"
           ],
           "captions": {
-            "ig-fb": "Great news for young disabled people in the UK! The government's Jobs Guarantee scheme is set to fast-track thousands into jobs, providing a much-needed boost for those facing employment barriers. This initiative is a major step towards greater workplace inclusion and offers a direct path to employment for many students and graduates. Internships are also key, offering valuable experience and helping you stand out. Source: Personnel Today.",
-            "linkedin": "The UK government's Jobs Guarantee scheme is offering a promising opportunity for thousands of young disabled people by fast-tracking them into jobs. This initiative aims to break down employment barriers and promote inclusivity in the workforce. For students and graduates, it's a chance to enter the job market with support and confidence. Internships complement this by providing essential experience and skills. Source: Personnel Today.",
-            "x": "UK's Jobs Guarantee scheme to fast-track young disabled people into jobs, supporting greater inclusivity in the workforce. (Source: Personnel Today)",
-            "threads": "Thousands of young disabled people in the UK will be fast-tracked into jobs under the government's Jobs Guarantee scheme. This effort aims to remove barriers to employment and promote inclusivity. Internships also play a vital role by providing practical experience. More at www.internwise.co.uk"
+            "ig-fb": "Hiring managers, simplify your intern recruitment process with Internwise. From posting a role to onboarding a talented intern, we make it seamless. Register in just 3 minutes, post unlimited vacancies, and manage everything in one place. Start building your next dream team today at www.internwise.co.uk.",
+            "linkedin": "Streamline your intern hiring process with Internwise. From posting roles to onboarding, do it all in one spot. Register in 3 minutes and post unlimited vacancies. Efficient and straightforward, we're here to help you build a strong team effortlessly. Discover more at internwise.co.uk.",
+            "x": "Hiring made easy: From posting roles to onboarding, manage it all with Internwise. Register in 3 mins and post unlimited vacancies. internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#ukjobs",
-              "#disabilityinclusion",
-              "#jobopportunities",
-              "#internships",
-              "#inclusiveworkplace"
+              "#internrecruitment",
+              "#hiringsimplified",
+              "#careergrowth",
+              "#futureleaders",
+              "#internwiseuk"
             ],
             "linkedin": [
-              "#ukjobs",
-              "#disabilityinclusion",
-              "#careerdevelopment"
+              "#internrecruitment",
+              "#talentmanagement",
+              "#internwiseuk"
             ],
             "x": [
-              "#ukjobs",
-              "#inclusion"
+              "#hiresmart",
+              "#internwiseuk"
             ]
-          }
+          },
+          "world": "process"
+        },
+        {
+          "id": "week18-mon-engagement",
+          "day": "Mon 28 Sep",
+          "lane": "engagement",
+          "title": "Graduate job-hunt bingo",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Graduate job-hunt bingo\n\nA small career moment worth saving. Explore internships at internwise.co.uk.",
+          "hashtags": [
+            "#internwise",
+            "#studentlife",
+            "#careertips"
+          ],
+          "captions": {
+            "ig-fb": "Graduate job-hunt bingo\n\nA small career moment worth saving. Explore internships at internwise.co.uk.",
+            "linkedin": "Graduate job-hunt bingo\n\nA small career moment worth saving. Explore internships at internwise.co.uk.",
+            "x": "Graduate job-hunt bingo Find internships at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internwise",
+              "#studentlife",
+              "#careertips"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internships",
+              "#earlycareers"
+            ],
+            "x": [
+              "#careers",
+              "#internships"
+            ]
+          },
+          "world": "bingo",
+          "ideaId": "f003"
         },
         {
           "id": "week18-tue-news",
@@ -5975,6 +6016,87 @@
           "world": "navy"
         },
         {
+          "id": "week18-tue-employer",
+          "day": "Tue 29 Sep",
+          "lane": "employer",
+          "title": "Reach 400,000 early-career candidates",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Reach 400,000 early-career candidates\n\nPost internships, shortlist candidates and hire early-career talent at internwise.co.uk/employers.",
+          "hashtags": [
+            "#internwise",
+            "#employers",
+            "#earlycareers"
+          ],
+          "captions": {
+            "ig-fb": "Reach 400,000 early-career candidates\n\nPost internships, shortlist candidates and hire early-career talent at internwise.co.uk/employers.",
+            "linkedin": "Reach 400,000 early-career candidates\n\nPost internships, shortlist candidates and hire early-career talent at internwise.co.uk/employers.",
+            "x": "Reach 400,000 early-career candidates Find internships at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internwise",
+              "#employers",
+              "#earlycareers"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internships",
+              "#earlycareers"
+            ],
+            "x": [
+              "#careers",
+              "#internships"
+            ]
+          },
+          "world": "kpi"
+        },
+        {
+          "id": "week18-tue-engagement",
+          "day": "Tue 29 Sep",
+          "lane": "engagement",
+          "title": "Ranking classic interview questions by dread",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Ranking classic interview questions by dread\n\nA small career moment worth saving. Explore internships at internwise.co.uk.",
+          "hashtags": [
+            "#internwise",
+            "#studentlife",
+            "#careertips"
+          ],
+          "captions": {
+            "ig-fb": "Ranking classic interview questions by dread\n\nA small career moment worth saving. Explore internships at internwise.co.uk.",
+            "linkedin": "Ranking classic interview questions by dread\n\nA small career moment worth saving. Explore internships at internwise.co.uk.",
+            "x": "Ranking classic interview questions by dread Find internships at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internwise",
+              "#studentlife",
+              "#careertips"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internships",
+              "#earlycareers"
+            ],
+            "x": [
+              "#careers",
+              "#internships"
+            ]
+          },
+          "world": "tierlist",
+          "ideaId": "f005"
+        },
+        {
           "id": "week18-wed-news",
           "day": "Wed 30 Sep",
           "lane": "news",
@@ -6064,50 +6186,6 @@
           "world": "colorblock"
         },
         {
-          "id": "week18-wed-employer",
-          "day": "Wed 30 Sep",
-          "lane": "employer",
-          "title": "From role posted to intern onboarded",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Finding the right intern shouldn't be a hassle. With Internwise, you can register in just 3 minutes and start posting unlimited vacancies. Our platform lets you manage, onboard, and track intern progress all in one convenient place. Simplify your hiring process today and connect with eager students and grads. Explore opportunities at www.internwise.co.uk.",
-          "hashtags": [
-            "#internshipuk",
-            "#hiresmart",
-            "#graduatetalent",
-            "#careeropportunities",
-            "#internwise"
-          ],
-          "captions": {
-            "ig-fb": "Finding the right intern shouldn't be a hassle. With Internwise, you can register in just 3 minutes and start posting unlimited vacancies. Our platform lets you manage, onboard, and track intern progress all in one convenient place. Simplify your hiring process today and connect with eager students and grads. Explore opportunities at www.internwise.co.uk.",
-            "linkedin": "Streamline your intern hiring process with Internwise. Register in just 3 minutes, post unlimited vacancies, and manage everything in one spot. From posting a role to onboarding an enthusiastic intern, we've got you covered. Start building your future team with ease. Visit internwise.co.uk.",
-            "x": "Register on Internwise in 3 minutes and post unlimited vacancies. Manage, onboard, and track intern progress all in one place. Ready to find your next intern? internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#internshipuk",
-              "#hiresmart",
-              "#graduatetalent",
-              "#careeropportunities",
-              "#internwise"
-            ],
-            "linkedin": [
-              "#internshipuk",
-              "#hiresmart",
-              "#graduatetalent"
-            ],
-            "x": [
-              "#internshipuk",
-              "#hiresmart"
-            ]
-          },
-          "world": "pipeline"
-        },
-        {
           "id": "week18-wed-education",
           "day": "Wed 30 Sep",
           "lane": "education",
@@ -6178,6 +6256,91 @@
             "cta": "Visit internwise.co.uk for more insights."
           },
           "world": "teal"
+        },
+        {
+          "id": "week18-wed-employer",
+          "day": "Wed 30 Sep",
+          "lane": "employer",
+          "title": "From role posted to intern onboarded",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Finding the right intern shouldn't be a hassle. With Internwise, you can register in just 3 minutes and start posting unlimited vacancies. Our platform lets you manage, onboard, and track intern progress all in one convenient place. Simplify your hiring process today and connect with eager students and grads. Explore opportunities at www.internwise.co.uk.",
+          "hashtags": [
+            "#internshipuk",
+            "#hiresmart",
+            "#graduatetalent",
+            "#careeropportunities",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Finding the right intern shouldn't be a hassle. With Internwise, you can register in just 3 minutes and start posting unlimited vacancies. Our platform lets you manage, onboard, and track intern progress all in one convenient place. Simplify your hiring process today and connect with eager students and grads. Explore opportunities at www.internwise.co.uk.",
+            "linkedin": "Streamline your intern hiring process with Internwise. Register in just 3 minutes, post unlimited vacancies, and manage everything in one spot. From posting a role to onboarding an enthusiastic intern, we've got you covered. Start building your future team with ease. Visit internwise.co.uk.",
+            "x": "Register on Internwise in 3 minutes and post unlimited vacancies. Manage, onboard, and track intern progress all in one place. Ready to find your next intern? internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internshipuk",
+              "#hiresmart",
+              "#graduatetalent",
+              "#careeropportunities",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#internshipuk",
+              "#hiresmart",
+              "#graduatetalent"
+            ],
+            "x": [
+              "#internshipuk",
+              "#hiresmart"
+            ]
+          },
+          "world": "pipeline"
+        },
+        {
+          "id": "week18-wed-engagement",
+          "day": "Wed 30 Sep",
+          "lane": "engagement",
+          "title": "The 'I'm definitely a professional now' starter pack",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "The 'I'm definitely a professional now' starter pack\n\nA small career moment worth saving. Explore internships at internwise.co.uk.",
+          "hashtags": [
+            "#internwise",
+            "#studentlife",
+            "#careertips"
+          ],
+          "captions": {
+            "ig-fb": "The 'I'm definitely a professional now' starter pack\n\nA small career moment worth saving. Explore internships at internwise.co.uk.",
+            "linkedin": "The 'I'm definitely a professional now' starter pack\n\nA small career moment worth saving. Explore internships at internwise.co.uk.",
+            "x": "The 'I'm definitely a professional now' starter pack Find internships at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internwise",
+              "#studentlife",
+              "#careertips"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internships",
+              "#earlycareers"
+            ],
+            "x": [
+              "#careers",
+              "#internships"
+            ]
+          },
+          "world": "starterpack",
+          "ideaId": "f006"
         },
         {
           "id": "week18-thu-news",
@@ -6327,6 +6490,87 @@
           "world": "memo"
         },
         {
+          "id": "week18-thu-employer",
+          "day": "Thu 1 Oct",
+          "lane": "employer",
+          "title": "Your next intern is already here",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Your next intern is already here\n\nPost internships, shortlist candidates and hire early-career talent at internwise.co.uk/employers.",
+          "hashtags": [
+            "#internwise",
+            "#employers",
+            "#earlycareers"
+          ],
+          "captions": {
+            "ig-fb": "Your next intern is already here\n\nPost internships, shortlist candidates and hire early-career talent at internwise.co.uk/employers.",
+            "linkedin": "Your next intern is already here\n\nPost internships, shortlist candidates and hire early-career talent at internwise.co.uk/employers.",
+            "x": "Your next intern is already here Find internships at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internwise",
+              "#employers",
+              "#earlycareers"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internships",
+              "#earlycareers"
+            ],
+            "x": [
+              "#careers",
+              "#internships"
+            ]
+          },
+          "world": "cards"
+        },
+        {
+          "id": "week18-thu-engagement",
+          "day": "Thu 1 Oct",
+          "lane": "engagement",
+          "title": "POV: you just got the 'we'd love to offer you the role' email",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "POV: you just got the 'we'd love to offer you the role' email\n\nA small career moment worth saving. Explore internships at internwise.co.uk.",
+          "hashtags": [
+            "#internwise",
+            "#studentlife",
+            "#careertips"
+          ],
+          "captions": {
+            "ig-fb": "POV: you just got the 'we'd love to offer you the role' email\n\nA small career moment worth saving. Explore internships at internwise.co.uk.",
+            "linkedin": "POV: you just got the 'we'd love to offer you the role' email\n\nA small career moment worth saving. Explore internships at internwise.co.uk.",
+            "x": "POV: you just got the 'we'd love to offer you the role' email Find internships at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internwise",
+              "#studentlife",
+              "#careertips"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internships",
+              "#earlycareers"
+            ],
+            "x": [
+              "#careers",
+              "#internships"
+            ]
+          },
+          "world": "pov",
+          "ideaId": "f004"
+        },
+        {
           "id": "week18-fri-news",
           "day": "Fri 2 Oct",
           "lane": "news",
@@ -6416,50 +6660,6 @@
           "world": "paper"
         },
         {
-          "id": "week18-fri-employer",
-          "day": "Fri 2 Oct",
-          "lane": "employer",
-          "title": "Reach 400,000 early-career candidates",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Looking to connect with the next generation of talent? With Internwise, you can reach 400,000 eager students and graduates across the UK. Join over 14,000 employers who are already making the most of our focused platform. Whether you're a startup or an established firm, becoming a Featured Employer can give your applications a significant boost. Explore the potential of our dedicated candidate pool and find the perfect fit for your team. Start your search today at www.internwise.co.uk.",
-          "hashtags": [
-            "#internwiseuk",
-            "#graduatejobs",
-            "#hiretalent",
-            "#ukemployers",
-            "#careergrowth"
-          ],
-          "captions": {
-            "ig-fb": "Looking to connect with the next generation of talent? With Internwise, you can reach 400,000 eager students and graduates across the UK. Join over 14,000 employers who are already making the most of our focused platform. Whether you're a startup or an established firm, becoming a Featured Employer can give your applications a significant boost. Explore the potential of our dedicated candidate pool and find the perfect fit for your team. Start your search today at www.internwise.co.uk.",
-            "linkedin": "Unlock a world of talent with Internwise! Our platform connects you with 400,000 early-career candidates across the UK, ready to bring fresh ideas and energy to your business. Join 14,000+ employers who trust Internwise to find their next team member. As a Featured Employer, you'll gain greater visibility and more applications from a focused pool of students and graduates. Let's make your hiring process smooth and successful. Visit internwise.co.uk to get started.",
-            "x": "Access 400,000 UK students & graduates with Internwise. Join 14,000+ employers already benefiting from our focused platform. Explore at internwise.co.uk."
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#internwiseuk",
-              "#graduatejobs",
-              "#hiretalent",
-              "#ukemployers",
-              "#careergrowth"
-            ],
-            "linkedin": [
-              "#internshipopportunities",
-              "#talentacquisition",
-              "#ukrecruitment"
-            ],
-            "x": [
-              "#graduatejobs",
-              "#ukrecruitment"
-            ]
-          },
-          "world": "proofboard"
-        },
-        {
           "id": "week18-fri-education",
           "day": "Fri 2 Oct",
           "lane": "education",
@@ -6516,6 +6716,91 @@
             "cta": "Track smarter at internwise.co.uk"
           },
           "world": "scorecard"
+        },
+        {
+          "id": "week18-fri-employer",
+          "day": "Fri 2 Oct",
+          "lane": "employer",
+          "title": "Reach 400,000 early-career candidates",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Looking to connect with the next generation of talent? With Internwise, you can reach 400,000 eager students and graduates across the UK. Join over 14,000 employers who are already making the most of our focused platform. Whether you're a startup or an established firm, becoming a Featured Employer can give your applications a significant boost. Explore the potential of our dedicated candidate pool and find the perfect fit for your team. Start your search today at www.internwise.co.uk.",
+          "hashtags": [
+            "#internwiseuk",
+            "#graduatejobs",
+            "#hiretalent",
+            "#ukemployers",
+            "#careergrowth"
+          ],
+          "captions": {
+            "ig-fb": "Looking to connect with the next generation of talent? With Internwise, you can reach 400,000 eager students and graduates across the UK. Join over 14,000 employers who are already making the most of our focused platform. Whether you're a startup or an established firm, becoming a Featured Employer can give your applications a significant boost. Explore the potential of our dedicated candidate pool and find the perfect fit for your team. Start your search today at www.internwise.co.uk.",
+            "linkedin": "Unlock a world of talent with Internwise! Our platform connects you with 400,000 early-career candidates across the UK, ready to bring fresh ideas and energy to your business. Join 14,000+ employers who trust Internwise to find their next team member. As a Featured Employer, you'll gain greater visibility and more applications from a focused pool of students and graduates. Let's make your hiring process smooth and successful. Visit internwise.co.uk to get started.",
+            "x": "Access 400,000 UK students & graduates with Internwise. Join 14,000+ employers already benefiting from our focused platform. Explore at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internwiseuk",
+              "#graduatejobs",
+              "#hiretalent",
+              "#ukemployers",
+              "#careergrowth"
+            ],
+            "linkedin": [
+              "#internshipopportunities",
+              "#talentacquisition",
+              "#ukrecruitment"
+            ],
+            "x": [
+              "#graduatejobs",
+              "#ukrecruitment"
+            ]
+          },
+          "world": "proofboard"
+        },
+        {
+          "id": "week18-fri-engagement",
+          "day": "Fri 2 Oct",
+          "lane": "engagement",
+          "title": "Green flags in a good internship",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Green flags in a good internship\n\nA small career moment worth saving. Explore internships at internwise.co.uk.",
+          "hashtags": [
+            "#internwise",
+            "#studentlife",
+            "#careertips"
+          ],
+          "captions": {
+            "ig-fb": "Green flags in a good internship\n\nA small career moment worth saving. Explore internships at internwise.co.uk.",
+            "linkedin": "Green flags in a good internship\n\nA small career moment worth saving. Explore internships at internwise.co.uk.",
+            "x": "Green flags in a good internship Find internships at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internwise",
+              "#studentlife",
+              "#careertips"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internships",
+              "#earlycareers"
+            ],
+            "x": [
+              "#careers",
+              "#internships"
+            ]
+          },
+          "world": "greenflags",
+          "ideaId": "f009"
         }
       ]
     }
