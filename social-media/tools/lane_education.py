@@ -246,6 +246,14 @@ def _nuno_whole(pose, h=820, right=-40, bottom=0):
     img = f"<img src='{src}' style='position:absolute;right:{right}px;bottom:{bottom}px;height:{h}px;filter:drop-shadow(0 22px 34px rgba(0,0,0,.5));'>"
     return ground + img
 
+def _profile_avatar(left, top, size, border=8):
+    src = L.img(os.path.join(L.BASE, "assets", "nuno", "nuno_profile_avatar.png"))
+    inner = size - border * 2
+    return (f"<div style='position:absolute;left:{left}px;top:{top}px;width:{size}px;height:{size}px;border-radius:50%;"
+            f"background:#F8FBFF;border:{border}px solid #F8FBFF;overflow:hidden;box-shadow:0 8px 22px rgba(21,39,67,.16);'>"
+            f"<img src='{src}' style='width:{inner}px;height:{inner}px;object-fit:cover;'>"
+            f"</div>")
+
 def _arc(p, right=-70, bottom=-40, size=760):
     return (f"<div style='position:absolute;right:{right}px;bottom:{bottom}px;width:{size}px;height:{size}px;border-radius:50%;"
             f"background:radial-gradient(circle at 50% 45%,{p['accent']}2e,{p['accent']}00 66%);'></div>")
@@ -397,7 +405,7 @@ def cover_bento(p, copy, total, pose):
             f"<div style='position:absolute;right:76px;top:198px;width:395px;height:520px;border-radius:30px;background:#F8FBFF;box-shadow:0 28px 60px rgba(0,0,0,.28);overflow:hidden;'>"
             f"<div style='height:106px;background:#0A66C2;'></div>"
             f"<div style='position:absolute;left:34px;top:36px;width:58px;height:58px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:900;font-size:33px;color:#0A66C2;'>in</div>"
-            f"<div style='position:absolute;left:34px;top:130px;width:120px;height:120px;border-radius:50%;background:#DDE8F6;border:8px solid #F8FBFF;'></div>"
+            f"{_profile_avatar(34, 130, 120, border=8)}"
             f"<div style='position:absolute;left:34px;right:34px;top:282px;height:16px;border-radius:8px;background:#15274322;'></div>"
             f"<div style='position:absolute;left:34px;right:92px;top:318px;height:14px;border-radius:7px;background:#15274318;'></div>"
             f"<div style='position:absolute;left:34px;right:54px;top:368px;height:70px;border-radius:18px;background:#0A66C212;border:1px solid #0A66C233;'></div>"
@@ -432,7 +440,7 @@ def cta_bento(p, copy, total, pose):
             f"<div style='height:128px;background:#0A66C2;'></div>"
             f"<div style='position:absolute;left:34px;top:38px;width:70px;height:70px;border-radius:14px;background:#fff;"
             f"display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:950;font-size:38px;color:#0A66C2;'>in</div>"
-            f"<div style='position:absolute;left:34px;top:156px;width:124px;height:124px;border-radius:50%;background:#DDE8F6;border:8px solid #F8FBFF;'></div>"
+            f"{_profile_avatar(34, 156, 124, border=8)}"
             f"<div style='position:absolute;left:34px;right:34px;top:316px;height:18px;border-radius:9px;background:#15274326;'></div>"
             f"<div style='position:absolute;left:34px;right:118px;top:354px;height:14px;border-radius:7px;background:#15274318;'></div>"
             f"<div style='position:absolute;left:34px;right:34px;top:418px;height:86px;border-radius:18px;background:#0A66C214;border:1px solid #0A66C233;'></div>"
