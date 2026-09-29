@@ -5606,7 +5606,7 @@
       "id": "week18",
       "label": "Week 18",
       "weekCommencing": "2026-09-28",
-      "builtAt": 1790707556,
+      "builtAt": 1790708743,
       "posts": [
         {
           "id": "week18-mon-quote",
@@ -6591,6 +6591,94 @@
           },
           "world": "decision",
           "ideaId": "c005"
+        },
+        {
+          "id": "week18-wed-news",
+          "day": "Wed 30 Sep",
+          "lane": "news",
+          "title": "UK Awards Highlight Talent Recruitment",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "A UK awards event recently shone a light on game-changing recruitment strategies, recognising innovative approaches in finding and hiring talent across all levels. For students and recent grads, these developments underline the significance of understanding how recruitment evolves and what employers seek. Grasping these can make you a standout candidate. Internships offer a valuable gateway to gaining this insight and experience. Source: Personnel Today.",
+          "hashtags": [
+            "#recruitment",
+            "#ukjobs",
+            "#internships",
+            "#careergrowth",
+            "#talent"
+          ],
+          "captions": {
+            "ig-fb": "A UK awards event recently shone a light on game-changing recruitment strategies, recognising innovative approaches in finding and hiring talent across all levels. For students and recent grads, these developments underline the significance of understanding how recruitment evolves and what employers seek. Grasping these can make you a standout candidate. Internships offer a valuable gateway to gaining this insight and experience. Source: Personnel Today.",
+            "linkedin": "The spotlight was on innovative recruitment at a recent UK awards event, recognising effective strategies for attracting and selecting talent. This is a vital development for students and recent graduates, as understanding these trends can enhance your job prospects. Internships provide a crucial pathway, offering real-world experience and insight into what employers value. Source: Personnel Today.",
+            "x": "UK awards showcased innovative recruitment methods for hiring talent. Students and grads, take note: understanding these trends can boost your job prospects. (Source: Personnel Today)",
+            "threads": "A UK awards event highlighted top recruitment strategies, showcasing effective talent attraction and hiring. For students and grads, it's essential to understand these shifts to stand out. Internships offer key experience and insights. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#recruitment",
+              "#ukjobs",
+              "#internships",
+              "#careergrowth",
+              "#talent"
+            ],
+            "linkedin": [
+              "#recruitment",
+              "#internships",
+              "#careerdevelopment"
+            ],
+            "x": [
+              "#recruitment",
+              "#internships"
+            ]
+          }
+        },
+        {
+          "id": "week18-thu-news",
+          "day": "Thu 1 Oct",
+          "lane": "news",
+          "title": "Jobs Guarantee for Young Disabled People",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "The UK government has launched the Jobs Guarantee scheme to support young disabled people and those with long-term health conditions. This initiative aims to provide thousands of individuals with a fast-tracked route to employment. It's a significant step towards inclusivity, offering more secure job prospects for students and graduates facing these challenges. Internships play a crucial role too, helping you gain confidence and skills needed in the workplace. Source: GOV.UK.",
+          "hashtags": [
+            "#jobsguarantee",
+            "#disabilityinclusion",
+            "#internships",
+            "#ukcareers",
+            "#graduatejobs"
+          ],
+          "captions": {
+            "ig-fb": "The UK government has launched the Jobs Guarantee scheme to support young disabled people and those with long-term health conditions. This initiative aims to provide thousands of individuals with a fast-tracked route to employment. It's a significant step towards inclusivity, offering more secure job prospects for students and graduates facing these challenges. Internships play a crucial role too, helping you gain confidence and skills needed in the workplace. Source: GOV.UK.",
+            "linkedin": "In a positive move for inclusivity, the UK government has introduced the Jobs Guarantee scheme. This programme will offer thousands of young disabled individuals and those with long-term health conditions an accelerated pathway to employment. For students and graduates, this means enhanced job security and new opportunities. Internships remain key, providing practical experience and skill development. Source: GOV.UK.",
+            "x": "UK's Jobs Guarantee scheme offers young disabled people a fast-tracked route to employment, promoting inclusivity and opportunity. (Source: GOV.UK)",
+            "threads": "The UK government's Jobs Guarantee scheme offers young disabled people a fast-tracked path to jobs. This boosts career opportunities for many. Internships remain essential for gaining workplace skills. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#jobsguarantee",
+              "#disabilityinclusion",
+              "#internships",
+              "#ukcareers",
+              "#graduatejobs"
+            ],
+            "linkedin": [
+              "#jobsguarantee",
+              "#disabilityinclusion",
+              "#ukcareers"
+            ],
+            "x": [
+              "#jobsguarantee",
+              "#disabilityinclusion"
+            ]
+          }
         }
       ]
     }
