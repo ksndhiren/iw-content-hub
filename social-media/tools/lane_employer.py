@@ -21,6 +21,8 @@ EMP_POOLS = {
     # B2B: the founder should read confident/presenting to employers - authority poses.
     "kpi":       ["nuno_authority_1", "nuno_authority_4", "nuno_authority_2", "nuno_authority_3"],
     "cards":     ["nuno_authority_3", "nuno_authority_4", "nuno_authority_1", "nuno_authority_2"],
+    "pipeline":  ["nuno_planning_2", "nuno_planning_3", "nuno_authority_4"],
+    "proofboard": ["nuno_authority_4", "nuno_authority_2", "nuno_planning_2"],
 }
 
 NAVY, DEEP, INK = L.NAVY, L.DEEP, L.INK
@@ -170,10 +172,49 @@ def w_cards(a, pose="nuno_thoughtful_1"):
     grid = (f"<div style='position:absolute;left:58px;top:400px;width:590px;display:grid;grid-template-columns:1fr 1fr;gap:18px;'>{cells}</div>")
     return _bg(BG1, BG2) + _nuno(pose, right=-150) + L.logo_tl() + _tag() + head + grid + _cta(a["cta"]) + L.url_footer(color=SUBT, text=EMP_URL)
 
+# ---- pipeline timeline (editorial briefing) ----
+def w_pipeline(a, pose="nuno_planning_2"):
+    CREAM = "#F3EADA"; NAVYT = "#152743"; COFFEE = "#6F6350"
+    bg = f"<div style='position:absolute;inset:0;background:{CREAM};'></div>"
+    rail = f"<div style='position:absolute;left:0;top:0;bottom:0;width:148px;background:{NAVYT};'></div>"
+    logo = f"<img src='{L.WHT}' style='position:absolute;left:36px;top:44px;height:86px;'>"
+    tag = (f"<div style=\"position:absolute;left:188px;top:76px;font-family:'DM Sans';font-weight:800;font-size:20px;color:{COFFEE};letter-spacing:4px;\">HIRING PIPELINE</div>"
+           f"<div style='position:absolute;left:188px;top:118px;width:72px;height:5px;background:{AMBER};border-radius:3px;'></div>")
+    head = (f"<div style=\"position:absolute;left:188px;top:184px;width:500px;font-family:Georgia,serif;font-weight:700;font-size:68px;line-height:1.02;color:{NAVYT};\">"
+            f"{a['headline']}</div>")
+    steps = ["Role live", "Candidates arrive", "Shortlist fast", "Interview ready"]
+    rows = ""
+    for i, st in enumerate(steps, 1):
+        rows += (f"<div style='display:flex;align-items:center;gap:18px;margin-bottom:22px;'>"
+                 f"<div style='width:50px;height:50px;border-radius:50%;background:{AMBER};display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:800;font-size:22px;color:{NAVYT};'>{i}</div>"
+                 f"<div style=\"font-family:Inter;font-weight:800;font-size:31px;color:{NAVYT};letter-spacing:-.4px;\">{st}</div></div>")
+    body = f"<div style='position:absolute;left:188px;top:470px;width:460px;'>{rows}</div>"
+    nuno = _nuno(pose, h=700, right=-120)
+    cta = (f"<div style='position:absolute;left:188px;bottom:92px;height:64px;padding:0 30px;border-radius:32px;background:{NAVYT};display:flex;align-items:center;'>"
+           f"<span style=\"font-family:Inter;font-weight:800;font-size:25px;color:#fff;\">{a['cta']}</span></div>")
+    return bg + rail + logo + tag + head + body + nuno + cta + L.url_footer(left=188, color=COFFEE, text=EMP_URL)
+
+# ---- proof board (evidence led) ----
+def w_proofboard(a, pose="nuno_authority_4"):
+    SUBT = "#9FC2C9"
+    bg = _bg(BG1, BG2)
+    head = (f"<div style='position:absolute;left:58px;top:220px;width:560px;'>"
+            f"<div style=\"font-family:Georgia,serif;font-weight:700;font-size:70px;line-height:1.02;color:{INK};\">Hire with proof, not guesswork.</div>"
+            f"<div style=\"font-family:'DM Sans';font-weight:600;font-size:27px;line-height:1.34;color:{SUBT};margin-top:22px;\">{a.get('body','Find early-career candidates by sector, skill and location.')}</div></div>")
+    tiles = [("400K", "candidates"), ("14K+", "employers"), ("UK", "wide reach")]
+    cards = ""
+    for big, lab in tiles:
+        cards += (f"<div style='background:rgba(255,255,255,.06);border:1.5px solid {GREEN}55;border-radius:8px;padding:24px 22px;'>"
+                  f"<div style=\"font-family:Inter;font-weight:900;font-size:54px;color:{AMBER};letter-spacing:-2px;\">{big}</div>"
+                  f"<div style=\"font-family:'DM Sans';font-weight:800;font-size:22px;color:{INK};letter-spacing:1px;\">{lab}</div></div>")
+    board = f"<div style='position:absolute;left:58px;top:590px;width:590px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;'>{cards}</div>"
+    return bg + _nuno(pose, h=760, right=-130) + L.logo_tl() + _tag() + head + board + _cta(a['cta']) + L.url_footer(color=SUBT, text=EMP_URL)
+
 
 WORLDS = {"benefits": w_benefits, "bigstat": w_bigstat, "process": w_process,
           "trust": w_trust, "statement": w_statement,
-          "kpi": w_kpi, "cards": w_cards}
+          "kpi": w_kpi, "cards": w_cards,
+          "pipeline": w_pipeline, "proofboard": w_proofboard}
 
 def render_employer(angle, world, out_dir, filename="slide_1.png", week_id="adhoc"):
     pose = nuno_ledger.pick(EMP_POOLS.get(world, ["nuno_authority_1"]), week_id, label=f"employer/{world}")

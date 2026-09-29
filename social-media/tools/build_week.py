@@ -88,9 +88,10 @@ EMPLOYER_PAIRS = [("benefits", "e001"), ("bigstat", "e004"), ("process", "e003")
                   ("trust", "e005"), ("statement", "e002")]
 # All employer worlds (incl. the week16 additions) + a compatible angle for CTA copy.
 # World SELECTION now goes through the design ledger (no-repeat), not this list's rotation.
-EMPLOYER_WORLDS = ["benefits", "bigstat", "process", "trust", "statement", "kpi", "cards"]
+EMPLOYER_WORLDS = ["benefits", "bigstat", "process", "trust", "statement", "kpi", "cards", "pipeline", "proofboard"]
 EMPLOYER_ANGLE = {"benefits": "e001", "bigstat": "e004", "process": "e003",
-                  "trust": "e005", "statement": "e002", "kpi": "e004", "cards": "e001"}
+                  "trust": "e005", "statement": "e002", "kpi": "e004", "cards": "e001",
+                  "pipeline": "e003", "proofboard": "e004"}
 # education: 3 carousels + 2 singles. The FORMAT is fixed per weekday (Mon-Wed
 # carousels, Thu/Fri singles) so the weekly mix never drifts; the visual WORLD
 # rotates by week (see week_offset / build) so the same weekday never looks the
@@ -98,7 +99,7 @@ EMPLOYER_ANGLE = {"benefits": "e001", "bigstat": "e004", "process": "e003",
 EDU_FORMAT_BY_DAY = ["carousel", "carousel", "carousel", "single", "single"]
 EDU_CAROUSEL_WORLDS = ["navy", "plum", "teal", "cream", "midnight", "slate",
                        "marker", "flash", "tabs"]
-EDU_SINGLE_WORLDS = ["tipcard", "statement", "bigidea", "splitcard"]
+EDU_SINGLE_WORLDS = ["tipcard", "statement", "bigidea", "splitcard", "memo", "scorecard"]
 
 
 def week_offset(wid):
@@ -317,7 +318,7 @@ def build_news_post(wid, dkey, dlabel, pdate, img, item, issue_no=1, dry=False):
     nc = writer.write_news(item)
     pid = f"{wid}-{dkey}-news"
     if not dry:
-        news_card.render_news({"kicker": nc.get("kicker", "JOB MARKET"), "date": pdate},
+        news_card.render_news({"kicker": "JOB MARKET", "date": pdate},
                               os.path.join(img, pid), issue_no=issue_no,
                               headline=nc["headline"], brief=nc["brief"],
                               sidebar=nc["sidebar"], pull=nc["pull"])

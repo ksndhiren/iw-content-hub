@@ -176,14 +176,64 @@
       "world": "spotlight"
     },
     {
+      "lane": "quote",
+      "week": "week18",
+      "world": "editorial"
+    },
+    {
+      "lane": "quote",
+      "week": "week18",
+      "world": "colorblock"
+    },
+    {
+      "lane": "quote",
+      "week": "week18",
+      "world": "split"
+    },
+    {
+      "lane": "quote",
+      "week": "week18",
+      "world": "paper"
+    },
+    {
       "lane": "employer",
       "week": "week18",
       "world": "process"
     },
     {
+      "lane": "employer",
+      "week": "week18",
+      "world": "pipeline"
+    },
+    {
+      "lane": "employer",
+      "week": "week18",
+      "world": "proofboard"
+    },
+    {
       "lane": "edu_carousel",
       "week": "week18",
       "world": "plum"
+    },
+    {
+      "lane": "edu_carousel",
+      "week": "week18",
+      "world": "navy"
+    },
+    {
+      "lane": "edu_carousel",
+      "week": "week18",
+      "world": "teal"
+    },
+    {
+      "lane": "edu_single",
+      "week": "week18",
+      "world": "memo"
+    },
+    {
+      "lane": "edu_single",
+      "week": "week18",
+      "world": "scorecard"
     }
   ]
 }

@@ -656,6 +656,41 @@ def w_bigidea(copy, week_id='adhoc'):
             f"<span style=\"font-family:Inter;font-weight:800;font-size:31px;color:{p['deep']};margin-left:56px;letter-spacing:-.3px;\">{copy.get('cta','internwise.co.uk')}</span></div>")
     return bg + L.logo_tl() + eb + glyph + head + body + band
 
+def w_memo(copy, week_id='adhoc'):
+    """Editorial memo single: white strip, serif headline and stamped action list."""
+    CREAM = "#F3EADA"; NAVYT = "#152743"; COFFEE = "#6F6350"
+    bg = f"<div style='position:absolute;inset:0;background:{CREAM};'></div>"
+    top = f"<div style='position:absolute;left:0;right:0;top:0;height:150px;background:{NAVYT};'></div>"
+    logo = f"<img src='{L.WHT}' style='position:absolute;left:56px;top:42px;height:86px;'>"
+    strip = (f"<div style='position:absolute;left:56px;right:56px;top:190px;height:70px;background:#fff;border-top:3px solid {NAVYT};border-bottom:3px solid {NAVYT};display:flex;align-items:center;justify-content:center;'>"
+             f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:22px;color:{NAVYT};letter-spacing:4px;\">{copy.get('eyebrow','CAREER MEMO')[:24].upper()}</span></div>")
+    head = (f"<div style=\"position:absolute;left:76px;right:76px;top:304px;text-align:center;font-family:Georgia,serif;font-weight:700;font-size:72px;line-height:1.0;color:{NAVYT};\">{copy['headline']}</div>")
+    rows = ""
+    for i, pt in enumerate(copy.get('points', [])[:4], 1):
+        rows += (f"<div style='display:flex;gap:18px;align-items:flex-start;margin-bottom:20px;'>"
+                 f"<div style='flex:0 0 44px;height:44px;border-radius:50%;background:{AMBER};display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:900;font-size:20px;color:{NAVYT};'>{i}</div>"
+                 f"<div style=\"font-family:Inter;font-weight:800;font-size:30px;line-height:1.14;color:{NAVYT};\">{pt}</div></div>")
+    body = f"<div style='position:absolute;left:104px;right:104px;top:560px;'>{rows}</div>"
+    cta = (f"<div style=\"position:absolute;left:0;right:0;bottom:48px;text-align:center;font-family:'DM Sans';font-weight:800;font-size:25px;color:{COFFEE};\">{copy.get('cta','internwise.co.uk')}</div>")
+    return bg + top + logo + strip + head + body + cta
+
+def w_scorecard(copy, week_id='adhoc'):
+    """Scorecard single: compact evaluation board with three marked criteria."""
+    p = PAL['midnight']
+    bg = _bg(p)
+    eb = (f"<div style='position:absolute;left:56px;top:196px;height:46px;padding:0 22px;border-radius:6px;background:{p['accent']};display:flex;align-items:center;'>"
+          f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:19px;color:{p['deep']};letter-spacing:3px;\">CAREER SCORECARD</span></div>")
+    head = (f"<div style=\"position:absolute;left:56px;right:70px;top:282px;font-family:Inter;font-weight:900;font-size:68px;line-height:1.0;letter-spacing:-2px;color:{p['ink']};\">{copy['headline']}</div>")
+    pts = (copy.get('points') or [])[:3]
+    rows = ""
+    for pt in pts:
+        rows += (f"<div style='display:grid;grid-template-columns:70px 1fr 70px;align-items:center;gap:18px;border-bottom:1.5px solid rgba(255,255,255,.16);padding:20px 0;'>"
+                 f"<div style='width:54px;height:54px;border-radius:10px;background:{p['accent']};display:flex;align-items:center;justify-content:center;'>{L.svg('check',p['deep'],28)}</div>"
+                 f"<div style=\"font-family:Inter;font-weight:800;font-size:30px;line-height:1.13;color:{p['ink']};\">{pt}</div>"
+                 f"<div style=\"font-family:'DM Sans';font-weight:900;font-size:22px;color:{p['accent']};\">PASS</div></div>")
+    body = f"<div style='position:absolute;left:56px;right:64px;top:570px;'>{rows}</div>"
+    return bg + L.logo_tl() + eb + head + body + _footer(p, swipe=False)
+
 def w_splitcard(copy, week_id='adhoc'):
     """Two-panel single: navy header panel (hook + Nuno) over a cream list panel."""
     NAVYT = "#152743"; CREAM = "#F3EADA"; COFFEE = "#6F6350"
@@ -876,7 +911,8 @@ CAROUSEL = {
     "tabs": {"cover": cover_tabs, "content": content_tabs, "cta": cta_tabs},
 }
 SINGLE = {"tipcard": w_tipcard, "statement": w_statement,
-          "bigidea": w_bigidea, "splitcard": w_splitcard}
+          "bigidea": w_bigidea, "splitcard": w_splitcard,
+          "memo": w_memo, "scorecard": w_scorecard}
 
 COVER_TONE = {"serious": ["serious", "thoughtful", "practical"],
               "practical": ["practical", "confident", "serious"],
