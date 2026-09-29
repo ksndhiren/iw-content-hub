@@ -19,7 +19,7 @@ NAVY_TOP, NAVY_BOT = (26, 26, 46), (12, 12, 28)
 # Lanes that get a Story companion (IG + FB). Employer posts to Facebook (and,
 # once linked, Instagram), so it needs a story.png too - without one the Story
 # job fails at post time with Ayrshare error 164 (media not found).
-STORY_LANES = {"news", "quote", "fun", "education", "employer"}
+STORY_LANES = {"news", "quote", "fun", "education", "employer", "engagement"}
 
 
 def _bg():

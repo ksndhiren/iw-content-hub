@@ -3,11 +3,11 @@
 A single 1080x1080 rendered as a real NEWSPAPER FRONT PAGE (per client refs):
 aged newsprint, branded blue masthead with the white Internwise logo, date/section line,
 a centered full-width headline, then TWO justified serif columns plus a sidebar box and
-a pull-quote. Do not use fake volume/issue metadata. On-screen it is a BRIEF - the full story + source
+an optional relevant image panel. Do not use fake volume/issue metadata. On-screen it is a BRIEF - the full story + source
 go in the caption, so the foot points the reader there.
 
     from news_card import render_news
-    render_news(item, out_dir, "slide_1.png", brief=[...], sidebar=[...], pull="...")
+    render_news(item, out_dir, "slide_1.png", brief=[...], sidebar=[...], image_path="...")
 """
 import os, sys, datetime, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -79,7 +79,7 @@ def _rule(x, y, w, kind="double"):
 
 
 def render_news(item, out_dir, filename="slide_1.png", issue_no=1,
-                headline=None, brief=None, sidebar=None, pull=None):
+                headline=None, brief=None, sidebar=None, pull=None, image_path=None):
     """Render the newspaper card.
 
     IMPORTANT - no plagiarism: the RSS `item` is a TOPIC + FACT seed only. The
@@ -180,8 +180,16 @@ def render_news(item, out_dir, filename="slide_1.png", issue_no=1,
            f"<div style='font-family:{SERIF};font-weight:700;font-size:21px;letter-spacing:2px;color:{INK};"
            f"text-align:center;border-bottom:2px solid {INK};padding-bottom:9px;margin-bottom:13px;'>WHAT STUDENTS SHOULD NOTICE</div>"
            f"{bullets}</div>")
-    pq = (f"<div style='margin-top:20px;border-top:3px solid {INK};border-bottom:3px solid {INK};padding:15px 4px;'>"
-          f"<div style='font-family:{SERIF};font-style:italic;font-weight:700;font-size:27px;line-height:1.22;color:{INK};text-align:center;'>&ldquo;{pull}&rdquo;</div></div>")
+    if image_path:
+        src = L.img(image_path)
+        pq = (f"<div style='margin-top:18px;border:2.5px solid {INK};height:210px;overflow:hidden;position:relative;background:#d8d0bd;'>"
+              f"<img src='{src}' style='width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08);'>"
+              f"<div style='position:absolute;left:0;right:0;bottom:0;background:rgba(241,233,214,.86);"
+              f"border-top:2px solid {INK};padding:8px 12px;font-family:{SERIF};font-style:italic;"
+              f"font-weight:700;font-size:18px;line-height:1.1;color:{INK};'>Workplace support, turned into experience.</div></div>")
+    else:
+        pq = (f"<div style='margin-top:20px;border-top:3px solid {INK};border-bottom:3px solid {INK};padding:15px 4px;'>"
+              f"<div style='font-family:{SERIF};font-style:italic;font-weight:700;font-size:27px;line-height:1.22;color:{INK};text-align:center;'>&ldquo;{pull}&rdquo;</div></div>")
     colR = f"<div style='flex:0 0 446px;height:100%;overflow:hidden;'>{box}{pq}</div>"
 
     cols = (f"<div style='flex:1 1 auto;min-height:0;margin-top:20px;display:flex;"

@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "lane": "engagement",
+    "purpose": "The fifth Daily-5 post: useful, conversion-aware conversation prompts. Not memes, not lightweight fun-bank content. Each post should create a reason to save, comment, compare options, or take one clear action on Internwise.",
+    "rules": [
+      "No em dashes (use '-').",
+      "No recycled fun/meme formats from the old plan.",
+      "Each prompt must be useful even if nobody comments.",
+      "Every post carries a clear Internwise next step."
+    ]
+  },
+  "ideas": [
+    {
+      "id": "c001",
+      "format": "decision_prompt",
+      "hook": "What would make you apply today?",
+      "subhead": "When the search feels noisy, one clear signal is enough to move.",
+      "options": ["Clear role details", "Paid experience", "Simple next step"],
+      "takeaway": "Save one role that gives you enough confidence to act.",
+      "cta": "Find one worth saving at internwise.co.uk"
+    },
+    {
+      "id": "c002",
+      "format": "decision_prompt",
+      "hook": "Which proof would strengthen your next application?",
+      "subhead": "Choose the gap before you rewrite the whole CV.",
+      "options": ["A live project", "A named reference", "A measurable result"],
+      "takeaway": "The right internship gives your CV something specific to point to.",
+      "cta": "Build proof at internwise.co.uk"
+    },
+    {
+      "id": "c003",
+      "format": "decision_prompt",
+      "hook": "What is stopping the application?",
+      "subhead": "Most hesitation comes from one missing piece, not a lack of ability.",
+      "options": ["Unclear fit", "No recent experience", "Not enough confidence"],
+      "takeaway": "Pick the barrier, then choose one role that lowers it.",
+      "cta": "Start with one role at internwise.co.uk"
+    }
+  ]
+}

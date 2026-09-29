@@ -1,10 +1,10 @@
 """Daily-5 engine - shared plumbing for the five content lanes.
 
-Lanes: education (existing wkNN stream), fun, quote, news (fixed template),
+Lanes: education, engagement/conversation, quote, news (fixed template),
 employer (B2B). This module gives every lane the same brand vocabulary and a
 single render harness, so each post stays bespoke while sharing the plumbing.
 
-Nothing here dictates a *look* beyond the brand tokens - fun/quote/employer
+Nothing here dictates a *look* beyond the brand tokens - conversation/quote/employer
 posts author their own design world per post; only the news card is templated.
 """
 import os, sys, base64

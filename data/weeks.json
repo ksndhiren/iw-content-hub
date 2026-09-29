@@ -5606,7 +5606,7 @@
       "id": "week18",
       "label": "Week 18",
       "weekCommencing": "2026-09-28",
-      "builtAt": 1790687051,
+      "builtAt": 1790688155,
       "posts": [
         {
           "id": "week18-mon-news",
@@ -5817,31 +5817,31 @@
           "id": "week18-mon-engagement",
           "day": "Mon 28 Sep",
           "lane": "engagement",
-          "title": "How many job-search tabs is too many?",
+          "title": "What would make you apply today?",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "How many job-search tabs is too many?\n\nA relatable reminder to turn browser chaos into one clear next move. Explore internships at internwise.co.uk.",
+          "caption": "What would make you apply today?\n\nWhen the search feels noisy, one clear signal is enough to move. Pick the thing you need most, then save one role that gives you enough confidence to act. Find one worth saving at internwise.co.uk.",
           "hashtags": [
             "#internwise",
             "#jobsearch",
-            "#studentlife",
-            "#careertips"
+            "#internships",
+            "#careerdevelopment"
           ],
           "captions": {
-            "ig-fb": "How many job-search tabs is too many?\n\nA relatable reminder to turn browser chaos into one clear next move. Explore internships at internwise.co.uk.",
-            "linkedin": "How many job-search tabs is too many? The search can quickly become CV versions, company reviews, LinkedIn profiles and deadline trackers all at once. Save the role, make one clear next move, and keep momentum. Explore internships at internwise.co.uk.",
-            "x": "How many job-search tabs is too many? Save the role, make one clear next move, and keep momentum at internwise.co.uk."
+            "ig-fb": "What would make you apply today?\n\nWhen the search feels noisy, one clear signal is enough to move. Pick the thing you need most, then save one role that gives you enough confidence to act. Find one worth saving at internwise.co.uk.",
+            "linkedin": "What would make you apply today? For many students and graduates, the barrier is not motivation - it is missing confidence, unclear role details, or not knowing whether the experience is worth the time. Pick the signal you need most, then save one role that gives you enough confidence to act. Start at internwise.co.uk.",
+            "x": "What would make you apply today? Pick the signal you need most, then save one role worth acting on at internwise.co.uk."
           },
           "hashtagsByPlatform": {
             "ig-fb": [
               "#internwise",
               "#jobsearch",
-              "#studentlife",
-              "#careertips"
+              "#internships",
+              "#careerdevelopment"
             ],
             "linkedin": [
               "#jobsearch",
@@ -5853,8 +5853,8 @@
               "#internships"
             ]
           },
-          "world": "tabstack",
-          "ideaId": "f010"
+          "world": "decision",
+          "ideaId": "c001"
         },
         {
           "id": "week18-tue-news",

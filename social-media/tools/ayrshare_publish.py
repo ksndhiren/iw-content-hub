@@ -69,11 +69,12 @@ NET_LIMIT = {"twitter": 280, "threads": 500, "instagram": 2200,
 SINGLE_IMAGE_NETS = {"gmb"}
 # Lane -> the networks we WANT it on (before intersecting with connected ones).
 # gmb added to the substantive, business-relevant lanes only (news/employer/
-# education); quote/fun/featured stay off GMB.
+# education); quote/fun/engagement/featured stay off GMB.
 LANE_NETWORKS = {
     "news":      ["instagram", "facebook", "linkedin", "twitter", "threads", "gmb"],
     "quote":     ["instagram", "facebook", "threads", "twitter"],
     "fun":       ["instagram", "facebook", "threads", "twitter"],
+    "engagement":["instagram", "facebook", "threads", "twitter", "linkedin"],
     "employer":  ["linkedin", "facebook", "gmb"],
     "education": ["instagram", "linkedin", "facebook", "threads", "gmb"],
     # Featured job ads: candidate-facing + employer-credible.
@@ -96,8 +97,8 @@ LOCATION_LANES = {"news", "education"}
 # Times set from the founder's reach observation (Sept 2026): the quote takes the
 # 8pm reach slot, news opens the day, education runs early afternoon, employer
 # closes the evening.
-LANE_TIME = {"news": "08:00", "education": "13:30", "quote": "20:00",
-             "employer": "20:30", "featured": "17:30"}
+LANE_TIME = {"news": "08:00", "education": "13:30", "engagement": "16:30",
+             "quote": "20:00", "employer": "20:30", "featured": "17:30"}
 DAY_INDEX = {"mon": 0, "tue": 1, "wed": 2, "thu": 3, "fri": 4, "sat": 5, "sun": 6}
 
 

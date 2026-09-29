@@ -17,6 +17,7 @@ This is the approved creative direction for future Internwise social graphics. T
 - Do not rely on dark navy panels, rounded cards, and Inter-only headlines as the default skin. If two posts in a week look like they came from the same template family, redesign one.
 - Featured jobs can remain utility-led, but should still feel like a premium editorial/job poster, not a generic ad tile.
 - The core week must render five reviewable graphics per weekday: News, Education, Quote, Employer, and Engagement/Conversation. Featured jobs are a separate optional sixth lane and must not be used to make up the five.
+- The fifth post is Engagement/Conversation, not the old fun/meme lane. It must be useful, conversion-aware, and able to stand alone even if nobody comments: decision prompts, comparison prompts, save/apply nudges, or practical conversation starters.
 - Monday-level typography and highlighted-word treatment is the baseline for every day of the week, not a one-off. Tuesday-Friday should not fall back to plain corporate cards.
 - Direction does not mean template. Do not copy the same diagonal split, Nuno placement, cream/plum palette, serif word treatment, or content blocks across the week. Each post needs a distinct layout metaphor: profile frame, scoreboard, notebook, desk/flatlay, pipeline, newspaper, proof board, checklist, quote poster, etc. If day cards look like siblings at thumbnail size, regenerate until they are visibly different.
 - Every carousel must end with a true outro/CTA slide: explicit action text, `internwise.co.uk`, and CTA-first composition. The final slide cannot read like another content slide.
@@ -59,7 +60,7 @@ This is the approved creative direction for future Internwise social graphics. T
 ## Topic Freshness
 
 - Education topics, quote IDs/authors, and news stories are strict no-repeat surfaces. If the available bank cannot fill the week without a recent repeat, the build must fail instead of quietly recycling content.
-- Engagement/fun ideas are also strict no-repeat surfaces across both current `engagement` posts and legacy `fun` posts. A format can return, but the hook/concept cannot.
+- Engagement/conversation ideas are also strict no-repeat surfaces across both current `engagement` posts and legacy `fun` posts. A format can return, but the hook/concept cannot. Do not source new fifth posts from the old `fun_ideas.json` bank.
 - The only allowed exception is an operator-visible emergency run with `IW_ALLOW_TOPIC_REPEAT=1`; do not leave that override set in normal local, cloud, or scheduled runs.
 
 ## Weekly Freshness
