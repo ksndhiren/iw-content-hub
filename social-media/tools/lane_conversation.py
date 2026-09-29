@@ -1,8 +1,9 @@
-"""Conversation lane - the fifth Daily-5 post.
+"""Poll/Conversation lane - the fifth Daily-5 post.
 
 This replaces the old "fun" lane for future builds. The post should be useful
-even without comments: a career decision prompt, a comparison, or a clear next
-step that nudges users toward saving/applying on Internwise.
+even without comments or votes: a career decision prompt, poll-like A/B/C
+choice, comparison, or clear next step that nudges users toward saving/applying
+on Internwise.
 
     render_conversation(idea, world, out_dir, "slide_1.png")
 """

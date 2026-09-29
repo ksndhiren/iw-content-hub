@@ -25,6 +25,13 @@ IMG_ROOT = HUB / "images"
 AUTHORS = SOCIAL / "assets" / "quote_authors"
 
 CORE_LANES = ("news", "education", "quote", "employer", "engagement")
+CORE_LANE_LABELS = {
+    "news": "News",
+    "education": "Education",
+    "quote": "Quote",
+    "employer": "Employer",
+    "engagement": "Poll/Conversation",
+}
 EXTS = ("jpg", "jpeg", "png", "webp")
 FUN_DEDUP_WEEKS = 8
 
@@ -122,7 +129,9 @@ def main() -> int:
         missing = [lane for lane in CORE_LANES if counts[lane] == 0]
         dupes = [lane for lane, count in counts.items() if count > 1]
         if len(core) != 5 or missing or dupes:
-            errors.append(f"{day}: expected one each of {', '.join(CORE_LANES)}; missing={missing} duplicates={dupes}")
+            expected = ", ".join(CORE_LANE_LABELS[lane] for lane in CORE_LANES)
+            missing_labels = [CORE_LANE_LABELS.get(lane, lane) for lane in missing]
+            errors.append(f"{day}: expected one each of {expected}; missing={missing_labels} duplicates={dupes}")
 
     seen_ids = Counter(p["id"] for p in week["posts"])
     for pid, count in seen_ids.items():
@@ -168,9 +177,9 @@ def main() -> int:
             idea_id = post.get("ideaId")
             title = post.get("title", "").strip().lower()
             if idea_id in recent_fun_ids:
-                errors.append(f"{post['id']}: engagement idea {idea_id} already used in {recent_fun_ids[idea_id]}")
+                errors.append(f"{post['id']}: poll/conversation idea {idea_id} already used in {recent_fun_ids[idea_id]}")
             if title in recent_fun_titles:
-                errors.append(f"{post['id']}: engagement title already used in {recent_fun_titles[title]}")
+                errors.append(f"{post['id']}: poll/conversation title already used in {recent_fun_titles[title]}")
 
     sheet = contact_sheet(week, Path("/private/tmp") / f"{week['id']}_overlap_qa.jpg")
     print(f"Overlap contact sheet: {sheet}")
@@ -184,7 +193,7 @@ def main() -> int:
             print(f"- {item}")
         return 1
 
-    print(f"QA passed for {week['id']}: five core lanes per weekday, quote portraits present, slide files valid, overlap review acknowledged.")
+    print(f"QA passed for {week['id']}: five core lanes per weekday incl. Poll/Conversation, quote portraits present, slide files valid, overlap review acknowledged.")
     return 0
 
 

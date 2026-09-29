@@ -8,7 +8,8 @@ NEWS is deliberately NOT built here - it is generated the day before it posts by
 build_news_day.py (news-daily.yml) so headlines are never stale. This batch
 preserves any news posts already present for the week when it rewrites the entry.
 Daily-5 means five core reviewable posts per weekday; featured jobs are separate
-and do not count toward the core five.
+and do not count toward the core five. The fifth core post is Poll/Conversation
+(stored as lane "engagement" for dashboard/publishing compatibility).
 
     python3 tools/build_week.py                 # full 5-day week
     python3 tools/build_week.py --days 1         # just Monday (cheap validation)
@@ -413,7 +414,7 @@ def build(days=5, dry=False):
         posts[-1]["quoteId"] = qid
         posts[-1]["world"] = world
 
-        # ENGAGEMENT / CONVERSATION lane - the fifth core Daily-5 surface.
+        # POLL / CONVERSATION lane - the fifth core Daily-5 surface.
         # Keep it useful and brand-safe; featured jobs remain a separate sixth queue.
         idea = week_conversation[di]
         world = conversation_worlds[di]

@@ -1,11 +1,13 @@
 {
   "_meta": {
-    "lane": "engagement",
-    "purpose": "The fifth Daily-5 post: useful, conversion-aware conversation prompts. Not memes, not lightweight fun-bank content. Each post should create a reason to save, comment, compare options, or take one clear action on Internwise.",
+    "lane": "poll_conversation",
+    "dashboardLane": "engagement",
+    "purpose": "The fifth Daily-5 post: useful, conversion-aware poll/conversation prompts. Not memes, not lightweight fun-bank content, not generic engagement filler. Each post should create a reason to save, vote, comment, compare options, or take one clear action on Internwise.",
     "rules": [
       "No em dashes (use '-').",
       "No recycled fun/meme formats from the old plan.",
-      "Each prompt must be useful even if nobody comments.",
+      "Each prompt must be useful even if nobody comments or votes.",
+      "Use poll-like choices, decision prompts, this-or-that comparisons, or comment prompts tied to a useful takeaway.",
       "Every post carries a clear Internwise next step."
     ]
   },
@@ -36,6 +38,24 @@
       "options": ["Unclear fit", "No recent experience", "Not enough confidence"],
       "takeaway": "Pick the barrier, then choose one role that lowers it.",
       "cta": "Start with one role at internwise.co.uk"
+    },
+    {
+      "id": "c004",
+      "format": "decision_prompt",
+      "hook": "Which role would you shortlist first?",
+      "subhead": "A good search is not more tabs. It is knowing what deserves attention.",
+      "options": ["Clear responsibilities", "Useful experience", "Fast next step"],
+      "takeaway": "Choose the role with the clearest reason to act today.",
+      "cta": "Compare roles at internwise.co.uk"
+    },
+    {
+      "id": "c005",
+      "format": "decision_prompt",
+      "hook": "What would make your CV stronger?",
+      "subhead": "Before another rewrite, choose the proof your application is missing.",
+      "options": ["A real project", "A measurable result", "A named skill"],
+      "takeaway": "Find an internship that gives your CV something specific to prove.",
+      "cta": "Build proof at internwise.co.uk"
     }
   ]
 }

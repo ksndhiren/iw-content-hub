@@ -315,7 +315,8 @@
     }).join('');
 
     const lanes = dayPosts.map(function (p) {
-      return `<span class="lane-chip lane-chip--${escapeHtml(p.lane || 'post')}">${escapeHtml(p.lane || 'post')}</span>`;
+      const lane = p.lane || 'post';
+      return `<span class="lane-chip lane-chip--${escapeHtml(lane)}">${escapeHtml(laneLabel(lane))}</span>`;
     }).join('');
 
     article.innerHTML = `
@@ -334,6 +335,14 @@
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDay(week, dayLabel, dayPosts); }
     });
     return article;
+  }
+
+  function laneLabel(lane) {
+    const labels = {
+      engagement: 'Poll',
+      fun: 'Fun'
+    };
+    return labels[lane] || lane;
   }
 
   /* Drill into one day: show its posts, with a back-to-days control. */
