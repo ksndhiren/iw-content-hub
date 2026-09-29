@@ -30,6 +30,14 @@ def _footer(text="internwise.co.uk"):
             f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:22px;color:{NAVYT};letter-spacing:.3px;\">{text}</span></div>")
 
 
+def _profile_avatar(left, top, size, border=6):
+    src = L.img(os.path.join(L.BASE, "assets", "nuno", "linkedin_profile_black_male_professional.png"))
+    inner = size - border * 2
+    return (f"<div style='position:absolute;left:{left}px;top:{top}px;width:{size}px;height:{size}px;border-radius:50%;"
+            f"background:#F8FBFF;border:{border}px solid #F8FBFF;overflow:hidden;box-shadow:0 8px 22px rgba(21,39,67,.16);'>"
+            f"<img src='{src}' style='width:{inner}px;height:{inner}px;object-fit:cover;object-position:center top;'></div>")
+
+
 def _option_rows(options, palette, dark=False):
     rows = ""
     letters = ["A", "B", "C"]
@@ -93,7 +101,7 @@ def w_proofboard(idea):
             f"font-size:27px;line-height:1.28;color:#6F6350;\">{idea.get('subhead','')}</div>")
     profile = (f"<div style='position:absolute;right:92px;top:244px;width:280px;height:330px;border-radius:22px;background:{LI_BLUE};"
                f"box-shadow:0 22px 44px rgba(10,102,194,.24);overflow:hidden;'>"
-               f"<div style='position:absolute;left:24px;top:24px;width:74px;height:74px;border-radius:50%;background:#fff;'></div>"
+               f"{_profile_avatar(24, 24, 74)}"
                f"<div style='position:absolute;left:24px;top:120px;width:210px;height:18px;border-radius:9px;background:#fff;'></div>"
                f"<div style='position:absolute;left:24px;top:154px;width:150px;height:12px;border-radius:6px;background:rgba(255,255,255,.62);'></div>"
                f"<div style='position:absolute;left:24px;right:24px;bottom:28px;height:86px;border-radius:16px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);'></div>"
