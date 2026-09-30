@@ -60,10 +60,12 @@ KEY = os.getenv("AYRSHARE_API_KEY", "")
 # gmb (Google Business Profile) is customer-facing local content; it reuses the
 # ig-fb caption.
 NET_CAPTION = {"instagram": "ig-fb", "facebook": "ig-fb", "threads": "ig-fb",
-               "linkedin": "linkedin", "twitter": "x", "gmb": "ig-fb"}
+               "linkedin": "linkedin", "twitter": "x", "gmb": "ig-fb",
+               "pinterest": "ig-fb"}
 # Rough per-network caption character ceilings (trim only where needed).
 NET_LIMIT = {"twitter": 280, "threads": 500, "instagram": 2200,
-             "facebook": 63000, "linkedin": 3000, "gmb": 1500}
+             "facebook": 63000, "linkedin": 3000, "gmb": 1500,
+             "pinterest": 500}
 # GMB only accepts a SINGLE image per post (no carousels); these lanes send just
 # their cover slide to GMB (see build_jobs).
 SINGLE_IMAGE_NETS = {"gmb"}
@@ -71,7 +73,7 @@ SINGLE_IMAGE_NETS = {"gmb"}
 # gmb added to the substantive, business-relevant lanes only (news/employer/
 # education); quote/fun/engagement/featured stay off GMB.
 LANE_NETWORKS = {
-    "news":      ["instagram", "facebook", "linkedin", "twitter", "threads", "gmb"],
+    "news":      ["instagram", "facebook", "linkedin", "twitter", "threads", "gmb", "pinterest"],
     "quote":     ["instagram", "facebook", "threads", "twitter"],
     "fun":       ["instagram", "facebook", "threads", "twitter"],
     "engagement":["instagram", "facebook", "threads", "twitter", "linkedin"],
