@@ -1925,12 +1925,6 @@
     "network": "gmb",
     "scheduleDate": "2026-09-28T07:00:00Z"
   },
-  "week18-wed-news:gmb": {
-    "id": "fxNujScJiS5pnrAYf0XX",
-    "at": "2026-09-29T19:12:57.583350",
-    "network": "gmb",
-    "scheduleDate": "2026-09-30T07:00:00Z"
-  },
   "week18-mon-education:instagram": {
     "id": "xgl2Blx49In6gr9J8kCm",
     "at": "2026-09-29T19:13:00.726980",
@@ -2109,6 +2103,12 @@
     "id": "Eunwp3SgXjrE7xnrOfpo",
     "at": "2026-09-30T11:39:38.461979",
     "network": "instagram",
+    "scheduleDate": null
+  },
+  "week18-wed-news:gmb": {
+    "id": "oEQAclaEzz7uISHN6iQy",
+    "at": "2026-09-30T12:35:11.393328",
+    "network": "gmb",
     "scheduleDate": null
   }
 }
