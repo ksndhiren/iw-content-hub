@@ -67,6 +67,8 @@ CTA_TOPIC_POSES = {
     "linkedin": ["nuno_phone", "nuno_tablet"],
     "tech": ["nuno_tablet", "nuno_tablet_cover", "nuno_phone"],
     "networking": ["nuno_phone", "nuno_authority_4", "nuno_authority_1"],
+    "apply": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4"],
+    "cv": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4"],
 }
 
 # ------------------------------------------------------------ topic-matched hook

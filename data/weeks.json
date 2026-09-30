@@ -5606,7 +5606,7 @@
       "id": "week18",
       "label": "Week 18",
       "weekCommencing": "2026-09-28",
-      "builtAt": 1790712071,
+      "builtAt": 1790751670,
       "posts": [
         {
           "id": "week18-mon-education",
@@ -6126,7 +6126,7 @@
             "points": null,
             "cta": "Visit internwise.co.uk for more insights."
           },
-          "world": "distinct-week18"
+          "world": "flash"
         },
         {
           "id": "week18-wed-engagement",
@@ -6168,7 +6168,7 @@
               "#jobsearch"
             ]
           },
-          "world": "decision",
+          "world": "vote_cards",
           "ideaId": "c003"
         },
         {
@@ -6258,7 +6258,7 @@
               "#hiresmart"
             ]
           },
-          "world": "distinct-week18"
+          "world": "process"
         },
         {
           "id": "week18-thu-news",
@@ -6360,7 +6360,7 @@
             ],
             "cta": "Organise your search at internwise.co.uk"
           },
-          "world": "splitcard"
+          "world": "memo"
         },
         {
           "id": "week18-thu-engagement",
@@ -6402,7 +6402,7 @@
               "#jobsearch"
             ]
           },
-          "world": "decision",
+          "world": "shortlist_poll",
           "ideaId": "c004"
         },
         {
@@ -6488,7 +6488,7 @@
               "#internships"
             ]
           },
-          "world": "distinct-week18"
+          "world": "benefits"
         },
         {
           "id": "week18-fri-education",
@@ -6496,9 +6496,13 @@
           "lane": "education",
           "title": "Is Your Tracker Misleading You?",
           "platform": "Multi-Platform",
-          "format": "Single",
+          "format": "Carousel",
           "slides": [
-            "slide_1.png"
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
           ],
           "status": "in-review",
           "caption": "Feeling productive by logging every job application? Your tracker might be fooling you. Instead of obsessing over the number of applications, focus on what truly matters: the type of roles you're applying for, the CV version you use, and the quality of responses you receive. Grouping by role type helps you identify which CV works best for different positions. Recording the quality of replies gives insights into when to tweak your strategy, helping you avoid burnout. Want to track smarter? Head to www.internwise.co.uk",
@@ -6533,10 +6537,26 @@
             ]
           },
           "onSlide": {
-            "eyebrow": "Job Hunt Tips",
+            "eyebrow": "Tracker Audit",
             "headline": "Is Your Tracker Misleading You?",
             "tone": "practical",
-            "slides": null,
+            "slides": [
+              {
+                "tag": "False signal",
+                "title": "Counting applications is not insight",
+                "body": "A big number can feel productive while hiding whether your applications are improving."
+              },
+              {
+                "tag": "Track this",
+                "title": "Group by role, CV version and reply quality",
+                "body": "The useful pattern is which role type gets replies, not how many forms you sent."
+              },
+              {
+                "tag": "Next move",
+                "title": "Change one variable before rewriting everything",
+                "body": "Improve targeting, switch CV proof, then watch what happens to response quality."
+              }
+            ],
             "points": [
               "Track role type, not just numbers",
               "Use the right CV for each role",
@@ -6544,9 +6564,9 @@
               "Improve targeting over time",
               "Adapt strategy to avoid burnout"
             ],
-            "cta": "Track smarter at internwise.co.uk"
+            "cta": "Track smarter before you apply harder. Start at internwise.co.uk"
           },
-          "world": "distinct-week18"
+          "world": "tabs"
         },
         {
           "id": "week18-fri-engagement",
@@ -6588,7 +6608,7 @@
               "#jobsearch"
             ]
           },
-          "world": "decision",
+          "world": "cv_poll",
           "ideaId": "c005"
         },
         {
@@ -6640,14 +6660,14 @@
           "id": "week18-fri-employer",
           "day": "Fri 2 Oct",
           "lane": "employer",
-          "title": "Reach 400,000 early-career candidates",
+          "title": "Hiring interns, all in one place",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Looking to connect with the next generation of talent? With Internwise, you can reach 400,000 eager students and graduates across the UK. Join over 14,000 employers who are already making the most of our focused platform. Whether you're a startup or an established firm, becoming a Featured Employer can give your applications a significant boost. Explore the potential of our dedicated candidate pool and find the perfect fit for your team. Start your search today at www.internwise.co.uk.",
+          "caption": "Hiring interns, all in one place\n\nPost, shortlist, interview, onboard and track progress without leaving Internwise. Start hiring at internwise.co.uk/employers.",
           "hashtags": [
             "#internwiseuk",
             "#graduatejobs",
@@ -6656,9 +6676,9 @@
             "#careergrowth"
           ],
           "captions": {
-            "ig-fb": "Looking to connect with the next generation of talent? With Internwise, you can reach 400,000 eager students and graduates across the UK. Join over 14,000 employers who are already making the most of our focused platform. Whether you're a startup or an established firm, becoming a Featured Employer can give your applications a significant boost. Explore the potential of our dedicated candidate pool and find the perfect fit for your team. Start your search today at www.internwise.co.uk.",
-            "linkedin": "Unlock a world of talent with Internwise! Our platform connects you with 400,000 early-career candidates across the UK, ready to bring fresh ideas and energy to your business. Join 14,000+ employers who trust Internwise to find their next team member. As a Featured Employer, you'll gain greater visibility and more applications from a focused pool of students and graduates. Let's make your hiring process smooth and successful. Visit internwise.co.uk to get started.",
-            "x": "Access 400,000 UK students & graduates with Internwise. Join 14,000+ employers already benefiting from our focused platform. Explore at internwise.co.uk."
+            "ig-fb": "Hiring interns, all in one place\n\nPost, shortlist, interview, onboard and track progress without leaving Internwise. Start hiring at internwise.co.uk/employers.",
+            "linkedin": "Hiring interns should not mean scattered spreadsheets and lost messages. Internwise lets you post, shortlist, interview, onboard and track progress in one place, built for early-career hiring. Start hiring at internwise.co.uk/employers.",
+            "x": "Post, shortlist, interview and onboard interns in one place. Start hiring at internwise.co.uk/employers."
           },
           "hashtagsByPlatform": {
             "ig-fb": [
@@ -6678,7 +6698,7 @@
               "#ukrecruitment"
             ]
           },
-          "world": "distinct-week18"
+          "world": "cards"
         }
       ]
     }

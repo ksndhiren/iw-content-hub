@@ -22,6 +22,10 @@ def _logo_dark():
     return f"<img src='{L.DARKLOGO}' style='position:absolute;left:56px;top:44px;height:{L.LOGO}px;'>"
 
 
+def _logo_white():
+    return L.logo_tl()
+
+
 def _footer(text="internwise.co.uk"):
     return (f"<div style='position:absolute;left:56px;bottom:46px;display:flex;align-items:center;gap:13px;'>"
             f"<div style='width:34px;height:34px;border-radius:50%;background:{AMBER};display:flex;align-items:center;justify-content:center;'>"
@@ -173,12 +177,84 @@ def w_signal(idea):
     return bg + rings + L.logo_tl() + label + hook + board + cta
 
 
+def w_vote_cards(idea):
+    """Social poll layout: looks like a poll sticker/card, not a test question."""
+    options = idea.get("options", [])[:3]
+    bg = f"<div style='position:absolute;inset:0;background:linear-gradient(160deg,#F5EFE3,#E8F4F2);'></div>"
+    phone = (f"<div style='position:absolute;right:70px;top:150px;width:360px;height:760px;border-radius:48px;background:{NAVYT};"
+             f"box-shadow:0 32px 70px rgba(21,39,67,.28);overflow:hidden;'>"
+             f"<div style='position:absolute;left:28px;right:28px;top:30px;height:52px;border-radius:26px;background:rgba(255,255,255,.10);'></div>"
+             f"<div style='position:absolute;left:28px;right:28px;bottom:32px;height:10px;border-radius:5px;background:rgba(255,255,255,.22);'></div></div>")
+    sticker = (f"<div style='position:absolute;right:104px;top:250px;width:292px;background:#fff;border-radius:28px;"
+               f"box-shadow:0 24px 54px rgba(0,0,0,.24);padding:28px 26px 18px;'>"
+               f"<div style=\"font-family:'DM Sans';font-weight:900;font-size:17px;color:{LI_BLUE};letter-spacing:3px;margin-bottom:18px;\">LIVE POLL</div>"
+               f"<div style=\"font-family:Inter;font-weight:950;font-size:31px;line-height:1.05;color:{NAVYT};letter-spacing:-.7px;margin-bottom:24px;\">Pick the blocker</div>")
+    for i, opt in enumerate(options):
+        sticker += (f"<div style='height:64px;border:3px solid {[AMBER,GREEN,CORAL][i]};border-radius:32px;margin-bottom:14px;"
+                    f"display:flex;align-items:center;padding:0 20px;gap:12px;'>"
+                    f"<div style='width:28px;height:28px;border-radius:50%;border:4px solid {[AMBER,GREEN,CORAL][i]};'></div>"
+                    f"<div style=\"font-family:Inter;font-weight:900;font-size:23px;color:{NAVYT};line-height:1.05;\">{opt}</div></div>")
+    sticker += "</div>"
+    label = (f"<div style=\"position:absolute;left:58px;top:192px;font-family:'DM Sans';font-weight:900;font-size:19px;"
+             f"color:{GREEN};letter-spacing:5px;\">COMMENT YOUR VOTE</div>")
+    hook = (f"<div style=\"position:absolute;left:58px;top:250px;width:570px;font-family:Inter;font-weight:950;"
+            f"font-size:76px;line-height:.98;letter-spacing:-2.4px;color:{NAVYT};\">{idea['hook']}</div>")
+    sub = (f"<div style=\"position:absolute;left:62px;top:560px;width:520px;font-family:'DM Sans';font-weight:800;"
+           f"font-size:31px;line-height:1.26;color:#6F6350;\">{idea.get('subhead','')}</div>")
+    cta = (f"<div style='position:absolute;left:58px;bottom:94px;height:62px;padding:0 26px;border-radius:31px;background:{AMBER};"
+           f"display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:25px;color:{NAVYT};'>{idea.get('cta','Start at internwise.co.uk')}</div>")
+    return bg + _logo_dark() + phone + sticker + label + hook + sub + cta
+
+
+def w_shortlist_poll(idea):
+    options = idea.get("options", [])[:3]
+    bg = f"<div style='position:absolute;inset:0;background:{NAVYT};'></div>"
+    board = f"<div style='position:absolute;left:52px;right:52px;top:168px;bottom:92px;border-radius:0;background:#F3EADA;box-shadow:0 28px 70px rgba(0,0,0,.28);'></div>"
+    label = (f"<div style='position:absolute;left:94px;top:216px;height:44px;padding:0 18px;background:{AMBER};display:flex;align-items:center;'>"
+             f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:18px;color:{NAVYT};letter-spacing:3px;\">SHORTLIST POLL</span></div>")
+    hook = (f"<div style=\"position:absolute;left:94px;top:300px;width:780px;font-family:Georgia,serif;font-weight:700;"
+            f"font-size:68px;line-height:1.0;color:{NAVYT};\">{idea['hook']}</div>")
+    cards = ""
+    for i, opt in enumerate(options):
+        x = 94 + i * 300
+        cards += (f"<div style='position:absolute;left:{x}px;top:610px;width:256px;height:236px;background:#fff;border:3px solid {NAVYT};"
+                  f"box-shadow:10px 10px 0 {[AMBER,GREEN,CORAL][i]};padding:24px;'>"
+                  f"<div style='width:44px;height:44px;border-radius:50%;border:4px solid {NAVYT};margin-bottom:20px;'></div>"
+                  f"<div style=\"font-family:Inter;font-weight:950;font-size:32px;line-height:1.04;color:{NAVYT};letter-spacing:-.8px;\">{opt}</div>"
+                  f"<div style=\"position:absolute;left:24px;bottom:22px;font-family:'DM Sans';font-weight:900;font-size:16px;color:#6F6350;letter-spacing:2px;\">OPTION {chr(65+i)}</div></div>")
+    note = (f"<div style=\"position:absolute;left:94px;bottom:128px;font-family:'DM Sans';font-weight:900;font-size:27px;color:#6F6350;\">"
+            f"{idea.get('cta','Compare roles at internwise.co.uk')}</div>")
+    return bg + board + _logo_white() + label + hook + cards + note
+
+
+def w_cv_poll(idea):
+    options = idea.get("options", [])[:3]
+    bg = f"<div style='position:absolute;inset:0;background:linear-gradient(160deg,#0B1D36,#132B4A);'></div>"
+    slip = f"<div style='position:absolute;left:70px;top:170px;width:940px;height:770px;border-radius:30px;background:#fff;transform:rotate(-1.2deg);box-shadow:0 30px 70px rgba(0,0,0,.35);'></div>"
+    label = (f"<div style=\"position:absolute;left:120px;top:230px;font-family:'DM Sans';font-weight:900;font-size:18px;color:{CORAL};letter-spacing:4px;\">CV PROOF POLL</div>")
+    hook = (f"<div style=\"position:absolute;left:120px;top:286px;width:600px;font-family:Inter;font-weight:950;font-size:68px;line-height:1.0;letter-spacing:-2px;color:{NAVYT};\">{idea['hook']}</div>")
+    poll = ""
+    for i, opt in enumerate(options):
+        y = 560 + i * 104
+        poll += (f"<div style='position:absolute;left:120px;top:{y}px;width:760px;height:74px;border-radius:37px;background:#F3EADA;"
+                 f"display:flex;align-items:center;padding:0 22px;gap:18px;'>"
+                 f"<div style='width:42px;height:42px;border-radius:50%;background:{[AMBER,GREEN,CORAL][i]};display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:950;font-size:22px;color:{NAVYT};'>{chr(65+i)}</div>"
+                 f"<div style=\"font-family:Inter;font-weight:950;font-size:31px;color:{NAVYT};letter-spacing:-.7px;\">{opt}</div>"
+                 f"<div style='margin-left:auto;width:34px;height:34px;border:4px solid {NAVYT};border-radius:9px;'></div></div>")
+    cta = (f"<div style='position:absolute;left:120px;bottom:116px;height:58px;padding:0 24px;border-radius:12px;background:{AMBER};"
+           f"display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:24px;color:{NAVYT};'>{idea.get('cta','Build proof at internwise.co.uk')}</div>")
+    return bg + slip + _logo_white() + label + hook + poll + cta
+
+
 WORLDS = {
     "decision": w_decision_prompt,
     "proofboard": w_proofboard,
     "debate": w_debate,
     "scorecard": w_scorecard,
     "signal": w_signal,
+    "vote_cards": w_vote_cards,
+    "shortlist_poll": w_shortlist_poll,
+    "cv_poll": w_cv_poll,
 }
 
 

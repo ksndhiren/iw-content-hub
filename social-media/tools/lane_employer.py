@@ -60,6 +60,11 @@ def _cta(text):
             f"<svg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='{DEEP}' stroke-width='2.8' "
             f"stroke-linecap='round' stroke-linejoin='round'><path d='M5 12h14M13 6l6 6-6 6'/></svg></div>")
 
+def _cta_line(text, left=58, bottom=208, width=560):
+    return (f"<div style='position:absolute;z-index:40;left:{left}px;bottom:{bottom}px;width:{width}px;'>"
+            f"<div style=\"font-family:'DM Sans';font-weight:900;font-size:25px;line-height:1.18;color:{INK};\">{text}</div>"
+            f"<div style='margin-top:12px;width:210px;height:12px;border-radius:6px;background:{AMBER};'></div></div>")
+
 def _sectorchips(items):
     chips = ""
     for i, s in enumerate(items):
@@ -89,7 +94,9 @@ def w_benefits(a, pose="nuno_authority_1"):
     trust = (f"<div style='position:absolute;left:58px;top:690px;display:inline-flex;align-items:center;gap:12px;"
              f"height:52px;padding:0 24px;border-radius:26px;background:{GREEN}1f;border:1.5px solid {GREEN}55;'>"
              f"{L.svg('users',GREEN,24)}<span style=\"font-family:Inter;font-weight:700;font-size:22px;color:{INK};\">Trusted by 14,000+ UK employers</span></div>")
-    return _bg(BG1,BG2)+_nuno(pose)+L.logo_tl()+head+blist+trust+_cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL)
+    return (_bg(BG1,BG2)+_nuno(pose, right=-150)+L.logo_tl()+head+blist+trust
+            + _cta_line("Post the role. Shortlist faster. Meet your intern.", bottom=202)
+            + _cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL))
 
 # ---- big stat ----
 def w_bigstat(a, pose="nuno_authority_3"):
@@ -101,7 +108,9 @@ def w_bigstat(a, pose="nuno_authority_3"):
             f"<div style=\"font-family:Inter;font-weight:700;font-size:34px;color:{INK};margin-top:16px;\">UK students &amp;</div>"
             f"<div style=\"font-family:Inter;font-weight:700;font-size:34px;color:{INK};\">graduates</div>"
             f"<div style=\"font-family:'DM Sans';font-weight:600;font-size:26px;color:{SUBT};margin-top:18px;\">14,000+ employers already hiring here</div></div>")
-    return _bg(BG1,BG2)+_nuno(pose, right=-55)+L.logo_tl()+head+stat+_cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL)
+    return (_bg(BG1,BG2)+_nuno(pose, right=-150)+L.logo_tl()+head+stat
+            + _cta_line("Turn reach into real applicants today.", bottom=210)
+            + _cta(a["cta"])+L.url_footer(color=SUBT, text=EMP_URL))
 
 # ---- process ----
 def w_process(a, pose="nuno_planning_1"):
@@ -120,7 +129,9 @@ def w_process(a, pose="nuno_planning_1"):
     # is pushed further off the right edge, so the longest step ("Onboard and
     # track progress") clears the figure instead of colliding with his shoulder.
     flow = f"<div style='position:absolute;z-index:2;left:58px;top:400px;width:548px;'>{rows}</div>"
-    return _bg(BG1,BG2)+L.logo_tl()+head+flow+_nuno(pose, right=-120)+_cta(a["cta"])+L.url_footer(left=58, color=SUBT, text=EMP_URL)
+    return (_bg(BG1,BG2)+L.logo_tl()+head+flow+_nuno(pose, right=-170)
+            + _cta_line("Ready to hire? Register and post your role in minutes.", bottom=214)
+            + _cta(a["cta"])+L.url_footer(left=58, color=SUBT, text=EMP_URL))
 
 # ---- trust (logo wall) ----
 def w_trust(a, pose="nuno_authority_2"):
@@ -169,8 +180,10 @@ def w_cards(a, pose="nuno_thoughtful_1"):
         cells += (f"<div style='background:{GREEN}14;border:1.5px solid {GREEN}55;border-radius:22px;padding:28px 26px;'>"
                   f"<div style='width:56px;height:56px;border-radius:14px;background:{GREEN};display:flex;align-items:center;justify-content:center;margin-bottom:18px;'>{L.svg(ic,'#fff',28)}</div>"
                   f"<div style=\"font-family:Inter;font-weight:700;font-size:27px;color:{INK};line-height:1.16;letter-spacing:-.3px;\">{tx}</div></div>")
-    grid = (f"<div style='position:absolute;left:58px;top:400px;width:590px;display:grid;grid-template-columns:1fr 1fr;gap:18px;'>{cells}</div>")
-    return _bg(BG1, BG2) + _nuno(pose, right=-150) + L.logo_tl() + _tag() + head + grid + _cta(a["cta"]) + L.url_footer(color=SUBT, text=EMP_URL)
+    grid = (f"<div style='position:absolute;left:58px;top:382px;width:590px;display:grid;grid-template-columns:1fr 1fr;gap:16px;'>{cells}</div>")
+    return (_bg(BG1, BG2) + _nuno(pose, right=-190) + L.logo_tl() + _tag() + head + grid
+            + _cta_line("Keep the whole hiring journey in one place.", bottom=174)
+            + _cta(a["cta"]) + L.url_footer(color=SUBT, text=EMP_URL))
 
 # ---- pipeline timeline (editorial briefing) ----
 def w_pipeline(a, pose="nuno_planning_2"):
@@ -190,9 +203,12 @@ def w_pipeline(a, pose="nuno_planning_2"):
                  f"<div style=\"font-family:Inter;font-weight:800;font-size:31px;color:{NAVYT};letter-spacing:-.4px;\">{st}</div></div>")
     body = f"<div style='position:absolute;left:218px;top:470px;width:430px;'>{rows}</div>"
     nuno = _nuno(pose, h=700, right=-120)
+    cta_line = (f"<div style='position:absolute;left:218px;bottom:178px;width:430px;'>"
+                f"<div style=\"font-family:'DM Sans';font-weight:900;font-size:25px;line-height:1.16;color:{NAVYT};\">Move from advert to interview without the admin pile.</div>"
+                f"<div style='margin-top:12px;width:190px;height:12px;border-radius:6px;background:{AMBER};'></div></div>")
     cta = (f"<div style='position:absolute;left:218px;bottom:92px;height:64px;padding:0 30px;border-radius:32px;background:{NAVYT};display:flex;align-items:center;'>"
            f"<span style=\"font-family:Inter;font-weight:800;font-size:25px;color:#fff;\">{a['cta']}</span></div>")
-    return bg + rail + logo + tag + head + body + nuno + cta + L.url_footer(left=218, color=COFFEE, text=EMP_URL)
+    return bg + rail + logo + tag + head + body + nuno + cta_line + cta + L.url_footer(left=218, color=COFFEE, text=EMP_URL)
 
 # ---- proof board (evidence led) ----
 def w_proofboard(a, pose="nuno_authority_4"):
@@ -208,7 +224,9 @@ def w_proofboard(a, pose="nuno_authority_4"):
                   f"<div style=\"font-family:Inter;font-weight:900;font-size:54px;color:{AMBER};letter-spacing:-2px;\">{big}</div>"
                   f"<div style=\"font-family:'DM Sans';font-weight:800;font-size:22px;color:{INK};letter-spacing:1px;\">{lab}</div></div>")
     board = f"<div style='position:absolute;left:58px;top:590px;width:590px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;'>{cards}</div>"
-    return bg + _nuno(pose, h=760, right=-130) + L.logo_tl() + _tag() + head + board + _cta(a['cta']) + L.url_footer(color=SUBT, text=EMP_URL)
+    return (bg + _nuno(pose, h=760, right=-190) + L.logo_tl() + _tag() + head + board
+            + _cta_line("Post once. Manage the whole shortlist from one place.", bottom=210)
+            + _cta(a['cta']) + L.url_footer(color=SUBT, text=EMP_URL))
 
 
 WORLDS = {"benefits": w_benefits, "bigstat": w_bigstat, "process": w_process,

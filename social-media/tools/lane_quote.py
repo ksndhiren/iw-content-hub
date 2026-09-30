@@ -139,7 +139,7 @@ def w_paper(q, src=None):
     bg = f"<div style='position:absolute;inset:0;background:linear-gradient(160deg,#1a2f57,{NAVY} 60%,{DEEP});'></div>"
     grid = ("<div style='position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:56px 56px;'></div>")
     # Faint author washed across the board behind the pinned card.
-    wm = _wm(src, "right:-46px;bottom:-24px;height:760px;", op=.075, filt="grayscale(1) brightness(1.22)")
+    wm = _wm(src, "right:18px;bottom:18px;height:620px;object-fit:contain;object-position:center bottom;", op=.075, filt="grayscale(1) brightness(1.22)")
     card = (f"<div style='position:absolute;left:110px;right:110px;top:300px;background:#FBFCFE;border-radius:22px;"
             f"box-shadow:0 40px 80px rgba(0,0,0,.5);padding:56px 54px 48px;transform:rotate(-2deg);'>"
             f"<div style='font-family:Georgia,serif;font-weight:700;font-size:130px;line-height:.4;color:{AMBER};height:70px;'>{Q}</div>"
