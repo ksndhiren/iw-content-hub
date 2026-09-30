@@ -569,6 +569,26 @@
       "cutout": "nuno_offers_4",
       "week": "week18",
       "date": "2026-09-30"
+    },
+    {
+      "cutout": "nuno_tracker_dashboard",
+      "week": "week18",
+      "date": "2026-10-01"
+    },
+    {
+      "cutout": "nuno_dothis_1",
+      "week": "week18",
+      "date": "2026-10-01"
+    },
+    {
+      "cutout": "nuno_tracker_dashboard",
+      "week": "week18",
+      "date": "2026-10-01"
+    },
+    {
+      "cutout": "nuno_dothis_2",
+      "week": "week18",
+      "date": "2026-10-01"
     }
   ]
 }

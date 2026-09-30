@@ -966,7 +966,14 @@ def cover_tabs(p, copy, total, pose):
              f"color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>{contents}</div>")
     swipe = (f"<div style=\"position:absolute;left:{x}px;bottom:56px;font-family:'DM Sans';font-weight:800;font-size:22px;"
              f"color:{p['accent']};\">Open chapter one &rarr;</div>")
-    return (_bg(p) + _folder_tabs(p, 1, total) + _arc(p) + _nuno_whole(pose, h=760, right=-60)
+    if "tracker" in copy.get("headline", "").lower():
+        nuno = (f"<div style='position:absolute;right:120px;bottom:32px;width:760px;height:760px;border-radius:50%;"
+                f"background:radial-gradient(circle at 55% 52%,rgba(255,177,32,.16),transparent 64%);'></div>"
+                f"<img src='{L.nuno_src(pose)}' style='position:absolute;right:-70px;bottom:0;height:570px;"
+                f"filter:drop-shadow(0 22px 34px rgba(0,0,0,.45));'>")
+    else:
+        nuno = _nuno_whole(pose, h=760, right=-60)
+    return (_bg(p) + _folder_tabs(p, 1, total) + _arc(p) + nuno
             + _logo(left=x, top=44) + kicker + block + swipe)
 
 def content_tabs(p, n, total, slide):
