@@ -93,6 +93,7 @@ TOPIC_POSES = {
     "networking": ["nuno_authority_4", "nuno_authority_1", "nuno_authority_2"],
     "offer":      ["nuno_offers_cover"],
     "tech":       ["nuno_tablet_cover"],
+    "tracker":    ["nuno_tracker_dashboard"],
 }
 # Substring found in eyebrow/headline/slide text -> topic key above.
 TOPIC_KEYWORDS = [
@@ -104,8 +105,8 @@ TOPIC_KEYWORDS = [
     ("plan", "plan"), ("first day", "plan"),
     ("mistake", "mistake"), ("avoid", "mistake"), ("reject", "mistake"), ("wrong", "mistake"),
     ("strategy", "think"), ("research", "think"), ("hidden", "think"), ("think", "think"),
+    ("tracker", "tracker"), ("tracking", "tracker"), ("track", "tracker"),
     ("skill", "skills"), ("portfolio", "tech"), ("project", "skills"), ("experience", "skills"),
-    ("tracker", "tech"), ("tracking", "tech"), ("track", "tech"),
     ("linkedin", "linkedin"), ("network", "networking"), ("referral", "networking"),
     ("offer", "offer"), ("salary", "offer"), ("negotiat", "offer"),
     # Career / programme topics -> confident, professional founder (best-fit until a
