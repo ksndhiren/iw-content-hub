@@ -34,6 +34,16 @@ def _footer(text="internwise.co.uk"):
             f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:22px;color:{NAVYT};letter-spacing:.3px;\">{text}</span></div>")
 
 
+def _comment_prompt(left, top, dark=False, text="Comment A, B or C below"):
+    ink = "#fff" if dark else NAVYT
+    border = "rgba(255,255,255,.28)" if dark else "rgba(21,39,67,.18)"
+    bg = "rgba(255,255,255,.10)" if dark else "rgba(255,255,255,.72)"
+    return (f"<div style='position:absolute;left:{left}px;top:{top}px;height:46px;padding:0 18px;border-radius:23px;"
+            f"background:{bg};border:2px solid {border};display:flex;align-items:center;gap:11px;'>"
+            f"<div style='width:12px;height:12px;border-radius:50%;background:{AMBER};'></div>"
+            f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:19px;color:{ink};letter-spacing:.4px;\">{text}</span></div>")
+
+
 def _profile_avatar(left, top, size, border=6):
     src = L.img(os.path.join(L.BASE, "assets", "nuno", "linkedin_profile_black_male_professional.png"))
     inner = size - border * 2
@@ -86,7 +96,7 @@ def w_decision_prompt(idea):
            f"<span style=\"font-family:Inter;font-weight:900;font-size:24px;color:#fff;\">{idea.get('cta','Start at internwise.co.uk')}</span></div>")
     label = (f"<div style='position:absolute;right:58px;top:58px;height:42px;padding:0 18px;border-radius:21px;background:{AMBER};"
              f"display:flex;align-items:center;font-family:'DM Sans';font-weight:900;font-size:17px;color:{NAVYT};letter-spacing:2px;'>CAREER CHOICE</div>")
-    return bg + texture + rail + rail_mark + _logo_dark() + label + hook + sub + board + cta + _footer()
+    return bg + texture + rail + rail_mark + _logo_dark() + label + hook + sub + board + cta + _comment_prompt(58, 918) + _footer()
 
 
 def w_proofboard(idea):
@@ -116,7 +126,7 @@ def w_proofboard(idea):
                 f"font-weight:700;font-size:29px;line-height:1.2;color:{NAVYT};'>{idea.get('takeaway','')}</div>")
     cta = (f"<div style='position:absolute;right:92px;bottom:118px;height:54px;padding:0 20px;border-radius:8px;background:{AMBER};"
            f"display:flex;align-items:center;font-family:Inter;font-weight:900;font-size:22px;color:{NAVYT};'>{idea.get('cta','Start at internwise.co.uk')}</div>")
-    return bg + _logo_dark() + pinboard + top_rule + label + headline + note + profile + card + takeaway + cta
+    return bg + _logo_dark() + pinboard + top_rule + label + headline + note + profile + card + takeaway + cta + _comment_prompt(88, 900)
 
 
 def w_debate(idea):
@@ -136,7 +146,7 @@ def w_debate(idea):
                  f"<div style=\"margin-top:8px;font-family:Inter;font-weight:950;font-size:36px;line-height:1.05;color:#fff;\">{option}</div></div>")
     cta = (f"<div style='position:absolute;right:72px;bottom:90px;width:430px;font-family:Georgia,serif;font-style:italic;"
            f"font-weight:700;font-size:34px;line-height:1.12;color:{AMBER};'>{idea.get('cta','Start at internwise.co.uk')}</div>")
-    return bg + split + _logo_dark() + hook + sub + rows + cta + L.watermark(w=380, right=-80, bottom=-120, op=.06)
+    return bg + split + _logo_dark() + hook + sub + rows + cta + _comment_prompt(60, 892, dark=True) + L.watermark(w=380, right=-80, bottom=-120, op=.06)
 
 
 def w_scorecard(idea):
@@ -154,7 +164,7 @@ def w_scorecard(idea):
                  f"<div style=\"font-family:Inter;font-weight:950;font-size:31px;line-height:1.08;color:{NAVYT};\">{option}</div></div>")
     takeaway = (f"<div style=\"position:absolute;left:62px;bottom:158px;width:750px;font-family:'DM Sans';font-weight:800;"
                 f"font-size:28px;line-height:1.25;color:#53627A;\">{idea.get('takeaway','')}</div>")
-    return bg + header + L.logo_tl() + hook + grid + takeaway + _footer(idea.get("cta", "internwise.co.uk"))
+    return bg + header + L.logo_tl() + hook + grid + takeaway + _comment_prompt(62, 850) + _footer(idea.get("cta", "internwise.co.uk"))
 
 
 def w_signal(idea):
@@ -174,7 +184,7 @@ def w_signal(idea):
                  f"<div style=\"font-family:Inter;font-weight:950;font-size:34px;color:#fff;\">{option}</div></div>")
     board = f"<div style='position:absolute;left:58px;top:584px;width:620px;'>{rows}</div>"
     cta = (f"<div style=\"position:absolute;left:58px;bottom:74px;font-family:'DM Sans';font-weight:900;font-size:25px;color:{AMBER};\">{idea.get('cta','internwise.co.uk')}</div>")
-    return bg + rings + L.logo_tl() + label + hook + board + cta
+    return bg + rings + L.logo_tl() + label + hook + board + _comment_prompt(58, 850, dark=True) + cta
 
 
 def w_vote_cards(idea):
@@ -203,7 +213,7 @@ def w_vote_cards(idea):
            f"font-size:31px;line-height:1.26;color:#6F6350;\">{idea.get('subhead','')}</div>")
     cta = (f"<div style='position:absolute;left:58px;bottom:94px;height:62px;padding:0 26px;border-radius:31px;background:{AMBER};"
            f"display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:25px;color:{NAVYT};'>{idea.get('cta','Start at internwise.co.uk')}</div>")
-    return bg + _logo_dark() + phone + sticker + label + hook + sub + cta
+    return bg + _logo_dark() + phone + sticker + label + hook + sub + _comment_prompt(58, 804) + cta
 
 
 def w_shortlist_poll(idea):
@@ -224,7 +234,7 @@ def w_shortlist_poll(idea):
                   f"<div style=\"position:absolute;left:24px;bottom:22px;font-family:'DM Sans';font-weight:900;font-size:16px;color:#6F6350;letter-spacing:2px;\">OPTION {chr(65+i)}</div></div>")
     note = (f"<div style=\"position:absolute;left:94px;bottom:128px;font-family:'DM Sans';font-weight:900;font-size:27px;color:#6F6350;\">"
             f"{idea.get('cta','Compare roles at internwise.co.uk')}</div>")
-    return bg + board + _logo_white() + label + hook + cards + note
+    return bg + board + _logo_white() + label + hook + cards + _comment_prompt(94, 870) + note
 
 
 def w_cv_poll(idea):
@@ -243,7 +253,7 @@ def w_cv_poll(idea):
                  f"<div style='margin-left:auto;width:34px;height:34px;border:4px solid {NAVYT};border-radius:9px;'></div></div>")
     cta = (f"<div style='position:absolute;left:120px;bottom:116px;height:58px;padding:0 24px;border-radius:12px;background:{AMBER};"
            f"display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:24px;color:{NAVYT};'>{idea.get('cta','Build proof at internwise.co.uk')}</div>")
-    return bg + slip + _logo_white() + label + hook + poll + cta
+    return bg + slip + _logo_white() + label + hook + poll + _comment_prompt(120, 838) + cta
 
 
 WORLDS = {
