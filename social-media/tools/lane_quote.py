@@ -138,8 +138,9 @@ def w_split(q, src=None):
 def w_paper(q, src=None):
     bg = f"<div style='position:absolute;inset:0;background:linear-gradient(160deg,#1a2f57,{NAVY} 60%,{DEEP});'></div>"
     grid = ("<div style='position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:56px 56px;'></div>")
-    # Faint author washed across the board behind the pinned card.
-    wm = _wm(src, "right:18px;bottom:18px;height:620px;object-fit:contain;object-position:center bottom;", op=.075, filt="grayscale(1) brightness(1.22)")
+    # Faint author washed across the board/card. Keep the whole portrait
+    # contained so wide source photos (e.g. seated Zig Ziglar) do not crop heads.
+    wm = _wm(src, "right:88px;top:720px;width:660px;height:500px;object-fit:contain;object-position:center center;", op=.075, filt="grayscale(1) brightness(1.22)")
     card = (f"<div style='position:absolute;left:110px;right:110px;top:300px;background:#FBFCFE;border-radius:22px;"
             f"box-shadow:0 40px 80px rgba(0,0,0,.5);padding:56px 54px 48px;transform:rotate(-2deg);'>"
             f"<div style='font-family:Georgia,serif;font-weight:700;font-size:130px;line-height:.4;color:{AMBER};height:70px;'>{Q}</div>"
@@ -147,7 +148,7 @@ def w_paper(q, src=None):
             f"<div style=\"font-family:'DM Sans';font-weight:700;font-size:28px;color:#5b6b82;margin-top:28px;\">- {q['author']}</div></div>")
     tape = f"<div style='position:absolute;left:490px;top:286px;width:150px;height:44px;background:rgba(255,177,32,.7);transform:rotate(-4deg);'></div>"
     cta = (f"<div style=\"position:absolute;left:0;right:0;bottom:80px;text-align:center;font-family:Inter;font-weight:700;font-size:27px;color:{AMBER};\">{q['cta']}</div>")
-    return bg + grid + wm + tape + card + L.logo_tl() + cta
+    return bg + grid + tape + card + wm + L.logo_tl() + cta
 
 
 # ---- World 5: vintage cream broadsheet ----

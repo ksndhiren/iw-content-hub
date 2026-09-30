@@ -105,6 +105,7 @@ TOPIC_KEYWORDS = [
     ("mistake", "mistake"), ("avoid", "mistake"), ("reject", "mistake"), ("wrong", "mistake"),
     ("strategy", "think"), ("research", "think"), ("hidden", "think"), ("think", "think"),
     ("skill", "skills"), ("portfolio", "tech"), ("project", "skills"), ("experience", "skills"),
+    ("tracker", "tech"), ("tracking", "tech"), ("track", "tech"),
     ("linkedin", "linkedin"), ("network", "networking"), ("referral", "networking"),
     ("offer", "offer"), ("salary", "offer"), ("negotiat", "offer"),
     # Career / programme topics -> confident, professional founder (best-fit until a
@@ -720,22 +721,43 @@ def w_bigidea(copy, week_id='adhoc'):
     return bg + L.logo_tl() + eb + glyph + head + body + band
 
 def w_memo(copy, week_id='adhoc'):
-    """Editorial memo single: white strip, serif headline and stamped action list."""
+    """Tracker-board single: deliberately kinetic, built for job-search chaos."""
     CREAM = "#F3EADA"; NAVYT = "#152743"; COFFEE = "#6F6350"
-    bg = f"<div style='position:absolute;inset:0;background:{CREAM};'></div>"
-    top = f"<div style='position:absolute;left:0;right:0;top:0;height:150px;background:{NAVYT};'></div>"
-    logo = f"<img src='{L.WHT}' style='position:absolute;left:56px;top:42px;height:86px;'>"
-    strip = (f"<div style='position:absolute;left:56px;right:56px;top:190px;height:70px;background:#fff;border-top:3px solid {NAVYT};border-bottom:3px solid {NAVYT};display:flex;align-items:center;justify-content:center;'>"
-             f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:22px;color:{NAVYT};letter-spacing:4px;\">{copy.get('eyebrow','CAREER MEMO')[:24].upper()}</span></div>")
-    head = (f"<div style=\"position:absolute;left:76px;right:76px;top:304px;text-align:center;font-family:Georgia,serif;font-weight:700;font-size:72px;line-height:1.0;color:{NAVYT};\">{copy['headline']}</div>")
-    rows = ""
-    for i, pt in enumerate(copy.get('points', [])[:4], 1):
-        rows += (f"<div style='display:flex;gap:18px;align-items:flex-start;margin-bottom:20px;'>"
-                 f"<div style='flex:0 0 44px;height:44px;border-radius:50%;background:{AMBER};display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:900;font-size:20px;color:{NAVYT};'>{i}</div>"
-                 f"<div style=\"font-family:Inter;font-weight:800;font-size:30px;line-height:1.14;color:{NAVYT};\">{pt}</div></div>")
-    body = f"<div style='position:absolute;left:104px;right:104px;top:560px;'>{rows}</div>"
-    cta = (f"<div style=\"position:absolute;left:0;right:0;bottom:48px;text-align:center;font-family:'DM Sans';font-weight:800;font-size:25px;color:{COFFEE};\">{copy.get('cta','internwise.co.uk')}</div>")
-    return bg + top + logo + strip + head + body + cta
+    bg = f"<div style='position:absolute;inset:0;background:linear-gradient(135deg,{CREAM} 0%,#EAF4F2 100%);'></div>"
+    noise = _dot_texture("rgba(21,39,67,.055)", size=28)
+    navy = f"<div style='position:absolute;right:0;top:0;bottom:0;width:360px;background:{NAVYT};'></div>"
+    logo = f"<img src='{L.DARKLOGO}' style='position:absolute;left:56px;top:46px;height:82px;'>"
+    label = (f"<div style='position:absolute;left:58px;top:176px;height:46px;padding:0 20px;background:{AMBER};"
+             f"transform:rotate(-1.5deg);display:flex;align-items:center;box-shadow:8px 8px 0 rgba(21,39,67,.12);'>"
+             f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:19px;color:{NAVYT};letter-spacing:3px;\">{copy.get('eyebrow','SEARCH RESET')[:22].upper()}</span></div>")
+    head = (f"<div style='position:absolute;left:58px;top:250px;width:660px;'>"
+            f"<div style=\"font-family:Inter;font-weight:950;font-size:72px;line-height:.96;letter-spacing:-2.5px;color:{NAVYT};\">Stop Your Job Search</div>"
+            f"<div style=\"display:inline-block;margin-top:4px;font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:116px;line-height:.9;color:{CORAL};"
+            f"background:linear-gradient(transparent 62%,{AMBER} 62%);padding:0 10px;transform:rotate(-2deg);\">Chaos</div></div>")
+    scribble = (f"<svg style='position:absolute;left:72px;top:466px;width:500px;height:92px;' viewBox='0 0 500 92' fill='none'>"
+                f"<path d='M8 74 C110 8,176 104,276 30 S420 18,492 62' stroke='{CORAL}' stroke-width='12' stroke-linecap='round' opacity='.75'/>"
+                f"<path d='M22 54 C118 14,178 84,270 26 S398 20,474 50' stroke='{AMBER}' stroke-width='5' stroke-linecap='round'/></svg>")
+    pts = (copy.get('points') or [])[:5]
+    board = ""
+    positions = [(88, 590, -3, AMBER), (378, 564, 2.5, GREEN), (666, 606, -1.8, CORAL),
+                 (228, 790, 2.2, "#fff"), (548, 810, -2.8, AMBER)]
+    for i, pt in enumerate(pts):
+        left, top, rot, color = positions[i]
+        dark = color in (AMBER, GREEN, CORAL)
+        board += (f"<div style='position:absolute;left:{left}px;top:{top}px;width:252px;min-height:124px;background:{color};"
+                  f"border:3px solid {NAVYT};box-shadow:10px 10px 0 rgba(21,39,67,.18);transform:rotate({rot}deg);padding:18px 18px 16px;'>"
+                  f"<div style=\"font-family:'DM Sans';font-weight:900;font-size:17px;color:{NAVYT if dark else CORAL};letter-spacing:3px;\">STEP {i+1}</div>"
+                  f"<div style=\"margin-top:8px;font-family:Inter;font-weight:950;font-size:28px;line-height:1.04;color:{NAVYT};letter-spacing:-.8px;\">{pt}</div></div>")
+    wire = ("<svg style='position:absolute;left:44px;top:540px;width:970px;height:390px;' viewBox='0 0 970 390' fill='none'>"
+            f"<path d='M120 80 L410 60 L700 116 L290 280 L610 300' stroke='{NAVYT}' stroke-width='5' stroke-dasharray='14 14' opacity='.28'/></svg>")
+    alert = (f"<div style='position:absolute;right:54px;top:230px;width:248px;height:248px;border-radius:50%;border:18px solid {AMBER};"
+             f"display:flex;align-items:center;justify-content:center;'>"
+             f"<div style=\"font-family:Inter;font-weight:950;font-size:116px;color:#fff;line-height:1;\">?</div></div>")
+    side = (f"<div style=\"position:absolute;right:70px;top:790px;width:220px;font-family:'DM Sans';font-weight:900;font-size:28px;"
+            f"line-height:1.08;color:#fff;\">Chaos ends when every application has a stage.</div>")
+    cta = (f"<div style='position:absolute;left:58px;bottom:56px;height:62px;padding:0 26px;border-radius:31px;background:{NAVYT};"
+           f"display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:27px;color:#fff;'>{copy.get('cta','Organise at internwise.co.uk')}</div>")
+    return bg + noise + navy + wire + logo + label + head + scribble + board + alert + side + cta
 
 def w_scorecard(copy, week_id='adhoc'):
     """Scorecard single: compact evaluation board with three marked criteria."""
@@ -858,9 +880,18 @@ def cover_flash(p, copy, total, pose):
     slash = (f"<div style='position:absolute;left:{x}px;top:238px;width:60px;height:12px;background:{p['accent']};transform:skewX(-26deg);'></div>")
     eyebrow = (f"<div style=\"position:absolute;left:{x+80}px;top:230px;font-family:'DM Sans';font-weight:800;font-size:21px;"
                f"color:{p['accent']};letter-spacing:5px;\">{copy.get('eyebrow','INTERNWISE')[:22].upper()}</div>")
-    head = (f"<div style=\"position:absolute;left:{x}px;top:298px;width:470px;font-family:Inter;font-weight:800;"
-            f"font-size:66px;line-height:1.04;letter-spacing:-1.8px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
-    rule = f"<div style='position:absolute;left:{x+2}px;top:604px;width:120px;height:7px;background:{p['accent']};border-radius:4px;transform:skewX(-26deg);'></div>"
+    if "rejection" in copy.get("headline", "").lower():
+        head = (f"<div style='position:absolute;left:{x}px;top:292px;width:560px;'>"
+                f"<div style=\"font-family:Inter;font-weight:950;font-size:94px;line-height:.86;letter-spacing:-4px;color:{p['ink']};\">Break</div>"
+                f"<div style=\"display:inline-block;margin-top:12px;font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:100px;line-height:.88;color:{CORAL};"
+                f"background:linear-gradient(transparent 58%,{p['accent']} 58%);padding:0 10px;transform:rotate(-2deg);\">Rejection</div>"
+                f"<div style=\"margin-top:12px;font-family:Inter;font-weight:950;font-size:88px;line-height:.88;letter-spacing:-3px;color:transparent;"
+                f"-webkit-text-stroke:3px {p['ink']};text-stroke:3px {p['ink']};\">Cycle</div></div>")
+        rule = f"<div style='position:absolute;left:{x+6}px;top:708px;width:210px;height:9px;background:{p['accent']};border-radius:4px;transform:skewX(-26deg);'></div>"
+    else:
+        head = (f"<div style=\"position:absolute;left:{x}px;top:298px;width:470px;font-family:Inter;font-weight:800;"
+                f"font-size:66px;line-height:1.04;letter-spacing:-1.8px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
+        rule = f"<div style='position:absolute;left:{x+2}px;top:604px;width:120px;height:7px;background:{p['accent']};border-radius:4px;transform:skewX(-26deg);'></div>"
     return (_bg(p) + wedge + _arc(p, right=-60, bottom=-120, size=680) + _nuno_whole(pose, h=760, right=-60)
             + _logo(left=x, top=44) + slash + eyebrow + head + rule
             + _footer(p, swipe=True))
@@ -954,6 +985,8 @@ def content_tabs(p, n, total, slide):
 
 def cta_tabs(p, copy, total, pose):
     x = 56
+    if "tracker" in copy.get("headline", "").lower():
+        pose = "nuno_tablet"
     eyebrow = (f"<div style=\"position:absolute;left:{x}px;top:300px;font-family:'DM Sans';font-weight:800;font-size:21px;"
                f"color:{p['accent']};letter-spacing:5px;\">YOUR MOVE</div>")
     head = (f"<div style=\"position:absolute;left:{x}px;top:346px;width:450px;font-family:Inter;font-weight:800;"
