@@ -15,7 +15,7 @@ and do not count toward the core five. The fifth core post is Poll/Conversation
     python3 tools/build_week.py --days 1         # just Monday (cheap validation)
     python3 tools/build_week.py --dry            # plan only, no render/write
 """
-import os, sys, json, re, datetime
+import os, sys, json, re, datetime, hashlib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lanes_common as L
 
@@ -46,6 +46,7 @@ QUOTE_DEDUP_WEEKS = 4                                                # do not re
 CONVERSATION_DEDUP_WEEKS = 8                                         # do not repeat fifth-post ideas in recent weeks
 TOPIC_REPEAT_OVERRIDE_ENV = "IW_ALLOW_TOPIC_REPEAT"                      # explicit emergency override only
 DKEYS = ["mon", "tue", "wed", "thu", "fri"]
+NEWS_IMAGE_USED = os.path.join(L.BASE, "content", "news_image_used.json")
 
 
 class TopicFreshnessError(RuntimeError):
@@ -349,30 +350,140 @@ def pick_conversation_ideas(conversation_ideas, days, wid):
     return (fresh + fallback)[:days]
 
 
-def _news_image_query(item, headline):
-    source = " ".join([
+def _news_source_text(item, headline):
+    return " ".join([
         headline or "",
         item.get("title", ""),
         item.get("summary", ""),
     ]).lower()
-    if "disabled" in source or "disability" in source:
-        return "disabled young professional workplace support"
+
+
+def _news_image_queries(item, headline):
+    """Return article-specific image queries, ordered from precise to broad.
+
+    Hard rule: news cards must use a relevant article image. The first query
+    should describe the actual story; broad workplace fallbacks are last only.
+    """
+    source = _news_source_text(item, headline)
+    clean_head = re.sub(r"[^a-zA-Z0-9 ]+", " ", headline or item.get("title", "")).strip()
+    queries = []
+    if any(w in source for w in ["award", "awards", "recognised", "recognized", "recruitment strategies", "talent recruitment"]):
+        queries += [
+            "UK recruitment awards hiring talent networking event",
+            "business awards recruitment hiring team office event",
+            "recruiters young professionals networking awards event",
+        ]
+    if "disabled" in source or "disability" in source or "long-term health" in source:
+        queries += [
+            "disabled young professional workplace support inclusive office",
+            "inclusive workplace young disabled professional laptop",
+            "young professional wheelchair office support employment",
+        ]
     if "ai" in source or "automation" in source:
-        return "student professional technology workplace artificial intelligence"
+        queries += [
+            "student professional technology workplace artificial intelligence",
+            "young professionals laptop technology office artificial intelligence",
+        ]
     if "skill" in source or "training" in source:
-        return "young professional skills training workplace"
+        queries += [
+            "young professional skills training workplace",
+            "early career training workshop office",
+        ]
     if "north" in source or "investment" in source:
-        return "young professional workplace city office"
-    return "young professional workplace internship office"
+        queries += [
+            "young professional workplace city office",
+            "UK city office young professionals workplace",
+        ]
+    if clean_head:
+        queries.append(f"{clean_head} UK workplace early career")
+    queries += [
+        "young professionals recruitment interview office",
+        "early career candidates recruiter office meeting",
+    ]
+    # Preserve order while removing duplicates.
+    return list(dict.fromkeys(q for q in queries if q.strip()))
+
+
+def _news_image_caption(item, headline):
+    source = _news_source_text(item, headline)
+    if any(w in source for w in ["award", "awards", "recruitment strategies", "talent recruitment"]):
+        return "Recruitment ideas, recognised on the awards floor."
+    if "disabled" in source or "disability" in source or "long-term health" in source:
+        return "Workplace support, turned into experience."
+    if "ai" in source or "automation" in source:
+        return "Technology is reshaping early-career hiring."
+    if "skill" in source or "training" in source:
+        return "Skills training is becoming career currency."
+    return "The job market story behind the headline."
+
+
+def _news_image_query(item, headline):
+    # Backward-compatible helper for any older callers.
+    return _news_image_queries(item, headline)[0]
+
+
+def _load_news_image_used():
+    try:
+        return json.load(open(NEWS_IMAGE_USED))
+    except Exception:
+        return {"images": []}
+
+
+def _file_sha256(path):
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(1024 * 1024), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def _remember_news_image(path, headline, query, photo_id=None):
+    log = _load_news_image_used()
+    sha = _file_sha256(path)
+    if not any(row.get("sha256") == sha for row in log.get("images", [])):
+        log.setdefault("images", []).append({
+            "sha256": sha,
+            "headline": headline,
+            "query": query,
+            "photo_id": photo_id,
+            "path": os.path.relpath(path, L.BASE),
+            "at": datetime.datetime.utcnow().isoformat() + "Z",
+        })
+        os.makedirs(os.path.dirname(NEWS_IMAGE_USED), exist_ok=True)
+        json.dump(log, open(NEWS_IMAGE_USED, "w"), indent=2, ensure_ascii=False)
+    return sha
+
+
+def _news_image_seen(path):
+    sha = _file_sha256(path)
+    seen = {row.get("sha256") for row in _load_news_image_used().get("images", [])}
+    return sha in seen
 
 
 def _fetch_required_news_image(item, headline):
     try:
-        from pexels_utils import get_photo
-        return get_photo(_news_image_query(item, headline), index=0, orientation="landscape", size="large")
+        from pexels_utils import search_pexels, download_image
+        errors = []
+        for query in _news_image_queries(item, headline):
+            try:
+                photos = search_pexels(query, per_page=8, orientation="landscape")
+            except Exception as exc:
+                errors.append(f"{query}: {exc}")
+                continue
+            for photo in photos:
+                url = photo["src"].get("large") or photo["src"].get("original")
+                if not url:
+                    continue
+                path = download_image(url, f"news_{query}_{photo['id']}_large")
+                if _news_image_seen(path):
+                    continue
+                _remember_news_image(path, headline, query, photo.get("id"))
+                return path
+        raise RuntimeError("all fetched candidates were missing or already used; " + " | ".join(errors[:3]))
     except Exception as exc:
         raise RuntimeError(
-            "News cards require a relevant image. Add/fix PEXELS_API_KEY or pass an image_path; "
+            "News cards require a relevant, non-repeated image. Add/fix PEXELS_API_KEY, "
+            "use Codex ImageGen to create a project asset, or pass image_path explicitly; "
             f"image fetch failed for {headline!r}: {exc}"
         )
 
@@ -391,7 +502,8 @@ def build_news_post(wid, dkey, dlabel, pdate, img, item, issue_no=1, dry=False, 
                               os.path.join(img, pid), issue_no=issue_no,
                               headline=nc["headline"], brief=nc["brief"],
                               sidebar=nc["sidebar"], pull=nc["pull"],
-                              image_path=image_path)
+                              image_path=image_path,
+                              image_caption=_news_image_caption(item, nc["headline"]))
     return _post(pid, dlabel, "news", nc["headline"], "Single", ["slide_1.png"],
                  nc["captions"], nc["hashtags"])
 

@@ -79,7 +79,8 @@ def _rule(x, y, w, kind="double"):
 
 
 def render_news(item, out_dir, filename="slide_1.png", issue_no=1,
-                headline=None, brief=None, sidebar=None, pull=None, image_path=None):
+                headline=None, brief=None, sidebar=None, pull=None, image_path=None,
+                image_caption=None):
     """Render the newspaper card.
 
     IMPORTANT - no plagiarism: the RSS `item` is a TOPIC + FACT seed only. The
@@ -184,11 +185,12 @@ def render_news(item, out_dir, filename="slide_1.png", issue_no=1,
            f"{bullets}</div>")
     if image_path:
         src = L.img(image_path)
-        pq = (f"<div style='margin-top:18px;border:2.5px solid {INK};height:210px;overflow:hidden;position:relative;background:#d8d0bd;'>"
+        cap = image_caption or "Relevant workplace context for this story."
+        pq = (f"<div style='margin-top:16px;border:2.5px solid {INK};height:178px;overflow:hidden;position:relative;background:#d8d0bd;'>"
               f"<img src='{src}' style='width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08);'>"
               f"<div style='position:absolute;left:0;right:0;bottom:0;background:rgba(241,233,214,.86);"
-              f"border-top:2px solid {INK};padding:8px 12px;font-family:{SERIF};font-style:italic;"
-              f"font-weight:700;font-size:18px;line-height:1.1;color:{INK};'>Workplace support, turned into experience.</div></div>")
+              f"border-top:2px solid {INK};padding:7px 12px;font-family:{SERIF};font-style:italic;"
+              f"font-weight:700;font-size:16px;line-height:1.05;color:{INK};'>{cap}</div></div>")
     else:
         pq = (f"<div style='margin-top:20px;border-top:3px solid {INK};border-bottom:3px solid {INK};padding:15px 4px;'>"
               f"<div style='font-family:{SERIF};font-style:italic;font-weight:700;font-size:27px;line-height:1.22;color:{INK};text-align:center;'>&ldquo;{pull}&rdquo;</div></div>")

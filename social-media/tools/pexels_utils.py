@@ -11,9 +11,10 @@ import requests
 from pathlib import Path
 from dotenv import load_dotenv
 
-load_dotenv()
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT_DIR = os.path.dirname(BASE_DIR)
+load_dotenv(os.path.join(ROOT_DIR, ".env"))
+load_dotenv(os.path.join(BASE_DIR, ".env"))
 CACHE_DIR = os.path.join(BASE_DIR, "assets", "pexels_cache")
 os.makedirs(CACHE_DIR, exist_ok=True)
 
