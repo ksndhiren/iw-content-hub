@@ -192,7 +192,7 @@ def _dkey(post):
     return post["id"].split("-")[-2] if post["id"].count("-") >= 2 else None
 
 
-def build_jobs(week, connected, want_status, use_schedule, only=None, days=None, stories=False, at=None, networks=None):
+def build_jobs(week, connected, want_status, use_schedule, only=None, days=None, stories=True, at=None, networks=None):
     jobs = []
     for post in week.get("posts", []):
         if only:
@@ -222,9 +222,9 @@ def build_jobs(week, connected, want_status, use_schedule, only=None, days=None,
             jobs.append({"pid": post["id"], "lane": lane, "network": net, "kind": "feed",
                          "text": text, "trimmed": trimmed, "mediaUrls": net_media,
                          "extra": extra, "geo": bool(geo), "scheduleDate": sched})
-        # Story companions: a dedicated 1080x1920 story.png (IG/FB cap Story
-        # width at 1920; the 2160 feed slides are rejected). No caption. The
-        # same story.png is reused for both Instagram and Facebook Stories.
+        # Story companions are automatic for reach: every Instagram feed post
+        # gets a matching Story when story.png exists. Facebook Stories mirror
+        # this once a Facebook Page is connected in Ayrshare.
         if stories and media:
             story_url = f"{R2_BASE}/{week['id']}/{post['id']}/story.png"
             if "instagram" in nets:
@@ -274,7 +274,8 @@ def main():
     ap.add_argument("--status", default="approved", help="which post status is eligible")
     ap.add_argument("--only", default=None, help="post just this one post id (ignores status gate)")
     ap.add_argument("--days", default=None, help="comma list of day keys to include, e.g. tue,wed,thu,fri")
-    ap.add_argument("--stories", action="store_true", help="also post an IG Story (cover image) per post")
+    ap.add_argument("--stories", action="store_true",
+                    help="legacy/no-op: Instagram Stories are posted automatically with Instagram feed posts")
     ap.add_argument("--at", default=None, help="one-off UK HH:MM time override for scheduling")
     ap.add_argument("--network", default=None, help="comma list of networks to send to (e.g. facebook); default: all connected for the lane")
     args = ap.parse_args()
@@ -298,7 +299,7 @@ def main():
     connected = active_networks()
     posted = load_posted()
     jobs = build_jobs(week, connected, args.status, args.schedule, only=args.only,
-                      days=days, stories=args.stories, at=args.at, networks=networks)
+                      days=days, stories=True, at=args.at, networks=networks)
 
     print(f"Target {label} | connected: {sorted(connected)} | status='{args.status}' "
           f"| {'LIVE' if args.live else 'DRY-RUN'}")

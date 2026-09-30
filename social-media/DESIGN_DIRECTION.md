@@ -55,6 +55,11 @@ This is the approved creative direction for future Internwise social graphics. T
 - Shapes may frame or sit behind images, but they must not slice through faces, hands, primary objects, or readable text. Highlight strokes must never pass through letters unless deliberately designed as an underline with enough clearance.
 - Logos need clear contrast and breathing room. Do not place light logos on light images or let brand marks touch headlines.
 
+## Publishing Rules
+
+- Every Instagram feed post must have a matching Instagram Story companion for reach. The publisher should create Story jobs automatically; do not rely on a manual `--stories` flag.
+- Facebook Stories should mirror Instagram Stories once a Facebook Page is connected in Ayrshare.
+
 ## Employer Direction
 
 - Nuno must sit above the process/workflow visual layer when the concept implies him presenting or guiding the workflow.
