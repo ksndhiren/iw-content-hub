@@ -365,11 +365,20 @@ def main():
             p = existing_auto[sid]
             p.setdefault("addedAt", now_iso)  # backfill so sort order is stable
             cfg = fj.build_config(job)
+            captions = build_captions(job)
+            htags = build_hashtags_by_platform(job)
             if needs_palette_refresh(p, cfg):
                 post_id = f"job-{sid}"
                 fname, cfg = render_featured_graphic(job, post_id)
                 p["slides"] = [fname]
                 print(f"  * refreshed palette {post_id} ({cfg['_style']}): {_clean_title(job['title'])}")
+            p["sourceUrl"] = job["url"]
+            p["day"] = _plain(job["company"])
+            p["title"] = _clean_title(job["title"])
+            p["caption"] = captions["ig-fb"]
+            p["hashtags"] = htags["ig-fb"]
+            p["captions"] = captions
+            p["hashtagsByPlatform"] = htags
             update_post_palette(p, cfg)
             auto_posts.append(p)              # keep graphic + review status
             continue
