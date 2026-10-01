@@ -4,12 +4,14 @@ The weekly batch (build_week.py) builds the evergreen lanes on Saturday. News is
 different: a headline written on Saturday would be stale by Friday. So this job
 runs daily (news-daily.yml) and builds the NEXT posting day's news card, fetching
 fresh UK news, having the LLM reword it, rendering the card, and upserting it into
-data/weeks.json as `in-review` - leaving the human a full day to review before it
-posts. It never touches the other lanes.
+data/weeks.json as `approved`, then schedules it to the next morning's news slot.
+It never touches the other lanes.
 
-    python3 tools/build_news_day.py            # build tomorrow's news (skips weekends)
-    python3 tools/build_news_day.py --offset 0  # build today's news
+    python3 tools/build_news_day.py            # build tomorrow's news only
     python3 tools/build_news_day.py --date 2026-09-14
+
+Normal runs must build exactly one day ahead. Emergency backfills require
+IW_ALLOW_NEWS_NOT_DAY_PRIOR=1 so news can never be generated early by accident.
     python3 tools/build_news_day.py --dry       # plan only, no LLM/render/write
 """
 from __future__ import annotations
@@ -19,6 +21,34 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_week as bw          # reuses env load, writer, news_fetch, news_card, helpers
 
 REF, REFN = datetime.date(2026, 8, 31), 14   # week14 = w/c 2026-08-31 (same anchor as build_week)
+ALLOW_NOT_DAY_PRIOR_ENV = "IW_ALLOW_NEWS_NOT_DAY_PRIOR"
+
+
+def today():
+    """Return the local run date. IW_TODAY is a test/operator escape hatch so
+    day-prior enforcement can be verified without waiting for the calendar."""
+    if os.getenv("IW_TODAY"):
+        return datetime.date.fromisoformat(os.environ["IW_TODAY"])
+    return datetime.date.today()
+
+
+def not_day_prior_allowed():
+    return os.getenv(ALLOW_NOT_DAY_PRIOR_ENV, "").strip().lower() in {"1", "true", "yes", "y"}
+
+
+def enforce_day_prior(target: datetime.date):
+    expected = today() + datetime.timedelta(days=1)
+    if target == expected:
+        return
+    if not_day_prior_allowed():
+        print(f"WARNING: building {target} although day-prior target is {expected}; "
+              f"{ALLOW_NOT_DAY_PRIOR_ENV}=1 is set.")
+        return
+    raise SystemExit(
+        f"Refusing to build news for {target}: news must be generated exactly one day "
+        f"before posting ({expected} today). Set {ALLOW_NOT_DAY_PRIOR_ENV}=1 only "
+        "for an explicit emergency backfill."
+    )
 
 
 def week_of(target: datetime.date):
@@ -58,16 +88,15 @@ def pick_fresh(exclude_titles):
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("--offset", type=int, default=1, help="days ahead to build (default 1 = tomorrow)")
-    p.add_argument("--date", help="explicit posting date YYYY-MM-DD (overrides --offset)")
+    p.add_argument("--offset", type=int, default=1, help="days ahead to build (default 1 = tomorrow; must resolve to tomorrow unless override env is set)")
+    p.add_argument("--date", help="explicit posting date YYYY-MM-DD (must be tomorrow unless override env is set)")
+    p.add_argument("--image", help="explicit editorial image path for the news card when stock fetch is unavailable")
     p.add_argument("--dry", action="store_true", help="plan only, no LLM/render/write")
     args = p.parse_args()
 
     target = (datetime.date.fromisoformat(args.date) if args.date
-              else datetime.date.today() + datetime.timedelta(days=args.offset))
-    if target.weekday() >= 5:                       # Sat/Sun: no posting day
-        print(f"{target} is a weekend - no news post. Done.")
-        return
+              else today() + datetime.timedelta(days=args.offset))
+    enforce_day_prior(target)
 
     wid, wlabel, wc, mon, dkey, dlabel = week_of(target)
     img = os.path.join(bw.HUB, "images", wid)
@@ -86,7 +115,17 @@ def main():
 
     pdate = datetime.datetime.combine(target, datetime.time())
     post = bw.build_news_post(wid, dkey, dlabel, pdate, img, item,
-                              issue_no=target.weekday() + 1)
+                              issue_no=target.weekday() + 1,
+                              image_path=args.image)
+    try:
+        import story_card
+        src = os.path.join(img, post["id"], "slide_1.png")
+        if os.path.exists(src):
+            story_card.make_story(src, os.path.join(img, post["id"], "story.png"))
+            print(f"rendered Story companion for {post['id']}.")
+    except Exception as e:
+        print("story render skipped:", e)
+
     # News is auto-approved: unlike the evergreen lanes it carries no manual
     # dashboard gate. The story is fetched from UK sources, LLM-reworded under the
     # news rules, and scheduled straight to the 8am slot by news-daily.yml. Born
@@ -119,8 +158,7 @@ def main():
 
     # Hand the built ids to the workflow so it can schedule this post to Ayrshare
     # at the news slot (news-daily.yml reads these step outputs). Only emitted on a
-    # real build - the weekend early-return above leaves them unset, so the
-    # scheduling step skips.
+    # real build.
     gho = os.getenv("GITHUB_OUTPUT")
     if gho:
         with open(gho, "a") as fh:

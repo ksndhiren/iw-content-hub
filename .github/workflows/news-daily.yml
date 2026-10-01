@@ -3,7 +3,8 @@ name: News - Day-Prior Build
 # Builds the NEXT posting day's news card the day before it goes out, so headlines
 # are never stale. Fetches fresh UK news, has the LLM reword it, renders the card,
 # and upserts it into data/weeks.json as `approved` (creating the week entry if
-# the Saturday batch hasn't run yet). Weekends are skipped automatically.
+# the Saturday batch hasn't run yet). Runs daily because rolling campaigns can
+# include Saturday/Sunday posts; the script itself enforces exactly day-prior.
 #
 # News has NO manual approval gate (unlike the evergreen lanes): once built it is
 # auto-approved and SCHEDULED straight to Ayrshare for the 8am UK news slot on its
@@ -13,11 +14,12 @@ name: News - Day-Prior Build
 # rules are enforced in news_fetch + the writer, not by a human click.
 #
 # Requires repo secrets: OPENAI_API_KEY (+ optional var OPENAI_MODEL), AYRSHARE_API_KEY,
-# and the R2_* set.
+# and the R2_* set. PEXELS_API_KEY is optional but strongly recommended because
+# news cards fail closed when they cannot attach a relevant editorial image.
 
 on:
   schedule:
-    - cron: "0 6 * * 0-4"     # 06:00 UTC Sun-Thu -> builds Mon-Fri news the day before
+    - cron: "0 6 * * *"       # 06:00 UTC daily -> builds tomorrow's news exactly one day prior
   workflow_dispatch:
     inputs:
       date:
@@ -55,6 +57,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
@@ -68,7 +71,7 @@ jobs:
           fi
 
       - name: Schedule the news post to Ayrshare (8am UK slot)
-        # Only after a real build (weekend early-return leaves pid unset). --only
+        # Only after a real build. --only
         # names the freshly built post and bypasses the file-status gate; --schedule
         # queues it at the news lane time on its posting day (always in the future,
         # since we build the day before) rather than posting immediately.
@@ -86,7 +89,7 @@ jobs:
         run: |
           FILES="images data/weeks.json social-media/content/news_used.json social-media/content/ayrshare_posted.json"
           if [ -z "$(git status --porcelain $FILES)" ]; then
-            echo "No changes (weekend, or nothing built). Done."
+            echo "No changes (nothing built). Done."
             exit 0
           fi
           git config user.name  "internwise-content-bot"

@@ -6699,6 +6699,50 @@
             ]
           },
           "world": "cards"
+        },
+        {
+          "id": "week18-fri-news",
+          "day": "Fri 2 Oct",
+          "lane": "news",
+          "title": "UK Colleges Face Pay and Funding Issues",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "The UK's further education sector is grappling with significant challenges. Pay issues and funding pressures are limiting what colleges can offer, impacting both recruitment and resources. This creates a tough environment for students and graduates, who may find themselves with fewer resources and support during their studies. However, internships can offer a vital bridge to the world of work. By gaining real-world experience, students and graduates can enhance their employability and navigate these challenges more effectively. Source: FE News.",
+          "hashtags": [
+            "#internships",
+            "#education",
+            "#ukjobs",
+            "#careeradvice",
+            "#jobmarket"
+          ],
+          "captions": {
+            "ig-fb": "The UK's further education sector is grappling with significant challenges. Pay issues and funding pressures are limiting what colleges can offer, impacting both recruitment and resources. This creates a tough environment for students and graduates, who may find themselves with fewer resources and support during their studies. However, internships can offer a vital bridge to the world of work. By gaining real-world experience, students and graduates can enhance their employability and navigate these challenges more effectively. Source: FE News.",
+            "linkedin": "Recent findings reveal that the UK's further education sector is facing notable challenges. Pay remains a pressing concern, and funding constraints are hindering college growth and recruitment efforts. For students and graduates, this means potentially fewer resources and support. Internships can play a crucial role by providing practical experience and boosting employability, giving early-career job seekers a valuable head start. Source: FE News.",
+            "x": "UK further education faces pay and funding challenges. These affect college offerings and recruitment, impacting students and graduates. Internships can help by providing practical experience. (Source: FE News)",
+            "threads": "UK further education faces challenges with pay and funding, affecting colleges' ability to offer resources and support. This impacts students and graduates, but internships can provide crucial experience and improve employability. Visit www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internships",
+              "#education",
+              "#ukjobs",
+              "#careeradvice",
+              "#jobmarket"
+            ],
+            "linkedin": [
+              "#education",
+              "#internships",
+              "#jobmarket"
+            ],
+            "x": [
+              "#ukjobs",
+              "#education"
+            ]
+          }
         }
       ]
     }

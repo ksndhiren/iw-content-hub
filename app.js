@@ -1109,6 +1109,15 @@
     );
   }
 
+  function isAndroid() {
+    return /Android/i.test(navigator.userAgent || '');
+  }
+
+  function canUseMobileFileShare(files) {
+    if (!(isIOS() || isAndroid())) return false;
+    return !!(navigator.canShare && navigator.canShare({ files: files }) && navigator.share);
+  }
+
   /**
    * Download the currently-displayed slide.
    * Uses Web Share API on mobile (opens native share sheet → Save to Gallery).
@@ -1133,7 +1142,7 @@
         const file = new File([blob], filename, { type: 'image/png' });
 
         // Web Share API — opens native share sheet on iOS/Android
-        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        if (canUseMobileFileShare([file])) {
           return navigator.share({ files: [file] });
         }
 
@@ -1150,7 +1159,7 @@
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
-        URL.revokeObjectURL(a.href);
+        setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
       })
       .catch(function (err) {
         if (err && err.name !== 'AbortError') {
@@ -1200,7 +1209,7 @@
 
       // ── Path 1: Web Share API ──────────────────────────────────────────────
       // Opens native iOS/Android share sheet — tap "Save Image" to add to gallery
-      if (navigator.canShare && navigator.canShare({ files: shareFiles })) {
+      if (canUseMobileFileShare(shareFiles)) {
         elDownloadAllLabel.textContent = 'Opening share sheet...';
         await navigator.share({ title: post.title, files: shareFiles });
         elDownloadAllLabel.textContent = 'Download All Slides';
@@ -1234,7 +1243,7 @@
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
-      URL.revokeObjectURL(a.href);
+      setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
       elDownloadAllLabel.textContent = 'Downloaded!';
       setTimeout(function () { elDownloadAllLabel.textContent = 'Download All Slides'; }, 2000);
 

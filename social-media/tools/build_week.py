@@ -4,11 +4,11 @@ For each day it sources content, has the LLM (writer.py) write all on-screen cop
 + captions, renders each lane from its design library, and patches the day-based
 `data/weeks.json` as `in-review`. Runs locally or in the cloud (daily5-build.yml).
 
-NEWS is deliberately NOT built here - it is generated the day before it posts by
-build_news_day.py (news-daily.yml) so headlines are never stale. This batch
-preserves any news posts already present for the week when it rewrites the entry.
-Daily-5 means five core reviewable posts per weekday; featured jobs are separate
-and do not count toward the core five. The fifth core post is Poll/Conversation
+NEWS is deliberately NOT built here - it is generated exactly one day before it
+posts by build_news_day.py (news-daily.yml) so headlines are never stale. This
+batch preserves any news posts already present for the week when it rewrites the
+entry. Daily-5 means five core reviewable posts per posting day; featured jobs
+are separate and do not count toward the core five. The fifth core post is Poll/Conversation
 (stored as lane "engagement" for dashboard/publishing compatibility).
 
     python3 tools/build_week.py                 # full 5-day week
@@ -45,7 +45,7 @@ EDU_DEDUP_WEEKS = 2                                                  # don't reu
 QUOTE_DEDUP_WEEKS = 4                                                # do not repeat quote text/author in recent weeks
 CONVERSATION_DEDUP_WEEKS = 8                                         # do not repeat fifth-post ideas in recent weeks
 TOPIC_REPEAT_OVERRIDE_ENV = "IW_ALLOW_TOPIC_REPEAT"                      # explicit emergency override only
-DKEYS = ["mon", "tue", "wed", "thu", "fri"]
+DKEYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 NEWS_IMAGE_USED = os.path.join(L.BASE, "content", "news_image_used.json")
 
 
