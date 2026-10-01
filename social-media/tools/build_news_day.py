@@ -10,8 +10,11 @@ It never touches the other lanes.
     python3 tools/build_news_day.py            # build tomorrow's news only
     python3 tools/build_news_day.py --date 2026-09-14
 
-Normal runs must build exactly one day ahead. Emergency backfills require
-IW_ALLOW_NEWS_NOT_DAY_PRIOR=1 so news can never be generated early by accident.
+Normal runs must build exactly one day ahead. Standard posting is Mon-Fri.
+Weekend news is allowed only for a dated temporary catch-up window such as the
+week18 late-start run; set IW_TEMP_WEEKEND_NEWS_UNTIL=YYYY-MM-DD for that.
+Emergency backfills require IW_ALLOW_NEWS_NOT_DAY_PRIOR=1 so news can never be
+generated early by accident.
     python3 tools/build_news_day.py --dry       # plan only, no LLM/render/write
 """
 from __future__ import annotations
@@ -22,6 +25,7 @@ import build_week as bw          # reuses env load, writer, news_fetch, news_car
 
 REF, REFN = datetime.date(2026, 8, 31), 14   # week14 = w/c 2026-08-31 (same anchor as build_week)
 ALLOW_NOT_DAY_PRIOR_ENV = "IW_ALLOW_NEWS_NOT_DAY_PRIOR"
+TEMP_WEEKEND_NEWS_UNTIL_ENV = "IW_TEMP_WEEKEND_NEWS_UNTIL"
 
 
 def today():
@@ -49,6 +53,22 @@ def enforce_day_prior(target: datetime.date):
         f"before posting ({expected} today). Set {ALLOW_NOT_DAY_PRIOR_ENV}=1 only "
         "for an explicit emergency backfill."
     )
+
+
+def allow_weekend_target(target: datetime.date):
+    if target.weekday() < 5:
+        return True
+    raw_until = os.getenv(TEMP_WEEKEND_NEWS_UNTIL_ENV, "").strip()
+    if raw_until:
+        try:
+            until = datetime.date.fromisoformat(raw_until)
+        except ValueError:
+            raise SystemExit(f"{TEMP_WEEKEND_NEWS_UNTIL_ENV} must be YYYY-MM-DD, got {raw_until!r}.")
+        if target <= until:
+            print(f"Temporary weekend news enabled through {until}; building {target}.")
+            return True
+    print(f"{target} is a weekend target. Standard news cadence is Mon-Fri; no news post. Done.")
+    return False
 
 
 def week_of(target: datetime.date):
@@ -97,6 +117,8 @@ def main():
     target = (datetime.date.fromisoformat(args.date) if args.date
               else today() + datetime.timedelta(days=args.offset))
     enforce_day_prior(target)
+    if not allow_weekend_target(target):
+        return
 
     wid, wlabel, wc, mon, dkey, dlabel = week_of(target)
     img = os.path.join(bw.HUB, "images", wid)

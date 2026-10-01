@@ -3,8 +3,9 @@ name: News - Day-Prior Build
 # Builds the NEXT posting day's news card the day before it goes out, so headlines
 # are never stale. Fetches fresh UK news, has the LLM reword it, renders the card,
 # and upserts it into data/weeks.json as `approved` (creating the week entry if
-# the Saturday batch hasn't run yet). Runs daily because rolling campaigns can
-# include Saturday/Sunday posts; the script itself enforces exactly day-prior.
+# the Saturday batch hasn't run yet). Standard cadence is Mon-Fri. The workflow
+# runs daily only so the week18 late-start catch-up can build Sat/Sun news through
+# 2026-10-04; after that, the script skips weekend targets.
 #
 # News has NO manual approval gate (unlike the evergreen lanes): once built it is
 # auto-approved and SCHEDULED straight to Ayrshare for the 8am UK news slot on its
@@ -19,7 +20,7 @@ name: News - Day-Prior Build
 
 on:
   schedule:
-    - cron: "0 6 * * *"       # 06:00 UTC daily -> builds tomorrow's news exactly one day prior
+    - cron: "0 6 * * *"       # 06:00 UTC daily; script skips weekend targets after the week18 catch-up
   workflow_dispatch:
     inputs:
       date:
@@ -58,6 +59,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          IW_TEMP_WEEKEND_NEWS_UNTIL: "2026-10-04"
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
