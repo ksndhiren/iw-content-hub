@@ -2117,172 +2117,280 @@
     "network": "pinterest",
     "scheduleDate": null
   },
-  "week18-thu-education:instagram": {
-    "id": "a5HMsIuIf1Qfm0ptmmYP",
-    "at": "2026-09-30T20:33:57.692139",
+  "week18-tue-education:instagram:story": {
+    "id": "K5KGO9y9GQiCtmcetItg",
+    "at": "2026-10-01T00:00:00.000000",
     "network": "instagram",
     "scheduleDate": "2026-10-01T12:30:00Z"
+  },
+  "week18-tue-engagement:instagram:story": {
+    "id": "zvA2Kdm61ASz2BJMof43",
+    "at": "2026-10-01T00:00:00.000000",
+    "network": "instagram",
+    "scheduleDate": "2026-10-01T15:30:00Z"
+  },
+  "week18-tue-quote:instagram:story": {
+    "id": "NIo9LyRSfZnaL2URmOP5",
+    "at": "2026-10-01T00:00:00.000000",
+    "network": "instagram",
+    "scheduleDate": "2026-10-01T19:00:00Z"
+  },
+  "week18-wed-education:instagram": {
+    "id": "HMelkPNKDJJNafBTSFPt",
+    "at": "2026-10-01T00:00:00.000000",
+    "network": "instagram",
+    "scheduleDate": "2026-10-02T12:30:00Z"
+  },
+  "week18-wed-education:linkedin": {
+    "id": "tDnT3U9rvHb2MHxn56mk",
+    "at": "2026-10-01T00:00:00.000000",
+    "network": "linkedin",
+    "scheduleDate": "2026-10-02T12:30:00Z"
+  },
+  "week18-wed-education:threads": {
+    "id": "TMtBnUYSOxTrVaDQkHKb",
+    "at": "2026-10-01T00:00:00.000000",
+    "network": "threads",
+    "scheduleDate": "2026-10-02T12:30:00Z"
+  },
+  "week18-wed-education:gmb": {
+    "id": "mt4md2YWzY8bQd4CvB0z",
+    "at": "2026-10-01T00:00:00.000000",
+    "network": "gmb",
+    "scheduleDate": "2026-10-02T12:30:00Z"
+  },
+  "week18-wed-education:instagram:story": {
+    "id": "sB2HZMR5FWKaLCwjdiZF",
+    "at": "2026-10-01T00:00:00.000000",
+    "network": "instagram",
+    "scheduleDate": "2026-10-02T12:30:00Z"
+  },
+  "week18-wed-engagement:instagram": {
+    "id": "3FAEdpARtBZzAjInxMsY",
+    "at": "2026-10-01T00:00:00.000000",
+    "network": "instagram",
+    "scheduleDate": "2026-10-02T15:30:00Z"
+  },
+  "week18-wed-engagement:threads": {
+    "id": "NCW2twqrVec5nr4cIVfr",
+    "at": "2026-10-01T00:00:00.000000",
+    "network": "threads",
+    "scheduleDate": "2026-10-02T15:30:00Z"
+  },
+  "week18-wed-engagement:linkedin": {
+    "id": "4YkBap29wzbMOwwfUXwK",
+    "at": "2026-10-01T00:00:00.000000",
+    "network": "linkedin",
+    "scheduleDate": "2026-10-02T15:30:00Z"
+  },
+  "week18-wed-engagement:instagram:story": {
+    "id": "L1BA7lESTa5Nz9sLsQ0Q",
+    "at": "2026-10-01T00:00:00.000000",
+    "network": "instagram",
+    "scheduleDate": "2026-10-02T15:30:00Z"
+  },
+  "week18-wed-quote:instagram": {
+    "id": "0lBZV7lPesCOqQ6MBOUJ",
+    "at": "2026-10-01T00:00:00.000000",
+    "network": "instagram",
+    "scheduleDate": "2026-10-02T19:00:00Z"
+  },
+  "week18-wed-quote:threads": {
+    "id": "qsfNkZcfSLacpId9GmaT",
+    "at": "2026-10-01T00:00:00.000000",
+    "network": "threads",
+    "scheduleDate": "2026-10-02T19:00:00Z"
+  },
+  "week18-wed-quote:instagram:story": {
+    "id": "Q3f0srtftnaIhvDlwYOS",
+    "at": "2026-10-01T00:00:00.000000",
+    "network": "instagram",
+    "scheduleDate": "2026-10-02T19:00:00Z"
+  },
+  "week18-wed-employer:linkedin": {
+    "id": "qF7PaB5l4jXFBWkW7GJB",
+    "at": "2026-10-01T00:00:00.000000",
+    "network": "linkedin",
+    "scheduleDate": "2026-10-02T19:30:00Z"
+  },
+  "week18-wed-employer:gmb": {
+    "id": "CYTxTrswpXTmyfydWHkn",
+    "at": "2026-10-01T00:00:00.000000",
+    "network": "gmb",
+    "scheduleDate": "2026-10-02T19:30:00Z"
+  },
+  "week18-thu-education:instagram": {
+    "id": "tXhbtCmYZxwYRqrQwJaa",
+    "at": "2026-10-01T00:00:00.000000",
+    "network": "instagram",
+    "scheduleDate": "2026-10-03T12:30:00Z"
   },
   "week18-thu-education:linkedin": {
-    "id": "HEA40Fclchk3oMt2YtMZ",
-    "at": "2026-09-30T20:33:59.591538",
+    "id": "udNwiy1t57sWkCMdH7ZY",
+    "at": "2026-10-01T00:00:00.000000",
     "network": "linkedin",
-    "scheduleDate": "2026-10-01T12:30:00Z"
+    "scheduleDate": "2026-10-03T12:30:00Z"
   },
   "week18-thu-education:threads": {
-    "id": "10gVk4swpq3gajdpxO3Z",
-    "at": "2026-09-30T20:34:06.786438",
+    "id": "ZcrukznUQnqfb1e4MrU0",
+    "at": "2026-10-01T00:00:00.000000",
     "network": "threads",
-    "scheduleDate": "2026-10-01T12:30:00Z"
+    "scheduleDate": "2026-10-03T12:30:00Z"
   },
   "week18-thu-education:gmb": {
-    "id": "pbBZ7NAxPG7rDQVLfWpe",
-    "at": "2026-09-30T20:34:08.914249",
+    "id": "uKuzB2mAZIsbXWCystJX",
+    "at": "2026-10-01T00:00:00.000000",
     "network": "gmb",
-    "scheduleDate": "2026-10-01T12:30:00Z"
+    "scheduleDate": "2026-10-03T12:30:00Z"
   },
   "week18-thu-education:instagram:story": {
-    "id": "2B3kTaNHkrbMeSTNNk2G",
-    "at": "2026-09-30T20:34:11.290305",
+    "id": "RVdIEfvc0qx6eGyHGYhr",
+    "at": "2026-10-01T00:00:00.000000",
     "network": "instagram",
-    "scheduleDate": "2026-10-01T12:30:00Z"
+    "scheduleDate": "2026-10-03T12:30:00Z"
   },
   "week18-thu-engagement:instagram": {
-    "id": "SZIbxfFBpYmBzm0vUeio",
-    "at": "2026-09-30T20:34:13.316429",
+    "id": "NPdzL2rmF4IBENr8BwKI",
+    "at": "2026-10-01T00:00:00.000000",
     "network": "instagram",
-    "scheduleDate": "2026-10-01T15:30:00Z"
+    "scheduleDate": "2026-10-03T15:30:00Z"
   },
   "week18-thu-engagement:threads": {
-    "id": "ggruxCx9eJSxga0g3kZH",
-    "at": "2026-09-30T20:34:14.869091",
+    "id": "JEN9HcdTpurW6BHbVWej",
+    "at": "2026-10-01T00:00:00.000000",
     "network": "threads",
-    "scheduleDate": "2026-10-01T15:30:00Z"
+    "scheduleDate": "2026-10-03T15:30:00Z"
   },
   "week18-thu-engagement:linkedin": {
-    "id": "sTJ9r0JFVQfl9QCkTRSd",
-    "at": "2026-09-30T20:34:16.590276",
+    "id": "xcoWEsDTs0jaZ3AqIsB1",
+    "at": "2026-10-01T00:00:00.000000",
     "network": "linkedin",
-    "scheduleDate": "2026-10-01T15:30:00Z"
+    "scheduleDate": "2026-10-03T15:30:00Z"
   },
   "week18-thu-engagement:instagram:story": {
-    "id": "RvVMuhjfnsTAcCfuvHIN",
-    "at": "2026-09-30T20:34:18.570051",
+    "id": "LCRzkt7QZhN8W5CmejVX",
+    "at": "2026-10-01T00:00:00.000000",
     "network": "instagram",
-    "scheduleDate": "2026-10-01T15:30:00Z"
+    "scheduleDate": "2026-10-03T15:30:00Z"
   },
   "week18-thu-quote:instagram": {
-    "id": "8nPtRJdbNHRcjId3jq6h",
-    "at": "2026-09-30T20:34:20.676484",
+    "id": "I422IQ3cUXG6GRCsY1K9",
+    "at": "2026-10-01T00:00:00.000000",
     "network": "instagram",
-    "scheduleDate": "2026-10-01T19:00:00Z"
+    "scheduleDate": "2026-10-03T19:00:00Z"
   },
   "week18-thu-quote:threads": {
-    "id": "h9zMH0pUJ68fyDSS77Jh",
-    "at": "2026-09-30T20:34:22.536677",
+    "id": "6FaAacMYFx19lOrqPq0M",
+    "at": "2026-10-01T00:00:00.000000",
     "network": "threads",
-    "scheduleDate": "2026-10-01T19:00:00Z"
+    "scheduleDate": "2026-10-03T19:00:00Z"
   },
   "week18-thu-quote:instagram:story": {
-    "id": "ZiHkPXKq2hlyWMhxrPYO",
-    "at": "2026-09-30T20:34:24.762769",
+    "id": "f2WkocwrfpBswkFqpDy7",
+    "at": "2026-10-01T00:00:00.000000",
     "network": "instagram",
-    "scheduleDate": "2026-10-01T19:00:00Z"
+    "scheduleDate": "2026-10-03T19:00:00Z"
   },
   "week18-thu-employer:linkedin": {
-    "id": "5X9rGLbchNvgAjkXmm0w",
-    "at": "2026-09-30T20:34:27.512311",
+    "id": "KoVnanCWUpJ806egazdE",
+    "at": "2026-10-01T00:00:00.000000",
     "network": "linkedin",
-    "scheduleDate": "2026-10-01T19:30:00Z"
+    "scheduleDate": "2026-10-03T19:30:00Z"
   },
   "week18-thu-employer:gmb": {
-    "id": "YcQdVsjfAXhs8g0P6AZB",
-    "at": "2026-09-30T20:34:29.409649",
+    "id": "oH2rSJiaRYZVwRL65v7F",
+    "at": "2026-10-01T00:00:00.000000",
     "network": "gmb",
-    "scheduleDate": "2026-10-01T19:30:00Z"
+    "scheduleDate": "2026-10-03T19:30:00Z"
   },
   "week18-fri-education:instagram": {
-    "id": "FagiLoYqVFDIOsYVoH3s",
-    "at": "2026-09-30T20:34:33.801946",
+    "id": "2JF6XfZasWCNGPZZiREg",
+    "at": "2026-10-01T00:00:00.000000",
     "network": "instagram",
-    "scheduleDate": "2026-10-02T12:30:00Z"
+    "scheduleDate": "2026-10-04T12:30:00Z"
   },
   "week18-fri-education:linkedin": {
-    "id": "auKq1igiOYbPGcISRJKn",
-    "at": "2026-09-30T20:34:36.816474",
+    "id": "8PswxOeE1EXreNOX2iWo",
+    "at": "2026-10-01T00:00:00.000000",
     "network": "linkedin",
-    "scheduleDate": "2026-10-02T12:30:00Z"
+    "scheduleDate": "2026-10-04T12:30:00Z"
   },
   "week18-fri-education:threads": {
-    "id": "WkURAMM4nhzTmh8HTCg7",
-    "at": "2026-09-30T20:34:45.679415",
+    "id": "LHSL4k4lT6cF97VPfo3r",
+    "at": "2026-10-01T00:00:00.000000",
     "network": "threads",
-    "scheduleDate": "2026-10-02T12:30:00Z"
+    "scheduleDate": "2026-10-04T12:30:00Z"
   },
   "week18-fri-education:gmb": {
-    "id": "5AmlvlgzDkqE8y91Wfnb",
-    "at": "2026-09-30T20:34:47.723951",
+    "id": "znxg1zgpvWv1LsTNxpKD",
+    "at": "2026-10-01T00:00:00.000000",
     "network": "gmb",
-    "scheduleDate": "2026-10-02T12:30:00Z"
+    "scheduleDate": "2026-10-04T12:30:00Z"
   },
   "week18-fri-education:instagram:story": {
-    "id": "UTkK0Xud7YMvqpFr3qGt",
-    "at": "2026-09-30T20:34:50.821394",
+    "id": "LWiwXtFrC3sQMsNq0yux",
+    "at": "2026-10-01T00:00:00.000000",
     "network": "instagram",
-    "scheduleDate": "2026-10-02T12:30:00Z"
+    "scheduleDate": "2026-10-04T12:30:00Z"
   },
   "week18-fri-engagement:instagram": {
-    "id": "UxrlAMAXRKUTUgbMkpXO",
-    "at": "2026-09-30T20:34:53.148715",
+    "id": "wEfshvZN7FQmVSCw04zm",
+    "at": "2026-10-01T00:00:00.000000",
     "network": "instagram",
-    "scheduleDate": "2026-10-02T15:30:00Z"
+    "scheduleDate": "2026-10-04T15:30:00Z"
   },
   "week18-fri-engagement:threads": {
-    "id": "AkmuTLvhaIrRvFgPUFGn",
-    "at": "2026-09-30T20:34:55.608311",
+    "id": "oIB60ijzz38PHcA7nRjP",
+    "at": "2026-10-01T06:34:49.797721",
     "network": "threads",
-    "scheduleDate": "2026-10-02T15:30:00Z"
+    "scheduleDate": "2026-10-04T15:30:00Z"
   },
   "week18-fri-engagement:linkedin": {
-    "id": "Aj3ViIw88D4URXTQa1Yx",
-    "at": "2026-09-30T20:34:58.063860",
+    "id": "YsWboUOrKbxceOoZ3Jc4",
+    "at": "2026-10-01T06:34:52.542341",
     "network": "linkedin",
-    "scheduleDate": "2026-10-02T15:30:00Z"
+    "scheduleDate": "2026-10-04T15:30:00Z"
   },
   "week18-fri-engagement:instagram:story": {
-    "id": "uJc6BVZjIiWaG4movmXB",
-    "at": "2026-09-30T20:35:00.215263",
+    "id": "nSk9B7Vvhoip8DEvmSQ0",
+    "at": "2026-10-01T06:34:54.308341",
     "network": "instagram",
-    "scheduleDate": "2026-10-02T15:30:00Z"
+    "scheduleDate": "2026-10-04T15:30:00Z"
   },
   "week18-fri-quote:instagram": {
-    "id": "FwzZog0xKRokONrfuokN",
-    "at": "2026-09-30T20:35:02.672384",
+    "id": "8K4skUcpBtApDKr6mHmh",
+    "at": "2026-10-01T06:34:56.276064",
     "network": "instagram",
-    "scheduleDate": "2026-10-02T19:00:00Z"
+    "scheduleDate": "2026-10-04T19:00:00Z"
   },
   "week18-fri-quote:threads": {
-    "id": "OkEGbqoZUGomoriUJns0",
-    "at": "2026-09-30T20:35:04.785464",
+    "id": "99OyGi7OtTicEMvuLXqG",
+    "at": "2026-10-01T06:34:58.139789",
     "network": "threads",
-    "scheduleDate": "2026-10-02T19:00:00Z"
+    "scheduleDate": "2026-10-04T19:00:00Z"
   },
   "week18-fri-quote:instagram:story": {
-    "id": "x6R6RRavf6KNK8CsHxke",
-    "at": "2026-09-30T20:35:09.636305",
+    "id": "QS93q9c9YCRQM6ozWqEr",
+    "at": "2026-10-01T06:34:59.730802",
     "network": "instagram",
-    "scheduleDate": "2026-10-02T19:00:00Z"
+    "scheduleDate": "2026-10-04T19:00:00Z"
   },
   "week18-fri-employer:linkedin": {
-    "id": "jgvvacpIxLd6wqvGux11",
-    "at": "2026-09-30T20:35:12.006125",
+    "id": "ELCXq11BMyDcFLxV20c7",
+    "at": "2026-10-01T06:35:02.337059",
     "network": "linkedin",
-    "scheduleDate": "2026-10-02T19:30:00Z"
+    "scheduleDate": "2026-10-04T19:30:00Z"
   },
   "week18-fri-employer:gmb": {
-    "id": "oe6yQxpdRmujTtcJlypm",
-    "at": "2026-09-30T20:35:14.129701",
+    "id": "W3WShpEOGIkpodjaXtUE",
+    "at": "2026-10-01T06:35:04.350672",
     "network": "gmb",
-    "scheduleDate": "2026-10-02T19:30:00Z"
+    "scheduleDate": "2026-10-04T19:30:00Z"
+  },
+  "week18-thu-news:instagram:story": {
+    "id": "5hm4WMIWV8ndXEk55hON",
+    "at": "2026-10-01T06:35:06.304646",
+    "network": "instagram",
+    "scheduleDate": "2026-10-01T07:00:00Z"
   }
 }
