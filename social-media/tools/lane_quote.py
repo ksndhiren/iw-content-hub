@@ -59,6 +59,9 @@ def author_image(author):
     slug = _slug(author)
     if not slug:
         return None
+    cutout = os.path.join(_AUTH_CACHE, slug + ".png")
+    if os.path.exists(cutout):
+        return L.img(cutout)
     raw = next((os.path.join(_AUTH_DIR, slug + "." + e)
                 for e in ("jpg", "jpeg", "png", "webp")
                 if os.path.exists(os.path.join(_AUTH_DIR, slug + "." + e))), None)
@@ -69,7 +72,9 @@ def _wm(src, css, op=0.13, filt="grayscale(1)"):
     """One faint author watermark <img>. Empty string when no photo exists."""
     if not src:
         return ""
-    op = min(float(op), 0.06)
+    # User-approved direction: author portraits should remain watermark-style,
+    # but be 10% more visible than the baseline world setting.
+    op = min(float(op) * 1.10, 0.22)
     return (f"<img src='{src}' style='position:absolute;{css}opacity:{op};"
             f"filter:{filt};pointer-events:none;'>")
 

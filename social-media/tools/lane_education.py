@@ -69,8 +69,8 @@ CTA_TOPIC_POSES = {
     "networking": ["nuno_phone", "nuno_authority_4", "nuno_authority_1"],
     "apply": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4"],
     "cv": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4"],
-    "bullet_cv": ["nuno_cv_bullets"],
-    "job_description": ["nuno_job_description"],
+    "bullet_cv": ["nuno_cv_5", "nuno_cv_2", "nuno_cv_3"],
+    "job_description": ["nuno_cv_5", "nuno_dothis_1", "nuno_dothis_4"],
 }
 
 # ------------------------------------------------------------ topic-matched hook
@@ -82,7 +82,7 @@ CTA_TOPIC_POSES = {
 # logs a request for the specific shot we're missing instead of forcing a wrong
 # pose (see request_cover_pose + feedback_request_nuno_pics).
 TOPIC_POSES = {
-    "bullet_cv":  ["nuno_cv_bullets"],
+    "bullet_cv":  ["nuno_cv_4"],
     "job_description": ["nuno_job_description"],
     "cv":         ["nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4", "nuno_cvpile"],
     "apply":      ["nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4"],
@@ -512,7 +512,7 @@ def cover_frame(p, copy, total, pose):
                 f"<div style='display:flex;flex-wrap:wrap;'>{chips}</div></div>")
     swipe = (f"<div style=\"position:absolute;left:{x}px;bottom:56px;font-family:'DM Sans';font-weight:800;font-size:22px;"
              f"color:{NAVYT};\">Swipe to begin &rarr;</div>")
-    return (_bg(p) + tex + glow + burst + _nuno_whole(pose, h=770, right=-150)
+    return (_bg(p) + tex + glow + burst + _nuno_whole(pose, h=720, right=-84)
             + _logo(L.DARKLOGO, left=x, top=52) + card + contents + swipe)
 
 def content_frame(p, n, total, slide):
@@ -540,7 +540,7 @@ def cta_frame(p, copy, total, pose):
             f"font-size:58px;line-height:1.04;letter-spacing:-1.8px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
     sub = (f"<div style=\"position:absolute;left:{x}px;top:540px;width:430px;font-family:'DM Sans';font-weight:500;"
            f"font-size:33px;line-height:1.34;color:{p['mut']};\">{copy.get('cta','')}</div>")
-    nuno_right = 18 if pose == "nuno_cv_bullets" else -40
+    nuno_right = -40
     return (_bg(p) + _dot_texture("rgba(21,39,67,.045)") + _frame_border(p)
             + _nuno_whole(pose, h=700, right=nuno_right)
             + _logo(L.DARKLOGO, left=x, top=70) + eyebrow + head + sub
@@ -664,7 +664,7 @@ def cta_ticket(p, copy, total, pose):
            f"font-size:33px;line-height:1.34;color:{p['mut']};\">{copy.get('cta','')}</div>")
     image = _nuno_whole(pose, h=720, right=-60)
     if "job description" in copy.get("headline", "").lower():
-        image = _nuno_whole(pose, h=710, right=-135)
+        image = _nuno_whole(pose, h=700, right=-70)
     return (_bg(p) + image + stub + _logo(left=150, top=44) + head + sub
             + f"<div style='position:absolute;left:150px;top:690px;'>{_pill(p)}</div>")
 
@@ -726,7 +726,7 @@ def w_message_lab(copy, week_id='adhoc'):
     CREAM = "#F3EADA"; NAVYT = "#152743"; COFFEE = "#6F6350"
     bg = f"<div style='position:absolute;inset:0;background:{CREAM};'></div>"
     rail = f"<div style='position:absolute;left:0;top:0;bottom:0;width:154px;background:{NAVYT};'></div>"
-    logo = f"<img src='{L.WHT}' style='position:absolute;left:48px;top:44px;width:62px;filter:brightness(0) invert(1);'>"
+    logo = f"<img src='{L.ICONMARK}' style='position:absolute;left:48px;top:44px;width:66px;filter:brightness(0) invert(1);'>"
     label = (f"<div style=\"position:absolute;left:210px;top:76px;font-family:'DM Sans';font-weight:900;font-size:18px;"
              f"letter-spacing:5px;color:{GREEN};\">MESSAGE LAB</div>"
              f"<div style='position:absolute;left:210px;top:116px;width:86px;height:6px;background:{AMBER};'></div>")
