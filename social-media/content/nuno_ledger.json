@@ -664,6 +664,16 @@
       "cutout": "nuno_cvpile",
       "week": "week19",
       "date": "2026-10-05"
+    },
+    {
+      "cutout": "nuno_cv_bullets",
+      "week": "week19",
+      "date": "2026-10-05"
+    },
+    {
+      "cutout": "nuno_job_description",
+      "week": "week19",
+      "date": "2026-10-05"
     }
   ]
 }

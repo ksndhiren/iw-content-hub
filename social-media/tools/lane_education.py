@@ -69,6 +69,8 @@ CTA_TOPIC_POSES = {
     "networking": ["nuno_phone", "nuno_authority_4", "nuno_authority_1"],
     "apply": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4"],
     "cv": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4"],
+    "bullet_cv": ["nuno_cv_bullets"],
+    "job_description": ["nuno_job_description"],
 }
 
 # ------------------------------------------------------------ topic-matched hook
@@ -80,6 +82,8 @@ CTA_TOPIC_POSES = {
 # logs a request for the specific shot we're missing instead of forcing a wrong
 # pose (see request_cover_pose + feedback_request_nuno_pics).
 TOPIC_POSES = {
+    "bullet_cv":  ["nuno_cv_bullets"],
+    "job_description": ["nuno_job_description"],
     "cv":         ["nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4", "nuno_cvpile"],
     "apply":      ["nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4"],
     "interview":  ["nuno_authority_4", "nuno_authority_1", "nuno_authority_2", "nuno_authority_3"],
@@ -97,6 +101,8 @@ TOPIC_POSES = {
 }
 # Substring found in eyebrow/headline/slide text -> topic key above.
 TOPIC_KEYWORDS = [
+    ("turn 1 internship into 3 bullets", "bullet_cv"), ("3 bullets", "bullet_cv"), ("into 3 bullets", "bullet_cv"),
+    ("decode job descriptions", "job_description"), ("decode job", "job_description"), ("job descriptions", "job_description"), ("job description", "job_description"),
     ("cover letter", "cv"), ("resume", "cv"), ("cv", "cv"),
     ("application", "apply"), ("apply", "apply"), ("ats", "apply"),
     ("interview", "interview"), ("assessment", "interview"),
@@ -534,8 +540,9 @@ def cta_frame(p, copy, total, pose):
             f"font-size:58px;line-height:1.04;letter-spacing:-1.8px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
     sub = (f"<div style=\"position:absolute;left:{x}px;top:540px;width:430px;font-family:'DM Sans';font-weight:500;"
            f"font-size:33px;line-height:1.34;color:{p['mut']};\">{copy.get('cta','')}</div>")
+    nuno_right = 18 if pose == "nuno_cv_bullets" else -40
     return (_bg(p) + _dot_texture("rgba(21,39,67,.045)") + _frame_border(p)
-            + _nuno_whole(pose, h=700, right=-40)
+            + _nuno_whole(pose, h=700, right=nuno_right)
             + _logo(L.DARKLOGO, left=x, top=70) + eyebrow + head + sub
             + f"<div style='position:absolute;left:{x}px;top:680px;'>{_pill(p, dark_ink=True)}</div>")
 
@@ -624,7 +631,8 @@ def cover_ticket(p, copy, total, pose):
               f"<div style='position:absolute;left:28px;top:330px;width:120px;height:120px;border:5px solid {p['deep']};border-radius:50%;display:flex;align-items:center;justify-content:center;'>{L.svg('search',p['deep'],54)}</div></div>")
     deco = (_barcode("left:150px;top:640px;") + jd + L.dots("left:150px;top:470px;", color="rgba(255,177,32,.32)", w=180, h=100)
             + L.watermark(w=300, right=60, bottom=320, op=.045, tint="light"))
-    return (_bg(p) + deco + _nuno_whole(pose, h=760, right=-60) + stub + _logo(left=150, top=44) + eyebrow + head + swipe)
+    nuno = _nuno_whole(pose, h=720, right=-118) if "job description" in copy.get("headline", "").lower() else _nuno_whole(pose, h=760, right=-60)
+    return (_bg(p) + deco + nuno + stub + _logo(left=150, top=44) + eyebrow + head + swipe)
 
 def content_ticket(p, n, total, slide):
     stub = (f"<div style='position:absolute;left:0;top:0;bottom:0;width:96px;background:{p['accent']};"
@@ -654,20 +662,10 @@ def cta_ticket(p, copy, total, pose):
             f"font-size:56px;line-height:1.04;letter-spacing:-1.6px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
     sub = (f"<div style=\"position:absolute;left:150px;top:540px;width:420px;font-family:'DM Sans';font-weight:500;"
            f"font-size:33px;line-height:1.34;color:{p['mut']};\">{copy.get('cta','')}</div>")
-    document = ""
     image = _nuno_whole(pose, h=720, right=-60)
     if "job description" in copy.get("headline", "").lower():
-        image = ""
-        document = (f"<div style='position:absolute;right:84px;top:224px;width:340px;height:530px;background:#F7F1E7;"
-                    f"border:4px solid {p['accent']};transform:rotate(4deg);box-shadow:14px 14px 0 rgba(255,177,32,.18);'>"
-                    f"<div style=\"position:absolute;left:30px;top:34px;font-family:'DM Sans';font-weight:900;font-size:18px;color:{p['deep']};letter-spacing:3px;\">DECODED</div>"
-                    f"<div style='position:absolute;left:30px;top:94px;width:245px;height:22px;background:{p['deep']};'></div>"
-                    f"<div style='position:absolute;left:30px;top:152px;width:250px;height:18px;background:{p['mut']};opacity:.45;'></div>"
-                    f"<div style='position:absolute;left:30px;top:196px;width:220px;height:20px;background:{p['accent']};'></div>"
-                    f"<div style='position:absolute;left:30px;top:242px;width:260px;height:18px;background:{p['mut']};opacity:.45;'></div>"
-                    f"<div style='position:absolute;left:30px;top:288px;width:176px;height:20px;background:{CORAL};'></div>"
-                    f"<div style='position:absolute;left:30px;bottom:42px;height:56px;padding:0 22px;border-radius:28px;background:{p['deep']};display:flex;align-items:center;font-family:Inter;font-weight:900;font-size:22px;color:#fff;'>Match the language</div></div>")
-    return (_bg(p) + image + document + stub + _logo(left=150, top=44) + head + sub
+        image = _nuno_whole(pose, h=710, right=-135)
+    return (_bg(p) + image + stub + _logo(left=150, top=44) + head + sub
             + f"<div style='position:absolute;left:150px;top:690px;'>{_pill(p)}</div>")
 
 
