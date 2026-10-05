@@ -70,7 +70,7 @@ CTA_TOPIC_POSES = {
     "apply": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4"],
     "cv": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4"],
     "bullet_cv": ["nuno_cv_5", "nuno_cv_2", "nuno_cv_3"],
-    "job_description": ["nuno_cv_5", "nuno_dothis_1", "nuno_dothis_4"],
+    "job_description": ["nuno_cv_3"],
 }
 
 # ------------------------------------------------------------ topic-matched hook
