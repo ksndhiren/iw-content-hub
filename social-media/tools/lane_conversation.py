@@ -256,6 +256,69 @@ def w_cv_poll(idea):
     return bg + slip + _logo_white() + label + hook + poll + _comment_prompt(120, 838) + cta
 
 
+def w_route_map(idea):
+    """Journey-map poll: each answer is a different route, useful for application blockers."""
+    options = idea.get("options", [])[:3]
+    bg = f"<div style='position:absolute;inset:0;background:#F6F1E7;'></div>"
+    grid = ("<div style='position:absolute;inset:0;opacity:.34;"
+            "background-image:linear-gradient(rgba(21,39,67,.11) 1px,transparent 1px),"
+            "linear-gradient(90deg,rgba(21,39,67,.11) 1px,transparent 1px);"
+            "background-size:54px 54px;'></div>")
+    map_card = (f"<div style='position:absolute;left:66px;top:170px;width:948px;height:770px;background:#fff;"
+                f"border:4px solid {NAVYT};box-shadow:16px 18px 0 {GREEN};'></div>")
+    route = (f"<svg style='position:absolute;left:116px;top:520px;width:832px;height:230px;' viewBox='0 0 832 230' fill='none'>"
+             f"<path d='M32 178 C190 50 310 42 444 136 S666 238 796 44' stroke='{NAVYT}' stroke-width='12' stroke-linecap='round' stroke-dasharray='20 22'/>"
+             f"<circle cx='32' cy='178' r='20' fill='{AMBER}'/><circle cx='444' cy='136' r='20' fill='{CORAL}'/><circle cx='796' cy='44' r='20' fill='{GREEN}'/>"
+             f"</svg>")
+    label = (f"<div style=\"position:absolute;left:116px;top:232px;font-family:'DM Sans';font-weight:900;font-size:18px;"
+             f"color:{GREEN};letter-spacing:5px;\">APPLICATION ROUTE</div>")
+    hook = (f"<div style=\"position:absolute;left:116px;top:292px;width:720px;font-family:Georgia,serif;font-weight:700;"
+            f"font-size:76px;line-height:.98;color:{NAVYT};\">{idea['hook']}</div>")
+    sub = ""
+    chips = ""
+    for i, opt in enumerate(options):
+        x = [116, 382, 640][i]
+        y = [760, 682, 770][i]
+        chips += (f"<div style='position:absolute;left:{x}px;top:{y}px;width:230px;min-height:92px;background:{[AMBER,CORAL,GREEN][i]};"
+                  f"border:3px solid {NAVYT};box-shadow:8px 8px 0 rgba(21,39,67,.18);padding:16px 18px;'>"
+                  f"<div style=\"font-family:'DM Sans';font-weight:900;font-size:16px;letter-spacing:3px;color:{NAVYT};\">ROUTE {chr(65+i)}</div>"
+                  f"<div style=\"font-family:Inter;font-weight:950;font-size:26px;line-height:1.02;color:{NAVYT};margin-top:6px;\">{opt}</div></div>")
+    cta = (f"<div style=\"position:absolute;left:650px;top:904px;height:46px;padding:0 20px;border-radius:23px;background:{NAVYT};"
+           f"display:flex;align-items:center;font-family:'DM Sans';font-weight:900;font-size:20px;color:#fff;\">"
+           f"{idea.get('cta','Start at internwise.co.uk')}</div>")
+    return bg + grid + map_card + _logo_dark() + label + hook + sub + route + chips + _comment_prompt(116, 900) + cta
+
+
+def w_comment_wall(idea):
+    """Editorial comment-wall poll: feels like a social conversation, not an MCQ card."""
+    options = idea.get("options", [])[:3]
+    bg = f"<div style='position:absolute;inset:0;background:{DEEP};'></div>"
+    glow = (f"<div style='position:absolute;right:-180px;top:-140px;width:560px;height:560px;border-radius:50%;background:{CORAL};opacity:.16;'></div>"
+            f"<div style='position:absolute;left:-130px;bottom:-140px;width:520px;height:520px;border-radius:50%;background:{GREEN};opacity:.13;'></div>")
+    paper = (f"<div style='position:absolute;left:70px;top:166px;width:940px;height:770px;border-radius:34px;background:#F7F1E7;"
+             f"box-shadow:0 34px 80px rgba(0,0,0,.38);overflow:hidden;'></div>")
+    band = f"<div style='position:absolute;left:70px;top:166px;width:940px;height:126px;background:{AMBER};'></div>"
+    label = (f"<div style=\"position:absolute;left:116px;top:210px;font-family:'DM Sans';font-weight:950;font-size:18px;"
+             f"letter-spacing:5px;color:{NAVYT};\">COMMENT THREAD</div>")
+    hook = (f"<div style=\"position:absolute;left:116px;top:326px;width:610px;font-family:Inter;font-weight:950;"
+            f"font-size:76px;line-height:.98;letter-spacing:-2.2px;color:{NAVYT};\">{idea['hook']}</div>")
+    quote = (f"<div style=\"position:absolute;right:118px;top:340px;width:238px;font-family:Georgia,serif;font-style:italic;"
+             f"font-weight:700;font-size:30px;line-height:1.16;color:{CORAL};\">{idea.get('takeaway','')}</div>")
+    bubbles = ""
+    for i, opt in enumerate(options):
+        y = 610 + i * 88
+        width = [700, 620, 672][i]
+        bubbles += (f"<div style='position:absolute;left:116px;top:{y}px;width:{width}px;min-height:62px;border-radius:31px;"
+                    f"background:{['#fff','#EAF2FB','#fff'][i]};border:3px solid {NAVYT};display:flex;align-items:center;gap:16px;"
+                    f"padding:10px 20px;box-shadow:7px 7px 0 rgba(21,39,67,.12);'>"
+                    f"<div style='width:42px;height:42px;border-radius:50%;background:{[AMBER,GREEN,CORAL][i]};display:flex;align-items:center;justify-content:center;"
+                    f"font-family:Inter;font-weight:950;font-size:20px;color:{NAVYT};'>{chr(65+i)}</div>"
+                    f"<div style=\"font-family:Inter;font-weight:950;font-size:28px;color:{NAVYT};letter-spacing:-.6px;\">{opt}</div></div>")
+    cta = (f"<div style='position:absolute;right:116px;bottom:102px;height:58px;padding:0 24px;border-radius:29px;background:{NAVYT};"
+           f"display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:23px;color:#fff;'>{idea.get('cta','internwise.co.uk')}</div>")
+    return bg + glow + paper + band + L.logo_tl() + label + hook + quote + bubbles + _comment_prompt(116, 872) + cta
+
+
 WORLDS = {
     "decision": w_decision_prompt,
     "proofboard": w_proofboard,
@@ -265,6 +328,8 @@ WORLDS = {
     "vote_cards": w_vote_cards,
     "shortlist_poll": w_shortlist_poll,
     "cv_poll": w_cv_poll,
+    "route_map": w_route_map,
+    "comment_wall": w_comment_wall,
 }
 
 

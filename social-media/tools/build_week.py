@@ -90,10 +90,11 @@ EMPLOYER_PAIRS = [("benefits", "e001"), ("bigstat", "e004"), ("process", "e003")
                   ("trust", "e005"), ("statement", "e002")]
 # All employer worlds (incl. the week16 additions) + a compatible angle for CTA copy.
 # World SELECTION now goes through the design ledger (no-repeat), not this list's rotation.
-EMPLOYER_WORLDS = ["benefits", "bigstat", "process", "trust", "statement", "kpi", "cards", "pipeline", "proofboard"]
+EMPLOYER_WORLDS = ["benefits", "bigstat", "process", "trust", "statement", "kpi", "cards", "pipeline", "proofboard",
+                   "command", "talentmap"]
 EMPLOYER_ANGLE = {"benefits": "e001", "bigstat": "e004", "process": "e003",
                   "trust": "e005", "statement": "e002", "kpi": "e004", "cards": "e001",
-                  "pipeline": "e003", "proofboard": "e004"}
+                  "pipeline": "e003", "proofboard": "e004", "command": "e006", "talentmap": "e004"}
 # education: 3 carousels + 2 singles. The FORMAT is fixed per weekday (Mon-Wed
 # carousels, Thu/Fri singles) so the weekly mix never drifts; the visual WORLD
 # rotates by week (see week_offset / build) so the same weekday never looks the
@@ -102,7 +103,8 @@ EDU_FORMAT_BY_DAY = ["carousel", "carousel", "carousel", "single", "single"]
 EDU_CAROUSEL_WORLDS = ["navy", "plum", "teal", "cream", "midnight", "slate",
                        "marker", "flash", "tabs"]
 EDU_SINGLE_WORLDS = ["tipcard", "statement", "bigidea", "splitcard", "memo", "scorecard"]
-CONVERSATION_WORLDS = ["decision", "proofboard", "debate", "scorecard", "signal"]
+CONVERSATION_WORLDS = ["decision", "proofboard", "debate", "scorecard", "signal",
+                       "vote_cards", "shortlist_poll", "cv_poll", "route_map", "comment_wall"]
 
 
 def week_offset(wid):
@@ -291,6 +293,13 @@ def _recent_quote_blocks(wid, weeks=QUOTE_DEDUP_WEEKS):
 def pick_quote_ids(quotes, days, wid):
     """Pick quote IDs from the normal weekly rotation while blocking recent
     quote IDs/authors. Raises instead of silently repeating unless explicitly overridden."""
+    def has_portrait(q):
+        author = q.get("author", "")
+        slug = re.sub(r"[^a-z0-9]+", "-", author.lower()).strip("-")
+        auth_dir = os.path.join(L.BASE, "assets", "quote_authors")
+        return any(os.path.exists(os.path.join(auth_dir, f"{slug}.{ext}"))
+                   for ext in ("jpg", "jpeg", "png", "webp"))
+
     qids = sorted(quotes.keys())
     try:
         wn = int(wid.replace("week", ""))
@@ -301,14 +310,15 @@ def pick_quote_ids(quotes, days, wid):
     blocked_ids, blocked_authors = _recent_quote_blocks(wid)
     fresh = [qid for qid in rotated
              if qid not in blocked_ids
-             and quotes[qid].get("author", "").strip().lower() not in blocked_authors]
+             and quotes[qid].get("author", "").strip().lower() not in blocked_authors
+             and has_portrait(quotes[qid])]
     if len(fresh) < days and not topic_repeat_allowed():
         raise TopicFreshnessError(
-            f"Quote bank has only {len(fresh)} fresh quote(s) for {days} slot(s) after the "
-            f"{QUOTE_DEDUP_WEEKS}-week lookback. Add quotes or set {TOPIC_REPEAT_OVERRIDE_ENV}=1 "
-            "for an explicit emergency repeat."
+            f"Quote bank has only {len(fresh)} fresh portrait-backed quote(s) for {days} slot(s) "
+            f"after the {QUOTE_DEDUP_WEEKS}-week lookback. Add real author portraits/quotes or "
+            f"set {TOPIC_REPEAT_OVERRIDE_ENV}=1 for an explicit emergency repeat."
         )
-    fallback = [qid for qid in rotated if qid not in fresh]
+    fallback = [qid for qid in rotated if qid not in fresh and has_portrait(quotes[qid])]
     return (fresh + fallback)[:days]
 
 

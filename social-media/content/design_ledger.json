@@ -259,6 +259,106 @@
       "lane": "conversation",
       "week": "week18",
       "world": "signal"
+    },
+    {
+      "lane": "quote",
+      "week": "week19",
+      "world": "arc"
+    },
+    {
+      "lane": "quote",
+      "week": "week19",
+      "world": "blueprint"
+    },
+    {
+      "lane": "quote",
+      "week": "week19",
+      "world": "band"
+    },
+    {
+      "lane": "quote",
+      "week": "week19",
+      "world": "minimal"
+    },
+    {
+      "lane": "quote",
+      "week": "week19",
+      "world": "bubble"
+    },
+    {
+      "lane": "employer",
+      "week": "week19",
+      "world": "command"
+    },
+    {
+      "lane": "employer",
+      "week": "week19",
+      "world": "talentmap"
+    },
+    {
+      "lane": "employer",
+      "week": "week19",
+      "world": "benefits"
+    },
+    {
+      "lane": "employer",
+      "week": "week19",
+      "world": "trust"
+    },
+    {
+      "lane": "employer",
+      "week": "week19",
+      "world": "statement"
+    },
+    {
+      "lane": "edu_carousel",
+      "week": "week19",
+      "world": "cream"
+    },
+    {
+      "lane": "edu_carousel",
+      "week": "week19",
+      "world": "midnight"
+    },
+    {
+      "lane": "edu_carousel",
+      "week": "week19",
+      "world": "slate"
+    },
+    {
+      "lane": "edu_single",
+      "week": "week19",
+      "world": "tipcard"
+    },
+    {
+      "lane": "edu_single",
+      "week": "week19",
+      "world": "statement"
+    },
+    {
+      "lane": "conversation",
+      "week": "week19",
+      "world": "vote_cards"
+    },
+    {
+      "lane": "conversation",
+      "week": "week19",
+      "world": "shortlist_poll"
+    },
+    {
+      "lane": "conversation",
+      "week": "week19",
+      "world": "cv_poll"
+    },
+    {
+      "lane": "conversation",
+      "week": "week19",
+      "world": "route_map"
+    },
+    {
+      "lane": "conversation",
+      "week": "week19",
+      "world": "comment_wall"
     }
   ]
 }

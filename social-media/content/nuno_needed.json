@@ -1,29 +1,82 @@
 {
-  "week": "week18",
-  "generatedAt": "2026-09-28T18:16:56Z",
+  "week": "week19",
+  "generatedAt": "2026-10-05T03:18:43Z",
   "needByFamily": {
     "planning": 1,
-    "cvpile": 1,
-    "thumbsup": 1
+    "cvpile": 2,
+    "dothis": 1,
+    "authority": 3,
+    "tablet_cover": 1,
+    "tablet": 1,
+    "utility": 1,
+    "offers": 1
   },
   "repeats": [
     {
-      "label": "employer/process",
-      "cutout": "nuno_planning_1",
+      "label": "employer/command",
+      "cutout": "nuno_planning_3",
       "family": "planning",
-      "week": "week18"
+      "week": "week19"
     },
     {
-      "label": "education/plum/cover",
+      "label": "education/cream/cover",
       "cutout": "nuno_cvpile",
       "family": "cvpile",
-      "week": "week18"
+      "week": "week19"
     },
     {
-      "label": "education/plum/cta",
-      "cutout": "nuno_thumbsup",
-      "family": "thumbsup",
-      "week": "week18"
+      "label": "education/cream/cta",
+      "cutout": "nuno_dothis_4",
+      "family": "dothis",
+      "week": "week19"
+    },
+    {
+      "label": "employer/talentmap",
+      "cutout": "nuno_authority_4",
+      "family": "authority",
+      "week": "week19"
+    },
+    {
+      "label": "education/midnight/cover",
+      "cutout": "nuno_tablet_cover",
+      "family": "tablet_cover",
+      "week": "week19"
+    },
+    {
+      "label": "education/midnight/cta",
+      "cutout": "nuno_tablet",
+      "family": "tablet",
+      "week": "week19"
+    },
+    {
+      "label": "employer/benefits",
+      "cutout": "nuno_authority_2",
+      "family": "authority",
+      "week": "week19"
+    },
+    {
+      "label": "education/slate/cover",
+      "cutout": "nuno_utility_3",
+      "family": "utility",
+      "week": "week19"
+    },
+    {
+      "label": "education/slate/cta",
+      "cutout": "nuno_offers_4",
+      "family": "offers",
+      "week": "week19"
+    },
+    {
+      "label": "employer/trust",
+      "cutout": "nuno_authority_3",
+      "family": "authority",
+      "week": "week19"
+    },
+    {
+      "label": "employer/statement",
+      "cutout": "nuno_cvpile",
+      "family": "cvpile",
+      "week": "week19"
     }
   ]
 }

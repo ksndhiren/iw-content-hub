@@ -734,6 +734,141 @@
       "core_takeaway": "Use one context line, one reason for asking, and one easy question.",
       "cta": "Save this before your next LinkedIn message.",
       "source_signals": []
+    },
+    {
+      "id": "auto-stop-applying-without-a-role-filter",
+      "title": "Stop Applying Without A Role Filter",
+      "source_post": "operator-topic-topup",
+      "source_cluster": "role-selection",
+      "signal_score": 78.2,
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "If every role looks possible, your filter is too weak.",
+        "Before you apply, decide what deserves your time."
+      ],
+      "promise": "I will show you a simple filter for choosing roles that are worth a tailored application.",
+      "proof_points": [
+        "A role filter stops you applying to everything and improving nothing.",
+        "Match the role to your current proof, not just your dream title.",
+        "The best applications start with a narrower shortlist."
+      ],
+      "core_takeaway": "Score each role on skill fit, proof fit, and next-step value before applying.",
+      "cta": "Save this before your next search session.",
+      "source_signals": []
+    },
+    {
+      "id": "auto-turn-one-internship-into-three-cv-bullets",
+      "title": "Turn One Internship Into Three CV Bullets",
+      "source_post": "operator-topic-topup",
+      "source_cluster": "cv-evidence",
+      "signal_score": 77.5,
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "One internship can give you more than one CV bullet.",
+        "Do not write what you did. Show what it proved."
+      ],
+      "promise": "I will show you how to turn one placement into clear evidence for three different roles.",
+      "proof_points": [
+        "One task can prove ownership, communication, and commercial awareness.",
+        "A good bullet includes action, context, and result.",
+        "Different roles need different evidence from the same experience."
+      ],
+      "core_takeaway": "Break one experience into skill, action, and result so your CV shows range.",
+      "cta": "Save this for your next CV rewrite.",
+      "source_signals": []
+    },
+    {
+      "id": "auto-the-application-line-that-earns-attention",
+      "title": "The Application Line That Earns Attention",
+      "source_post": "operator-topic-topup",
+      "source_cluster": "cover-note",
+      "signal_score": 76.9,
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "Your first line should not sound like everyone else's.",
+        "The opening line can tell an employer you understood the role."
+      ],
+      "promise": "I will show you a first-line formula that makes your application feel specific.",
+      "proof_points": [
+        "Generic enthusiasm is easy to ignore.",
+        "A useful first line connects the role problem to your evidence.",
+        "Specificity beats flattery when an employer scans quickly."
+      ],
+      "core_takeaway": "Open with role need, relevant proof, and the outcome you can help with.",
+      "cta": "Save this before your next cover note.",
+      "source_signals": []
+    },
+    {
+      "id": "auto-find-the-hidden-skill-in-the-job-ad",
+      "title": "Find The Hidden Skill In The Job Ad",
+      "source_post": "operator-topic-topup",
+      "source_cluster": "job-description",
+      "signal_score": 75.8,
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "The most important skill is not always in the bullet list.",
+        "Job ads hide the real priority in repeated words."
+      ],
+      "promise": "I will show you how to spot the skill the employer is really hiring for.",
+      "proof_points": [
+        "Repeated verbs show the day-to-day work.",
+        "The order of requirements often signals urgency.",
+        "Your CV should echo the priority, not copy the whole advert."
+      ],
+      "core_takeaway": "Circle repeated verbs, urgent outcomes, and required tools before tailoring your application.",
+      "cta": "Save this before you apply.",
+      "source_signals": []
+    },
+    {
+      "id": "auto-build-an-interview-story-bank",
+      "title": "Build An Interview Story Bank",
+      "source_post": "operator-topic-topup",
+      "source_cluster": "interview-prep",
+      "signal_score": 75.1,
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "Stop preparing answers. Start preparing stories.",
+        "A story bank makes interview questions less random."
+      ],
+      "promise": "I will show you the five stories to prepare before an internship interview.",
+      "proof_points": [
+        "Most interview questions can be answered from a small set of strong examples.",
+        "A useful story includes situation, action, result, and lesson.",
+        "Preparing stories stops you memorising robotic answers."
+      ],
+      "core_takeaway": "Prepare stories for teamwork, problem solving, learning fast, handling feedback, and ownership.",
+      "cta": "Save this before your next interview.",
+      "source_signals": []
     }
   ],
   "fingerprint": "10c997e89d559d2b"

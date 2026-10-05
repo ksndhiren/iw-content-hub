@@ -56,6 +56,51 @@
       "options": ["A real project", "A measurable result", "A named skill"],
       "takeaway": "Find an internship that gives your CV something specific to prove.",
       "cta": "Build proof at internwise.co.uk"
+    },
+    {
+      "id": "c006",
+      "format": "decision_prompt",
+      "hook": "Which role feels worth your time?",
+      "subhead": "Not every vacancy deserves another tab. Choose the signal that makes a role feel real.",
+      "options": ["Clear tasks", "Named skills", "Paid learning"],
+      "takeaway": "The best role is the one you can picture yourself starting.",
+      "cta": "Find clearer roles at internwise.co.uk"
+    },
+    {
+      "id": "c007",
+      "format": "decision_prompt",
+      "hook": "What would make you interview-ready?",
+      "subhead": "Confidence usually comes from one missing piece of preparation.",
+      "options": ["Role research", "Practice answers", "Better proof"],
+      "takeaway": "Pick the weakest part, then make it visible before you apply.",
+      "cta": "Start with one role at internwise.co.uk"
+    },
+    {
+      "id": "c008",
+      "format": "decision_prompt",
+      "hook": "Which internship would you choose?",
+      "subhead": "The strongest choice is not always the biggest name. It is the one that builds your next proof point.",
+      "options": ["More ownership", "Better mentoring", "Clearer skills"],
+      "takeaway": "Choose the placement that gives your next application a stronger story.",
+      "cta": "Compare opportunities at internwise.co.uk"
+    },
+    {
+      "id": "c009",
+      "format": "decision_prompt",
+      "hook": "What makes an employer reply?",
+      "subhead": "A stronger application gives the recruiter less work to understand your fit.",
+      "options": ["Specific proof", "Relevant skills", "Clear availability"],
+      "takeaway": "Make the match obvious before the recruiter has to search for it.",
+      "cta": "Apply with proof at internwise.co.uk"
+    },
+    {
+      "id": "c010",
+      "format": "decision_prompt",
+      "hook": "What is your next small move?",
+      "subhead": "Momentum starts with a step small enough to do today.",
+      "options": ["Save a role", "Rewrite one line", "Send one application"],
+      "takeaway": "One visible move beats another week of planning.",
+      "cta": "Make the next move at internwise.co.uk"
     }
   ]
 }
