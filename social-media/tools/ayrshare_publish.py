@@ -68,19 +68,19 @@ NET_LIMIT = {"twitter": 280, "threads": 500, "instagram": 2200,
              "pinterest": 500}
 # GMB only accepts a SINGLE image per post (no carousels); these lanes send just
 # their cover slide to GMB (see build_jobs).
-SINGLE_IMAGE_NETS = {"gmb"}
+SINGLE_IMAGE_NETS = {"gmb", "pinterest"}
 # Lane -> the networks we WANT it on (before intersecting with connected ones).
 # gmb added to the substantive, business-relevant lanes only (news/employer/
 # education); quote/fun/engagement/featured stay off GMB.
 LANE_NETWORKS = {
     "news":      ["instagram", "facebook", "linkedin", "twitter", "threads", "gmb", "pinterest"],
-    "quote":     ["instagram", "facebook", "threads", "twitter"],
-    "fun":       ["instagram", "facebook", "threads", "twitter"],
-    "engagement":["instagram", "facebook", "threads", "twitter", "linkedin"],
+    "quote":     ["instagram", "facebook", "threads", "twitter", "pinterest"],
+    "fun":       ["instagram", "facebook", "threads", "twitter", "pinterest"],
+    "engagement":["instagram", "facebook", "threads", "twitter", "linkedin", "pinterest"],
     "employer":  ["linkedin", "facebook", "gmb"],
-    "education": ["instagram", "linkedin", "facebook", "threads", "gmb"],
+    "education": ["instagram", "linkedin", "facebook", "threads", "gmb", "pinterest"],
     # Featured job ads: candidate-facing + employer-credible.
-    "featured":  ["instagram", "facebook", "linkedin", "threads"],
+    "featured":  ["instagram", "facebook", "linkedin", "threads", "pinterest"],
 }
 # Instagram location tagging (IG feed only). Ayrshare tags a location by a
 # Facebook Page ID (or "@pagename") for a place with a physical location - a whole
