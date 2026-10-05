@@ -487,11 +487,11 @@ def cover_frame(p, copy, total, pose):
     # Energy arc seated low-right behind Nuno (a clean quarter-ring, not a floating band).
     burst = (f"<div style='position:absolute;right:-200px;bottom:-200px;width:720px;height:720px;border-radius:50%;"
              f"border:54px solid {AMBER};opacity:.92;'></div>")
-    glow = _glow("rgba(255,177,32,.16)", right=-60, bottom=-30, size=560)
+    glow = ""
     # Headline billboard kept in the LEFT column only (width 452) so it never overlaps
     # Nuno's head; he is pushed right and clears the card.
     card = (f"<div style='position:absolute;left:{x}px;top:196px;width:452px;background:{NAVYT};border-radius:28px;"
-            f"padding:38px 38px 42px;box-shadow:0 34px 66px rgba(21,39,67,.30);'>"
+            f"padding:38px 38px 42px;'>"
             f"<div style='display:inline-flex;align-items:center;height:42px;padding:0 20px;border-radius:21px;background:{AMBER};margin-bottom:22px;'>"
             f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:19px;color:{NAVYT};letter-spacing:3px;\">{copy.get('eyebrow','GUIDE')[:20].upper()}</span></div>"
             f"<div style=\"font-family:Inter;font-weight:800;font-size:72px;line-height:1.0;letter-spacing:-2.2px;color:#fff;word-break:keep-all;\">{copy['headline']}</div></div>")
@@ -534,7 +534,7 @@ def cta_frame(p, copy, total, pose):
             f"font-size:58px;line-height:1.04;letter-spacing:-1.8px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
     sub = (f"<div style=\"position:absolute;left:{x}px;top:540px;width:430px;font-family:'DM Sans';font-weight:500;"
            f"font-size:33px;line-height:1.34;color:{p['mut']};\">{copy.get('cta','')}</div>")
-    return (_bg(p) + _dot_texture("rgba(21,39,67,.045)") + _glow("rgba(91,146,145,.18)") + _frame_border(p)
+    return (_bg(p) + _dot_texture("rgba(21,39,67,.045)") + _frame_border(p)
             + _nuno_whole(pose, h=700, right=-40)
             + _logo(L.DARKLOGO, left=x, top=70) + eyebrow + head + sub
             + f"<div style='position:absolute;left:{x}px;top:680px;'>{_pill(p, dark_ink=True)}</div>")
@@ -611,7 +611,18 @@ def cover_ticket(p, copy, total, pose):
             f"font-size:66px;line-height:1.04;letter-spacing:-1.7px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
     swipe = (f"<div style=\"position:absolute;left:150px;bottom:56px;font-family:'DM Sans';font-weight:700;font-size:22px;"
              f"color:{p['accent']};\">Swipe to board &rarr;</div>")
-    deco = (_barcode("left:150px;top:640px;") + L.dots("left:150px;top:470px;", color="rgba(255,177,32,.32)", w=180, h=100)
+    jd = ""
+    if "job description" in copy.get("headline", "").lower():
+        jd = (f"<div style='position:absolute;right:72px;top:198px;width:340px;height:440px;background:#F7F1E7;"
+              f"border:4px solid {p['accent']};transform:rotate(3deg);box-shadow:12px 12px 0 rgba(255,177,32,.18);'>"
+              f"<div style=\"position:absolute;left:28px;top:30px;font-family:'DM Sans';font-weight:900;font-size:18px;color:{p['deep']};letter-spacing:3px;\">JOB DESCRIPTION</div>"
+              f"<div style='position:absolute;left:28px;top:88px;width:250px;height:20px;background:{p['deep']};opacity:.9;'></div>"
+              f"<div style='position:absolute;left:28px;top:136px;width:210px;height:16px;background:{p['mut']};opacity:.55;'></div>"
+              f"<div style='position:absolute;left:28px;top:176px;width:260px;height:18px;background:{p['accent']};'></div>"
+              f"<div style='position:absolute;left:28px;top:222px;width:230px;height:16px;background:{p['mut']};opacity:.55;'></div>"
+              f"<div style='position:absolute;left:28px;top:264px;width:180px;height:18px;background:{CORAL};'></div>"
+              f"<div style='position:absolute;left:28px;top:330px;width:120px;height:120px;border:5px solid {p['deep']};border-radius:50%;display:flex;align-items:center;justify-content:center;'>{L.svg('search',p['deep'],54)}</div></div>")
+    deco = (_barcode("left:150px;top:640px;") + jd + L.dots("left:150px;top:470px;", color="rgba(255,177,32,.32)", w=180, h=100)
             + L.watermark(w=300, right=60, bottom=320, op=.045, tint="light"))
     return (_bg(p) + deco + _nuno_whole(pose, h=760, right=-60) + stub + _logo(left=150, top=44) + eyebrow + head + swipe)
 
@@ -643,7 +654,20 @@ def cta_ticket(p, copy, total, pose):
             f"font-size:56px;line-height:1.04;letter-spacing:-1.6px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
     sub = (f"<div style=\"position:absolute;left:150px;top:540px;width:420px;font-family:'DM Sans';font-weight:500;"
            f"font-size:33px;line-height:1.34;color:{p['mut']};\">{copy.get('cta','')}</div>")
-    return (_bg(p) + _nuno_whole(pose, h=720, right=-60) + stub + _logo(left=150, top=44) + head + sub
+    document = ""
+    image = _nuno_whole(pose, h=720, right=-60)
+    if "job description" in copy.get("headline", "").lower():
+        image = ""
+        document = (f"<div style='position:absolute;right:84px;top:224px;width:340px;height:530px;background:#F7F1E7;"
+                    f"border:4px solid {p['accent']};transform:rotate(4deg);box-shadow:14px 14px 0 rgba(255,177,32,.18);'>"
+                    f"<div style=\"position:absolute;left:30px;top:34px;font-family:'DM Sans';font-weight:900;font-size:18px;color:{p['deep']};letter-spacing:3px;\">DECODED</div>"
+                    f"<div style='position:absolute;left:30px;top:94px;width:245px;height:22px;background:{p['deep']};'></div>"
+                    f"<div style='position:absolute;left:30px;top:152px;width:250px;height:18px;background:{p['mut']};opacity:.45;'></div>"
+                    f"<div style='position:absolute;left:30px;top:196px;width:220px;height:20px;background:{p['accent']};'></div>"
+                    f"<div style='position:absolute;left:30px;top:242px;width:260px;height:18px;background:{p['mut']};opacity:.45;'></div>"
+                    f"<div style='position:absolute;left:30px;top:288px;width:176px;height:20px;background:{CORAL};'></div>"
+                    f"<div style='position:absolute;left:30px;bottom:42px;height:56px;padding:0 22px;border-radius:28px;background:{p['deep']};display:flex;align-items:center;font-family:Inter;font-weight:900;font-size:22px;color:#fff;'>Match the language</div></div>")
+    return (_bg(p) + image + document + stub + _logo(left=150, top=44) + head + sub
             + f"<div style='position:absolute;left:150px;top:690px;'>{_pill(p)}</div>")
 
 
@@ -698,6 +722,61 @@ def w_statement(copy, week_id='adhoc'):
     band = (f"<div style='position:absolute;left:0;right:0;bottom:0;height:120px;background:{AMBER};display:flex;align-items:center;'>"
             f"<span style=\"font-family:Inter;font-weight:800;font-size:32px;color:{DEEP};margin-left:56px;letter-spacing:-.3px;\">{copy.get('cta','internwise.co.uk')}</span></div>")
     return bg + logo + eb + head + body + L.watermark(op=.04) + band
+
+def w_message_lab(copy, week_id='adhoc'):
+    """Creative DM lab: a bold message-composition interface for outreach topics."""
+    CREAM = "#F3EADA"; NAVYT = "#152743"; COFFEE = "#6F6350"
+    bg = f"<div style='position:absolute;inset:0;background:{CREAM};'></div>"
+    rail = f"<div style='position:absolute;left:0;top:0;bottom:0;width:154px;background:{NAVYT};'></div>"
+    logo = f"<img src='{L.WHT}' style='position:absolute;left:48px;top:44px;width:62px;filter:brightness(0) invert(1);'>"
+    label = (f"<div style=\"position:absolute;left:210px;top:76px;font-family:'DM Sans';font-weight:900;font-size:18px;"
+             f"letter-spacing:5px;color:{GREEN};\">MESSAGE LAB</div>"
+             f"<div style='position:absolute;left:210px;top:116px;width:86px;height:6px;background:{AMBER};'></div>")
+    head = (f"<div style=\"position:absolute;left:210px;top:178px;width:470px;font-family:Inter;font-weight:950;"
+            f"font-size:64px;line-height:.96;letter-spacing:-2px;color:{NAVYT};\">{copy['headline']}</div>")
+    phone = (f"<div style='position:absolute;right:62px;top:308px;width:300px;height:508px;border-radius:38px;background:{NAVYT};"
+             f"box-shadow:16px 16px 0 rgba(21,39,67,.14);border:8px solid #fff;'></div>"
+             f"<div style='position:absolute;right:112px;top:370px;width:204px;height:50px;border-radius:25px;background:#fff;'></div>"
+             f"<div style='position:absolute;right:104px;top:454px;width:218px;min-height:100px;border-radius:24px 24px 6px 24px;background:{AMBER};padding:18px;'>"
+             f"<div style=\"font-family:Inter;font-weight:950;font-size:24px;line-height:1.05;color:{NAVYT};\">Lead with proof, not a favour.</div></div>"
+             f"<div style='position:absolute;right:178px;top:604px;width:142px;height:44px;border-radius:22px;background:#fff;'></div>"
+             f"<div style='position:absolute;right:106px;top:684px;width:214px;height:82px;border-radius:24px 24px 6px 24px;background:{GREEN};'></div>")
+    pts = copy.get("points", [])[:3]
+    rows = ""
+    for i, pt in enumerate(pts, 1):
+        rows += (f"<div style='display:flex;align-items:center;gap:18px;margin-bottom:18px;'>"
+                 f"<div style='width:50px;height:50px;border-radius:12px;background:{[AMBER,GREEN,CORAL][i-1]};display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:950;font-size:23px;color:{NAVYT};'>{i}</div>"
+                 f"<div style=\"font-family:Inter;font-weight:900;font-size:30px;line-height:1.08;color:{NAVYT};\">{pt}</div></div>")
+    body = f"<div style='position:absolute;left:210px;top:522px;width:520px;'>{rows}</div>"
+    cta = (f"<div style='position:absolute;left:210px;bottom:66px;height:62px;padding:0 28px;border-radius:31px;background:{NAVYT};display:flex;align-items:center;'>"
+           f"<span style=\"font-family:Inter;font-weight:900;font-size:26px;color:#fff;\">{copy.get('cta','internwise.co.uk')}</span></div>")
+    return bg + rail + logo + label + head + phone + body + cta + L.url_footer(left=210, color=COFFEE)
+
+def w_focus_studio(copy, week_id='adhoc'):
+    """High-energy focus board: different from the dark statement list."""
+    CREAM = "#F3EADA"; NAVYT = "#152743"; COFFEE = "#6F6350"
+    bg = f"<div style='position:absolute;inset:0;background:linear-gradient(135deg,{CREAM} 0%,#E9F3F1 100%);'></div>"
+    logo = f"<img src='{L.DARKLOGO}' style='position:absolute;left:56px;top:44px;height:{L.LOGO}px;'>"
+    label = (f"<div style='position:absolute;left:58px;top:172px;height:46px;padding:0 20px;background:{AMBER};"
+             f"transform:rotate(-2deg);display:flex;align-items:center;'>"
+             f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:19px;color:{NAVYT};letter-spacing:3px;\">FOCUS STUDIO</span></div>")
+    head = (f"<div style='position:absolute;left:58px;top:258px;width:680px;'>"
+            f"<div style=\"font-family:Inter;font-weight:950;font-size:78px;line-height:.92;letter-spacing:-3px;color:{NAVYT};\">Focus Your</div>"
+            f"<div style=\"display:inline-block;margin-top:2px;font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:116px;line-height:.9;color:{CORAL};background:linear-gradient(transparent 62%,{AMBER} 62%);padding:0 10px;transform:rotate(-2deg);\">Job Hunt</div></div>")
+    target = (f"<div style='position:absolute;right:70px;top:236px;width:300px;height:300px;border-radius:50%;border:8px solid {NAVYT};'>"
+              f"<div style='position:absolute;left:54px;top:54px;width:176px;height:176px;border-radius:50%;border:7px solid {GREEN};'></div>"
+              f"<div style='position:absolute;left:116px;top:116px;width:54px;height:54px;border-radius:50%;background:{AMBER};'></div></div>")
+    pts = copy.get("points", [])[:4]
+    cards = ""
+    for i, pt in enumerate(pts):
+        x, y, rot, col = [(74, 592, -2, "#fff"), (392, 566, 2.4, AMBER), (688, 608, -1.5, GREEN), (260, 782, 1.5, "#fff")][i]
+        cards += (f"<div style='position:absolute;left:{x}px;top:{y}px;width:286px;min-height:108px;background:{col};"
+                  f"border:3px solid {NAVYT};box-shadow:10px 10px 0 rgba(21,39,67,.14);transform:rotate({rot}deg);padding:18px;'>"
+                  f"<div style=\"font-family:'DM Sans';font-weight:900;font-size:15px;color:{CORAL if col == '#fff' else NAVYT};letter-spacing:3px;\">FOCUS {i+1}</div>"
+                  f"<div style=\"margin-top:8px;font-family:Inter;font-weight:950;font-size:27px;line-height:1.04;color:{NAVYT};\">{pt}</div></div>")
+    cta = (f"<div style='position:absolute;right:70px;bottom:72px;width:330px;font-family:Inter;font-weight:950;font-size:31px;line-height:1.05;color:{NAVYT};'>"
+           f"{copy.get('cta','Start at internwise.co.uk')}</div>")
+    return bg + logo + label + head + target + cards + cta + L.url_footer(left=58, color=COFFEE)
 
 
 def w_bigidea(copy, week_id='adhoc'):
@@ -1019,7 +1098,8 @@ CAROUSEL = {
 }
 SINGLE = {"tipcard": w_tipcard, "statement": w_statement,
           "bigidea": w_bigidea, "splitcard": w_splitcard,
-          "memo": w_memo, "scorecard": w_scorecard}
+          "memo": w_memo, "scorecard": w_scorecard,
+          "message_lab": w_message_lab, "focus_studio": w_focus_studio}
 
 COVER_TONE = {"serious": ["serious", "thoughtful", "practical"],
               "practical": ["practical", "confident", "serious"],

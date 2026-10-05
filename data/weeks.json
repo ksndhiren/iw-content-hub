@@ -7502,7 +7502,7 @@
               "#internwise"
             ]
           },
-          "world": "trust"
+          "world": "goodcompany"
         },
         {
           "id": "week19-thu-education",
@@ -7560,7 +7560,7 @@
             ],
             "cta": "Learn more at internwise.co.uk"
           },
-          "world": "tipcard"
+          "world": "message_lab"
         },
         {
           "id": "week19-fri-quote",
@@ -7694,7 +7694,7 @@
               "#internwise"
             ]
           },
-          "world": "statement"
+          "world": "fastmatch"
         },
         {
           "id": "week19-fri-education",
@@ -7752,7 +7752,7 @@
             ],
             "cta": "Find more at internwise.co.uk."
           },
-          "world": "statement"
+          "world": "focus_studio"
         },
         {
           "id": "week19-mon-news",

@@ -25,6 +25,8 @@ EMP_POOLS = {
     "proofboard": ["nuno_authority_4", "nuno_authority_2", "nuno_planning_2"],
     "command":   ["nuno_planning_2", "nuno_planning_3", "nuno_authority_4"],
     "talentmap": ["nuno_authority_1", "nuno_authority_2", "nuno_authority_4"],
+    "goodcompany": ["nuno_authority_4", "nuno_thoughtful_1", "nuno_authority_3"],
+    "fastmatch": ["nuno_cvpile", "nuno_authority_1", "nuno_authority_4"],
 }
 
 NAVY, DEEP, INK = L.NAVY, L.DEEP, L.INK
@@ -234,13 +236,13 @@ def w_proofboard(a, pose="nuno_authority_4"):
 def w_command(a, pose="nuno_planning_2"):
     SUBT = "#9FC2C9"
     bg = _bg("#0A1830", "#102A4D")
-    panel = (f"<div style='position:absolute;left:54px;top:178px;width:628px;height:622px;border-radius:22px;"
+    panel = (f"<div style='position:absolute;left:54px;top:178px;width:628px;height:644px;border-radius:22px;"
              f"background:rgba(255,255,255,.07);border:1.5px solid rgba(159,194,201,.32);"
              f"box-shadow:0 28px 70px rgba(0,0,0,.22);'></div>")
     label = (f"<div style=\"position:absolute;left:88px;top:218px;font-family:'DM Sans';font-weight:900;font-size:18px;"
              f"letter-spacing:4px;color:{AMBER};\">HIRING COMMAND CENTRE</div>")
-    head = (f"<div style=\"position:absolute;left:88px;top:280px;width:520px;font-family:Inter;font-weight:900;"
-            f"font-size:62px;line-height:1.02;letter-spacing:-1.8px;color:{INK};\">{a['headline']}</div>")
+    head = (f"<div style=\"position:absolute;left:88px;top:292px;width:520px;font-family:Inter;font-weight:900;"
+            f"font-size:59px;line-height:1.02;letter-spacing:-1.8px;color:{INK};\">{a['headline']}</div>")
     rows = ""
     for i, item in enumerate(a.get("benefits", [])[:3], 1):
         rows += (f"<div style='height:68px;margin-bottom:16px;border-radius:12px;background:#fff;"
@@ -248,21 +250,21 @@ def w_command(a, pose="nuno_planning_2"):
                  f"<div style='width:34px;height:34px;border-radius:50%;background:{[AMBER,GREEN,CORAL][i-1]};"
                  f"display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:900;font-size:17px;color:{DEEP};'>{i}</div>"
                  f"<div style=\"font-family:Inter;font-weight:850;font-size:23px;line-height:1.08;color:{DEEP};\">{item}</div></div>")
-    checklist = f"<div style='position:absolute;z-index:2;left:88px;top:542px;width:520px;'>{rows}</div>"
-    status = (f"<div style='position:absolute;left:88px;top:742px;height:38px;padding:0 16px;border-radius:19px;"
+    checklist = f"<div style='position:absolute;z-index:2;left:88px;top:548px;width:520px;'>{rows}</div>"
+    status = (f"<div style='position:absolute;left:88px;top:752px;height:38px;padding:0 16px;border-radius:19px;"
               f"background:{GREEN};display:flex;align-items:center;font-family:'DM Sans';font-weight:900;font-size:16px;"
               f"letter-spacing:2px;color:#fff;'>READY TO SHORTLIST</div>")
     nuno = _nuno(pose, h=730, right=-150)
     return (bg + panel + L.logo_tl() + label + head + checklist + status + nuno
-            + _cta_line("Keep every hiring step visible, simple and moving.", bottom=206)
+            + _cta_line("Keep every hiring step visible, simple and moving.", bottom=172)
             + _cta(a["cta"]) + L.url_footer(color=SUBT, text=EMP_URL))
 
 
 def w_talentmap(a, pose="nuno_authority_1"):
     CREAM = "#F3EADA"; NAVYT = "#152743"; COFFEE = "#6F6350"
     bg = f"<div style='position:absolute;inset:0;background:{CREAM};'></div>"
-    map_shape = (f"<div style='position:absolute;right:60px;top:170px;width:410px;height:620px;border-radius:46% 54% 48% 52%;"
-                 f"background:{NAVYT};box-shadow:18px 18px 0 {AMBER};'></div>"
+    map_shape = (f"<div style='position:absolute;right:42px;top:182px;width:430px;height:590px;border-radius:46% 54% 48% 52%;"
+                 f"background:{NAVYT};box-shadow:0 18px 42px rgba(21,39,67,.18);'></div>"
                  f"<div style='position:absolute;right:150px;top:272px;width:240px;height:350px;border-radius:48% 52% 44% 56%;"
                  f"border:5px dashed rgba(255,255,255,.42);'></div>")
     pins = ""
@@ -281,18 +283,77 @@ def w_talentmap(a, pose="nuno_authority_1"):
             f"<div style='width:210px;height:118px;background:#fff;border:3px solid {NAVYT};padding:18px 20px;'>"
             f"<div style=\"font-family:Inter;font-weight:950;font-size:44px;color:{GREEN};line-height:.9;\">40+</div>"
             f"<div style=\"font-family:'DM Sans';font-weight:900;font-size:17px;color:{NAVYT};margin-top:10px;letter-spacing:1px;\">SECTORS</div></div></div>")
-    nuno = _nuno(pose, h=620, right=-245)
+    nuno = _nuno(pose, h=575, right=-96)
     cta = (f"<div style='position:absolute;left:74px;bottom:112px;height:64px;padding:0 30px;border-radius:32px;background:{NAVYT};"
            f"display:flex;align-items:center;font-family:Inter;font-weight:850;font-size:25px;color:#fff;'>{a['cta']}</div>")
     logo = f"<img src='{L.DARKLOGO}' style='position:absolute;left:56px;top:44px;height:{L.LOGO}px;'>"
     return bg + map_shape + pins + nuno + logo + label + head + body + stat + cta + L.url_footer(left=74, color=COFFEE, text=EMP_URL)
 
 
+def w_goodcompany(a, pose="nuno_authority_4"):
+    """Fresh trust proof page: badge wall + human presenter, avoiding the old sector-chip repeat."""
+    CREAM = "#F3EADA"; NAVYT = "#152743"; COFFEE = "#6F6350"
+    bg = f"<div style='position:absolute;inset:0;background:{CREAM};'></div>"
+    top = f"<div style='position:absolute;left:0;top:0;right:0;height:154px;background:{NAVYT};'></div>"
+    logo = f"<img src='{L.WHT}' style='position:absolute;left:56px;top:42px;height:{L.LOGO}px;'>"
+    label = (f"<div style=\"position:absolute;right:58px;top:58px;font-family:'DM Sans';font-weight:900;font-size:18px;"
+             f"letter-spacing:4px;color:{AMBER};\">EMPLOYER PROOF</div>")
+    head = (f"<div style=\"position:absolute;left:58px;top:214px;width:560px;font-family:Georgia,serif;font-weight:700;"
+            f"font-size:76px;line-height:.98;color:{NAVYT};\">In good<br><span style='color:{GREEN};'>company.</span></div>")
+    body = (f"<div style=\"position:absolute;left:62px;top:410px;width:500px;font-family:'DM Sans';font-weight:700;"
+            f"font-size:29px;line-height:1.28;color:{COFFEE};\">{a.get('body','Teams across the UK use Internwise to find early-career talent.')}</div>")
+    badges = ""
+    sectors = ["Finance", "Tech", "Media", "Healthcare", "Design", "Consulting"]
+    for i, sec in enumerate(sectors):
+        x = 62 + (i % 2) * 230
+        y = 560 + (i // 2) * 92
+        badges += (f"<div style='position:absolute;left:{x}px;top:{y}px;width:200px;height:62px;background:#fff;"
+                   f"border:3px solid {NAVYT};display:flex;align-items:center;gap:12px;padding:0 16px;"
+                   f"box-shadow:8px 8px 0 rgba(21,39,67,.12);'>"
+                   f"<span style='width:16px;height:16px;border-radius:50%;background:{[AMBER,GREEN,CORAL][i%3]};'></span>"
+                   f"<span style=\"font-family:Inter;font-weight:950;font-size:22px;color:{NAVYT};\">{sec}</span></div>")
+    stamp = (f"<div style='position:absolute;right:82px;top:224px;width:250px;height:250px;border-radius:50%;border:8px solid {AMBER};"
+             f"display:flex;align-items:center;justify-content:center;transform:rotate(-8deg);'>"
+             f"<div style=\"font-family:Inter;font-weight:950;font-size:52px;line-height:.9;text-align:center;color:{NAVYT};\">14K+<br><span style='font-size:22px;letter-spacing:2px;'>EMPLOYERS</span></div></div>")
+    nuno = _nuno(pose, h=660, right=-150)
+    cta_line = (f"<div style='position:absolute;left:62px;bottom:170px;width:520px;'>"
+                f"<div style=\"font-family:'DM Sans';font-weight:950;font-size:27px;line-height:1.14;color:{NAVYT};\">Bring your role to the place employers already use.</div>"
+                f"<div style='margin-top:12px;width:210px;height:12px;border-radius:6px;background:{AMBER};'></div></div>")
+    cta = (f"<div style='position:absolute;left:62px;bottom:88px;height:62px;padding:0 28px;border-radius:31px;background:{NAVYT};display:flex;align-items:center;'>"
+           f"<span style=\"font-family:Inter;font-weight:900;font-size:25px;color:#fff;\">{a['cta']}</span></div>")
+    return bg + top + logo + label + stamp + nuno + head + body + badges + cta_line + cta + L.url_footer(left=62, color=COFFEE, text=EMP_URL)
+
+
+def w_fastmatch(a, pose="nuno_cvpile"):
+    """Fast-match employer page: search console, not the previous dark manifesto."""
+    SUBT = "#9FC2C9"
+    bg = _bg("#07172E", "#102A4D")
+    logo = L.logo_tl()
+    console = (f"<div style='position:absolute;left:52px;top:186px;width:642px;height:570px;border-radius:8px;"
+               f"background:#F7F1E7;border:4px solid {AMBER};box-shadow:18px 18px 0 rgba(255,177,32,.18);'></div>"
+               f"<div style='position:absolute;left:52px;top:186px;width:642px;height:72px;background:{AMBER};'></div>")
+    dots = "".join(f"<span style='width:16px;height:16px;border-radius:50%;background:{c};display:inline-block;margin-right:10px;'></span>" for c in [CORAL, GREEN, NAVY])
+    toolbar = f"<div style='position:absolute;left:82px;top:214px;'>{dots}</div>"
+    head = (f"<div style=\"position:absolute;left:84px;top:306px;width:536px;font-family:Inter;font-weight:950;"
+            f"font-size:62px;line-height:.98;letter-spacing:-2px;color:{DEEP};\">Skip the CV pile.<br><span style='color:{CORAL};'>Go straight</span> to the right candidate.</div>")
+    rows = ""
+    for i, txt in enumerate(["Sector fit", "Skills match", "Location ready"]):
+        rows += (f"<div style='height:58px;margin-bottom:14px;border-radius:29px;background:#fff;border:2px solid {DEEP};"
+                 f"display:flex;align-items:center;gap:14px;padding:0 18px;'>"
+                 f"<div style='width:34px;height:34px;border-radius:50%;background:{[AMBER,GREEN,CORAL][i]};display:flex;align-items:center;justify-content:center;'>{L.svg('check',DEEP,20)}</div>"
+                 f"<span style=\"font-family:Inter;font-weight:900;font-size:25px;color:{DEEP};\">{txt}</span></div>")
+    filters = f"<div style='position:absolute;left:84px;top:558px;width:430px;'>{rows}</div>"
+    nuno = _nuno(pose, h=650, right=-92)
+    cta_line = _cta_line("Search with intent. Shortlist with confidence.", bottom=174, width=520)
+    return bg + logo + console + toolbar + head + filters + nuno + cta_line + _cta(a["cta"]) + L.url_footer(color=SUBT, text=EMP_URL)
+
+
 WORLDS = {"benefits": w_benefits, "bigstat": w_bigstat, "process": w_process,
           "trust": w_trust, "statement": w_statement,
           "kpi": w_kpi, "cards": w_cards,
           "pipeline": w_pipeline, "proofboard": w_proofboard,
-          "command": w_command, "talentmap": w_talentmap}
+          "command": w_command, "talentmap": w_talentmap,
+          "goodcompany": w_goodcompany, "fastmatch": w_fastmatch}
 
 def render_employer(angle, world, out_dir, filename="slide_1.png", week_id="adhoc"):
     pose = nuno_ledger.pick(EMP_POOLS.get(world, ["nuno_authority_1"]), week_id, label=f"employer/{world}")
