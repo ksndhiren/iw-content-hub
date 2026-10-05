@@ -226,6 +226,9 @@ def build_jobs(week, connected, want_status, use_schedule, only=None, days=None,
         # gets a matching Story when story.png exists. Facebook Stories mirror
         # this once a Facebook Page is connected in Ayrshare.
         if stories and media:
+            local_story = os.path.join(HUB, "images", week["id"], post["id"], "story.png")
+            if not os.path.exists(local_story):
+                continue
             story_url = f"{R2_BASE}/{week['id']}/{post['id']}/story.png"
             if "instagram" in nets:
                 jobs.append({"pid": post["id"], "lane": lane, "network": "instagram", "kind": "story",

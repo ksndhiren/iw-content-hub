@@ -19,6 +19,7 @@ Run:  python3 sync_featured_jobs.py            (writes into ../../iw-content-hub
 import os, re, json, sys, shutil
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import featured_job as fj
+import story_card
 from playwright.sync_api import sync_playwright
 
 SEARCH_URL = "https://www.internwise.co.uk/internship-search"
@@ -250,7 +251,9 @@ def main():
         version = re.sub(r"[^a-zA-Z0-9]+", "-", fj.SECTOR_PALETTE_VERSION).strip("-")
         fname = f"{post_id}-{version}.png"
         cfg = fj.build_config(job)
-        fj.generate(cfg, os.path.join(out_dir, fname), art_mode="graphic")
+        graphic_path = os.path.join(out_dir, fname)
+        fj.generate(cfg, graphic_path, art_mode="graphic")
+        story_card.make_story(graphic_path, os.path.join(out_dir, "story.png"))
         auto_posts.append({
             "id": post_id,
             "sourceId": sid,
