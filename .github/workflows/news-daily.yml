@@ -15,7 +15,7 @@ name: News - Day-Prior Build
 # rules are enforced in news_fetch + the writer, not by a human click.
 #
 # Requires repo secrets: OPENAI_API_KEY (+ optional var OPENAI_MODEL), AYRSHARE_API_KEY,
-# and the R2_* set. PEXELS_API_KEY is optional but strongly recommended because
+# and the R2_* set. PEXELS_API_KEY is required for unattended cloud runs because
 # news cards fail closed when they cannot attach a relevant editorial image.
 
 on:
@@ -50,7 +50,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install openai playwright pillow boto3
+          pip install openai playwright pillow boto3 requests
           python -m playwright install --with-deps chromium
 
       - name: Build the day-prior news post

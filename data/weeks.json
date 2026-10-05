@@ -6745,6 +6745,58 @@
           }
         }
       ]
+    },
+    {
+      "id": "week19",
+      "label": "Week 19",
+      "weekCommencing": "2026-10-05",
+      "builtAt": 1791169275,
+      "posts": [
+        {
+          "id": "week19-mon-news",
+          "day": "Mon 5 Oct",
+          "lane": "news",
+          "title": "Job Interview Salary Question Update",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "In the UK, job seekers can skip the question about current salary during interviews. This move is part of efforts to promote fair pay and tackle inequality. It's especially helpful for students and graduates, allowing you to highlight your skills and contributions rather than past earnings. Internships give you the chance to build valuable experience, making you a stronger candidate. Source: BBC Business.",
+          "hashtags": [
+            "#jobinterviewtips",
+            "#ukjobs",
+            "#fairpay",
+            "#internships",
+            "#graduates"
+          ],
+          "captions": {
+            "ig-fb": "In the UK, job seekers can skip the question about current salary during interviews. This move is part of efforts to promote fair pay and tackle inequality. It's especially helpful for students and graduates, allowing you to highlight your skills and contributions rather than past earnings. Internships give you the chance to build valuable experience, making you a stronger candidate. Source: BBC Business.",
+            "linkedin": "UK job seekers are not obligated to reveal their current salary in interviews. This change aims to encourage fair pay and reduce inequality. For students and graduates, it means you can focus on your skills and potential contributions during interviews. Internships provide crucial experience, helping you stand out without relying on past salary details. Source: BBC Business.",
+            "x": "In the UK, you're not required to disclose your current salary in interviews, promoting fair pay. Focus on skills and experience. (Source: BBC Business)",
+            "threads": "In the UK, job candidates aren't required to share their current salary during interviews, promoting fair pay. It's a chance for students and graduates to focus on skills and potential. Internships help you gain experience and showcase your abilities. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#jobinterviewtips",
+              "#ukjobs",
+              "#fairpay",
+              "#internships",
+              "#graduates"
+            ],
+            "linkedin": [
+              "#ukjobs",
+              "#fairpay",
+              "#internships"
+            ],
+            "x": [
+              "#fairpay",
+              "#ukjobs"
+            ]
+          }
+        }
+      ]
     }
   ]
 }
