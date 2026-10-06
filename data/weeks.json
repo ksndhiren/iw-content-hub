@@ -7621,6 +7621,50 @@
               "#ukjobs"
             ]
           }
+        },
+        {
+          "id": "week19-wed-news",
+          "day": "Wed 7 Oct",
+          "lane": "news",
+          "title": "UK Hiring Practices Impact Job Seekers",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "Job seekers in the UK face a mixed bag when it comes to hiring practices. While some candidates receive constructive feedback, others experience a complete silence from employers. This lack of communication can make the already demanding job search feel even more daunting. For students and recent graduates, this means navigating a challenging landscape with limited guidance. However, internships can play a crucial role in overcoming these hurdles. They offer a chance to gain real-world experience and improve communication skills, preparing you better for future job searches. Source: The Guardian.",
+          "hashtags": [
+            "#ukjobs",
+            "#jobsearch",
+            "#internships",
+            "#careeradvice",
+            "#graduatelife"
+          ],
+          "captions": {
+            "ig-fb": "Job seekers in the UK face a mixed bag when it comes to hiring practices. While some candidates receive constructive feedback, others experience a complete silence from employers. This lack of communication can make the already demanding job search feel even more daunting. For students and recent graduates, this means navigating a challenging landscape with limited guidance. However, internships can play a crucial role in overcoming these hurdles. They offer a chance to gain real-world experience and improve communication skills, preparing you better for future job searches. Source: The Guardian.",
+            "linkedin": "In the UK job market, candidates encounter various practices from hiring managers. While some applicants benefit from helpful feedback, others find themselves ghosted, making the job search process even more challenging. This can be particularly tough for students and graduates who are new to the professional world and often lack guidance. Internships offer a valuable solution by providing practical experience and clearer communication channels, easing the transition into the workforce. Source: The Guardian.",
+            "x": "UK job seekers face mixed experiences with hiring managers. Some get feedback; others are ghosted, making job hunting tough. Internships offer better communication and experience. (Source: The Guardian)",
+            "threads": "UK job seekers have varied experiences with hiring managers. Some get helpful feedback, while others face silence, making the search tough. Internships offer a solution by providing experience and clearer communication. Get a head start at www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#ukjobs",
+              "#jobsearch",
+              "#internships",
+              "#careeradvice",
+              "#graduatelife"
+            ],
+            "linkedin": [
+              "#ukjobs",
+              "#careerdevelopment",
+              "#internships"
+            ],
+            "x": [
+              "#ukjobs",
+              "#internships"
+            ]
+          }
         }
       ]
     }

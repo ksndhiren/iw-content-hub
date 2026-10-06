@@ -50,7 +50,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install openai playwright pillow boto3 requests
+          pip install openai playwright pillow boto3 requests python-dotenv
           python -m playwright install --with-deps chromium
 
       - name: Build the day-prior news post
