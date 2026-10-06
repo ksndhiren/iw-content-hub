@@ -17,6 +17,9 @@ This is the approved creative direction for future Internwise social graphics. T
 - Fonts should not feel uniformly corporate. Mix type roles deliberately: Inter for UI/clarity, DM Sans for labels and small navigation, Georgia serif/italic for editorial emphasis and emotional words.
 - Do not rely on dark navy panels, rounded cards, and Inter-only headlines as the default skin. If two posts in a week look like they came from the same template family, redesign one.
 - Featured jobs can remain utility-led, but should still feel like a premium editorial/job poster, not a generic ad tile.
+- Featured-job post descriptions/captions must not mention employer/company names. Keep the role title, field, location, format, duration, and direct Internwise job link.
+- Featured-job descriptions must add useful context that is different from the text on the graphic. Do not repeat the graphic hook as the caption body.
+- Featured jobs should publish to Google Business Profile when connected, because they are directly relevant local/candidate opportunities.
 - The core week must render five reviewable graphics per weekday: News, Education, Quote, Employer, and Poll/Conversation. Featured jobs are a separate optional sixth lane and must not be used to make up the five.
 - The fifth post is Poll/Conversation, not the old fun/meme lane and not a generic engagement filler. It must be useful, conversion-aware, and able to stand alone even if nobody comments: decision prompts, A/B choices, comparison prompts, save/apply nudges, or practical conversation starters.
 - Every Poll/Conversation graphic must include a visible comment prompt such as `Comment A, B or C below` inside the image to encourage engagement, placed clear of options, faces, logos, and CTA text.

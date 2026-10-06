@@ -2973,12 +2973,29 @@
     "id": "N2lx2mysBcmSLHaNanE1",
     "at": "2026-10-06T17:28:09.601748",
     "network": "pinterest",
-    "scheduleDate": null
+    "scheduleDate": null,
+    "deletedAt": "2026-10-06T00:00:00Z",
+    "deleteResponse": {
+      "pinterest": {
+        "action": "delete",
+        "status": "success",
+        "id": "1076078904743630865"
+      },
+      "status": "success",
+      "code": 200,
+      "id": "N2lx2mysBcmSLHaNanE1"
+    }
   },
   "job-35398:instagram:story": {
     "id": "ERjDb2YUROK064qYFDDW",
     "at": "2026-10-06T17:28:40.740237",
     "network": "instagram",
+    "scheduleDate": null
+  },
+  "job-35398:gmb": {
+    "id": "TWciYUV3HMXFg9iUkY7m",
+    "at": "2026-10-06T17:49:35.556425",
+    "network": "gmb",
     "scheduleDate": null
   }
 }

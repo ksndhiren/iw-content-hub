@@ -176,15 +176,37 @@ def is_published(pub, sid, title="", company=""):
     return _job_key(title, company) in pub["keys"] if (title or company) else False
 
 
+def caption_context(job):
+    """Role-specific caption body. Must not repeat the graphic hook or mention
+    the employer name."""
+    style = fj.pick_style_for_job(job)
+    mapping = {
+        "events": "Good if you want to build proof around research, speaker outreach, agenda planning, and keeping a commercial event moving from idea to delivery.",
+        "sales": "Good if you want evidence of confidence, client communication, lead handling, and turning conversations into measurable outcomes.",
+        "marketing": "Good if you want practical proof across content, campaign thinking, social channels, and the weekly rhythm of brand growth.",
+        "social": "Good if you want hands-on examples of planning, shooting, editing, publishing, and learning what makes people stop scrolling.",
+        "finance": "Good if you want detail-led experience with numbers, process, reporting, and the kind of accuracy employers look for early.",
+        "property": "Good if you want commercial exposure, client-facing work, site detail, and a clearer story around how property decisions are made.",
+        "tech": "Good if you want practical evidence of problem-solving, tools, delivery, and the habits that make junior technical applicants easier to trust.",
+    }
+    return mapping.get(style, "Good if you want a real workplace example you can later turn into CV bullets, interview stories, and clearer proof of fit.")
+
+
 def build_caption(job):
+    role = _plain(job["title"])
+    sector = _plain(job.get("fields", "").split(",")[0])
+    location = _plain(job.get("location", ""))
+    jtype = _plain(job.get("jtype", ""))
+    duration = _plain(job.get("duration", ""))
+    url = job["url"]
     return (
-        f"FEATURED JOB: {_plain(job['title'])} at {_plain(job['company'])}\n\n"
-        f"{fj.SECTOR_STYLES[fj.pick_style_for_job(job)][6]}\n\n"
-        f"Sector: {_plain(job.get('fields','').split(',')[0])}\n"
-        f"Location: {_plain(job.get('location',''))}\n"
-        f"Type: {_plain(job.get('jtype',''))}\n"
-        f"Duration: {_plain(job.get('duration',''))}\n\n"
-        f"Apply now at internwise.co.uk (link in the post)"
+        f"FEATURED INTERNSHIP: {role}\n\n"
+        f"{caption_context(job)}\n\n"
+        f"Field: {sector}\n"
+        f"Location: {location}\n"
+        f"Format: {jtype}\n"
+        f"Length: {duration}\n\n"
+        f"Apply here: {url}"
     )
 
 
