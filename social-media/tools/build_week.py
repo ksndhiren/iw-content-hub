@@ -492,8 +492,8 @@ def _fetch_required_news_image(item, headline):
         raise RuntimeError("all fetched candidates were missing or already used; " + " | ".join(errors[:3]))
     except Exception as exc:
         raise RuntimeError(
-            "News cards require a relevant, non-repeated image. Add/fix PEXELS_API_KEY, "
-            "use Codex ImageGen to create a project asset, or pass image_path explicitly; "
+            "News cards require a relevant, non-repeated image. Use Codex ImageGen "
+            "to create a project asset, or pass image_path explicitly; "
             f"image fetch failed for {headline!r}: {exc}"
         )
 

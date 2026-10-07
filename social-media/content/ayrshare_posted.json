@@ -3033,5 +3033,113 @@
     "at": "2026-10-06T18:09:14.680285",
     "network": "instagram",
     "scheduleDate": "2026-10-07T07:00:00Z"
+  },
+  "week19-wed-quote:facebook": {
+    "id": "cZTdCJL8CDFxeT9sICua",
+    "at": "2026-10-07T09:57:28.825977",
+    "network": "facebook",
+    "scheduleDate": "2026-10-07T19:00:00Z"
+  },
+  "week19-wed-quote:facebook:story": {
+    "id": "5WTOJ3fhKD1a21eK9oOd",
+    "at": "2026-10-07T09:57:30.861136",
+    "network": "facebook",
+    "scheduleDate": "2026-10-07T19:00:00Z"
+  },
+  "week19-wed-engagement:facebook": {
+    "id": "vhd1kRilenVSJIS4c4Le",
+    "at": "2026-10-07T09:57:32.747797",
+    "network": "facebook",
+    "scheduleDate": "2026-10-07T15:30:00Z"
+  },
+  "week19-wed-engagement:facebook:story": {
+    "id": "7TwBj6wtpZnRLfksyyiP",
+    "at": "2026-10-07T09:57:34.337549",
+    "network": "facebook",
+    "scheduleDate": "2026-10-07T15:30:00Z"
+  },
+  "week19-wed-education:facebook": {
+    "id": "5GviRQses5omyvs698Tt",
+    "at": "2026-10-07T09:57:36.889325",
+    "network": "facebook",
+    "scheduleDate": "2026-10-07T12:30:00Z"
+  },
+  "week19-wed-education:facebook:story": {
+    "id": "a6HQW869phq0TkAwKFwp",
+    "at": "2026-10-07T09:57:38.814953",
+    "network": "facebook",
+    "scheduleDate": "2026-10-07T12:30:00Z"
+  },
+  "week19-thu-quote:facebook": {
+    "id": "IOSIafYogUDR5IqEBdyU",
+    "at": "2026-10-07T09:57:40.370802",
+    "network": "facebook",
+    "scheduleDate": "2026-10-08T19:00:00Z"
+  },
+  "week19-thu-quote:facebook:story": {
+    "id": "Ipqaa89JDNbjscxP6Qi7",
+    "at": "2026-10-07T09:57:42.120000",
+    "network": "facebook",
+    "scheduleDate": "2026-10-08T19:00:00Z"
+  },
+  "week19-thu-engagement:facebook": {
+    "id": "SiaRRw8Ou1NAwqZs6wNz",
+    "at": "2026-10-07T09:57:44.158649",
+    "network": "facebook",
+    "scheduleDate": "2026-10-08T15:30:00Z"
+  },
+  "week19-thu-engagement:facebook:story": {
+    "id": "GouskPEHza9bNBUZTpAV",
+    "at": "2026-10-07T09:57:46.179040",
+    "network": "facebook",
+    "scheduleDate": "2026-10-08T15:30:00Z"
+  },
+  "week19-thu-education:facebook": {
+    "id": "BOlTZrxcQvLZbVFxlh4Y",
+    "at": "2026-10-07T09:57:47.847139",
+    "network": "facebook",
+    "scheduleDate": "2026-10-08T12:30:00Z"
+  },
+  "week19-thu-education:facebook:story": {
+    "id": "EaHwJldF58TFlltWJ3Kj",
+    "at": "2026-10-07T09:57:49.587118",
+    "network": "facebook",
+    "scheduleDate": "2026-10-08T12:30:00Z"
+  },
+  "week19-fri-quote:facebook": {
+    "id": "69Gj31FpDAQo4HgeW6or",
+    "at": "2026-10-07T09:57:51.327650",
+    "network": "facebook",
+    "scheduleDate": "2026-10-09T19:00:00Z"
+  },
+  "week19-fri-quote:facebook:story": {
+    "id": "G7ou01wd10tqxZj998xs",
+    "at": "2026-10-07T09:57:53.478849",
+    "network": "facebook",
+    "scheduleDate": "2026-10-09T19:00:00Z"
+  },
+  "week19-fri-engagement:facebook": {
+    "id": "fEb5j7jsyvtqCJg3D2zm",
+    "at": "2026-10-07T09:57:55.529200",
+    "network": "facebook",
+    "scheduleDate": "2026-10-09T15:30:00Z"
+  },
+  "week19-fri-engagement:facebook:story": {
+    "id": "0Ocbkkfy547anF8YWUhU",
+    "at": "2026-10-07T09:57:57.636557",
+    "network": "facebook",
+    "scheduleDate": "2026-10-09T15:30:00Z"
+  },
+  "week19-fri-education:facebook": {
+    "id": "CRMeyxwmgYtBlXSwnMma",
+    "at": "2026-10-07T09:57:59.365596",
+    "network": "facebook",
+    "scheduleDate": "2026-10-09T12:30:00Z"
+  },
+  "week19-fri-education:facebook:story": {
+    "id": "rpWmWNyrbZRhyeLp2W2D",
+    "at": "2026-10-07T09:58:01.801512",
+    "network": "facebook",
+    "scheduleDate": "2026-10-09T12:30:00Z"
   }
 }
