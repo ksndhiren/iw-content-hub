@@ -47,6 +47,7 @@ CONVERSATION_DEDUP_WEEKS = 8                                         # do not re
 TOPIC_REPEAT_OVERRIDE_ENV = "IW_ALLOW_TOPIC_REPEAT"                      # explicit emergency override only
 DKEYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 NEWS_IMAGE_USED = os.path.join(L.BASE, "content", "news_image_used.json")
+AYRSHARE_POSTED = os.path.join(L.BASE, "content", "ayrshare_posted.json")
 
 
 class TopicFreshnessError(RuntimeError):
@@ -55,6 +56,51 @@ class TopicFreshnessError(RuntimeError):
 
 def topic_repeat_allowed():
     return os.getenv(TOPIC_REPEAT_OVERRIDE_ENV, "").strip().lower() in {"1", "true", "yes", "y"}
+
+
+def _load_posted_ids():
+    """Return post ids with at least one successful Ayrshare send/schedule.
+
+    The Ayrshare ledger is the source of truth for content that has already gone
+    live or is queued to go live. Keys are shaped like
+    `week19-wed-quote:instagram` or `week19-wed-quote:instagram:story`.
+    """
+    try:
+        data = json.load(open(AYRSHARE_POSTED))
+    except Exception:
+        return set()
+    return {str(k).split(":", 1)[0] for k in data.keys()}
+
+
+def _posted_posts(lanes=None):
+    """Return week posts that appear in the Ayrshare posted ledger."""
+    posted_ids = _load_posted_ids()
+    if not posted_ids:
+        return []
+    lanes = set(lanes or [])
+    try:
+        data = json.load(open(WEEKS))
+    except Exception:
+        return []
+    out = []
+    for week in data.get("weeks", []):
+        for post in week.get("posts", []):
+            if post.get("id") not in posted_ids:
+                continue
+            if lanes and post.get("lane") not in lanes:
+                continue
+            out.append(post)
+    return out
+
+
+def _posted_title_words(lanes):
+    return [_edu_words(p.get("title", "")) for p in _posted_posts(lanes)
+            if p.get("title")]
+
+
+def posted_titles(lanes):
+    """Titles of content already sent/scheduled through Ayrshare for hard dedup."""
+    return [p.get("title", "") for p in _posted_posts(lanes) if p.get("title")]
 
 
 def target_week():
@@ -221,11 +267,13 @@ def record_edu_used(wid, titles):
 
 def pick_education(n, used_sets=None, thresh=0.5):
     """Pick `n` education topics, demand-ranked, skipping any that repeat a topic
-    used in the recent weeks (`used_sets`; defaults to the last EDU_DEDUP_WEEKS).
-    Raises instead of silently repeating unless IW_ALLOW_TOPIC_REPEAT=1 is set."""
+    used in the recent weeks (`used_sets`; defaults to the last EDU_DEDUP_WEEKS)
+    OR any education topic already sent/scheduled through Ayrshare. Raises instead
+    of silently repeating unless IW_ALLOW_TOPIC_REPEAT=1 is set."""
     topics = json.load(open(AUTO)).get("topics", [])
     demand = _demand_terms()
-    used_sets = load_edu_used() if used_sets is None else used_sets
+    used_sets = list(load_edu_used() if used_sets is None else used_sets)
+    used_sets += _posted_title_words({"education"})
 
     def demand_score(t):
         """Higher when a topic matches what people actually search (GSC)."""
@@ -250,8 +298,9 @@ def pick_education(n, used_sets=None, thresh=0.5):
     if len(picked) < n:
         if not topic_repeat_allowed():
             raise TopicFreshnessError(
-                f"Education topic bank has only {len(fresh)} fresh topic(s) for {n} slot(s). "
-                f"Add new education topics or set {TOPIC_REPEAT_OVERRIDE_ENV}=1 for an explicit emergency repeat."
+                f"Education topic bank has only {len(fresh)} fresh topic(s) for {n} slot(s) "
+                "after excluding recent and already posted content. Add new education topics "
+                f"or set {TOPIC_REPEAT_OVERRIDE_ENV}=1 for an explicit emergency repeat."
             )
         picked += [t for t in eligible if t not in picked][: n - len(picked)]
     return picked
@@ -292,7 +341,8 @@ def _recent_quote_blocks(wid, weeks=QUOTE_DEDUP_WEEKS):
 
 def pick_quote_ids(quotes, days, wid):
     """Pick quote IDs from the normal weekly rotation while blocking recent
-    quote IDs/authors. Raises instead of silently repeating unless explicitly overridden."""
+    quote IDs/authors and anything already sent/scheduled through Ayrshare.
+    Raises instead of silently repeating unless explicitly overridden."""
     def has_portrait(q):
         author = q.get("author", "")
         slug = re.sub(r"[^a-z0-9]+", "-", author.lower()).strip("-")
@@ -308,6 +358,12 @@ def pick_quote_ids(quotes, days, wid):
     qstart = ((wn - 14) * 5) % len(qids)
     rotated = [qids[(qstart + i) % len(qids)] for i in range(len(qids))]
     blocked_ids, blocked_authors = _recent_quote_blocks(wid)
+    for post in _posted_posts({"quote"}):
+        if post.get("quoteId"):
+            blocked_ids.add(post["quoteId"])
+        m = re.match(r"Quote:\s*(.+)", post.get("title", ""))
+        if m:
+            blocked_authors.add(m.group(1).strip().lower())
     fresh = [qid for qid in rotated
              if qid not in blocked_ids
              and quotes[qid].get("author", "").strip().lower() not in blocked_authors
@@ -315,8 +371,9 @@ def pick_quote_ids(quotes, days, wid):
     if len(fresh) < days and not topic_repeat_allowed():
         raise TopicFreshnessError(
             f"Quote bank has only {len(fresh)} fresh portrait-backed quote(s) for {days} slot(s) "
-            f"after the {QUOTE_DEDUP_WEEKS}-week lookback. Add real author portraits/quotes or "
-            f"set {TOPIC_REPEAT_OVERRIDE_ENV}=1 for an explicit emergency repeat."
+            f"after the {QUOTE_DEDUP_WEEKS}-week lookback and already-posted filter. "
+            f"Add real author portraits/quotes or set {TOPIC_REPEAT_OVERRIDE_ENV}=1 "
+            "for an explicit emergency repeat."
         )
     fallback = [qid for qid in rotated if qid not in fresh and has_portrait(quotes[qid])]
     return (fresh + fallback)[:days]
@@ -347,14 +404,19 @@ def _recent_conversation_blocks(wid, weeks=CONVERSATION_DEDUP_WEEKS):
 
 def pick_conversation_ideas(conversation_ideas, days, wid):
     blocked_ids, blocked_titles = _recent_conversation_blocks(wid)
+    for post in _posted_posts({"engagement", "fun"}):
+        if post.get("ideaId"):
+            blocked_ids.add(post["ideaId"])
+        if post.get("title"):
+            blocked_titles.add(post["title"].strip().lower())
     fresh = [idea for idea in conversation_ideas
              if idea.get("id") not in blocked_ids
              and idea.get("hook", "").strip().lower() not in blocked_titles]
     if len(fresh) < days and not topic_repeat_allowed():
         raise TopicFreshnessError(
             f"Conversation bank has only {len(fresh)} fresh idea(s) for {days} slot(s) after the "
-            f"{CONVERSATION_DEDUP_WEEKS}-week lookback. Add conversation ideas or set {TOPIC_REPEAT_OVERRIDE_ENV}=1 "
-            "for an explicit emergency repeat."
+            f"{CONVERSATION_DEDUP_WEEKS}-week lookback and already-posted filter. "
+            f"Add conversation ideas or set {TOPIC_REPEAT_OVERRIDE_ENV}=1 for an explicit emergency repeat."
         )
     fallback = [idea for idea in conversation_ideas if idea not in fresh]
     return (fresh + fallback)[:days]

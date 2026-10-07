@@ -79,6 +79,7 @@ This is the approved creative direction for future Internwise social graphics. T
 
 - Education topics, quote IDs/authors, and news stories are strict no-repeat surfaces. If the available bank cannot fill the week without a recent repeat, the build must fail instead of quietly recycling content.
 - Poll/conversation ideas are also strict no-repeat surfaces across both current `engagement` posts and legacy `fun` posts. A format can return, but the hook/concept cannot. Do not source new fifth posts from the old `fun_ideas.json` bank.
+- The Ayrshare posted ledger is the hard ignore list. Anything already sent or scheduled in `social-media/content/ayrshare_posted.json` must be treated as used forever for topic planning: education titles, quote IDs/authors, poll/conversation hooks, and news headlines cannot be selected again unless an explicit emergency override is set.
 - The only allowed exception is an operator-visible emergency run with `IW_ALLOW_TOPIC_REPEAT=1`; do not leave that override set in normal local, cloud, or scheduled runs.
 
 ## Weekly Freshness

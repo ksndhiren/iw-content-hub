@@ -23,6 +23,7 @@ HUB = SOCIAL.parent
 WEEKS = HUB / "data" / "weeks.json"
 IMG_ROOT = HUB / "images"
 AUTHORS = SOCIAL / "assets" / "quote_authors"
+AYRSHARE_POSTED = SOCIAL / "content" / "ayrshare_posted.json"
 
 CORE_LANES = ("education", "quote", "employer", "engagement")
 CORE_LANE_LABELS = {
@@ -51,6 +52,24 @@ def quote_bank() -> dict:
     path = SOCIAL / "content" / "quotes_bank.json"
     data = json.loads(path.read_text())
     return {q["id"]: q for q in data["quotes"]}
+
+
+def posted_ids() -> set[str]:
+    try:
+        data = json.loads(AYRSHARE_POSTED.read_text())
+    except Exception:
+        return set()
+    return {str(k).split(":", 1)[0] for k in data.keys()}
+
+
+def posted_index(all_weeks: list[dict]) -> dict[str, str]:
+    ids = posted_ids()
+    out = {}
+    for wk in all_weeks:
+        for post in wk.get("posts", []):
+            if post.get("id") in ids and post.get("title"):
+                out[slug(post.get("title", ""))] = post.get("id", "")
+    return out
 
 
 def portrait_path(author: str) -> Path | None:
@@ -115,6 +134,8 @@ def main() -> int:
     week = load_week(args.week_id)
     all_weeks = json.loads(WEEKS.read_text())["weeks"]
     quotes = quote_bank()
+    already_posted = posted_index(all_weeks)
+    current_posted = posted_ids()
     errors: list[str] = []
 
     by_day: dict[str, list[dict]] = defaultdict(list)
@@ -156,6 +177,11 @@ def main() -> int:
                 recent_fun_titles[post["title"].strip().lower()] = prev["id"]
 
     for post in week["posts"]:
+        title_key = slug(post.get("title", ""))
+        previous_post_id = already_posted.get(title_key)
+        if title_key and previous_post_id and previous_post_id != post.get("id") and post.get("id") not in current_posted:
+            errors.append(f"{post['id']}: title repeats already posted content from {previous_post_id}")
+
         slides = post.get("slides") or ["slide_1.png"]
         for slide in slides:
             path = IMG_ROOT / week["id"] / post["id"] / slide

@@ -128,6 +128,7 @@ def main():
     week = next((w for w in data["weeks"] if w.get("id") == wid), None)
     existing_news = [pp.get("title", "") for pp in (week or {}).get("posts", [])
                      if pp.get("lane") == "news" and pp.get("id") != pid]
+    existing_news += bw.posted_titles({"news"})
 
     item = pick_fresh(existing_news)
     print(f"Building news for {dlabel} ({pid}) - \"{item.get('title', '')[:70]}\"")
