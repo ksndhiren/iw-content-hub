@@ -547,9 +547,9 @@ def _load_news_asset_bank():
 def _pick_bank_news_image(item, headline):
     """Pick an approved repo asset that matches the story.
 
-    GitHub Actions cannot use Codex's built-in ImageGen. Scheduled cloud news
-    therefore uses this pre-approved asset bank first, then Pexels only when no
-    approved asset matches the story.
+    Manual/operator builds can pass an explicit `--image`; the unattended cloud
+    workflow uses Pexels by default because GitHub Actions cannot call Codex's
+    built-in ImageGen.
     """
     source = _news_source_text(item, headline)
     candidates = []
@@ -572,9 +572,6 @@ def _pick_bank_news_image(item, headline):
 
 
 def _fetch_required_news_image(item, headline):
-    bank_path = _pick_bank_news_image(item, headline)
-    if bank_path:
-        return bank_path
     try:
         from pexels_utils import search_pexels, download_image
         errors = []
@@ -596,9 +593,9 @@ def _fetch_required_news_image(item, headline):
         raise RuntimeError("all fetched candidates were missing or already used; " + " | ".join(errors[:3]))
     except Exception as exc:
         raise RuntimeError(
-            "News cards require a relevant, non-repeated image. Add a Codex/editorial "
-            "asset to the news asset bank, pass image_path explicitly, or configure "
-            "PEXELS_API_KEY for the relevant fallback; "
+            "News cards require a relevant, non-repeated image. Configure PEXELS_API_KEY "
+            "for the default cloud image source, or pass image_path explicitly for a "
+            "manual editorial asset; "
             f"image fetch failed for {headline!r}: {exc}"
         )
 

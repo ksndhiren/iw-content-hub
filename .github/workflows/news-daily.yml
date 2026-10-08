@@ -15,8 +15,8 @@ name: News - Day-Prior Build
 # rules are enforced in news_fetch + the writer, not by a human click.
 #
 # Requires repo secrets: OPENAI_API_KEY (+ optional var OPENAI_MODEL), AYRSHARE_API_KEY,
-# PEXELS_API_KEY, and the R2_* set. News image policy is approved repo/Codex
-# assets first, then relevant non-repeated Pexels fallback for unattended runs.
+# PEXELS_API_KEY, and the R2_* set. News image policy is Pexels by default for
+# unattended cloud runs; explicit repo images are only for manual dispatches.
 
 on:
   schedule:
@@ -28,7 +28,7 @@ on:
         required: false
         default: ""
       image:
-        description: "Repo path to a Codex-generated or supplied editorial image"
+        description: "Optional repo path to a supplied editorial image for manual runs"
         required: false
         default: ""
 
