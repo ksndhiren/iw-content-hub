@@ -1,0 +1,34 @@
+{
+  "assets": [
+    {
+      "path": "social-media/assets/news/week19-thu-council-pay-settlement.png",
+      "keywords": ["glasgow", "city council", "council", "pay", "grading", "settlement", "local government"],
+      "caption": "A pay settlement brings workplace terms back into focus."
+    },
+    {
+      "path": "social-media/assets/news/week19-thu-royal-mail-job-cuts.png",
+      "keywords": ["royal mail", "postal", "mail", "delivery", "jobs", "redundancy", "cuts"],
+      "caption": "Postal jobs under pressure as employers reshape operations."
+    },
+    {
+      "path": "social-media/assets/news/week19-wed-hiring-practices.png",
+      "keywords": ["hiring", "recruitment", "employers", "job seekers", "interview", "vacancies"],
+      "caption": "Hiring choices are changing how candidates move through the market."
+    },
+    {
+      "path": "social-media/assets/news/recruitment-awards-networking.png",
+      "keywords": ["awards", "recruitment strategies", "talent recruitment", "networking", "event"],
+      "caption": "Recruitment ideas, recognised on the awards floor."
+    },
+    {
+      "path": "social-media/assets/news/jobs-guarantee-work-placement.png",
+      "keywords": ["work placement", "guarantee", "students", "experience", "placement"],
+      "caption": "Work placements can turn support into real experience."
+    },
+    {
+      "path": "social-media/assets/news/week18-fri-fe-retention.png",
+      "keywords": ["further education", "retention", "colleges", "training", "skills"],
+      "caption": "Skills and retention remain central to the early-career pipeline."
+    }
+  ]
+}

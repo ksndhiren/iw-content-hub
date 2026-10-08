@@ -48,6 +48,7 @@ TOPIC_REPEAT_OVERRIDE_ENV = "IW_ALLOW_TOPIC_REPEAT"                      # expli
 DKEYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 NEWS_IMAGE_USED = os.path.join(L.BASE, "content", "news_image_used.json")
 AYRSHARE_POSTED = os.path.join(L.BASE, "content", "ayrshare_posted.json")
+NEWS_ASSET_BANK = os.path.join(L.BASE, "assets", "news", "news_asset_bank.json")
 
 
 class TopicFreshnessError(RuntimeError):
@@ -477,6 +478,9 @@ def _news_image_queries(item, headline):
 
 
 def _news_image_caption(item, headline):
+    bank_caption = item.get("_image_caption")
+    if bank_caption:
+        return bank_caption
     source = _news_source_text(item, headline)
     if any(w in source for w in ["award", "awards", "recruitment strategies", "talent recruitment"]):
         return "Recruitment ideas, recognised on the awards floor."
@@ -532,7 +536,45 @@ def _news_image_seen(path):
     return sha in seen
 
 
+def _load_news_asset_bank():
+    try:
+        data = json.load(open(NEWS_ASSET_BANK))
+    except Exception:
+        return []
+    return [a for a in data.get("assets", []) if a.get("path")]
+
+
+def _pick_bank_news_image(item, headline):
+    """Pick an approved repo asset that matches the story.
+
+    GitHub Actions cannot use Codex's built-in ImageGen. Scheduled cloud news
+    therefore uses this pre-approved asset bank first; fresh Codex assets can be
+    added here as stories/categories appear.
+    """
+    source = _news_source_text(item, headline)
+    candidates = []
+    for asset in _load_news_asset_bank():
+        path = asset["path"]
+        if not os.path.isabs(path):
+            path = os.path.join(os.path.dirname(L.BASE), path)
+        if not os.path.exists(path) or _news_image_seen(path):
+            continue
+        keywords = [str(k).lower() for k in asset.get("keywords", [])]
+        score = sum(1 for kw in keywords if kw and kw in source)
+        if score:
+            candidates.append((score, path, asset))
+    if not candidates:
+        return None
+    _, path, asset = sorted(candidates, key=lambda row: row[0], reverse=True)[0]
+    item["_image_caption"] = asset.get("caption") or _news_image_caption(item, headline)
+    _remember_news_image(path, headline, "approved-news-asset-bank")
+    return path
+
+
 def _fetch_required_news_image(item, headline):
+    bank_path = _pick_bank_news_image(item, headline)
+    if bank_path:
+        return bank_path
     try:
         from pexels_utils import search_pexels, download_image
         errors = []

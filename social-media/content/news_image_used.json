@@ -23,6 +23,14 @@
       "photo_id": 9301761,
       "path": "assets/pexels_cache/9bda8243b475.jpg",
       "at": "2026-10-05T03:22:35.882260Z"
+    },
+    {
+      "sha256": "5ea02d4e9fe441d091aaae66a30a3992606cd4bd08f63cb8606d71d0f7aede09",
+      "headline": "Postal Service Plans Major Job Cuts",
+      "query": "approved-news-asset-bank",
+      "photo_id": null,
+      "path": "assets/news/week19-thu-royal-mail-job-cuts.png",
+      "at": "2026-10-08T07:59:20.609865Z"
     }
   ]
 }

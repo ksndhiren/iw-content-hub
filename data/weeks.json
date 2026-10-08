@@ -7665,6 +7665,94 @@
               "#internships"
             ]
           }
+        },
+        {
+          "id": "week19-thu-news",
+          "day": "Thu 8 Oct",
+          "lane": "news",
+          "title": "Glasgow Agrees on New Pay Scheme",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "Glasgow City Council has reached an agreement with trade unions to implement a new pay and grading scheme. This new structure aims to resolve past disputes and ensure fairer compensation within the council. For students and recent graduates, this could mean more equitable job opportunities and a diverse work environment in local government. Internships can be a stepping stone into public sector roles, providing valuable experience and insight. Source: Personnel Today.",
+          "hashtags": [
+            "#glasgowjobs",
+            "#fairpay",
+            "#internships",
+            "#publicsector",
+            "#ukcareers"
+          ],
+          "captions": {
+            "ig-fb": "Glasgow City Council has reached an agreement with trade unions to implement a new pay and grading scheme. This new structure aims to resolve past disputes and ensure fairer compensation within the council. For students and recent graduates, this could mean more equitable job opportunities and a diverse work environment in local government. Internships can be a stepping stone into public sector roles, providing valuable experience and insight. Source: Personnel Today.",
+            "linkedin": "An important agreement between Glasgow City Council and trade unions will see the implementation of a new pay and grading scheme. This move intends to address past pay disputes and promote fairness within the council's compensation system. Students and graduates may find more equitable job opportunities in the public sector, encouraging a diverse workforce. Internships remain a crucial pathway to gain experience and understanding of local government roles. Source: Personnel Today.",
+            "x": "Glasgow City Council and trade unions agree on a new pay scheme, aiming for fairness and resolving past disputes. This could lead to better opportunities for grads in local government. (Source: Personnel Today)",
+            "threads": "Glasgow City Council and trade unions have agreed on a new pay and grading scheme. This move aims to provide fairer pay and resolve disputes, opening up more equitable job opportunities for grads in local government. Internships can help you gain valuable experience in this sector. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#glasgowjobs",
+              "#fairpay",
+              "#internships",
+              "#publicsector",
+              "#ukcareers"
+            ],
+            "linkedin": [
+              "#glasgowjobs",
+              "#publicsector",
+              "#internships"
+            ],
+            "x": [
+              "#glasgowjobs",
+              "#fairpay"
+            ]
+          }
+        },
+        {
+          "id": "week19-fri-news",
+          "day": "Fri 9 Oct",
+          "lane": "news",
+          "title": "Postal Service Plans Major Job Cuts",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "A major UK postal service is set to reduce its workforce by 2,500 roles, focusing on head office and non-frontline positions, by 2027. This strategic move aims to streamline operations but may reduce job opportunities in administrative roles for graduates. As the job market evolves, it's crucial to remain adaptable and explore roles in other sectors. Internships offer a way to gain experience and make valuable industry connections. Source: BBC Business.",
+          "hashtags": [
+            "#jobcuts",
+            "#ukjobs",
+            "#graduateopportunities",
+            "#internships",
+            "#careeradvice"
+          ],
+          "captions": {
+            "ig-fb": "A major UK postal service is set to reduce its workforce by 2,500 roles, focusing on head office and non-frontline positions, by 2027. This strategic move aims to streamline operations but may reduce job opportunities in administrative roles for graduates. As the job market evolves, it's crucial to remain adaptable and explore roles in other sectors. Internships offer a way to gain experience and make valuable industry connections. Source: BBC Business.",
+            "linkedin": "A major UK postal service plans to cut 2,500 jobs, specifically targeting head office and non-frontline roles, by the end of 2027. This decision is part of a broader strategy to streamline operations, but it could impact job opportunities for recent graduates entering the administrative sector. It's essential for students and graduates to remain flexible and explore opportunities in other industries. Internships can provide practical experience and networking in sectors not facing similar cuts. Source: BBC Business.",
+            "x": "A UK postal service plans to cut 2,500 jobs by 2027, affecting head office roles. Graduates may need to look at other sectors for opportunities. (Source: BBC Business)",
+            "threads": "A UK postal service is cutting 2,500 non-frontline jobs by 2027. This shift may affect job opportunities in administration for graduates. Internships remain a vital way to gain industry experience and explore new fields. For more, visit www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#jobcuts",
+              "#ukjobs",
+              "#graduateopportunities",
+              "#internships",
+              "#careeradvice"
+            ],
+            "linkedin": [
+              "#jobcuts",
+              "#careerchange",
+              "#internships"
+            ],
+            "x": [
+              "#jobcuts",
+              "#careeradvice"
+            ]
+          }
         }
       ]
     }
