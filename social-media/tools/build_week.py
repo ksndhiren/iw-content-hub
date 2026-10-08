@@ -434,8 +434,9 @@ def _news_source_text(item, headline):
 def _news_image_queries(item, headline):
     """Return article-specific image queries, ordered from precise to broad.
 
-    Hard rule: news cards must use a relevant article image. The first query
-    should describe the actual story; broad workplace fallbacks are last only.
+    Hard rule: news cards must use a relevant article image. Queries must be
+    tied to the selected story or story category. Do not use generic workplace
+    fallbacks just to make image selection succeed.
     """
     source = _news_source_text(item, headline)
     clean_head = re.sub(r"[^a-zA-Z0-9 ]+", " ", headline or item.get("title", "")).strip()
@@ -469,10 +470,6 @@ def _news_image_queries(item, headline):
         ]
     if clean_head:
         queries.append(f"{clean_head} UK workplace early career")
-    queries += [
-        "young professionals recruitment interview office",
-        "early career candidates recruiter office meeting",
-    ]
     # Preserve order while removing duplicates.
     return list(dict.fromkeys(q for q in queries if q.strip()))
 
@@ -595,7 +592,7 @@ def _fetch_required_news_image(item, headline):
         raise RuntimeError(
             "News cards require a relevant, non-repeated image. Configure PEXELS_API_KEY "
             "for the default cloud image source, or pass image_path explicitly for a "
-            "manual editorial asset; "
+            "manual editorial asset. Generic workplace fallback images are not allowed; "
             f"image fetch failed for {headline!r}: {exc}"
         )
 

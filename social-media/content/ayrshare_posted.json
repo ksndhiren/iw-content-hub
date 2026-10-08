@@ -3213,5 +3213,29 @@
     "at": "2026-10-08T08:00:13.555133",
     "network": "instagram",
     "scheduleDate": "2026-10-09T07:00:00Z"
+  },
+  "week19-thu-news:facebook": {
+    "id": "WpQeViCXZzyvXX1IOJ6B",
+    "at": "2026-10-08T08:22:09.528633",
+    "network": "facebook",
+    "scheduleDate": null
+  },
+  "week19-thu-news:facebook:story": {
+    "id": "GShNRsJhGZbQO0TDcRf9",
+    "at": "2026-10-08T08:22:21.485183",
+    "network": "facebook",
+    "scheduleDate": null
+  },
+  "week19-fri-news:facebook": {
+    "id": "4R9xa733Avj7kG5j7YFH",
+    "at": "2026-10-08T08:22:37.766998",
+    "network": "facebook",
+    "scheduleDate": "2026-10-09T07:00:00Z"
+  },
+  "week19-fri-news:facebook:story": {
+    "id": "xoPNpgH3ospcKFOYs5UY",
+    "at": "2026-10-08T08:22:39.703110",
+    "network": "facebook",
+    "scheduleDate": "2026-10-09T07:00:00Z"
   }
 }
