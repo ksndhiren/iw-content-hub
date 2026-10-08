@@ -15,8 +15,8 @@ name: News - Day-Prior Build
 # rules are enforced in news_fetch + the writer, not by a human click.
 #
 # Requires repo secrets: OPENAI_API_KEY (+ optional var OPENAI_MODEL), AYRSHARE_API_KEY,
-# and the R2_* set. News image policy is Codex-generated or explicitly supplied
-# editorial assets; cloud runs fail closed when no relevant image is available.
+# PEXELS_API_KEY, and the R2_* set. News image policy is approved repo/Codex
+# assets first, then relevant non-repeated Pexels fallback for unattended runs.
 
 on:
   schedule:
@@ -62,6 +62,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           IW_TEMP_WEEKEND_NEWS_UNTIL: "2026-10-04"
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
