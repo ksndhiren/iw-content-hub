@@ -89,6 +89,7 @@ jobs:
         if: steps.build.outputs.pid != ''
         env:
           AYRSHARE_API_KEY: ${{ secrets.AYRSHARE_API_KEY }}
+          AYRSHARE_ACTIVE_NETWORKS: instagram,facebook,linkedin,threads,gmb,pinterest
         run: |
           set -o pipefail
           python social-media/tools/ayrshare_publish.py \
