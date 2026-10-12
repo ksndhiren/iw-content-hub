@@ -81,12 +81,12 @@ def week_of(target: datetime.date):
     return f"week{n}", f"Week {n}", mon.isoformat(), mon, dkey, dlabel
 
 
-def pick_fresh(exclude_titles):
+def pick_fresh(exclude_titles, max_age_days=5):
     """First fresh, unused UK news item whose topic doesn't repeat a headline
     already used in this week. Raises instead of silently repeating unless
     IW_ALLOW_TOPIC_REPEAT=1 is set."""
     excl_sets = [bw._news_words(t) for t in exclude_titles]
-    fetched = bw.news_fetch.fetch(limit=20)
+    fetched = bw.news_fetch.fetch(max_age_days=max_age_days, limit=20)
     if not fetched and not bw.topic_repeat_allowed():
         raise bw.TopicFreshnessError(
             "No live news items were fetched. Refusing to use sample news unless "
@@ -111,6 +111,7 @@ def main():
     p.add_argument("--offset", type=int, default=1, help="days ahead to build (default 1 = tomorrow; must resolve to tomorrow unless override env is set)")
     p.add_argument("--date", help="explicit posting date YYYY-MM-DD (must be tomorrow unless override env is set)")
     p.add_argument("--image", help="explicit editorial image path for the news card when stock fetch is unavailable")
+    p.add_argument("--max-age-days", type=int, default=5, help="maximum RSS story age in days (default 5; widen only for manual dashboard review)")
     p.add_argument("--dry", action="store_true", help="plan only, no LLM/render/write")
     args = p.parse_args()
 
@@ -130,7 +131,7 @@ def main():
                      if pp.get("lane") == "news" and pp.get("id") != pid]
     existing_news += bw.posted_titles({"news"})
 
-    item = pick_fresh(existing_news)
+    item = pick_fresh(existing_news, max_age_days=args.max_age_days)
     print(f"Building news for {dlabel} ({pid}) - \"{item.get('title', '')[:70]}\"")
     if args.dry:
         print("DRY: nothing fetched-through, rendered or written.")

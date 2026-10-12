@@ -31,6 +31,14 @@ on:
         description: "Optional repo path to a supplied editorial image for manual runs"
         required: false
         default: ""
+      publish:
+        description: "Post/schedule to Ayrshare after build? Use false for dashboard review only."
+        required: false
+        default: "true"
+      max_age_days:
+        description: "Maximum RSS story age in days. Keep 5 by default; widen only for manual review."
+        required: false
+        default: "5"
 
 permissions:
   contents: write
@@ -75,6 +83,9 @@ jobs:
           if [ -n "${{ github.event.inputs.image }}" ]; then
             EXTRA_ARGS+=(--image "${{ github.event.inputs.image }}")
           fi
+          if [ -n "${{ github.event.inputs.max_age_days }}" ]; then
+            EXTRA_ARGS+=(--max-age-days "${{ github.event.inputs.max_age_days }}")
+          fi
           if [ -n "${{ github.event.inputs.date }}" ]; then
             python social-media/tools/build_news_day.py --date "${{ github.event.inputs.date }}" "${EXTRA_ARGS[@]}" | tee /tmp/news.log
           else
@@ -115,7 +126,7 @@ jobs:
             --schedule --live | tee /tmp/news_schedule.log
 
       - name: Commit and push Ayrshare ledger if it changed
-        if: always() && steps.build.outputs.pid != ''
+        if: always() && steps.build.outputs.pid != '' && github.event.inputs.publish != 'false'
         run: |
           FILES="social-media/content/ayrshare_posted.json"
           if [ -z "$(git status --porcelain $FILES)" ]; then
