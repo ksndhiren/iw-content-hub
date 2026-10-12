@@ -1,0 +1,90 @@
+{
+  "week20-mon-news": {
+    "deletedAt": "2026-10-12T09:15:50.670246+00:00",
+    "reason": "Client takedown: news not focused enough on interns",
+    "results": {
+      "week20-mon-news:facebook": {
+        "facebook": {
+          "action": "delete",
+          "status": "success",
+          "id": "151837384841481_1524372879726525"
+        },
+        "status": "success",
+        "code": 200,
+        "id": "VMqGGzeS14EiayuEIGXe"
+      },
+      "week20-mon-news:facebook:story": {
+        "status": "http_error",
+        "code": 404,
+        "body": "{\"facebook\":{\"code\":114,\"action\":\"delete\",\"status\":\"error\",\"message\":\"There was an error deleting the post. Please verify that the post ID is valid, the correct User Profile is selected, and the post still exists on the social network.\"},\"status\":\"error\",\"code\":114,\"id\":\"YUqfSHGCjOweKBOk3IGV\"}"
+      },
+      "week20-mon-news:gmb": {
+        "gmb": {
+          "action": "delete",
+          "status": "success",
+          "id": "6177473820724232358"
+        },
+        "status": "success",
+        "code": 200,
+        "id": "JNvYLaU9f0obY6cLA27T"
+      },
+      "week20-mon-news:instagram": {
+        "instagram": {
+          "action": "delete",
+          "status": "success",
+          "id": "17989862444866908",
+          "message": "Delete not supported by Instagram. Please go to instagram.com to delete."
+        },
+        "status": "success",
+        "code": 200,
+        "id": "Fa9AF5UbXD1JawaqGY2f"
+      },
+      "week20-mon-news:instagram:story": {
+        "instagram": {
+          "action": "delete",
+          "status": "success",
+          "id": "18030773747909099",
+          "message": "Delete not supported by Instagram. Please go to instagram.com to delete."
+        },
+        "status": "success",
+        "code": 200,
+        "id": "NgUMrXNRJPxkxuS7Cimz"
+      },
+      "week20-mon-news:linkedin": {
+        "linkedin": {
+          "action": "delete",
+          "status": "success",
+          "id": "urn:li:share:7515337478510215168"
+        },
+        "status": "success",
+        "code": 200,
+        "id": "6RJOith3BKgW9JbVRdU0"
+      },
+      "week20-mon-news:pinterest": {
+        "pinterest": {
+          "action": "delete",
+          "status": "success",
+          "id": "1076078904743801792"
+        },
+        "status": "success",
+        "code": 200,
+        "id": "DtWDpTdMwrlNvYi8raAV"
+      },
+      "week20-mon-news:threads": {
+        "threads": {
+          "action": "delete",
+          "status": "success",
+          "id": "17986920330096026"
+        },
+        "status": "success",
+        "code": 200,
+        "id": "0Q8gUQVy5ZhRvc6ZhFKH"
+      }
+    },
+    "manualStillRequired": [
+      "instagram feed: Ayrshare reports Instagram delete is not supported; delete manually in Instagram",
+      "instagram story: Ayrshare reports Instagram delete is not supported; delete manually in Instagram",
+      "facebook story: Ayrshare returned platform delete error; verify/delete manually in Facebook if still visible"
+    ]
+  }
+}

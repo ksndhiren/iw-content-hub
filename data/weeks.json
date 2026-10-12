@@ -7761,52 +7761,7 @@
       "label": "Week 20",
       "weekCommencing": "2026-10-12",
       "builtAt": 1791795210,
-      "posts": [
-        {
-          "id": "week20-mon-news",
-          "day": "Mon 12 Oct",
-          "lane": "news",
-          "title": "Hackney Dad on Award Shortlist",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "approved",
-          "caption": "A Hackney father who began his apprenticeship at 45 has been shortlisted for a prestigious national award for multicultural apprenticeships. This milestone shows that age and background are no barriers to success. For students and graduates, it's a reminder that career paths are flexible and diverse. Internships can pave the way to new opportunities, providing essential skills and experience. Source: FE News.",
-          "hashtags": [
-            "#apprenticeships",
-            "#careerchange",
-            "#diversity",
-            "#internships",
-            "#ukjobs"
-          ],
-          "captions": {
-            "ig-fb": "A Hackney father who began his apprenticeship at 45 has been shortlisted for a prestigious national award for multicultural apprenticeships. This milestone shows that age and background are no barriers to success. For students and graduates, it's a reminder that career paths are flexible and diverse. Internships can pave the way to new opportunities, providing essential skills and experience. Source: FE News.",
-            "linkedin": "A father from Hackney, who started his apprenticeship at 45, is in the running for a national award celebrating multicultural apprenticeships. This achievement underscores that career changes can happen at any age and with various backgrounds. For students and graduates, it highlights the importance of embracing diverse paths. Internships are crucial in gaining real-world experience and skills. Source: FE News.",
-            "x": "A Hackney dad, starting his career at 45, is up for a national multicultural apprenticeship award. Age and background are no barriers to success. (Source: FE News)",
-            "threads": "A Hackney resident, who began an apprenticeship at 45, is shortlisted for a national multicultural award. This showcases that age isn't a limit to starting a new career. Internships provide valuable experience and a path to discover diverse opportunities. www.internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#apprenticeships",
-              "#careerchange",
-              "#diversity",
-              "#internships",
-              "#ukjobs"
-            ],
-            "linkedin": [
-              "#diversecareers",
-              "#internships",
-              "#apprenticeshipawards"
-            ],
-            "x": [
-              "#careerchange",
-              "#apprenticeships"
-            ]
-          }
-        }
-      ]
+      "posts": []
     }
   ]
 }
