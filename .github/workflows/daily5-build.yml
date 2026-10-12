@@ -2,8 +2,8 @@ name: Daily-5 Build
 
 # The hands-free weekly content build. Runs Saturday (once the full past-week
 # analytics are in) and sources content (banks + topic engine), has the LLM write
-# every on-screen text + caption, renders the evergreen lanes (quote, employer,
-# education) x 5 days from their design libraries, and commits the week to
+# every on-screen text + caption, renders the active evergreen lanes (quote,
+# poll/conversation, education) x 5 days from their design libraries, and commits the week to
 # data/weeks.json as `in-review`. NEWS is built separately by news-daily.yml the
 # day before it posts (so it is never stale); this batch preserves any news posts
 # already added for the week on a re-run. That auto-redeploys the dashboard, where

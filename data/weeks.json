@@ -7853,50 +7853,6 @@
           "ideaId": "c011"
         },
         {
-          "id": "week20-mon-employer",
-          "day": "Mon 12 Oct",
-          "lane": "employer",
-          "title": "In good company",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Whether you're a startup with big dreams or a household name shaping the future, finding the right early talent is crucial. With Internwise, over 14,000 UK employers have tapped into a pool of eager graduates ready to make their mark. It’s quick and simple to post a job and start your hiring journey. Discover the difference for your company. Find internships and graduate talent at www.internwise.co.uk",
-          "hashtags": [
-            "#ukjobs",
-            "#hiring",
-            "#internships",
-            "#graduatejobs",
-            "#careersuccess"
-          ],
-          "captions": {
-            "ig-fb": "Whether you're a startup with big dreams or a household name shaping the future, finding the right early talent is crucial. With Internwise, over 14,000 UK employers have tapped into a pool of eager graduates ready to make their mark. It’s quick and simple to post a job and start your hiring journey. Discover the difference for your company. Find internships and graduate talent at www.internwise.co.uk",
-            "linkedin": "Join the ranks of over 14,000 UK employers who trust Internwise to connect them with motivated early talent. From innovative startups to well-known brands, employers across every sector find their next great hire on our platform. Posting jobs is streamlined, making it easier than ever to find the right fit for your team. Ready to enhance your workforce? Visit internwise.co.uk",
-            "x": "14,000+ UK employers trust Internwise to find early talent. From startups to big names, hiring is quick and easy. Find your next hire at internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#ukjobs",
-              "#hiring",
-              "#internships",
-              "#graduatejobs",
-              "#careersuccess"
-            ],
-            "linkedin": [
-              "#ukhiring",
-              "#graduatetalent",
-              "#internships"
-            ],
-            "x": [
-              "#ukjobs",
-              "#hiringnow"
-            ]
-          },
-          "world": "goodcompany"
-        },
-        {
           "id": "week20-mon-education",
           "day": "Mon 12 Oct",
           "lane": "education",
@@ -8057,50 +8013,6 @@
           },
           "world": "proofboard",
           "ideaId": "c012"
-        },
-        {
-          "id": "week20-tue-employer",
-          "day": "Tue 13 Oct",
-          "lane": "employer",
-          "title": "Reach 400,000 early-career candidates",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Looking to hire fresh talent? Internwise connects you with 400,000 eager students and graduates ready to dive into their careers. Join over 14,000 employers who trust us to find the perfect fit. With our Featured Employer option, you'll see a boost in applications. Start finding your future team at www.internwise.co.uk.",
-          "hashtags": [
-            "#graduatejobs",
-            "#ukinternships",
-            "#talentacquisition",
-            "#hiresmart",
-            "#futureleaders"
-          ],
-          "captions": {
-            "ig-fb": "Looking to hire fresh talent? Internwise connects you with 400,000 eager students and graduates ready to dive into their careers. Join over 14,000 employers who trust us to find the perfect fit. With our Featured Employer option, you'll see a boost in applications. Start finding your future team at www.internwise.co.uk.",
-            "linkedin": "With Internwise, you can tap into a talent pool of 400,000 students and graduates across the UK. Over 14,000 employers are already using our platform to find the right candidates. Our Featured Employer service can help you stand out and attract even more applications. Discover the potential of your next team member at internwise.co.uk.",
-            "x": "Connect with 400,000 UK students & grads on Internwise. Join 14,000+ employers using our platform. Need a boost? Try our Featured Employer service. internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#graduatejobs",
-              "#ukinternships",
-              "#talentacquisition",
-              "#hiresmart",
-              "#futureleaders"
-            ],
-            "linkedin": [
-              "#graduaterecruitment",
-              "#talentacquisition",
-              "#ukinternships"
-            ],
-            "x": [
-              "#graduatejobs",
-              "#ukinternships"
-            ]
-          },
-          "world": "fastmatch"
         },
         {
           "id": "week20-tue-education",
@@ -8265,50 +8177,6 @@
           "ideaId": "c013"
         },
         {
-          "id": "week20-wed-employer",
-          "day": "Wed 14 Oct",
-          "lane": "employer",
-          "title": "Reach 400,000 early-career candidates",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Looking to hire the brightest minds fresh out of uni? 🌟 Internwise connects you with 400,000 ambitious students and graduates eager to start their careers. Join over 14,000 employers who are already finding top talent through our focused platform. Plus, become a Featured Employer and boost your applications! Start your recruitment journey today at www.internwise.co.uk",
-          "hashtags": [
-            "#hiresmart",
-            "#graduatetalent",
-            "#ukjobs",
-            "#earlycareers",
-            "#internwise"
-          ],
-          "captions": {
-            "ig-fb": "Looking to hire the brightest minds fresh out of uni? 🌟 Internwise connects you with 400,000 ambitious students and graduates eager to start their careers. Join over 14,000 employers who are already finding top talent through our focused platform. Plus, become a Featured Employer and boost your applications! Start your recruitment journey today at www.internwise.co.uk",
-            "linkedin": "Ready to discover the next generation of talent? With Internwise, you can connect with 400,000 early-career candidates across the UK. Our platform has already helped over 14,000 employers find the right fit for their roles. Enhance your reach by becoming a Featured Employer and see a surge in applications. Visit internwise.co.uk for more.",
-            "x": "Connect with 400,000 early-career candidates through Internwise! Join 14,000+ employers finding top talent. Become a Featured Employer and boost your reach. internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#hiresmart",
-              "#graduatetalent",
-              "#ukjobs",
-              "#earlycareers",
-              "#internwise"
-            ],
-            "linkedin": [
-              "#talentacquisition",
-              "#ukgraduates",
-              "#internwise"
-            ],
-            "x": [
-              "#graduatejobs",
-              "#internwise"
-            ]
-          },
-          "world": "bigstat"
-        },
-        {
           "id": "week20-wed-education",
           "day": "Wed 14 Oct",
           "lane": "education",
@@ -8471,50 +8339,6 @@
           "ideaId": "c014"
         },
         {
-          "id": "week20-thu-employer",
-          "day": "Thu 15 Oct",
-          "lane": "employer",
-          "title": "Reach 400,000 early-career candidates",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Ready to meet the perfect candidates for your business? With Internwise, you can access a vast pool of 400,000 students and graduates across the UK. Join over 14,000 employers who are already finding the right talent quickly and efficiently. Take advantage of our Featured Employer option to boost your applications and stand out. Discover a smarter way to hire at www.internwise.co.uk",
-          "hashtags": [
-            "#ukgrads",
-            "#graduatejobs",
-            "#earlycareer",
-            "#internships",
-            "#hiresmart"
-          ],
-          "captions": {
-            "ig-fb": "Ready to meet the perfect candidates for your business? With Internwise, you can access a vast pool of 400,000 students and graduates across the UK. Join over 14,000 employers who are already finding the right talent quickly and efficiently. Take advantage of our Featured Employer option to boost your applications and stand out. Discover a smarter way to hire at www.internwise.co.uk",
-            "linkedin": "Looking to connect with fresh talent? Internwise offers access to 400,000 early-career candidates from across the UK. Join 14,000+ employers who trust our platform to find and attract the right talent. Use our Featured Employer option to enhance your visibility and attract more applications. Explore your next hiring solution at internwise.co.uk",
-            "x": "Searching for the right talent? Reach 400,000 UK students and grads with Internwise. Join 14,000+ businesses finding success. Learn more at internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#ukgrads",
-              "#graduatejobs",
-              "#earlycareer",
-              "#internships",
-              "#hiresmart"
-            ],
-            "linkedin": [
-              "#graduaterecruitment",
-              "#uktalent",
-              "#featuredemployer"
-            ],
-            "x": [
-              "#ukstudents",
-              "#graduatejobs"
-            ]
-          },
-          "world": "kpi"
-        },
-        {
           "id": "week20-thu-education",
           "day": "Thu 15 Oct",
           "lane": "education",
@@ -8661,50 +8485,6 @@
           },
           "world": "signal",
           "ideaId": "c015"
-        },
-        {
-          "id": "week20-fri-employer",
-          "day": "Fri 16 Oct",
-          "lane": "employer",
-          "title": "Your next intern is already here",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Looking for fresh talent to join your team? With over 400,000 eager candidates, Internwise is your go-to for finding the perfect intern. Post your roles and start shortlisting today. It's quick and easy. All the tools you need to interview and onboard, all in one place. Discover the future of your workforce at www.internwise.co.uk.",
-          "hashtags": [
-            "#internshipuk",
-            "#futureleaders",
-            "#hiresmart",
-            "#graduatejobs",
-            "#internwise"
-          ],
-          "captions": {
-            "ig-fb": "Looking for fresh talent to join your team? With over 400,000 eager candidates, Internwise is your go-to for finding the perfect intern. Post your roles and start shortlisting today. It's quick and easy. All the tools you need to interview and onboard, all in one place. Discover the future of your workforce at www.internwise.co.uk.",
-            "linkedin": "Ready to bring new energy into your company? Internwise connects you with over 400,000 candidates ready to kick off their careers. Post your internship roles in minutes and manage your entire hiring process from one platform. From shortlisting to onboarding, we've got you covered. Start your search today at internwise.co.uk.",
-            "x": "Your future intern is on Internwise. Connect with 400,000+ candidates, post your roles, and manage everything in one spot. Start now at internwise.co.uk."
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#internshipuk",
-              "#futureleaders",
-              "#hiresmart",
-              "#graduatejobs",
-              "#internwise"
-            ],
-            "linkedin": [
-              "#talentacquisition",
-              "#graduaterecruitment",
-              "#internwise"
-            ],
-            "x": [
-              "#internshipuk",
-              "#graduatejobs"
-            ]
-          },
-          "world": "cards"
         },
         {
           "id": "week20-fri-education",

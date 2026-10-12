@@ -1,15 +1,15 @@
-"""Week orchestrator - the weekly evergreen build (quote, employer, education).
+"""Week orchestrator - the weekly evergreen build (quote, conversation, education).
 
 For each day it sources content, has the LLM (writer.py) write all on-screen copy
-+ captions, renders each lane from its design library, and patches the day-based
++ captions, renders each active lane from its design library, and patches the day-based
 `data/weeks.json` as `in-review`. Runs locally or in the cloud (daily5-build.yml).
 
 NEWS is deliberately NOT built here - it is generated exactly one day before it
 posts by build_news_day.py (news-daily.yml) so headlines are never stale. This
 batch preserves any news posts already present for the week when it rewrites the
-entry. Daily-5 means five core reviewable posts per posting day; featured jobs
-are separate and do not count toward the core five. The fifth core post is Poll/Conversation
-(stored as lane "engagement" for dashboard/publishing compatibility).
+entry. The active weekly evergreen set is Quote, Poll/Conversation, and Education.
+News is day-prior. Featured jobs are separate and employer acquisition graphics are not
+part of the weekly batch unless the user explicitly asks to bring them back.
 
     python3 tools/build_week.py                 # full 5-day week
     python3 tools/build_week.py --days 1         # just Monday (cheap validation)
@@ -130,9 +130,10 @@ def target_week():
 QUOTE_WORLDS = ["editorial", "spotlight", "colorblock", "split", "paper",
                 "arc", "blueprint", "band", "minimal", "bubble",
                 "marquee", "stamp", "notebook", "gallery", "manifesto"]
-# Employer is a core Daily-5 lane and must run every weekday. Featured jobs are
-# a separate sixth queue, never a substitute for missing core-grid posts.
-EMPLOYER_DAYS = {0, 1, 2, 3, 4}
+# Employer acquisition graphics were dropped from the weekly batch. Keep the renderer
+# library for manual one-offs, but do not generate employer posts unless this set is
+# explicitly re-enabled.
+EMPLOYER_DAYS = set()
 EMPLOYER_PAIRS = [("benefits", "e001"), ("bigstat", "e004"), ("process", "e003"),
                   ("trust", "e005"), ("statement", "e002")]
 # All employer worlds (incl. the week16 additions) + a compatible angle for CTA copy.
@@ -666,8 +667,8 @@ def build(days=5, dry=False):
         posts[-1]["quoteId"] = qid
         posts[-1]["world"] = world
 
-        # POLL / CONVERSATION lane - the fifth core Daily-5 surface.
-        # Keep it useful and brand-safe; featured jobs remain a separate sixth queue.
+        # POLL / CONVERSATION lane. Keep it useful and brand-safe; featured jobs
+        # remain a separate queue.
         idea = week_conversation[di]
         world = conversation_worlds[di]
         visual_hook = idea.get("hook", "Career conversation")
@@ -681,7 +682,7 @@ def build(days=5, dry=False):
         posts[-1]["world"] = world
         posts[-1]["ideaId"] = idea.get("id")
 
-        # EMPLOYER - core Daily-5 lane. Featured jobs remain separate.
+        # EMPLOYER - disabled by default. Featured jobs remain separate.
         if di in EMPLOYER_DAYS:
             world, aid = week_emp[di]; a = angles[aid]
             onscreen = a["headline"] + ". " + a.get("body", "") + " " + " ".join(a.get("benefits", []))

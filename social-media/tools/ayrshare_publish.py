@@ -219,12 +219,14 @@ def _dkey(post):
     return post["id"].split("-")[-2] if post["id"].count("-") >= 2 else None
 
 
-def build_jobs(week, connected, want_status, use_schedule, only=None, days=None, stories=True, at=None, networks=None):
+def build_jobs(week, connected, want_status, use_schedule, only=None, days=None, stories=True, at=None, networks=None, force_only=False):
     jobs = []
     for post in week.get("posts", []):
         if only:
             if post["id"] != only:
-                continue           # --only names one post; post it regardless of status
+                continue
+            if post.get("status") != want_status and not force_only:
+                continue
         elif post.get("status") != want_status:
             continue
         if days and _dkey(post) not in days:
@@ -302,7 +304,8 @@ def main():
     ap.add_argument("--live", action="store_true", help="actually post (default: dry-run)")
     ap.add_argument("--schedule", action="store_true", help="schedule at lane times instead of now")
     ap.add_argument("--status", default="approved", help="which post status is eligible")
-    ap.add_argument("--only", default=None, help="post just this one post id (ignores status gate)")
+    ap.add_argument("--only", default=None, help="post just this one post id; still respects --status unless --force-only is set")
+    ap.add_argument("--force-only", action="store_true", help="emergency override: allow --only to post even when status does not match --status")
     ap.add_argument("--days", default=None, help="comma list of day keys to include, e.g. tue,wed,thu,fri")
     ap.add_argument("--stories", action="store_true",
                     help="legacy/no-op: Instagram Stories are posted automatically with Instagram feed posts")
@@ -329,7 +332,8 @@ def main():
     connected = active_networks()
     posted = load_posted()
     jobs = build_jobs(week, connected, args.status, args.schedule, only=args.only,
-                      days=days, stories=True, at=args.at, networks=networks)
+                      days=days, stories=True, at=args.at, networks=networks,
+                      force_only=args.force_only)
 
     print(f"Target {label} | connected: {sorted(connected)} | status='{args.status}' "
           f"| {'LIVE' if args.live else 'DRY-RUN'}")

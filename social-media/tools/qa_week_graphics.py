@@ -25,11 +25,10 @@ IMG_ROOT = HUB / "images"
 AUTHORS = SOCIAL / "assets" / "quote_authors"
 AYRSHARE_POSTED = SOCIAL / "content" / "ayrshare_posted.json"
 
-CORE_LANES = ("education", "quote", "employer", "engagement")
+CORE_LANES = ("education", "quote", "engagement")
 CORE_LANE_LABELS = {
     "education": "Education",
     "quote": "Quote",
-    "employer": "Employer",
     "engagement": "Poll/Conversation",
 }
 EXTS = ("jpg", "jpeg", "png", "webp")
@@ -218,7 +217,7 @@ def main() -> int:
             print(f"- {item}")
         return 1
 
-    print(f"QA passed for {week['id']}: evergreen lanes per weekday incl. Poll/Conversation, quote portraits present, slide files valid, overlap review acknowledged. News is checked by the day-prior news job.")
+    print(f"QA passed for {week['id']}: active evergreen lanes per weekday incl. Poll/Conversation, quote portraits present, slide files valid, overlap review acknowledged. News is checked by the day-prior news job.")
     return 0
 
 

@@ -20,8 +20,8 @@ This is the approved creative direction for future Internwise social graphics. T
 - Featured-job post descriptions/captions must not mention employer/company names. Keep the role title, field, location, format, duration, and direct Internwise job link.
 - Featured-job descriptions must add useful context that is different from the text on the graphic. Do not repeat the graphic hook as the caption body.
 - Featured jobs should publish to Google Business Profile when connected, because they are directly relevant local/candidate opportunities.
-- The core week must render five reviewable graphics per weekday: News, Education, Quote, Employer, and Poll/Conversation. Featured jobs are a separate optional sixth lane and must not be used to make up the five.
-- The fifth post is Poll/Conversation, not the old fun/meme lane and not a generic engagement filler. It must be useful, conversion-aware, and able to stand alone even if nobody comments: decision prompts, A/B choices, comparison prompts, save/apply nudges, or practical conversation starters.
+- Employer acquisition graphics are currently dropped from the weekly batch. Do not generate the Employer lane unless the user explicitly asks to bring it back.
+- Poll/Conversation is the active engagement lane, not the old fun/meme lane and not a generic engagement filler. It must be useful, conversion-aware, and able to stand alone even if nobody comments: decision prompts, A/B choices, comparison prompts, save/apply nudges, or practical conversation starters.
 - Every Poll/Conversation graphic must include a visible comment prompt such as `Comment A, B or C below` inside the image to encourage engagement, placed clear of options, faces, logos, and CTA text.
 - Monday-level typography and highlighted-word treatment is the baseline for every day of the week, not a one-off. Tuesday-Friday should not fall back to plain corporate cards.
 - Direction does not mean template. Do not copy the same diagonal split, Nuno placement, cream/plum palette, serif word treatment, or content blocks across the week. Each post needs a distinct layout metaphor: profile frame, scoreboard, notebook, desk/flatlay, pipeline, newspaper, proof board, checklist, quote poster, etc. If day cards look like siblings at thumbnail size, regenerate until they are visibly different.
@@ -70,7 +70,7 @@ This is the approved creative direction for future Internwise social graphics. T
 ## Layout QA
 
 - Before publishing or scheduling a weekly batch, run the overlap QA gate: `PYTHONPYCACHEPREFIX=/private/tmp/iw-pycache python3 social-media/tools/qa_week_graphics.py week18 --ack-overlap-review`.
-- The QA gate must confirm five core posts per weekday: News, Education, Quote, Employer, and Poll/Conversation. Featured jobs are optional sixth posts only.
+- The QA gate must confirm active lanes only: News when generated day-prior, plus Education, Quote, and Poll/Conversation. Employer is disabled unless explicitly re-enabled.
 - The QA gate must fail on duplicate lanes per day, missing slide files, blank/tiny slide images, or quote posts without real author portraits.
 - The QA gate produces an overlap contact sheet. Review it at dashboard thumbnail size and full size before acknowledging. If text overlaps faces, Nuno, logos, buttons, image edges, or decorative shapes, fix and rerender.
 - Shapes may frame or sit behind images, but they must not slice through faces, hands, primary objects, or readable text. Highlight strokes must never pass through letters unless deliberately designed as an underline with enough clearance.
@@ -82,6 +82,8 @@ This is the approved creative direction for future Internwise social graphics. T
 - Facebook Stories should mirror Instagram Stories once a Facebook Page is connected in Ayrshare.
 
 ## Employer Direction
+
+- Employer acquisition posts are paused/dropped from the weekly batch. Keep these rules only for manual employer one-offs or if the user explicitly restores the lane.
 
 - Nuno must sit above the process/workflow visual layer when the concept implies him presenting or guiding the workflow.
 - Process bars, checklist chips, and workflow graphics must sit behind Nuno or clear him entirely. They must never visually cover his face, torso, hands, or props.
