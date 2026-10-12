@@ -7755,6 +7755,58 @@
           }
         }
       ]
+    },
+    {
+      "id": "week20",
+      "label": "Week 20",
+      "weekCommencing": "2026-10-12",
+      "builtAt": 1791795210,
+      "posts": [
+        {
+          "id": "week20-mon-news",
+          "day": "Mon 12 Oct",
+          "lane": "news",
+          "title": "Plumbing Workforce Decline Threatens Growth",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "England's plumbing workforce is projected to shrink by 30% by 2039, according to a new report. This decline could impact vital sectors like housebuilding and clean energy that depend on skilled plumbers. For students and graduates, this presents a chance to enter a field with rising demand and potential job security. Internships in plumbing provide the practical experience needed to thrive in this evolving landscape. Source: FE News.",
+          "hashtags": [
+            "#plumbing",
+            "#ukjobs",
+            "#skillsshortage",
+            "#internships",
+            "#careeropportunities"
+          ],
+          "captions": {
+            "ig-fb": "England's plumbing workforce is projected to shrink by 30% by 2039, according to a new report. This decline could impact vital sectors like housebuilding and clean energy that depend on skilled plumbers. For students and graduates, this presents a chance to enter a field with rising demand and potential job security. Internships in plumbing provide the practical experience needed to thrive in this evolving landscape. Source: FE News.",
+            "linkedin": "A recent report highlights a potential 30% reduction in England's plumbing workforce by 2039. This decline raises concerns for industries such as housebuilding and clean energy that rely heavily on plumbers. For those entering the workforce, this could mean increased opportunities in a sector facing a skills shortage. Internships can provide the essential experience and skills to succeed in this field. Source: FE News.",
+            "x": "England's plumbing workforce may decrease by 30% by 2039, affecting housebuilding and clean energy sectors. A skills shortage could mean more opportunities for graduates. (Source: FE News)",
+            "threads": "By 2039, England's plumbing workforce might shrink by 30%, impacting housebuilding and clean energy. This decline suggests more opportunities for students and graduates in a growing field. Internships can pave the way. Learn more at www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#plumbing",
+              "#ukjobs",
+              "#skillsshortage",
+              "#internships",
+              "#careeropportunities"
+            ],
+            "linkedin": [
+              "#plumbingjobs",
+              "#skillsshortage",
+              "#internshipopportunities"
+            ],
+            "x": [
+              "#ukjobs",
+              "#plumbing"
+            ]
+          }
+        }
+      ]
     }
   ]
 }
