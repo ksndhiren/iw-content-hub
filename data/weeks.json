@@ -7761,7 +7761,52 @@
       "label": "Week 20",
       "weekCommencing": "2026-10-12",
       "builtAt": 1791795210,
-      "posts": []
+      "posts": [
+        {
+          "id": "week20-tue-news",
+          "day": "Tue 13 Oct",
+          "lane": "news",
+          "title": "Health and Education Leaders Collaborate",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "UK health, care, and education leaders met to explore workforce collaboration. This initiative aims to strengthen workforce development by aligning education with industry needs. For students and graduates, this means potentially more relevant educational pathways and career opportunities in the health and care sectors. Internships remain a key bridge between education and employment, offering practical experience that aligns with industry demands. Source: FE News.",
+          "hashtags": [
+            "#ukjobs",
+            "#healthcareers",
+            "#education",
+            "#internships",
+            "#careergrowth"
+          ],
+          "captions": {
+            "ig-fb": "UK health, care, and education leaders met to explore workforce collaboration. This initiative aims to strengthen workforce development by aligning education with industry needs. For students and graduates, this means potentially more relevant educational pathways and career opportunities in the health and care sectors. Internships remain a key bridge between education and employment, offering practical experience that aligns with industry demands. Source: FE News.",
+            "linkedin": "Leaders in the UK's health, care, and education sectors convened to discuss collaborative workforce strategies. The goal is to enhance workforce development by aligning educational initiatives with industry needs. For students and graduates, this could lead to more relevant career opportunities in health and care. Internships are vital in this context, providing practical experience that connects education to real-world industry demands. Source: FE News.",
+            "x": "UK health and education leaders explore workforce collaboration to align education with industry needs. This could mean better career paths for students. (Source: FE News)",
+            "threads": "UK health and education leaders met to discuss workforce collaboration. The aim: align education with industry needs, benefiting students and graduates with more relevant career paths. Internships are key, providing practical experience to bridge education and employment. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#ukjobs",
+              "#healthcareers",
+              "#education",
+              "#internships",
+              "#careergrowth"
+            ],
+            "linkedin": [
+              "#ukworkforce",
+              "#careerdevelopment",
+              "#internships"
+            ],
+            "x": [
+              "#ukjobs",
+              "#internships"
+            ]
+          }
+        }
+      ]
     }
   ]
 }
