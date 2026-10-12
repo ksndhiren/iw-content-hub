@@ -7805,6 +7805,50 @@
               "#internships"
             ]
           }
+        },
+        {
+          "id": "week20-mon-news",
+          "day": "Mon 12 Oct",
+          "lane": "news",
+          "title": "Iced Coffee Stirs Job Interview Debate",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "A new debate has sparked in the UK job market regarding the presence of iced coffee in job interviews, raising questions about what defines professionalism today. This discussion sheds light on changing workplace norms and the expectations job seekers face. For students and graduates, understanding these dynamics is key as they prepare for their careers. Internships can be a great way to gain experience and adapt to these shifts, helping you build a strong foundation for your career journey. Source: The Guardian.",
+          "hashtags": [
+            "#jobinterviews",
+            "#professionalism",
+            "#workplacenorms",
+            "#internships",
+            "#careerready"
+          ],
+          "captions": {
+            "ig-fb": "A new debate has sparked in the UK job market regarding the presence of iced coffee in job interviews, raising questions about what defines professionalism today. This discussion sheds light on changing workplace norms and the expectations job seekers face. For students and graduates, understanding these dynamics is key as they prepare for their careers. Internships can be a great way to gain experience and adapt to these shifts, helping you build a strong foundation for your career journey. Source: The Guardian.",
+            "linkedin": "There's a buzz in the UK job market about whether bringing iced coffee to job interviews is unprofessional. This debate challenges traditional views on professionalism and highlights how workplace norms are evolving. For students and graduates, understanding these changes is essential as they navigate the job market. Internships offer a chance to learn and adapt to these evolving expectations, providing a solid footing for your professional path. Source: The Guardian.",
+            "x": "Iced coffee in job interviews has sparked a UK debate on professionalism, revealing shifting workplace norms. Are you ready for these changes? (Source: The Guardian)",
+            "threads": "The UK's buzzing over iced coffee in job interviews - a debate on what defines professionalism. It highlights shifting workplace norms that students and grads need to understand. Internships can help you adapt and thrive in changing professional environments. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#jobinterviews",
+              "#professionalism",
+              "#workplacenorms",
+              "#internships",
+              "#careerready"
+            ],
+            "linkedin": [
+              "#professionalism",
+              "#internships",
+              "#careerdevelopment"
+            ],
+            "x": [
+              "#professionalism",
+              "#jobmarket"
+            ]
+          }
         }
       ]
     }
