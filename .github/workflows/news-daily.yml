@@ -81,7 +81,24 @@ jobs:
             python social-media/tools/build_news_day.py "${EXTRA_ARGS[@]}" | tee /tmp/news.log
           fi
 
+      - name: Commit and push built news to main
+        if: steps.build.outputs.pid != ''
+        run: |
+          FILES="images data/weeks.json social-media/content/news_used.json social-media/content/news_image_used.json"
+          if [ -z "$(git status --porcelain $FILES)" ]; then
+            echo "No build changes to commit."
+            exit 0
+          fi
+          git config user.name  "internwise-content-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A $FILES
+          git commit -m "News day-prior build ($(date -u +%Y-%m-%d))"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "Pushed the day-prior news to the dashboard."
+
       - name: Schedule the news post to Ayrshare (8am UK slot)
+        id: schedule
         # Only after a real build. --only
         # names the freshly built post and bypasses the file-status gate; --schedule
         # queues it at the news lane time on its posting day (always in the future,
@@ -97,17 +114,18 @@ jobs:
             --only "${{ steps.build.outputs.pid }}" \
             --schedule --live | tee /tmp/news_schedule.log
 
-      - name: Commit and push to main if there are changes
+      - name: Commit and push Ayrshare ledger if it changed
+        if: always() && steps.build.outputs.pid != ''
         run: |
-          FILES="images data/weeks.json social-media/content/news_used.json social-media/content/news_image_used.json social-media/content/ayrshare_posted.json"
+          FILES="social-media/content/ayrshare_posted.json"
           if [ -z "$(git status --porcelain $FILES)" ]; then
-            echo "No changes (nothing built). Done."
+            echo "No Ayrshare ledger changes."
             exit 0
           fi
           git config user.name  "internwise-content-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A $FILES
-          git commit -m "News day-prior build + auto-schedule ($(date -u +%Y-%m-%d))"
+          git commit -m "Record news Ayrshare schedule ($(date -u +%Y-%m-%d))"
           git pull --rebase origin main
           git push origin HEAD:main
-          echo "Pushed the day-prior news (auto-approved) and scheduled it to Ayrshare for the 8am UK slot."
+          echo "Pushed Ayrshare schedule ledger."

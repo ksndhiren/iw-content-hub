@@ -334,6 +334,7 @@ def main():
         print(f"\nDRY-RUN: nothing sent. {len(todo)} would post. Add --live to send.")
         return
     print(f"\nLIVE: sending {len(todo)} ...")
+    failures = 0
     for pkey, j in todo:
         res = post_job(j)
         ok = res.get("status") == "success" or res.get("id")
@@ -342,6 +343,10 @@ def main():
             posted[pkey] = {"id": res.get("id"), "at": datetime.datetime.utcnow().isoformat(),
                             "network": j["network"], "scheduleDate": j["scheduleDate"]}
             json.dump(posted, open(POSTED, "w"), indent=2)
+        else:
+            failures += 1
+    if failures:
+        sys.exit(f"Ayrshare failed for {failures} of {len(todo)} requested post-jobs.")
     print("Done.")
 
 

@@ -39,6 +39,7 @@ This is the approved creative direction for future Internwise social graphics. T
 - Explicit repo/Codex/editorial images are only for manual builds where an operator passes `--image`; they are not the default path for scheduled news.
 - Pexels queries must stay story-specific or category-specific. Do not use generic workplace, laptop, meeting, or recruitment-office fallback images just to make image selection succeed.
 - If no relevant unused Pexels image is available, the news build must fail instead of falling back to a text-only pull quote or an irrelevant/repeated image.
+- Weekly news must exclude plumbing, manual trade, construction trade, and trade-shortage stories. Internwise news should stay focused on students, graduates, internships, early-career hiring, employability, education-to-work, and broad UK job-market movement.
 - Keep article cues: branded masthead, date, section label, headline hierarchy, byline row, columns, pull quote, and article texture.
 - The approved news header is locked: Internwise blue band, large centered white Internwise logo, amber rule, then the article starts on newsprint.
 - `JOB MARKET NEWS` sits centered inside a white strip with black rules. Do not add a repeated "Job Market Briefing" label above or below it.

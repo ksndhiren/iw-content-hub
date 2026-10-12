@@ -53,6 +53,10 @@ LIFESTYLE_MONEY = re.compile(
 NON_NEWS_FLUFF = re.compile(
     r"\b(cartoon|crossword|quiz|recipe|horoscope|oil prices?|diesel cost|"
     r"fuel prices?|costly oil|energy bills?)\b", re.I)
+EXCLUDED_JOB_TYPES = re.compile(
+    r"\b(plumb(?:er|ers|ing)|gas engineer|heating engineer|boiler repair|"
+    r"electrician|carpenter|joiner|bricklayer|roofer|scaffold(?:er|ing)|"
+    r"construction trade|manual trades?)\b", re.I)
 
 # --- UK-ONLY GUARD -----------------------------------------------------------
 # Internwise news is about the UK job market only. Even UK publications carry the
@@ -87,6 +91,8 @@ def _is_job_market_relevant(hay):
     they also carry workplace/labour context.
     """
     if NON_NEWS_FLUFF.search(hay):
+        return False
+    if EXCLUDED_JOB_TYPES.search(hay):
         return False
     if LIFESTYLE_MONEY.search(hay) and not CORE_JOB_MARKET.search(hay):
         return False
