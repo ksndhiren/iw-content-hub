@@ -184,5 +184,94 @@
       "instagram story: Ayrshare reports Instagram delete is not supported; delete manually in Instagram",
       "facebook story: Ayrshare returned platform delete error; verify/delete manually in Facebook if still visible"
     ]
+  },
+  "week20-mon-news#3": {
+    "deletedAt": "2026-10-12T15:32:55.900667+00:00",
+    "reason": "Client takedown: dashboard-review run accidentally posted due workflow guard; deleted and hardened guard",
+    "removedLedgerKeys": [],
+    "results": {
+      "week20-mon-news:instagram": {
+        "instagram": {
+          "action": "delete",
+          "status": "success",
+          "id": "18149700241504844",
+          "message": "Delete not supported by Instagram. Please go to instagram.com to delete."
+        },
+        "status": "success",
+        "code": 200,
+        "id": "Cs7ELhyKTuW3KeiZgG9o"
+      },
+      "week20-mon-news:facebook": {
+        "facebook": {
+          "action": "delete",
+          "status": "success",
+          "id": "151837384841481_1524687679695045"
+        },
+        "status": "success",
+        "code": 200,
+        "id": "aYbfBCGV2TBHrfDyPlhb"
+      },
+      "week20-mon-news:linkedin": {
+        "linkedin": {
+          "action": "delete",
+          "status": "success",
+          "id": "urn:li:share:7515433536636526592"
+        },
+        "status": "success",
+        "code": 200,
+        "id": "e8wUytgbKQ6LdOEGSWcg"
+      },
+      "week20-mon-news:threads": {
+        "threads": {
+          "action": "delete",
+          "status": "success",
+          "id": "18138840637550965"
+        },
+        "status": "success",
+        "code": 200,
+        "id": "M3grotwNmIMTH4mR6TDe"
+      },
+      "week20-mon-news:gmb": {
+        "gmb": {
+          "action": "delete",
+          "status": "success",
+          "id": "614080549269608365"
+        },
+        "status": "success",
+        "code": 200,
+        "id": "1JAp85LclNBpPuvCLUXg"
+      },
+      "week20-mon-news:pinterest": {
+        "pinterest": {
+          "action": "delete",
+          "status": "success",
+          "id": "1076078904743809760"
+        },
+        "status": "success",
+        "code": 200,
+        "id": "dLSWeMpPjftu571OtPuY"
+      },
+      "week20-mon-news:instagram:story": {
+        "instagram": {
+          "action": "delete",
+          "status": "success",
+          "id": "18020473682948384",
+          "message": "Delete not supported by Instagram. Please go to instagram.com to delete."
+        },
+        "status": "success",
+        "code": 200,
+        "id": "4mRY2JUpy6vccDZQbMkr"
+      },
+      "week20-mon-news:facebook:story": {
+        "status": "http_error",
+        "code": 404,
+        "body": "{\"facebook\":{\"code\":114,\"action\":\"delete\",\"status\":\"error\",\"message\":\"There was an error deleting the post. Please verify that the post ID is valid, the correct User Profile is selected, and the post still exists on the social network.\"},\"status\":\"error\",\"code\":114,\"id\":\"g4t3YjTS0pQ51nT8Wxid\"}"
+      }
+    },
+    "manualStillRequired": [
+      "instagram feed: Ayrshare reports Instagram delete is not supported; delete manually in Instagram",
+      "instagram story: Ayrshare reports Instagram delete is not supported; delete manually in Instagram",
+      "facebook story: Ayrshare returned platform delete error; verify/delete manually in Facebook if still visible"
+    ]
   }
 }

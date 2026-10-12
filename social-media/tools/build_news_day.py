@@ -112,6 +112,8 @@ def main():
     p.add_argument("--date", help="explicit posting date YYYY-MM-DD (must be tomorrow unless override env is set)")
     p.add_argument("--image", help="explicit editorial image path for the news card when stock fetch is unavailable")
     p.add_argument("--max-age-days", type=int, default=5, help="maximum RSS story age in days (default 5; widen only for manual dashboard review)")
+    p.add_argument("--status", default="approved", choices=("approved", "in-review"),
+                   help="dashboard status for the generated post (default approved; use in-review for dashboard-only review builds)")
     p.add_argument("--dry", action="store_true", help="plan only, no LLM/render/write")
     args = p.parse_args()
 
@@ -155,7 +157,7 @@ def main():
     # news rules, and scheduled straight to the 8am slot by news-daily.yml. Born
     # 'approved' so the publisher's status gate and the dashboard both treat it as
     # cleared without a human click.
-    post["status"] = "approved"
+    post["status"] = args.status
 
     # Upsert into weeks.json: create the week entry if the Saturday batch hasn't
     # run yet, else replace only this day's news post - never touch other lanes.
@@ -169,7 +171,7 @@ def main():
     week["posts"] = [pp for pp in week["posts"] if pp.get("id") != pid] + [post]
     json.dump(data, open(bw.WEEKS, "w"), indent=2, ensure_ascii=False)
     bw.news_fetch.mark_used([item])
-    print(f"Upserted {pid} into weeks.json ({wid}) as approved (auto-scheduled).")
+    print(f"Upserted {pid} into weeks.json ({wid}) as {post['status']}.")
 
     try:
         import r2                                    # normalises R2_* env on import

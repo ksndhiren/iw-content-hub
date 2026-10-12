@@ -86,6 +86,9 @@ jobs:
           if [ -n "${{ github.event.inputs.max_age_days }}" ]; then
             EXTRA_ARGS+=(--max-age-days "${{ github.event.inputs.max_age_days }}")
           fi
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ github.event.inputs.publish }}" != "true" ]; then
+            EXTRA_ARGS+=(--status in-review)
+          fi
           if [ -n "${{ github.event.inputs.date }}" ]; then
             python social-media/tools/build_news_day.py --date "${{ github.event.inputs.date }}" "${EXTRA_ARGS[@]}" | tee /tmp/news.log
           else
@@ -93,7 +96,7 @@ jobs:
           fi
 
       - name: Commit and push built news to main
-        if: steps.build.outputs.pid != ''
+        if: steps.build.outputs.pid != '' && (github.event_name != 'workflow_dispatch' || github.event.inputs.publish == 'true')
         run: |
           FILES="images data/weeks.json social-media/content/news_used.json social-media/content/news_image_used.json"
           if [ -z "$(git status --porcelain $FILES)" ]; then
@@ -120,13 +123,17 @@ jobs:
           AYRSHARE_ACTIVE_NETWORKS: instagram,facebook,linkedin,threads,gmb,pinterest
         run: |
           set -o pipefail
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ github.event.inputs.publish }}" != "true" ]; then
+            echo "Dashboard-review build: skipping Ayrshare publish."
+            exit 0
+          fi
           python social-media/tools/ayrshare_publish.py \
             --week "${{ steps.build.outputs.wid }}" \
             --only "${{ steps.build.outputs.pid }}" \
             --schedule --live | tee /tmp/news_schedule.log
 
       - name: Commit and push Ayrshare ledger if it changed
-        if: always() && steps.build.outputs.pid != '' && github.event.inputs.publish != 'false'
+        if: always() && steps.build.outputs.pid != '' && (github.event_name != 'workflow_dispatch' || github.event.inputs.publish == 'true')
         run: |
           FILES="social-media/content/ayrshare_posted.json"
           if [ -z "$(git status --porcelain $FILES)" ]; then
