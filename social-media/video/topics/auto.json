@@ -1,6 +1,6 @@
 {
   "week_id": "auto-2026-10-12",
-  "generated_at": "2026-10-12T12:53:37.919761+00:00",
+  "generated_at": "2026-10-12T16:51:11Z",
   "default_duration_seconds": 52,
   "source_summary": {
     "reddit_rss_signals": 25,
@@ -105,7 +105,7 @@
     },
     {
       "id": "auto-0-yoe-master-s-student-mechanical-engineer-united-states",
-      "title": "[0 YoE, Master's Student, Mechanical Engineer, United States]",
+      "title": "No Experience? Show Readiness Instead",
       "source_post": "automated-topic-engine",
       "source_cluster": "graduate-jobs",
       "signal_score": 58.5,
@@ -117,17 +117,17 @@
       "discussion": 3,
       "brand_fit": 5,
       "hook_candidates": [
-        "Most students are trying to fix the wrong job-search problem.",
-        "If you are stuck on graduate jobs, watch this before your next application."
+        "No experience is not the end of the application.",
+        "If your CV feels thin, show readiness instead of apologising."
       ],
-      "promise": "Let me turn this common job-search problem into a practical next step.",
+      "promise": "I will show you how to make a low-experience application feel credible.",
       "proof_points": [
-        "Name the exact problem before choosing the fix.",
-        "Make one visible improvement instead of rewriting everything.",
-        "Track the result so you know whether the advice worked."
+        "Translate coursework, projects, societies, and part-time work into evidence.",
+        "Show what you can already do instead of only saying you are willing to learn.",
+        "Use one specific example that matches the role requirements."
       ],
-      "core_takeaway": "Make the next action specific enough that you can do it today.",
-      "cta": "Save this for your next application session.",
+      "core_takeaway": "When experience is limited, prove readiness with specific evidence.",
+      "cta": "Save this before your next graduate application.",
       "source_signals": [
         {
           "source": "reddit_rss",
@@ -273,7 +273,7 @@
         },
         {
           "source": "youtube",
-          "title": "Use LinkedIn to get Internship!!\ud83d\ude80 #shorts #linkedin #interview",
+          "title": "Use LinkedIn to get Internship!!🚀 #shorts #linkedin #interview",
           "url": "https://www.youtube.com/watch?v=AFv5WT3xjoI",
           "score": 43.04,
           "meta": {
@@ -484,7 +484,7 @@
       "source_signals": [
         {
           "source": "youtube",
-          "title": "\ud83d\ude31 ChatGPT KILLED LinkedIn \ud83d\udd25 #shorts",
+          "title": "😱 ChatGPT KILLED LinkedIn 🔥 #shorts",
           "url": "https://www.youtube.com/watch?v=hDtSuF3gAQc",
           "score": 36.28,
           "meta": {
@@ -601,7 +601,414 @@
           }
         }
       ]
+    },
+    {
+      "source_post": "manual-week20-refresh",
+      "signal_score": 78.0,
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "id": "manual-week20-interview-first-impression",
+      "title": "The First 30 Seconds Of An Interview",
+      "source_cluster": "interviews",
+      "hook_candidates": [
+        "Your interview starts before the first question.",
+        "Small interview signals can change how your answers land."
+      ],
+      "promise": "I will show you how to control the first impression without sounding fake.",
+      "proof_points": [
+        "Arrive ready to settle quickly, not still organising yourself.",
+        "Open with one calm sentence that confirms the role and your interest.",
+        "Keep anything distracting out of the room so your examples do the work."
+      ],
+      "core_takeaway": "Remove avoidable distractions so the interviewer remembers your evidence.",
+      "cta": "Save this before your next interview.",
+      "source_signals": [
+        {
+          "source": "manual_editorial_refresh",
+          "title": "The First 30 Seconds Of An Interview",
+          "url": "",
+          "score": 78.0,
+          "meta": {
+            "reason": "Week 20 freshness bank expansion"
+          }
+        }
+      ]
+    },
+    {
+      "source_post": "manual-week20-refresh",
+      "signal_score": 76.0,
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "id": "manual-week20-job-description-decoder",
+      "title": "Decode A Job Description Before You Apply",
+      "source_cluster": "job-descriptions",
+      "hook_candidates": [
+        "A job description is a checklist, not a wall of text.",
+        "Stop reading job descriptions like adverts."
+      ],
+      "promise": "I will show you how to turn a listing into application evidence.",
+      "proof_points": [
+        "Highlight repeated skills first because they show priority.",
+        "Separate must-haves from nice-to-haves before judging yourself out.",
+        "Write one example for each top requirement."
+      ],
+      "core_takeaway": "Use the job description as your application map.",
+      "cta": "Save this and decode one role today.",
+      "source_signals": [
+        {
+          "source": "manual_editorial_refresh",
+          "title": "Decode A Job Description Before You Apply",
+          "url": "",
+          "score": 76.0,
+          "meta": {
+            "reason": "Week 20 freshness bank expansion"
+          }
+        }
+      ]
+    },
+    {
+      "source_post": "manual-week20-refresh",
+      "signal_score": 74.0,
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "id": "manual-week20-linkedin-proof-strip",
+      "title": "Make Your LinkedIn Prove One Thing Fast",
+      "source_cluster": "linkedin",
+      "hook_candidates": [
+        "Your LinkedIn profile needs one clear proof signal.",
+        "Recruiters should not have to guess what you are aiming for."
+      ],
+      "promise": "I will show you what the top of your profile should prove in seconds.",
+      "proof_points": [
+        "Use the headline to show direction, not just student status.",
+        "Pin one project, result, or portfolio item near the top.",
+        "Make the About section say what roles you are ready for."
+      ],
+      "core_takeaway": "Direction plus proof beats a generic profile.",
+      "cta": "Save this before you edit your profile.",
+      "source_signals": [
+        {
+          "source": "manual_editorial_refresh",
+          "title": "Make Your LinkedIn Prove One Thing Fast",
+          "url": "",
+          "score": 74.0,
+          "meta": {
+            "reason": "Week 20 freshness bank expansion"
+          }
+        }
+      ]
+    },
+    {
+      "source_post": "manual-week20-refresh",
+      "signal_score": 73.0,
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "id": "manual-week20-cover-letter-specificity",
+      "title": "Make A Cover Letter Sound Specific",
+      "source_cluster": "cover-letter",
+      "hook_candidates": [
+        "A polite cover letter is not always a persuasive one.",
+        "Your cover letter needs proof, not just enthusiasm."
+      ],
+      "promise": "I will show you how to make a cover letter feel written for one role.",
+      "proof_points": [
+        "Name the role problem you can help with.",
+        "Use one example that matches a requirement.",
+        "Close with what you would bring in the first month."
+      ],
+      "core_takeaway": "Specific proof makes enthusiasm believable.",
+      "cta": "Save this for your next cover letter.",
+      "source_signals": [
+        {
+          "source": "manual_editorial_refresh",
+          "title": "Make A Cover Letter Sound Specific",
+          "url": "",
+          "score": 73.0,
+          "meta": {
+            "reason": "Week 20 freshness bank expansion"
+          }
+        }
+      ]
+    },
+    {
+      "source_post": "manual-week20-refresh",
+      "signal_score": 72.0,
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "id": "manual-week20-application-tracker-useful",
+      "title": "Build An Application Tracker That Actually Helps",
+      "source_cluster": "job-search",
+      "hook_candidates": [
+        "Your tracker should tell you what to do next.",
+        "A job tracker is useless if it only stores rejections."
+      ],
+      "promise": "I will show you what to track so your search gets sharper each week.",
+      "proof_points": [
+        "Track source, role fit, status, and next action.",
+        "Add why you applied so you can spot patterns.",
+        "Review weekly to improve targeting, not just count applications."
+      ],
+      "core_takeaway": "A useful tracker turns activity into decisions.",
+      "cta": "Save this and update your tracker today.",
+      "source_signals": [
+        {
+          "source": "manual_editorial_refresh",
+          "title": "Build An Application Tracker That Actually Helps",
+          "url": "",
+          "score": 72.0,
+          "meta": {
+            "reason": "Week 20 freshness bank expansion"
+          }
+        }
+      ]
+    },
+    {
+      "source_post": "manual-week20-refresh",
+      "signal_score": 71.0,
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "id": "manual-week20-cv-proof-before-polish",
+      "title": "Add Proof Before You Polish Your CV",
+      "source_cluster": "cv",
+      "hook_candidates": [
+        "Your CV may not need prettier wording first.",
+        "Proof beats polish on an early-career CV."
+      ],
+      "promise": "I will show you where to add evidence before rewriting everything.",
+      "proof_points": [
+        "Find one claim that needs an example.",
+        "Add numbers, scale, tools, or outcome where possible.",
+        "Move the strongest proof higher on the page."
+      ],
+      "core_takeaway": "Improve the evidence before improving the adjectives.",
+      "cta": "Save this before your next CV edit.",
+      "source_signals": [
+        {
+          "source": "manual_editorial_refresh",
+          "title": "Add Proof Before You Polish Your CV",
+          "url": "",
+          "score": 71.0,
+          "meta": {
+            "reason": "Week 20 freshness bank expansion"
+          }
+        }
+      ]
+    },
+    {
+      "source_post": "manual-week20-refresh",
+      "signal_score": 70.0,
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "id": "manual-week20-one-role-shortlist",
+      "title": "Shortlist One Better Role Instead Of Ten Random Ones",
+      "source_cluster": "job-search",
+      "hook_candidates": [
+        "More applications is not always a better strategy.",
+        "One well-chosen role can teach you more than ten random applications."
+      ],
+      "promise": "I will show you how to decide whether a role deserves your time.",
+      "proof_points": [
+        "Check fit, learning value, and application effort.",
+        "Look for specific tasks and support, not vague opportunity language.",
+        "Choose one role where you can write a stronger application."
+      ],
+      "core_takeaway": "Better targeting creates better applications.",
+      "cta": "Save this for your next search session.",
+      "source_signals": [
+        {
+          "source": "manual_editorial_refresh",
+          "title": "Shortlist One Better Role Instead Of Ten Random Ones",
+          "url": "",
+          "score": 70.0,
+          "meta": {
+            "reason": "Week 20 freshness bank expansion"
+          }
+        }
+      ]
+    },
+    {
+      "source_post": "manual-week20-refresh",
+      "signal_score": 69.0,
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "id": "manual-week20-follow-up-after-application",
+      "title": "Follow Up Without Sounding Pushy",
+      "source_cluster": "applications",
+      "hook_candidates": [
+        "A good follow-up should make the employer’s job easier.",
+        "Following up is not chasing if it adds clarity."
+      ],
+      "promise": "I will show you how to write a short follow-up that feels professional.",
+      "proof_points": [
+        "Wait a reasonable amount of time before checking in.",
+        "Mention the role and date clearly.",
+        "Add one sentence of continued interest, not a second cover letter."
+      ],
+      "core_takeaway": "A clear follow-up is respectful, specific, and brief.",
+      "cta": "Save this before you chase an application.",
+      "source_signals": [
+        {
+          "source": "manual_editorial_refresh",
+          "title": "Follow Up Without Sounding Pushy",
+          "url": "",
+          "score": 69.0,
+          "meta": {
+            "reason": "Week 20 freshness bank expansion"
+          }
+        }
+      ]
+    },
+    {
+      "source_post": "manual-week20-refresh",
+      "signal_score": 68.0,
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "id": "manual-week20-portfolio-mini-proof",
+      "title": "Turn A Small Project Into Portfolio Proof",
+      "source_cluster": "portfolio",
+      "hook_candidates": [
+        "A portfolio does not need to be huge to be useful.",
+        "Small projects can prove real skills if you frame them well."
+      ],
+      "promise": "I will show you how to turn one project into credible evidence.",
+      "proof_points": [
+        "Explain the problem, your role, and the result.",
+        "Show process, not just the final screenshot.",
+        "Connect the project to the kind of role you want."
+      ],
+      "core_takeaway": "A focused project can become proof for your next application.",
+      "cta": "Save this and document one project.",
+      "source_signals": [
+        {
+          "source": "manual_editorial_refresh",
+          "title": "Turn A Small Project Into Portfolio Proof",
+          "url": "",
+          "score": 68.0,
+          "meta": {
+            "reason": "Week 20 freshness bank expansion"
+          }
+        }
+      ]
+    },
+    {
+      "source_post": "manual-week20-refresh",
+      "signal_score": 67.0,
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "id": "manual-week20-confidence-after-rejection",
+      "title": "Use Rejection To Improve The Next Application",
+      "source_cluster": "rejection",
+      "hook_candidates": [
+        "A rejection can still give you useful data.",
+        "Do not let one rejection rewrite your whole career plan."
+      ],
+      "promise": "I will show you how to review a rejection without spiralling.",
+      "proof_points": [
+        "Check whether the role fit was realistic.",
+        "Look for one fix in CV, cover letter, or interview prep.",
+        "Make one change before sending the next application."
+      ],
+      "core_takeaway": "Turn rejection into one practical adjustment, not a personal verdict.",
+      "cta": "Save this for the next tough email.",
+      "source_signals": [
+        {
+          "source": "manual_editorial_refresh",
+          "title": "Use Rejection To Improve The Next Application",
+          "url": "",
+          "score": 67.0,
+          "meta": {
+            "reason": "Week 20 freshness bank expansion"
+          }
+        }
+      ]
+    },
+    {
+      "id": "manual-week20-interview-question-bank",
+      "title": "Build A Better Interview Answer Bank",
+      "source_post": "manual-week20-refresh",
+      "source_cluster": "interviews",
+      "signal_score": 75.0,
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "Stop preparing random interview answers.",
+        "Your best interview answers should be reusable, not memorised."
+      ],
+      "promise": "I will show you how to build a small answer bank for common interview questions.",
+      "proof_points": [
+        "Pick five stories from projects, work, societies, or coursework.",
+        "Tag each story by skill: teamwork, problem solving, ownership, communication, learning.",
+        "Practise adapting the same story to different questions instead of memorising scripts."
+      ],
+      "core_takeaway": "Prepare flexible proof stories, not robotic answers.",
+      "cta": "Save this before your next interview prep session.",
+      "source_signals": [
+        {
+          "source": "manual_editorial_refresh",
+          "title": "Build A Better Interview Answer Bank",
+          "url": "",
+          "score": 75.0,
+          "meta": {
+            "reason": "Week 20 freshness bank expansion"
+          }
+        }
+      ]
     }
   ],
-  "fingerprint": "66a0334302e52b66"
+  "fingerprint": "manual-week20-refresh-20261012"
 }
