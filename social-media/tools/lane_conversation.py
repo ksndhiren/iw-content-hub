@@ -72,31 +72,31 @@ def w_decision_prompt(idea):
     texture = ("<div style='position:absolute;inset:0;opacity:.45;"
                "background-image:radial-gradient(rgba(21,39,67,.10) 1.3px,transparent 1.3px);"
                "background-size:32px 32px;'></div>")
-    rail = f"<div style='position:absolute;right:0;top:0;bottom:0;width:168px;background:{NAVYT};'></div>"
-    hook = (f"<div style=\"position:absolute;left:58px;top:190px;width:690px;font-family:Inter;font-weight:900;"
-            f"font-size:74px;line-height:1.02;letter-spacing:-2.5px;color:{NAVYT};\">{idea['hook']}</div>")
-    sub = (f"<div style=\"position:absolute;left:62px;top:374px;width:560px;font-family:'DM Sans';font-weight:700;"
-           f"font-size:30px;line-height:1.28;color:#6F6350;\">{idea.get('subhead','')}</div>")
-    board = (f"<div style='position:absolute;left:58px;top:510px;width:690px;background:#fff;border:3px solid {NAVYT};"
-             f"box-shadow:0 26px 54px rgba(21,39,67,.14);padding:26px 26px 18px;'>")
+    rail = f"<div style='position:absolute;right:0;top:0;bottom:0;width:192px;background:{NAVYT};'></div>"
+    hook = (f"<div style=\"position:absolute;left:58px;top:176px;width:642px;font-family:Inter;font-weight:950;"
+            f"font-size:64px;line-height:1.0;letter-spacing:-2.1px;color:{NAVYT};\">{idea['hook']}</div>")
+    sub = (f"<div style=\"position:absolute;left:62px;top:404px;width:548px;font-family:'DM Sans';font-weight:750;"
+           f"font-size:26px;line-height:1.28;color:#6F6350;\">{idea.get('subhead','')}</div>")
+    board = (f"<div style='position:absolute;left:58px;top:542px;width:650px;background:#fff;border:3px solid {NAVYT};"
+             f"box-shadow:0 26px 54px rgba(21,39,67,.14);padding:24px 24px 14px;'>")
     rows = ""
     colors = [AMBER, CORAL, GREEN]
     letters = ["A", "B", "C"]
     for i, option in enumerate(options):
         rows += (f"<div style='display:flex;align-items:center;gap:18px;margin-bottom:18px;'>"
-                 f"<div style='flex:0 0 54px;width:54px;height:54px;border-radius:14px;background:{colors[i]};"
-                 f"display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:900;font-size:26px;color:{NAVYT};'>{letters[i]}</div>"
-                 f"<div style=\"font-family:Inter;font-weight:900;font-size:36px;letter-spacing:-.9px;color:{NAVYT};\">{option}</div></div>")
+                 f"<div style='flex:0 0 50px;width:50px;height:50px;border-radius:14px;background:{colors[i]};"
+                 f"display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:900;font-size:24px;color:{NAVYT};'>{letters[i]}</div>"
+                 f"<div style=\"font-family:Inter;font-weight:950;font-size:31px;line-height:1.05;letter-spacing:-.8px;color:{NAVYT};\">{option}</div></div>")
     board += rows + "</div>"
-    rail_mark = (f"<div style='position:absolute;right:42px;top:270px;width:74px;height:520px;border:2px solid rgba(255,255,255,.18);'></div>"
-                 f"<div style=\"position:absolute;right:38px;top:330px;font-family:'DM Sans';font-weight:900;font-size:18px;"
-                 f"color:{AMBER};letter-spacing:5px;writing-mode:vertical-rl;transform:rotate(180deg);\">SAVE ONE ROLE</div>")
-    cta = (f"<div style='position:absolute;left:58px;top:835px;height:58px;padding:0 24px;border-radius:12px;background:{CORAL};"
+    rail_mark = (f"<div style='position:absolute;right:50px;top:250px;width:80px;height:540px;border:2px solid rgba(255,255,255,.18);'></div>"
+                 f"<div style=\"position:absolute;right:44px;top:326px;font-family:'DM Sans';font-weight:900;font-size:18px;"
+                 f"color:{AMBER};letter-spacing:5px;writing-mode:vertical-rl;transform:rotate(180deg);\">TRUST CHECK</div>")
+    cta = (f"<div style='position:absolute;left:58px;top:820px;height:58px;padding:0 24px;border-radius:12px;background:{CORAL};"
            f"display:flex;align-items:center;box-shadow:0 16px 28px rgba(255,107,107,.24);'>"
            f"<span style=\"font-family:Inter;font-weight:900;font-size:24px;color:#fff;\">{idea.get('cta','Start at internwise.co.uk')}</span></div>")
     label = (f"<div style='position:absolute;right:58px;top:58px;height:42px;padding:0 18px;border-radius:21px;background:{AMBER};"
              f"display:flex;align-items:center;font-family:'DM Sans';font-weight:900;font-size:17px;color:{NAVYT};letter-spacing:2px;'>CAREER CHOICE</div>")
-    return bg + texture + rail + rail_mark + _logo_dark() + label + hook + sub + board + cta + _comment_prompt(58, 918) + _footer()
+    return bg + texture + rail + rail_mark + _logo_dark() + label + hook + sub + board + cta + _comment_prompt(58, 900) + _footer()
 
 
 def w_proofboard(idea):
@@ -146,25 +146,25 @@ def w_debate(idea):
                  f"<div style=\"margin-top:8px;font-family:Inter;font-weight:950;font-size:36px;line-height:1.05;color:#fff;\">{option}</div></div>")
     cta = (f"<div style='position:absolute;right:72px;bottom:90px;width:430px;font-family:Georgia,serif;font-style:italic;"
            f"font-weight:700;font-size:34px;line-height:1.12;color:{AMBER};'>{idea.get('cta','Start at internwise.co.uk')}</div>")
-    return bg + split + _logo_dark() + hook + sub + rows + cta + _comment_prompt(60, 892, dark=True) + L.watermark(w=380, right=-80, bottom=-120, op=.06)
+    return bg + split + _logo_dark() + _comment_prompt(548, 104, dark=True) + hook + sub + rows + cta + L.watermark(w=380, right=-80, bottom=-120, op=.06)
 
 
 def w_scorecard(idea):
     options = idea.get("options", [])[:3]
     bg = f"<div style='position:absolute;inset:0;background:#EAF2FB;'></div>"
     header = f"<div style='position:absolute;left:0;right:0;top:0;height:180px;background:{NAVYT};'></div>"
-    hook = (f"<div style=\"position:absolute;left:58px;top:232px;width:850px;font-family:Inter;font-weight:950;"
-            f"font-size:66px;line-height:1.0;letter-spacing:-2px;color:{NAVYT};\">{idea['hook']}</div>")
+    hook = (f"<div style=\"position:absolute;left:58px;top:222px;width:850px;font-family:Inter;font-weight:950;"
+            f"font-size:62px;line-height:1.0;letter-spacing:-2px;color:{NAVYT};\">{idea['hook']}</div>")
     grid = ""
     for i, option in enumerate(options):
         x = 58 + i * 328
-        grid += (f"<div style='position:absolute;left:{x}px;top:520px;width:292px;height:230px;border-radius:20px;background:#fff;"
+        grid += (f"<div style='position:absolute;left:{x}px;top:500px;width:292px;height:218px;border-radius:20px;background:#fff;"
                  f"box-shadow:0 18px 44px rgba(21,39,67,.14);padding:24px;border-top:12px solid {[AMBER,GREEN,CORAL][i]};'>"
                  f"<div style=\"font-family:Inter;font-weight:950;font-size:58px;color:{[AMBER,GREEN,CORAL][i]};\">{chr(65+i)}</div>"
                  f"<div style=\"font-family:Inter;font-weight:950;font-size:31px;line-height:1.08;color:{NAVYT};\">{option}</div></div>")
-    takeaway = (f"<div style=\"position:absolute;left:62px;bottom:158px;width:750px;font-family:'DM Sans';font-weight:800;"
-                f"font-size:28px;line-height:1.25;color:#53627A;\">{idea.get('takeaway','')}</div>")
-    return bg + header + L.logo_tl() + hook + grid + takeaway + _comment_prompt(62, 850) + _footer(idea.get("cta", "internwise.co.uk"))
+    takeaway = (f"<div style=\"position:absolute;left:62px;top:754px;width:640px;font-family:'DM Sans';font-weight:800;"
+                f"font-size:25px;line-height:1.24;color:#53627A;\">{idea.get('takeaway','')}</div>")
+    return bg + header + L.logo_tl() + _comment_prompt(644, 70, dark=True) + hook + grid + takeaway + _footer(idea.get("cta", "internwise.co.uk"))
 
 
 def w_signal(idea):

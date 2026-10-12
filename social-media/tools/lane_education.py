@@ -881,6 +881,54 @@ def w_splitcard(copy, week_id='adhoc'):
     return bg + top + portrait + body + cta
 
 
+def w_answerbank(copy, week_id='adhoc'):
+    """Highly-visual single for interview answer-bank topics.
+
+    Uses a vault/card-index metaphor so it does not feel like the regular
+    education singles or employer cards. Built with protected text zones and no
+    duplicated Nuno image.
+    """
+    NAVYT = "#152743"; CREAM = "#F3EADA"; COFFEE = "#6F6350"
+    pts = (copy.get("points") or [])[:5]
+    bg = (f"<div style='position:absolute;inset:0;background:radial-gradient(120% 90% at 72% 18%,#1D4E63 0%,{NAVYT} 48%,#07111F 100%);'></div>"
+          f"<div style='position:absolute;inset:0;opacity:.22;background-image:linear-gradient(rgba(255,255,255,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.13) 1px,transparent 1px);background-size:44px 44px;'></div>")
+    glow = (f"<div style='position:absolute;right:-190px;top:94px;width:620px;height:620px;border-radius:50%;background:{AMBER};opacity:.14;'></div>"
+            f"<div style='position:absolute;left:-180px;bottom:-160px;width:500px;height:500px;border-radius:50%;background:{GREEN};opacity:.12;'></div>")
+    logo = f"<img src='{L.WHT}' style='position:absolute;left:56px;top:44px;height:{L.LOGO}px;'>"
+    eyebrow = (f"<div style='position:absolute;left:60px;top:172px;height:44px;padding:0 18px;border-radius:0;background:{AMBER};"
+               f"box-shadow:8px 8px 0 rgba(0,0,0,.22);display:flex;align-items:center;transform:rotate(-1deg);'>"
+               f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:18px;color:{NAVYT};letter-spacing:3px;\">{copy.get('eyebrow','INTERVIEW PREP')[:22].upper()}</span></div>")
+    title = (f"<div style='position:absolute;left:56px;top:248px;width:572px;'>"
+             f"<div style=\"font-family:Inter;font-weight:950;font-size:76px;line-height:.94;letter-spacing:-2.8px;color:#fff;\">Build a</div>"
+             f"<div style=\"display:inline-block;margin-top:10px;font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:96px;line-height:.9;color:{AMBER};background:linear-gradient(transparent 58%,{CORAL} 58%);padding:0 12px;transform:rotate(-2deg);\">Smarter</div>"
+             f"<div style=\"margin-top:10px;font-family:Inter;font-weight:950;font-size:76px;line-height:.94;letter-spacing:-2.8px;color:#fff;\">Answer Bank</div></div>")
+    vault = (f"<div style='position:absolute;right:58px;top:190px;width:360px;height:390px;border-radius:34px;background:{CREAM};"
+             f"box-shadow:0 32px 70px rgba(0,0,0,.36);border:4px solid rgba(255,255,255,.36);overflow:hidden;'>"
+             f"<div style='position:absolute;left:0;right:0;top:0;height:74px;background:{AMBER};'></div>"
+             f"<div style=\"position:absolute;left:28px;top:24px;font-family:'DM Sans';font-weight:950;font-size:18px;letter-spacing:4px;color:{NAVYT};\">PROOF FILES</div>"
+             f"<div style='position:absolute;left:58px;top:118px;width:244px;height:244px;border-radius:50%;border:18px solid {NAVYT};display:flex;align-items:center;justify-content:center;'>"
+             f"<div style='width:126px;height:126px;border-radius:50%;background:{GREEN};display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:950;font-size:64px;color:{NAVYT};'>5</div></div>"
+             f"</div>")
+    cards = ""
+    colors = ["#fff", AMBER, GREEN, "#fff", CORAL]
+    positions = [(86, 622, -2), (328, 586, 2.2), (584, 628, -1.3), (226, 806, 1.5), (510, 820, -2.3)]
+    for i, pt in enumerate(pts):
+        left, top, rot = positions[i]
+        color = colors[i]
+        cards += (f"<div style='position:absolute;left:{left}px;top:{top}px;width:238px;min-height:112px;background:{color};"
+                  f"border:3px solid {NAVYT};box-shadow:10px 10px 0 rgba(0,0,0,.22);transform:rotate({rot}deg);padding:16px 18px;'>"
+                  f"<div style=\"font-family:'DM Sans';font-weight:950;font-size:14px;color:{NAVYT};letter-spacing:3px;\">CARD {i+1}</div>"
+                  f"<div style=\"margin-top:8px;font-family:Inter;font-weight:950;font-size:25px;line-height:1.03;color:{NAVYT};letter-spacing:-.6px;\">{pt}</div></div>")
+    connector = (f"<svg style='position:absolute;left:54px;top:548px;width:930px;height:360px;' viewBox='0 0 930 360' fill='none'>"
+                 f"<path d='M44 140 C210 40,326 190,482 96 S748 42,884 210' stroke='{AMBER}' stroke-width='8' stroke-linecap='round' stroke-dasharray='18 18' opacity='.5'/>"
+                 f"</svg>")
+    cta = (f"<div style='position:absolute;right:58px;bottom:64px;width:314px;padding:22px 24px;border-radius:0;background:#fff;"
+           f"box-shadow:10px 10px 0 {AMBER};border:3px solid {NAVYT};'>"
+           f"<div style=\"font-family:Inter;font-weight:950;font-size:28px;line-height:1.05;color:{NAVYT};letter-spacing:-.6px;\">{copy.get('cta','Start at internwise.co.uk')}</div></div>")
+    footer = f"<div style=\"position:absolute;left:58px;bottom:54px;font-family:'DM Sans';font-weight:900;font-size:21px;color:{CREAM};letter-spacing:.4px;\">internwise.co.uk</div>"
+    return bg + glow + connector + logo + eyebrow + title + vault + cards + cta + footer
+
+
 # =================================================================================
 #  WORLD 7  -  "marker"  (cream, LIGHT)  : study-notes, amber highlighter swipe
 # =================================================================================
@@ -1097,7 +1145,8 @@ CAROUSEL = {
 SINGLE = {"tipcard": w_tipcard, "statement": w_statement,
           "bigidea": w_bigidea, "splitcard": w_splitcard,
           "memo": w_memo, "scorecard": w_scorecard,
-          "message_lab": w_message_lab, "focus_studio": w_focus_studio}
+          "message_lab": w_message_lab, "focus_studio": w_focus_studio,
+          "answerbank": w_answerbank}
 
 COVER_TONE = {"serious": ["serious", "thoughtful", "practical"],
               "practical": ["practical", "confident", "serious"],

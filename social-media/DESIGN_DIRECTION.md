@@ -29,6 +29,9 @@ This is the approved creative direction for future Internwise social graphics. T
 - Poll/Conversation posts must use a unique visual world per weekday. Do not force every poll through the same `decision` layout; use the design ledger and maintain at least five distinct poll worlds for a five-day week.
 - LinkedIn/profile education posts must look like LinkedIn/profile content: profile frame, phone/social UI, or another clear social-profile motif. Do not use CV, cover-letter, portfolio-document, or generic laptop poses for LinkedIn topics. If no relevant Nuno pose exists, generate or request a new one instead of reusing an unrelated asset.
 - Do not repeat Nuno inside a carousel unless the repeated appearance serves a different visual beat. Prefer graphic-led CTA slides for platform/profile topics so the final slide does not feel like the hook image recycled.
+- Mon-Wed education carousels need topic-specific Nuno imagery. If the library does not contain a clearly relevant pose for the hook or CTA, request/generate a new cutout instead of forcing a generic corporate pose.
+- The hook Nuno and outro Nuno in the same carousel must be different images unless the outro is intentionally graphic-led with no Nuno.
+- Single education posts must not inherit generic split-card layouts when the topic has a strong metaphor. Create a dedicated visual system for the topic, such as answer bank, message lab, tracker, proof board, or focus studio.
 
 ## News Direction
 
@@ -75,6 +78,7 @@ This is the approved creative direction for future Internwise social graphics. T
 - The QA gate produces an overlap contact sheet. Review it at dashboard thumbnail size and full size before acknowledging. If text overlaps faces, Nuno, logos, buttons, image edges, or decorative shapes, fix and rerender.
 - Shapes may frame or sit behind images, but they must not slice through faces, hands, primary objects, or readable text. Highlight strokes must never pass through letters unless deliberately designed as an underline with enough clearance.
 - Logos need clear contrast and breathing room. Do not place light logos on light images or let brand marks touch headlines.
+- Comment prompts are part of the overlap QA surface. They must sit on a high-contrast background and must never overlap body copy, options, CTA copy, footer URLs, or decorative watermarks.
 
 ## Publishing Rules
 
