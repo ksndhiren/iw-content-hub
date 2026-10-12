@@ -194,6 +194,46 @@
       "theme": "action",
       "cta": "Begin your search at internwise.co.uk",
       "used": null
+    },
+    {
+      "id": "q026",
+      "text": "The future belongs to those who believe in the beauty of their dreams.",
+      "author": "Eleanor Roosevelt",
+      "theme": "ambition",
+      "cta": "Back your ambition - find your next step at internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q027",
+      "text": "Opportunity is missed by most people because it is dressed in overalls and looks like work.",
+      "author": "Thomas Edison",
+      "theme": "work_ethic",
+      "cta": "Do the work that opens doors at internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q028",
+      "text": "The most effective way to do it, is to do it.",
+      "author": "Amelia Earhart",
+      "theme": "action",
+      "cta": "Start with one application at internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q029",
+      "text": "Success is to be measured not so much by the position that one has reached in life as by the obstacles overcome.",
+      "author": "Booker T. Washington",
+      "theme": "resilience",
+      "cta": "Build proof through experience at internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q030",
+      "text": "I was taught that the way of progress was neither swift nor easy.",
+      "author": "Marie Curie",
+      "theme": "progress",
+      "cta": "Make progress one step at a time at internwise.co.uk",
+      "used": null
     }
   ]
 }
