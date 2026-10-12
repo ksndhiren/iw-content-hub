@@ -7805,6 +7805,50 @@
               "#internships"
             ]
           }
+        },
+        {
+          "id": "week20-mon-news",
+          "day": "Mon 12 Oct",
+          "lane": "news",
+          "title": "Rising Uni Costs vs Graduate Earnings",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "In the UK, university tuition fees and living costs are on the rise, prompting questions about whether the potential boost in graduate earnings is worth the expense. For students and recent grads, this raises the stakes on deciding if a degree's long-term benefits outweigh its immediate financial challenges. Internships can help by providing valuable experience and income, easing the financial strain while boosting career prospects. Source: BBC Education.",
+          "hashtags": [
+            "#ukstudents",
+            "#graduatelife",
+            "#internships",
+            "#careergrowth",
+            "#highereducation"
+          ],
+          "captions": {
+            "ig-fb": "In the UK, university tuition fees and living costs are on the rise, prompting questions about whether the potential boost in graduate earnings is worth the expense. For students and recent grads, this raises the stakes on deciding if a degree's long-term benefits outweigh its immediate financial challenges. Internships can help by providing valuable experience and income, easing the financial strain while boosting career prospects. Source: BBC Education.",
+            "linkedin": "Rising university tuition fees and living costs in the UK have sparked debate about whether the potential increase in graduate earnings justifies the cost of a degree. This situation compels students and graduates to carefully consider the financial and career benefits of higher education. Internships offer a pragmatic solution by providing experience and income, thus reducing the financial burden and enhancing job readiness. Source: BBC Education.",
+            "x": "UK university costs are rising. Are higher graduate earnings enough to justify the expense? Internships offer a way to gain experience and earn money, helping to offset costs. (Source: BBC Education)",
+            "threads": "With UK university costs climbing, the question is whether graduate earnings justify the expense. Internships can help by providing valuable experience and income, easing financial strain while boosting job prospects. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#ukstudents",
+              "#graduatelife",
+              "#internships",
+              "#careergrowth",
+              "#highereducation"
+            ],
+            "linkedin": [
+              "#ukeducation",
+              "#careerdevelopment",
+              "#internships"
+            ],
+            "x": [
+              "#ukgrads",
+              "#internships"
+            ]
+          }
         }
       ]
     }
