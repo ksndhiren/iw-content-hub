@@ -42,6 +42,18 @@ CORE_JOB_MARKET = re.compile(
     r"recruit|recruitment|vacan|employ|labour market|labor market|"
     r"skills|workforce|early careers?|entry.?level|talent|unemploy|"
     r"redundan|remote work|hybrid work|gen z)\b", re.I)
+INTERNWISE_NEWS_CANON = re.compile(
+    r"\b(student|students|graduate|graduates|grad\b|intern|interns|internship|"
+    r"apprentice|apprenticeship|early careers?|entry.?level|school leaver|"
+    r"university|college|job applicant|job applicants|candidate|candidates|"
+    r"jobseeker|jobseekers|interview|interviews|application|applications|"
+    r"cv|cover letter|portfolio|employability|work experience|placement|"
+    r"first job|first role|career starter)\b", re.I)
+ACTIONABLE_EARLY_CAREER = re.compile(
+    r"\b(apply|application|applications|interview|interviews|cv|cover letter|"
+    r"portfolio|skills?|training|work experience|placement|apprenticeship|"
+    r"job-ready|employability|graduate earnings|tuition fees|university costs|"
+    r"job contracts?|non-compete|candidate|job applicant)\b", re.I)
 WORK_PAY_CONTEXT = re.compile(
     r"\b(payroll|minimum wage|living wage|pay rise|pay deal|grading|"
     r"staff|worker|workers|employee|employees|employer|"
@@ -53,10 +65,17 @@ LIFESTYLE_MONEY = re.compile(
 NON_NEWS_FLUFF = re.compile(
     r"\b(cartoon|crossword|quiz|recipe|horoscope|oil prices?|diesel cost|"
     r"fuel prices?|costly oil|energy bills?)\b", re.I)
+ORG_PR_OR_LOCAL_ONLY = re.compile(
+    r"\b(launches new brand platform|brand platform|webinar|register now|"
+    r"shortlisted for .*award|national award|award shortlist|"
+    r"strategic partnership|partner(?:s|ship) with|"
+    r"regional workforce summit|conference to bring industry together|"
+    r"appoints .*managing director|promotion of .*leader|"
+    r"students lend their skills|shine at .*festival|recognised for driving growth)\b", re.I)
 EXCLUDED_JOB_TYPES = re.compile(
     r"\b(plumb(?:er|ers|ing)|gas engineer|heating engineer|boiler repair|"
     r"electrician|carpenter|joiner|bricklayer|roofer|scaffold(?:er|ing)|"
-    r"construction trade|manual trades?)\b", re.I)
+    r"construction trade|manual trades?|butcher|butchery|engineering profession)\b", re.I)
 
 # --- UK-ONLY GUARD -----------------------------------------------------------
 # Internwise news is about the UK job market only. Even UK publications carry the
@@ -84,17 +103,24 @@ def _is_uk(hay):
 
 
 def _is_job_market_relevant(hay):
-    """True only for employment/labour-market stories.
+    """True only for Internwise-fit employment/early-career stories.
 
-    Salary/pay alone is too broad: lifestyle and personal-finance feeds publish
-    salary questions that are not job-market news. Keep pay stories only when
-    they also carry workplace/labour context.
+    The canon is deliberately stricter than "job market": a story needs a
+    student/intern/graduate/applicant angle and a practical reader takeaway.
+    Broad hiring movement, PR launches, awards, webinars, local one-offs and
+    sector-only trade stories are rejected even if they contain job keywords.
     """
     if NON_NEWS_FLUFF.search(hay):
+        return False
+    if ORG_PR_OR_LOCAL_ONLY.search(hay):
         return False
     if EXCLUDED_JOB_TYPES.search(hay):
         return False
     if LIFESTYLE_MONEY.search(hay) and not CORE_JOB_MARKET.search(hay):
+        return False
+    if not INTERNWISE_NEWS_CANON.search(hay):
+        return False
+    if not ACTIONABLE_EARLY_CAREER.search(hay):
         return False
     if CORE_JOB_MARKET.search(hay):
         return True
