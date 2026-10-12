@@ -63,6 +63,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          IW_ALLOW_NEWS_NOT_DAY_PRIOR: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.date != '' && '1' || '' }}
           IW_TEMP_WEEKEND_NEWS_UNTIL: "2026-10-04"
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
