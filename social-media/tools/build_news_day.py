@@ -169,6 +169,7 @@ def main():
                 "posts": []}
         data["weeks"].append(week)
     week["posts"] = [pp for pp in week["posts"] if pp.get("id") != pid] + [post]
+    week["builtAt"] = int(datetime.datetime.now(datetime.timezone.utc).timestamp())
     json.dump(data, open(bw.WEEKS, "w"), indent=2, ensure_ascii=False)
     bw.news_fetch.mark_used([item])
     print(f"Upserted {pid} into weeks.json ({wid}) as {post['status']}.")

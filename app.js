@@ -17,12 +17,9 @@
      Constants
   ------------------------------------------------------------------------- */
   const DATA_URL      = 'data/weeks.json';
-  // Serve deployed images from the Pages artifact by default. R2 can still be
-  // checked explicitly with ?r2Images=1, but the public R2 URL may be disabled
-  // or restricted and should not be the dashboard's primary image source.
   const IS_LOCAL      = ['localhost', '127.0.0.1'].includes(location.hostname);
-  const USE_R2_IMAGES = new URLSearchParams(location.search).has('r2Images');
-  const IMAGE_BASE    = USE_R2_IMAGES ? 'https://pub-5f843c240ef6453bba67e131500424af.r2.dev' : '';
+  const USE_LOCAL_IMAGES = new URLSearchParams(location.search).has('localImages');
+  const IMAGE_BASE    = USE_LOCAL_IMAGES ? '' : 'https://pub-5f843c240ef6453bba67e131500424af.r2.dev';
   const FEATURED_URL  = 'data/featured.json';
   const SHORTS_URL    = 'data/shorts.json';
   const ANALYTICS_URL = 'data/analytics.json';
