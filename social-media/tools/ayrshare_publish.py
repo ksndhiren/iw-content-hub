@@ -132,9 +132,19 @@ def load_featured_week():
 
 
 def active_networks():
-    req = urllib.request.Request(USER_API, headers={"Authorization": f"Bearer {KEY}"})
-    d = json.load(urllib.request.urlopen(req, timeout=20))
-    return set(d.get("activeSocialAccounts", []))
+    fallback = {n.strip() for n in os.getenv("AYRSHARE_ACTIVE_NETWORKS", "").split(",") if n.strip()}
+    req = urllib.request.Request(USER_API, headers={
+        "Authorization": f"Bearer {KEY}",
+        "User-Agent": "Mozilla/5.0 (compatible; internwise-content-bot/1.0)",
+    })
+    try:
+        d = json.load(urllib.request.urlopen(req, timeout=20))
+        return set(d.get("activeSocialAccounts", []))
+    except Exception as e:
+        if fallback:
+            print(f"  (Ayrshare active-account lookup failed: {e}; using AYRSHARE_ACTIVE_NETWORKS fallback)")
+            return fallback
+        raise
 
 
 def _trim(text, limit):

@@ -37,6 +37,23 @@ KEYWORDS = re.compile(
     r"skills|wage|salary|pay|workforce|early careers?|entry.?level|"
     r"talent|unemploy|redundan|remote work|hybrid work|gen z)\b", re.I)
 
+CORE_JOB_MARKET = re.compile(
+    r"\b(job|jobs|hiring|hire|graduate|intern|internship|apprentice|"
+    r"recruit|recruitment|vacan|employ|labour market|labor market|"
+    r"skills|workforce|early careers?|entry.?level|talent|unemploy|"
+    r"redundan|remote work|hybrid work|gen z)\b", re.I)
+WORK_PAY_CONTEXT = re.compile(
+    r"\b(payroll|minimum wage|living wage|pay rise|pay deal|grading|"
+    r"staff|worker|workers|employee|employees|employer|"
+    r"union|industrial action|public sector|council|nhs|dwp|hmrc)\b", re.I)
+LIFESTYLE_MONEY = re.compile(
+    r"\b(boyfriend|girlfriend|husband|wife|partner|dating|marriage|"
+    r"relationship|couple|family finances|personal finance|mortgage|"
+    r"inheritance|divorce)\b", re.I)
+NON_NEWS_FLUFF = re.compile(
+    r"\b(cartoon|crossword|quiz|recipe|horoscope|oil prices?|diesel cost|"
+    r"fuel prices?|costly oil|energy bills?)\b", re.I)
+
 # --- UK-ONLY GUARD -----------------------------------------------------------
 # Internwise news is about the UK job market only. Even UK publications carry the
 # odd US/overseas story, so every candidate is screened: an item is dropped when
@@ -60,6 +77,22 @@ def _is_uk(hay):
     if _UK_HINT.search(hay):
         return True
     return not (_FOREIGN_CI.search(hay) or _FOREIGN_CS.search(hay))
+
+
+def _is_job_market_relevant(hay):
+    """True only for employment/labour-market stories.
+
+    Salary/pay alone is too broad: lifestyle and personal-finance feeds publish
+    salary questions that are not job-market news. Keep pay stories only when
+    they also carry workplace/labour context.
+    """
+    if NON_NEWS_FLUFF.search(hay):
+        return False
+    if LIFESTYLE_MONEY.search(hay) and not CORE_JOB_MARKET.search(hay):
+        return False
+    if CORE_JOB_MARKET.search(hay):
+        return True
+    return bool(re.search(r"\b(wage|salary|pay)\b", hay, re.I) and WORK_PAY_CONTEXT.search(hay))
 
 
 UA = {"User-Agent": "Mozilla/5.0 (Internwise news-fetch; +https://internwise.co.uk)"}
@@ -159,6 +192,8 @@ def fetch(max_age_days=5, limit=8):
                 continue
             hay = it["title"] + " " + it["summary"]
             if not _is_uk(hay):          # UK job market ONLY - drop foreign stories
+                continue
+            if not _is_job_market_relevant(hay):
                 continue
             it["score"] = len(KEYWORDS.findall(hay))
             if it["score"] == 0:
