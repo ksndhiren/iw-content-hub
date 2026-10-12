@@ -17,7 +17,11 @@
       "format": "decision_prompt",
       "hook": "What would make you apply today?",
       "subhead": "When the search feels noisy, one clear signal is enough to move.",
-      "options": ["Clear role details", "Paid experience", "Simple next step"],
+      "options": [
+        "Clear role details",
+        "Paid experience",
+        "Simple next step"
+      ],
       "takeaway": "Save one role that gives you enough confidence to act.",
       "cta": "Find one worth saving at internwise.co.uk"
     },
@@ -26,7 +30,11 @@
       "format": "decision_prompt",
       "hook": "Which proof would strengthen your next application?",
       "subhead": "Choose the gap before you rewrite the whole CV.",
-      "options": ["A live project", "A named reference", "A measurable result"],
+      "options": [
+        "A live project",
+        "A named reference",
+        "A measurable result"
+      ],
       "takeaway": "The right internship gives your CV something specific to point to.",
       "cta": "Build proof at internwise.co.uk"
     },
@@ -35,7 +43,11 @@
       "format": "decision_prompt",
       "hook": "What is stopping the application?",
       "subhead": "Most hesitation comes from one missing piece, not a lack of ability.",
-      "options": ["Unclear fit", "No recent experience", "Not enough confidence"],
+      "options": [
+        "Unclear fit",
+        "No recent experience",
+        "Not enough confidence"
+      ],
       "takeaway": "Pick the barrier, then choose one role that lowers it.",
       "cta": "Start with one role at internwise.co.uk"
     },
@@ -44,7 +56,11 @@
       "format": "decision_prompt",
       "hook": "Which role would you shortlist first?",
       "subhead": "A good search is not more tabs. It is knowing what deserves attention.",
-      "options": ["Clear responsibilities", "Useful experience", "Fast next step"],
+      "options": [
+        "Clear responsibilities",
+        "Useful experience",
+        "Fast next step"
+      ],
       "takeaway": "Choose the role with the clearest reason to act today.",
       "cta": "Compare roles at internwise.co.uk"
     },
@@ -53,7 +69,11 @@
       "format": "decision_prompt",
       "hook": "What would make your CV stronger?",
       "subhead": "Before another rewrite, choose the proof your application is missing.",
-      "options": ["A real project", "A measurable result", "A named skill"],
+      "options": [
+        "A real project",
+        "A measurable result",
+        "A named skill"
+      ],
       "takeaway": "Find an internship that gives your CV something specific to prove.",
       "cta": "Build proof at internwise.co.uk"
     },
@@ -62,7 +82,11 @@
       "format": "decision_prompt",
       "hook": "Which role feels worth your time?",
       "subhead": "Not every vacancy deserves another tab. Choose the signal that makes a role feel real.",
-      "options": ["Clear tasks", "Named skills", "Paid learning"],
+      "options": [
+        "Clear tasks",
+        "Named skills",
+        "Paid learning"
+      ],
       "takeaway": "The best role is the one you can picture yourself starting.",
       "cta": "Find clearer roles at internwise.co.uk"
     },
@@ -71,7 +95,11 @@
       "format": "decision_prompt",
       "hook": "What would make you interview-ready?",
       "subhead": "Confidence usually comes from one missing piece of preparation.",
-      "options": ["Role research", "Practice answers", "Better proof"],
+      "options": [
+        "Role research",
+        "Practice answers",
+        "Better proof"
+      ],
       "takeaway": "Pick the weakest part, then make it visible before you apply.",
       "cta": "Start with one role at internwise.co.uk"
     },
@@ -80,7 +108,11 @@
       "format": "decision_prompt",
       "hook": "Which internship would you choose?",
       "subhead": "The strongest choice is not always the biggest name. It is the one that builds your next proof point.",
-      "options": ["More ownership", "Better mentoring", "Clearer skills"],
+      "options": [
+        "More ownership",
+        "Better mentoring",
+        "Clearer skills"
+      ],
       "takeaway": "Choose the placement that gives your next application a stronger story.",
       "cta": "Compare opportunities at internwise.co.uk"
     },
@@ -89,7 +121,11 @@
       "format": "decision_prompt",
       "hook": "What makes an employer reply?",
       "subhead": "A stronger application gives the recruiter less work to understand your fit.",
-      "options": ["Specific proof", "Relevant skills", "Clear availability"],
+      "options": [
+        "Specific proof",
+        "Relevant skills",
+        "Clear availability"
+      ],
       "takeaway": "Make the match obvious before the recruiter has to search for it.",
       "cta": "Apply with proof at internwise.co.uk"
     },
@@ -98,9 +134,143 @@
       "format": "decision_prompt",
       "hook": "What is your next small move?",
       "subhead": "Momentum starts with a step small enough to do today.",
-      "options": ["Save a role", "Rewrite one line", "Send one application"],
+      "options": [
+        "Save a role",
+        "Rewrite one line",
+        "Send one application"
+      ],
       "takeaway": "One visible move beats another week of planning.",
       "cta": "Make the next move at internwise.co.uk"
+    },
+    {
+      "id": "c011",
+      "format": "decision_prompt",
+      "hook": "Which interview habit costs the most trust?",
+      "subhead": "Small behaviours can change how prepared you seem before your best answer lands.",
+      "options": [
+        "Arriving vague",
+        "Talking too long",
+        "No questions ready"
+      ],
+      "takeaway": "Pick the weak spot, then prepare one cleaner interview move this week.",
+      "cta": "Practise on real roles at internwise.co.uk"
+    },
+    {
+      "id": "c012",
+      "format": "decision_prompt",
+      "hook": "What would make a role feel worth applying for?",
+      "subhead": "A good listing should make the next step feel clear, not risky.",
+      "options": [
+        "Clear salary",
+        "Real training",
+        "Fast application"
+      ],
+      "takeaway": "Strong opportunities reduce uncertainty before you even apply.",
+      "cta": "Find clearer roles at internwise.co.uk"
+    },
+    {
+      "id": "c013",
+      "format": "decision_prompt",
+      "hook": "Which CV line would you upgrade first?",
+      "subhead": "One sharper line can make the whole application feel more credible.",
+      "options": [
+        "The opener",
+        "The project result",
+        "The skills section"
+      ],
+      "takeaway": "Upgrade the line that proves value, not the one that only sounds polished.",
+      "cta": "Build better CV proof at internwise.co.uk"
+    },
+    {
+      "id": "c014",
+      "format": "decision_prompt",
+      "hook": "What makes you stop scrolling a job post?",
+      "subhead": "Attention is earned when the role feels specific enough to picture yourself in it.",
+      "options": [
+        "The task list",
+        "The company mission",
+        "The growth path"
+      ],
+      "takeaway": "Save roles that show you what you will actually learn or do.",
+      "cta": "Browse roles with substance at internwise.co.uk"
+    },
+    {
+      "id": "c015",
+      "format": "decision_prompt",
+      "hook": "Which follow-up would you actually send?",
+      "subhead": "A good follow-up is specific, respectful and easy for the employer to answer.",
+      "options": [
+        "Thank you note",
+        "Progress check",
+        "Extra proof"
+      ],
+      "takeaway": "The best follow-up adds clarity without sounding pushy.",
+      "cta": "Keep moving at internwise.co.uk"
+    },
+    {
+      "id": "c016",
+      "format": "decision_prompt",
+      "hook": "What should your LinkedIn prove in 10 seconds?",
+      "subhead": "Recruiters scan for evidence before they read every detail.",
+      "options": [
+        "Direction",
+        "Skills",
+        "Recent proof"
+      ],
+      "takeaway": "Make the top of your profile answer the first question quickly.",
+      "cta": "Turn profile views into action at internwise.co.uk"
+    },
+    {
+      "id": "c017",
+      "format": "decision_prompt",
+      "hook": "Which application mistake is easiest to fix today?",
+      "subhead": "Not every improvement needs a full rewrite. Some fixes are quick and visible.",
+      "options": [
+        "Generic opening",
+        "Missing numbers",
+        "Weak final line"
+      ],
+      "takeaway": "Choose the fastest fix, then apply it before your next submission.",
+      "cta": "Use it on a live role at internwise.co.uk"
+    },
+    {
+      "id": "c018",
+      "format": "decision_prompt",
+      "hook": "What would make you trust an internship advert?",
+      "subhead": "Trust starts when the role explains the work, support and outcome clearly.",
+      "options": [
+        "Named tasks",
+        "Mentor support",
+        "Clear duration"
+      ],
+      "takeaway": "Apply where the advert gives enough detail to make a smart decision.",
+      "cta": "Find clearer internships at internwise.co.uk"
+    },
+    {
+      "id": "c019",
+      "format": "decision_prompt",
+      "hook": "Which proof beats “I am a fast learner”?",
+      "subhead": "Claims work harder when they are attached to something real.",
+      "options": [
+        "A result",
+        "A project",
+        "A reference"
+      ],
+      "takeaway": "Replace vague strengths with evidence someone can picture.",
+      "cta": "Build proof through experience at internwise.co.uk"
+    },
+    {
+      "id": "c020",
+      "format": "decision_prompt",
+      "hook": "What would make you apply before Friday?",
+      "subhead": "Momentum often comes from removing one decision, not finding perfect confidence.",
+      "options": [
+        "Shortlist three",
+        "Ask one question",
+        "Send one application"
+      ],
+      "takeaway": "Choose the next visible move and make it small enough to finish.",
+      "cta": "Make one move at internwise.co.uk"
     }
   ]
 }
