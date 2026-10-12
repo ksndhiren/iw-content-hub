@@ -314,11 +314,71 @@ def w_stamp(q, src=None):
     return bg + dots + wm + _logo(WHT) + kicker + card + seal + cta
 
 
+def w_notebook(q, src=None):
+    """Desk notebook layout: ruled-paper editorial, warm and reflective."""
+    PAPER = "#F8F2E6"; LINE = "rgba(21,39,67,.13)"
+    bg = f"<div style='position:absolute;inset:0;background:linear-gradient(145deg,#0F2748,{NAVY});'></div>"
+    desk = f"<div style='position:absolute;left:54px;right:54px;top:148px;bottom:94px;background:{PAPER};box-shadow:0 34px 80px rgba(0,0,0,.38);transform:rotate(-1deg);'></div>"
+    rules = ("<div style='position:absolute;left:96px;right:96px;top:276px;bottom:178px;"
+             f"background-image:linear-gradient({LINE} 2px,transparent 2px);background-size:100% 72px;'></div>")
+    margin = f"<div style='position:absolute;left:150px;top:162px;bottom:108px;width:3px;background:{CORAL};opacity:.5;'></div>"
+    wm = _wm(src, "right:74px;bottom:112px;height:640px;", op=.08, filt="grayscale(1) sepia(.25) brightness(1.12)")
+    label = (f"<div style=\"position:absolute;left:176px;top:202px;font-family:'DM Sans';font-weight:900;"
+             f"font-size:18px;color:{GREEN};letter-spacing:5px;\">FIELD NOTE</div>")
+    body = (f"<div style='position:absolute;left:176px;right:146px;top:314px;'>"
+            f"<div style=\"font-family:Georgia,serif;font-weight:700;font-size:72px;line-height:1.09;color:#152743;word-break:keep-all;\">{q['text']}</div>"
+            f"<div style='width:92px;height:6px;background:{AMBER};border-radius:3px;margin:34px 0 22px;'></div>"
+            f"<div style=\"font-family:'DM Sans';font-weight:900;font-size:31px;color:#152743;\">{q['author']}</div></div>")
+    cta = (f"<div style='position:absolute;left:176px;right:130px;bottom:132px;height:58px;padding:0 22px;background:#fff;"
+           f"border:3px solid #152743;box-shadow:8px 8px 0 {AMBER};display:flex;align-items:center;"
+           f"font-family:Inter;font-weight:900;font-size:24px;color:#152743;'>{q['cta']}</div>")
+    return bg + desk + rules + margin + wm + _logo(DARK, left=96, top=58, h=74) + label + body + cta
+
+
+def w_gallery(q, src=None):
+    """Museum placard layout: portrait as a framed faded exhibit."""
+    WALL = "#ECE6D9"; NAVYT = "#152743"
+    bg = f"<div style='position:absolute;inset:0;background:radial-gradient(110% 90% at 40% 0%,#FBF7ED,{WALL});'></div>"
+    frame = (f"<div style='position:absolute;right:74px;top:150px;width:364px;height:540px;background:#fff;"
+             f"border:18px solid {NAVYT};box-shadow:0 24px 60px rgba(21,39,67,.20);overflow:hidden;'>"
+             f"{_wm(src, 'left:50%;top:50%;transform:translate(-50%,-50%);height:520px;', op=.18, filt='grayscale(1) contrast(1.08)')}</div>")
+    plaque = (f"<div style='position:absolute;right:106px;top:724px;width:300px;height:78px;background:{AMBER};"
+              f"display:flex;align-items:center;justify-content:center;font-family:'DM Sans';font-weight:900;"
+              f"font-size:18px;color:{NAVYT};letter-spacing:3px;'>QUOTE OF THE DAY</div>")
+    body = (f"<div style='position:absolute;left:66px;top:230px;width:570px;'>"
+            f"<div style='font-family:Georgia,serif;font-weight:700;font-size:132px;line-height:.45;color:{CORAL};'>{Q}</div>"
+            f"<div style=\"font-family:Inter;font-weight:900;font-size:70px;line-height:1.06;letter-spacing:-1.8px;color:{NAVYT};word-break:keep-all;\">{q['text']}</div>"
+            f"<div style='width:88px;height:5px;background:{GREEN};border-radius:3px;margin:34px 0 20px;'></div>"
+            f"<div style=\"font-family:'DM Sans';font-weight:900;font-size:30px;color:{NAVYT};\">{q['author']}</div></div>")
+    cta = (f"<div style=\"position:absolute;left:66px;right:66px;bottom:68px;font-family:Inter;font-weight:800;"
+           f"font-size:26px;color:#7B715F;\">{q['cta']}</div>")
+    return bg + frame + plaque + _logo(DARK, left=66, top=54, h=76) + body + cta
+
+
+def w_manifesto(q, src=None):
+    """Bold manifesto poster: type-led, high contrast, activist energy."""
+    bg = f"<div style='position:absolute;inset:0;background:{AMBER};'></div>"
+    black = f"<div style='position:absolute;left:0;right:0;top:0;height:360px;background:{DEEP};'></div>"
+    wm = _wm(src, "right:-64px;bottom:0;height:830px;", op=.11, filt="grayscale(1) contrast(1.05)")
+    slash = f"<div style='position:absolute;left:-110px;top:330px;width:1320px;height:96px;background:{CORAL};transform:rotate(-7deg);'></div>"
+    label = (f"<div style=\"position:absolute;left:64px;top:194px;font-family:'DM Sans';font-weight:950;"
+             f"font-size:20px;color:{AMBER};letter-spacing:6px;\">CAREER MANIFESTO</div>")
+    body = (f"<div style='position:absolute;left:64px;right:250px;top:288px;'>"
+            f"<div style=\"font-family:Inter;font-weight:950;font-size:78px;line-height:.98;letter-spacing:-2.6px;color:#fff;word-break:keep-all;\">{q['text']}</div>"
+            f"<div style='margin-top:36px;display:inline-flex;align-items:center;gap:16px;background:{DEEP};padding:14px 20px;'>"
+            f"<div style='width:28px;height:28px;background:{CORAL};'></div>"
+            f"<div style=\"font-family:'DM Sans';font-weight:950;font-size:30px;color:{AMBER};\">{q['author']}</div></div></div>")
+    cta = (f"<div style='position:absolute;left:64px;bottom:76px;right:250px;background:#fff;padding:18px 22px;"
+           f"font-family:Inter;font-weight:900;font-size:25px;color:{DEEP};box-shadow:10px 10px 0 {CORAL};'>{q['cta']}</div>")
+    return bg + wm + black + slash + _logo(WHT, left=60, top=52, h=76) + label + body + cta
+
+
 WORLDS = {"editorial": w_editorial, "spotlight": w_spotlight, "colorblock": w_colorblock,
           "split": w_split, "paper": w_paper,
           "arc": w_arc, "blueprint": w_blueprint, "band": w_band,
           "minimal": w_minimal, "bubble": w_bubble,
-          "marquee": w_marquee, "stamp": w_stamp}
+          "marquee": w_marquee, "stamp": w_stamp,
+          "notebook": w_notebook, "gallery": w_gallery, "manifesto": w_manifesto}
 
 # Only q001-q005 in the bank carry a "cta"; the rest don't, so fall back on-brand.
 _DEFAULT_CTA = "Find your internship at internwise.co.uk"

@@ -129,7 +129,7 @@ def target_week():
 # bank (see build()) so no two consecutive weeks repeat the same 5 quotes.
 QUOTE_WORLDS = ["editorial", "spotlight", "colorblock", "split", "paper",
                 "arc", "blueprint", "band", "minimal", "bubble",
-                "marquee", "stamp"]
+                "marquee", "stamp", "notebook", "gallery", "manifesto"]
 # Employer is a core Daily-5 lane and must run every weekday. Featured jobs are
 # a separate sixth queue, never a substitute for missing core-grid posts.
 EMPLOYER_DAYS = {0, 1, 2, 3, 4}
