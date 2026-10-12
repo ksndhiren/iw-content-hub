@@ -1,82 +1,86 @@
 {
-  "week": "week19",
-  "generatedAt": "2026-10-05T03:18:43Z",
+  "week": "week20",
+  "generatedAt": "2026-10-12T17:00:41Z",
   "needByFamily": {
-    "planning": 1,
-    "cvpile": 2,
-    "dothis": 1,
-    "authority": 3,
-    "tablet_cover": 1,
-    "tablet": 1,
-    "utility": 1,
-    "offers": 1
+    "thoughtful": 1,
+    "authority": 4,
+    "dothis": 2,
+    "cvpile": 1,
+    "cv": 2,
+    "offers": 2
   },
   "repeats": [
     {
-      "label": "employer/command",
-      "cutout": "nuno_planning_3",
-      "family": "planning",
-      "week": "week19"
+      "label": "employer/goodcompany",
+      "cutout": "nuno_thoughtful_1",
+      "family": "thoughtful",
+      "week": "week20"
     },
     {
-      "label": "education/cream/cover",
+      "label": "education/marker/cover",
+      "cutout": "nuno_authority_1",
+      "family": "authority",
+      "week": "week20"
+    },
+    {
+      "label": "education/marker/cta",
+      "cutout": "nuno_dothis_1",
+      "family": "dothis",
+      "week": "week20"
+    },
+    {
+      "label": "employer/fastmatch",
       "cutout": "nuno_cvpile",
       "family": "cvpile",
-      "week": "week19"
+      "week": "week20"
     },
     {
-      "label": "education/cream/cta",
-      "cutout": "nuno_dothis_4",
+      "label": "education/flash/cover",
+      "cutout": "nuno_cv_5",
+      "family": "cv",
+      "week": "week20"
+    },
+    {
+      "label": "education/flash/cta",
+      "cutout": "nuno_dothis_2",
       "family": "dothis",
-      "week": "week19"
+      "week": "week20"
     },
     {
-      "label": "employer/talentmap",
+      "label": "employer/bigstat",
+      "cutout": "nuno_offers_3",
+      "family": "offers",
+      "week": "week20"
+    },
+    {
+      "label": "education/tabs/cover",
+      "cutout": "nuno_cv",
+      "family": "cv",
+      "week": "week20"
+    },
+    {
+      "label": "education/tabs/cta",
+      "cutout": "nuno_offers_1",
+      "family": "offers",
+      "week": "week20"
+    },
+    {
+      "label": "employer/kpi",
       "cutout": "nuno_authority_4",
       "family": "authority",
-      "week": "week19"
+      "week": "week20"
     },
     {
-      "label": "education/midnight/cover",
-      "cutout": "nuno_tablet_cover",
-      "family": "tablet_cover",
-      "week": "week19"
-    },
-    {
-      "label": "education/midnight/cta",
-      "cutout": "nuno_tablet",
-      "family": "tablet",
-      "week": "week19"
-    },
-    {
-      "label": "employer/benefits",
-      "cutout": "nuno_authority_2",
-      "family": "authority",
-      "week": "week19"
-    },
-    {
-      "label": "education/slate/cover",
-      "cutout": "nuno_utility_3",
-      "family": "utility",
-      "week": "week19"
-    },
-    {
-      "label": "education/slate/cta",
-      "cutout": "nuno_offers_4",
-      "family": "offers",
-      "week": "week19"
-    },
-    {
-      "label": "employer/trust",
+      "label": "employer/cards",
       "cutout": "nuno_authority_3",
       "family": "authority",
-      "week": "week19"
+      "week": "week20"
     },
     {
-      "label": "employer/statement",
-      "cutout": "nuno_cvpile",
-      "family": "cvpile",
-      "week": "week19"
+      "label": "education/splitcard",
+      "cutout": "nuno_authority_2",
+      "family": "authority",
+      "week": "week20"
     }
   ]
 }
