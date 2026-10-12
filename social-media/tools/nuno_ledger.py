@@ -49,6 +49,9 @@ TONES = {
     "nuno_utility_4": {"practical", "confident"},
     "nuno_thumbsup_2": {"positive"}, "nuno_dothis_4": {"confident", "practical"},
     "nuno_offers_4": {"positive", "confident"},
+    "nuno_interview_door": {"practical", "confident", "serious"},
+    "nuno_cv_proof_highlight": {"practical", "serious"},
+    "nuno_followup_phone": {"practical", "serious"},
 }
 
 

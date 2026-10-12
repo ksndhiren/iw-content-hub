@@ -71,6 +71,7 @@ CTA_TOPIC_POSES = {
     "cv": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4"],
     "bullet_cv": ["nuno_cv_5", "nuno_cv_2", "nuno_cv_3"],
     "job_description": ["nuno_cv_3"],
+    "followup": ["nuno_followup_phone", "nuno_phone", "nuno_tablet"],
 }
 
 # ------------------------------------------------------------ topic-matched hook
@@ -84,9 +85,9 @@ CTA_TOPIC_POSES = {
 TOPIC_POSES = {
     "bullet_cv":  ["nuno_cv_4"],
     "job_description": ["nuno_job_description"],
-    "cv":         ["nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4", "nuno_cvpile"],
+    "cv":         ["nuno_cv_proof_highlight", "nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4", "nuno_cvpile"],
     "apply":      ["nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4"],
-    "interview":  ["nuno_authority_4", "nuno_authority_1", "nuno_authority_2", "nuno_authority_3"],
+    "interview":  ["nuno_interview_door", "nuno_authority_4", "nuno_authority_1", "nuno_authority_2", "nuno_authority_3"],
     "confidence": ["nuno_authority_4", "nuno_authority_1", "nuno_authority_2", "nuno_authority_3"],
     "plan":       ["nuno_planning_1", "nuno_planning_2", "nuno_planning_3"],
     "mistake":    ["nuno_thoughtful_1", "nuno_thoughtful_2", "nuno_thoughtful_3"],
@@ -98,6 +99,7 @@ TOPIC_POSES = {
     "offer":      ["nuno_offers_cover"],
     "tech":       ["nuno_tablet_cover"],
     "tracker":    ["nuno_tracker_dashboard"],
+    "followup":   ["nuno_followup_phone", "nuno_phone", "nuno_tablet"],
 }
 # Substring found in eyebrow/headline/slide text -> topic key above.
 TOPIC_KEYWORDS = [
@@ -106,6 +108,7 @@ TOPIC_KEYWORDS = [
     ("cover letter", "cv"), ("resume", "cv"), ("cv", "cv"),
     ("application", "apply"), ("apply", "apply"), ("ats", "apply"),
     ("interview", "interview"), ("assessment", "interview"),
+    ("follow-up", "followup"), ("follow up", "followup"),
     ("imposter", "confidence"), ("confidence", "confidence"), ("nerv", "confidence"),
     ("timeline", "plan"), ("deadline", "plan"), ("schedule", "plan"),
     ("plan", "plan"), ("first day", "plan"),
@@ -954,7 +957,8 @@ def cover_marker(p, copy, total, pose):
                  f"transform:rotate(-1.4deg);border-radius:3px;'></div></div>")
     swipe = (f"<div style=\"position:absolute;left:{x}px;bottom:56px;font-family:'DM Sans';font-weight:800;font-size:22px;"
              f"color:{NAVYT};\">Swipe to begin &rarr;</div>")
-    return (_bg(p) + tex + glow + _nuno_whole(pose, h=770, right=-150)
+    nuno_right = 20 if pose in {"nuno_interview_door"} else -150
+    return (_bg(p) + tex + glow + _nuno_whole(pose, h=770, right=nuno_right)
             + _logo(L.DARKLOGO, left=x, top=52) + eyebrow + headblock + swipe)
 
 def content_marker(p, n, total, slide):
@@ -1096,6 +1100,8 @@ def cover_tabs(p, copy, total, pose):
                 f"background:radial-gradient(circle at 55% 52%,rgba(255,177,32,.16),transparent 64%);'></div>"
                 f"<img src='{L.nuno_src(pose)}' style='position:absolute;right:-70px;bottom:0;height:570px;"
                 f"filter:drop-shadow(0 22px 34px rgba(0,0,0,.45));'>")
+    elif pose in {"nuno_followup_phone"}:
+        nuno = _nuno_whole(pose, h=760, right=18)
     else:
         nuno = _nuno_whole(pose, h=760, right=-60)
     return (_bg(p) + _folder_tabs(p, 1, total) + _arc(p) + nuno
