@@ -99,7 +99,7 @@ jobs:
 
       - name: Commit and push to main if there are changes
         run: |
-          FILES="images data/weeks.json social-media/content/news_used.json social-media/content/ayrshare_posted.json"
+          FILES="images data/weeks.json social-media/content/news_used.json social-media/content/news_image_used.json social-media/content/ayrshare_posted.json"
           if [ -z "$(git status --porcelain $FILES)" ]; then
             echo "No changes (nothing built). Done."
             exit 0
