@@ -176,6 +176,23 @@ def media_for(post, week_id):
     return [f"{R2_BASE}/{week_id}/{post['id']}/{s}" for s in post.get("slides", [])]
 
 
+def remote_media_exists(url):
+    """Return True when an already-uploaded R2 image exists.
+
+    Local checkouts may not contain cloud-built week images, but the dashboard and
+    Ayrshare both use the R2 URLs. Use a browser-like user-agent because the R2
+    public endpoint blocks default urllib agents with 403.
+    """
+    req = urllib.request.Request(url, method="HEAD", headers={
+        "User-Agent": "Mozilla/5.0 (compatible; internwise-content-bot/1.0)",
+    })
+    try:
+        with urllib.request.urlopen(req, timeout=15) as res:
+            return 200 <= res.status < 400
+    except Exception:
+        return False
+
+
 def schedule_iso(week, post, at=None):
     """Future UTC ISO for this post's lane time (UK local) on its day.
 
@@ -237,9 +254,9 @@ def build_jobs(week, connected, want_status, use_schedule, only=None, days=None,
         # this once a Facebook Page is connected in Ayrshare.
         if stories and media:
             local_story = os.path.join(HUB, "images", week["id"], post["id"], "story.png")
-            if not os.path.exists(local_story):
-                continue
             story_url = f"{R2_BASE}/{week['id']}/{post['id']}/story.png"
+            if not (os.path.exists(local_story) or remote_media_exists(story_url)):
+                continue
             if "instagram" in nets:
                 jobs.append({"pid": post["id"], "lane": lane, "network": "instagram", "kind": "story",
                              "text": post.get("title", " ")[:60], "trimmed": False,
