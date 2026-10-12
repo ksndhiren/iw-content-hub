@@ -105,6 +105,9 @@ RULES (must follow):
 - UK ONLY: this is a UK job board. The story must be about the UK job market. If it is about another country (US, etc.), do not frame it as UK news.
 - NO NAMES / NO ENDORSEMENTS: do NOT name, endorse or publicise any individual person or private organisation (company, employer, university, college, recruiter, etc.). Report the facts generically instead ("a major UK employer", "a UK university", "a graduate"). The ONLY exception is UK government job schemes and government bodies (e.g. the Jobs Guarantee scheme, DWP, Ofsted) - these may be named. Never build a story around one named company's or person's success.
 - NO STEREOTYPES: never frame jobs, skills or traits by gender, age or industry stereotype (e.g. do not say a job is "for men"/"for women"). Report roles and demand neutrally.
+- EXPLANATORY NEWS CAPTIONS: write captions like short plain-English articles, not teaser bites. The reader should understand the story without opening the source, reading the graphic, or inferring the context.
+- REQUIRED NEWS CAPTION FLOW: every news caption must explain, in this order: (1) what happened, (2) why it matters, (3) what students/graduates/early-career applicants or employers should understand, and (4) one practical takeaway.
+- NO VAGUE BRIDGES: do not jump from a headline to generic lines about "internship journeys", "changing norms", "career foundations", or "adapting to shifts". Internships/Internwise may be mentioned only after the story is explained, and only if the link is specific to the practical lesson.
 - SELF-CONTAINED CAPTIONS: the caption must tell the WHOLE story - every key fact, figure and piece of context - so the reader gets the full news without clicking away. NEVER write "link in bio", "read the full story", "read more", "see link", or any phrase that sends them elsewhere to read it.
 
 SOURCE TITLE: {item.get('title','')}
@@ -118,10 +121,10 @@ Return JSON with:
   "pull": one punchy pull-quote line (max ~60 chars),
   "kicker": one of "JOB MARKET","SKILLS","CAREERS",
   "captions": {{
-     "ig-fb": a self-contained caption that tells the whole story (all key facts and figures) in Internwise's voice, then one short line on how internships help early-career jobseekers. No link-teasing. End with "Source: {item.get('source','')}." (<=2200 chars),
-     "linkedin": a professional, self-contained caption telling the whole story (all key facts and figures), then a brief internships angle. No link-teasing. End with "Source: {item.get('source','')}." (<=3000 chars),
-     "x": one tweet under 280 chars giving the most important fact(s) plainly - no teaser, no "link in bio" - ending with "(Source: {item.get('source','')})",
-     "threads": a SELF-CONTAINED caption UNDER 480 characters (Threads limit) that still tells the story's key facts in Internwise's voice, ending with the URL www.internwise.co.uk (written out, no "link in bio", no trailing period). Do NOT just truncate the ig-fb caption - write a tighter one.
+     "ig-fb": 3-5 short paragraphs that explain the story in plain English using the required flow. No vague internship bridge, no link-teasing. End with "Source: {item.get('source','')}." (<=2200 chars),
+     "linkedin": 3-5 professional short paragraphs that explain the story in plain English using the required flow. No vague internship bridge, no link-teasing. End with "Source: {item.get('source','')}." (<=3000 chars),
+     "x": one tweet under 280 chars that explains the core story and practical takeaway plainly - no teaser, no "link in bio" - ending with "(Source: {item.get('source','')})",
+     "threads": a SELF-CONTAINED caption UNDER 480 characters (Threads limit) that explains the core story and takeaway in Internwise's voice, ending with the URL www.internwise.co.uk (written out, no "link in bio", no trailing period). Do NOT just truncate the ig-fb caption - write a tighter one.
   }},
   "hashtags": {{"ig-fb": [5 tags], "linkedin": [3 tags], "x": [2 tags]}}"""
     return _chat(user, max_tokens=1500)

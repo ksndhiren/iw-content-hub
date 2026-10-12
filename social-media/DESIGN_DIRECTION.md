@@ -54,6 +54,10 @@ This is the approved creative direction for future Internwise social graphics. T
 - Make news more attractive through editorial hierarchy, stronger headline spacing, a useful sidebar, and one pull quote.
 - The graphic is a short article-style front page; full source/detail continues in the caption.
 - News article body, sidebar, and pull quote must never end mid-sentence or with ellipses. If the copy does not fit, shorten to complete sentences; do not clip with overflow.
+- News captions must read like easy mini-articles, not teaser bites or two-line summaries. Explain the story before asking the reader to draw a lesson from it.
+- Required caption flow: what happened, why it matters, what students/graduates/employers should understand, one practical takeaway, then source.
+- Do not use vague internship bridges such as "career journey", "adapt to changing norms", "strong foundation", or "this highlights" without first explaining the concrete situation and its practical consequence.
+- Internwise/Internships can appear only after the news is clear, and the connection must be specific to the story's lesson rather than a generic CTA.
 
 ## Quote Direction
 
