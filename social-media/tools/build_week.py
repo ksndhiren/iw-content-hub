@@ -138,10 +138,11 @@ EMPLOYER_PAIRS = [("benefits", "e001"), ("bigstat", "e004"), ("process", "e003")
 # All employer worlds (incl. the week16 additions) + a compatible angle for CTA copy.
 # World SELECTION now goes through the design ledger (no-repeat), not this list's rotation.
 EMPLOYER_WORLDS = ["benefits", "bigstat", "process", "trust", "statement", "kpi", "cards", "pipeline", "proofboard",
-                   "command", "talentmap"]
+                   "command", "talentmap", "goodcompany", "fastmatch"]
 EMPLOYER_ANGLE = {"benefits": "e001", "bigstat": "e004", "process": "e003",
                   "trust": "e005", "statement": "e002", "kpi": "e004", "cards": "e001",
-                  "pipeline": "e003", "proofboard": "e004", "command": "e006", "talentmap": "e004"}
+                  "pipeline": "e003", "proofboard": "e004", "command": "e006", "talentmap": "e004",
+                  "goodcompany": "e005", "fastmatch": "e004"}
 # education: 3 carousels + 2 singles. The FORMAT is fixed per weekday (Mon-Wed
 # carousels, Thu/Fri singles) so the weekly mix never drifts; the visual WORLD
 # rotates by week (see week_offset / build) so the same weekday never looks the
