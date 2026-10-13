@@ -32,6 +32,8 @@ This is the approved creative direction for future Internwise social graphics. T
 - Mon-Wed education carousels need topic-specific Nuno imagery. If the library does not contain a clearly relevant pose for the hook or CTA, request/generate a new cutout instead of forcing a generic corporate pose.
 - The hook Nuno and outro Nuno in the same carousel must be different images unless the outro is intentionally graphic-led with no Nuno.
 - Single education posts must not inherit generic split-card layouts when the topic has a strong metaphor. Create a dedicated visual system for the topic, such as answer bank, message lab, tracker, proof board, or focus studio.
+- Education carousel hook slides must be topic-led editorial posters, not generic template covers. Each hook needs at least one distinctive typography move, a concept-specific background or prop system, and a clear visual metaphor for the topic.
+- Do not place raw-looking cutouts on flat backgrounds. If the background removal has halos, use a better cutout, defringe it, or integrate the image into a framed editorial scene where the edge does not look accidental.
 
 ## News Direction
 

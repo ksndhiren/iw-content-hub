@@ -945,6 +945,33 @@ def _hl_title(text, ink, accent, size=60):
 def cover_marker(p, copy, total, pose):
     x = 56
     NAVYT = p["deep"]
+    if "first 30" in copy.get("headline", "").lower() or pose == "nuno_interview_door":
+        pose = "nuno_interview_door"
+        bg = (f"<div style='position:absolute;inset:0;background:#F4EFE4;'></div>"
+              f"<div style='position:absolute;inset:0;opacity:.34;background-image:radial-gradient(rgba(21,39,67,.10) 1.7px,transparent 1.7px);background-size:34px 34px;'></div>")
+        ink_slab = (f"<div style='position:absolute;right:0;top:0;width:420px;height:1080px;background:{NAVYT};'></div>"
+                    f"<div style='position:absolute;right:260px;top:0;width:260px;height:1080px;background:{AMBER};clip-path:polygon(72% 0,100% 0,32% 100%,0 100%);opacity:.92;'></div>")
+        stopwatch = (f"<svg style='position:absolute;right:106px;top:172px;width:520px;height:520px;opacity:.22;' viewBox='0 0 520 520' fill='none'>"
+                     f"<circle cx='260' cy='282' r='192' stroke='#fff' stroke-width='16'/>"
+                     f"<path d='M260 282V154M260 282L356 336' stroke='{AMBER}' stroke-width='18' stroke-linecap='round'/>"
+                     f"<rect x='214' y='38' width='92' height='54' rx='18' fill='{AMBER}'/>"
+                     f"</svg>")
+        door = (f"<div style='position:absolute;right:126px;bottom:92px;width:252px;height:590px;border:4px solid rgba(255,255,255,.22);'></div>"
+                f"<div style='position:absolute;right:158px;bottom:138px;width:176px;height:496px;background:rgba(255,255,255,.08);'></div>")
+        head = (f"<div style='position:absolute;left:62px;top:242px;width:650px;'>"
+                f"<div style=\"font-family:Inter;font-weight:950;font-size:78px;line-height:.92;letter-spacing:-3.2px;color:{NAVYT};\">Nail the</div>"
+                f"<div style=\"margin-top:6px;font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:168px;line-height:.82;color:{AMBER};text-shadow:7px 7px 0 {NAVYT};\">First</div>"
+                f"<div style='display:flex;align-items:flex-end;gap:18px;margin-top:10px;'>"
+                f"<div style=\"font-family:Inter;font-weight:950;font-size:164px;line-height:.78;letter-spacing:-8px;color:transparent;-webkit-text-stroke:5px {NAVYT};text-stroke:5px {NAVYT};\">30</div>"
+                f"<div style=\"font-family:Inter;font-weight:950;font-size:64px;line-height:.9;color:{NAVYT};letter-spacing:-2px;margin-bottom:9px;\">SECONDS</div>"
+                f"</div></div>")
+        label = (f"<div style='position:absolute;left:64px;top:176px;height:46px;padding:0 20px;background:{NAVYT};display:flex;align-items:center;box-shadow:8px 8px 0 {AMBER};'>"
+                 f"<span style=\"font-family:'DM Sans';font-weight:950;font-size:18px;color:#fff;letter-spacing:4px;\">INTERVIEW ENTRANCE</span></div>")
+        note = (f"<div style='position:absolute;left:68px;top:704px;width:420px;font-family:\"DM Sans\";font-weight:850;font-size:28px;line-height:1.2;color:#6F6350;'>"
+                f"Show calm before your first answer even starts.</div>")
+        nuno = _nuno_whole(pose, h=710, right=40, bottom=28)
+        swipe = (f"<div style=\"position:absolute;left:64px;bottom:56px;font-family:'DM Sans';font-weight:900;font-size:24px;color:{NAVYT};\">Swipe in prepared &rarr;</div>")
+        return bg + ink_slab + stopwatch + door + _logo(L.DARKLOGO, left=56, top=48) + label + head + note + nuno + swipe
     tex = _dot_texture("rgba(21,39,67,.05)")
     glow = _glow("rgba(255,177,32,.16)", right=-60, bottom=-30, size=560)
     eyebrow = (f"<div style='position:absolute;left:{x}px;top:206px;display:inline-flex;align-items:center;height:46px;padding:0 20px;"
@@ -957,8 +984,7 @@ def cover_marker(p, copy, total, pose):
                  f"transform:rotate(-1.4deg);border-radius:3px;'></div></div>")
     swipe = (f"<div style=\"position:absolute;left:{x}px;bottom:56px;font-family:'DM Sans';font-weight:800;font-size:22px;"
              f"color:{NAVYT};\">Swipe to begin &rarr;</div>")
-    nuno_right = 20 if pose in {"nuno_interview_door"} else -150
-    return (_bg(p) + tex + glow + _nuno_whole(pose, h=770, right=nuno_right)
+    return (_bg(p) + tex + glow + _nuno_whole(pose, h=770, right=-150)
             + _logo(L.DARKLOGO, left=x, top=52) + eyebrow + headblock + swipe)
 
 def content_marker(p, n, total, slide):
@@ -1006,6 +1032,26 @@ def _wedge(color, css, size=420, op=.13, corner="bl"):
 
 def cover_flash(p, copy, total, pose):
     x = 56
+    if "proof" in copy.get("headline", "").lower():
+        pose = "nuno_cv_proof_highlight"
+        bg = (f"<div style='position:absolute;inset:0;background:radial-gradient(120% 100% at 70% 18%,#203F66 0%,#11284A 46%,#071528 100%);'></div>"
+              f"<div style='position:absolute;inset:0;opacity:.26;background-image:linear-gradient(rgba(255,255,255,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.13) 1px,transparent 1px);background-size:54px 54px;'></div>")
+        evidence = (f"<div style='position:absolute;left:58px;top:182px;height:48px;padding:0 22px;border:3px solid {AMBER};display:flex;align-items:center;transform:rotate(-1.2deg);'>"
+                    f"<span style=\"font-family:'DM Sans';font-weight:950;font-size:18px;color:{AMBER};letter-spacing:4px;\">EVIDENCE FIRST</span></div>"
+                    f"<div style='position:absolute;left:720px;top:114px;width:320px;height:770px;border:3px solid rgba(255,255,255,.18);transform:rotate(4deg);'></div>"
+                    f"<div style='position:absolute;left:760px;top:154px;width:280px;height:710px;border:3px solid rgba(255,177,32,.22);transform:rotate(-3deg);'></div>")
+        head = (f"<div style='position:absolute;left:58px;top:284px;width:620px;'>"
+                f"<div style=\"font-family:Inter;font-weight:950;font-size:84px;line-height:.9;letter-spacing:-3.5px;color:#fff;\">Add</div>"
+                f"<div style=\"display:inline-block;margin-top:8px;font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:152px;line-height:.82;color:{AMBER};background:linear-gradient(transparent 60%,{CORAL} 60%);padding:0 12px;transform:rotate(-2deg);\">Proof</div>"
+                f"<div style=\"margin-top:16px;font-family:Inter;font-weight:950;font-size:78px;line-height:.9;letter-spacing:-3px;color:#fff;\">before you</div>"
+                f"<div style=\"margin-top:8px;font-family:Inter;font-weight:950;font-size:78px;line-height:.9;letter-spacing:-3px;color:transparent;-webkit-text-stroke:3px #fff;text-stroke:3px #fff;\">polish</div></div>")
+        chips = (f"<div style='position:absolute;left:62px;top:780px;display:flex;gap:14px;'>"
+                 f"<div style='height:42px;padding:0 17px;border-radius:21px;background:#fff;display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:18px;color:{p['deep']};'>numbers</div>"
+                 f"<div style='height:42px;padding:0 17px;border-radius:21px;background:{GREEN};display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:18px;color:{p['deep']};'>tools</div>"
+                 f"<div style='height:42px;padding:0 17px;border-radius:21px;background:{CORAL};display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:18px;color:#fff;'>outcomes</div></div>")
+        nuno = (f"<div style='position:absolute;right:-4px;bottom:-16px;width:650px;height:740px;border-radius:360px 0 0 0;background:radial-gradient(circle at 48% 48%,rgba(255,177,32,.16),transparent 60%);'></div>"
+                f"<img src='{L.nuno_src(pose)}' style='position:absolute;right:-28px;bottom:-4px;height:610px;filter:drop-shadow(0 24px 38px rgba(0,0,0,.55));'>")
+        return bg + evidence + _logo(left=56, top=44) + head + chips + nuno + _footer(p, swipe=True)
     wedge = _wedge(p['accent'], "left:0;bottom:0;", 440, .12, "bl")
     slash = (f"<div style='position:absolute;left:{x}px;top:238px;width:60px;height:12px;background:{p['accent']};transform:skewX(-26deg);'></div>")
     eyebrow = (f"<div style=\"position:absolute;left:{x+80}px;top:230px;font-family:'DM Sans';font-weight:800;font-size:21px;"
@@ -1073,6 +1119,38 @@ def _folder_tabs(p, active, total, x=56, top=210):
 
 def cover_tabs(p, copy, total, pose):
     x = 56
+    if "follow-up" in copy.get("headline", "").lower() or pose == "nuno_followup_phone":
+        pose = "nuno_followup_phone"
+        bg = (f"<div style='position:absolute;inset:0;background:linear-gradient(155deg,#0A3835 0%,#0B201F 72%);'></div>"
+              f"<div style='position:absolute;left:-180px;top:520px;width:520px;height:520px;border-radius:50%;background:{AMBER};opacity:.12;'></div>"
+              f"<div style='position:absolute;right:-130px;top:110px;width:620px;height:620px;border-radius:50%;background:{GREEN};opacity:.13;'></div>")
+        composer = (f"<div style='position:absolute;left:532px;top:192px;width:432px;height:574px;border-radius:30px;background:#F4EFE4;box-shadow:0 36px 70px rgba(0,0,0,.34);overflow:hidden;transform:rotate(2deg);'>"
+                    f"<div style='position:absolute;left:0;right:0;top:0;height:72px;background:#fff;border-bottom:3px solid {AMBER};'></div>"
+                    f"<div style='position:absolute;left:30px;top:26px;width:14px;height:14px;border-radius:50%;background:{CORAL};'></div>"
+                    f"<div style='position:absolute;left:56px;top:26px;width:14px;height:14px;border-radius:50%;background:{AMBER};'></div>"
+                    f"<div style='position:absolute;left:82px;top:26px;width:14px;height:14px;border-radius:50%;background:{GREEN};'></div>"
+                    f"<div style='position:absolute;left:34px;top:118px;width:330px;height:22px;border-radius:11px;background:rgba(21,39,67,.18);'></div>"
+                    f"<div style='position:absolute;left:34px;top:174px;width:260px;height:18px;border-radius:9px;background:rgba(21,39,67,.13);'></div>"
+                    f"<div style='position:absolute;left:34px;top:222px;width:348px;height:120px;border-radius:18px;background:#fff;border:3px solid rgba(21,39,67,.12);'></div>"
+                    f"<div style='position:absolute;left:34px;bottom:34px;width:146px;height:50px;border-radius:25px;background:{AMBER};'></div>"
+                    f"</div>")
+        trail = (f"<svg style='position:absolute;left:76px;top:240px;width:900px;height:700px;' viewBox='0 0 900 700' fill='none'>"
+                 f"<path d='M24 600 C198 364 354 516 488 302 S716 98 850 198' stroke='{AMBER}' stroke-width='8' stroke-linecap='round' stroke-dasharray='18 20' opacity='.55'/>"
+                 f"<path d='M768 140 L868 196 L746 226 L768 140Z' fill='{AMBER}' opacity='.85'/>"
+                 f"</svg>")
+        head = (f"<div style='position:absolute;left:56px;top:268px;width:560px;'>"
+                f"<div style=\"font-family:Inter;font-weight:950;font-size:76px;line-height:.9;letter-spacing:-3px;color:#fff;\">Craft a</div>"
+                f"<div style=\"display:inline-block;margin-top:10px;font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:112px;line-height:.86;color:{AMBER};background:linear-gradient(transparent 58%,{CORAL} 58%);padding:0 12px;transform:rotate(-2deg);\">Follow-Up</div>"
+                f"<div style=\"margin-top:14px;font-family:Inter;font-weight:950;font-size:82px;line-height:.9;letter-spacing:-3px;color:#fff;\">Email</div></div>")
+        label = (f"<div style='position:absolute;left:58px;top:190px;height:42px;padding:0 18px;border-radius:21px;background:rgba(255,255,255,.10);border:2px solid rgba(255,255,255,.18);display:flex;align-items:center;'>"
+                 f"<span style=\"font-family:'DM Sans';font-weight:950;font-size:16px;color:{AMBER};letter-spacing:4px;\">SEND WITH INTENT</span></div>")
+        steps = (f"<div style='position:absolute;left:60px;top:710px;display:flex;gap:14px;'>"
+                 f"<div style='height:50px;padding:0 18px;border-radius:25px;background:#fff;display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:20px;color:#0B201F;'>timing</div>"
+                 f"<div style='height:50px;padding:0 18px;border-radius:25px;background:{AMBER};display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:20px;color:#0B201F;'>clarity</div>"
+                 f"<div style='height:50px;padding:0 18px;border-radius:25px;background:{GREEN};display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:20px;color:#0B201F;'>interest</div></div>")
+        nuno = f"<img src='{L.nuno_src(pose)}' style='position:absolute;right:8px;bottom:24px;height:520px;filter:drop-shadow(0 22px 34px rgba(0,0,0,.58));'>"
+        swipe = (f"<div style=\"position:absolute;left:58px;bottom:58px;font-family:'DM Sans';font-weight:900;font-size:24px;color:{AMBER};\">Open the email system &rarr;</div>")
+        return bg + trail + composer + _logo(left=56, top=44) + label + head + steps + nuno + swipe
     kicker = (f"<div style=\"position:absolute;left:{x}px;top:300px;font-family:'DM Sans';font-weight:800;font-size:21px;"
               f"color:{p['accent']};letter-spacing:5px;\">{copy.get('eyebrow','INTERNWISE')[:22].upper()}</div>")
     # Headline + an "in this guide" contents preview (fills the cover and reinforces
