@@ -85,7 +85,7 @@ CTA_TOPIC_POSES = {
 TOPIC_POSES = {
     "bullet_cv":  ["nuno_cv_4"],
     "job_description": ["nuno_job_description"],
-    "cv":         ["nuno_cv_proof_highlight", "nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4", "nuno_cvpile"],
+    "cv":         ["nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4", "nuno_cvpile"],
     "apply":      ["nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4"],
     "interview":  ["nuno_interview_door", "nuno_authority_4", "nuno_authority_1", "nuno_authority_2", "nuno_authority_3"],
     "confidence": ["nuno_authority_4", "nuno_authority_1", "nuno_authority_2", "nuno_authority_3"],
@@ -969,7 +969,8 @@ def cover_marker(p, copy, total, pose):
                  f"<span style=\"font-family:'DM Sans';font-weight:950;font-size:18px;color:#fff;letter-spacing:4px;\">INTERVIEW ENTRANCE</span></div>")
         note = (f"<div style='position:absolute;left:68px;top:704px;width:420px;font-family:\"DM Sans\";font-weight:850;font-size:28px;line-height:1.2;color:#6F6350;'>"
                 f"Show calm before your first answer even starts.</div>")
-        nuno = _nuno_whole(pose, h=710, right=40, bottom=28)
+        nuno = (f"<img src='{L.nuno_src(pose)}' style='position:absolute;right:40px;bottom:28px;height:710px;"
+                f"filter:drop-shadow(0 24px 36px rgba(0,0,0,.38));'>")
         swipe = (f"<div style=\"position:absolute;left:64px;bottom:56px;font-family:'DM Sans';font-weight:900;font-size:24px;color:{NAVYT};\">Swipe in prepared &rarr;</div>")
         return bg + ink_slab + stopwatch + door + _logo(L.DARKLOGO, left=56, top=48) + label + head + note + nuno + swipe
     tex = _dot_texture("rgba(21,39,67,.05)")
@@ -1033,7 +1034,7 @@ def _wedge(color, css, size=420, op=.13, corner="bl"):
 def cover_flash(p, copy, total, pose):
     x = 56
     if "proof" in copy.get("headline", "").lower():
-        pose = "nuno_cv_proof_highlight"
+        pose = "nuno_cv_5"
         bg = (f"<div style='position:absolute;inset:0;background:radial-gradient(120% 100% at 70% 18%,#203F66 0%,#11284A 46%,#071528 100%);'></div>"
               f"<div style='position:absolute;inset:0;opacity:.26;background-image:linear-gradient(rgba(255,255,255,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.13) 1px,transparent 1px);background-size:54px 54px;'></div>")
         evidence = (f"<div style='position:absolute;left:58px;top:182px;height:48px;padding:0 22px;border:3px solid {AMBER};display:flex;align-items:center;transform:rotate(-1.2deg);'>"
@@ -1148,7 +1149,7 @@ def cover_tabs(p, copy, total, pose):
                  f"<div style='height:50px;padding:0 18px;border-radius:25px;background:#fff;display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:20px;color:#0B201F;'>timing</div>"
                  f"<div style='height:50px;padding:0 18px;border-radius:25px;background:{AMBER};display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:20px;color:#0B201F;'>clarity</div>"
                  f"<div style='height:50px;padding:0 18px;border-radius:25px;background:{GREEN};display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:20px;color:#0B201F;'>interest</div></div>")
-        nuno = f"<img src='{L.nuno_src(pose)}' style='position:absolute;right:8px;bottom:24px;height:520px;filter:drop-shadow(0 22px 34px rgba(0,0,0,.58));'>"
+        nuno = f"<img src='{L.nuno_src(pose)}' style='position:absolute;right:-34px;bottom:8px;height:650px;filter:drop-shadow(0 22px 34px rgba(0,0,0,.58));'>"
         swipe = (f"<div style=\"position:absolute;left:58px;bottom:58px;font-family:'DM Sans';font-weight:900;font-size:24px;color:{AMBER};\">Open the email system &rarr;</div>")
         return bg + trail + composer + _logo(left=56, top=44) + label + head + steps + nuno + swipe
     kicker = (f"<div style=\"position:absolute;left:{x}px;top:300px;font-family:'DM Sans';font-weight:800;font-size:21px;"
