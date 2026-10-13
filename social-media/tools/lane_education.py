@@ -85,7 +85,7 @@ CTA_TOPIC_POSES = {
 TOPIC_POSES = {
     "bullet_cv":  ["nuno_cv_4"],
     "job_description": ["nuno_job_description"],
-    "cv":         ["nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4", "nuno_cvpile"],
+    "cv":         ["nuno_cv_proof_highlight", "nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4", "nuno_cvpile"],
     "apply":      ["nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4"],
     "interview":  ["nuno_interview_door", "nuno_authority_4", "nuno_authority_1", "nuno_authority_2", "nuno_authority_3"],
     "confidence": ["nuno_authority_4", "nuno_authority_1", "nuno_authority_2", "nuno_authority_3"],
@@ -1034,7 +1034,7 @@ def _wedge(color, css, size=420, op=.13, corner="bl"):
 def cover_flash(p, copy, total, pose):
     x = 56
     if "proof" in copy.get("headline", "").lower():
-        pose = "nuno_cv_5"
+        pose = "nuno_cv_proof_highlight"
         bg = (f"<div style='position:absolute;inset:0;background:radial-gradient(120% 100% at 70% 18%,#203F66 0%,#11284A 46%,#071528 100%);'></div>"
               f"<div style='position:absolute;inset:0;opacity:.26;background-image:linear-gradient(rgba(255,255,255,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.13) 1px,transparent 1px);background-size:54px 54px;'></div>")
         evidence = (f"<div style='position:absolute;left:58px;top:182px;height:48px;padding:0 22px;border:3px solid {AMBER};display:flex;align-items:center;transform:rotate(-1.2deg);'>"
@@ -1051,7 +1051,8 @@ def cover_flash(p, copy, total, pose):
                  f"<div style='height:42px;padding:0 17px;border-radius:21px;background:{GREEN};display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:18px;color:{p['deep']};'>tools</div>"
                  f"<div style='height:42px;padding:0 17px;border-radius:21px;background:{CORAL};display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:18px;color:#fff;'>outcomes</div></div>")
         nuno = (f"<div style='position:absolute;right:-4px;bottom:-16px;width:650px;height:740px;border-radius:360px 0 0 0;background:radial-gradient(circle at 48% 48%,rgba(255,177,32,.16),transparent 60%);'></div>"
-                f"<img src='{L.nuno_src(pose)}' style='position:absolute;right:-28px;bottom:-4px;height:610px;filter:drop-shadow(0 24px 38px rgba(0,0,0,.55));'>")
+                f"<img src='{L.nuno_src(pose)}' style='position:absolute;right:-28px;bottom:-76px;height:610px;"
+                f"clip-path:inset(0 0 74px 0);filter:drop-shadow(0 24px 38px rgba(0,0,0,.55));'>")
         return bg + evidence + _logo(left=56, top=44) + head + chips + nuno + _footer(p, swipe=True)
     wedge = _wedge(p['accent'], "left:0;bottom:0;", 440, .12, "bl")
     slash = (f"<div style='position:absolute;left:{x}px;top:238px;width:60px;height:12px;background:{p['accent']};transform:skewX(-26deg);'></div>")
