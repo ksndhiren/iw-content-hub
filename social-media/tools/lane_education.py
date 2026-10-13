@@ -1051,8 +1051,7 @@ def cover_flash(p, copy, total, pose):
                  f"<div style='height:42px;padding:0 17px;border-radius:21px;background:{GREEN};display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:18px;color:{p['deep']};'>tools</div>"
                  f"<div style='height:42px;padding:0 17px;border-radius:21px;background:{CORAL};display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:18px;color:#fff;'>outcomes</div></div>")
         nuno = (f"<div style='position:absolute;right:-4px;bottom:-16px;width:650px;height:740px;border-radius:360px 0 0 0;background:radial-gradient(circle at 48% 48%,rgba(255,177,32,.16),transparent 60%);'></div>"
-                f"<img src='{L.nuno_src(pose)}' style='position:absolute;right:-28px;bottom:-76px;height:610px;"
-                f"clip-path:inset(0 0 74px 0);filter:drop-shadow(0 24px 38px rgba(0,0,0,.55));'>")
+                f"<img src='{L.nuno_src(pose)}' style='position:absolute;right:-28px;bottom:-4px;height:610px;filter:drop-shadow(0 24px 38px rgba(0,0,0,.55));'>")
         return bg + evidence + _logo(left=56, top=44) + head + chips + nuno + _footer(p, swipe=True)
     wedge = _wedge(p['accent'], "left:0;bottom:0;", 440, .12, "bl")
     slash = (f"<div style='position:absolute;left:{x}px;top:238px;width:60px;height:12px;background:{p['accent']};transform:skewX(-26deg);'></div>")
