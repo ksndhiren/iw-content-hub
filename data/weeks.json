@@ -7760,7 +7760,7 @@
       "id": "week20",
       "label": "Week 20",
       "weekCommencing": "2026-10-12",
-      "builtAt": 1791867019,
+      "builtAt": 1791987917,
       "posts": [
         {
           "id": "week20-mon-quote",
@@ -8629,6 +8629,50 @@
             "x": [
               "#interviewtips",
               "#careeradvice"
+            ]
+          }
+        },
+        {
+          "id": "week20-thu-news",
+          "day": "Thu 15 Oct",
+          "lane": "news",
+          "title": "AI Job Applications: A Risky Strategy",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "Recent research suggests that graduates are increasingly turning to AI to enhance their job applications. The 'spray and pray' method, which involves sending out numerous applications with AI-generated content, can lead to misrepresentation. This approach may seem necessary in a competitive job market, but it poses risks.\n\nFor students and graduates, this trend underscores the importance of authenticity. While it's tempting to use AI to get ahead, it's crucial to present an accurate picture of your skills and experiences. Employers can often spot inconsistencies, which could harm your chances.\n\nInternships provide a valuable alternative. They allow you to develop real skills and gain experience that truly reflects your capabilities. By participating in internships, you can better understand what employers expect and how to convey your strengths effectively.\n\nSource: BBC Business.",
+          "hashtags": [
+            "#jobmarket",
+            "#ai",
+            "#graduatejobs",
+            "#internships",
+            "#careeradvice"
+          ],
+          "captions": {
+            "ig-fb": "Recent research suggests that graduates are increasingly turning to AI to enhance their job applications. The 'spray and pray' method, which involves sending out numerous applications with AI-generated content, can lead to misrepresentation. This approach may seem necessary in a competitive job market, but it poses risks.\n\nFor students and graduates, this trend underscores the importance of authenticity. While it's tempting to use AI to get ahead, it's crucial to present an accurate picture of your skills and experiences. Employers can often spot inconsistencies, which could harm your chances.\n\nInternships provide a valuable alternative. They allow you to develop real skills and gain experience that truly reflects your capabilities. By participating in internships, you can better understand what employers expect and how to convey your strengths effectively.\n\nSource: BBC Business.",
+            "linkedin": "A recent study indicates that some graduates are using AI to embellish their job applications, a tactic known as 'spray and pray'. This method involves applying widely with AI-crafted applications, risking misrepresentation. While it aims to address the competitive job market, it can have negative consequences.\n\nFor students and graduates, relying on AI-generated applications could lead to inaccuracies that harm job prospects. Employers value genuine skills and experiences, and they often recognise when applications don't align with reality.\n\nEngaging in internships is a constructive way to stand out. They offer hands-on experience and help you develop skills that match industry demands. By showcasing these authentic experiences, you're more likely to capture the attention of potential employers.\n\nSource: BBC Business.",
+            "x": "Research shows grads using AI for job apps, risking misrepresentation. 'Spray and pray' can backfire in a competitive market. Internships offer real experience and skill-building. (Source: BBC Business)",
+            "threads": "Research finds grads using AI to embellish job applications, risking misrepresentation. In a competitive market, internships provide genuine experience and skills to stand out. Visit www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#jobmarket",
+              "#ai",
+              "#graduatejobs",
+              "#internships",
+              "#careeradvice"
+            ],
+            "linkedin": [
+              "#jobmarket",
+              "#aiapplications",
+              "#internships"
+            ],
+            "x": [
+              "#jobmarket",
+              "#internships"
             ]
           }
         }
