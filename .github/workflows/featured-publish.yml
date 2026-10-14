@@ -68,7 +68,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A $FILES
           git commit -m "Featured: publish approved + prune posted ($(date -u +%Y-%m-%dT%H:%MZ))"
-          git pull --rebase origin main
+          git pull --rebase --autostash origin main
           git push origin HEAD:main
           echo "Published approved featured jobs and pruned posted ones; Cloudflare Pages will redeploy."
           grep -E 'OK |pruned posted' /tmp/featured_publish.log || true

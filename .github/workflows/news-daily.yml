@@ -107,7 +107,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A $FILES
           git commit -m "News day-prior build ($(date -u +%Y-%m-%d))"
-          git pull --rebase origin main
+          git pull --rebase --autostash origin main
           git push origin HEAD:main
           echo "Pushed the day-prior news to the dashboard."
 
@@ -144,6 +144,6 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A $FILES
           git commit -m "Record news Ayrshare schedule ($(date -u +%Y-%m-%d))"
-          git pull --rebase origin main
+          git pull --rebase --autostash origin main
           git push origin HEAD:main
           echo "Pushed Ayrshare schedule ledger."
