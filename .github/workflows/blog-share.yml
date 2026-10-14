@@ -1,9 +1,11 @@
 name: Blog Re-share
 
 # ONE internwise.com/blog article per day, shared to LinkedIn, Facebook and
-# Google Business Profile at 10:30 UK. The article picked is the newest one not
-# yet on every target network, so the backlog drains steadily and a day with no
-# new blog post still has something to go out.
+# Google Business Profile at 10:30 UK. The article picked is the newest one
+# PUBLISHED BEFORE TODAY that is not yet on every target network. Skipping
+# today's posts means this run never has to wait on an article that may not be
+# up yet when the cron fires. The backlog drains steadily, so a day with no new
+# blog post still has something to go out.
 #
 # Recency comes from the site sitemap (<lastmod>); the /blog listing itself is a
 # React SPA and cannot be scraped directly. Each post is a link share (no

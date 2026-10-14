@@ -2,9 +2,11 @@
 
 Daily mode (--daily, how the scheduled workflow runs): once a day, share ONE
 article to LinkedIn, Facebook and Google Business Profile at 10:30 UK. The
-article chosen is the newest one not yet on every target network, so the
-backlog drains steadily and a day with no new post still has something to go
-out. ~86 articles are in the catalogue, so supply is not a constraint.
+article chosen is the newest one, published BEFORE today, not yet on every
+target network. Skipping today's posts means the run never has to wait on an
+article that may not be up yet when the cron fires (--include-today overrides).
+The backlog drains steadily and a day with no new post still has something to
+go out; ~86 articles are in the catalogue, so supply is not a constraint.
 
 Weekly mode (no --daily, the original behaviour): surface the N most recent
 posts and spread them across the upcoming week.
@@ -151,15 +153,24 @@ def today_slot_iso(hhmm=BLOG_TIME_UK, idx=0, stagger_min=30):
     return when_uk.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-def pick_daily(nets, shared, count=1, pool=200):
+def pick_daily(nets, shared, count=1, pool=200, day_prior=True):
     """The `count` newest articles still missing at least one target network.
 
     Daily mode selects from the whole catalogue rather than just the newest few,
     so a day whose latest post is already out still has something to share and
     the backlog drains steadily. Returns [(url, lastmod), ...], newest first.
+
+    day_prior: ignore anything published TODAY, so the run never depends on a
+    post that may not be up yet when the cron fires (same day-prior principle as
+    the news lane). The newest eligible article is therefore yesterday's, or
+    older if nothing was published yesterday - blog cadence is irregular, so
+    requiring an article dated exactly yesterday would leave most days silent.
     """
+    cutoff = (datetime.date.today() - datetime.timedelta(days=1)).isoformat()
     out = []
     for url, lastmod in recent_posts(pool):
+        if day_prior and lastmod[:10] > cutoff:
+            continue                       # published today - leave it for tomorrow
         done = set(shared.get(url, {}).get("networks", []))
         if set(nets) - done:
             out.append((url, lastmod))
@@ -218,6 +229,9 @@ def main():
     ap.add_argument("--daily", action="store_true",
                     help="daily mode: share the newest article not yet on every target "
                          "network, at today's 10:30 UK slot (default --limit 1)")
+    ap.add_argument("--include-today", action="store_true",
+                    help="daily mode: also consider articles published today "
+                         "(default: day-prior only, never waits on a same-day post)")
     args = ap.parse_args()
     if args.daily and "--limit" not in sys.argv:
         args.limit = 1          # one blog per day unless explicitly overridden
@@ -243,8 +257,10 @@ def main():
         sys.exit("No target network is connected in Ayrshare - nothing to do.")
 
     if args.daily:
-        posts = pick_daily(nets, shared, count=args.limit)
-        print(f"Daily mode: {len(posts)} article(s) not yet on {nets}:\n")
+        posts = pick_daily(nets, shared, count=args.limit,
+                           day_prior=not args.include_today)
+        window = "up to today" if args.include_today else "published before today"
+        print(f"Daily mode ({window}): {len(posts)} article(s) not yet on {nets}:\n")
     else:
         posts = recent_posts(args.limit)
         print(f"{len(posts)} recent posts from sitemap:\n")
