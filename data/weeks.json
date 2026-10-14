@@ -7760,7 +7760,7 @@
       "id": "week20",
       "label": "Week 20",
       "weekCommencing": "2026-10-12",
-      "builtAt": 1791987917,
+      "builtAt": 1791989230,
       "posts": [
         {
           "id": "week20-mon-quote",
@@ -8673,6 +8673,50 @@
             "x": [
               "#jobmarket",
               "#internships"
+            ]
+          }
+        },
+        {
+          "id": "week20-wed-news",
+          "day": "Wed 14 Oct",
+          "lane": "news",
+          "title": "AI in Interviews: UK Recruiters Alert",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "The use of AI in UK job interviews is increasing, with a notable rise in misconduct, says a body representing some of the UK's major graduate employers. Recruiters report that AI-generated answers are becoming more prevalent, but they are also getting better at identifying them. This is significant for students and graduates, as relying on AI tools could harm their chances in the job market.\n\nFor those entering the workforce, it's essential to understand the risk of using AI to craft interview responses. Recruiters are looking for authenticity and genuine skills. Misuse of AI could lead to missed opportunities.\n\nInternships are an excellent way to build these genuine skills. By gaining real-world experience, you can present yourself honestly and effectively during interviews. This practical experience can set you apart from candidates who might rely too heavily on AI tools.\n\nSource: The Guardian.",
+          "hashtags": [
+            "#ukjobs",
+            "#ai",
+            "#internships",
+            "#graduatecareers",
+            "#jobinterviews"
+          ],
+          "captions": {
+            "ig-fb": "The use of AI in UK job interviews is increasing, with a notable rise in misconduct, says a body representing some of the UK's major graduate employers. Recruiters report that AI-generated answers are becoming more prevalent, but they are also getting better at identifying them. This is significant for students and graduates, as relying on AI tools could harm their chances in the job market.\n\nFor those entering the workforce, it's essential to understand the risk of using AI to craft interview responses. Recruiters are looking for authenticity and genuine skills. Misuse of AI could lead to missed opportunities.\n\nInternships are an excellent way to build these genuine skills. By gaining real-world experience, you can present yourself honestly and effectively during interviews. This practical experience can set you apart from candidates who might rely too heavily on AI tools.\n\nSource: The Guardian.",
+            "linkedin": "AI technology is becoming more common in UK job interviews, with a rise in misconduct levels, according to insights from a body representing leading graduate employers. Recruiters are noticing an increase in AI-generated answers and are developing the skills to detect them, which poses a risk to candidates who use AI unethically.\n\nFor students and recent graduates, this trend underscores the importance of demonstrating genuine skills and integrity during interviews. As recruiters grow more adept at spotting AI-generated content, authenticity becomes crucial to stand out in the job market.\n\nParticipating in internships can provide the real-world experience needed to showcase your abilities authentically. These opportunities allow you to develop practical skills that can enhance your candidacy, reducing the temptation to rely on AI.\n\nSource: The Guardian.",
+            "x": "AI use in UK job interviews is rising, with misconduct at record levels. Recruiters can spot AI-generated answers, highlighting the need for genuine skills. Internships can help you build these skills for authentic job applications. (Source: The Guardian)",
+            "threads": "AI is increasingly used in UK job interviews, but misconduct is at a high. Recruiters are skilled at spotting AI-generated answers, so integrity matters. Internships help you develop real skills, giving you an edge. Visit www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#ukjobs",
+              "#ai",
+              "#internships",
+              "#graduatecareers",
+              "#jobinterviews"
+            ],
+            "linkedin": [
+              "#ukjobs",
+              "#aiinrecruitment",
+              "#careeradvice"
+            ],
+            "x": [
+              "#jobinterviews",
+              "#ai"
             ]
           }
         }
