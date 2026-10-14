@@ -96,6 +96,33 @@ def _chat(user, max_tokens=900):
     return _scrub(_lc_hashtags(json.loads(resp.choices[0].message.content)))
 
 
+# The LLM occasionally returns a news object with a top-level key missing - most
+# often "hashtags", which crashed the whole daily news build (KeyError) even
+# though every other field was fine. Retry once, then patch the cosmetic keys
+# from brand defaults; only the keys that are actually rendered are fatal.
+NEWS_REQUIRED = ("headline", "brief", "sidebar", "pull", "captions", "hashtags")
+NEWS_RENDERED = ("headline", "brief", "sidebar", "pull", "captions")
+NEWS_FALLBACK_HASHTAGS = {
+    "ig-fb": ["#internwise", "#ukjobs", "#graduatejobs", "#internships", "#earlycareers"],
+    "linkedin": ["#ukjobmarket", "#graduatejobs", "#internships"],
+    "x": ["#ukjobs", "#graduatejobs"],
+}
+
+
+def _patch_news(nc, missing):
+    """Fill in the non-rendered keys the model left out; raise if a rendered one is gone."""
+    fatal = [k for k in missing if k in NEWS_RENDERED]
+    if fatal:
+        raise RuntimeError(
+            f"write_news: the model omitted required news copy {fatal} twice. "
+            "Nothing was rendered; re-run the job to get a fresh generation."
+        )
+    if "hashtags" in missing:
+        nc["hashtags"] = {k: list(v) for k, v in NEWS_FALLBACK_HASHTAGS.items()}
+    nc.setdefault("kicker", "JOB MARKET")
+    return nc
+
+
 # --------------------------------------------------------------------------- news
 def write_news(item):
     """item: {title, summary, source}. Returns reworded on-screen copy + captions."""
@@ -126,8 +153,16 @@ Return JSON with:
      "x": one tweet under 280 chars that explains the core story and practical takeaway plainly - no teaser, no "link in bio" - ending with "(Source: {item.get('source','')})",
      "threads": a SELF-CONTAINED caption UNDER 480 characters (Threads limit) that explains the core story and takeaway in Internwise's voice, ending with the URL www.internwise.co.uk (written out, no "link in bio", no trailing period). Do NOT just truncate the ig-fb caption - write a tighter one.
   }},
-  "hashtags": {{"ig-fb": [5 tags], "linkedin": [3 tags], "x": [2 tags]}}"""
-    return _chat(user, max_tokens=1500)
+  "hashtags": {{"ig-fb": [5 tags], "linkedin": [3 tags], "x": [2 tags]}}
+
+Every key above is REQUIRED. Never omit one."""
+    for attempt in (1, 2):
+        nc = _chat(user, max_tokens=1800)
+        missing = [k for k in NEWS_REQUIRED if not nc.get(k)]
+        if not missing:
+            return nc
+        print(f"  ! write_news omitted {missing} (attempt {attempt}/2)")
+    return _patch_news(nc, missing)
 
 
 # --------------------------------------------------------------------- captions only
