@@ -97,7 +97,7 @@ def render_news(item, out_dir, filename="slide_1.png", issue_no=1,
     summary = (item.get("summary") or "").replace("—","-").replace("–","-")
     date    = item.get("date")
     if isinstance(date, str) or date is None:
-        date = datetime.datetime.utcnow()
+        date = datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None)
     dstr    = date.strftime("%a %d %b %Y").upper()
     title_disp = title.replace("-", "‑")
     hsize   = _hsize(title)

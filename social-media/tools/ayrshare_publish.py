@@ -361,7 +361,7 @@ def main():
         ok = res.get("status") == "success" or res.get("id")
         print(f"  {pkey}: {'OK ' + str(res.get('id','')) if ok else 'FAIL ' + json.dumps(res)[:200]}")
         if ok:
-            posted[pkey] = {"id": res.get("id"), "at": datetime.datetime.utcnow().isoformat(),
+            posted[pkey] = {"id": res.get("id"), "at": datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None).isoformat(),
                             "network": j["network"], "scheduleDate": j["scheduleDate"]}
             json.dump(posted, open(POSTED, "w"), indent=2)
         else:

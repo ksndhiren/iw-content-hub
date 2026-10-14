@@ -294,7 +294,7 @@ def main():
         print(f"  {net:9} {url.split('/')[-1]}: "
               f"{'OK ' + str(res.get('id','')) if ok else 'FAIL ' + json.dumps(res)[:200]}")
         if ok:
-            rec = shared.setdefault(url, {"networks": [], "at": datetime.datetime.utcnow().isoformat()})
+            rec = shared.setdefault(url, {"networks": [], "at": datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None).isoformat()})
             rec["networks"] = sorted(set(rec["networks"]) | {net})
             json.dump(shared, open(SHARED, "w"), indent=2)
     print("Done.")

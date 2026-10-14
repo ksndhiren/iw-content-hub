@@ -7,7 +7,7 @@ import json
 import logging
 import os
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import anthropic
@@ -216,7 +216,7 @@ def run_campaign(brief: dict, dry_run: bool = False) -> dict:
         "content_package": content_package,
         "human_approved": False,
         "publish_status": "draft",
-        "created_at": datetime.utcnow().isoformat(),
+        "created_at": datetime.now(timezone.utc).replace(tzinfo=None).isoformat(),
         "brief": brief,
     }
 
@@ -276,7 +276,7 @@ def publish_campaign(package_path: str) -> dict:
         save_post(platform, {
             "campaign_id": package["campaign_id"],
             "copy": copy_data.get("copy", ""),
-            "published_at": datetime.utcnow().isoformat(),
+            "published_at": datetime.now(timezone.utc).replace(tzinfo=None).isoformat(),
             **result,
         })
 

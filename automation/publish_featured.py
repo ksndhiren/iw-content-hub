@@ -52,7 +52,7 @@ def _pids_posted_today(posted):
     Only featured ids count: ayrshare_posted.json is shared with the weekly
     lanes, and counting those too made any day with a lane post look like the
     featured quota was already spent."""
-    today = datetime.datetime.utcnow().date().isoformat()
+    today = datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None).date().isoformat()
     return {k.split(":", 1)[0] for k, v in posted.items()
             if str((v or {}).get("at", ""))[:10] == today
             and _is_featured_pid(k.split(":", 1)[0])}
@@ -121,7 +121,7 @@ def publish(live, per_day=0):
         ok = res.get("status") == "success" or res.get("id")
         print(f"  {pkey}: {'OK ' + str(res.get('id','')) if ok else 'FAIL ' + json.dumps(res)[:200]}")
         if ok:
-            posted[pkey] = {"id": res.get("id"), "at": datetime.datetime.utcnow().isoformat(),
+            posted[pkey] = {"id": res.get("id"), "at": datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None).isoformat(),
                             "network": j["network"], "scheduleDate": j.get("scheduleDate")}
             json.dump(posted, open(ap.POSTED, "w"), indent=2)
 

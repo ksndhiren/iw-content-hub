@@ -5,7 +5,7 @@ from __future__ import annotations
 import os
 import json
 import requests
-from datetime import datetime
+from datetime import datetime, timezone
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -72,7 +72,7 @@ def _publish_via_buffer(platform: str, content: dict, publish_at: str | None) ->
 def _publish_direct(platform: str, content: dict, publish_at: str | None) -> dict:
     """Direct platform publish (mock for now — implement per-platform SDKs)."""
     return {
-        "post_id": f"mock-{platform}-{datetime.utcnow().isoformat()}",
+        "post_id": f"mock-{platform}-{datetime.now(timezone.utc).replace(tzinfo=None).isoformat()}",
         "platform": platform,
         "status": "mock_published",
         "scheduled_time": publish_at,

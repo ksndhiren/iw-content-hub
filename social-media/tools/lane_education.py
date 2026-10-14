@@ -146,7 +146,7 @@ def request_cover_pose(family, copy, week_id):
     log["requests"].append({
         "week": week_id, "family": family, "topic": copy.get("eyebrow", ""),
         "headline": copy.get("headline", ""), "need": NEED_DESC.get(family, family),
-        "at": datetime.datetime.utcnow().isoformat() + "Z"})
+        "at": datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None).isoformat() + "Z"})
     try:
         os.makedirs(os.path.dirname(COVER_REQUESTS), exist_ok=True)
         json.dump(log, open(COVER_REQUESTS, "w"), indent=2, ensure_ascii=False)

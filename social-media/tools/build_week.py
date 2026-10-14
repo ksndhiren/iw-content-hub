@@ -522,7 +522,7 @@ def _remember_news_image(path, headline, query, photo_id=None):
             "query": query,
             "photo_id": photo_id,
             "path": os.path.relpath(path, L.BASE),
-            "at": datetime.datetime.utcnow().isoformat() + "Z",
+            "at": datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None).isoformat() + "Z",
         })
         os.makedirs(os.path.dirname(NEWS_IMAGE_USED), exist_ok=True)
         json.dump(log, open(NEWS_IMAGE_USED, "w"), indent=2, ensure_ascii=False)

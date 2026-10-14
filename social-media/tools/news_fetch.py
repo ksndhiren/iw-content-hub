@@ -10,6 +10,12 @@ Run standalone to preview what today would pull:
 import os, re, sys, json, html, time, datetime, urllib.request, urllib.error
 import xml.etree.ElementTree as ET
 
+
+def _utcnow():
+    """Naive UTC "now". Feed dates are parsed naive, so the freshness comparison in
+    fetch() has to stay naive too; datetime.utcnow() itself is deprecated."""
+    return datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None)
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = os.path.dirname(HERE)
 LOG  = os.path.join(BASE, "content", "news_used.json")
@@ -259,7 +265,7 @@ def _load_used():
 def fetch(max_age_days=5, limit=8):
     """Return a ranked list of fresh, relevant, unused news items."""
     used = _load_used()
-    now = datetime.datetime.utcnow()
+    now = _utcnow()
     pool = []
     seen_titles = set()
     for source, url in FEEDS:
@@ -301,7 +307,7 @@ def sample_item():
         "title": "UK graduate vacancies rise as employers reopen early-careers hiring",
         "summary": "Firms are expanding intern and graduate schemes heading into the new academic year, with demand strongest in tech, finance and green energy.",
         "url": "https://www.personneltoday.com",
-        "date": datetime.datetime.utcnow(),
+        "date": _utcnow(),
         "kicker": "JOB MARKET",
     }
 
