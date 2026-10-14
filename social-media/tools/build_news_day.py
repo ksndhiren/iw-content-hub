@@ -81,16 +81,32 @@ def week_of(target: datetime.date):
     return f"week{n}", f"Week {n}", mon.isoformat(), mon, dkey, dlabel
 
 
+# When the requested window comes back empty, look back a little further before
+# giving up. The story must still be real, UK, on-topic and unused - only the
+# age limit relaxes, so quality is unchanged. Feeds carry ~20 items each, so a
+# wider window mostly helps on quiet news days and bank holidays.
+AGE_LADDER = (7, 10, 14)
+
+
 def pick_fresh(exclude_titles, max_age_days=5):
     """First fresh, unused UK news item whose topic doesn't repeat a headline
     already used in this week. Raises instead of silently repeating unless
     IW_ALLOW_TOPIC_REPEAT=1 is set."""
     excl_sets = [bw._news_words(t) for t in exclude_titles]
     fetched = bw.news_fetch.fetch(max_age_days=max_age_days, limit=20)
+    for wider in AGE_LADDER:
+        if fetched or wider <= max_age_days:
+            break
+        print(f"  no items within {max_age_days}d; retrying with a {wider}d window")
+        fetched = bw.news_fetch.fetch(max_age_days=wider, limit=20)
     if not fetched and not bw.topic_repeat_allowed():
         raise bw.TopicFreshnessError(
-            "No live news items were fetched. Refusing to use sample news unless "
-            f"{bw.TOPIC_REPEAT_OVERRIDE_ENV}=1 is set."
+            "No live news items were fetched (tried "
+            f"{max_age_days}d then {'/'.join(str(d) for d in AGE_LADDER)}d). "
+            "The '!' lines above show which feeds failed; a run where every feed "
+            "returned items but none passed the relevance filter means the day "
+            "genuinely had no UK early-careers story. Refusing to use sample news "
+            f"unless {bw.TOPIC_REPEAT_OVERRIDE_ENV}=1 is set."
         )
     pool = bw.pick_distinct_news(fetched, 8)
     for it in pool:

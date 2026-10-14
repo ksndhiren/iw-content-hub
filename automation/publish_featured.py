@@ -25,8 +25,10 @@ import os, sys, json, argparse, datetime
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 _HUB  = os.path.dirname(_HERE)
-sys.path.insert(0, _HERE)
+# Order matters: social-media/tools carries an older sync_featured_jobs.py that
+# lacks fetch_statuses/prune_approved, so automation/ has to resolve FIRST.
 sys.path.insert(0, os.path.join(_HUB, "social-media", "tools"))
+sys.path.insert(0, _HERE)
 
 import ayrshare_publish as ap        # the publisher (weeks + featured)
 import sync_featured_jobs as sfj      # featured.json / published-set / R2 helpers
@@ -37,12 +39,23 @@ def _posted_pids(posted):
     return {k.split(":", 1)[0] for k in posted.keys()}
 
 
+def _is_featured_pid(pid):
+    """Featured job post ids are always `job-<sourceId>`; weekly lane posts are
+    `week<N>-<day>-<lane>`. The Ayrshare ledger is shared by both."""
+    return pid.startswith("job-")
+
+
 def _pids_posted_today(posted):
-    """Distinct featured job ids with at least one send recorded today (UTC).
-    Lets us cap posting to N jobs/day even across multiple runs."""
+    """Distinct FEATURED job ids with at least one send recorded today (UTC).
+    Lets us cap posting to N jobs/day even across multiple runs.
+
+    Only featured ids count: ayrshare_posted.json is shared with the weekly
+    lanes, and counting those too made any day with a lane post look like the
+    featured quota was already spent."""
     today = datetime.datetime.utcnow().date().isoformat()
     return {k.split(":", 1)[0] for k, v in posted.items()
-            if str((v or {}).get("at", ""))[:10] == today}
+            if str((v or {}).get("at", ""))[:10] == today
+            and _is_featured_pid(k.split(":", 1)[0])}
 
 
 def _cap_per_day(todo, posted, per_day):

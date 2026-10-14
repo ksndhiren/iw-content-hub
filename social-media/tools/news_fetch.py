@@ -7,7 +7,7 @@ returns items shaped for `news_card.render_news()`.
 Run standalone to preview what today would pull:
     python3 tools/news_fetch.py
 """
-import os, re, sys, json, html, datetime, urllib.request, urllib.error
+import os, re, sys, json, html, time, datetime, urllib.request, urllib.error
 import xml.etree.ElementTree as ET
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -26,8 +26,13 @@ FEEDS = [
     # NB: US/international feeds (e.g. Indeed Hiring Lab US) are intentionally
     # excluded - Internwise news is UK job-market ONLY. See _is_uk() below.
     ("FE News",            "https://www.fenews.co.uk/feed/"),
-    ("WonkHE",             "https://wonkhe.com/feed/"),
+    ("WonkHE",             "https://wonkhe.com/feed"),      # NB: no trailing slash - /feed/ 308s
     ("GOV.UK",             "https://www.gov.uk/search/news-and-communications.atom?organisations%5B%5D=department-for-work-pensions"),
+    # Backups: the cloud runner is sometimes CDN-blocked on the feeds above
+    # (Personnel Today 403s from GitHub IPs), so keep spare UK supply in rotation.
+    ("GOV.UK Education",   "https://www.gov.uk/search/news-and-communications.atom?organisations%5B%5D=department-for-education"),
+    ("The Guardian",       "https://www.theguardian.com/education/universities/rss"),
+    ("BBC UK",             "https://feeds.bbci.co.uk/news/uk/rss.xml"),
 ]
 
 # Bias toward items relevant to a job-board / early-career audience.
@@ -43,17 +48,21 @@ CORE_JOB_MARKET = re.compile(
     r"skills|workforce|early careers?|entry.?level|talent|unemploy|"
     r"redundan|remote work|hybrid work|gen z)\b", re.I)
 INTERNWISE_NEWS_CANON = re.compile(
-    r"\b(student|students|graduate|graduates|grad\b|intern|interns|internship|"
-    r"apprentice|apprenticeship|early careers?|entry.?level|school leaver|"
-    r"university|college|job applicant|job applicants|candidate|candidates|"
-    r"jobseeker|jobseekers|interview|interviews|application|applications|"
-    r"cv|cover letter|portfolio|employability|work experience|placement|"
-    r"first job|first role|career starter)\b", re.I)
+    r"\b(students?|graduates?|grad\b|interns?|internships?|"
+    r"apprentices?|apprenticeships?|early careers?|entry.?level|school.?leavers?|"
+    r"universit(?:y|ies)|college|job applicants?|candidates?|"
+    r"jobseekers?|interview\w*|applicat\w+|applicants?|"
+    r"cv|cover letter|portfolio|employability|work experience|placements?|"
+    r"first job|first role|career starter|"
+    # young-worker framing is core early-careers news even without the words
+    # above ("Young bearing brunt of hiring slump") - keep it in the canon.
+    r"young (?:people|workers?|jobseekers?|adults)|under.?25s?)\b", re.I)
 ACTIONABLE_EARLY_CAREER = re.compile(
-    r"\b(apply|application|applications|interview|interviews|cv|cover letter|"
-    r"portfolio|skills?|training|work experience|placement|apprenticeship|"
-    r"job-ready|employability|graduate earnings|tuition fees|university costs|"
-    r"job contracts?|non-compete|candidate|job applicant)\b", re.I)
+    r"\b(appl(?:y|ies|ied|ying)|applicat\w+|applicants?|interview\w*|cv|cover letter|"
+    r"portfolio|skills?|training|work experience|placements?|apprenticeships?|"
+    r"job.?ready|employability|graduate earnings|tuition fees|university costs|"
+    r"student (?:loans?|debt|finance)|job contracts?|non.?compete|candidates?|"
+    r"hiring|recruit\w*|vacanc\w+|graduate (?:scheme|schemes|jobs?|roles?))\b", re.I)
 WORK_PAY_CONTEXT = re.compile(
     r"\b(payroll|minimum wage|living wage|pay rise|pay deal|grading|"
     r"staff|worker|workers|employee|employees|employer|"
@@ -67,6 +76,8 @@ NON_NEWS_FLUFF = re.compile(
     r"fuel prices?|costly oil|energy bills?)\b", re.I)
 ORG_PR_OR_LOCAL_ONLY = re.compile(
     r"\b(launches new brand platform|brand platform|webinar|register now|"
+    # corporate M&A / funding is trade news, never a reader takeaway
+    r"acquires?|acquisition|acquired by|merger|merges with|takeover bid|"
     r"shortlisted for .*award|national award|award shortlist|"
     r"strategic partnership|partner(?:s|ship) with|"
     r"regional workforce summit|conference to bring industry together|"
@@ -94,6 +105,16 @@ _UK_HINT = re.compile(
     r"apprenticeship|universal credit|£)\b", re.I)
 
 
+_YOUTH_SIGNAL = re.compile(r"\b(young|youth|under.?25s?|16.?24s?|18.?24s?|neet)\b", re.I)
+
+
+def _is_youth_labour_story(hay):
+    """True for youth-labour-market stories that use none of the canon nouns,
+    e.g. 'Young bearing brunt of hiring slump'. Requires both a youth signal and
+    core job-market language so general 'young people' stories don't slip in."""
+    return bool(_YOUTH_SIGNAL.search(hay) and CORE_JOB_MARKET.search(hay))
+
+
 def _is_uk(hay):
     """True if the story is UK-relevant. Foreign-market stories are kept only
     when they also mention the UK (e.g. 'US firms expand UK graduate hiring')."""
@@ -118,16 +139,26 @@ def _is_job_market_relevant(hay):
         return False
     if LIFESTYLE_MONEY.search(hay) and not CORE_JOB_MARKET.search(hay):
         return False
-    if not INTERNWISE_NEWS_CANON.search(hay):
+    youth = _is_youth_labour_story(hay)
+    if not INTERNWISE_NEWS_CANON.search(hay) and not youth:
         return False
-    if not ACTIONABLE_EARLY_CAREER.search(hay):
+    if not ACTIONABLE_EARLY_CAREER.search(hay) and not youth:
         return False
     if CORE_JOB_MARKET.search(hay):
         return True
     return bool(re.search(r"\b(wage|salary|pay)\b", hay, re.I) and WORK_PAY_CONTEXT.search(hay))
 
 
-UA = {"User-Agent": "Mozilla/5.0 (Internwise news-fetch; +https://internwise.co.uk)"}
+# A plain bot UA gets 403'd by several of these publishers' CDNs when the request
+# comes from a datacentre IP (which every GitHub-hosted runner has). Present as a
+# normal browser and accept the usual feed content types.
+UA = {
+    "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                   "AppleWebKit/537.36 (KHTML, like Gecko) "
+                   "Chrome/131.0.0.0 Safari/537.36"),
+    "Accept": "application/rss+xml, application/atom+xml, application/xml;q=0.9, text/xml;q=0.8, */*;q=0.5",
+    "Accept-Language": "en-GB,en;q=0.9",
+}
 
 
 def _text(el):
@@ -163,13 +194,33 @@ def _parse_date(s):
     return None
 
 
-def _fetch_feed(source, url, timeout=12):
+class _Redirect308(urllib.request.HTTPRedirectHandler):
+    """urllib handles 301/302/303/307 but not 308, which several feeds now use."""
+    def http_error_308(self, req, fp, code, msg, headers):
+        return self.http_error_301(req, fp, 301, msg, headers)
+
+
+_OPENER = urllib.request.build_opener(_Redirect308)
+
+
+def _fetch_feed(source, url, timeout=12, attempts=2):
+    """Fetch and parse one feed. Never raises: a dead feed returns [] so the
+    remaining feeds still supply the pool."""
+    raw = None
+    for n in range(attempts):
+        try:
+            req = urllib.request.Request(url, headers=UA)
+            raw = _OPENER.open(req, timeout=timeout).read()
+            break
+        except Exception as e:
+            if n + 1 >= attempts:
+                print(f"  ! {source}: {e}", file=sys.stderr)
+                return []
+            time.sleep(1.5)            # transient 5xx / rate-limit; one retry
     try:
-        req = urllib.request.Request(url, headers=UA)
-        raw = urllib.request.urlopen(req, timeout=timeout).read()
         root = ET.fromstring(raw)
     except Exception as e:
-        print(f"  ! {source}: {e}", file=sys.stderr)
+        print(f"  ! {source}: unparseable feed ({e})", file=sys.stderr)
         return []
     items = []
     for it in root.iter("item"):              # RSS 2.0

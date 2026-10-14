@@ -52,7 +52,10 @@ jobs:
           R2_ACCESS_KEY_ID:     ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_BUCKET:            ${{ secrets.R2_BUCKET }}
-        run: python automation/publish_featured.py --live --per-day 1 | tee /tmp/featured_publish.log
+        # pipefail: without it `tee` masks a publisher crash and the job reports success.
+        run: |
+          set -o pipefail
+          python automation/publish_featured.py --live --per-day 1 | tee /tmp/featured_publish.log
 
       - name: Commit and push if anything changed
         run: |
