@@ -3,50 +3,183 @@
   "label": "Featured Jobs",
   "posts": [
     {
+      "id": "job-35401",
+      "sourceId": "35401",
+      "sourceUrl": "https://www.internwise.co.uk/job/35401/it-and-product-intern-graduate-opportunity",
+      "addedAt": "2026-10-14T08:46:34Z",
+      "day": "THIS IS SPOKEN LTD",
+      "title": "IT and Product Intern | Graduate Opportunity",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35401-2026-08-19-employers-sm-ads-v1.png"
+      ],
+      "status": "in-review",
+      "caption": "Turn what you have learned into real it and product opportunity work with a team that mentors you.\n\n📍 London, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35401/it-and-product-intern-graduate-opportunity",
+      "hashtags": [
+        "#internship",
+        "#londonjobs",
+        "#techjobs",
+        "#hiring",
+        "#graduatejobs"
+      ],
+      "captions": {
+        "ig-fb": "Turn what you have learned into real it and product opportunity work with a team that mentors you.\n\n📍 London, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35401/it-and-product-intern-graduate-opportunity",
+        "linkedin": "Turn what you have learned into real it and product opportunity work with a team that mentors you.\n\n📍 London, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35401/it-and-product-intern-graduate-opportunity",
+        "x": "Turn what you have learned into real it and product opportunity work with a team that mentors you.\n\n📍 London, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35401/it-and-product-intern-graduate-opportunity"
+      },
+      "hashtagsByPlatform": {
+        "ig-fb": [
+          "#internship",
+          "#londonjobs",
+          "#techjobs",
+          "#hiring",
+          "#graduatejobs"
+        ],
+        "linkedin": [
+          "#hiring",
+          "#internship",
+          "#techjobs",
+          "#careers"
+        ],
+        "x": [
+          "#techjobs",
+          "#hiring"
+        ]
+      },
+      "sector": "Information Technology (IT)",
+      "sectorStyle": "tech",
+      "palette": {
+        "version": "2026-08-19-employers-sm-ads-v1",
+        "style": "tech",
+        "sector": "Information Technology (IT)",
+        "accent": "#3FD0E0",
+        "accentDark": "#2AA9B8",
+        "background": [
+          "#141F4A",
+          "#2E3E9E"
+        ],
+        "spark": "#D4FF3D"
+      }
+    },
+    {
       "id": "job-35399",
       "sourceId": "35399",
       "sourceUrl": "https://www.internwise.co.uk/job/35399/delegate-relations-executive-sales",
       "day": "QATALYST GLOBAL LIMITED",
-      "title": "Delegate Relations Executive (Sales)",
+      "title": "Delegate Relations Executive",
       "platform": "Featured Job",
       "format": "Single",
       "slides": [
         "job-35399-2026-08-19-employers-sm-ads-v1.png"
       ],
       "status": "in-review",
-      "caption": "FEATURED INTERNSHIP: Delegate Relations Executive (Sales)\n\nGood if you want evidence of confidence, client communication, lead handling, and turning conversations into measurable outcomes.\n\nField: Business Management / Development\nLocation: London / Hybrid , Greater London\nFormat: Part-time/Full-time\nLength: +12 months\n\nApply here: https://www.internwise.co.uk/job/35399/delegate-relations-executive-sales",
+      "caption": "Want real delegate relations executive experience for your CV? This is where you start.\n\n📍 London / Hybrid, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35399/delegate-relations-executive-sales",
       "hashtags": [
-        "#salesjobs",
-        "#businessdevelopment",
         "#internship",
         "#londonjobs",
+        "#salesjobs",
+        "#hiring",
         "#graduatejobs"
       ],
       "captions": {
-        "ig-fb": "FEATURED INTERNSHIP: Delegate Relations Executive (Sales)\n\nGood if you want evidence of confidence, client communication, lead handling, and turning conversations into measurable outcomes.\n\nField: Business Management / Development\nLocation: London / Hybrid , Greater London\nFormat: Part-time/Full-time\nLength: +12 months\n\nApply here: https://www.internwise.co.uk/job/35399/delegate-relations-executive-sales",
-        "linkedin": "FEATURED INTERNSHIP: Delegate Relations Executive (Sales)\n\nGood if you want evidence of confidence, client communication, lead handling, and turning conversations into measurable outcomes.\n\nField: Business Management / Development\nLocation: London / Hybrid , Greater London\nFormat: Part-time/Full-time\nLength: +12 months\n\nApply here: https://www.internwise.co.uk/job/35399/delegate-relations-executive-sales",
-        "x": "FEATURED INTERNSHIP: Delegate Relations Executive (Sales)\n\nGood if you want evidence of confidence, client communication, lead handling, and turning conversations into measurable outcomes.\n\nField: Business Management / Development\nLocation: London / Hybrid , Greater London\nFormat: Part-time/Full-time\nLength: +12 months\n\nApply here: https://www.internwise.co.uk/job/35399/delegate-relations-executive-sales",
-        "threads": "FEATURED INTERNSHIP: Delegate Relations Executive (Sales)\n\nGood if you want evidence of confidence, client communication, lead handling, and turning conversations into measurable outcomes.\n\nField: Business Management / Development\nLocation: London / Hybrid , Greater London\nFormat: Part-time/Full-time\nLength: +12 months\n\nApply here: https://www.internwise.co.uk/job/35399/delegate-relations-executive-sales"
+        "ig-fb": "Want real delegate relations executive experience for your CV? This is where you start.\n\n📍 London / Hybrid, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35399/delegate-relations-executive-sales",
+        "linkedin": "Want real delegate relations executive experience for your CV? This is where you start.\n\n📍 London / Hybrid, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35399/delegate-relations-executive-sales",
+        "x": "Want real delegate relations executive experience for your CV? This is where you start.\n\n📍 London / Hybrid, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35399/delegate-relations-executive-sales"
       },
       "hashtagsByPlatform": {
         "ig-fb": [
-          "#salesjobs",
-          "#businessdevelopment",
           "#internship",
           "#londonjobs",
+          "#salesjobs",
+          "#hiring",
           "#graduatejobs"
         ],
         "linkedin": [
-          "#salesjobs",
-          "#businessdevelopment",
+          "#hiring",
           "#internship",
-          "#londonjobs",
-          "#graduatejobs"
+          "#salesjobs",
+          "#careers"
         ],
         "x": [
           "#salesjobs",
-          "#businessdevelopment"
+          "#hiring"
         ]
+      },
+      "addedAt": "2026-10-14T08:46:34Z",
+      "sector": "Business Management",
+      "sectorStyle": "sales",
+      "palette": {
+        "version": "2026-08-19-employers-sm-ads-v1",
+        "style": "sales",
+        "sector": "Business Management",
+        "accent": "#D4CE2B",
+        "accentDark": "#E5771E",
+        "background": [
+          "#5A2A12",
+          "#A85A1E"
+        ],
+        "spark": "#D4FF3D"
+      }
+    },
+    {
+      "id": "job-35310",
+      "sourceId": "35310",
+      "sourceUrl": "https://www.internwise.co.uk/job/35310/staging-intern",
+      "addedAt": "2026-10-14T08:46:34Z",
+      "day": "LONDON PROPERTY STAGING LTD",
+      "title": "Staging Intern",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35310-2026-08-19-employers-sm-ads-v1.png"
+      ],
+      "status": "in-review",
+      "caption": "Ready to break into staging? Get hands-on with a growing UK team.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35310/staging-intern",
+      "hashtags": [
+        "#internship",
+        "#londonjobs",
+        "#designjobs",
+        "#hiring",
+        "#graduatejobs"
+      ],
+      "captions": {
+        "ig-fb": "Ready to break into staging? Get hands-on with a growing UK team.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35310/staging-intern",
+        "linkedin": "Ready to break into staging? Get hands-on with a growing UK team.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35310/staging-intern",
+        "x": "Ready to break into staging? Get hands-on with a growing UK team.\n\n📍 London, Greater London\n\nApply now 👉 https://www.internwise.co.uk/job/35310/staging-intern"
+      },
+      "hashtagsByPlatform": {
+        "ig-fb": [
+          "#internship",
+          "#londonjobs",
+          "#designjobs",
+          "#hiring",
+          "#graduatejobs"
+        ],
+        "linkedin": [
+          "#hiring",
+          "#internship",
+          "#designjobs",
+          "#careers"
+        ],
+        "x": [
+          "#designjobs",
+          "#hiring"
+        ]
+      },
+      "sector": "Interior Design",
+      "sectorStyle": "design",
+      "palette": {
+        "version": "2026-08-19-employers-sm-ads-v1",
+        "style": "design",
+        "sector": "Interior Design",
+        "accent": "#D4962B",
+        "accentDark": "#5B3FC4",
+        "background": [
+          "#2B1E63",
+          "#4A2F9E"
+        ],
+        "spark": "#D4FF3D"
       }
     }
   ]
