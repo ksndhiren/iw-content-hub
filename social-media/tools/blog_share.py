@@ -1,8 +1,13 @@
-"""Blog re-share - schedules the latest internwise.com/blog posts to socials.
+"""Blog re-share - schedules internwise.com/blog posts to socials.
 
-Part of the Saturday content ritual: every week we surface the 5 most recent
-blog posts and schedule them out to LinkedIn, Facebook, Threads (and Google
-Business Profile once it's connected in Ayrshare) across the upcoming week.
+Daily mode (--daily, how the scheduled workflow runs): once a day, share ONE
+article to LinkedIn, Facebook and Google Business Profile at 10:30 UK. The
+article chosen is the newest one not yet on every target network, so the
+backlog drains steadily and a day with no new post still has something to go
+out. ~86 articles are in the catalogue, so supply is not a constraint.
+
+Weekly mode (no --daily, the original behaviour): surface the N most recent
+posts and spread them across the upcoming week.
 
 Recency comes from the site's sitemap.xml (<lastmod>), which is the only
 reliable "newest first" signal - the /blog listing is a React SPA. Each post's
@@ -13,13 +18,15 @@ Safe by default: DRY-RUN (prints the plan, calls nothing) unless --live is
 given. Every live post is recorded in content/blog_shared.json (keyed by URL)
 so a re-run never double-posts the same article.
 
+    python3 tools/blog_share.py --daily --schedule  # dry-run the day's single post
+    python3 tools/blog_share.py --daily --schedule --live   # what the cron runs
     python3 tools/blog_share.py                     # dry-run plan (upcoming week)
     python3 tools/blog_share.py --schedule          # dry-run + spread across week
     python3 tools/blog_share.py --live --schedule   # actually schedule them
     python3 tools/blog_share.py --limit 5 --live    # post now (no schedule)
 
-Networks: linkedin, facebook, threads by default (intersected with the accounts
-actually connected in Ayrshare). Add gmb once Google Business Profile is linked.
+Networks: intersected with the accounts actually connected in Ayrshare; any
+requested network that is not connected is reported loudly and skipped.
 """
 from __future__ import annotations
 import os, sys, re, json, html, argparse, datetime
@@ -43,8 +50,9 @@ BLOG_NETWORKS = ["linkedin", "facebook", "threads", "gmb"]
 NET_LIMIT = {"threads": 500, "facebook": 63000, "linkedin": 3000, "gmb": 1500}
 # One blog per weekday at 10:30 UK - a late-morning slot clear of the lane posts
 # (news 08:00, education 13:30, quote 20:00, employer 20:30).
-BLOG_DAY_TIME = [("mon", "10:30"), ("tue", "10:30"), ("wed", "10:30"),
-                 ("thu", "10:30"), ("fri", "10:30")]
+BLOG_TIME_UK = "10:30"
+BLOG_DAY_TIME = [("mon", BLOG_TIME_UK), ("tue", BLOG_TIME_UK), ("wed", BLOG_TIME_UK),
+                 ("thu", BLOG_TIME_UK), ("fri", BLOG_TIME_UK)]
 
 
 def _load_env():
@@ -127,6 +135,39 @@ def active_networks():
     return set(d.get("activeSocialAccounts", []))
 
 
+def today_slot_iso(hhmm=BLOG_TIME_UK, idx=0, stagger_min=30):
+    """Today's blog slot in UTC, or None if it has already passed (then we post
+    immediately rather than scheduling into the past).
+
+    `idx` staggers extra articles by `stagger_min` minutes. The daily cron only
+    ever sends one, but a manual run with --limit > 1 should not stack them all
+    on the same minute."""
+    hh, mm = hhmm.split(":")
+    when_uk = datetime.datetime.combine(
+        datetime.date.today(), datetime.time(int(hh), int(mm)),
+        tzinfo=ZoneInfo("Europe/London")) + datetime.timedelta(minutes=idx * stagger_min)
+    if when_uk <= datetime.datetime.now(datetime.timezone.utc):
+        return None
+    return when_uk.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def pick_daily(nets, shared, count=1, pool=200):
+    """The `count` newest articles still missing at least one target network.
+
+    Daily mode selects from the whole catalogue rather than just the newest few,
+    so a day whose latest post is already out still has something to share and
+    the backlog drains steadily. Returns [(url, lastmod), ...], newest first.
+    """
+    out = []
+    for url, lastmod in recent_posts(pool):
+        done = set(shared.get(url, {}).get("networks", []))
+        if set(nets) - done:
+            out.append((url, lastmod))
+            if len(out) >= count:
+                break
+    return out
+
+
 def upcoming_monday():
     today = datetime.date.today()
     return today + datetime.timedelta(days=(7 - today.weekday()) % 7 or 7)
@@ -174,25 +215,47 @@ def main():
     ap.add_argument("--schedule", action="store_true", help="spread across the upcoming week instead of now")
     ap.add_argument("--network", default=None, help="comma list to limit networks (e.g. linkedin,facebook)")
     ap.add_argument("--week-monday", default=None, help="ISO date of the Monday to schedule against (default: upcoming Monday). Past slots post immediately.")
+    ap.add_argument("--daily", action="store_true",
+                    help="daily mode: share the newest article not yet on every target "
+                         "network, at today's 10:30 UK slot (default --limit 1)")
     args = ap.parse_args()
+    if args.daily and "--limit" not in sys.argv:
+        args.limit = 1          # one blog per day unless explicitly overridden
     if not KEY:
         sys.exit("No AYRSHARE_API_KEY in env (.env).")
     only_nets = set(n.strip() for n in args.network.split(",")) if args.network else None
     week_monday = datetime.date.fromisoformat(args.week_monday) if args.week_monday else None
 
     connected = active_networks()
-    nets = [n for n in BLOG_NETWORKS if n in connected and (not only_nets or n in only_nets)]
+    wanted = [n for n in BLOG_NETWORKS if not only_nets or n in only_nets]
+    nets = [n for n in wanted if n in connected]
     shared = load_shared()
-    posts = recent_posts(args.limit)
 
     print(f"Blog re-share | connected: {sorted(connected)} | targeting: {nets} "
           f"| {'LIVE' if args.live else 'DRY-RUN'}")
-    print(f"{len(posts)} recent posts from sitemap:\n")
+    missing = [n for n in wanted if n not in connected]
+    if missing:
+        # Loud, not silent: a network the operator asked for but Ayrshare does
+        # not report as connected will simply never receive posts.
+        print(f"  !! requested but NOT connected in Ayrshare, so skipped: {missing}")
+        print("     Reconnect the account in Ayrshare for these to go out.")
+    if not nets:
+        sys.exit("No target network is connected in Ayrshare - nothing to do.")
+
+    if args.daily:
+        posts = pick_daily(nets, shared, count=args.limit)
+        print(f"Daily mode: {len(posts)} article(s) not yet on {nets}:\n")
+    else:
+        posts = recent_posts(args.limit)
+        print(f"{len(posts)} recent posts from sitemap:\n")
 
     todo = []
     for idx, (url, lastmod) in enumerate(posts):
         meta = article_meta(url)
-        sched = schedule_iso(idx, args.schedule, week_monday=week_monday)
+        if args.daily:
+            sched = today_slot_iso(idx=idx) if args.schedule else None
+        else:
+            sched = schedule_iso(idx, args.schedule, week_monday=week_monday)
         done_nets = set(shared.get(url, {}).get("networks", []))
         flag = "sched " + sched if sched else "now"
         print(f"  {lastmod}  {meta.get('title','(no title)')[:60]}")

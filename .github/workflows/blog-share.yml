@@ -1,25 +1,41 @@
 name: Blog Re-share
 
-# Every Saturday (alongside the Daily-5 content build), surface the 5 most recent
-# internwise.com/blog posts and schedule them out across the upcoming week to
-# LinkedIn, Facebook, Threads and Google Business Profile via Ayrshare. Recency
-# comes from the site sitemap (<lastmod>); each post is a link share (no image).
+# ONE internwise.com/blog article per day, shared to LinkedIn, Facebook and
+# Google Business Profile at 10:30 UK. The article picked is the newest one not
+# yet on every target network, so the backlog drains steadily and a day with no
+# new blog post still has something to go out.
+#
+# Recency comes from the site sitemap (<lastmod>); the /blog listing itself is a
+# React SPA and cannot be scraped directly. Each post is a link share (no
+# image) - the network unfurls the URL card.
 #
 # These are auto-scheduled LIVE (no dashboard gate) - blog re-shares are low-risk
 # link posts. The dedupe file (blog_shared.json) is committed back so the same
 # article is never shared to the same network twice.
 #
+# NOTE: a target network only receives posts while it is connected in Ayrshare.
+# Any requested network that is not connected is reported in the run log and
+# skipped - check that log if a network goes quiet.
+#
 # Requires repo secret: AYRSHARE_API_KEY.
 
 on:
   schedule:
-    - cron: "0 8 * * 6"       # Saturday 08:00 UTC (just after the Daily-5 build)
+    - cron: "0 8 * * *"       # daily 08:00 UTC; the post itself lands at 10:30 UK
   workflow_dispatch:
     inputs:
       limit:
-        description: "How many recent blog posts to share"
+        description: "How many articles to share this run (default 1 = one per day)"
         required: false
-        default: "5"
+        default: "1"
+      networks:
+        description: "Comma list of target networks"
+        required: false
+        default: "linkedin,facebook,gmb"
+      live:
+        description: "Actually send? Use false for a dry-run plan."
+        required: false
+        default: "true"
 
 permissions:
   contents: write
@@ -42,13 +58,21 @@ jobs:
 
       # blog_share.py uses only the Python standard library - nothing to install.
 
-      - name: Schedule the latest blog posts to socials
+      - name: Share the day's blog post
         env:
           AYRSHARE_API_KEY: ${{ secrets.AYRSHARE_API_KEY }}
+        # pipefail: without it `tee` masks a crash and the job reports success.
         run: |
+          set -o pipefail
+          EXTRA_ARGS=()
+          if [ "${{ github.event_name }}" != "workflow_dispatch" ] || [ "${{ github.event.inputs.live }}" = "true" ]; then
+            EXTRA_ARGS+=(--live)
+          fi
           python social-media/tools/blog_share.py \
-            --limit "${{ github.event.inputs.limit || '5' }}" \
-            --live --schedule | tee /tmp/blog_share.log
+            --daily --schedule \
+            --limit "${{ github.event.inputs.limit || '1' }}" \
+            --network "${{ github.event.inputs.networks || 'linkedin,facebook,gmb' }}" \
+            "${EXTRA_ARGS[@]}" | tee /tmp/blog_share.log
 
       - name: Commit the dedupe record if it changed
         run: |
@@ -60,6 +84,6 @@ jobs:
           git config user.name  "internwise-content-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add "$FILE"
-          git commit -m "Blog re-share: scheduled latest posts ($(date -u +%Y-%m-%d))"
-          git pull --rebase origin main
+          git commit -m "Blog re-share: shared the day's post ($(date -u +%Y-%m-%d))"
+          git pull --rebase --autostash origin main
           git push origin HEAD:main
