@@ -1,62 +1,100 @@
 {
-  "generatedAt": "2026-10-13T14:30:19Z",
+  "generatedAt": "2026-10-14T12:16:41Z",
   "windowRecords": 80,
   "byLane": {
-    "education": {
+    "quote": {
       "posts": 4,
-      "engagement": 0,
-      "avg": 0.0
+      "engagement": 1,
+      "avg": 0.2
+    },
+    "engagement": {
+      "posts": 5,
+      "engagement": 3,
+      "avg": 0.6
+    },
+    "education": {
+      "posts": 6,
+      "engagement": 1,
+      "avg": 0.2
     }
   },
   "byDay": {
     "Tue": {
-      "posts": 4,
-      "engagement": 0,
-      "avg": 0.0
+      "posts": 15,
+      "engagement": 5,
+      "avg": 0.3
     }
   },
   "byHour": {
     "5": {
-      "posts": 4,
-      "engagement": 0,
-      "avg": 0.0
+      "posts": 15,
+      "engagement": 5,
+      "avg": 0.3
     }
   },
   "topPosts": [
     {
+      "lane": "engagement",
+      "network": "instagram",
+      "engagement": 2,
+      "created": "2026-10-13T05:11:27Z",
+      "caption": "Ever find a job listing that feels like a puzzle, missing half its pieces? We've all been there. A strong role should ma"
+    },
+    {
+      "lane": "quote",
+      "network": "instagram",
+      "engagement": 1,
+      "created": "2026-10-13T05:11:15Z",
+      "caption": "Thomas Edison reminds us that opportunity often comes disguised as hard work. Are you ready to roll up your sleeves and "
+    },
+    {
+      "lane": "engagement",
+      "network": "linkedin",
+      "engagement": 1,
+      "created": "2026-10-13T05:11:32Z",
+      "caption": "We've all come across job listings that leave us with more questions than answers. A compelling role should provide clar"
+    },
+    {
       "lane": "education",
       "network": "linkedin",
-      "engagement": 0,
+      "engagement": 1,
       "created": "2026-10-13T05:11:45Z",
       "caption": "Before you polish your CV with fancy wording, focus on adding evidence. Identify claims that need examples, quantify wit"
     },
     {
-      "lane": "education",
-      "network": "facebook",
+      "lane": "quote",
+      "network": "threads",
       "engagement": 0,
-      "created": "2026-10-13T05:12:01Z",
-      "caption": "Add Proof Before You Polish"
+      "created": "2026-10-13T05:11:18Z",
+      "caption": "Thomas Edison reminds us that opportunity often comes disguised as hard work. Are you ready to roll up your sleeves and "
     },
     {
-      "lane": "education",
-      "network": "gmb",
+      "lane": "quote",
+      "network": "instagram",
       "engagement": 0,
-      "created": "2026-10-13T05:11:55Z",
-      "caption": "Your CV's secret weapon? Evidence! Before you prettify those words, let's add some concrete proof. Spot the claims that "
+      "created": "2026-10-13T05:11:22Z",
+      "caption": "Quote: Thomas Edison"
     },
     {
-      "lane": "education",
-      "network": "facebook",
+      "lane": "quote",
+      "network": "pinterest",
       "engagement": 0,
-      "created": "2026-10-13T05:11:49Z",
-      "caption": "Your CV's secret weapon? Evidence! Before you prettify those words, let's add some concrete proof. Spot the claims that "
+      "created": "2026-10-13T05:11:20Z",
+      "caption": "Thomas Edison reminds us that opportunity often comes disguised as hard work. Are you ready to roll up your sleeves and "
+    },
+    {
+      "lane": "engagement",
+      "network": "instagram",
+      "engagement": 0,
+      "created": "2026-10-13T05:11:37Z",
+      "caption": "What would make a role feel worth applying for?"
     }
   ],
   "insights": [
-    "Your strongest topic is Education (0.0 avg engagement/post). Make more of it.",
-    "Tue is your best posting day (0.0 avg engagement/post).",
-    "Posts around 05:00 UTC perform best (0.0 avg engagement/post).",
-    "Education is underperforming (0.0 avg) - rework the angle or post it at a stronger time."
+    "Your strongest topic is Engagement (0.6 avg engagement/post). Make more of it.",
+    "Tue is your best posting day (0.3 avg engagement/post).",
+    "Posts around 05:00 UTC perform best (0.3 avg engagement/post).",
+    "Quote is underperforming (0.2 avg) - rework the angle or post it at a stronger time."
   ],
   "laneLabels": {
     "education": "Education",
