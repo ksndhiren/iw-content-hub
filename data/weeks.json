@@ -7760,7 +7760,7 @@
       "id": "week20",
       "label": "Week 20",
       "weekCommencing": "2026-10-12",
-      "builtAt": 1791989230,
+      "builtAt": 1792062242,
       "posts": [
         {
           "id": "week20-mon-quote",
@@ -8717,6 +8717,50 @@
             "x": [
               "#jobinterviews",
               "#ai"
+            ]
+          }
+        },
+        {
+          "id": "week20-fri-news",
+          "day": "Fri 16 Oct",
+          "lane": "news",
+          "title": "New Rail HQ and Apprenticeship Launch",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "Great British Railways is setting up its new headquarters in Derby. This move will create up to 450 jobs and offer apprenticeships to around 600 young people. It's a significant opportunity for those looking to enter the rail industry or gain practical experience.\n\nFor students and young graduates, this development is a chance to step into a sector that's pivotal to the UK's infrastructure. With a focus on apprenticeships, young applicants have the opportunity to learn while they work, gaining invaluable skills and experience.\n\nInternships and apprenticeships are crucial for building a career in any industry. They provide practical, on-the-job learning that can't be gained from books alone. For those entering the job market, these roles are a way to get ahead, learn from professionals, and build a network in your chosen field.\n\nSource: GOV.UK.",
+          "hashtags": [
+            "#railindustry",
+            "#apprenticeships",
+            "#derbyjobs",
+            "#ukcareers",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Great British Railways is setting up its new headquarters in Derby. This move will create up to 450 jobs and offer apprenticeships to around 600 young people. It's a significant opportunity for those looking to enter the rail industry or gain practical experience.\n\nFor students and young graduates, this development is a chance to step into a sector that's pivotal to the UK's infrastructure. With a focus on apprenticeships, young applicants have the opportunity to learn while they work, gaining invaluable skills and experience.\n\nInternships and apprenticeships are crucial for building a career in any industry. They provide practical, on-the-job learning that can't be gained from books alone. For those entering the job market, these roles are a way to get ahead, learn from professionals, and build a network in your chosen field.\n\nSource: GOV.UK.",
+            "linkedin": "The rail industry is getting a boost as Great British Railways announces its new headquarters in Derby. This move will not only create up to 450 jobs but also open up to 600 apprenticeship opportunities for young people.\n\nThis is a big deal for students and graduates eager to break into the rail sector. With so many apprenticeship spots, there's a fresh chance to gain hands-on experience in a key industry that keeps the UK moving.\n\nInternships and apprenticeships like these provide a real-world learning environment that can't be matched in the classroom. They’re essential for anyone looking to start a career, offering a blend of learning and working that's hard to beat.\n\nSource: GOV.UK.",
+            "x": "Great British Railways' new Derby HQ will create 450 jobs and 600 apprenticeships, offering young people vital career opportunities in the rail sector. A big step for practical learning! (Source: GOV.UK)",
+            "threads": "Great British Railways is setting up its new HQ in Derby, creating 450 jobs and 600 apprenticeships. A fantastic opportunity for young people to gain hands-on experience in the rail industry. Practical skills are invaluable for career growth. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#railindustry",
+              "#apprenticeships",
+              "#derbyjobs",
+              "#ukcareers",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#railindustry",
+              "#apprenticeships",
+              "#ukjobs"
+            ],
+            "x": [
+              "#apprenticeships",
+              "#railjobs"
             ]
           }
         }
