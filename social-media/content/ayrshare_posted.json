@@ -3927,5 +3927,53 @@
     "at": "2026-10-14T14:48:51.332832",
     "network": "facebook",
     "scheduleDate": null
+  },
+  "week20-fri-news:instagram": {
+    "id": "AGBbSF7X9WryaZ3XV7WM",
+    "at": "2026-10-15T11:04:10.268080",
+    "network": "instagram",
+    "scheduleDate": "2026-10-16T07:00:00Z"
+  },
+  "week20-fri-news:facebook": {
+    "id": "i255NFUm46AfFfR6kDZj",
+    "at": "2026-10-15T11:04:11.880961",
+    "network": "facebook",
+    "scheduleDate": "2026-10-16T07:00:00Z"
+  },
+  "week20-fri-news:linkedin": {
+    "id": "HmPodn5VAlyljTekCooW",
+    "at": "2026-10-15T11:04:13.314331",
+    "network": "linkedin",
+    "scheduleDate": "2026-10-16T07:00:00Z"
+  },
+  "week20-fri-news:threads": {
+    "id": "I1sDnLVmLJI265WYY2g1",
+    "at": "2026-10-15T11:04:15.664280",
+    "network": "threads",
+    "scheduleDate": "2026-10-16T07:00:00Z"
+  },
+  "week20-fri-news:gmb": {
+    "id": "aCOcnmiXigfqkQLgBHkE",
+    "at": "2026-10-15T11:04:17.538932",
+    "network": "gmb",
+    "scheduleDate": "2026-10-16T07:00:00Z"
+  },
+  "week20-fri-news:pinterest": {
+    "id": "KCCCUXbGWO12tM08xLAd",
+    "at": "2026-10-15T11:04:18.487910",
+    "network": "pinterest",
+    "scheduleDate": "2026-10-16T07:00:00Z"
+  },
+  "week20-fri-news:instagram:story": {
+    "id": "2bFchUDCXNB5M2EdPF4g",
+    "at": "2026-10-15T11:04:20.263694",
+    "network": "instagram",
+    "scheduleDate": "2026-10-16T07:00:00Z"
+  },
+  "week20-fri-news:facebook:story": {
+    "id": "kbS3Zqt10vDZoBMCEXdY",
+    "at": "2026-10-15T11:04:21.617995",
+    "network": "facebook",
+    "scheduleDate": "2026-10-16T07:00:00Z"
   }
 }
