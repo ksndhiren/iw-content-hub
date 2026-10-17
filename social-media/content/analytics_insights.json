@@ -1,7 +1,22 @@
 {
-  "generatedAt": "2026-10-16T11:49:34Z",
+  "generatedAt": "2026-10-17T11:07:34Z",
   "windowRecords": 80,
   "byLane": {
+    "quote": {
+      "posts": 18,
+      "engagement": 3,
+      "avg": 0.2
+    },
+    "engagement": {
+      "posts": 18,
+      "engagement": 3,
+      "avg": 0.2
+    },
+    "education": {
+      "posts": 16,
+      "engagement": 7,
+      "avg": 0.4
+    },
     "news": {
       "posts": 16,
       "engagement": 5,
@@ -11,32 +26,22 @@
       "posts": 6,
       "engagement": 1,
       "avg": 0.2
-    },
-    "quote": {
-      "posts": 12,
-      "engagement": 2,
-      "avg": 0.2
-    },
-    "engagement": {
-      "posts": 14,
-      "engagement": 2,
-      "avg": 0.1
-    },
-    "education": {
-      "posts": 8,
-      "engagement": 5,
-      "avg": 0.6
     }
   },
   "byDay": {
+    "Tue": {
+      "posts": 52,
+      "engagement": 13,
+      "avg": 0.2
+    },
+    "Fri": {
+      "posts": 3,
+      "engagement": 0,
+      "avg": 0.0
+    },
     "Thu": {
       "posts": 17,
       "engagement": 5,
-      "avg": 0.3
-    },
-    "Tue": {
-      "posts": 34,
-      "engagement": 9,
       "avg": 0.3
     },
     "Wed": {
@@ -46,6 +51,16 @@
     }
   },
   "byHour": {
+    "5": {
+      "posts": 52,
+      "engagement": 13,
+      "avg": 0.2
+    },
+    "12": {
+      "posts": 3,
+      "engagement": 0,
+      "avg": 0.0
+    },
     "11": {
       "posts": 8,
       "engagement": 4,
@@ -55,11 +70,6 @@
       "posts": 6,
       "engagement": 1,
       "avg": 0.2
-    },
-    "5": {
-      "posts": 34,
-      "engagement": 9,
-      "avg": 0.3
     },
     "13": {
       "posts": 3,
@@ -88,6 +98,27 @@
       "caption": "Great British Railways is setting up its new headquarters in Derby. This move will create up to 450 jobs and offer appre"
     },
     {
+      "lane": "quote",
+      "network": "instagram",
+      "engagement": 1,
+      "created": "2026-10-13T05:15:13Z",
+      "caption": "Marie Curie reminds us that real progress takes time and persistence. Each step you take brings you closer to your goals"
+    },
+    {
+      "lane": "engagement",
+      "network": "instagram",
+      "engagement": 1,
+      "created": "2026-10-13T05:15:28Z",
+      "caption": "You've sent your application. Now what? Crafting the perfect follow-up can be the key to keeping your opportunity alive."
+    },
+    {
+      "lane": "education",
+      "network": "instagram",
+      "engagement": 1,
+      "created": "2026-10-13T05:15:40Z",
+      "caption": "Stop preparing random answers for interviews. It's time to build a smarter answer bank! 🧠 Start by picking five key stor"
+    },
+    {
       "lane": "featured",
       "network": "instagram",
       "engagement": 1,
@@ -107,34 +138,13 @@
       "engagement": 1,
       "created": "2026-10-13T05:14:34Z",
       "caption": "Ever found yourself scrolling endlessly through job posts, unsure of what to look for? Here's a tip: stop at roles that "
-    },
-    {
-      "lane": "news",
-      "network": "instagram",
-      "engagement": 1,
-      "created": "2026-10-14T14:25:26Z",
-      "caption": "Recent research suggests that graduates are increasingly turning to AI to enhance their job applications. The 'spray and"
-    },
-    {
-      "lane": "quote",
-      "network": "instagram",
-      "engagement": 1,
-      "created": "2026-10-13T05:12:04Z",
-      "caption": "Feeling stuck at the starting line? Take a page from Amelia Earhart's book: \"The most effective way to do it, is to do i"
-    },
-    {
-      "lane": "engagement",
-      "network": "instagram",
-      "engagement": 1,
-      "created": "2026-10-13T05:12:23Z",
-      "caption": "Your CV is more than just a list. It's your story, your journey, and your future. Which line would you upgrade first to "
     }
   ],
   "insights": [
-    "Your strongest topic is Education (0.6 avg engagement/post). Make more of it.",
+    "Your strongest topic is Education (0.4 avg engagement/post). Make more of it.",
     "Thu is your best posting day (0.3 avg engagement/post).",
     "Posts around 11:00 UTC perform best (0.5 avg engagement/post).",
-    "Engagement is underperforming (0.1 avg) - rework the angle or post it at a stronger time."
+    "Quote is underperforming (0.2 avg) - rework the angle or post it at a stronger time."
   ],
   "laneLabels": {
     "education": "Education",
