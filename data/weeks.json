@@ -8765,6 +8765,76 @@
           }
         }
       ]
+    },
+    {
+      "id": "week21",
+      "label": "Week 21",
+      "weekCommencing": "2026-10-19",
+      "builtAt": 1792319873,
+      "posts": [
+        {
+          "id": "week21-mon-news",
+          "day": "Mon 19 Oct",
+          "lane": "news",
+          "title": "New Plan May Raise Training Costs for Older Workers",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "The UK government plans to overhaul apprenticeship funding. This proposal would make employers pay more to train older workers than younger apprentices. The aim is to tackle youth unemployment by incentivising companies to hire more young people. \n\nFor students and recent graduates, this means more opportunities could open up as businesses may look to take on younger apprentices. It's a move to help combat youth joblessness and create pathways into the workforce.\n\nInternships are a crucial way to gain experience and make yourself attractive to potential employers. They help bridge the gap between education and a full-time job, equipping you with practical skills.\n\nSource: The Guardian.",
+          "hashtags": [
+            "#internwise",
+            "#ukjobs",
+            "#graduatejobs",
+            "#internships",
+            "#earlycareers"
+          ],
+          "captions": {
+            "ig-fb": "The UK government plans to overhaul apprenticeship funding. This proposal would make employers pay more to train older workers than younger apprentices. The aim is to tackle youth unemployment by incentivising companies to hire more young people. \n\nFor students and recent graduates, this means more opportunities could open up as businesses may look to take on younger apprentices. It's a move to help combat youth joblessness and create pathways into the workforce.\n\nInternships are a crucial way to gain experience and make yourself attractive to potential employers. They help bridge the gap between education and a full-time job, equipping you with practical skills.\n\nSource: The Guardian.",
+            "linkedin": "A proposed change in UK apprenticeship funding could see employers paying more to train older workers than young apprentices. The government's aim is to encourage businesses to hire more young people and address the ongoing youth unemployment issue.\n\nThis potential shift is significant for students and graduates. It could mean more apprenticeship opportunities as companies might focus on hiring younger candidates. It's a strategic move to help ease young people into the workforce.\n\nInternships can play a vital role in this landscape. They offer hands-on experience, building the skills needed to secure full-time positions. Internwise supports internships as a stepping stone in your career journey.\n\nSource: The Guardian.",
+            "x": "UK may alter apprenticeship funding to favour youth. Employers could pay more for training older workers, aiming to boost youth hires and tackle joblessness. Internships remain key for gaining vital experience. (Source: The Guardian)",
+            "threads": "UK plans to change apprenticeship funding, requiring higher costs for training older workers. The goal? Boost youth employment. For students and grads, this could mean more apprenticeship openings. Internships remain key in building your career. www.internwise.co.uk",
+            "hashtags": {
+              "ig-fb": [
+                "#ukjobs",
+                "#youthemployment",
+                "#apprenticeships",
+                "#internships",
+                "#careerstart"
+              ],
+              "linkedin": [
+                "#ukjobs",
+                "#apprenticeships",
+                "#youthemployment"
+              ],
+              "x": [
+                "#ukjobs",
+                "#internships"
+              ]
+            }
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internwise",
+              "#ukjobs",
+              "#graduatejobs",
+              "#internships",
+              "#earlycareers"
+            ],
+            "linkedin": [
+              "#ukjobmarket",
+              "#graduatejobs",
+              "#internships"
+            ],
+            "x": [
+              "#ukjobs",
+              "#graduatejobs"
+            ]
+          }
+        }
+      ]
     }
   ]
 }
