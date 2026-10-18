@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-17T11:07:34Z",
+  "generatedAt": "2026-10-18T11:36:46Z",
   "windowRecords": 80,
   "byLane": {
     "quote": {
-      "posts": 18,
-      "engagement": 3,
+      "posts": 12,
+      "engagement": 2,
       "avg": 0.2
     },
     "engagement": {
-      "posts": 18,
-      "engagement": 3,
-      "avg": 0.2
+      "posts": 14,
+      "engagement": 2,
+      "avg": 0.1
     },
     "education": {
       "posts": 16,
@@ -18,8 +18,8 @@
       "avg": 0.4
     },
     "news": {
-      "posts": 16,
-      "engagement": 5,
+      "posts": 15,
+      "engagement": 4,
       "avg": 0.3
     },
     "featured": {
@@ -29,10 +29,15 @@
     }
   },
   "byDay": {
+    "Sat": {
+      "posts": 3,
+      "engagement": 0,
+      "avg": 0.0
+    },
     "Tue": {
-      "posts": 52,
-      "engagement": 13,
-      "avg": 0.2
+      "posts": 42,
+      "engagement": 11,
+      "avg": 0.3
     },
     "Fri": {
       "posts": 3,
@@ -45,26 +50,26 @@
       "avg": 0.3
     },
     "Wed": {
-      "posts": 8,
-      "engagement": 1,
-      "avg": 0.1
+      "posts": 7,
+      "engagement": 0,
+      "avg": 0.0
     }
   },
   "byHour": {
+    "11": {
+      "posts": 11,
+      "engagement": 4,
+      "avg": 0.4
+    },
     "5": {
-      "posts": 52,
-      "engagement": 13,
-      "avg": 0.2
+      "posts": 42,
+      "engagement": 11,
+      "avg": 0.3
     },
     "12": {
       "posts": 3,
       "engagement": 0,
       "avg": 0.0
-    },
-    "11": {
-      "posts": 8,
-      "engagement": 4,
-      "avg": 0.5
     },
     "20": {
       "posts": 6,
@@ -77,9 +82,9 @@
       "avg": 0.0
     },
     "14": {
-      "posts": 8,
-      "engagement": 1,
-      "avg": 0.1
+      "posts": 7,
+      "engagement": 0,
+      "avg": 0.0
     }
   },
   "topPosts": [
@@ -142,9 +147,9 @@
   ],
   "insights": [
     "Your strongest topic is Education (0.4 avg engagement/post). Make more of it.",
-    "Thu is your best posting day (0.3 avg engagement/post).",
-    "Posts around 11:00 UTC perform best (0.5 avg engagement/post).",
-    "Quote is underperforming (0.2 avg) - rework the angle or post it at a stronger time."
+    "Tue is your best posting day (0.3 avg engagement/post).",
+    "Posts around 11:00 UTC perform best (0.4 avg engagement/post).",
+    "Engagement is underperforming (0.1 avg) - rework the angle or post it at a stronger time."
   ],
   "laneLabels": {
     "education": "Education",
