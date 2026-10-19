@@ -1,14 +1,12 @@
 # No Experience Is Not The Real Problem
 
 Status: script-ready
-Viral score: 89.2/100
+Viral score: 69.1/100
 Target: 52s
 Estimated spoken length: 32s
 
 ## Why This Topic
-- Creates an open loop that earns the next few seconds.
-- Has comment/share potential.
-- Save-worthy practical takeaway.
+
 
 ## HeyGen Setup
 - Format: 9:16

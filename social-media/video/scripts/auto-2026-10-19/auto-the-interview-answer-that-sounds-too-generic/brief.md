@@ -1,16 +1,12 @@
 # The Interview Answer That Sounds Too Generic
 
 Status: script-ready
-Viral score: 100.0/100
+Viral score: 72.1/100
 Target: 52s
 Estimated spoken length: 27s
 
 ## Why This Topic
-- High candidate pain, likely to stop the scroll.
-- Concrete enough to feel immediately useful.
 - Creates an open loop that earns the next few seconds.
-- Has comment/share potential.
-- Save-worthy practical takeaway.
 
 ## HeyGen Setup
 - Format: 9:16
