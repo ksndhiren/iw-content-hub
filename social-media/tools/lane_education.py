@@ -267,7 +267,10 @@ def _icon_motif(icon, css, color, size=340):
 def _nuno_whole(pose, h=820, right=-40, bottom=0):
     """Founder cut-out placed WHOLE (no crop/zoom/distort) with a soft ground."""
     src = L.nuno_src(pose)
-    ground = (f"<div style='position:absolute;right:150px;bottom:30px;width:520px;height:66px;border-radius:50%;"
+    # The ground shadow has to travel with him. It used to be pinned at a literal
+    # right:150px, so any world that nudged `right` to clear the type left the
+    # shadow behind under empty background.
+    ground = (f"<div style='position:absolute;right:{right + 190}px;bottom:30px;width:520px;height:66px;border-radius:50%;"
               f"background:radial-gradient(ellipse,rgba(0,0,0,.5),rgba(0,0,0,0) 70%);'></div>")
     img = f"<img src='{src}' style='position:absolute;right:{right}px;bottom:{bottom}px;height:{h}px;filter:drop-shadow(0 22px 34px rgba(0,0,0,.5));'>"
     return ground + img
@@ -327,15 +330,16 @@ def _spine(p, n, total):
 
 def cover_spine(p, copy, total, pose):
     x = SPINE_W + 48
-    # Canvas is 1080px wide. After the 132px spine the text starts at x~180, and
-    # Nuno's head sits at ~x>=700, so the headline is bounded to width 460 (ends
-    # ~x=640) and Nuno is nudged right, keeping the type clear of his face.
-    return (_bg(p) + _spine(p, 1, total) + _arc(p) + _nuno_whole(pose, h=800, right=-70)
+    # Canvas is 1080px wide. After the 132px spine the text starts at x~180. The
+    # headline is bounded to width 440 (ends ~x=620) and Nuno is pushed a further
+    # 70px off the right edge, so his hairline clears the longest headline line
+    # rather than sitting right against it.
+    return (_bg(p) + _spine(p, 1, total) + _arc(p) + _nuno_whole(pose, h=800, right=-140)
             + _logo(left=x, top=48)
             + f"<div style=\"position:absolute;left:{x}px;top:250px;font-family:'DM Sans';font-weight:700;font-size:22px;"
               f"color:{p['accent']};letter-spacing:4px;\">{copy.get('eyebrow','INTERNWISE')[:26].upper()}</div>"
             + f"<div style='position:absolute;left:{x}px;top:296px;'>"
-              + L.hero(copy['headline'], "stack", p['ink'], p['accent'], hi=p['accent'], size=62, width=460)
+              + L.hero(copy['headline'], "stack", p['ink'], p['accent'], hi=p['accent'], size=62, width=440)
               + "</div>"
             + f"<div style=\"position:absolute;left:{x}px;bottom:48px;font-family:'DM Sans';font-weight:600;font-size:23px;"
               f"color:{p['accent']};\">Swipe to begin &rarr;</div>")
@@ -1457,7 +1461,27 @@ CTA_TONE = {"serious": ["confident"], "practical": ["confident", "positive"],
             "upbeat": ["positive", "confident"]}
 
 
-def render_education(copy, world, out_dir, week_id="adhoc"):
+def choose_poses(copy, world, week_id="adhoc"):
+    """Pick (and record in the ledger) the cover + CTA cutouts for a carousel.
+
+    Split out of render_education so a caller can keep the chosen poses. The
+    ledger is append-on-pick, so re-rendering a built post would otherwise make
+    its own original poses look "recently used" and silently hand it different
+    ones - see rerender_week.py, which stores what it gets back here.
+    """
+    if world not in CAROUSEL:
+        return {}
+    tone = copy.get("tone", "practical")
+    cover_pose = nuno_ledger.pick(cover_pool_for(copy, week_id), week_id,
+                                  label=f"education/{world}/cover", tone=COVER_TONE.get(tone))
+    cta_pose = nuno_ledger.pick(cta_pool_for(copy), week_id, label=f"education/{world}/cta",
+                                tone=CTA_TONE.get(tone), exclude={cover_pose})
+    return {"cover": cover_pose, "cta": cta_pose}
+
+
+def render_education(copy, world, out_dir, week_id="adhoc", poses=None):
+    """Render a post. `poses` replays an earlier choose_poses() result instead of
+    drawing new cutouts, which is what makes a re-render reproducible."""
     os.makedirs(out_dir, exist_ok=True)
     copy = {**copy}
     cta = (copy.get("cta") or "").strip()
@@ -1467,11 +1491,8 @@ def render_education(copy, world, out_dir, week_id="adhoc"):
         p = PAL[world]; w = CAROUSEL[world]
         slides = copy.get("slides", [])
         total = len(slides) + 2
-        tone = copy.get("tone", "practical")
-        cover_pose = nuno_ledger.pick(cover_pool_for(copy, week_id), week_id,
-                                      label=f"education/{world}/cover", tone=COVER_TONE.get(tone))
-        cta_pose = nuno_ledger.pick(cta_pool_for(copy), week_id, label=f"education/{world}/cta",
-                                    tone=CTA_TONE.get(tone), exclude={cover_pose})
+        chosen = poses if poses else choose_poses(copy, world, week_id)
+        cover_pose, cta_pose = chosen.get("cover"), chosen.get("cta")
         paths = [L.render(out_dir, "slide_1.png", w["cover"](p, copy, total, cover_pose))]
         for i, s in enumerate(slides, start=2):
             paths.append(L.render(out_dir, f"slide_{i}.png", w["content"](p, i, total, s)))

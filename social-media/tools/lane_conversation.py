@@ -18,8 +18,11 @@ NAVYT = "#152743"
 LI_BLUE = "#0A66C2"
 
 
-def _logo_dark():
-    return f"<img src='{L.DARKLOGO}' style='position:absolute;left:56px;top:44px;height:{L.LOGO}px;'>"
+def _logo_dark(left=56, top=44, h=None):
+    # h defaults to the uniform weekly LOGO height. Worlds that draw an inner
+    # frame override it so the mark sits INSIDE the panel with real clear space
+    # instead of straddling the border.
+    return f"<img src='{L.DARKLOGO}' style='position:absolute;left:{left}px;top:{top}px;height:{h or L.LOGO}px;'>"
 
 
 def _logo_white():
@@ -336,33 +339,48 @@ def w_ballot(idea):
     bg = (f"<div style='position:absolute;inset:0;background:{NAVYT};'></div>"
           f"<div style='position:absolute;inset:0;opacity:.30;background-image:"
           f"linear-gradient(rgba(255,255,255,.10) 1px,transparent 1px);background-size:100% 46px;'></div>")
-    paper = (f"<div style='position:absolute;left:92px;top:122px;width:772px;height:842px;background:#FBF7EE;"
-             f"box-shadow:0 34px 74px rgba(0,0,0,.42);transform:rotate(-1.2deg);'></div>")
-    # torn bottom edge: a row of small cream triangles reading as a perforated tear
-    teeth = "".join(f"<div style='width:28px;height:26px;background:#FBF7EE;clip-path:polygon(0 0,100% 0,50% 100%);'></div>"
-                    for _ in range(28))
-    tear = (f"<div style='position:absolute;left:92px;top:962px;width:772px;display:flex;transform:rotate(-1.2deg);'>{teeth}</div>")
-    serial = (f"<div style=\"position:absolute;left:140px;top:168px;font-family:'DM Sans';font-weight:700;font-size:20px;"
-              f"color:#A2957E;letter-spacing:6px;transform:rotate(-1.2deg);\">BALLOT &middot; INTERNWISE &middot; NO. 022</div>")
-    rule = f"<div style='position:absolute;left:140px;top:206px;width:676px;height:3px;background:{NAVYT};opacity:.75;transform:rotate(-1.2deg);'></div>"
-    hook = (f"<div style='position:absolute;left:140px;top:244px;width:640px;transform:rotate(-1.2deg);'>"
+
+    # One pencil, built as a single rotated stack. The amber bar and its tip used
+    # to be two siblings that each rotated about their OWN centre, so the point
+    # drifted off the end of the body and read as a loose floating wedge.
+    pencil = (f"<div style='position:absolute;left:946px;top:296px;width:38px;height:476px;transform:rotate(12deg);'>"
+              f"<div style='height:30px;background:#E2857A;border-radius:7px 7px 0 0;'></div>"
+              f"<div style='height:16px;background:#C9CDD4;'></div>"
+              f"<div style='height:392px;background:{AMBER};'></div>"
+              f"<div style='height:38px;background:#F0DEBE;clip-path:polygon(0 0,100% 0,50% 100%);'></div>"
+              f"<div style='position:absolute;left:11px;top:460px;width:16px;height:16px;background:{NAVYT};"
+              f"clip-path:polygon(0 0,100% 0,50% 100%);'></div></div>")
+
+    # Everything printed on the ballot lives inside ONE rotated wrapper. Each
+    # element used to carry its own transform:rotate(-1.2deg) and so turned about
+    # its own centre, which left the torn strip visibly out of register with the
+    # paper's bottom edge. The slip also now starts at y=182: at 122 its rotated
+    # top-left corner rose into the logo instead of clearing it.
+    serial = (f"<div style=\"position:absolute;left:48px;top:44px;font-family:'DM Sans';font-weight:700;font-size:20px;"
+              f"color:#A2957E;letter-spacing:6px;\">BALLOT &middot; INTERNWISE &middot; NO. 022</div>")
+    rule = f"<div style='position:absolute;left:48px;top:82px;width:676px;height:3px;background:{NAVYT};opacity:.75;'></div>"
+    hook = (f"<div style='position:absolute;left:48px;top:120px;width:640px;'>"
             + L.hero(idea['hook'], "underline", NAVYT, NAVYT, hi=CORAL, size=58, width=640) + "</div>")
-    sub = (f"<div style=\"position:absolute;left:142px;top:508px;width:600px;font-family:'DM Sans';font-weight:700;"
-           f"font-size:27px;line-height:1.26;color:#6F6350;transform:rotate(-1.2deg);\">{idea.get('subhead','')}</div>")
+    sub = (f"<div style=\"position:absolute;left:50px;top:382px;width:600px;font-family:'DM Sans';font-weight:700;"
+           f"font-size:27px;line-height:1.26;color:#6F6350;\">{idea.get('subhead','')}</div>")
     rows = ""
     for i, option in enumerate(options):
-        y = 594 + i * 104
-        rows += (f"<div style='position:absolute;left:140px;top:{y}px;width:664px;height:86px;display:flex;align-items:center;"
-                 f"gap:24px;border-bottom:2px dashed rgba(21,39,67,.22);transform:rotate(-1.2deg);'>"
+        y = 468 + i * 100
+        rows += (f"<div style='position:absolute;left:48px;top:{y}px;width:664px;height:86px;display:flex;align-items:center;"
+                 f"gap:24px;border-bottom:2px dashed rgba(21,39,67,.22);'>"
                  f"<div style='flex:0 0 62px;width:62px;height:62px;border:4px solid {NAVYT};display:flex;align-items:center;"
                  f"justify-content:center;font-family:Inter;font-weight:900;font-size:28px;color:{NAVYT};'>{chr(65+i)}</div>"
                  f"<div style=\"font-family:Inter;font-weight:800;font-size:34px;line-height:1.05;letter-spacing:-.8px;color:{NAVYT};\">{option}</div></div>")
-    pencil = (f"<div style='position:absolute;right:66px;top:300px;width:34px;height:430px;background:{AMBER};transform:rotate(12deg);'></div>"
-              f"<div style='position:absolute;right:66px;top:724px;width:34px;height:40px;background:#FBF7EE;clip-path:polygon(0 0,100% 0,50% 100%);transform:rotate(12deg);'></div>")
-    cta = (f"<div style=\"position:absolute;left:142px;bottom:36px;font-family:'DM Sans';font-weight:900;font-size:24px;"
+    teeth = "".join("<div style='width:28px;height:26px;background:#FBF7EE;clip-path:polygon(0 0,100% 0,50% 100%);'></div>"
+                    for _ in range(28))
+    tear = f"<div style='position:absolute;left:0;top:782px;width:772px;display:flex;'>{teeth}</div>"
+    slip = (f"<div style='position:absolute;left:92px;top:182px;width:772px;height:782px;background:#FBF7EE;"
+            f"box-shadow:0 34px 74px rgba(0,0,0,.42);transform:rotate(-1.2deg);'>"
+            f"{serial}{rule}{hook}{sub}{rows}{tear}</div>")
+
+    cta = (f"<div style=\"position:absolute;left:142px;bottom:30px;font-family:'DM Sans';font-weight:900;font-size:24px;"
            f"color:{AMBER};\">{idea.get('cta','Start at internwise.co.uk')}</div>")
-    return (bg + pencil + paper + tear + serial + rule + hook + sub + rows
-            + L.logo_tl() + cta)
+    return bg + pencil + slip + L.logo_tl() + cta
 
 
 def w_dial(idea):
@@ -442,9 +460,9 @@ def w_stickies(idea):
     tray = (f"<div style='position:absolute;left:54px;bottom:54px;right:54px;height:26px;background:#D8D2C4;'></div>"
             f"<div style='position:absolute;left:640px;bottom:62px;width:170px;height:16px;border-radius:8px;background:{CORAL};'></div>"
             f"<div style='position:absolute;left:826px;bottom:62px;width:130px;height:16px;border-radius:8px;background:{NAVYT};'></div>")
-    hook = (f"<div style='position:absolute;left:100px;top:160px;width:600px;'>"
+    hook = (f"<div style='position:absolute;left:100px;top:190px;width:600px;'>"
             + L.hero(idea['hook'], "highlight", NAVYT, NAVYT, hi=AMBER, size=56, width=600) + "</div>")
-    sub = (f"<div style=\"position:absolute;left:102px;top:430px;width:520px;font-family:'DM Sans';font-weight:700;"
+    sub = (f"<div style=\"position:absolute;left:102px;top:456px;width:520px;font-family:'DM Sans';font-weight:700;"
            f"font-size:26px;line-height:1.28;color:#6F6350;\">{idea.get('subhead','')}</div>")
     notes = ""
     spec = [(96, 556, -3.4, AMBER), (396, 592, 2.6, GREEN), (690, 548, -1.8, CORAL)]
@@ -455,7 +473,11 @@ def w_stickies(idea):
                   f"<div style=\"font-family:'DM Sans';font-weight:900;font-size:18px;color:{NAVYT};letter-spacing:4px;opacity:.72;\">{chr(65+i)}</div>"
                   f"<div style=\"margin-top:14px;font-family:Inter;font-weight:800;font-size:34px;line-height:1.08;"
                   f"letter-spacing:-.9px;color:{NAVYT};\">{option}</div></div>")
-    return bg + tray + _logo_dark() + hook + sub + notes + _comment_prompt(100, 904)
+    # The whiteboard's inner panel starts at 54px. At the uniform logo height and
+    # left:56/top:44 the mark straddled the 14px frame border with no clear space,
+    # so here it is sized down and inset to sit properly within the panel.
+    return (bg + tray + _logo_dark(left=98, top=92, h=70) + hook + sub + notes
+            + _comment_prompt(100, 904))
 
 
 def w_bars(idea):

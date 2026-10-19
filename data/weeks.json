@@ -8770,7 +8770,7 @@
       "id": "week21",
       "label": "Week 21",
       "weekCommencing": "2026-10-19",
-      "builtAt": 1792397751,
+      "builtAt": 1792407484,
       "posts": [
         {
           "id": "week21-mon-quote",
@@ -8932,7 +8932,11 @@
             "points": null,
             "cta": "Transform your CV at internwise.co.uk"
           },
-          "world": "navy"
+          "world": "navy",
+          "poses": {
+            "cover": "nuno_cv_6",
+            "cta": "nuno_dothis_5"
+          }
         },
         {
           "id": "week21-tue-quote",
@@ -9094,7 +9098,11 @@
             "points": null,
             "cta": "Find more guidance at internwise.co.uk"
           },
-          "world": "plum"
+          "world": "plum",
+          "poses": {
+            "cover": "nuno_howto_4",
+            "cta": "nuno_dothis_1"
+          }
         },
         {
           "id": "week21-wed-quote",
@@ -9256,7 +9264,11 @@
             "points": null,
             "cta": "Ready for replies? Visit internwise.co.uk."
           },
-          "world": "teal"
+          "world": "teal",
+          "poses": {
+            "cover": "nuno_cv_8",
+            "cta": "nuno_phone_2"
+          }
         },
         {
           "id": "week21-thu-quote",
