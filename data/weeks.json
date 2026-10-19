@@ -8770,7 +8770,7 @@
       "id": "week21",
       "label": "Week 21",
       "weekCommencing": "2026-10-19",
-      "builtAt": 1792407484,
+      "builtAt": 1792413238,
       "posts": [
         {
           "id": "week21-mon-quote",
@@ -9605,6 +9605,68 @@
               "x": [
                 "#ukjobs",
                 "#internships"
+              ]
+            }
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internwise",
+              "#ukjobs",
+              "#graduatejobs",
+              "#internships",
+              "#earlycareers"
+            ],
+            "linkedin": [
+              "#ukjobmarket",
+              "#graduatejobs",
+              "#internships"
+            ],
+            "x": [
+              "#ukjobs",
+              "#graduatejobs"
+            ]
+          }
+        },
+        {
+          "id": "week21-tue-news",
+          "day": "Tue 20 Oct",
+          "lane": "news",
+          "title": "UK Aims to Lead in Global Innovation",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "The UK is on a mission to become the leading nation in innovation. This ambition involves enhancing graduate recruitment and fostering the next wave of leaders. For students and graduates, this signals a potential increase in opportunities within pioneering fields and the chance to contribute to groundbreaking work.\n\nUnderstanding this shift is crucial for those entering the job market. It highlights the importance of being adaptable and ready to engage with new technologies and ideas. Graduates should focus on building skills that align with these emerging sectors.\n\nInternships play a vital role here. They offer practical experience and exposure to innovative environments, giving you a competitive edge. By engaging in internships, you can better position yourself for future roles in a rapidly evolving job market.\n\nSource: WonkHE.",
+          "hashtags": [
+            "#internwise",
+            "#ukjobs",
+            "#graduatejobs",
+            "#internships",
+            "#earlycareers"
+          ],
+          "captions": {
+            "ig-fb": "The UK is on a mission to become the leading nation in innovation. This ambition involves enhancing graduate recruitment and fostering the next wave of leaders. For students and graduates, this signals a potential increase in opportunities within pioneering fields and the chance to contribute to groundbreaking work.\n\nUnderstanding this shift is crucial for those entering the job market. It highlights the importance of being adaptable and ready to engage with new technologies and ideas. Graduates should focus on building skills that align with these emerging sectors.\n\nInternships play a vital role here. They offer practical experience and exposure to innovative environments, giving you a competitive edge. By engaging in internships, you can better position yourself for future roles in a rapidly evolving job market.\n\nSource: WonkHE.",
+            "linkedin": "The UK's drive to become the world's foremost innovation nation is making waves. This initiative is designed to strengthen graduate recruitment and support the development of emerging leaders. For university students and recent graduates, this presents a wealth of opportunities in forward-thinking fields and the potential to be part of pivotal projects.\n\nThis development emphasizes the need for graduates to stay agile and open to new experiences. As the job market shifts toward innovation, equipping yourself with relevant skills is more important than ever. Adapting to these changes can pave the way for rewarding career paths.\n\nInternships are a stepping stone into these innovative sectors. They provide invaluable hands-on experience and a glimpse into the future of work. By taking on internships, you can gain the insights and skills needed to thrive in a competitive landscape.\n\nSource: WonkHE.",
+            "x": "The UK aims to lead in global innovation, boosting graduate jobs in new sectors. Students should focus on building skills for these roles. Internships offer essential experience and insights. (Source: WonkHE)",
+            "threads": "The UK is aiming to be the world's top innovation hub, enhancing graduate recruitment and leadership. For students, this means more roles in dynamic sectors. Internships offer the experience needed to thrive. Learn more at www.internwise.co.uk",
+            "hashtags": {
+              "ig-fb": [
+                "#ukinnovation",
+                "#graduatejobs",
+                "#careergrowth",
+                "#internships",
+                "#emergingleaders"
+              ],
+              "linkedin": [
+                "#innovation",
+                "#graduateopportunities",
+                "#careerdevelopment"
+              ],
+              "x": [
+                "#ukinnovation",
+                "#graduatecareer"
               ]
             }
           },
