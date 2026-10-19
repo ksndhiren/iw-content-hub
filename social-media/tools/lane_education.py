@@ -62,13 +62,13 @@ COVER_POOL = ["nuno_cv", "nuno_cv_2", "nuno_cv_3",
 # they must NOT be in the general fallback pool or they land on unrelated topics
 # (e.g. a "welcoming" pose on a Graduate Schemes cover). Kept only in TOPIC_POSES.
 CTA_POOL = ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1",
-            "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5"]   # + week21 fresh cutouts
+            "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5", "nuno_howto_4"]   # + week21 fresh cutouts
 CTA_TOPIC_POSES = {
     "linkedin": ["nuno_phone", "nuno_tablet", "nuno_phone_2"],
     "tech": ["nuno_tablet", "nuno_tablet_cover", "nuno_phone"],
     "networking": ["nuno_phone", "nuno_authority_4", "nuno_authority_1"],
-    "apply": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5"],
-    "cv": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5"],
+    "apply": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5", "nuno_phone_2", "nuno_howto_4"],
+    "cv": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5", "nuno_phone_2", "nuno_howto_4"],
     "bullet_cv": ["nuno_cv_5", "nuno_cv_2", "nuno_cv_3"],
     "job_description": ["nuno_cv_3"],
     "followup": ["nuno_followup_phone", "nuno_phone", "nuno_tablet"],
@@ -88,7 +88,7 @@ TOPIC_POSES = {
     "cv":         ["nuno_cv_proof_highlight", "nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4", "nuno_cvpile", "nuno_cv_6", "nuno_cv_8"],
     "apply":      ["nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4", "nuno_cv_6", "nuno_cv_8"],
     "interview":  ["nuno_interview_door", "nuno_authority_4", "nuno_authority_1", "nuno_authority_2", "nuno_authority_3"],
-    "confidence": ["nuno_authority_4", "nuno_authority_1", "nuno_authority_2", "nuno_authority_3"],
+    "confidence": ["nuno_authority_4", "nuno_authority_1", "nuno_authority_2", "nuno_authority_3", "nuno_howto_4"],
     "plan":       ["nuno_planning_1", "nuno_planning_2", "nuno_planning_3"],
     "mistake":    ["nuno_thoughtful_1", "nuno_thoughtful_2", "nuno_thoughtful_3"],
     "think":      ["nuno_thoughtful_1", "nuno_thoughtful_2", "nuno_thoughtful_3"],
