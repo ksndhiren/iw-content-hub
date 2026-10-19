@@ -1,7 +1,9 @@
 """Blog re-share - schedules internwise.com/blog posts to socials.
 
 Daily mode (--daily, how the scheduled workflow runs): once a day, share ONE
-article to LinkedIn, Facebook and Google Business Profile at 10:30 UK. The
+article to LinkedIn, Facebook and Google Business Profile at 10:30 UK. If that
+slot has already passed when the run fires (GitHub delays scheduled workflows
+by hours), the post rolls to tomorrow's 10:30 rather than going out now. The
 article chosen is the newest one, published BEFORE today, not yet on every
 target network. Skipping today's posts means the run never has to wait on an
 article that may not be up yet when the cron fires (--include-today overrides).
@@ -137,20 +139,38 @@ def active_networks():
     return set(d.get("activeSocialAccounts", []))
 
 
-def today_slot_iso(hhmm=BLOG_TIME_UK, idx=0, stagger_min=30):
-    """Today's blog slot in UTC, or None if it has already passed (then we post
-    immediately rather than scheduling into the past).
+def today_slot_iso(hhmm=BLOG_TIME_UK, idx=0, stagger_min=30, roll_forward=True):
+    """The next blog slot in UTC: today's if it is still ahead, otherwise
+    tomorrow's.
+
+    GitHub runs scheduled workflows on a best-effort queue and routinely fires
+    this job hours late, so "today at 10:30 UK" is frequently already behind us
+    by the time we get here. This used to return None, and the caller then
+    posted IMMEDIATELY - so every daily share went out at whatever random hour
+    the runner happened to start, and the 10:30 slot was silently never used.
+    Rolling to tomorrow keeps the posting time honest; the article is a
+    re-share from a backlog, so a few hours later costs nothing.
 
     `idx` staggers extra articles by `stagger_min` minutes. The daily cron only
     ever sends one, but a manual run with --limit > 1 should not stack them all
-    on the same minute."""
+    on the same minute. Pass roll_forward=False to get the old behaviour (None
+    when the slot has passed, meaning post now).
+    """
     hh, mm = hhmm.split(":")
-    when_uk = datetime.datetime.combine(
-        datetime.date.today(), datetime.time(int(hh), int(mm)),
-        tzinfo=ZoneInfo("Europe/London")) + datetime.timedelta(minutes=idx * stagger_min)
-    if when_uk <= datetime.datetime.now(datetime.timezone.utc):
-        return None
-    return when_uk.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    stagger = datetime.timedelta(minutes=idx * stagger_min)
+    now = datetime.datetime.now(datetime.timezone.utc)
+    for day_offset in (0, 1):
+        when_uk = datetime.datetime.combine(
+            datetime.date.today() + datetime.timedelta(days=day_offset),
+            datetime.time(int(hh), int(mm)), tzinfo=ZoneInfo("Europe/London")) + stagger
+        if when_uk > now:
+            if day_offset:
+                print(f"  (today's {hhmm} UK slot has passed; rolling to tomorrow "
+                      "rather than posting now)")
+            return when_uk.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        if not roll_forward:
+            return None
+    return None
 
 
 def pick_daily(nets, shared, count=1, pool=200, day_prior=True):

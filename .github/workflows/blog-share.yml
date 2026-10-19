@@ -23,7 +23,12 @@ name: Blog Re-share
 
 on:
   schedule:
-    - cron: "0 8 * * *"       # daily 08:00 UTC; the post itself lands at 10:30 UK
+    # 02:17 UTC. GitHub queues scheduled workflows best-effort and this job was
+    # routinely firing 4-7 hours after an "0 8" cron - past the 09:30 UTC (10:30
+    # BST) slot every single day, so every share went out immediately at a random
+    # hour instead. Starting this early leaves 7h+ of headroom, and an off-the-hour
+    # minute avoids the most contended slot on the shared runners.
+    - cron: "17 2 * * *"      # daily 02:17 UTC; the post itself lands at 10:30 UK
   workflow_dispatch:
     inputs:
       limit:
