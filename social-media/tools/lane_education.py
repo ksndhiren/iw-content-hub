@@ -811,10 +811,18 @@ def w_memo(copy, week_id='adhoc'):
     label = (f"<div style='position:absolute;left:58px;top:176px;height:46px;padding:0 20px;background:{AMBER};"
              f"transform:rotate(-1.5deg);display:flex;align-items:center;box-shadow:8px 8px 0 rgba(21,39,67,.12);'>"
              f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:19px;color:{NAVYT};letter-spacing:3px;\">{copy.get('eyebrow','SEARCH RESET')[:22].upper()}</span></div>")
+    # The headline is split so the LAST word carries the serif/highlight emphasis
+    # (the approved word-level treatment). Both halves come from the post - this
+    # world used to hardcode "Stop Your Job Search / Chaos", which contradicted
+    # the eyebrow and bullets on any other topic.
+    _hl = (copy.get("headline") or "Stop Your Job Search Chaos").split()
+    _lead, _emph = " ".join(_hl[:-1]) or _hl[-1], _hl[-1] if len(_hl) > 1 else ""
+    _emph_size = 116 if len(_emph) <= 7 else (92 if len(_emph) <= 10 else 74)
     head = (f"<div style='position:absolute;left:58px;top:250px;width:660px;'>"
-            f"<div style=\"font-family:Inter;font-weight:950;font-size:72px;line-height:.96;letter-spacing:-2.5px;color:{NAVYT};\">Stop Your Job Search</div>"
-            f"<div style=\"display:inline-block;margin-top:4px;font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:116px;line-height:.9;color:{CORAL};"
-            f"background:linear-gradient(transparent 62%,{AMBER} 62%);padding:0 10px;transform:rotate(-2deg);\">Chaos</div></div>")
+            f"<div style=\"font-family:Inter;font-weight:950;font-size:72px;line-height:.96;letter-spacing:-2.5px;color:{NAVYT};\">{_lead}</div>"
+            + (f"<div style=\"display:inline-block;margin-top:4px;font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:{_emph_size}px;line-height:.9;color:{CORAL};"
+               f"background:linear-gradient(transparent 62%,{AMBER} 62%);padding:0 10px;transform:rotate(-2deg);\">{_emph}</div>" if _emph else "")
+            + "</div>")
     scribble = (f"<svg style='position:absolute;left:72px;top:466px;width:500px;height:92px;' viewBox='0 0 500 92' fill='none'>"
                 f"<path d='M8 74 C110 8,176 104,276 30 S420 18,492 62' stroke='{CORAL}' stroke-width='12' stroke-linecap='round' opacity='.75'/>"
                 f"<path d='M22 54 C118 14,178 84,270 26 S398 20,474 50' stroke='{AMBER}' stroke-width='5' stroke-linecap='round'/></svg>")
@@ -834,8 +842,11 @@ def w_memo(copy, week_id='adhoc'):
     alert = (f"<div style='position:absolute;right:54px;top:230px;width:248px;height:248px;border-radius:50%;border:18px solid {AMBER};"
              f"display:flex;align-items:center;justify-content:center;'>"
              f"<div style=\"font-family:Inter;font-weight:950;font-size:116px;color:#fff;line-height:1;\">?</div></div>")
+    # Side pull: a real line from the post (a 5th bullet beyond the four board
+    # cards), never a hardcoded sentence. Empty when the post has nothing spare.
+    _pull = (copy.get("pull") or (pts[4] if len(pts) > 4 else "")).strip()
     side = (f"<div style=\"position:absolute;right:70px;top:790px;width:220px;font-family:'DM Sans';font-weight:900;font-size:28px;"
-            f"line-height:1.08;color:#fff;\">Chaos ends when every application has a stage.</div>")
+            f"line-height:1.08;color:#fff;\">{_pull}</div>") if _pull else ""
     cta = (f"<div style='position:absolute;left:58px;bottom:56px;height:62px;padding:0 26px;border-radius:31px;background:{NAVYT};"
            f"display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:27px;color:#fff;'>{copy.get('cta','Organise at internwise.co.uk')}</div>")
     return bg + noise + navy + wire + logo + label + head + scribble + board + alert + side + cta
