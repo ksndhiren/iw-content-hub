@@ -26,6 +26,10 @@ FRESH_DAYS = 30
 # asks for a tone; we pick the freshest candidate that carries it (falling back
 # to the full candidate list if none match, so a render never fails).
 TONES = {
+    # week21 additions (cut from the Gemini Solo/CV sets)
+    "nuno_dothis_5": {"action", "direct"}, "nuno_cv_6": {"neutral", "explain"},
+    "nuno_howto_4": {"neutral", "explain"}, "nuno_cv_8": {"neutral", "explain"},
+    "nuno_phone_2": {"neutral", "positive"},
     "nuno_thoughtful_1": {"serious", "thoughtful"}, "nuno_thoughtful_2": {"serious", "thoughtful"},
     "nuno_thoughtful_3": {"serious", "thoughtful"},
     "nuno_authority_1": {"confident", "serious"}, "nuno_authority_2": {"confident", "serious"},

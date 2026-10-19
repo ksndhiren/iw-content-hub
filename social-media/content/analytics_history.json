@@ -1047,7 +1047,266 @@
           ]
         }
       }
+    },
+    {
+      "capturedAt": "2026-09-28",
+      "windowDays": 28,
+      "linkedin": {},
+      "gsc": {
+        "instagram": {
+          "clicks": 8,
+          "impressions": 2659,
+          "topQueries": [
+            {
+              "q": "internwise",
+              "impressions": 259,
+              "clicks": 0,
+              "position": "7.52"
+            },
+            {
+              "q": "home staging internship",
+              "impressions": 85,
+              "clicks": 0,
+              "position": "5.85"
+            },
+            {
+              "q": "porsche founder",
+              "impressions": 73,
+              "clicks": 0,
+              "position": "3.77"
+            },
+            {
+              "q": "interwise",
+              "impressions": 36,
+              "clicks": 0,
+              "position": "19.44"
+            },
+            {
+              "q": "internwise uk",
+              "impressions": 28,
+              "clicks": 0,
+              "position": "6.89"
+            },
+            {
+              "q": "intern wise",
+              "impressions": 18,
+              "clicks": 0,
+              "position": "9.83"
+            },
+            {
+              "q": "founder of porsche",
+              "impressions": 12,
+              "clicks": 0,
+              "position": "3.92"
+            },
+            {
+              "q": "little bit cut off career",
+              "impressions": 11,
+              "clicks": 0,
+              "position": "9.55"
+            },
+            {
+              "q": "is internwise legit",
+              "impressions": 10,
+              "clicks": 0,
+              "position": "9.7"
+            },
+            {
+              "q": "internwise.co.uk",
+              "impressions": 7,
+              "clicks": 0,
+              "position": "7.71"
+            },
+            {
+              "q": "uk construction news",
+              "impressions": 6,
+              "clicks": 0,
+              "position": "5.17"
+            },
+            {
+              "q": "job application follow up email",
+              "impressions": 5,
+              "clicks": 0,
+              "position": "10.8"
+            },
+            {
+              "q": "internswipe",
+              "impressions": 5,
+              "clicks": 0,
+              "position": "72.4"
+            },
+            {
+              "q": "site:instagram.com marketing \"@gmail.com\" \"london\"",
+              "impressions": 4,
+              "clicks": 0,
+              "position": "60.5"
+            },
+            {
+              "q": "average time to find a job uk",
+              "impressions": 3,
+              "clicks": 0,
+              "position": "6.33"
+            },
+            {
+              "q": "teamwork skills cv",
+              "impressions": 3,
+              "clicks": 0,
+              "position": "8.33"
+            },
+            {
+              "q": "cover letter opening paragraph",
+              "impressions": 3,
+              "clicks": 0,
+              "position": "11.33"
+            },
+            {
+              "q": "teamwork cv",
+              "impressions": 3,
+              "clicks": 0,
+              "position": "11.33"
+            },
+            {
+              "q": "inspiring interns",
+              "impressions": 3,
+              "clicks": 0,
+              "position": "76.33"
+            },
+            {
+              "q": "porche founder",
+              "impressions": 2,
+              "clicks": 0,
+              "position": "1"
+            }
+          ]
+        },
+        "youtube": {
+          "clicks": 10,
+          "impressions": 13649,
+          "topQueries": [
+            {
+              "q": "does internship count as work experience",
+              "impressions": 215,
+              "clicks": 0,
+              "position": "7.81"
+            },
+            {
+              "q": "about me section on resume",
+              "impressions": 131,
+              "clicks": 0,
+              "position": "25.09"
+            },
+            {
+              "q": "do internships count as work experience",
+              "impressions": 117,
+              "clicks": 0,
+              "position": "8.77"
+            },
+            {
+              "q": "resume contact information",
+              "impressions": 104,
+              "clicks": 0,
+              "position": "67.53"
+            },
+            {
+              "q": "internwise",
+              "impressions": 94,
+              "clicks": 0,
+              "position": "7.47"
+            },
+            {
+              "q": "creative resume",
+              "impressions": 93,
+              "clicks": 0,
+              "position": "84.18"
+            },
+            {
+              "q": "does an internship count as employment",
+              "impressions": 81,
+              "clicks": 0,
+              "position": "9.67"
+            },
+            {
+              "q": "career goals",
+              "impressions": 80,
+              "clicks": 0,
+              "position": "64.17"
+            },
+            {
+              "q": "does an internship count as work experience",
+              "impressions": 78,
+              "clicks": 0,
+              "position": "8.6"
+            },
+            {
+              "q": "is internship considered work experience",
+              "impressions": 71,
+              "clicks": 0,
+              "position": "7.08"
+            },
+            {
+              "q": "creative cv",
+              "impressions": 69,
+              "clicks": 0,
+              "position": "52.28"
+            },
+            {
+              "q": "how to make a cv with reference of contact",
+              "impressions": 63,
+              "clicks": 0,
+              "position": "2.94"
+            },
+            {
+              "q": "is internship considered as work experience",
+              "impressions": 58,
+              "clicks": 0,
+              "position": "13.26"
+            },
+            {
+              "q": "is an internship a job",
+              "impressions": 53,
+              "clicks": 0,
+              "position": "10.53"
+            },
+            {
+              "q": "digital presence",
+              "impressions": 46,
+              "clicks": 0,
+              "position": "53.67"
+            },
+            {
+              "q": "about me in cv",
+              "impressions": 45,
+              "clicks": 0,
+              "position": "35.04"
+            },
+            {
+              "q": "new job photos",
+              "impressions": 45,
+              "clicks": 0,
+              "position": "35.6"
+            },
+            {
+              "q": "portfolio",
+              "impressions": 41,
+              "clicks": 0,
+              "position": "97.49"
+            },
+            {
+              "q": "about me cv",
+              "impressions": 39,
+              "clicks": 0,
+              "position": "23.92"
+            },
+            {
+              "q": "kreativt cv",
+              "impressions": 38,
+              "clicks": 0,
+              "position": "77.47"
+            }
+          ]
+        }
+      }
     }
   ],
-  "generatedAt": "2026-09-13T19:17:36Z"
+  "generatedAt": "2026-10-19T05:57:56Z"
 }

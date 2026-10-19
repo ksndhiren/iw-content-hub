@@ -234,6 +234,46 @@
       "theme": "progress",
       "cta": "Make progress one step at a time at internwise.co.uk",
       "used": null
+    },
+    {
+      "id": "q031",
+      "text": "If there is no struggle, there is no progress.",
+      "author": "Frederick Douglass",
+      "theme": "persistence",
+      "cta": "Keep going - find your next step at internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q032",
+      "text": "I attribute my success to this: I never gave or took any excuse.",
+      "author": "Florence Nightingale",
+      "theme": "ownership",
+      "cta": "Own the next application - internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q033",
+      "text": "Chance favours only the prepared mind.",
+      "author": "Louis Pasteur",
+      "theme": "preparation",
+      "cta": "Be ready when it lands - internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q034",
+      "text": "Great works are performed not by strength but by perseverance.",
+      "author": "Samuel Johnson",
+      "theme": "persistence",
+      "cta": "One more application - internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q035",
+      "text": "The secret of success is constancy to purpose.",
+      "author": "Benjamin Disraeli",
+      "theme": "focus",
+      "cta": "Pick a direction and go - internwise.co.uk",
+      "used": null
     }
   ]
 }

@@ -22,6 +22,228 @@
   },
   "topics": [
     {
+      "id": "gsc-does-an-internship-count-as-work-experience",
+      "title": "Does An Internship Count As Work Experience?",
+      "source_post": "gsc-search-demand",
+      "source_cluster": "internship work experience employment resume cv",
+      "signal_score": 99.0,
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "Yes, your internship counts. Here is how to write it so it reads that way.",
+        "Stop listing your internship under extras. It belongs in experience."
+      ],
+      "promise": "Here is exactly where an internship goes on your CV and how to word it.",
+      "proof_points": [
+        "An internship is work experience. Put it in your experience section, not under hobbies.",
+        "Lead with what you delivered, not how long you were there.",
+        "Two weeks of real output beats six months of shadowing on paper."
+      ],
+      "core_takeaway": "Write the internship like a job: role, dates, one line of output.",
+      "cta": "Save this before your next application.",
+      "source_signals": [
+        {
+          "source": "gsc_search_demand",
+          "title": "planning_signals.json searchDemandTopics",
+          "url": "",
+          "score": 99.0,
+          "meta": {
+            "capturedAt": "2026-09-28"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gsc-about-me-section-on-cv",
+      "title": "Your CV About Me Section Says Nothing",
+      "source_post": "gsc-search-demand",
+      "source_cluster": "about me section resume cv summary profile",
+      "signal_score": 98.0,
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "Your About Me says you are a motivated team player. So does everyone else.",
+        "Rewrite your CV About Me in one line that only you could write."
+      ],
+      "promise": "Turn a generic profile paragraph into three lines a recruiter remembers.",
+      "proof_points": [
+        "Traits are claims. Evidence is a claim with a number attached.",
+        "Name the field, the level and one proof point. Nothing else.",
+        "If another applicant could copy your About Me word for word, rewrite it."
+      ],
+      "core_takeaway": "One sentence on what you do, one on proof, one on what you want next.",
+      "cta": "Try it on your own CV tonight.",
+      "source_signals": [
+        {
+          "source": "gsc_search_demand",
+          "title": "planning_signals.json searchDemandTopics",
+          "url": "",
+          "score": 98.0,
+          "meta": {
+            "capturedAt": "2026-09-28"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gsc-career-goals-on-your-cv",
+      "title": "Career Goals Without The Waffle",
+      "source_post": "gsc-search-demand",
+      "source_cluster": "career goals long term goals cv resume objective",
+      "signal_score": 97.0,
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "Long term career goals is not a personality test. It is a relevance test.",
+        "Your career goal should point at the job you are applying for."
+      ],
+      "promise": "Write a career goal that reads like direction, not a wish.",
+      "proof_points": [
+        "A goal that fits any job tells the reader nothing about this one.",
+        "Name the field and the next step you want, not a five year fantasy.",
+        "Tie the goal to something already on your CV so it looks earned."
+      ],
+      "core_takeaway": "Say where you are going and what you have already done to get there.",
+      "cta": "Save this for your next tailored application.",
+      "source_signals": [
+        {
+          "source": "gsc_search_demand",
+          "title": "planning_signals.json searchDemandTopics",
+          "url": "",
+          "score": 97.0,
+          "meta": {
+            "capturedAt": "2026-09-28"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gsc-your-digital-presence",
+      "title": "Your Digital Presence Is Already Being Checked",
+      "source_post": "gsc-search-demand",
+      "source_cluster": "digital presence online profile search",
+      "signal_score": 94.0,
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 5,
+      "discussion": 4,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "Someone searched your name before they replied. What did they find?",
+        "Your digital presence is part of your application whether you built it or not."
+      ],
+      "promise": "Three checks that make your name safe to search before an employer does it.",
+      "proof_points": [
+        "Search your own name in a private window and look at the first five results.",
+        "One live, current profile beats four half finished ones.",
+        "Lock down anything you would not want read out in an interview."
+      ],
+      "core_takeaway": "Make the first result about you something you chose.",
+      "cta": "Search your name tonight and fix the first result.",
+      "source_signals": [
+        {
+          "source": "gsc_search_demand",
+          "title": "digital presence",
+          "url": "",
+          "score": 60,
+          "meta": {
+            "capturedAt": "2026-09-28"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gsc-cv-contact-information",
+      "title": "The Contact Line That Loses You Replies",
+      "source_post": "gsc-search-demand",
+      "source_cluster": "resume contact information cv contact details reference",
+      "signal_score": 96.0,
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "Recruiters tried to reply. Your contact line stopped them.",
+        "Four lines of contact detail. Most CVs get two of them wrong."
+      ],
+      "promise": "A five second fix at the top of your CV that protects every reply.",
+      "proof_points": [
+        "A professional email, a working phone number, your city, one live link.",
+        "No full postal address, no date of birth, no photo.",
+        "Check the link actually opens on a phone before you send it."
+      ],
+      "core_takeaway": "Name, city, phone, professional email, one live link. Then stop.",
+      "cta": "Check yours now, it takes a minute.",
+      "source_signals": [
+        {
+          "source": "gsc_search_demand",
+          "title": "planning_signals.json searchDemandTopics",
+          "url": "",
+          "score": 96.0,
+          "meta": {
+            "capturedAt": "2026-09-28"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gsc-creative-cv-or-clear-cv",
+      "title": "Creative CV Or Clear CV?",
+      "source_post": "gsc-search-demand",
+      "source_cluster": "creative resume creative cv design template",
+      "signal_score": 95.0,
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "hook_candidates": [
+        "A creative CV can cost you the shortlist before a human sees it.",
+        "Design is not the problem. Unreadable structure is."
+      ],
+      "promise": "When a designed CV helps you, and when it quietly gets you filtered out.",
+      "proof_points": [
+        "Most CVs are read by a parser first. Columns and graphics confuse it.",
+        "Creative fields want a portfolio link, not a decorated CV.",
+        "Keep one clean version for applications and one designed version for show."
+      ],
+      "core_takeaway": "Send the clean version, link the creative one.",
+      "cta": "Which one are you sending? Tell us below.",
+      "source_signals": [
+        {
+          "source": "gsc_search_demand",
+          "title": "planning_signals.json searchDemandTopics",
+          "url": "",
+          "score": 95.0,
+          "meta": {
+            "capturedAt": "2026-09-28"
+          }
+        }
+      ]
+    },
+    {
       "id": "auto-the-interview-answer-that-sounds-too-generic",
       "title": "The Interview Answer That Sounds Too Generic",
       "source_post": "automated-topic-engine",
@@ -67,7 +289,7 @@
         },
         {
           "source": "reddit_rss",
-          "title": "Can\u2019t Get A Job",
+          "title": "Can’t Get A Job",
           "url": "https://www.reddit.com/r/jobs/comments/1wu732w/cant_get_a_job/",
           "score": 85.0,
           "meta": {
@@ -204,7 +426,7 @@
         },
         {
           "source": "reddit_rss",
-          "title": "I feel like my volunteer experience isn\u2019t convincing enough",
+          "title": "I feel like my volunteer experience isn’t convincing enough",
           "url": "https://www.reddit.com/r/jobs/comments/1w5tkky/i_feel_like_my_volunteer_experience_isnt/",
           "score": 57.0,
           "meta": {
@@ -213,7 +435,7 @@
         },
         {
           "source": "reddit_rss",
-          "title": "McDonald\u2019s experience title change for Burger King interview, is this a problem?",
+          "title": "McDonald’s experience title change for Burger King interview, is this a problem?",
           "url": "https://www.reddit.com/r/UKJobs/comments/1t31arl/mcdonalds_experience_title_change_for_burger_king/",
           "score": 53.9,
           "meta": {
@@ -314,7 +536,7 @@
       "source_signals": [
         {
           "source": "reddit_rss",
-          "title": "Anyone else stuck between being \u201ctoo experienced\u201d and \u201cnot experienced enough\u201d?",
+          "title": "Anyone else stuck between being “too experienced” and “not experienced enough”?",
           "url": "https://www.reddit.com/r/jobs/comments/1x78j29/anyone_else_stuck_between_being_too_experienced/",
           "score": 85.0,
           "meta": {
@@ -364,82 +586,6 @@
           "score": 35.2,
           "meta": {
             "feed": "UK jobs - internship CV"
-          }
-        }
-      ]
-    },
-    {
-      "id": "auto-graduated-summa-cum-laude-in-2024-still-can-t-land-a-full-time-j",
-      "title": "Graduated summa cum laude in 2024, still can\u2019t land a full-time job. Sho",
-      "source_post": "automated-topic-engine",
-      "source_cluster": "graduate-jobs",
-      "signal_score": 65.7,
-      "pain": 4,
-      "specificity": 4,
-      "curiosity": 5,
-      "utility": 5,
-      "timeliness": 4,
-      "discussion": 4,
-      "brand_fit": 5,
-      "hook_candidates": [
-        "Most students are trying to fix the wrong job-search problem.",
-        "If you are stuck on graduate jobs, watch this before your next application."
-      ],
-      "promise": "Let me turn this common job-search problem into a practical next step.",
-      "proof_points": [
-        "Name the exact problem before choosing the fix.",
-        "Make one visible improvement instead of rewriting everything.",
-        "Track the result so you know whether the advice worked."
-      ],
-      "core_takeaway": "Make the next action specific enough that you can do it today.",
-      "cta": "Save this for your next application session.",
-      "source_signals": [
-        {
-          "source": "reddit_rss",
-          "title": "Graduated summa cum laude in 2024, still can\u2019t land a full-time job. Should I switch career fields?",
-          "url": "https://www.reddit.com/r/jobs/comments/1x6ox4e/graduated_summa_cum_laude_in_2024_still_cant_land/",
-          "score": 83.0,
-          "meta": {
-            "feed": "Jobs - graduate rejection"
-          }
-        },
-        {
-          "source": "google_trends_serpapi",
-          "title": "graduate schemes 2027",
-          "url": "",
-          "score": 49.0,
-          "meta": {
-            "seed": "graduate jobs",
-            "rising_value": 3550.0
-          }
-        },
-        {
-          "source": "google_trends_serpapi",
-          "title": "graduate jobs 2026",
-          "url": "",
-          "score": 49.0,
-          "meta": {
-            "seed": "graduate jobs",
-            "rising_value": 750.0
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "Graduation into cyber, I feel a bit late",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1n0zrh0/graduation_into_cyber_i_feel_a_bit_late/",
-          "score": 47.3,
-          "meta": {
-            "feed": "UK jobs - internship CV"
-          }
-        },
-        {
-          "source": "google_trends_serpapi",
-          "title": "graduate schemes 2026",
-          "url": "",
-          "score": 25.0,
-          "meta": {
-            "seed": "graduate jobs",
-            "rising_value": 160.0
           }
         }
       ]
@@ -577,7 +723,7 @@
       "source_signals": [
         {
           "source": "youtube",
-          "title": "\ud83d\ude31 ChatGPT KILLED LinkedIn \ud83d\udd25 #shorts",
+          "title": "😱 ChatGPT KILLED LinkedIn 🔥 #shorts",
           "url": "https://www.youtube.com/watch?v=hDtSuF3gAQc",
           "score": 30.49,
           "meta": {

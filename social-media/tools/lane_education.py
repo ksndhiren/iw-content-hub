@@ -57,18 +57,18 @@ COVER_POOL = ["nuno_cv", "nuno_cv_2", "nuno_cv_3",
               "nuno_thoughtful_1", "nuno_thoughtful_2", "nuno_thoughtful_3",
               "nuno_authority_1", "nuno_authority_2", "nuno_authority_3", "nuno_authority_4",
               "nuno_planning_1", "nuno_planning_2", "nuno_planning_3",
-              "nuno_cvpile", "nuno_utility_3"]
+              "nuno_cvpile", "nuno_utility_3", "nuno_howto_4"]
 # NOTE: welcoming/offers/tablet cover poses are TOPIC-ONLY (networking/offer/tech) -
 # they must NOT be in the general fallback pool or they land on unrelated topics
 # (e.g. a "welcoming" pose on a Graduate Schemes cover). Kept only in TOPIC_POSES.
 CTA_POOL = ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1",
-            "nuno_dothis_4", "nuno_offers_4"]   # + week17 fresh cutouts
+            "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5"]   # + week21 fresh cutouts
 CTA_TOPIC_POSES = {
-    "linkedin": ["nuno_phone", "nuno_tablet"],
+    "linkedin": ["nuno_phone", "nuno_tablet", "nuno_phone_2"],
     "tech": ["nuno_tablet", "nuno_tablet_cover", "nuno_phone"],
     "networking": ["nuno_phone", "nuno_authority_4", "nuno_authority_1"],
-    "apply": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4"],
-    "cv": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4"],
+    "apply": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5"],
+    "cv": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5"],
     "bullet_cv": ["nuno_cv_5", "nuno_cv_2", "nuno_cv_3"],
     "job_description": ["nuno_cv_3"],
     "followup": ["nuno_followup_phone", "nuno_phone", "nuno_tablet"],
@@ -85,8 +85,8 @@ CTA_TOPIC_POSES = {
 TOPIC_POSES = {
     "bullet_cv":  ["nuno_cv_4"],
     "job_description": ["nuno_job_description"],
-    "cv":         ["nuno_cv_proof_highlight", "nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4", "nuno_cvpile"],
-    "apply":      ["nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4"],
+    "cv":         ["nuno_cv_proof_highlight", "nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4", "nuno_cvpile", "nuno_cv_6", "nuno_cv_8"],
+    "apply":      ["nuno_cv_5", "nuno_cv", "nuno_cv_2", "nuno_cv_3", "nuno_cv_4", "nuno_cv_6", "nuno_cv_8"],
     "interview":  ["nuno_interview_door", "nuno_authority_4", "nuno_authority_1", "nuno_authority_2", "nuno_authority_3"],
     "confidence": ["nuno_authority_4", "nuno_authority_1", "nuno_authority_2", "nuno_authority_3"],
     "plan":       ["nuno_planning_1", "nuno_planning_2", "nuno_planning_3"],
@@ -94,7 +94,7 @@ TOPIC_POSES = {
     "think":      ["nuno_thoughtful_1", "nuno_thoughtful_2", "nuno_thoughtful_3"],
     "skills":     ["nuno_utility_4", "nuno_utility_3", "nuno_planning_1", "nuno_planning_2"],
     # Cover-safe poses added week16 (compact, right-weighted, verified rembg-clean).
-    "linkedin":   ["nuno_phone", "nuno_tablet"],
+    "linkedin":   ["nuno_phone", "nuno_tablet", "nuno_phone_2"],
     "networking": ["nuno_authority_4", "nuno_authority_1", "nuno_authority_2"],
     "offer":      ["nuno_offers_cover"],
     "tech":       ["nuno_tablet_cover"],

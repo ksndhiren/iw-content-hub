@@ -1,249 +1,113 @@
 {
-  "generatedAt": "2026-09-13T19:17:36Z",
-  "capturedAt": "2026-09-13",
+  "generatedAt": "2026-10-19T05:57:56Z",
+  "capturedAt": "2026-09-28",
   "searchDemandTopics": [
     {
-      "query": "about me section on resume",
-      "impressions": 277,
-      "source": "youtube"
-    },
-    {
       "query": "does internship count as work experience",
-      "impressions": 248,
+      "impressions": 215,
       "source": "youtube"
     },
     {
-      "query": "resume contact information",
-      "impressions": 167,
+      "query": "about me section on resume",
+      "impressions": 131,
       "source": "youtube"
     },
     {
       "query": "do internships count as work experience",
-      "impressions": 160,
+      "impressions": 117,
       "source": "youtube"
     },
     {
-      "query": "career goals",
-      "impressions": 155,
-      "source": "youtube"
-    },
-    {
-      "query": "is internship considered work experience",
-      "impressions": 123,
-      "source": "youtube"
-    },
-    {
-      "query": "does an internship count as employment",
-      "impressions": 123,
+      "query": "resume contact information",
+      "impressions": 104,
       "source": "youtube"
     },
     {
       "query": "creative resume",
-      "impressions": 110,
-      "source": "youtube"
-    },
-    {
-      "query": "creative cv",
       "impressions": 93,
       "source": "youtube"
     },
     {
-      "query": "about me in cv",
-      "impressions": 88,
-      "source": "youtube"
-    },
-    {
       "query": "home staging internship",
-      "impressions": 84,
+      "impressions": 85,
       "source": "instagram"
     },
     {
+      "query": "does an internship count as employment",
+      "impressions": 81,
+      "source": "youtube"
+    },
+    {
+      "query": "career goals",
+      "impressions": 80,
+      "source": "youtube"
+    },
+    {
       "query": "does an internship count as work experience",
-      "impressions": 77,
-      "source": "youtube"
-    },
-    {
-      "query": "how to make a cv with reference of contact",
-      "impressions": 74,
-      "source": "youtube"
-    },
-    {
-      "query": "is internship considered as work experience",
-      "impressions": 69,
-      "source": "youtube"
-    },
-    {
-      "query": "long term career goals",
-      "impressions": 68,
-      "source": "youtube"
-    },
-    {
-      "query": "kreativt cv",
-      "impressions": 63,
-      "source": "youtube"
-    },
-    {
-      "query": "digital presence",
-      "impressions": 60,
-      "source": "youtube"
-    },
-    {
-      "query": "contact information in resume",
-      "impressions": 58,
-      "source": "youtube"
-    },
-    {
-      "query": "about me section in cv",
-      "impressions": 54,
-      "source": "youtube"
-    },
-    {
-      "query": "cv créatif",
-      "impressions": 51,
+      "impressions": 78,
       "source": "youtube"
     },
     {
       "query": "porsche founder",
-      "impressions": 35,
+      "impressions": 73,
       "source": "instagram"
+    },
+    {
+      "query": "is internship considered work experience",
+      "impressions": 71,
+      "source": "youtube"
+    },
+    {
+      "query": "creative cv",
+      "impressions": 69,
+      "source": "youtube"
+    },
+    {
+      "query": "how to make a cv with reference of contact",
+      "impressions": 63,
+      "source": "youtube"
+    },
+    {
+      "query": "is internship considered as work experience",
+      "impressions": 58,
+      "source": "youtube"
+    },
+    {
+      "query": "is an internship a job",
+      "impressions": 53,
+      "source": "youtube"
+    },
+    {
+      "query": "digital presence",
+      "impressions": 46,
+      "source": "youtube"
+    },
+    {
+      "query": "about me in cv",
+      "impressions": 45,
+      "source": "youtube"
+    },
+    {
+      "query": "new job photos",
+      "impressions": 45,
+      "source": "youtube"
+    },
+    {
+      "query": "portfolio",
+      "impressions": 41,
+      "source": "youtube"
+    },
+    {
+      "query": "about me cv",
+      "impressions": 39,
+      "source": "youtube"
+    },
+    {
+      "query": "kreativt cv",
+      "impressions": 38,
+      "source": "youtube"
     }
   ],
-  "bestDayLinkedIn": "Tuesday",
-  "followerMix": {
-    "newFollowersInWindow": 3,
-    "byLocation": [
-      {
-        "label": "London Area, United Kingdom, United Kingdom",
-        "value": 124
-      },
-      {
-        "label": "Pune/Pimpri-Chinchwad Area, India",
-        "value": 12
-      },
-      {
-        "label": "Manchester Area, United Kingdom, United Kingdom",
-        "value": 9
-      },
-      {
-        "label": "Porto Metropolitan Area, Portugal",
-        "value": 8
-      },
-      {
-        "label": "Greater Bengaluru Area, India",
-        "value": 8
-      }
-    ],
-    "bySeniority": [
-      {
-        "label": "Entry",
-        "value": 156
-      },
-      {
-        "label": "Senior",
-        "value": 133
-      },
-      {
-        "label": "Director",
-        "value": 26
-      },
-      {
-        "label": "Manager",
-        "value": 25
-      },
-      {
-        "label": "Training",
-        "value": 20
-      },
-      {
-        "label": "Owner",
-        "value": 15
-      },
-      {
-        "label": "CXO",
-        "value": 7
-      },
-      {
-        "label": "VP",
-        "value": 3
-      }
-    ],
-    "byFunction": [
-      {
-        "label": "Human Resources",
-        "value": 49
-      },
-      {
-        "label": "Business Development",
-        "value": 42
-      },
-      {
-        "label": "Operations",
-        "value": 34
-      },
-      {
-        "label": "Engineering",
-        "value": 33
-      },
-      {
-        "label": "Marketing",
-        "value": 28
-      }
-    ],
-    "byIndustry": [
-      {
-        "label": "IT Services and IT Consulting",
-        "value": 49
-      },
-      {
-        "label": "Software Development",
-        "value": 26
-      },
-      {
-        "label": "Staffing and Recruiting",
-        "value": 16
-      },
-      {
-        "label": "Business Consulting and Services",
-        "value": 16
-      },
-      {
-        "label": "Technology, Information and Internet",
-        "value": 15
-      }
-    ],
-    "byCompanySize": [
-      {
-        "label": "10001+",
-        "value": 65
-      },
-      {
-        "label": "11-50",
-        "value": 54
-      },
-      {
-        "label": "2-10",
-        "value": 50
-      },
-      {
-        "label": "51-200",
-        "value": 48
-      },
-      {
-        "label": "1001-5000",
-        "value": 47
-      },
-      {
-        "label": "201-500",
-        "value": 26
-      },
-      {
-        "label": "501-1000",
-        "value": 22
-      },
-      {
-        "label": "5001-10000",
-        "value": 15
-      }
-    ]
-  }
+  "bestDayLinkedIn": null,
+  "followerMix": {}
 }

@@ -19,3 +19,8 @@ Keep this file updated whenever a new quote-author portrait is added. Quote grap
 | Amelia Earhart | `amelia-earhart.jpg` | https://commons.wikimedia.org/wiki/File:Amelia_Earhart_by_Underwood_%26_Underwood,_July_20,_1928,_gelatin_silver_print,_from_the_National_Portrait_Gallery_-_NPG-NPG_2011_77_2Earhart-000003.jpg | CC0 / Smithsonian National Portrait Gallery. |
 | Booker T. Washington | `booker-t-washington.png` | https://commons.wikimedia.org/wiki/File:Booker_T_Washington_by_Frances_B_Johnston,_c1895.png | Public domain. |
 | Marie Curie | `marie-curie.jpg` | https://commons.wikimedia.org/wiki/File:Marie_Curie,_portrait,_1900.jpg | Public domain mark. |
+| Frederick Douglass | `frederick-douglass.jpg` | https://commons.wikimedia.org/wiki/File:Frederick_Douglass_(circa_1879)_(cropped).jpg | Public domain. |
+| Florence Nightingale | `florence-nightingale.jpg` | https://commons.wikimedia.org/wiki/File:Florence_Nightingale_(H_Hering_NPG_x82368).jpg | Public domain, Henry Hering. |
+| Louis Pasteur | `louis-pasteur.jpg` | https://commons.wikimedia.org/wiki/File:Louis_Pasteur,_foto_av_Paul_Nadar,_Crisco_edit.jpg | Public domain, Paul Nadar. |
+| Samuel Johnson | `samuel-johnson.jpg` | https://commons.wikimedia.org/wiki/File:Samuel_Johnson_by_Joshua_Reynolds.jpg | Public domain, Joshua Reynolds. |
+| Benjamin Disraeli | `benjamin-disraeli.jpg` | https://commons.wikimedia.org/wiki/File:Benjamin_Disraeli,_Earl_of_Beaconsfield_(3x4_cropped).jpg | Public domain. |
