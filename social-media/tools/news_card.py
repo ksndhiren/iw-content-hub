@@ -16,7 +16,7 @@ import lanes_common as L
 PAPER="#F1E9D6"; INK="#1A1712"; SUB="#4A443A"; RULE="#1A1712"; AMBER=L.AMBER
 # NB: no quoted font names - this string goes inside single-quoted style attrs,
 # so an inner quote would close the attribute early and drop later properties.
-SERIF = "Georgia,serif"
+SERIF = "IWSerif,Georgia,serif"
 
 
 def _hsize(text):

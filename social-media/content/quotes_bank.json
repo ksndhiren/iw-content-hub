@@ -274,6 +274,70 @@
       "theme": "focus",
       "cta": "Pick a direction and go - internwise.co.uk",
       "used": null
+    },
+    {
+      "id": "q036",
+      "text": "The more I study, the more insatiable do I feel my genius for it to be.",
+      "author": "Ada Lovelace",
+      "theme": "curiosity",
+      "cta": "Go deeper on one thing - internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q037",
+      "text": "We have all a better guide in ourselves, if we would attend to it, than any other person can be.",
+      "author": "Jane Austen",
+      "theme": "judgement",
+      "cta": "Trust your own read - internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q038",
+      "text": "Nothing is too wonderful to be true, if it be consistent with the laws of nature.",
+      "author": "Michael Faraday",
+      "theme": "ambition",
+      "cta": "Aim higher this week - internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q039",
+      "text": "Concentrate all your thoughts upon the work in hand.",
+      "author": "Alexander Graham Bell",
+      "theme": "focus",
+      "cta": "Do one thing properly - internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q040",
+      "text": "Obstacles cannot crush me; every obstacle yields to stern resolve.",
+      "author": "Leonardo da Vinci",
+      "theme": "resilience",
+      "cta": "Keep going - internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q041",
+      "text": "Knowing is not enough; we must apply. Willing is not enough; we must do.",
+      "author": "Johann Wolfgang von Goethe",
+      "theme": "action",
+      "cta": "Start today - internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q042",
+      "text": "A man who dares to waste one hour of time has not discovered the value of life.",
+      "author": "Charles Darwin",
+      "theme": "time",
+      "cta": "Use this hour - internwise.co.uk",
+      "used": null
+    },
+    {
+      "id": "q043",
+      "text": "I am not afraid of storms, for I am learning how to sail my ship.",
+      "author": "Louisa May Alcott",
+      "theme": "resilience",
+      "cta": "Learn as you go - internwise.co.uk",
+      "used": null
     }
   ]
 }

@@ -127,9 +127,14 @@ def target_week():
 
 # Visual worlds cycle every day; the QUOTE TEXT rotates weekly through the whole
 # bank (see build()) so no two consecutive weeks repeat the same 5 quotes.
+# 18 worlds for 5 slots a week. At 15 the bank was exactly three weeks deep, so
+# with a 2-week block the "least recently used" pick had no choice left and the
+# lane ran a locked 3-week cycle (week21 shipped week18's five designs). The spare
+# three give the rotation slack.
 QUOTE_WORLDS = ["editorial", "spotlight", "colorblock", "split", "paper",
                 "arc", "blueprint", "band", "minimal", "bubble",
-                "marquee", "stamp", "notebook", "gallery", "manifesto"]
+                "marquee", "stamp", "notebook", "gallery", "manifesto",
+                "prism", "monument", "horizon"]
 # Employer acquisition graphics were dropped from the weekly batch. Keep the renderer
 # library for manual one-offs, but do not generate employer posts unless this set is
 # explicitly re-enabled.
@@ -150,10 +155,14 @@ EMPLOYER_ANGLE = {"benefits": "e001", "bigstat": "e004", "process": "e003",
 # same two weeks running.
 EDU_FORMAT_BY_DAY = ["carousel", "carousel", "carousel", "single", "single"]
 EDU_CAROUSEL_WORLDS = ["navy", "plum", "teal", "cream", "midnight", "slate",
-                       "marker", "flash", "tabs"]
-EDU_SINGLE_WORLDS = ["tipcard", "statement", "bigidea", "splitcard", "memo", "scorecard"]
+                       "marker", "flash", "tabs", "ledger", "grid", "strip"]
+# message_lab / focus_studio / answerbank were authored into lane_education.SINGLE
+# but never listed here, so the ledger could only ever see 6 of the 9 singles.
+EDU_SINGLE_WORLDS = ["tipcard", "statement", "bigidea", "splitcard", "memo", "scorecard",
+                     "message_lab", "focus_studio", "answerbank"]
 CONVERSATION_WORLDS = ["decision", "proofboard", "debate", "scorecard", "signal",
-                       "vote_cards", "shortlist_poll", "cv_poll", "route_map", "comment_wall"]
+                       "vote_cards", "shortlist_poll", "cv_poll", "route_map", "comment_wall",
+                       "ballot", "dial", "receipt", "stickies", "bars", "marquee"]
 
 
 def week_offset(wid):
@@ -637,7 +646,11 @@ def build(days=5, dry=False):
     emp_days = sorted(d for d in EMPLOYER_DAYS if d < days)
     emp_worlds = design_ledger.pick("employer", EMPLOYER_WORLDS, len(emp_days), wid)
     week_emp = {d: (emp_worlds[i], EMPLOYER_ANGLE[emp_worlds[i]]) for i, d in enumerate(emp_days)}
-    conversation_worlds = design_ledger.pick("conversation", CONVERSATION_WORLDS, days, wid, avoid_weeks=1)
+    # avoid_weeks=1 blocked only the single previous week, and the bank held exactly
+    # 10 worlds for 5 slots, so the lane alternated between two fixed sets: week19
+    # and week21 shipped the identical five designs. 16 worlds + a 2-week block
+    # means a conversation design cannot come back inside three weeks.
+    conversation_worlds = design_ledger.pick("conversation", CONVERSATION_WORLDS, days, wid)
     fmts = EDU_FORMAT_BY_DAY[:days]
     edu_car = design_ledger.pick("edu_carousel", EDU_CAROUSEL_WORLDS, fmts.count("carousel"), wid)
     edu_sing = design_ledger.pick("edu_single", EDU_SINGLE_WORLDS, fmts.count("single"), wid)

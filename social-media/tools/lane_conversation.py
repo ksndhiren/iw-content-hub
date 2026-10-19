@@ -122,7 +122,7 @@ def w_proofboard(idea):
                f"<div style=\"position:absolute;right:22px;top:20px;font-family:Inter;font-weight:950;font-size:46px;color:#fff;\">in</div></div>")
     card = (f"<div style='position:absolute;left:88px;top:628px;width:540px;padding:24px 28px 12px;border-radius:20px;"
             f"background:{NAVYT};box-shadow:0 20px 40px rgba(21,39,67,.18);'>{_option_rows(options, [AMBER, GREEN, CORAL], dark=True)}</div>")
-    takeaway = (f"<div style='position:absolute;right:92px;top:612px;width:278px;font-family:Georgia,serif;font-style:italic;"
+    takeaway = (f"<div style='position:absolute;right:92px;top:612px;width:278px;font-family:IWSerif,Georgia,serif;font-style:italic;"
                 f"font-weight:700;font-size:29px;line-height:1.2;color:{NAVYT};'>{idea.get('takeaway','')}</div>")
     cta = (f"<div style='position:absolute;right:92px;bottom:118px;height:54px;padding:0 20px;border-radius:8px;background:{AMBER};"
            f"display:flex;align-items:center;font-family:Inter;font-weight:900;font-size:22px;color:{NAVYT};'>{idea.get('cta','Start at internwise.co.uk')}</div>")
@@ -144,7 +144,7 @@ def w_debate(idea):
                  f"background:rgba(255,255,255,.09);border:2px solid rgba(255,255,255,.16);padding:22px 24px;'>"
                  f"<div style=\"font-family:'DM Sans';font-weight:900;font-size:18px;color:{AMBER};letter-spacing:3px;\">OPTION {chr(65+i)}</div>"
                  f"<div style=\"margin-top:8px;font-family:Inter;font-weight:950;font-size:36px;line-height:1.05;color:#fff;\">{option}</div></div>")
-    cta = (f"<div style='position:absolute;right:72px;bottom:90px;width:430px;font-family:Georgia,serif;font-style:italic;"
+    cta = (f"<div style='position:absolute;right:72px;bottom:90px;width:430px;font-family:IWSerif,Georgia,serif;font-style:italic;"
            f"font-weight:700;font-size:34px;line-height:1.12;color:{AMBER};'>{idea.get('cta','Start at internwise.co.uk')}</div>")
     return bg + split + _logo_dark() + _comment_prompt(548, 104, dark=True) + hook + sub + rows + cta + L.watermark(w=380, right=-80, bottom=-120, op=.06)
 
@@ -222,7 +222,7 @@ def w_shortlist_poll(idea):
     board = f"<div style='position:absolute;left:52px;right:52px;top:168px;bottom:92px;border-radius:0;background:#F3EADA;box-shadow:0 28px 70px rgba(0,0,0,.28);'></div>"
     label = (f"<div style='position:absolute;left:94px;top:216px;height:44px;padding:0 18px;background:{AMBER};display:flex;align-items:center;'>"
              f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:18px;color:{NAVYT};letter-spacing:3px;\">SHORTLIST POLL</span></div>")
-    hook = (f"<div style=\"position:absolute;left:94px;top:300px;width:780px;font-family:Georgia,serif;font-weight:700;"
+    hook = (f"<div style=\"position:absolute;left:94px;top:300px;width:780px;font-family:IWSerif,Georgia,serif;font-weight:700;"
             f"font-size:68px;line-height:1.0;color:{NAVYT};\">{idea['hook']}</div>")
     cards = ""
     for i, opt in enumerate(options):
@@ -272,7 +272,7 @@ def w_route_map(idea):
              f"</svg>")
     label = (f"<div style=\"position:absolute;left:116px;top:232px;font-family:'DM Sans';font-weight:900;font-size:18px;"
              f"color:{GREEN};letter-spacing:5px;\">APPLICATION ROUTE</div>")
-    hook = (f"<div style=\"position:absolute;left:116px;top:292px;width:720px;font-family:Georgia,serif;font-weight:700;"
+    hook = (f"<div style=\"position:absolute;left:116px;top:292px;width:720px;font-family:IWSerif,Georgia,serif;font-weight:700;"
             f"font-size:76px;line-height:.98;color:{NAVYT};\">{idea['hook']}</div>")
     sub = ""
     chips = ""
@@ -305,7 +305,7 @@ def w_comment_wall(idea):
     quote = (f"<div style='position:absolute;right:116px;top:500px;width:258px;background:#fff;border:3px solid {NAVYT};"
              f"box-shadow:8px 8px 0 rgba(21,39,67,.12);padding:16px 18px 18px;'>"
              f"<div style=\"font-family:'DM Sans';font-weight:950;font-size:13px;letter-spacing:3px;color:{GREEN};margin-bottom:9px;\">WHY IT MATTERS</div>"
-             f"<div style=\"font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:23px;line-height:1.12;color:{CORAL};\">{idea.get('takeaway','')}</div></div>")
+             f"<div style=\"font-family:IWSerif,Georgia,serif;font-style:italic;font-weight:700;font-size:23px;line-height:1.12;color:{CORAL};\">{idea.get('takeaway','')}</div></div>")
     bubbles = ""
     for i, opt in enumerate(options):
         y = 676 + i * 66
@@ -321,6 +321,194 @@ def w_comment_wall(idea):
     return bg + glow + paper + band + L.logo_tl() + label + hook + quote + bubbles + _comment_prompt(116, 884) + cta
 
 
+# =================================================================================
+#  WEEK 22 ADDITIONS
+#  The bank held exactly 10 worlds and the lane only blocked ONE previous week, so
+#  5-a-week selection became a hard two-week loop: week19 and week21 shipped the
+#  identical five designs. Six more worlds plus a two-week block (build_week.py)
+#  give the lane 16 to choose 5 from, so a design cannot return inside three weeks.
+#  Each is a different physical metaphor, not a recolour of an existing one.
+# =================================================================================
+
+def w_ballot(idea):
+    """Polling-station ballot paper: tick boxes, pencil, serial number, torn edge."""
+    options = idea.get("options", [])[:3]
+    bg = (f"<div style='position:absolute;inset:0;background:{NAVYT};'></div>"
+          f"<div style='position:absolute;inset:0;opacity:.30;background-image:"
+          f"linear-gradient(rgba(255,255,255,.10) 1px,transparent 1px);background-size:100% 46px;'></div>")
+    paper = (f"<div style='position:absolute;left:92px;top:122px;width:772px;height:842px;background:#FBF7EE;"
+             f"box-shadow:0 34px 74px rgba(0,0,0,.42);transform:rotate(-1.2deg);'></div>")
+    # torn bottom edge: a row of small cream triangles reading as a perforated tear
+    teeth = "".join(f"<div style='width:28px;height:26px;background:#FBF7EE;clip-path:polygon(0 0,100% 0,50% 100%);'></div>"
+                    for _ in range(28))
+    tear = (f"<div style='position:absolute;left:92px;top:962px;width:772px;display:flex;transform:rotate(-1.2deg);'>{teeth}</div>")
+    serial = (f"<div style=\"position:absolute;left:140px;top:168px;font-family:'DM Sans';font-weight:700;font-size:20px;"
+              f"color:#A2957E;letter-spacing:6px;transform:rotate(-1.2deg);\">BALLOT &middot; INTERNWISE &middot; NO. 022</div>")
+    rule = f"<div style='position:absolute;left:140px;top:206px;width:676px;height:3px;background:{NAVYT};opacity:.75;transform:rotate(-1.2deg);'></div>"
+    hook = (f"<div style='position:absolute;left:140px;top:244px;width:640px;transform:rotate(-1.2deg);'>"
+            + L.hero(idea['hook'], "underline", NAVYT, NAVYT, hi=CORAL, size=58, width=640) + "</div>")
+    sub = (f"<div style=\"position:absolute;left:142px;top:508px;width:600px;font-family:'DM Sans';font-weight:700;"
+           f"font-size:27px;line-height:1.26;color:#6F6350;transform:rotate(-1.2deg);\">{idea.get('subhead','')}</div>")
+    rows = ""
+    for i, option in enumerate(options):
+        y = 594 + i * 104
+        rows += (f"<div style='position:absolute;left:140px;top:{y}px;width:664px;height:86px;display:flex;align-items:center;"
+                 f"gap:24px;border-bottom:2px dashed rgba(21,39,67,.22);transform:rotate(-1.2deg);'>"
+                 f"<div style='flex:0 0 62px;width:62px;height:62px;border:4px solid {NAVYT};display:flex;align-items:center;"
+                 f"justify-content:center;font-family:Inter;font-weight:900;font-size:28px;color:{NAVYT};'>{chr(65+i)}</div>"
+                 f"<div style=\"font-family:Inter;font-weight:800;font-size:34px;line-height:1.05;letter-spacing:-.8px;color:{NAVYT};\">{option}</div></div>")
+    pencil = (f"<div style='position:absolute;right:66px;top:300px;width:34px;height:430px;background:{AMBER};transform:rotate(12deg);'></div>"
+              f"<div style='position:absolute;right:66px;top:724px;width:34px;height:40px;background:#FBF7EE;clip-path:polygon(0 0,100% 0,50% 100%);transform:rotate(12deg);'></div>")
+    cta = (f"<div style=\"position:absolute;left:142px;bottom:36px;font-family:'DM Sans';font-weight:900;font-size:24px;"
+           f"color:{AMBER};\">{idea.get('cta','Start at internwise.co.uk')}</div>")
+    return (bg + pencil + paper + tear + serial + rule + hook + sub + rows
+            + L.logo_tl() + cta)
+
+
+def w_dial(idea):
+    """Gauge/meter: the three answers are positions on one arc, so the post reads as
+    a spectrum ("where are you right now?") rather than a multiple-choice test."""
+    options = idea.get("options", [])[:3]
+    bg = (f"<div style='position:absolute;inset:0;background:radial-gradient(120% 95% at 50% 110%,#17395F 0%,#0C1E38 58%,#07132A 100%);'></div>")
+    arc = (f"<svg style='position:absolute;left:90px;top:300px;width:900px;height:520px;' viewBox='0 0 900 520' fill='none'>"
+           f"<path d='M60 470 A390 390 0 0 1 840 470' stroke='rgba(255,255,255,.14)' stroke-width='58' stroke-linecap='round'/>"
+           f"<path d='M60 470 A390 390 0 0 1 300 128' stroke='{CORAL}' stroke-width='58' stroke-linecap='round'/>"
+           f"<path d='M330 112 A390 390 0 0 1 570 112' stroke='{AMBER}' stroke-width='58' stroke-linecap='round'/>"
+           f"<path d='M600 128 A390 390 0 0 1 840 470' stroke='{GREEN}' stroke-width='58' stroke-linecap='round'/>"
+           f"<circle cx='450' cy='470' r='26' fill='#fff'/>"
+           f"<path d='M450 470 L246 236' stroke='#fff' stroke-width='14' stroke-linecap='round'/></svg>")
+    label = (f"<div style='position:absolute;left:56px;top:150px;height:46px;padding:0 20px;border-radius:23px;"
+             f"border:2px solid rgba(255,255,255,.26);display:flex;align-items:center;'>"
+             f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:18px;color:{AMBER};letter-spacing:5px;\">WHERE ARE YOU TODAY</span></div>")
+    hook = (f"<div style='position:absolute;left:56px;top:214px;width:700px;'>"
+            + L.hero(idea['hook'], "serif_italic", "#fff", AMBER, hi=AMBER, size=58, width=700) + "</div>")
+    cols = [CORAL, AMBER, GREEN]
+    rows = ""
+    for i, option in enumerate(options):
+        x = 56 + i * 328
+        rows += (f"<div style='position:absolute;left:{x}px;top:826px;width:304px;'>"
+                 f"<div style='width:46px;height:46px;border-radius:50%;background:{cols[i]};display:flex;align-items:center;"
+                 f"justify-content:center;font-family:Inter;font-weight:900;font-size:22px;color:{NAVYT};margin-bottom:14px;'>{chr(65+i)}</div>"
+                 f"<div style=\"font-family:Inter;font-weight:800;font-size:31px;line-height:1.08;letter-spacing:-.7px;color:#fff;\">{option}</div></div>")
+    return (bg + arc + L.logo_tl() + label + hook + rows
+            + _comment_prompt(56, 988, dark=True, text="Comment A, B or C below"))
+
+
+def w_receipt(idea):
+    """Till receipt: the answers are itemised line entries under a total. Good for
+    cost/trade-off prompts, and nothing else in the bank is a narrow centre column."""
+    options = idea.get("options", [])[:3]
+    bg = (f"<div style='position:absolute;inset:0;background:{CREAM};'></div>"
+          f"<div style='position:absolute;inset:0;opacity:.5;background-image:"
+          f"radial-gradient(rgba(21,39,67,.09) 1.4px,transparent 1.4px);background-size:30px 30px;'></div>")
+    slip = (f"<div style='position:absolute;left:286px;top:176px;width:508px;height:788px;background:#fff;"
+            f"box-shadow:0 30px 66px rgba(21,39,67,.20);'></div>")
+    zig = "".join("<div style='width:26px;height:22px;background:#fff;clip-path:polygon(0 0,100% 0,50% 100%);'></div>" for _ in range(20))
+    tear = f"<div style='position:absolute;left:286px;top:964px;width:508px;display:flex;'>{zig}</div>"
+    head = (f"<div style=\"position:absolute;left:286px;top:212px;width:508px;text-align:center;font-family:'DM Sans';"
+            f"font-weight:700;font-size:17px;color:#A2957E;letter-spacing:4px;\">CAREER LEDGER &middot; THIS WEEK</div>"
+            f"<div style='position:absolute;left:326px;top:248px;width:428px;height:3px;background:{NAVYT};opacity:.2;'></div>")
+    hook = (f"<div style=\"position:absolute;left:326px;top:278px;width:428px;text-align:center;font-family:Inter;"
+            f"font-weight:900;font-size:44px;line-height:1.04;letter-spacing:-1.4px;color:{NAVYT};\">{idea['hook']}</div>")
+    rows = ""
+    for i, option in enumerate(options):
+        y = 470 + i * 106
+        rows += (f"<div style='position:absolute;left:326px;top:{y}px;width:428px;'>"
+                 f"<div style='display:flex;align-items:baseline;gap:12px;'>"
+                 f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:19px;color:{AMBER};letter-spacing:3px;\">{chr(65+i)}</span>"
+                 f"<span style='flex:1;border-bottom:3px dotted rgba(21,39,67,.28);'></span></div>"
+                 f"<div style=\"margin-top:6px;font-family:Inter;font-weight:800;font-size:33px;line-height:1.08;"
+                 f"letter-spacing:-.7px;color:{NAVYT};\">{option}</div></div>")
+    total = (f"<div style='position:absolute;left:326px;top:758px;width:428px;border-top:4px double {NAVYT};padding-top:14px;'>"
+             f"<div style=\"font-family:'DM Sans';font-weight:900;font-size:17px;color:#A2957E;letter-spacing:4px;\">TAKEAWAY</div>"
+             f"<div style=\"margin-top:8px;font-family:IWSerif,Georgia,serif;font-style:italic;font-size:26px;"
+             f"line-height:1.2;color:{NAVYT};\">{idea.get('takeaway','')}</div></div>")
+    barcode = ("<div style='position:absolute;left:366px;top:900px;display:flex;align-items:flex-end;gap:4px;'>"
+               + "".join(f"<div style='width:{3 if i%3 else 7}px;height:38px;background:{NAVYT};'></div>" for i in range(38))
+               + "</div>")
+    cta = (f"<div style=\"position:absolute;left:0;right:0;bottom:28px;text-align:center;font-family:'DM Sans';"
+           f"font-weight:900;font-size:24px;color:{NAVYT};\">{idea.get('cta','Start at internwise.co.uk')}</div>")
+    return (bg + slip + tear + head + hook + rows + total + barcode
+            + _logo_dark() + cta + _comment_prompt(56, 186, text="A, B or C?"))
+
+
+def w_stickies(idea):
+    """Whiteboard with angled sticky notes - a workshop/brainstorm feel. The only
+    world in the bank where the options are physical objects at different angles."""
+    options = idea.get("options", [])[:3]
+    bg = (f"<div style='position:absolute;inset:0;background:#F6F7F4;'></div>"
+          f"<div style='position:absolute;left:40px;top:40px;right:40px;bottom:40px;border:14px solid #D8D2C4;border-radius:10px;'></div>"
+          f"<div style='position:absolute;left:54px;top:54px;right:54px;bottom:54px;background:#FFFFFF;'></div>")
+    tray = (f"<div style='position:absolute;left:54px;bottom:54px;right:54px;height:26px;background:#D8D2C4;'></div>"
+            f"<div style='position:absolute;left:640px;bottom:62px;width:170px;height:16px;border-radius:8px;background:{CORAL};'></div>"
+            f"<div style='position:absolute;left:826px;bottom:62px;width:130px;height:16px;border-radius:8px;background:{NAVYT};'></div>")
+    hook = (f"<div style='position:absolute;left:100px;top:160px;width:600px;'>"
+            + L.hero(idea['hook'], "highlight", NAVYT, NAVYT, hi=AMBER, size=56, width=600) + "</div>")
+    sub = (f"<div style=\"position:absolute;left:102px;top:430px;width:520px;font-family:'DM Sans';font-weight:700;"
+           f"font-size:26px;line-height:1.28;color:#6F6350;\">{idea.get('subhead','')}</div>")
+    notes = ""
+    spec = [(96, 556, -3.4, AMBER), (396, 592, 2.6, GREEN), (690, 548, -1.8, CORAL)]
+    for i, option in enumerate(options):
+        x, y, rot, col = spec[i]
+        notes += (f"<div style='position:absolute;left:{x}px;top:{y}px;width:278px;height:278px;background:{col};"
+                  f"transform:rotate({rot}deg);box-shadow:0 18px 32px rgba(21,39,67,.18);padding:26px;box-sizing:border-box;'>"
+                  f"<div style=\"font-family:'DM Sans';font-weight:900;font-size:18px;color:{NAVYT};letter-spacing:4px;opacity:.72;\">{chr(65+i)}</div>"
+                  f"<div style=\"margin-top:14px;font-family:Inter;font-weight:800;font-size:34px;line-height:1.08;"
+                  f"letter-spacing:-.9px;color:{NAVYT};\">{option}</div></div>")
+    return bg + tray + _logo_dark() + hook + sub + notes + _comment_prompt(100, 904)
+
+
+def w_bars(idea):
+    """Poll-result bars - the look of a poll AFTER voting, which invites people to
+    argue with the ranking. Deliberately has no option cards or circles."""
+    options = idea.get("options", [])[:3]
+    bg = (f"<div style='position:absolute;inset:0;background:#0B1E3A;'></div>"
+          f"<div style='position:absolute;right:-180px;top:-140px;width:620px;height:620px;border-radius:50%;"
+          f"background:radial-gradient(circle at 42% 42%,{AMBER}26,transparent 64%);'></div>")
+    label = (f"<div style='position:absolute;left:56px;top:154px;height:44px;padding:0 18px;background:{AMBER};"
+             f"display:flex;align-items:center;'>"
+             f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:18px;color:{NAVYT};letter-spacing:4px;\">THE WEEKLY POLL</span></div>")
+    hook = (f"<div style='position:absolute;left:56px;top:216px;width:820px;'>"
+            + L.hero(idea['hook'], "scalejump", "#fff", AMBER, hi=AMBER, size=56, width=820) + "</div>")
+    cols = [AMBER, GREEN, CORAL]
+    widths = [856, 672, 498]
+    rows = ""
+    for i, option in enumerate(options):
+        y = 586 + i * 136
+        rows += (f"<div style='position:absolute;left:56px;top:{y}px;width:{widths[i]}px;height:112px;"
+                 f"background:{cols[i]};display:flex;align-items:center;padding:0 26px;box-sizing:border-box;'>"
+                 f"<div style=\"font-family:Inter;font-weight:900;font-size:35px;line-height:1.05;letter-spacing:-.9px;"
+                 f"color:{NAVYT};\">{option}</div></div>"
+                 f"<div style=\"position:absolute;left:{56 + widths[i] + 20}px;top:{y + 30}px;font-family:Inter;"
+                 f"font-weight:900;font-size:40px;color:rgba(255,255,255,.34);\">{chr(65+i)}</div>")
+    return (bg + L.logo_tl() + label + hook + rows
+            + _comment_prompt(56, 988, dark=True, text="Which one would you put top?"))
+
+
+def w_marquee(idea):
+    """Three full-height colour columns, one answer each, set as a type poster. The
+    only world that fills the whole canvas with the options themselves."""
+    options = idea.get("options", [])[:3]
+    cols = [CORAL, AMBER, GREEN]
+    inks = ["#fff", NAVYT, NAVYT]
+    panels = ""
+    for i, option in enumerate(options):
+        x = i * 360
+        panels += (f"<div style='position:absolute;left:{x}px;top:470px;width:360px;bottom:0;background:{cols[i]};"
+                   f"padding:38px 30px;box-sizing:border-box;'>"
+                   f"<div style=\"font-family:IWSerif,Georgia,serif;font-size:110px;line-height:.78;color:{inks[i]};opacity:.34;\">{chr(65+i)}</div>"
+                   f"<div style=\"margin-top:22px;font-family:Inter;font-weight:900;font-size:38px;line-height:1.04;"
+                   f"letter-spacing:-1.2px;color:{inks[i]};\">{option}</div></div>")
+    bg = f"<div style='position:absolute;inset:0;background:{NAVYT};'></div>"
+    hook = (f"<div style='position:absolute;left:56px;top:178px;width:800px;'>"
+            + L.hero(idea['hook'], "shadow", "#fff", AMBER, hi=CORAL, size=56, width=800) + "</div>")
+    sub = (f"<div style=\"position:absolute;left:58px;top:400px;width:700px;font-family:'DM Sans';font-weight:700;"
+           f"font-size:26px;line-height:1.24;color:rgba(255,255,255,.76);\">{idea.get('subhead','')}</div>")
+    tag = (f"<div style=\"position:absolute;right:56px;top:60px;font-family:'DM Sans';font-weight:900;font-size:18px;"
+           f"color:{AMBER};letter-spacing:5px;\">PICK YOUR LANE</div>")
+    return bg + panels + L.logo_tl() + tag + hook + sub
+
+
 WORLDS = {
     "decision": w_decision_prompt,
     "proofboard": w_proofboard,
@@ -332,6 +520,12 @@ WORLDS = {
     "cv_poll": w_cv_poll,
     "route_map": w_route_map,
     "comment_wall": w_comment_wall,
+    "ballot": w_ballot,
+    "dial": w_dial,
+    "receipt": w_receipt,
+    "stickies": w_stickies,
+    "bars": w_bars,
+    "marquee": w_marquee,
 }
 
 

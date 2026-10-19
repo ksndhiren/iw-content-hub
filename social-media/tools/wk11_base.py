@@ -15,13 +15,34 @@ def _b64(p):
 LOGO_W = _b64(os.path.join(BR,"IW.com_Horizontal_white logo.png"))
 LOGO_B = _b64(os.path.join(BR,"IW.com_Horizontal_Blue Logo.png")) or _b64(os.path.join(BR,"IW.com_Horizontal_blue logo.png"))
 
+# Editorial type system. Three roles, deliberately contrasted (DESIGN_DIRECTION.md):
+#   Inter      - UI/clarity. Loaded as the VARIABLE font so weights 100-900 are real.
+#                The four static Inter TTFs only reached Bold 700, so every
+#                font-weight:800/900/950 in the lanes silently clamped to 700 and the
+#                headline/eyebrow weight contrast the direction asks for never rendered.
+#   DM Sans    - labels, small navigation, captions.
+#   IW Serif   - editorial emphasis (hero words, pull quotes). DM Serif Display, OFL.
+#                Previously the lanes asked for "Georgia,serif", which exists on macOS
+#                but NOT on the Ubuntu runner, so cloud builds fell back to DejaVu Serif
+#                and local and CI renders of the same slide did not match. Embedding it
+#                makes the serif move identical everywhere.
 def fonts():
     css=""
-    for fam,vv in {"Inter":[("Inter-Bold.ttf",700),("Inter-SemiBold.ttf",600),("Inter-Regular.ttf",400)],
-                   "DM Sans":[("DMSans-Bold.ttf",700),("DMSans-Medium.ttf",500),("DMSans-Regular.ttf",400)]}.items():
-        for fn,w in vv:
+    var_inter=_b64(os.path.join(FN,"Inter-Variable.ttf"))
+    if var_inter:
+        css+=("@font-face{font-family:'Inter';src:url(data:font/truetype;base64,"
+              f"{var_inter}) format('truetype-variations');font-weight:100 900;font-style:normal;}}")
+    else:   # fall back to the statics if the variable file is ever missing
+        for fn,w in [("Inter-Bold.ttf",700),("Inter-SemiBold.ttf",600),("Inter-Regular.ttf",400)]:
             b=_b64(os.path.join(FN,fn))
-            if b: css+=f"@font-face{{font-family:'{fam}';src:url(data:font/truetype;base64,{b});font-weight:{w};}}"
+            if b: css+=f"@font-face{{font-family:'Inter';src:url(data:font/truetype;base64,{b});font-weight:{w};}}"
+    for fn,w in [("DMSans-Bold.ttf",700),("DMSans-Medium.ttf",500),("DMSans-Regular.ttf",400)]:
+        b=_b64(os.path.join(FN,fn))
+        if b: css+=f"@font-face{{font-family:'DM Sans';src:url(data:font/truetype;base64,{b});font-weight:{w};}}"
+    for fn,st in [("DMSerifDisplay-Regular.ttf","normal"),("DMSerifDisplay-Italic.ttf","italic")]:
+        b=_b64(os.path.join(FN,fn))
+        if b: css+=(f"@font-face{{font-family:IWSerif;src:url(data:font/truetype;base64,{b});"
+                    f"font-weight:400;font-style:{st};}}")
     return css
 
 def render(body, path, bg):

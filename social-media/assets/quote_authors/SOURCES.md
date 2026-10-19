@@ -24,3 +24,11 @@ Keep this file updated whenever a new quote-author portrait is added. Quote grap
 | Louis Pasteur | `louis-pasteur.jpg` | https://commons.wikimedia.org/wiki/File:Louis_Pasteur,_foto_av_Paul_Nadar,_Crisco_edit.jpg | Public domain, Paul Nadar. |
 | Samuel Johnson | `samuel-johnson.jpg` | https://commons.wikimedia.org/wiki/File:Samuel_Johnson_by_Joshua_Reynolds.jpg | Public domain, Joshua Reynolds. |
 | Benjamin Disraeli | `benjamin-disraeli.jpg` | https://commons.wikimedia.org/wiki/File:Benjamin_Disraeli,_Earl_of_Beaconsfield_(3x4_cropped).jpg | Public domain. |
+| Ada Lovelace | `ada-lovelace.jpg` | https://commons.wikimedia.org/wiki/File:Ada_Lovelace_daguerreotype_by_Antoine_Claudet_1843_-_cropped.png | Public domain. |
+| Jane Austen | `jane-austen.jpg` | https://commons.wikimedia.org/wiki/File:CassandraAusten-JaneAusten(c.1810)_hires.jpg | Public domain. |
+| Michael Faraday | `michael-faraday.jpg` | https://commons.wikimedia.org/wiki/File:Michael_Faraday_sitting_crop.jpg | Public domain. |
+| Alexander Graham Bell | `alexander-graham-bell.jpg` | https://commons.wikimedia.org/wiki/File:Alexander_Graham_Bell_1895_NPG_77_363.jpg | CC0 / public-domain dedication. |
+| Leonardo da Vinci | `leonardo-da-vinci.jpg` | https://commons.wikimedia.org/wiki/File:Francesco_Melzi_-_Portrait_of_Leonardo_(colour_correction).png | Public domain. |
+| Johann Wolfgang von Goethe | `johann-wolfgang-von-goethe.jpg` | https://commons.wikimedia.org/wiki/File:Goethe_(Stieler_1828).jpg | Public domain. |
+| Charles Darwin | `charles-darwin.jpg` | https://commons.wikimedia.org/wiki/File:Charles_Darwin_seated_crop.jpg | Public domain. |
+| Louisa May Alcott | `louisa-may-alcott.jpg` | https://commons.wikimedia.org/wiki/File:Louisa_May_Alcott,_c._1870_-_Warren%27s_Portraits,_Boston.jpg | Public domain. |

@@ -8815,7 +8815,7 @@
             ]
           },
           "quoteId": "q031",
-          "world": "editorial"
+          "world": "prism"
         },
         {
           "id": "week21-mon-engagement",
@@ -8859,7 +8859,7 @@
               "#careeradvice"
             ]
           },
-          "world": "vote_cards",
+          "world": "ballot",
           "ideaId": "c016"
         },
         {
@@ -9021,7 +9021,7 @@
               "#internships"
             ]
           },
-          "world": "shortlist_poll",
+          "world": "dial",
           "ideaId": "c017"
         },
         {
@@ -9139,7 +9139,7 @@
             ]
           },
           "quoteId": "q033",
-          "world": "colorblock"
+          "world": "monument"
         },
         {
           "id": "week21-wed-engagement",
@@ -9183,7 +9183,7 @@
               "#internwiseuk"
             ]
           },
-          "world": "cv_poll",
+          "world": "receipt",
           "ideaId": "c018"
         },
         {
@@ -9345,7 +9345,7 @@
               "#internwiseuk"
             ]
           },
-          "world": "route_map",
+          "world": "stickies",
           "ideaId": "c019"
         },
         {
@@ -9448,7 +9448,7 @@
             ]
           },
           "quoteId": "q035",
-          "world": "paper"
+          "world": "horizon"
         },
         {
           "id": "week21-fri-engagement",
@@ -9492,7 +9492,7 @@
               "#graduatejobs"
             ]
           },
-          "world": "comment_wall",
+          "world": "bars",
           "ideaId": "c020"
         },
         {

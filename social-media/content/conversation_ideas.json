@@ -271,6 +271,136 @@
       ],
       "takeaway": "Choose the next visible move and make it small enough to finish.",
       "cta": "Make one move at internwise.co.uk"
+    },
+    {
+      "id": "c021",
+      "format": "decision_prompt",
+      "hook": "Where does your application actually stall?",
+      "subhead": "Naming the stage is the whole fix. Most people rewrite the CV when the problem is further down.",
+      "options": [
+        "Never hear back",
+        "Rejected after screening",
+        "Freeze in interviews"
+      ],
+      "takeaway": "Fix the stage you lose at, not the one you worry about.",
+      "cta": "Track your next five at internwise.co.uk"
+    },
+    {
+      "id": "c022",
+      "format": "decision_prompt",
+      "hook": "How long should you wait before chasing?",
+      "subhead": "A follow-up sent at the right moment reads as interest. Sent early it reads as pressure.",
+      "options": [
+        "Three working days",
+        "One week",
+        "Two weeks"
+      ],
+      "takeaway": "Agree the timeline in the interview and you never have to guess.",
+      "cta": "Ask for the timeline at internwise.co.uk"
+    },
+    {
+      "id": "c023",
+      "format": "decision_prompt",
+      "hook": "Which part of the advert do you read first?",
+      "subhead": "Most people start at the salary and never reach the bit that tells them whether they would be any good at it.",
+      "options": [
+        "Pay and hours",
+        "Day to day tasks",
+        "Who you report to"
+      ],
+      "takeaway": "Read the tasks first. They decide whether you can write a real application.",
+      "cta": "Read one advert properly at internwise.co.uk"
+    },
+    {
+      "id": "c024",
+      "format": "decision_prompt",
+      "hook": "What does a good first week look like?",
+      "subhead": "Judge a placement by week one. If nobody has given you a task or a name, that is the signal.",
+      "options": [
+        "A real task",
+        "A named contact",
+        "A clear goal"
+      ],
+      "takeaway": "Ask for whichever of the three is missing before week two.",
+      "cta": "Find a structured placement at internwise.co.uk"
+    },
+    {
+      "id": "c025",
+      "format": "decision_prompt",
+      "hook": "Which number would you put on your CV?",
+      "subhead": "One honest figure beats a paragraph of adjectives. Most people already have one and never use it.",
+      "options": [
+        "People you helped",
+        "Time you saved",
+        "Work you shipped"
+      ],
+      "takeaway": "Pick the figure you can defend in an interview, then use it.",
+      "cta": "Put one number in tonight."
+    },
+    {
+      "id": "c026",
+      "format": "decision_prompt",
+      "hook": "How many roles should you apply for a week?",
+      "subhead": "Volume feels productive. Five tailored applications beat thirty copies every time.",
+      "options": [
+        "Three, tailored",
+        "Ten, lightly edited",
+        "As many as possible"
+      ],
+      "takeaway": "Set the number you can tailor, then stop at it.",
+      "cta": "Shortlist three at internwise.co.uk"
+    },
+    {
+      "id": "c027",
+      "format": "decision_prompt",
+      "hook": "Which gap on your CV worries you most?",
+      "subhead": "Every gap has a sentence that closes it. Silence is the only version that counts against you.",
+      "options": [
+        "A year out",
+        "A short role",
+        "No sector match"
+      ],
+      "takeaway": "Write one calm line for the gap and move on.",
+      "cta": "Find a role that bridges it at internwise.co.uk"
+    },
+    {
+      "id": "c028",
+      "format": "decision_prompt",
+      "hook": "What would you want to know before accepting?",
+      "subhead": "The questions you do not ask become the things you find out in month two.",
+      "options": [
+        "Who trains you",
+        "What success looks like",
+        "Where it leads"
+      ],
+      "takeaway": "Ask all three before you say yes. None of them are rude.",
+      "cta": "Compare offers at internwise.co.uk"
+    },
+    {
+      "id": "c029",
+      "format": "decision_prompt",
+      "hook": "Which feedback would you actually act on?",
+      "subhead": "Most rejection emails say nothing. The ones that say something are worth more than the role was.",
+      "options": [
+        "Not enough evidence",
+        "Wrong level",
+        "Weak interview answers"
+      ],
+      "takeaway": "Ask one rejecting employer what would have changed their mind.",
+      "cta": "Apply again better at internwise.co.uk"
+    },
+    {
+      "id": "c030",
+      "format": "decision_prompt",
+      "hook": "Where do employers find you first?",
+      "subhead": "Whichever one they open first is the one worth an hour this week.",
+      "options": [
+        "Your CV",
+        "Your LinkedIn",
+        "Your portfolio link"
+      ],
+      "takeaway": "Make the first thing they open the strongest thing you have.",
+      "cta": "Tidy one of the three today."
     }
   ]
 }

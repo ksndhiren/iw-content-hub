@@ -793,6 +793,228 @@
           }
         }
       ]
+    },
+    {
+      "source_post": "gsc-search-demand",
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "source_signals": [
+        {
+          "source": "gsc_search_demand",
+          "title": "planning_signals.json searchDemandTopics",
+          "url": "",
+          "score": 100.0,
+          "meta": {
+            "capturedAt": "2026-09-28"
+          }
+        }
+      ],
+      "id": "gsc-will-an-internship-count-on-your-cv",
+      "title": "List It Under Work, Not Extras",
+      "source_cluster": "does an internship count as work experience employment resume cv considered",
+      "signal_score": 100.0,
+      "hook_candidates": [
+        "Three months unpaid at a startup. Does a recruiter count that as work experience?",
+        "Recruiters do not ask whether it was an internship. They ask what you shipped."
+      ],
+      "promise": "Settle whether your internship belongs in Work Experience, and how to write it so it reads that way.",
+      "proof_points": [
+        "It goes under Work Experience, not a separate Internships box at the bottom.",
+        "Give it the same shape as a job: employer, dates, three outcome lines.",
+        "A recruiter counts scope and output, not the label on the contract."
+      ],
+      "core_takeaway": "List it as work. Describe it as work. Then it counts as work.",
+      "cta": "Add it to your CV properly tonight."
+    },
+    {
+      "source_post": "gsc-search-demand",
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "source_signals": [
+        {
+          "source": "gsc_search_demand",
+          "title": "planning_signals.json searchDemandTopics",
+          "url": "",
+          "score": 92.0,
+          "meta": {
+            "capturedAt": "2026-09-28"
+          }
+        }
+      ],
+      "id": "gsc-should-your-cv-look-designed",
+      "title": "Should Your CV Look Designed?",
+      "source_cluster": "creative resume creative cv design template layout columns graphics",
+      "signal_score": 92.0,
+      "hook_candidates": [
+        "Two columns, a headshot and an icon set. Beautiful, and unreadable to the screener.",
+        "Design your CV for the six seconds a human gives it, not for your portfolio."
+      ],
+      "promise": "Know when a designed layout helps you and when it quietly costs you the shortlist.",
+      "proof_points": [
+        "Columns, text boxes and headers are where parsers drop your content.",
+        "Design earns its place in a portfolio link, not in the document itself.",
+        "One accent colour and real hierarchy beat a template every time."
+      ],
+      "core_takeaway": "Let the layout be invisible and the content do the standing out.",
+      "cta": "Send your CV to yourself as plain text and read what survives."
+    },
+    {
+      "source_post": "gsc-search-demand",
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "source_signals": [
+        {
+          "source": "gsc_search_demand",
+          "title": "planning_signals.json searchDemandTopics",
+          "url": "",
+          "score": 84.0,
+          "meta": {
+            "capturedAt": "2026-09-28"
+          }
+        }
+      ],
+      "id": "gsc-who-should-your-reference-be",
+      "title": "Who Should Your Reference Be?",
+      "source_cluster": "how to make contact with reference resume referee details request",
+      "signal_score": 84.0,
+      "hook_candidates": [
+        "References available on request wastes a line and tells a recruiter nothing.",
+        "The best referee is not the most senior person who knows your name."
+      ],
+      "promise": "Pick the right referee, ask them properly, and never get caught out by a silent one.",
+      "proof_points": [
+        "Choose whoever watched you do the work, not the biggest job title.",
+        "Ask before you list anyone. A surprised referee answers slowly and vaguely.",
+        "Send them the advert and your CV so their answer matches your claims."
+      ],
+      "core_takeaway": "Brief your referee like a teammate, not a formality.",
+      "cta": "Message one potential referee this week."
+    },
+    {
+      "source_post": "gsc-search-demand",
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "source_signals": [
+        {
+          "source": "gsc_search_demand",
+          "title": "planning_signals.json searchDemandTopics",
+          "url": "",
+          "score": 78.0,
+          "meta": {
+            "capturedAt": "2026-09-28"
+          }
+        }
+      ],
+      "id": "gsc-do-you-need-a-portfolio",
+      "title": "Show The Work, Not The Folder",
+      "source_cluster": "portfolio photos project samples work showcase link website",
+      "signal_score": 78.0,
+      "hook_candidates": [
+        "You do not need a finished portfolio. You need one thing a stranger can open.",
+        "Coursework counts. A tidy page beats a brilliant folder nobody can see."
+      ],
+      "promise": "Build a one-page proof link from the work you have already done.",
+      "proof_points": [
+        "Three pieces with context beat twenty with none.",
+        "For each piece: the brief, what you did, what changed.",
+        "A readable link on your CV outperforms an attachment nobody opens."
+      ],
+      "core_takeaway": "A portfolio is evidence somebody else can open in one click.",
+      "cta": "Put one project on one page this weekend."
+    },
+    {
+      "source_post": "gsc-search-demand",
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "source_signals": [
+        {
+          "source": "gsc_search_demand",
+          "title": "planning_signals.json searchDemandTopics",
+          "url": "",
+          "score": 74.0,
+          "meta": {
+            "capturedAt": "2026-09-28"
+          }
+        }
+      ],
+      "id": "gsc-can-a-remote-placement-be-worth-it",
+      "title": "Two Questions Before You Go Remote",
+      "source_cluster": "internship from home remote virtual placement work from home online",
+      "signal_score": 74.0,
+      "hook_candidates": [
+        "Remote placements fail quietly. Nobody notices you were never given anything.",
+        "If no one has told you what good looks like by week two, ask."
+      ],
+      "promise": "Judge a remote placement before you accept, and make it count once you are in.",
+      "proof_points": [
+        "Ask who you report to and how often before you say yes.",
+        "A placement with no scheduled check-in is a placement with no feedback.",
+        "Write your own weekly summary. It becomes your CV bullets later."
+      ],
+      "core_takeaway": "Structure is the thing a remote placement either has or does not.",
+      "cta": "Ask those two questions at your next interview."
+    },
+    {
+      "source_post": "gsc-search-demand",
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "source_signals": [
+        {
+          "source": "gsc_search_demand",
+          "title": "planning_signals.json searchDemandTopics",
+          "url": "",
+          "score": 70.0,
+          "meta": {
+            "capturedAt": "2026-09-28"
+          }
+        }
+      ],
+      "id": "gsc-the-opening-line-that-gets-read",
+      "title": "Nobody Finishes Your First Paragraph",
+      "source_cluster": "about me introduction opening paragraph summary statement personal",
+      "signal_score": 70.0,
+      "hook_candidates": [
+        "I am writing to apply for the above position. Nobody has ever read past that.",
+        "Start where you are useful, not where the template tells you to."
+      ],
+      "promise": "Replace the dead first sentence with one that earns the second.",
+      "proof_points": [
+        "Open on the thing they need, not on the fact that you are applying.",
+        "Name the role once. Then spend the sentence on them.",
+        "If your first line fits any employer, it fits none of them."
+      ],
+      "core_takeaway": "The first sentence is the only one you are guaranteed to get read.",
+      "cta": "Rewrite one opening line before you send your next application."
     }
   ],
   "fingerprint": "993dff6c0ea4fc8d"

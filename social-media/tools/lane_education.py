@@ -48,6 +48,19 @@ PAL = {
     # tabs   : TEAL chaptered "folder tabs" progress system
     "tabs": {"bg": "background:linear-gradient(160deg,#13423f,#0a1f1e 72%);", "grid": False, "accent": AMBER,
              "ink": INK, "mut": "#A9C6C4", "deep": "#071615"},
+    # --- added week22 ---------------------------------------------------------
+    # The bank held exactly 9 carousel worlds and the lane picks 3 a week while
+    # blocking the last 2 weeks, so selection was a locked 3-week cycle and every
+    # weekday's look came back on a fixed timetable. Three more give it slack.
+    # ledger : LIGHT ruled accounting ledger, numbers live in the margin rule
+    "ledger": {"bg": "background-color:#FBF6EA;", "grid": False, "accent": "#C0531F",
+               "ink": "#2A2016", "mut": "#7A6A55", "deep": "#2A2016"},
+    # grid   : DARK indigo modular blueprint, crosshair + corner coordinates
+    "grid": {"bg": "background:linear-gradient(150deg,#241F57,#11102E 74%);", "grid": True, "accent": "#8FA6FF",
+             "ink": "#ECEDFB", "mut": "#A6A8CE", "deep": "#0C0B22"},
+    # strip  : DARK forest contact-sheet, sprocket holes down both edges
+    "strip": {"bg": "background:linear-gradient(170deg,#12342A,#071913 76%);", "grid": False, "accent": "#F2C14E",
+              "ink": "#EAF6EF", "mut": "#9CC4AF", "deep": "#06140F"},
 }
 
 # Cover poses hug the RIGHT edge (compact, right-weighted) so they clear the left
@@ -321,8 +334,9 @@ def cover_spine(p, copy, total, pose):
             + _logo(left=x, top=48)
             + f"<div style=\"position:absolute;left:{x}px;top:250px;font-family:'DM Sans';font-weight:700;font-size:22px;"
               f"color:{p['accent']};letter-spacing:4px;\">{copy.get('eyebrow','INTERNWISE')[:26].upper()}</div>"
-            + f"<div style=\"position:absolute;left:{x}px;top:300px;width:460px;font-family:Inter;font-weight:700;"
-              f"font-size:66px;line-height:1.05;letter-spacing:-1.5px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>"
+            + f"<div style='position:absolute;left:{x}px;top:296px;'>"
+              + L.hero(copy['headline'], "stack", p['ink'], p['accent'], hi=p['accent'], size=62, width=460)
+              + "</div>"
             + f"<div style=\"position:absolute;left:{x}px;bottom:48px;font-family:'DM Sans';font-weight:600;font-size:23px;"
               f"color:{p['accent']};\">Swipe to begin &rarr;</div>")
 
@@ -366,8 +380,9 @@ def cover_poster(p, copy, total, pose):
     # Canvas is 1080px wide (screenshot 2x). Nuno's head/shoulder sit at ~x>=500
     # in canvas space, so the headline is bounded to the left column (width 430)
     # and sized so even the longest word clears him - no overlap on any pose.
-    head = (f"<div style=\"position:absolute;left:56px;width:430px;top:300px;font-family:Inter;font-weight:800;"
-            f"font-size:68px;line-height:1.05;letter-spacing:-2px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
+    head = (f"<div style='position:absolute;left:56px;top:298px;'>"
+            + L.hero(copy['headline'], "serif_italic", p['ink'], p['accent'], hi=CORAL, size=62, width=430)
+            + "</div>")
     rule = f"<div style='position:absolute;left:58px;top:660px;width:120px;height:8px;background:{p['accent']};border-radius:4px;'></div>"
     return (_bg(p) + blob + _arc(p, right=-40, bottom=-40, size=720) + _nuno_whole(pose, h=800, right=-70)
             + _logo(left=56, top=44) + eyebrow + head + rule + _footer(p, swipe=True))
@@ -427,7 +442,7 @@ def cover_bento(p, copy, total, pose):
             f"border-radius:21px;background:{p['accent']};'><span style=\"font-family:Inter;font-weight:800;font-size:20px;color:{p['deep']};letter-spacing:1px;\">01 / 0{total}</span></div>")
     headcard = _card(
         f"<div style=\"font-family:'DM Sans';font-weight:700;font-size:22px;color:{p['accent']};letter-spacing:4px;margin-bottom:18px;\">{copy.get('eyebrow','INTERNWISE')[:24].upper()}</div>"
-        f"<div style=\"font-family:Inter;font-weight:700;font-size:70px;line-height:1.02;letter-spacing:-2px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>",
+        + L.hero(copy['headline'], "boxed", p['ink'], p['accent'], hi=p['accent'], size=62, deep=p['deep'], width=436),
         css="left:56px;top:300px;width:520px;", pad="40px 42px")
     return (_bg(p) + panel + linkedin_frame + _nuno_whole(pose, h=760, right=10) + _logo(left=56, top=44) + chip + headcard
             + _footer(p, swipe=True))
@@ -503,7 +518,7 @@ def cover_frame(p, copy, total, pose):
             f"padding:38px 38px 42px;'>"
             f"<div style='display:inline-flex;align-items:center;height:42px;padding:0 20px;border-radius:21px;background:{AMBER};margin-bottom:22px;'>"
             f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:19px;color:{NAVYT};letter-spacing:3px;\">{copy.get('eyebrow','GUIDE')[:20].upper()}</span></div>"
-            f"<div style=\"font-family:Inter;font-weight:800;font-size:72px;line-height:1.0;letter-spacing:-2.2px;color:#fff;word-break:keep-all;\">{copy['headline']}</div></div>")
+            + L.hero(copy['headline'], "highlight", "#fff", AMBER, hi=CORAL, size=62, width=376) + "</div>")
     tags = [s.get("tag", "") for s in copy.get("slides", []) if s.get("tag")][:3]
     chips = "".join(
         f"<span style=\"display:inline-flex;align-items:center;gap:9px;margin:0 10px 10px 0;padding:10px 16px;border-radius:13px;"
@@ -563,9 +578,10 @@ def cover_lens(p, copy, total, pose):
             f"border:56px solid {p['accent']};opacity:.9;'></div>")
     eyebrow = (f"<div style=\"position:absolute;left:56px;top:250px;font-family:'DM Sans';font-weight:800;font-size:21px;"
                f"color:{p['accent']};letter-spacing:5px;\">{copy.get('eyebrow','INTERNWISE')[:24].upper()}</div>")
-    head = (f"<div style=\"position:absolute;left:56px;top:298px;width:470px;font-family:Inter;font-weight:800;"
-            f"font-size:68px;line-height:1.04;letter-spacing:-1.8px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
-    rule = f"<div style='position:absolute;left:58px;top:604px;width:110px;height:7px;background:{p['accent']};border-radius:4px;'></div>"
+    head = (f"<div style='position:absolute;left:56px;top:296px;'>"
+            + L.hero(copy['headline'], "outline", p['ink'], p['accent'], hi=p['accent'], size=62, width=470)
+            + "</div>")
+    rule = f"<div style='position:absolute;left:58px;top:640px;width:110px;height:7px;background:{p['accent']};border-radius:4px;'></div>"
     deco = (L.dots("left:58px;bottom:150px;", color="rgba(255,177,32,.38)", w=200, h=120)
             + L.watermark(w=320, right=70, bottom=300, op=.05, tint="light"))
     return (_bg(p) + ring + deco + _nuno_whole(pose, h=760, right=-60) + _logo(left=56, top=44) + eyebrow + head + rule
@@ -617,8 +633,9 @@ def cover_ticket(p, copy, total, pose):
             f"writing-mode:vertical-rl;transform:rotate(180deg);\">INTERNWISE &middot; 01 / 0{total}</span></div>")
     eyebrow = (f"<div style=\"position:absolute;left:150px;top:250px;font-family:'DM Sans';font-weight:800;font-size:21px;"
                f"color:{p['accent']};letter-spacing:5px;\">{copy.get('eyebrow','INTERNWISE')[:22].upper()}</div>")
-    head = (f"<div style=\"position:absolute;left:150px;top:298px;width:450px;font-family:Inter;font-weight:800;"
-            f"font-size:66px;line-height:1.04;letter-spacing:-1.7px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
+    head = (f"<div style='position:absolute;left:150px;top:294px;'>"
+            + L.hero(copy['headline'], "scalejump", p['ink'], p['accent'], hi=p['accent'], size=58, width=450)
+            + "</div>")
     swipe = (f"<div style=\"position:absolute;left:150px;bottom:56px;font-family:'DM Sans';font-weight:700;font-size:22px;"
              f"color:{p['accent']};\">Swipe to board &rarr;</div>")
     jd = ""
@@ -688,8 +705,8 @@ def w_tipcard(copy, week_id='adhoc'):
     logo = f"<div style='position:absolute;left:56px;top:44px;'><img src='{L.WHT}' style='height:{L.LOGO}px;'></div>"
     tab = (f"<div style='position:absolute;right:56px;top:56px;display:inline-flex;align-items:center;height:46px;padding:0 22px;"
            f"border-radius:23px;background:{AMBER};'><span style=\"font-family:'DM Sans';font-weight:800;font-size:20px;color:{NAVYT};letter-spacing:2px;\">{copy.get('eyebrow','TIP')[:20].upper()}</span></div>")
-    head = (f"<div style=\"position:absolute;left:56px;right:64px;top:214px;font-family:Inter;font-weight:700;"
-            f"font-size:64px;line-height:1.02;letter-spacing:-2px;color:{NAVYT};word-break:keep-all;\">{copy['headline']}</div>")
+    head = (f"<div style='position:absolute;left:56px;top:210px;'>"
+            + L.hero(copy['headline'], "underline", NAVYT, NAVYT, hi=AMBER, size=58, width=960) + "</div>")
     pts = copy.get("points", [])
     rows = ""
     for i, pt in enumerate(pts, 1):
@@ -711,8 +728,8 @@ def w_statement(copy, week_id='adhoc'):
     logo = L.logo_tl()
     eb = (f"<div style='position:absolute;left:58px;top:210px;display:inline-flex;align-items:center;height:46px;padding:0 22px;"
           f"border-radius:23px;background:{AMBER};'><span style=\"font-family:'DM Sans';font-weight:800;font-size:20px;color:{DEEP};letter-spacing:3px;\">{copy.get('eyebrow','LEARN')[:20].upper()}</span></div>")
-    head = (f"<div style=\"position:absolute;left:56px;right:70px;top:286px;font-family:Inter;font-weight:800;"
-            f"font-size:70px;line-height:1.0;letter-spacing:-2.5px;color:{INK};word-break:keep-all;\">{copy['headline']}</div>")
+    head = (f"<div style='position:absolute;left:56px;top:282px;'>"
+            + L.hero(copy['headline'], "serif_italic", INK, AMBER, hi=AMBER, size=64, width=954) + "</div>")
     pts = copy.get("points", [])
     rows = ""
     for pt in pts:
@@ -733,8 +750,8 @@ def w_message_lab(copy, week_id='adhoc'):
     label = (f"<div style=\"position:absolute;left:210px;top:76px;font-family:'DM Sans';font-weight:900;font-size:18px;"
              f"letter-spacing:5px;color:{GREEN};\">MESSAGE LAB</div>"
              f"<div style='position:absolute;left:210px;top:116px;width:86px;height:6px;background:{AMBER};'></div>")
-    head = (f"<div style=\"position:absolute;left:210px;top:178px;width:470px;font-family:Inter;font-weight:950;"
-            f"font-size:64px;line-height:.96;letter-spacing:-2px;color:{NAVYT};\">{copy['headline']}</div>")
+    head = (f"<div style='position:absolute;left:210px;top:174px;'>"
+            + L.hero(copy['headline'], "highlight", NAVYT, NAVYT, hi=AMBER, size=56, width=470) + "</div>")
     phone = (f"<div style='position:absolute;right:62px;top:308px;width:300px;height:508px;border-radius:38px;background:{NAVYT};"
              f"box-shadow:16px 16px 0 rgba(21,39,67,.14);border:8px solid #fff;'></div>"
              f"<div style='position:absolute;right:112px;top:370px;width:204px;height:50px;border-radius:25px;background:#fff;'></div>"
@@ -761,9 +778,11 @@ def w_focus_studio(copy, week_id='adhoc'):
     label = (f"<div style='position:absolute;left:58px;top:172px;height:46px;padding:0 20px;background:{AMBER};"
              f"transform:rotate(-2deg);display:flex;align-items:center;'>"
              f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:19px;color:{NAVYT};letter-spacing:3px;\">FOCUS STUDIO</span></div>")
-    head = (f"<div style='position:absolute;left:58px;top:258px;width:680px;'>"
-            f"<div style=\"font-family:Inter;font-weight:950;font-size:78px;line-height:.92;letter-spacing:-3px;color:{NAVYT};\">Focus Your</div>"
-            f"<div style=\"display:inline-block;margin-top:2px;font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:116px;line-height:.9;color:{CORAL};background:linear-gradient(transparent 62%,{AMBER} 62%);padding:0 10px;transform:rotate(-2deg);\">Job Hunt</div></div>")
+    # Was hardcoded to "Focus Your / Job Hunt" whatever the post said, so any topic
+    # other than the one it was built for rendered someone else's headline.
+    head = (f"<div style='position:absolute;left:58px;top:254px;'>"
+            + L.hero(copy.get('headline', ''), "highlight", NAVYT, CORAL, hi=AMBER, size=68, width=620)
+            + "</div>")
     target = (f"<div style='position:absolute;right:70px;top:236px;width:300px;height:300px;border-radius:50%;border:8px solid {NAVYT};'>"
               f"<div style='position:absolute;left:54px;top:54px;width:176px;height:176px;border-radius:50%;border:7px solid {GREEN};'></div>"
               f"<div style='position:absolute;left:116px;top:116px;width:54px;height:54px;border-radius:50%;background:{AMBER};'></div></div>")
@@ -787,9 +806,9 @@ def w_bigidea(copy, week_id='adhoc'):
     bg = _bg(p)
     eb = (f"<div style='position:absolute;left:56px;top:210px;display:inline-flex;align-items:center;height:46px;padding:0 22px;"
           f"border-radius:23px;background:{p['accent']};'><span style=\"font-family:'DM Sans';font-weight:800;font-size:20px;color:{p['deep']};letter-spacing:3px;\">{copy.get('eyebrow','LEARN')[:20].upper()}</span></div>")
-    glyph = f"<div style='position:absolute;right:60px;top:150px;font-family:Georgia,serif;font-weight:700;font-size:200px;line-height:.5;color:{p['accent']};opacity:.16;'>&ldquo;</div>"
-    head = (f"<div style=\"position:absolute;left:56px;right:70px;top:290px;font-family:Inter;font-weight:800;"
-            f"font-size:82px;line-height:1.0;letter-spacing:-2.8px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
+    glyph = f"<div style='position:absolute;right:60px;top:150px;font-family:IWSerif,Georgia,serif;font-weight:700;font-size:200px;line-height:.5;color:{p['accent']};opacity:.16;'>&ldquo;</div>"
+    head = (f"<div style='position:absolute;left:56px;top:286px;'>"
+            + L.hero(copy['headline'], "scalejump", p['ink'], p['accent'], hi=p['accent'], size=70, width=954) + "</div>")
     chips = ""
     for pt in copy.get("points", [])[:4]:
         chips += (f"<div style='display:inline-flex;align-items:center;gap:12px;margin:0 14px 14px 0;padding:14px 22px;"
@@ -820,7 +839,7 @@ def w_memo(copy, week_id='adhoc'):
     _emph_size = 116 if len(_emph) <= 7 else (92 if len(_emph) <= 10 else 74)
     head = (f"<div style='position:absolute;left:58px;top:250px;width:660px;'>"
             f"<div style=\"font-family:Inter;font-weight:950;font-size:72px;line-height:.96;letter-spacing:-2.5px;color:{NAVYT};\">{_lead}</div>"
-            + (f"<div style=\"display:inline-block;margin-top:4px;font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:{_emph_size}px;line-height:.9;color:{CORAL};"
+            + (f"<div style=\"display:inline-block;margin-top:4px;font-family:IWSerif,Georgia,serif;font-style:italic;font-weight:700;font-size:{_emph_size}px;line-height:.9;color:{CORAL};"
                f"background:linear-gradient(transparent 62%,{AMBER} 62%);padding:0 10px;transform:rotate(-2deg);\">{_emph}</div>" if _emph else "")
             + "</div>")
     scribble = (f"<svg style='position:absolute;left:72px;top:466px;width:500px;height:92px;' viewBox='0 0 500 92' fill='none'>"
@@ -860,7 +879,9 @@ def w_scorecard(copy, week_id='adhoc'):
     bg = _bg(p)
     eb = (f"<div style='position:absolute;left:56px;top:196px;height:46px;padding:0 22px;border-radius:6px;background:{p['accent']};display:flex;align-items:center;'>"
           f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:19px;color:{p['deep']};letter-spacing:3px;\">CAREER SCORECARD</span></div>")
-    head = (f"<div style=\"position:absolute;left:56px;right:70px;top:282px;font-family:Inter;font-weight:900;font-size:68px;line-height:1.0;letter-spacing:-2px;color:{p['ink']};\">{copy['headline']}</div>")
+    head = (f"<div style='position:absolute;left:56px;top:278px;'>"
+            + L.hero(copy['headline'], "shadow", p['ink'], p['accent'], hi=CORAL, size=58,
+                     width=954) + "</div>")
     pts = (copy.get('points') or [])[:3]
     rows = ""
     for pt in pts:
@@ -879,7 +900,8 @@ def w_splitcard(copy, week_id='adhoc'):
            f"<img src='{L.WHT}' style='position:absolute;left:56px;top:44px;height:{L.LOGO}px;'>"
            f"<div style='position:absolute;left:56px;top:170px;display:inline-flex;align-items:center;height:44px;padding:0 20px;border-radius:22px;background:{AMBER};'>"
            f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:19px;color:{NAVYT};letter-spacing:3px;\">{copy.get('eyebrow','LEARN')[:20].upper()}</span></div>"
-           f"<div style=\"position:absolute;left:56px;right:360px;top:236px;font-family:Inter;font-weight:800;font-size:56px;line-height:1.02;letter-spacing:-1.8px;color:#fff;word-break:keep-all;\">{copy['headline']}</div>"
+           f"<div style='position:absolute;left:56px;top:222px;'>"
+           + L.hero(copy['headline'], "stack", "#fff", AMBER, hi=AMBER, size=46, width=664) + "</div>"
            f"<img src='{L.nuno_src(pose)}' style='position:absolute;right:-10px;bottom:-32px;height:470px;filter:drop-shadow(0 18px 28px rgba(0,0,0,.5));'></div>")
     bg = f"<div style='position:absolute;inset:0;background:{CREAM};'></div>"
     rows = ""
@@ -915,10 +937,10 @@ def w_answerbank(copy, week_id='adhoc'):
     eyebrow = (f"<div style='position:absolute;left:60px;top:172px;height:44px;padding:0 18px;border-radius:0;background:{AMBER};"
                f"box-shadow:8px 8px 0 rgba(0,0,0,.22);display:flex;align-items:center;transform:rotate(-1deg);'>"
                f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:18px;color:{NAVYT};letter-spacing:3px;\">{copy.get('eyebrow','INTERVIEW PREP')[:22].upper()}</span></div>")
-    title = (f"<div style='position:absolute;left:56px;top:248px;width:572px;'>"
-             f"<div style=\"font-family:Inter;font-weight:950;font-size:76px;line-height:.94;letter-spacing:-2.8px;color:#fff;\">Build a</div>"
-             f"<div style=\"display:inline-block;margin-top:10px;font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:96px;line-height:.9;color:{AMBER};background:linear-gradient(transparent 58%,{CORAL} 58%);padding:0 12px;transform:rotate(-2deg);\">Smarter</div>"
-             f"<div style=\"margin-top:10px;font-family:Inter;font-weight:950;font-size:76px;line-height:.94;letter-spacing:-2.8px;color:#fff;\">Answer Bank</div></div>")
+    # Was hardcoded to "Build a / Smarter / Answer Bank" regardless of the post.
+    title = (f"<div style='position:absolute;left:56px;top:244px;'>"
+             + L.hero(copy.get('headline', ''), "highlight", "#fff", AMBER, hi=CORAL, size=62, width=560)
+             + "</div>")
     vault = (f"<div style='position:absolute;right:58px;top:190px;width:360px;height:390px;border-radius:34px;background:{CREAM};"
              f"box-shadow:0 32px 70px rgba(0,0,0,.36);border:4px solid rgba(255,255,255,.36);overflow:hidden;'>"
              f"<div style='position:absolute;left:0;right:0;top:0;height:74px;background:{AMBER};'></div>"
@@ -974,7 +996,7 @@ def cover_marker(p, copy, total, pose):
                 f"<div style='position:absolute;right:158px;bottom:138px;width:176px;height:496px;background:rgba(255,255,255,.08);'></div>")
         head = (f"<div style='position:absolute;left:62px;top:242px;width:650px;'>"
                 f"<div style=\"font-family:Inter;font-weight:950;font-size:78px;line-height:.92;letter-spacing:-3.2px;color:{NAVYT};\">Nail the</div>"
-                f"<div style=\"margin-top:6px;font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:168px;line-height:.82;color:{AMBER};text-shadow:7px 7px 0 {NAVYT};\">First</div>"
+                f"<div style=\"margin-top:6px;font-family:IWSerif,Georgia,serif;font-style:italic;font-weight:700;font-size:168px;line-height:.82;color:{AMBER};text-shadow:7px 7px 0 {NAVYT};\">First</div>"
                 f"<div style='display:flex;align-items:flex-end;gap:18px;margin-top:10px;'>"
                 f"<div style=\"font-family:Inter;font-weight:950;font-size:164px;line-height:.78;letter-spacing:-8px;color:transparent;-webkit-text-stroke:5px {NAVYT};text-stroke:5px {NAVYT};\">30</div>"
                 f"<div style=\"font-family:Inter;font-weight:950;font-size:64px;line-height:.9;color:{NAVYT};letter-spacing:-2px;margin-bottom:9px;\">SECONDS</div>"
@@ -992,11 +1014,9 @@ def cover_marker(p, copy, total, pose):
     eyebrow = (f"<div style='position:absolute;left:{x}px;top:206px;display:inline-flex;align-items:center;height:46px;padding:0 20px;"
                f"border-radius:12px;background:{AMBER};'>"
                f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:20px;color:{NAVYT};letter-spacing:3px;\">{copy.get('eyebrow','GUIDE')[:22].upper()}</span></div>")
-    headblock = (f"<div style='position:absolute;left:{x}px;top:296px;width:452px;'>"
-                 f"<div style=\"font-family:Inter;font-weight:800;font-size:68px;line-height:1.04;letter-spacing:-2px;"
-                 f"color:{NAVYT};word-break:keep-all;\">{copy['headline']}</div>"
-                 f"<div style='margin-top:20px;width:236px;height:20px;background:{AMBER};opacity:.85;"
-                 f"transform:rotate(-1.4deg);border-radius:3px;'></div></div>")
+    headblock = (f"<div style='position:absolute;left:{x}px;top:292px;width:452px;'>"
+                 + L.hero(copy['headline'], "underline", NAVYT, NAVYT, hi=AMBER, size=60, width=452)
+                 + "</div>")
     swipe = (f"<div style=\"position:absolute;left:{x}px;bottom:56px;font-family:'DM Sans';font-weight:800;font-size:22px;"
              f"color:{NAVYT};\">Swipe to begin &rarr;</div>")
     return (_bg(p) + tex + glow + _nuno_whole(pose, h=770, right=-150)
@@ -1057,7 +1077,7 @@ def cover_flash(p, copy, total, pose):
                     f"<div style='position:absolute;left:760px;top:154px;width:280px;height:710px;border:3px solid rgba(255,177,32,.22);transform:rotate(-3deg);'></div>")
         head = (f"<div style='position:absolute;left:58px;top:284px;width:620px;'>"
                 f"<div style=\"font-family:Inter;font-weight:950;font-size:84px;line-height:.9;letter-spacing:-3.5px;color:#fff;\">Add</div>"
-                f"<div style=\"display:inline-block;margin-top:8px;font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:152px;line-height:.82;color:{AMBER};background:linear-gradient(transparent 60%,{CORAL} 60%);padding:0 12px;transform:rotate(-2deg);\">Proof</div>"
+                f"<div style=\"display:inline-block;margin-top:8px;font-family:IWSerif,Georgia,serif;font-style:italic;font-weight:700;font-size:152px;line-height:.82;color:{AMBER};background:linear-gradient(transparent 60%,{CORAL} 60%);padding:0 12px;transform:rotate(-2deg);\">Proof</div>"
                 f"<div style=\"margin-top:16px;font-family:Inter;font-weight:950;font-size:78px;line-height:.9;letter-spacing:-3px;color:#fff;\">before you</div>"
                 f"<div style=\"margin-top:8px;font-family:Inter;font-weight:950;font-size:78px;line-height:.9;letter-spacing:-3px;color:transparent;-webkit-text-stroke:3px #fff;text-stroke:3px #fff;\">polish</div></div>")
         chips = (f"<div style='position:absolute;left:62px;top:780px;display:flex;gap:14px;'>"
@@ -1074,14 +1094,15 @@ def cover_flash(p, copy, total, pose):
     if "rejection" in copy.get("headline", "").lower():
         head = (f"<div style='position:absolute;left:{x}px;top:292px;width:560px;'>"
                 f"<div style=\"font-family:Inter;font-weight:950;font-size:94px;line-height:.86;letter-spacing:-4px;color:{p['ink']};\">Break</div>"
-                f"<div style=\"display:inline-block;margin-top:12px;font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:100px;line-height:.88;color:{CORAL};"
+                f"<div style=\"display:inline-block;margin-top:12px;font-family:IWSerif,Georgia,serif;font-style:italic;font-weight:700;font-size:100px;line-height:.88;color:{CORAL};"
                 f"background:linear-gradient(transparent 58%,{p['accent']} 58%);padding:0 10px;transform:rotate(-2deg);\">Rejection</div>"
                 f"<div style=\"margin-top:12px;font-family:Inter;font-weight:950;font-size:88px;line-height:.88;letter-spacing:-3px;color:transparent;"
                 f"-webkit-text-stroke:3px {p['ink']};text-stroke:3px {p['ink']};\">Cycle</div></div>")
         rule = f"<div style='position:absolute;left:{x+6}px;top:708px;width:210px;height:9px;background:{p['accent']};border-radius:4px;transform:skewX(-26deg);'></div>"
     else:
-        head = (f"<div style=\"position:absolute;left:{x}px;top:298px;width:470px;font-family:Inter;font-weight:800;"
-                f"font-size:66px;line-height:1.04;letter-spacing:-1.8px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
+        head = (f"<div style='position:absolute;left:{x}px;top:294px;'>"
+                + L.hero(copy['headline'], "shadow", p['ink'], p['accent'], hi=CORAL, size=58, width=470)
+                + "</div>")
         rule = f"<div style='position:absolute;left:{x+2}px;top:604px;width:120px;height:7px;background:{p['accent']};border-radius:4px;transform:skewX(-26deg);'></div>"
     return (_bg(p) + wedge + _arc(p, right=-60, bottom=-120, size=680) + _nuno_whole(pose, h=760, right=-60)
             + _logo(left=x, top=44) + slash + eyebrow + head + rule
@@ -1155,7 +1176,7 @@ def cover_tabs(p, copy, total, pose):
                  f"</svg>")
         head = (f"<div style='position:absolute;left:56px;top:268px;width:560px;'>"
                 f"<div style=\"font-family:Inter;font-weight:950;font-size:76px;line-height:.9;letter-spacing:-3px;color:#fff;\">Craft a</div>"
-                f"<div style=\"display:inline-block;margin-top:10px;font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:112px;line-height:.86;color:{AMBER};background:linear-gradient(transparent 58%,{CORAL} 58%);padding:0 12px;transform:rotate(-2deg);\">Follow-Up</div>"
+                f"<div style=\"display:inline-block;margin-top:10px;font-family:IWSerif,Georgia,serif;font-style:italic;font-weight:700;font-size:112px;line-height:.86;color:{AMBER};background:linear-gradient(transparent 58%,{CORAL} 58%);padding:0 12px;transform:rotate(-2deg);\">Follow-Up</div>"
                 f"<div style=\"margin-top:14px;font-family:Inter;font-weight:950;font-size:82px;line-height:.9;letter-spacing:-3px;color:#fff;\">Email</div></div>")
         label = (f"<div style='position:absolute;left:58px;top:190px;height:42px;padding:0 18px;border-radius:21px;background:rgba(255,255,255,.10);border:2px solid rgba(255,255,255,.18);display:flex;align-items:center;'>"
                  f"<span style=\"font-family:'DM Sans';font-weight:950;font-size:16px;color:{AMBER};letter-spacing:4px;\">SEND WITH INTENT</span></div>")
@@ -1183,9 +1204,9 @@ def cover_tabs(p, copy, total, pose):
                 f"<div style='margin-top:38px;'>"
                 f"<div style=\"font-family:'DM Sans';font-weight:800;font-size:15px;color:{p['mut']};letter-spacing:4px;margin-bottom:18px;\">IN THIS GUIDE</div>"
                 f"<div style='width:52px;height:4px;background:{p['accent']};border-radius:2px;margin-bottom:22px;'></div>{rows}</div>")
-    block = (f"<div style='position:absolute;left:{x}px;top:346px;width:560px;'>"
-             f"<div style=\"font-family:Inter;font-weight:800;font-size:66px;line-height:1.04;letter-spacing:-1.8px;"
-             f"color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>{contents}</div>")
+    block = (f"<div style='position:absolute;left:{x}px;top:342px;width:560px;'>"
+             + L.hero(copy['headline'], "quoted", p['ink'], p['accent'], hi=p['accent'], size=58, width=560)
+             + f"{contents}</div>")
     swipe = (f"<div style=\"position:absolute;left:{x}px;bottom:56px;font-family:'DM Sans';font-weight:800;font-size:22px;"
              f"color:{p['accent']};\">Open chapter one &rarr;</div>")
     if "tracker" in copy.get("headline", "").lower():
@@ -1230,6 +1251,185 @@ def cta_tabs(p, copy, total, pose):
             + f"<div style='position:absolute;left:{x}px;top:706px;'>{_pill(p)}</div>")
 
 
+
+# =================================================================================
+#  WORLD 10  -  "ledger"  (rust on cream) : ruled accounting ledger
+# =================================================================================
+def _rules(p, top=150, n=16, gap=52):
+    rows = "".join(f"<div style='position:absolute;left:0;right:0;top:{top + i*gap}px;height:1px;"
+                   f"background:rgba(42,32,22,.11);'></div>" for i in range(n))
+    return (rows + f"<div style='position:absolute;left:196px;top:0;bottom:0;width:2px;background:{p['accent']};opacity:.55;'></div>"
+                   f"<div style='position:absolute;left:206px;top:0;bottom:0;width:2px;background:{p['accent']};opacity:.25;'></div>")
+
+def _ledger_no(p, n, total, top=168):
+    return (f"<div style='position:absolute;left:56px;top:{top}px;'>"
+            f"<div style=\"font-family:IWSerif,Georgia,serif;font-size:104px;line-height:.82;color:{p['accent']};\">{n:02d}</div>"
+            f"<div style=\"margin-top:6px;font-family:'DM Sans';font-weight:800;font-size:17px;color:{p['mut']};"
+            f"letter-spacing:3px;\">OF {total:02d}</div></div>")
+
+def cover_ledger(p, copy, total, pose):
+    x = 244
+    eyebrow = (f"<div style=\"position:absolute;left:{x}px;top:250px;font-family:'DM Sans';font-weight:900;font-size:20px;"
+               f"color:{p['accent']};letter-spacing:5px;\">{copy.get('eyebrow','INTERNWISE')[:24].upper()}</div>")
+    head = (f"<div style='position:absolute;left:{x}px;top:296px;'>"
+            + L.hero(copy['headline'], "stack", p['ink'], p['accent'], hi=p['accent'], size=58, width=430) + "</div>")
+    entries = ""
+    for i, sl in enumerate([sl for sl in copy.get("slides", []) if sl.get("tag")][:3], start=1):
+        entries += (f"<div style='display:flex;align-items:center;gap:14px;margin-bottom:13px;'>"
+                    f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:17px;color:{p['accent']};letter-spacing:2px;\">{i:02d}</span>"
+                    f"<span style=\"font-family:Inter;font-weight:700;font-size:26px;color:{p['mut']};\">{sl['tag']}</span></div>")
+    index = (f"<div style='position:absolute;left:{x}px;bottom:150px;width:420px;'>"
+             f"<div style=\"font-family:'DM Sans';font-weight:900;font-size:15px;color:{p['mut']};letter-spacing:4px;"
+             f"margin-bottom:14px;\">ENTRIES</div>{entries}</div>" if entries else "")
+    swipe = (f"<div style=\"position:absolute;left:{x}px;bottom:58px;font-family:'DM Sans';font-weight:900;font-size:22px;"
+             f"color:{p['accent']};\">Open the ledger &rarr;</div>")
+    return (_bg(p) + _rules(p) + _nuno_whole(pose, h=760, right=-70) + _logo(L.DARKLOGO, left=56, top=48)
+            + _ledger_no(p, 1, total, top=660) + eyebrow + head + index + swipe)
+
+def content_ledger(p, n, total, slide):
+    x = 244
+    tag = (f"<div style=\"position:absolute;left:{x}px;top:200px;font-family:'DM Sans';font-weight:900;font-size:21px;"
+           f"color:{p['accent']};letter-spacing:4px;\">{slide.get('tag','STEP '+str(n-1))[:26].upper()}</div>")
+    head = (f"<div style=\"position:absolute;left:{x}px;right:72px;top:262px;font-family:Inter;font-weight:800;"
+            f"font-size:56px;line-height:1.06;letter-spacing:-1.6px;color:{p['ink']};word-break:keep-all;\">{slide['title']}</div>")
+    body = (f"<div style=\"position:absolute;left:{x}px;right:80px;top:466px;font-family:'DM Sans';font-weight:500;"
+            f"font-size:40px;line-height:1.44;color:{p['mut']};\">{slide['body']}</div>")
+    # The lower half of a ruled page reads as unfinished without an anchor.
+    ghost = (f"<div style=\"position:absolute;right:62px;bottom:94px;font-family:IWSerif,Georgia,serif;"
+             f"font-size:330px;line-height:.72;color:{p['accent']};opacity:.09;\">{n-1:02d}</div>")
+    return (_bg(p) + _rules(p) + ghost + _logo(L.DARKLOGO, left=56, top=48) + _ledger_no(p, n, total)
+            + tag + head + body
+            + f"<div style=\"position:absolute;left:{x}px;bottom:58px;font-family:'DM Sans';font-weight:900;"
+              f"font-size:21px;color:{p['accent']};\">Swipe &rarr;</div>")
+
+def cta_ledger(p, copy, total, pose):
+    x = 244
+    eyebrow = (f"<div style=\"position:absolute;left:{x}px;top:250px;font-family:'DM Sans';font-weight:900;font-size:20px;"
+               f"color:{p['accent']};letter-spacing:5px;\">YOUR MOVE</div>")
+    head = (f"<div style=\"position:absolute;left:{x}px;top:300px;width:420px;font-family:Inter;font-weight:800;"
+            f"font-size:56px;line-height:1.04;letter-spacing:-1.7px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
+    sub = (f"<div style=\"position:absolute;left:{x}px;top:536px;width:400px;font-family:'DM Sans';font-weight:500;"
+           f"font-size:32px;line-height:1.34;color:{p['mut']};\">{copy.get('cta','')}</div>")
+    pill = (f"<div style='position:absolute;left:{x}px;top:700px;height:58px;padding:0 26px;border-radius:12px;"
+            f"background:{p['accent']};display:flex;align-items:center;'>"
+            f"<span style=\"font-family:Inter;font-weight:900;font-size:24px;color:#fff;\">{L.URL}</span></div>")
+    return (_bg(p) + _rules(p) + _nuno_whole(pose, h=720, right=-70) + _logo(L.DARKLOGO, left=56, top=48)
+            + _ledger_no(p, total, total, top=660) + eyebrow + head + sub + pill)
+
+
+# =================================================================================
+#  WORLD 11  -  "grid"  (indigo) : modular blueprint, crosshair + coordinates
+# =================================================================================
+def _coords(p, n, total):
+    return (f"<div style=\"position:absolute;right:58px;top:62px;font-family:'DM Sans';font-weight:800;font-size:19px;"
+            f"color:{p['mut']};letter-spacing:4px;\">X{n:02d} &middot; Y{total:02d}</div>")
+
+def _crosshair(p, cx, cy, r=260):
+    return (f"<div style='position:absolute;left:{cx-r}px;top:{cy-r}px;width:{r*2}px;height:{r*2}px;border-radius:50%;"
+            f"border:2px solid {p['accent']};opacity:.34;'></div>"
+            f"<div style='position:absolute;left:{cx-r}px;top:{cy}px;width:{r*2}px;height:2px;background:{p['accent']};opacity:.26;'></div>"
+            f"<div style='position:absolute;left:{cx}px;top:{cy-r}px;width:2px;height:{r*2}px;background:{p['accent']};opacity:.26;'></div>")
+
+def cover_grid(p, copy, total, pose):
+    x = 58
+    eyebrow = (f"<div style='position:absolute;left:{x}px;top:230px;height:44px;padding:0 18px;border:2px solid {p['accent']};"
+               f"display:flex;align-items:center;'>"
+               f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:19px;color:{p['accent']};letter-spacing:4px;\">{copy.get('eyebrow','INTERNWISE')[:22].upper()}</span></div>")
+    head = (f"<div style='position:absolute;left:{x}px;top:300px;'>"
+            + L.hero(copy['headline'], "boxed", p['ink'], p['accent'], hi=p['accent'], size=60, deep=p['deep'], width=460) + "</div>")
+    ticks = "".join(f"<div style='width:{44 if i==0 else 22}px;height:6px;background:{p['accent']};"
+                    f"opacity:{1 if i==0 else .3};margin-right:9px;'></div>" for i in range(total))
+    bar = f"<div style='position:absolute;left:{x}px;bottom:150px;display:flex;align-items:center;'>{ticks}</div>"
+    swipe = (f"<div style=\"position:absolute;left:{x}px;bottom:58px;font-family:'DM Sans';font-weight:900;font-size:22px;"
+             f"color:{p['accent']};\">Swipe through the build &rarr;</div>")
+    return (_bg(p) + _crosshair(p, 820, 420) + _nuno_whole(pose, h=760, right=-56) + _logo(left=x, top=44)
+            + _coords(p, 1, total) + eyebrow + head + bar + swipe)
+
+def content_grid(p, n, total, slide):
+    x = 58
+    module = (f"<div style='position:absolute;left:{x}px;top:230px;right:58px;bottom:150px;"
+              f"border:2px solid {p['accent']};opacity:.22;'></div>")
+    num = (f"<div style='position:absolute;left:{x}px;top:230px;width:96px;height:96px;background:{p['accent']};"
+           f"display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:900;font-size:46px;"
+           f"color:{p['deep']};'>{n-1:02d}</div>")
+    tag = (f"<div style=\"position:absolute;left:{x+124}px;top:258px;font-family:'DM Sans';font-weight:900;font-size:21px;"
+           f"color:{p['accent']};letter-spacing:4px;\">{slide.get('tag','STEP '+str(n-1))[:24].upper()}</div>")
+    head = (f"<div style=\"position:absolute;left:{x+28}px;right:90px;top:390px;font-family:Inter;font-weight:800;"
+            f"font-size:56px;line-height:1.06;letter-spacing:-1.6px;color:{p['ink']};word-break:keep-all;\">{slide['title']}</div>")
+    body = (f"<div style=\"position:absolute;left:{x+28}px;right:96px;top:600px;font-family:'DM Sans';font-weight:500;"
+            f"font-size:40px;line-height:1.44;color:{p['mut']};\">{slide['body']}</div>")
+    return (_bg(p) + _crosshair(p, 876, 834, 196) + module + _logo(left=x, top=44)
+            + _coords(p, n, total) + num + tag + head + body)
+
+def cta_grid(p, copy, total, pose):
+    x = 58
+    eyebrow = (f"<div style=\"position:absolute;left:{x}px;top:250px;font-family:'DM Sans';font-weight:900;font-size:20px;"
+               f"color:{p['accent']};letter-spacing:5px;\">YOUR MOVE</div>")
+    head = (f"<div style=\"position:absolute;left:{x}px;top:300px;width:450px;font-family:Inter;font-weight:800;"
+            f"font-size:56px;line-height:1.04;letter-spacing:-1.7px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
+    sub = (f"<div style=\"position:absolute;left:{x}px;top:534px;width:420px;font-family:'DM Sans';font-weight:500;"
+           f"font-size:32px;line-height:1.34;color:{p['mut']};\">{copy.get('cta','')}</div>")
+    return (_bg(p) + _crosshair(p, 830, 560, 230) + _nuno_whole(pose, h=720, right=-56) + _logo(left=x, top=44)
+            + _coords(p, total, total) + eyebrow + head + sub
+            + f"<div style='position:absolute;left:{x}px;top:700px;'>{_pill(p)}</div>")
+
+
+# =================================================================================
+#  WORLD 12  -  "strip"  (forest) : contact sheet, sprocket holes down both edges
+# =================================================================================
+def _sprockets(p):
+    holes = "".join(f"<div style='width:26px;height:36px;border-radius:5px;background:{p['deep']};margin:16px 0;'></div>"
+                    for _ in range(14))
+    col = (f"<div style='position:absolute;top:-20px;bottom:-20px;width:62px;background:{p['accent']};"
+           f"display:flex;flex-direction:column;align-items:center;justify-content:space-around;opacity:.92;'>{holes}</div>")
+    return (col.replace("position:absolute;", "position:absolute;left:0;")
+            + col.replace("position:absolute;", "position:absolute;right:0;"))
+
+def cover_strip(p, copy, total, pose):
+    x = 104
+    frame = (f"<div style='position:absolute;left:{x}px;top:170px;right:104px;bottom:150px;"
+             f"border:3px solid rgba(255,255,255,.16);'></div>")
+    eyebrow = (f"<div style=\"position:absolute;left:{x+28}px;top:238px;font-family:'DM Sans';font-weight:900;font-size:19px;"
+               f"color:{p['accent']};letter-spacing:5px;\">{copy.get('eyebrow','INTERNWISE')[:22].upper()}</div>")
+    head = (f"<div style='position:absolute;left:{x+28}px;top:292px;'>"
+            + L.hero(copy['headline'], "quoted", p['ink'], p['accent'], hi=p['accent'], size=56, width=420) + "</div>")
+    frames = (f"<div style=\"position:absolute;left:{x+28}px;bottom:200px;font-family:'DM Sans';font-weight:900;"
+              f"font-size:17px;color:{p['mut']};letter-spacing:4px;\">FRAME 01 / {total:02d}</div>")
+    swipe = (f"<div style=\"position:absolute;left:{x+28}px;bottom:70px;font-family:'DM Sans';font-weight:900;font-size:22px;"
+             f"color:{p['accent']};\">Roll the sequence &rarr;</div>")
+    return (_bg(p) + _sprockets(p) + frame + _nuno_whole(pose, h=740, right=-20) + _logo(left=x + 28, top=48)
+            + eyebrow + head + frames + swipe)
+
+def content_strip(p, n, total, slide):
+    x = 104
+    frame = (f"<div style='position:absolute;left:{x}px;top:170px;right:104px;bottom:150px;"
+             f"border:3px solid rgba(255,255,255,.16);'></div>")
+    num = (f"<div style=\"position:absolute;left:{x+28}px;top:220px;font-family:IWSerif,Georgia,serif;font-size:112px;"
+           f"line-height:.8;color:{p['accent']};opacity:.9;\">{n-1:02d}</div>")
+    tag = (f"<div style=\"position:absolute;left:{x+28}px;top:360px;font-family:'DM Sans';font-weight:900;font-size:21px;"
+           f"color:{p['accent']};letter-spacing:4px;\">{slide.get('tag','STEP '+str(n-1))[:24].upper()}</div>")
+    head = (f"<div style=\"position:absolute;left:{x+28}px;right:150px;top:410px;font-family:Inter;font-weight:800;"
+            f"font-size:54px;line-height:1.06;letter-spacing:-1.5px;color:{p['ink']};word-break:keep-all;\">{slide['title']}</div>")
+    body = (f"<div style=\"position:absolute;left:{x+28}px;right:160px;top:614px;font-family:'DM Sans';font-weight:500;"
+            f"font-size:39px;line-height:1.44;color:{p['mut']};\">{slide['body']}</div>")
+    foot = (f"<div style=\"position:absolute;left:{x+28}px;bottom:200px;font-family:'DM Sans';font-weight:900;"
+            f"font-size:17px;color:{p['mut']};letter-spacing:4px;\">FRAME {n:02d} / {total:02d}</div>")
+    return _bg(p) + _sprockets(p) + frame + _logo(left=x + 28, top=48) + num + tag + head + body + foot
+
+def cta_strip(p, copy, total, pose):
+    x = 104
+    frame = (f"<div style='position:absolute;left:{x}px;top:170px;right:104px;bottom:150px;"
+             f"border:3px solid rgba(255,255,255,.16);'></div>")
+    eyebrow = (f"<div style=\"position:absolute;left:{x+28}px;top:238px;font-family:'DM Sans';font-weight:900;font-size:19px;"
+               f"color:{p['accent']};letter-spacing:5px;\">YOUR MOVE</div>")
+    head = (f"<div style=\"position:absolute;left:{x+28}px;top:292px;width:400px;font-family:Inter;font-weight:800;"
+            f"font-size:54px;line-height:1.04;letter-spacing:-1.6px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
+    sub = (f"<div style=\"position:absolute;left:{x+28}px;top:520px;width:380px;font-family:'DM Sans';font-weight:500;"
+           f"font-size:31px;line-height:1.34;color:{p['mut']};\">{copy.get('cta','')}</div>")
+    return (_bg(p) + _sprockets(p) + frame + _nuno_whole(pose, h=700, right=-20) + _logo(left=x + 28, top=48)
+            + eyebrow + head + sub + f"<div style='position:absolute;left:{x+28}px;top:690px;'>{_pill(p)}</div>")
+
+
 CAROUSEL = {
     "teal": {"cover": cover_spine, "content": content_spine, "cta": cta_spine},
     "plum": {"cover": cover_poster, "content": content_poster, "cta": cta_poster},
@@ -1240,6 +1440,9 @@ CAROUSEL = {
     "marker": {"cover": cover_marker, "content": content_marker, "cta": cta_marker},
     "flash": {"cover": cover_flash, "content": content_flash, "cta": cta_flash},
     "tabs": {"cover": cover_tabs, "content": content_tabs, "cta": cta_tabs},
+    "ledger": {"cover": cover_ledger, "content": content_ledger, "cta": cta_ledger},
+    "grid": {"cover": cover_grid, "content": content_grid, "cta": cta_grid},
+    "strip": {"cover": cover_strip, "content": content_strip, "cta": cta_strip},
 }
 SINGLE = {"tipcard": w_tipcard, "statement": w_statement,
           "bigidea": w_bigidea, "splitcard": w_splitcard,

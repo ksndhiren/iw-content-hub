@@ -129,7 +129,7 @@ def w_split(q, src=None):
     panel_wm = _wm(src, "left:-24px;bottom:0;height:668px;", op=.17, filt="grayscale(1) brightness(1.5) contrast(1.05)")
     panel = (f"<div style='position:absolute;left:0;top:0;bottom:0;width:{PANEL}px;background:{NAVY};overflow:hidden;'>"
              f"{panel_wm}"
-             f"<div style='position:absolute;left:40px;top:280px;font-family:Georgia,serif;font-weight:700;font-size:280px;line-height:.6;color:{AMBER};opacity:.9;'>{Q}</div>"
+             f"<div style='position:absolute;left:40px;top:280px;font-family:IWSerif,Georgia,serif;font-weight:700;font-size:280px;line-height:.6;color:{AMBER};opacity:.9;'>{Q}</div>"
              f"<div style=\"position:absolute;left:56px;bottom:68px;font-family:'DM Sans';font-weight:700;font-size:22px;color:{INK};letter-spacing:5px;\">QUOTE OF<br>THE DAY</div></div>")
     body = (f"<div style='position:absolute;left:{PANEL+52}px;right:64px;top:296px;'>"
             f"<div style=\"font-family:Inter;font-weight:700;font-size:60px;line-height:1.14;letter-spacing:-1px;color:#152743;word-break:keep-all;\">{q['text']}</div>"
@@ -148,7 +148,7 @@ def w_paper(q, src=None):
     wm = _wm(src, "right:88px;top:720px;width:660px;height:500px;object-fit:contain;object-position:center center;", op=.075, filt="grayscale(1) brightness(1.22)")
     card = (f"<div style='position:absolute;left:110px;right:110px;top:300px;background:#FBFCFE;border-radius:22px;"
             f"box-shadow:0 40px 80px rgba(0,0,0,.5);padding:56px 54px 48px;transform:rotate(-2deg);'>"
-            f"<div style='font-family:Georgia,serif;font-weight:700;font-size:130px;line-height:.4;color:{AMBER};height:70px;'>{Q}</div>"
+            f"<div style='font-family:IWSerif,Georgia,serif;font-weight:700;font-size:130px;line-height:.4;color:{AMBER};height:70px;'>{Q}</div>"
             f"<div style=\"font-family:Inter;font-weight:700;font-size:56px;line-height:1.14;letter-spacing:-1px;color:#1c2740;word-break:keep-all;\">{q['text']}</div>"
             f"<div style=\"font-family:'DM Sans';font-weight:700;font-size:28px;color:#5b6b82;margin-top:28px;\">- {q['author']}</div></div>")
     tape = f"<div style='position:absolute;left:490px;top:286px;width:150px;height:44px;background:rgba(255,177,32,.7);transform:rotate(-4deg);'></div>"
@@ -163,7 +163,7 @@ def w_editorial(q, src=None):
     tex = ("<div style='position:absolute;inset:0;opacity:.5;background-image:radial-gradient(rgba(138,123,98,.12) 1.5px,transparent 1.5px);background-size:30px 30px;'></div>")
     # Sepia author watermark on the right, like a faded printed portrait.
     wm = _wm(src, "right:-34px;top:150px;height:770px;", op=.09, filt="grayscale(1) sepia(.4) contrast(1.03)")
-    glyph = f"<div style='position:absolute;left:52px;top:322px;font-family:Georgia,serif;font-weight:700;font-size:240px;line-height:.7;color:{AMBER};'>{Q}</div>"
+    glyph = f"<div style='position:absolute;left:52px;top:322px;font-family:IWSerif,Georgia,serif;font-weight:700;font-size:240px;line-height:.7;color:{AMBER};'>{Q}</div>"
     body = (f"<div style='position:absolute;left:60px;right:70px;top:520px;'>"
             f"<div style=\"font-family:Inter;font-weight:700;font-size:78px;line-height:1.12;letter-spacing:-1.5px;color:{NAVYT};word-break:keep-all;\">{q['text']}</div>"
             f"<div style='width:96px;height:6px;background:{CORAL};border-radius:3px;margin:40px 0 26px;'></div>"
@@ -221,7 +221,7 @@ def w_band(q, src=None):
     wm = _wm(src, "right:-40px;bottom:0;height:430px;", op=.10, filt="grayscale(1) sepia(.25)")
     kicker = (f"<div style=\"position:absolute;left:64px;top:170px;font-family:'DM Sans';font-weight:800;"
               f"font-size:20px;color:{COFFEE};letter-spacing:6px;\">QUOTE OF THE DAY</div>")
-    glyph = f"<div style='position:absolute;right:70px;top:120px;font-family:Georgia,serif;font-weight:700;font-size:170px;line-height:.5;color:{AMBER};opacity:.5;'>{Q}</div>"
+    glyph = f"<div style='position:absolute;right:70px;top:120px;font-family:IWSerif,Georgia,serif;font-weight:700;font-size:170px;line-height:.5;color:{AMBER};opacity:.5;'>{Q}</div>"
     rule_t = f"<div style='position:absolute;left:0;right:0;top:322px;height:6px;background:{AMBER};'></div>"
     band = (f"<div style='position:absolute;left:0;right:0;top:328px;background:{NAVY};padding:56px 64px 60px;'>"
             f"<div style=\"font-family:Inter;font-weight:800;font-size:72px;line-height:1.1;letter-spacing:-1.6px;color:#fff;word-break:keep-all;\">{q['text']}</div></div>")
@@ -242,7 +242,7 @@ def w_minimal(q, src=None):
     kicker = (f"<div style=\"position:absolute;left:0;right:0;top:290px;text-align:center;font-family:'DM Sans';font-weight:700;"
               f"font-size:19px;color:{GREEN};letter-spacing:7px;\">QUOTE OF THE DAY</div>")
     body = (f"<div style='position:absolute;left:110px;right:110px;top:360px;text-align:center;'>"
-            f"<div style=\"font-family:Georgia,serif;font-weight:700;font-size:66px;line-height:1.2;letter-spacing:-.5px;color:{INKN};word-break:keep-all;\">{q['text']}</div>"
+            f"<div style=\"font-family:IWSerif,Georgia,serif;font-weight:700;font-size:66px;line-height:1.2;letter-spacing:-.5px;color:{INKN};word-break:keep-all;\">{q['text']}</div>"
             f"<div style='width:70px;height:4px;background:{AMBER};border-radius:3px;margin:34px auto 20px;'></div>"
             f"<div style=\"font-family:'DM Sans';font-weight:700;font-size:27px;color:{INKN};letter-spacing:.5px;\">{q['author']}</div></div>")
     cta = (f"<div style=\"position:absolute;left:0;right:0;bottom:170px;text-align:center;font-family:Inter;font-weight:700;"
@@ -260,7 +260,7 @@ def w_bubble(q, src=None):
               f"font-size:20px;color:{AMBER};letter-spacing:6px;\">QUOTE OF THE DAY</div>")
     card = (f"<div style='position:absolute;left:60px;right:110px;top:280px;background:#FBFCFE;border-radius:30px;"
             f"box-shadow:0 34px 70px rgba(0,0,0,.32);padding:52px 52px 46px;'>"
-            f"<div style='font-family:Georgia,serif;font-weight:700;font-size:120px;line-height:.4;color:{AMBER};height:66px;'>{Q}</div>"
+            f"<div style='font-family:IWSerif,Georgia,serif;font-weight:700;font-size:120px;line-height:.4;color:{AMBER};height:66px;'>{Q}</div>"
             f"<div style=\"font-family:Inter;font-weight:800;font-size:62px;line-height:1.12;letter-spacing:-1.3px;color:#1c2740;word-break:keep-all;\">{q['text']}</div></div>")
     tail = f"<div style='position:absolute;left:150px;top:606px;width:56px;height:56px;background:#FBFCFE;transform:rotate(45deg);box-shadow:0 34px 70px rgba(0,0,0,.10);'></div>"
     author = (f"<div style='position:absolute;left:60px;bottom:150px;display:flex;align-items:center;gap:14px;'>"
@@ -303,7 +303,7 @@ def w_stamp(q, src=None):
               f"font-size:20px;color:{AMBER};letter-spacing:6px;\">QUOTE OF THE DAY</div>")
     card = (f"<div style='position:absolute;left:70px;right:70px;top:250px;bottom:228px;background:#FBFCFE;border-radius:28px;"
             f"box-shadow:0 34px 70px rgba(0,0,0,.34);padding:56px 56px 48px;'>"
-            f"<div style='font-family:Georgia,serif;font-weight:700;font-size:130px;line-height:.4;color:{AMBER};height:72px;'>{Q}</div>"
+            f"<div style='font-family:IWSerif,Georgia,serif;font-weight:700;font-size:130px;line-height:.4;color:{AMBER};height:72px;'>{Q}</div>"
             f"<div style=\"font-family:Inter;font-weight:700;font-size:58px;line-height:1.14;letter-spacing:-1px;color:{NAVYT};word-break:keep-all;\">{q['text']}</div>"
             f"<div style=\"position:absolute;left:56px;bottom:46px;font-family:'DM Sans';font-weight:800;font-size:30px;color:{NAVYT};\">{q['author']}</div></div>")
     seal = (f"<div style='position:absolute;right:104px;top:206px;width:132px;height:132px;border-radius:50%;background:{AMBER};"
@@ -326,7 +326,7 @@ def w_notebook(q, src=None):
     label = (f"<div style=\"position:absolute;left:176px;top:202px;font-family:'DM Sans';font-weight:900;"
              f"font-size:18px;color:{GREEN};letter-spacing:5px;\">FIELD NOTE</div>")
     body = (f"<div style='position:absolute;left:176px;right:146px;top:314px;'>"
-            f"<div style=\"font-family:Georgia,serif;font-weight:700;font-size:72px;line-height:1.09;color:#152743;word-break:keep-all;\">{q['text']}</div>"
+            f"<div style=\"font-family:IWSerif,Georgia,serif;font-weight:700;font-size:72px;line-height:1.09;color:#152743;word-break:keep-all;\">{q['text']}</div>"
             f"<div style='width:92px;height:6px;background:{AMBER};border-radius:3px;margin:34px 0 22px;'></div>"
             f"<div style=\"font-family:'DM Sans';font-weight:900;font-size:31px;color:#152743;\">{q['author']}</div></div>")
     cta = (f"<div style='position:absolute;left:176px;right:130px;bottom:132px;height:58px;padding:0 22px;background:#fff;"
@@ -346,7 +346,7 @@ def w_gallery(q, src=None):
               f"display:flex;align-items:center;justify-content:center;font-family:'DM Sans';font-weight:900;"
               f"font-size:18px;color:{NAVYT};letter-spacing:3px;'>QUOTE OF THE DAY</div>")
     body = (f"<div style='position:absolute;left:66px;top:230px;width:570px;'>"
-            f"<div style='font-family:Georgia,serif;font-weight:700;font-size:132px;line-height:.45;color:{CORAL};'>{Q}</div>"
+            f"<div style='font-family:IWSerif,Georgia,serif;font-weight:700;font-size:132px;line-height:.45;color:{CORAL};'>{Q}</div>"
             f"<div style=\"font-family:Inter;font-weight:900;font-size:70px;line-height:1.06;letter-spacing:-1.8px;color:{NAVYT};word-break:keep-all;\">{q['text']}</div>"
             f"<div style='width:88px;height:5px;background:{GREEN};border-radius:3px;margin:34px 0 20px;'></div>"
             f"<div style=\"font-family:'DM Sans';font-weight:900;font-size:30px;color:{NAVYT};\">{q['author']}</div></div>")
@@ -373,12 +373,99 @@ def w_manifesto(q, src=None):
     return bg + wm + black + slash + _logo(WHT, left=60, top=52, h=76) + label + body + cta
 
 
+# ---- Worlds 16-18 (week22) ----
+# The bank held exactly 15 worlds and the lane picks 5 a week while blocking the
+# last 2 weeks, which made selection a locked 3-week cycle: week21 shipped the
+# same five designs as week18, week19 the same as week16. Three more worlds break
+# the lockstep so the rotation has slack to vary.
+
+def w_prism(q, src=None):
+    """Hard-edged colour wedges cutting across a dark field; the quote sits over the
+    seam. No cards, no frames - pure geometry, unlike anything else in the bank."""
+    INKN = "#0A1830"
+    bg = f"<div style='position:absolute;inset:0;background:{INKN};'></div>"
+    w1 = (f"<div style='position:absolute;inset:0;background:{CORAL};"
+          f"clip-path:polygon(0 0,46% 0,16% 100%,0 100%);opacity:.92;'></div>")
+    w2 = (f"<div style='position:absolute;inset:0;background:{AMBER};"
+          f"clip-path:polygon(46% 0,64% 0,34% 100%,16% 100%);opacity:.95;'></div>")
+    w3 = (f"<div style='position:absolute;inset:0;background:{GREEN};"
+          f"clip-path:polygon(64% 0,72% 0,42% 100%,34% 100%);opacity:.9;'></div>")
+    wm = _wm(src, "right:-30px;bottom:0;height:720px;", op=.14, filt="grayscale(1) contrast(1.18)")
+    kicker = (f"<div style=\"position:absolute;right:60px;top:200px;font-family:'DM Sans';font-weight:900;"
+              f"font-size:19px;color:{AMBER};letter-spacing:7px;\">QUOTE OF THE DAY</div>")
+    body = (f"<div style='position:absolute;left:92px;right:76px;top:342px;'>"
+            f"<div style=\"font-family:IWSerif,Georgia,serif;font-size:148px;line-height:.42;color:#fff;opacity:.5;height:76px;\">{Q}</div>"
+            f"<div style=\"font-family:Inter;font-weight:900;font-size:62px;line-height:1.1;letter-spacing:-1.8px;"
+            f"color:#fff;word-break:keep-all;text-shadow:0 6px 26px rgba(0,0,0,.45);\">{q['text']}</div></div>")
+    plate = (f"<div style='position:absolute;left:92px;bottom:160px;display:flex;align-items:center;gap:16px;'>"
+             f"<div style='width:56px;height:5px;background:{AMBER};'></div>"
+             f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:31px;color:#fff;letter-spacing:-.3px;\">{q['author']}</span></div>")
+    cta = (f"<div style=\"position:absolute;left:92px;bottom:72px;font-family:Inter;font-weight:700;font-size:25px;"
+           f"color:rgba(255,255,255,.78);\">{q['cta']}</div>")
+    return bg + w1 + w2 + w3 + wm + _logo(WHT, left=92) + kicker + body + plate + cta
+
+
+def w_monument(q, src=None):
+    """Stone plinth: the quote is cut into a pale slab in large serif, with an
+    engraved author plate at the base. The quietest world in the bank."""
+    STONE, INKN = "#E7E2D6", "#2B2B28"
+    bg = (f"<div style='position:absolute;inset:0;background:{STONE};'></div>"
+          f"<div style='position:absolute;inset:0;opacity:.5;background-image:"
+          f"radial-gradient(rgba(43,43,40,.08) 1.1px,transparent 1.1px);background-size:7px 7px;'></div>")
+    slab = (f"<div style='position:absolute;left:112px;top:150px;right:112px;bottom:218px;background:#F2EFE6;"
+            f"box-shadow:inset 0 2px 0 rgba(255,255,255,.9),0 24px 54px rgba(43,43,40,.16);'></div>")
+    wm = _wm(src, "left:50%;top:210px;transform:translateX(-50%);height:560px;", op=.09,
+             filt="grayscale(1) contrast(.92)")
+    kicker = (f"<div style=\"position:absolute;left:0;right:0;top:218px;text-align:center;font-family:'DM Sans';"
+              f"font-weight:900;font-size:17px;color:#8C8475;letter-spacing:9px;\">QUOTE OF THE DAY</div>")
+    body = (f"<div style='position:absolute;left:168px;right:168px;top:292px;text-align:center;'>"
+            f"<div style=\"font-family:IWSerif,Georgia,serif;font-size:64px;line-height:1.18;color:{INKN};"
+            f"word-break:keep-all;\">{q['text']}</div></div>")
+    plate = (f"<div style='position:absolute;left:50%;transform:translateX(-50%);bottom:268px;padding:14px 30px;"
+             f"background:{INKN};'>"
+             f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:24px;color:{STONE};letter-spacing:4px;\">{q['author'].upper()}</span></div>")
+    cta = (f"<div style=\"position:absolute;left:0;right:0;bottom:112px;text-align:center;font-family:Inter;"
+           f"font-weight:700;font-size:24px;color:#6E675B;\">{q['cta']}</div>")
+    return bg + slab + wm + _logo(DARK) + kicker + body + plate + cta
+
+
+def w_horizon(q, src=None):
+    """A single hard horizon splits the canvas: deep navy above, amber below, with
+    the author's portrait as a circle straddling the line and the quote set across
+    both fields. The only world where type crosses a colour boundary."""
+    INKN = "#0E2141"
+    bg = (f"<div style='position:absolute;left:0;right:0;top:0;height:612px;background:{INKN};'></div>"
+          f"<div style='position:absolute;left:0;right:0;top:612px;bottom:0;background:{AMBER};'></div>"
+          f"<div style='position:absolute;left:0;right:0;top:608px;height:8px;background:#fff;opacity:.9;'></div>")
+    disc = ""
+    if src:
+        disc = (f"<div style='position:absolute;right:88px;top:430px;width:356px;height:356px;border-radius:50%;"
+                f"overflow:hidden;border:10px solid #fff;box-shadow:0 26px 54px rgba(14,33,65,.34);'>"
+                f"<img src='{src}' style='width:100%;height:100%;object-fit:cover;object-position:center top;"
+                f"filter:grayscale(1) contrast(1.06);'></div>")
+    kicker = (f"<div style=\"position:absolute;left:62px;top:210px;font-family:'DM Sans';font-weight:900;"
+              f"font-size:19px;color:{AMBER};letter-spacing:7px;\">QUOTE OF THE DAY</div>")
+    # Seated in the empty upper-right of the navy field: at the left margin it
+    # collided with the kicker and then the first line of the quote.
+    glyph = (f"<div style=\"position:absolute;right:96px;top:252px;font-family:IWSerif,Georgia,serif;font-size:210px;"
+             f"line-height:.46;color:{AMBER};opacity:.22;\">{Q}</div>")
+    body = (f"<div style=\"position:absolute;left:62px;top:300px;width:600px;font-family:IWSerif,Georgia,serif;"
+            f"font-size:60px;line-height:1.16;color:#fff;word-break:keep-all;\">{q['text']}</div>")
+    author = (f"<div style='position:absolute;left:62px;top:672px;'>"
+              f"<div style='width:72px;height:6px;background:{INKN};margin-bottom:16px;'></div>"
+              f"<div style=\"font-family:Inter;font-weight:900;font-size:40px;letter-spacing:-1.2px;color:{INKN};\">{q['author']}</div></div>")
+    cta = (f"<div style=\"position:absolute;left:62px;bottom:80px;font-family:'DM Sans';font-weight:800;"
+           f"font-size:25px;color:rgba(14,33,65,.78);\">{q['cta']}</div>")
+    return bg + disc + _logo(WHT, left=62) + kicker + glyph + body + author + cta
+
+
 WORLDS = {"editorial": w_editorial, "spotlight": w_spotlight, "colorblock": w_colorblock,
           "split": w_split, "paper": w_paper,
           "arc": w_arc, "blueprint": w_blueprint, "band": w_band,
           "minimal": w_minimal, "bubble": w_bubble,
           "marquee": w_marquee, "stamp": w_stamp,
-          "notebook": w_notebook, "gallery": w_gallery, "manifesto": w_manifesto}
+          "notebook": w_notebook, "gallery": w_gallery, "manifesto": w_manifesto,
+          "prism": w_prism, "monument": w_monument, "horizon": w_horizon}
 
 # Only q001-q005 in the bank carry a "cta"; the rest don't, so fall back on-brand.
 _DEFAULT_CTA = "Find your internship at internwise.co.uk"

@@ -461,31 +461,6 @@
       "world": "signal"
     },
     {
-      "lane": "quote",
-      "week": "week21",
-      "world": "editorial"
-    },
-    {
-      "lane": "quote",
-      "week": "week21",
-      "world": "spotlight"
-    },
-    {
-      "lane": "quote",
-      "week": "week21",
-      "world": "colorblock"
-    },
-    {
-      "lane": "quote",
-      "week": "week21",
-      "world": "split"
-    },
-    {
-      "lane": "quote",
-      "week": "week21",
-      "world": "paper"
-    },
-    {
       "lane": "edu_carousel",
       "week": "week21",
       "world": "navy"
@@ -513,27 +488,52 @@
     {
       "lane": "conversation",
       "week": "week21",
-      "world": "vote_cards"
+      "world": "ballot"
     },
     {
       "lane": "conversation",
       "week": "week21",
-      "world": "shortlist_poll"
+      "world": "bars"
     },
     {
       "lane": "conversation",
       "week": "week21",
-      "world": "cv_poll"
+      "world": "dial"
     },
     {
       "lane": "conversation",
       "week": "week21",
-      "world": "route_map"
+      "world": "receipt"
     },
     {
       "lane": "conversation",
       "week": "week21",
-      "world": "comment_wall"
+      "world": "stickies"
+    },
+    {
+      "lane": "quote",
+      "week": "week21",
+      "world": "horizon"
+    },
+    {
+      "lane": "quote",
+      "week": "week21",
+      "world": "monument"
+    },
+    {
+      "lane": "quote",
+      "week": "week21",
+      "world": "prism"
+    },
+    {
+      "lane": "quote",
+      "week": "week21",
+      "world": "split"
+    },
+    {
+      "lane": "quote",
+      "week": "week21",
+      "world": "spotlight"
     }
   ]
 }
