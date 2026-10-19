@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-10-18T11:36:46Z",
+  "generatedAt": "2026-10-19T13:50:24Z",
   "windowRecords": 80,
   "platforms": {
     "instagram": {
       "followers": 359,
-      "reach": 9053,
-      "views": 8130,
+      "reach": 9085,
+      "views": 8237,
       "likes": 748,
       "comments": 130,
-      "shares": 2,
-      "posts": 845,
+      "shares": 3,
+      "posts": 847,
       "name": "Internwise"
     },
     "facebook": {
-      "followers": 13398,
+      "followers": 13397,
       "reach": null,
       "views": null,
       "likes": null,
@@ -23,13 +23,13 @@
       "name": "Internwise"
     },
     "linkedin": {
-      "followers": 493,
+      "followers": 494,
       "reach": null,
-      "views": 1140,
-      "likes": 31,
-      "comments": 1,
+      "views": null,
+      "likes": 188,
+      "comments": null,
       "shares": null,
-      "posts": 63,
+      "posts": null,
       "name": null
     },
     "threads": {
@@ -46,10 +46,6 @@
   "series": {
     "instagram": {
       "reach": [
-        {
-          "d": "2026-07-21",
-          "v": 7
-        },
         {
           "d": "2026-07-22",
           "v": 5
@@ -404,16 +400,16 @@
         },
         {
           "d": "2026-10-18",
-          "v": 2
+          "v": 7
+        },
+        {
+          "d": "2026-10-19",
+          "v": 33
         }
       ]
     },
     "facebook": {
       "views": [
-        {
-          "d": "2026-07-22",
-          "v": 101
-        },
         {
           "d": "2026-07-23",
           "v": 121
@@ -768,14 +764,14 @@
         },
         {
           "d": "2026-10-19",
-          "v": 16
+          "v": 103
+        },
+        {
+          "d": "2026-10-20",
+          "v": 337
         }
       ],
       "engagement": [
-        {
-          "d": "2026-07-22",
-          "v": 2
-        },
         {
           "d": "2026-07-23",
           "v": 3
@@ -1131,15 +1127,15 @@
         {
           "d": "2026-10-19",
           "v": 0
+        },
+        {
+          "d": "2026-10-20",
+          "v": 32
         }
       ]
     },
     "threads": {
       "views": [
-        {
-          "d": "2026-07-20",
-          "v": 2
-        },
         {
           "d": "2026-07-21",
           "v": 1
@@ -1499,143 +1495,147 @@
         {
           "d": "2026-10-18",
           "v": 0
+        },
+        {
+          "d": "2026-10-19",
+          "v": 36
         }
       ]
     }
   },
   "search": {
     "instagram": {
-      "clicks": 12,
-      "impressions": 2476,
+      "clicks": 8,
+      "impressions": 2659,
       "topQueries": [
         {
           "q": "internwise",
           "impressions": 259,
-          "clicks": 1,
-          "position": "7.34"
+          "clicks": 0,
+          "position": "7.52"
         },
         {
           "q": "home staging internship",
-          "impressions": 84,
+          "impressions": 85,
           "clicks": 0,
-          "position": "5.79"
-        },
-        {
-          "q": "interwise",
-          "impressions": 41,
-          "clicks": 0,
-          "position": "22.17"
+          "position": "5.85"
         },
         {
           "q": "porsche founder",
-          "impressions": 35,
+          "impressions": 73,
           "clicks": 0,
-          "position": "3.11"
+          "position": "3.77"
+        },
+        {
+          "q": "interwise",
+          "impressions": 36,
+          "clicks": 0,
+          "position": "19.44"
         },
         {
           "q": "internwise uk",
-          "impressions": 35,
+          "impressions": 28,
           "clicks": 0,
-          "position": "6.6"
+          "position": "6.89"
         },
         {
           "q": "intern wise",
-          "impressions": 13,
+          "impressions": 18,
           "clicks": 0,
-          "position": "10.31"
+          "position": "9.83"
+        },
+        {
+          "q": "founder of porsche",
+          "impressions": 12,
+          "clicks": 0,
+          "position": "3.92"
+        },
+        {
+          "q": "little bit cut off career",
+          "impressions": 11,
+          "clicks": 0,
+          "position": "9.55"
         },
         {
           "q": "is internwise legit",
           "impressions": 10,
           "clicks": 0,
-          "position": "9.4"
+          "position": "9.7"
         },
         {
           "q": "internwise.co.uk",
-          "impressions": 10,
+          "impressions": 7,
           "clicks": 0,
-          "position": "22.5"
-        },
-        {
-          "q": "founder of porsche",
-          "impressions": 6,
-          "clicks": 0,
-          "position": "6.5"
-        },
-        {
-          "q": "job application follow up email",
-          "impressions": 5,
-          "clicks": 0,
-          "position": "10.8"
+          "position": "7.71"
         }
       ]
     },
     "youtube": {
-      "clicks": 14,
-      "impressions": 26549,
+      "clicks": 10,
+      "impressions": 13649,
       "topQueries": [
         {
-          "q": "about me section on resume",
-          "impressions": 277,
-          "clicks": 0,
-          "position": "24.42"
-        },
-        {
           "q": "does internship count as work experience",
-          "impressions": 248,
+          "impressions": 215,
           "clicks": 0,
-          "position": "7.64"
+          "position": "7.81"
         },
         {
-          "q": "resume contact information",
-          "impressions": 167,
+          "q": "about me section on resume",
+          "impressions": 131,
           "clicks": 0,
-          "position": "61.32"
+          "position": "25.09"
         },
         {
           "q": "do internships count as work experience",
-          "impressions": 160,
+          "impressions": 117,
           "clicks": 0,
-          "position": "9.43"
+          "position": "8.77"
         },
         {
-          "q": "career goals",
-          "impressions": 155,
+          "q": "resume contact information",
+          "impressions": 104,
           "clicks": 0,
-          "position": "69.26"
-        },
-        {
-          "q": "is internship considered work experience",
-          "impressions": 123,
-          "clicks": 0,
-          "position": "7.38"
-        },
-        {
-          "q": "does an internship count as employment",
-          "impressions": 123,
-          "clicks": 0,
-          "position": "8.89"
-        },
-        {
-          "q": "creative resume",
-          "impressions": 110,
-          "clicks": 0,
-          "position": "83.91"
+          "position": "67.53"
         },
         {
           "q": "internwise",
-          "impressions": 100,
+          "impressions": 94,
           "clicks": 0,
-          "position": "7.33"
+          "position": "7.47"
         },
         {
-          "q": "creative cv",
+          "q": "creative resume",
           "impressions": 93,
           "clicks": 0,
-          "position": "52.46"
+          "position": "84.18"
+        },
+        {
+          "q": "does an internship count as employment",
+          "impressions": 81,
+          "clicks": 0,
+          "position": "9.67"
+        },
+        {
+          "q": "career goals",
+          "impressions": 80,
+          "clicks": 0,
+          "position": "64.17"
+        },
+        {
+          "q": "does an internship count as work experience",
+          "impressions": 78,
+          "clicks": 0,
+          "position": "8.6"
+        },
+        {
+          "q": "is internship considered work experience",
+          "impressions": 71,
+          "clicks": 0,
+          "position": "7.08"
         }
       ]
     }
   },
-  "manualCapturedAt": "2026-09-13"
+  "manualCapturedAt": "2026-09-28"
 }
