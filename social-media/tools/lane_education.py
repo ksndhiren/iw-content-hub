@@ -826,11 +826,14 @@ def w_memo(copy, week_id='adhoc'):
     scribble = (f"<svg style='position:absolute;left:72px;top:466px;width:500px;height:92px;' viewBox='0 0 500 92' fill='none'>"
                 f"<path d='M8 74 C110 8,176 104,276 30 S420 18,492 62' stroke='{CORAL}' stroke-width='12' stroke-linecap='round' opacity='.75'/>"
                 f"<path d='M22 54 C118 14,178 84,270 26 S398 20,474 50' stroke='{AMBER}' stroke-width='5' stroke-linecap='round'/></svg>")
-    pts = (copy.get('points') or [])[:5]
+    # Four cards on the board; a fifth bullet (when the post has one) becomes the
+    # side pull rather than a sixth card, so it is never shown twice.
+    pts = (copy.get('points') or [])
+    board_pts = pts[:4]
     board = ""
     positions = [(88, 590, -3, AMBER), (378, 564, 2.5, GREEN), (666, 606, -1.8, CORAL),
                  (228, 790, 2.2, "#fff"), (548, 810, -2.8, AMBER)]
-    for i, pt in enumerate(pts):
+    for i, pt in enumerate(board_pts):
         left, top, rot, color = positions[i]
         dark = color in (AMBER, GREEN, CORAL)
         board += (f"<div style='position:absolute;left:{left}px;top:{top}px;width:252px;min-height:124px;background:{color};"
