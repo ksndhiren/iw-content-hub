@@ -8770,8 +8770,789 @@
       "id": "week21",
       "label": "Week 21",
       "weekCommencing": "2026-10-19",
-      "builtAt": 1792319873,
+      "builtAt": 1792393651,
       "posts": [
+        {
+          "id": "week21-mon-quote",
+          "day": "Mon 19 Oct",
+          "lane": "quote",
+          "title": "Quote: Frederick Douglass",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Frederick Douglass knew a thing or two about perseverance: 'If there is no struggle, there is no progress.' Facing challenges head-on is how we grow and succeed. Whether you're tackling university assignments or searching for your dream job, remember that every effort counts. Stay determined and keep pushing forward. Explore new opportunities today at www.internwise.co.uk.",
+          "hashtags": [
+            "#careergrowth",
+            "#keepgoing",
+            "#internshiphunt",
+            "#graduatejobs",
+            "#internwiseuk"
+          ],
+          "captions": {
+            "ig-fb": "Frederick Douglass knew a thing or two about perseverance: 'If there is no struggle, there is no progress.' Facing challenges head-on is how we grow and succeed. Whether you're tackling university assignments or searching for your dream job, remember that every effort counts. Stay determined and keep pushing forward. Explore new opportunities today at www.internwise.co.uk.",
+            "linkedin": "Frederick Douglass once said, 'If there is no struggle, there is no progress.' This rings true in the journey of personal and professional growth. Every challenge is a stepping stone to success. Embrace the struggles, learn from them, and let them propel you to new heights. Ready to take the next step in your career? Discover internships and graduate jobs that match your aspirations at internwise.co.uk.",
+            "x": "As Frederick Douglass put it, 'If there is no struggle, there is no progress.' Embrace challenges as steps towards success. Ready for your next career move? Visit internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careergrowth",
+              "#keepgoing",
+              "#internshiphunt",
+              "#graduatejobs",
+              "#internwiseuk"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internships",
+              "#graduatejobs"
+            ],
+            "x": [
+              "#careerprogress",
+              "#internwiseuk"
+            ]
+          },
+          "quoteId": "q031",
+          "world": "editorial"
+        },
+        {
+          "id": "week21-mon-engagement",
+          "day": "Mon 19 Oct",
+          "lane": "engagement",
+          "title": "What should your LinkedIn prove in 10 seconds?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "When recruiters land on your LinkedIn, they give it a quick scan. What they see in those first 10 seconds can make all the difference! Make sure your profile highlights your skills and achievements right at the top. This can be the key to turning profile views into opportunities. Ready to boost your career? Start finding internships and graduate jobs at www.internwise.co.uk.",
+          "hashtags": [
+            "#careertips",
+            "#linkedin",
+            "#internships",
+            "#graduatejobs",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "When recruiters land on your LinkedIn, they give it a quick scan. What they see in those first 10 seconds can make all the difference! Make sure your profile highlights your skills and achievements right at the top. This can be the key to turning profile views into opportunities. Ready to boost your career? Start finding internships and graduate jobs at www.internwise.co.uk.",
+            "linkedin": "Your LinkedIn profile is your digital first impression. In just 10 seconds, recruiters decide if they want to learn more about you. So, what should your profile prove? Pinpoint your top skills and achievements where they can't miss them. Make every view count and turn them into career opportunities. Explore internships and graduate roles at internwise.co.uk.",
+            "x": "In 10 seconds, your LinkedIn needs to show recruiters why you're the one. Make your skills shine at the top of your profile. Turn views into opportunities with Internwise. internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careertips",
+              "#linkedin",
+              "#internships",
+              "#graduatejobs",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#linkedintips",
+              "#careergrowth",
+              "#internships"
+            ],
+            "x": [
+              "#careeradvice",
+              "#internwise"
+            ]
+          },
+          "world": "vote_cards",
+          "ideaId": "c016"
+        },
+        {
+          "id": "week21-mon-education",
+          "day": "Mon 19 Oct",
+          "lane": "education",
+          "title": "Revamp Your CV's About Me",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
+          ],
+          "status": "in-review",
+          "caption": "Your CV's About Me section should make you stand out, not blend in. Forget 'motivated team player' - everyone says that. Instead, write one sentence on what you do, one on your proof, and one on your next career step. Remember, traits are just claims, but evidence is a claim with a number attached. If someone else could copy your About Me word for word, it needs a rewrite. Check out internwise.co.uk for more guidance.",
+          "hashtags": [
+            "#cvtips",
+            "#careeradvice",
+            "#internships",
+            "#graduatejobs",
+            "#careergoals"
+          ],
+          "captions": {
+            "ig-fb": "Your CV's About Me section should make you stand out, not blend in. Forget 'motivated team player' - everyone says that. Instead, write one sentence on what you do, one on your proof, and one on your next career step. Remember, traits are just claims, but evidence is a claim with a number attached. If someone else could copy your About Me word for word, it needs a rewrite. Check out internwise.co.uk for more guidance.",
+            "linkedin": "Transform your CV's About Me section from generic to memorable. Start with a sentence about what you do, include a fact or number as proof, and finish with your next career goal. Make sure no one else could copy it word for word. For more CV insights and tips, visit internwise.co.uk.",
+            "x": "Revamp your CV's About Me: state what you do, offer proof with numbers, and show your next career step. Make it unique! internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#cvtips",
+              "#careeradvice",
+              "#internships",
+              "#graduatejobs",
+              "#careergoals"
+            ],
+            "linkedin": [
+              "#cvwriting",
+              "#careerdevelopment",
+              "#jobsearch"
+            ],
+            "x": [
+              "#cvadvice",
+              "#jobhunt"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "CV Tips",
+            "headline": "Revamp Your CV's About Me",
+            "tone": "practical",
+            "slides": [
+              {
+                "tag": "Identify",
+                "title": "State What You Do",
+                "body": "Mention your field and level. Be clear and direct."
+              },
+              {
+                "tag": "Prove",
+                "title": "Provide Evidence",
+                "body": "Add a number or fact that backs up your skills."
+              },
+              {
+                "tag": "Aim",
+                "title": "Declare Next Step",
+                "body": "Share your career goal to show ambition."
+              }
+            ],
+            "points": null,
+            "cta": "Discover more tips at internwise.co.uk"
+          },
+          "world": "navy"
+        },
+        {
+          "id": "week21-tue-quote",
+          "day": "Tue 20 Oct",
+          "lane": "quote",
+          "title": "Quote: Florence Nightingale",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Florence Nightingale's words remind us that success isn't about excuses - it's about action. Ready to take that step? Discover internships that fit your career goals at www.internwise.co.uk and start your journey today!",
+          "hashtags": [
+            "#careeradvice",
+            "#paidinternships",
+            "#florencenightingale",
+            "#noexcuses",
+            "#internwiseuk"
+          ],
+          "captions": {
+            "ig-fb": "Florence Nightingale's words remind us that success isn't about excuses - it's about action. Ready to take that step? Discover internships that fit your career goals at www.internwise.co.uk and start your journey today!",
+            "linkedin": "Florence Nightingale once said, 'I attribute my success to this: I never gave or took any excuse.' Her wisdom applies now more than ever. Instead of excuses, let your actions speak. Explore internships and graduate job opportunities that can launch your career at internwise.co.uk.",
+            "x": "Florence Nightingale knew the power of action over excuses. Follow her lead and take charge of your career path. Discover internships at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careeradvice",
+              "#paidinternships",
+              "#florencenightingale",
+              "#noexcuses",
+              "#internwiseuk"
+            ],
+            "linkedin": [
+              "#careergrowth",
+              "#internships",
+              "#professionaldevelopment"
+            ],
+            "x": [
+              "#careeradvice",
+              "#internwiseuk"
+            ]
+          },
+          "quoteId": "q032",
+          "world": "spotlight"
+        },
+        {
+          "id": "week21-tue-engagement",
+          "day": "Tue 20 Oct",
+          "lane": "engagement",
+          "title": "Which application mistake is easiest to fix today?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Hey there! Have you ever wondered which application mistake is the easiest to fix? Here's a hint: not all improvements require a complete overhaul. Some are quick, visible, and can make a big difference! 💡 Pick one simple fix today and apply it to your next application. You'll be surprised at the impact! Ready to put it to the test? Check out live roles now at www.internwise.co.uk.",
+          "hashtags": [
+            "#internshiptips",
+            "#jobapplication",
+            "#careergrowth",
+            "#internwiseuk",
+            "#quickfix"
+          ],
+          "captions": {
+            "ig-fb": "Hey there! Have you ever wondered which application mistake is the easiest to fix? Here's a hint: not all improvements require a complete overhaul. Some are quick, visible, and can make a big difference! 💡 Pick one simple fix today and apply it to your next application. You'll be surprised at the impact! Ready to put it to the test? Check out live roles now at www.internwise.co.uk.",
+            "linkedin": "Are you making application mistakes that are easy to fix? Sometimes, it's the small tweaks that make a big impression. Before you hit send, consider this: a minor error might be holding you back, but the good news is it's easily fixed. Choose one small change today and improve your application instantly. Explore and apply for live opportunities at internwise.co.uk.",
+            "x": "Applying for jobs? Sometimes a small tweak in your application can make a big difference. Choose one quick fix and see the impact. Check out live roles at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internshiptips",
+              "#jobapplication",
+              "#careergrowth",
+              "#internwiseuk",
+              "#quickfix"
+            ],
+            "linkedin": [
+              "#careeradvice",
+              "#internships",
+              "#professionalgrowth"
+            ],
+            "x": [
+              "#jobtips",
+              "#internwiseuk"
+            ]
+          },
+          "world": "shortlist_poll",
+          "ideaId": "c017"
+        },
+        {
+          "id": "week21-tue-education",
+          "day": "Tue 20 Oct",
+          "lane": "education",
+          "title": "Crafting Clear Career Goals",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
+          ],
+          "status": "in-review",
+          "caption": "Long-term career goals shouldn't read like a personality test. They should show where you're heading and what you've done to get there. Crafting a goal is about direction, not daydreams. Be specific: a goal that fits any job tells the reader nothing about this one. Stay relevant by naming the field and the next step you want, not a five-year fantasy. And always link your goal to something already on your CV to show it’s earned. Start crafting your career path at www.internwise.co.uk.",
+          "hashtags": [
+            "#careergoals",
+            "#graduatetips",
+            "#ukjobs",
+            "#internwise",
+            "#careerdirection"
+          ],
+          "captions": {
+            "ig-fb": "Long-term career goals shouldn't read like a personality test. They should show where you're heading and what you've done to get there. Crafting a goal is about direction, not daydreams. Be specific: a goal that fits any job tells the reader nothing about this one. Stay relevant by naming the field and the next step you want, not a five-year fantasy. And always link your goal to something already on your CV to show it’s earned. Start crafting your career path at www.internwise.co.uk.",
+            "linkedin": "Your career goals should read more like a map than a wish list. It’s all about direction and relevance. Avoid generic goals that fit any job – they tell the reader nothing about your ambitions. Instead, name your field and the next step you want to take, staying grounded in reality rather than a five-year fantasy. Link your goal to something concrete on your CV to show it’s earned. For more guidance, visit internwise.co.uk.",
+            "x": "Make your career goals clear and relevant. Name your field and next step, not a fantasy. Connect it to your CV to show progress. internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careergoals",
+              "#graduatetips",
+              "#ukjobs",
+              "#internwise",
+              "#careerdirection"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#graduatecareer",
+              "#internwise"
+            ],
+            "x": [
+              "#careergoals",
+              "#internwise"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Career Goals",
+            "headline": "Crafting Clear Career Goals",
+            "tone": "practical",
+            "slides": [
+              {
+                "tag": "Be Specific",
+                "title": "Avoid Generic Goals",
+                "body": "A goal that fits any job tells the reader nothing about this one."
+              },
+              {
+                "tag": "Stay Relevant",
+                "title": "Name Your Next Step",
+                "body": "Identify the field and the next step, not a five-year fantasy."
+              },
+              {
+                "tag": "Show Progress",
+                "title": "Link to Your CV",
+                "body": "Tie the goal to something already on your CV so it looks earned."
+              }
+            ],
+            "points": null,
+            "cta": "Find your path at internwise.co.uk."
+          },
+          "world": "plum"
+        },
+        {
+          "id": "week21-wed-quote",
+          "day": "Wed 21 Oct",
+          "lane": "quote",
+          "title": "Quote: Louis Pasteur",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Feeling prepared? Louis Pasteur once said, 'Chance favours only the prepared mind.' Opportunity doesn't knock twice, so make sure you're ready when it does. Start your journey with us and discover internships that align with your career goals. Explore more at www.internwise.co.uk",
+          "hashtags": [
+            "#careerready",
+            "#internshipsuk",
+            "#graduatejobs",
+            "#louispasteur",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Feeling prepared? Louis Pasteur once said, 'Chance favours only the prepared mind.' Opportunity doesn't knock twice, so make sure you're ready when it does. Start your journey with us and discover internships that align with your career goals. Explore more at www.internwise.co.uk",
+            "linkedin": "Louis Pasteur wisely observed, 'Chance favours only the prepared mind.' In the world of internships and graduate jobs, preparation is key. Let’s ensure you’re ready when opportunity strikes. Visit internwise.co.uk to find internships that match your ambitions and get the experience you need.",
+            "x": "Louis Pasteur said, 'Chance favours only the prepared mind.' Get ready for your next big opportunity by exploring internships at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careerready",
+              "#internshipsuk",
+              "#graduatejobs",
+              "#louispasteur",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#careerready",
+              "#internshipsuk",
+              "#graduatejobs"
+            ],
+            "x": [
+              "#careerready",
+              "#internships"
+            ]
+          },
+          "quoteId": "q033",
+          "world": "colorblock"
+        },
+        {
+          "id": "week21-wed-engagement",
+          "day": "Wed 21 Oct",
+          "lane": "engagement",
+          "title": "What would make you trust an internship advert?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Scrolling through internship opportunities can feel like a maze. It's crucial to spot the ones that stand out for the right reasons. Look for adverts that clearly outline what you'll be doing, the support you'll receive, and the skills you'll gain. These are the signs of a trustworthy internship. Take the guesswork out of your search and find well-defined roles at www.internwise.co.uk.",
+          "hashtags": [
+            "#internships",
+            "#careergoals",
+            "#futureready",
+            "#ukstudents",
+            "#careeradvice"
+          ],
+          "captions": {
+            "ig-fb": "Scrolling through internship opportunities can feel like a maze. It's crucial to spot the ones that stand out for the right reasons. Look for adverts that clearly outline what you'll be doing, the support you'll receive, and the skills you'll gain. These are the signs of a trustworthy internship. Take the guesswork out of your search and find well-defined roles at www.internwise.co.uk.",
+            "linkedin": "Choosing the right internship is a pivotal step in your career journey. A trustworthy advert should detail the tasks, the mentorship you'll receive, and the skills you'll develop. Clarity is key. It empowers you to make informed decisions about where to apply. Discover internships with transparency at their core at internwise.co.uk.",
+            "x": "A solid internship advert explains the role, support, and outcomes. Trust starts with clarity. Find internships that spell it all out at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internships",
+              "#careergoals",
+              "#futureready",
+              "#ukstudents",
+              "#careeradvice"
+            ],
+            "linkedin": [
+              "#internships",
+              "#careerdevelopment",
+              "#graduatejobs"
+            ],
+            "x": [
+              "#internships",
+              "#careeradvice"
+            ]
+          },
+          "world": "cv_poll",
+          "ideaId": "c018"
+        },
+        {
+          "id": "week21-wed-education",
+          "day": "Wed 21 Oct",
+          "lane": "education",
+          "title": "Stop Losing Replies on Your CV",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
+          ],
+          "status": "in-review",
+          "caption": "Your CV contact line might be costing you job offers. A recruiter sees your potential, but can’t reach you because of a small mistake. Include your name, city, phone number, professional email, and one live link. Skip the full address, date of birth, and photo. Always check your link works on a phone! Fix it fast - it’s a five second tweak that ensures every reply gets through. Head to www.internwise.co.uk for more advice!",
+          "hashtags": [
+            "#cvtips",
+            "#careeradvice",
+            "#jobsearch",
+            "#internship",
+            "#graduatejobs"
+          ],
+          "captions": {
+            "ig-fb": "Your CV contact line might be costing you job offers. A recruiter sees your potential, but can’t reach you because of a small mistake. Include your name, city, phone number, professional email, and one live link. Skip the full address, date of birth, and photo. Always check your link works on a phone! Fix it fast - it’s a five second tweak that ensures every reply gets through. Head to www.internwise.co.uk for more advice!",
+            "linkedin": "Your contact line on a CV is crucial. If a recruiter can't reach you, your chances could slip away. Make sure to include your name, city, phone number, professional email, and one live link. Avoid a full postal address, date of birth, and photo. Test that your link opens on a mobile device before you hit send. This quick fix can save many opportunities. For more career tips, visit internwise.co.uk.",
+            "x": "Make sure your CV contact info is spot on. Include name, city, phone, email, and a live link. Skip the full address, date of birth, and photo. More tips at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#cvtips",
+              "#careeradvice",
+              "#jobsearch",
+              "#internship",
+              "#graduatejobs"
+            ],
+            "linkedin": [
+              "#cvadvice",
+              "#professionalgrowth",
+              "#internwise"
+            ],
+            "x": [
+              "#jobtips",
+              "#internwise"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "CV Tips",
+            "headline": "Stop Losing Replies on Your CV",
+            "tone": "practical",
+            "slides": [
+              {
+                "tag": "Essentials",
+                "title": "What to Include",
+                "body": "Name, city, phone, professional email, one live link."
+              },
+              {
+                "tag": "Avoid",
+                "title": "What to Leave Out",
+                "body": "No full address, no date of birth, no photo."
+              },
+              {
+                "tag": "Check",
+                "title": "Test Your Link",
+                "body": "Ensure the link opens on a phone before sending."
+              }
+            ],
+            "points": null,
+            "cta": "Find more tips at internwise.co.uk"
+          },
+          "world": "teal"
+        },
+        {
+          "id": "week21-thu-quote",
+          "day": "Thu 22 Oct",
+          "lane": "quote",
+          "title": "Quote: Samuel Johnson",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Feeling like progress is slow? Remember, it's not about how strong you are, but how persistent. Keep applying, keep learning, keep going. Your perseverance is your superpower. Find your next opportunity at www.internwise.co.uk",
+          "hashtags": [
+            "#keepgoing",
+            "#perseverance",
+            "#internshipjourney",
+            "#careergrowth",
+            "#internwiseuk"
+          ],
+          "captions": {
+            "ig-fb": "Feeling like progress is slow? Remember, it's not about how strong you are, but how persistent. Keep applying, keep learning, keep going. Your perseverance is your superpower. Find your next opportunity at www.internwise.co.uk",
+            "linkedin": "Samuel Johnson once said, 'Great works are performed not by strength but by perseverance.' This rings true in any career journey. As you navigate your path, remember that each application is a step closer to your goal. Keep pushing forward. Explore new opportunities at internwise.co.uk",
+            "x": "Success isn't about strength; it's about perseverance. Keep applying, keep growing. Your next opportunity is waiting at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#keepgoing",
+              "#perseverance",
+              "#internshipjourney",
+              "#careergrowth",
+              "#internwiseuk"
+            ],
+            "linkedin": [
+              "#careeradvice",
+              "#perseverance",
+              "#internwiseuk"
+            ],
+            "x": [
+              "#perseverance",
+              "#internwiseuk"
+            ]
+          },
+          "quoteId": "q034",
+          "world": "split"
+        },
+        {
+          "id": "week21-thu-engagement",
+          "day": "Thu 22 Oct",
+          "lane": "engagement",
+          "title": "Which proof beats “I am a fast learner”?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Ever said 'I'm a fast learner' and felt it sounded a bit... vague? Here's the trick: show, don't just tell. Instead of relying on buzzwords, attach your skills to real-world experiences. Did you learn a new software in a week? Highlight that! Show employers you mean business with concrete examples. Find internships that help you build that proof at www.internwise.co.uk.",
+          "hashtags": [
+            "#fastlearner",
+            "#internshipopportunities",
+            "#buildyourproof",
+            "#skilldevelopment",
+            "#careergrowth"
+          ],
+          "captions": {
+            "ig-fb": "Ever said 'I'm a fast learner' and felt it sounded a bit... vague? Here's the trick: show, don't just tell. Instead of relying on buzzwords, attach your skills to real-world experiences. Did you learn a new software in a week? Highlight that! Show employers you mean business with concrete examples. Find internships that help you build that proof at www.internwise.co.uk.",
+            "linkedin": "In job applications, claiming 'I'm a fast learner' can feel like just another cliché. Why not back it up with solid proof? Employers love to see concrete examples that illustrate your skills in action. Instead of just saying it, share a story: did you take on extra responsibilities that demanded swift learning? Mention how you adapted quickly in a new role. Build your portfolio of proof through meaningful experiences. Discover the right internships to enhance your skill set at internwise.co.uk.",
+            "x": "Instead of saying 'I'm a fast learner', show it. Talk about that time you mastered a new skill in days. Proof beats claims every time. Find internships that help you build that proof at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#fastlearner",
+              "#internshipopportunities",
+              "#buildyourproof",
+              "#skilldevelopment",
+              "#careergrowth"
+            ],
+            "linkedin": [
+              "#careeradvice",
+              "#internships",
+              "#skillbuilding"
+            ],
+            "x": [
+              "#fastlearner",
+              "#internwise"
+            ]
+          },
+          "world": "route_map",
+          "ideaId": "c019"
+        },
+        {
+          "id": "week21-thu-education",
+          "day": "Thu 22 Oct",
+          "lane": "education",
+          "title": "Clean Up Your Online Trail",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Before they replied, someone searched your name. What did they uncover? Don't let random results decide your future. 🕵️‍♂️ Here's how you can make sure your digital presence is job-ready:\n\n1️⃣ Search your own name in a private window. Note the first five results.\n2️⃣ One updated, current profile beats a handful of half-finished ones.\n3️⃣ Lock down anything you wouldn't want discussed in an interview.\n\nMake sure the first result about you is something YOU chose. Want more tips on landing that perfect role? Head over to www.internwise.co.uk and take control of your career journey today. 🌟\n\n#DigitalFootprint #CareerReady #JobSearchTips #Internships #GraduateJobs",
+          "hashtags": [
+            "#digitalfootprint",
+            "#careerready",
+            "#jobsearchtips",
+            "#internships",
+            "#graduatejobs"
+          ],
+          "captions": {
+            "ig-fb": "Before they replied, someone searched your name. What did they uncover? Don't let random results decide your future. 🕵️‍♂️ Here's how you can make sure your digital presence is job-ready:\n\n1️⃣ Search your own name in a private window. Note the first five results.\n2️⃣ One updated, current profile beats a handful of half-finished ones.\n3️⃣ Lock down anything you wouldn't want discussed in an interview.\n\nMake sure the first result about you is something YOU chose. Want more tips on landing that perfect role? Head over to www.internwise.co.uk and take control of your career journey today. 🌟\n\n#DigitalFootprint #CareerReady #JobSearchTips #Internships #GraduateJobs",
+            "linkedin": "Before they even reply to your email, potential employers are likely searching your name online. What are they finding? 🧐 Take control of your digital presence with these three steps:\n\n1. Conduct a search of your own name in a private window. Check the top five results that pop up.\n2. A single, live profile that showcases your best self is better than multiple outdated ones.\n3. Secure anything online that you wouldn't want read aloud in an interview.\n\nYour digital footprint is part of your personal brand. Ensure the first result is something you chose. Ready to start your career journey on the right foot? Visit internwise.co.uk.",
+            "x": "Employers are searching your name. Here's how to control what they find: 1. Search your name in private mode 2. Update one profile, delete extras 3. Lock down risky content. More tips at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#digitalfootprint",
+              "#careerready",
+              "#jobsearchtips",
+              "#internships",
+              "#graduatejobs"
+            ],
+            "linkedin": [
+              "#digitalpresence",
+              "#jobsearch",
+              "#graduatecareers"
+            ],
+            "x": [
+              "#careerready",
+              "#digitalfootprint"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Digital Check",
+            "headline": "Clean Up Your Online Trail",
+            "tone": "practical",
+            "slides": null,
+            "points": [
+              "Search your name in private mode",
+              "Check top five search results",
+              "Update one profile, delete extras",
+              "Secure private or risky content",
+              "Choose what shows first"
+            ],
+            "cta": "Start your journey at internwise.co.uk"
+          },
+          "world": "memo"
+        },
+        {
+          "id": "week21-fri-quote",
+          "day": "Fri 23 Oct",
+          "lane": "quote",
+          "title": "Quote: Benjamin Disraeli",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Benjamin Disraeli once said, 'The secret of success is constancy to purpose.' It's a reminder that staying true to your goals is key in your career journey. Whether you're interning or starting your first job, keep your purpose in sight. Explore the paths that align with your ambitions. Discover internships that match your goals at www.internwise.co.uk.",
+          "hashtags": [
+            "#careergoals",
+            "#internships",
+            "#graduatejobs",
+            "#success",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Benjamin Disraeli once said, 'The secret of success is constancy to purpose.' It's a reminder that staying true to your goals is key in your career journey. Whether you're interning or starting your first job, keep your purpose in sight. Explore the paths that align with your ambitions. Discover internships that match your goals at www.internwise.co.uk.",
+            "linkedin": "Benjamin Disraeli's words, 'The secret of success is constancy to purpose,' serve as a guiding principle for anyone starting their career. Staying focused on your goals can lead to fulfilling opportunities. It's not just about finding any job, but finding the right one that aligns with your purpose. Start your journey by exploring internships and graduate roles at internwise.co.uk.",
+            "x": "Benjamin Disraeli said, 'The secret of success is constancy to purpose.' Stay focused on your career path. Discover internships today at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careergoals",
+              "#internships",
+              "#graduatejobs",
+              "#success",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#careeradvice",
+              "#internships",
+              "#graduatejobs"
+            ],
+            "x": [
+              "#internships",
+              "#careeradvice"
+            ]
+          },
+          "quoteId": "q035",
+          "world": "paper"
+        },
+        {
+          "id": "week21-fri-engagement",
+          "day": "Fri 23 Oct",
+          "lane": "engagement",
+          "title": "What would make you apply before Friday?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Application deadlines can feel like a mountain. But what if you approached it differently this week? Instead of seeking perfection, focus on removing one decision at a time. Choose a small, achievable step and commit to it before Friday. That might mean updating your CV or reaching out to a mentor. Whatever it is, make it count. Momentum starts with a single move. Explore opportunities and take that step at www.internwise.co.uk.",
+          "hashtags": [
+            "#internshipgoals",
+            "#careergrowth",
+            "#ukstudents",
+            "#graduates",
+            "#nextstep"
+          ],
+          "captions": {
+            "ig-fb": "Application deadlines can feel like a mountain. But what if you approached it differently this week? Instead of seeking perfection, focus on removing one decision at a time. Choose a small, achievable step and commit to it before Friday. That might mean updating your CV or reaching out to a mentor. Whatever it is, make it count. Momentum starts with a single move. Explore opportunities and take that step at www.internwise.co.uk.",
+            "linkedin": "Ready to tackle that application before Friday? Sometimes the best way forward is to simplify. You don't need to be perfectly confident to make progress. Instead, eliminate one decision and focus on what's in front of you. Break it down into a small, manageable task that you can complete. Whether it's perfecting your cover letter or conducting company research, make it happen. Visit internwise.co.uk and find your next opportunity.",
+            "x": "Feeling stuck on your applications? Simplify the process by removing one decision. Take one small step before Friday. Find internships at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internshipgoals",
+              "#careergrowth",
+              "#ukstudents",
+              "#graduates",
+              "#nextstep"
+            ],
+            "linkedin": [
+              "#careeradvice",
+              "#internships",
+              "#professionaldevelopment"
+            ],
+            "x": [
+              "#careertips",
+              "#internship"
+            ]
+          },
+          "world": "comment_wall",
+          "ideaId": "c020"
+        },
+        {
+          "id": "week21-fri-education",
+          "day": "Fri 23 Oct",
+          "lane": "education",
+          "title": "Why Rejections Repeat",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "A rejection doesn't always mean your application was bad. If every rejection feels random, it's time to track a key pattern. Separate your CV problems, interview problems, and timing problems instead of changing everything at once. Each type of rejection needs a different fix. By tracking where you drop off, you'll know exactly what to focus on next. This way, you're not making your process noisier by trying to adjust everything after each 'no'. Start identifying what's really holding you back and tackle it head-on. Get more guidance and find your opportunity at www.internwise.co.uk.",
+          "hashtags": [
+            "#jobsearchtips",
+            "#careeradvice",
+            "#internships",
+            "#cvtips",
+            "#interviewskills"
+          ],
+          "captions": {
+            "ig-fb": "A rejection doesn't always mean your application was bad. If every rejection feels random, it's time to track a key pattern. Separate your CV problems, interview problems, and timing problems instead of changing everything at once. Each type of rejection needs a different fix. By tracking where you drop off, you'll know exactly what to focus on next. This way, you're not making your process noisier by trying to adjust everything after each 'no'. Start identifying what's really holding you back and tackle it head-on. Get more guidance and find your opportunity at www.internwise.co.uk.",
+            "linkedin": "Facing rejection after rejection? It might not be your application at fault. If you feel each rejection is a mystery, pinpoint the issue by separating CV problems, interview problems, and timing problems. Each requires a different approach. Avoid making your process noisier by changing everything after every rejection. Instead, track where you drop off to focus your efforts effectively. This targeted approach will help you understand what's truly impacting your job search. Learn more strategies and find your opportunity at internwise.co.uk.",
+            "x": "Not all rejections mean your application was bad. Track where you fall off - CV, interview, or timing - for a focused fix. Discover more at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#jobsearchtips",
+              "#careeradvice",
+              "#internships",
+              "#cvtips",
+              "#interviewskills"
+            ],
+            "linkedin": [
+              "#careeradvice",
+              "#internships",
+              "#jobhunt"
+            ],
+            "x": [
+              "#jobsearch",
+              "#careertips"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Job Search",
+            "headline": "Why Rejections Repeat",
+            "tone": "practical",
+            "slides": null,
+            "points": [
+              "CV, interview, timing - different fixes",
+              "Don't change everything at once",
+              "Track where you drop off",
+              "Focus your fixes effectively"
+            ],
+            "cta": "Find your opportunity at internwise.co.uk."
+          },
+          "world": "scorecard"
+        },
         {
           "id": "week21-mon-news",
           "day": "Mon 19 Oct",

@@ -1,86 +1,48 @@
 {
-  "week": "week20",
-  "generatedAt": "2026-10-12T17:00:41Z",
+  "week": "week21",
+  "generatedAt": "2026-10-19T07:07:17Z",
   "needByFamily": {
-    "thoughtful": 1,
-    "authority": 4,
-    "dothis": 2,
-    "cvpile": 1,
     "cv": 2,
-    "offers": 2
+    "dothis": 2,
+    "authority": 1,
+    "offers": 1
   },
   "repeats": [
     {
-      "label": "employer/goodcompany",
-      "cutout": "nuno_thoughtful_1",
-      "family": "thoughtful",
-      "week": "week20"
+      "label": "education/navy/cover",
+      "cutout": "nuno_cv_2",
+      "family": "cv",
+      "week": "week21"
     },
     {
-      "label": "education/marker/cover",
-      "cutout": "nuno_authority_1",
-      "family": "authority",
-      "week": "week20"
-    },
-    {
-      "label": "education/marker/cta",
+      "label": "education/navy/cta",
       "cutout": "nuno_dothis_1",
       "family": "dothis",
-      "week": "week20"
+      "week": "week21"
     },
     {
-      "label": "employer/fastmatch",
-      "cutout": "nuno_cvpile",
-      "family": "cvpile",
-      "week": "week20"
+      "label": "education/plum/cover",
+      "cutout": "nuno_authority_1",
+      "family": "authority",
+      "week": "week21"
     },
     {
-      "label": "education/flash/cover",
-      "cutout": "nuno_cv_5",
-      "family": "cv",
-      "week": "week20"
-    },
-    {
-      "label": "education/flash/cta",
+      "label": "education/plum/cta",
       "cutout": "nuno_dothis_2",
       "family": "dothis",
-      "week": "week20"
+      "week": "week21"
     },
     {
-      "label": "employer/bigstat",
-      "cutout": "nuno_offers_3",
-      "family": "offers",
-      "week": "week20"
-    },
-    {
-      "label": "education/tabs/cover",
-      "cutout": "nuno_cv",
+      "label": "education/teal/cover",
+      "cutout": "nuno_cv_3",
       "family": "cv",
-      "week": "week20"
+      "week": "week21"
     },
     {
-      "label": "education/tabs/cta",
+      "label": "education/teal/cta",
       "cutout": "nuno_offers_1",
       "family": "offers",
-      "week": "week20"
-    },
-    {
-      "label": "employer/kpi",
-      "cutout": "nuno_authority_4",
-      "family": "authority",
-      "week": "week20"
-    },
-    {
-      "label": "employer/cards",
-      "cutout": "nuno_authority_3",
-      "family": "authority",
-      "week": "week20"
-    },
-    {
-      "label": "education/splitcard",
-      "cutout": "nuno_authority_2",
-      "family": "authority",
-      "week": "week20"
+      "week": "week21"
     }
   ]
 }

@@ -774,6 +774,36 @@
       "cutout": "nuno_phone",
       "week": "week20",
       "date": "2026-10-13"
+    },
+    {
+      "cutout": "nuno_cv_2",
+      "week": "week21",
+      "date": "2026-10-19"
+    },
+    {
+      "cutout": "nuno_dothis_1",
+      "week": "week21",
+      "date": "2026-10-19"
+    },
+    {
+      "cutout": "nuno_authority_1",
+      "week": "week21",
+      "date": "2026-10-19"
+    },
+    {
+      "cutout": "nuno_dothis_2",
+      "week": "week21",
+      "date": "2026-10-19"
+    },
+    {
+      "cutout": "nuno_cv_3",
+      "week": "week21",
+      "date": "2026-10-19"
+    },
+    {
+      "cutout": "nuno_offers_1",
+      "week": "week21",
+      "date": "2026-10-19"
     }
   ]
 }
