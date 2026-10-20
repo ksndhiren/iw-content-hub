@@ -1,7 +1,9 @@
 """Blog re-share - schedules internwise.com/blog posts to socials.
 
-Daily mode (--daily, how the scheduled workflow runs): once a day, share ONE
-article to LinkedIn, Facebook and Google Business Profile at 10:30 UK. If that
+Daily mode (--daily, how the scheduled workflow runs): once a day, share the
+--limit newest unshared articles to LinkedIn, Facebook and Google Business
+Profile, starting at 10:30 UK and staggered 30 minutes apart (the workflow
+currently sends two, at 10:30 and 11:00). If that
 slot has already passed when the run fires (GitHub delays scheduled workflows
 by hours), the post rolls to tomorrow's 10:30 rather than going out now. The
 article chosen is the newest one, published BEFORE today, not yet on every
@@ -151,9 +153,8 @@ def today_slot_iso(hhmm=BLOG_TIME_UK, idx=0, stagger_min=30, roll_forward=True):
     Rolling to tomorrow keeps the posting time honest; the article is a
     re-share from a backlog, so a few hours later costs nothing.
 
-    `idx` staggers extra articles by `stagger_min` minutes. The daily cron only
-    ever sends one, but a manual run with --limit > 1 should not stack them all
-    on the same minute. Pass roll_forward=False to get the old behaviour (None
+    `idx` staggers extra articles by `stagger_min` minutes, so a run sending
+    several does not stack them all on the same minute. Pass roll_forward=False to get the old behaviour (None
     when the slot has passed, meaning post now).
     """
     hh, mm = hhmm.split(":")
