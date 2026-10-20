@@ -8770,7 +8770,7 @@
       "id": "week21",
       "label": "Week 21",
       "weekCommencing": "2026-10-19",
-      "builtAt": 1792413238,
+      "builtAt": 1792494517,
       "posts": [
         {
           "id": "week21-mon-quote",
@@ -9686,6 +9686,50 @@
             "x": [
               "#ukjobs",
               "#graduatejobs"
+            ]
+          }
+        },
+        {
+          "id": "week21-wed-news",
+          "day": "Wed 21 Oct",
+          "lane": "news",
+          "title": "Teens Want More Work Experience at School",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "Teenagers in the UK are voicing a need for more work experience opportunities during their school years. They also want to improve their communication skills, crucial for future employment. This desire for practical experience suggests that schools might not be adequately preparing students for the workforce. For students and recent grads, understanding the importance of hands-on experience is key. Internships can provide that vital practical exposure, helping you build both skills and confidence. Source: BBC Education.",
+          "hashtags": [
+            "#workexperience",
+            "#ukteens",
+            "#careerskills",
+            "#internships",
+            "#education"
+          ],
+          "captions": {
+            "ig-fb": "Teenagers in the UK are voicing a need for more work experience opportunities during their school years. They also want to improve their communication skills, crucial for future employment. This desire for practical experience suggests that schools might not be adequately preparing students for the workforce. For students and recent grads, understanding the importance of hands-on experience is key. Internships can provide that vital practical exposure, helping you build both skills and confidence. Source: BBC Education.",
+            "linkedin": "A survey of UK teenagers reveals a strong desire for more work experience opportunities within schools and a focus on improving communication skills. This sentiment indicates that young people feel the current education system might not be fully equipping them for future job markets. For students and recent graduates, it's crucial to recognise the value of practical experience. Internships can serve as a bridge, offering the chance to develop key skills and gain real-world insights. Source: BBC Education.",
+            "x": "UK teens want more work experience in schools to boost readiness for jobs. This highlights a gap in current education for job prep. Internships can fill this, offering real-world skills. (Source: BBC Education)",
+            "threads": "UK teens are asking for more work experience and better communication skills development in schools. This reflects a gap in career prep. Internships can help fill this gap, offering practical skills and insights. Visit www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#workexperience",
+              "#ukteens",
+              "#careerskills",
+              "#internships",
+              "#education"
+            ],
+            "linkedin": [
+              "#workexperience",
+              "#careerreadiness",
+              "#internships"
+            ],
+            "x": [
+              "#workexperience",
+              "#internships"
             ]
           }
         }
