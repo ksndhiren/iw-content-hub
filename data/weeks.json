@@ -8770,7 +8770,7 @@
       "id": "week21",
       "label": "Week 21",
       "weekCommencing": "2026-10-19",
-      "builtAt": 1792494517,
+      "builtAt": 1792668270,
       "posts": [
         {
           "id": "week21-mon-quote",
@@ -9730,6 +9730,50 @@
             "x": [
               "#workexperience",
               "#internships"
+            ]
+          }
+        },
+        {
+          "id": "week21-fri-news",
+          "day": "Fri 23 Oct",
+          "lane": "news",
+          "title": "Economy, Not AI, Shapes Grad Job Prospects",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "A recent report shows that the UK's graduate job prospects are more affected by the economy and public sector funding than by advancements in AI. This finding is crucial for students and graduates entering the job market, as it highlights the significant role of broader economic conditions and government policies in shaping job opportunities.\n\nUnderstanding these factors is essential for navigating the job market effectively. It means that graduates should pay close attention to economic trends and public sector developments when planning their careers.\n\nInternships can be a strategic way to gain relevant experience and build adaptability in this evolving landscape. By engaging in internships, you can better understand industry needs and improve your employability.\n\nSource: FE News.",
+          "hashtags": [
+            "#graduatejobs",
+            "#ukeconomy",
+            "#internships",
+            "#publicfunding",
+            "#careeradvice"
+          ],
+          "captions": {
+            "ig-fb": "A recent report shows that the UK's graduate job prospects are more affected by the economy and public sector funding than by advancements in AI. This finding is crucial for students and graduates entering the job market, as it highlights the significant role of broader economic conditions and government policies in shaping job opportunities.\n\nUnderstanding these factors is essential for navigating the job market effectively. It means that graduates should pay close attention to economic trends and public sector developments when planning their careers.\n\nInternships can be a strategic way to gain relevant experience and build adaptability in this evolving landscape. By engaging in internships, you can better understand industry needs and improve your employability.\n\nSource: FE News.",
+            "linkedin": "According to a new report, economic conditions and public sector funding are now more influential on graduate job prospects in the UK than AI developments. This highlights the significant impact that market trends and government actions have on job availability for new graduates.\n\nFor students and graduates, this means that staying informed about economic conditions and understanding government policies can play a crucial role in career planning. Being aware of these factors can help you make informed decisions about your employment path and industry focus.\n\nEngaging in internships can be a practical way to gain industry insight and adaptability. These opportunities allow you to develop skills that are in demand and prepare you for a dynamic job market.\n\nSource: FE News.",
+            "x": "UK grad job prospects hinge more on the economy and public sector funding than AI, a report finds. Grads should focus on understanding market trends for better career planning. Internships offer valuable experience in this shifting landscape. (Source: FE News)",
+            "threads": "A report reveals UK grad job prospects are more affected by the economy and public sector funding than AI. For students, understanding market trends is key. Internships provide experience and adaptability in this evolving job market. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#graduatejobs",
+              "#ukeconomy",
+              "#internships",
+              "#publicfunding",
+              "#careeradvice"
+            ],
+            "linkedin": [
+              "#graduatejobs",
+              "#ukeconomy",
+              "#internships"
+            ],
+            "x": [
+              "#graduatejobs",
+              "#ukeconomy"
             ]
           }
         }
