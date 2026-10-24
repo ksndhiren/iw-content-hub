@@ -12,6 +12,7 @@ Set IW_ALLOW_STALE_DESIGN=1 only for an explicit emergency fallback.
 Kept deliberately tiny and file-based (matches the education topic-dedup pattern).
 """
 from __future__ import annotations
+import hashlib
 import os, json
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -71,16 +72,40 @@ def _blocked_worlds(used, lane, recent_weeks):
             if u.get("lane") == lane and _weeknum(u["week"]) in recent_weeks}
 
 
-def pick(lane, bank, n, wid, avoid_weeks=DEFAULT_AVOID_WEEKS, strict=True):
-    """Choose `n` worlds for `lane`/`wid`: prefer worlds NOT used in the last
-    `avoid_weeks` weeks, least-recently-used first. In strict mode, fail if the
-    bank cannot satisfy the rule. Deterministic given the ledger + bank. Does not
-    write."""
+def cycle_weeks(bank, n):
+    """How many consecutive weeks this bank can serve with no world repeating.
+    A bank of 18 picked 5-at-a-time only lasts 3 weeks, so no scheduling policy
+    can push a repeat past week 4 - only a bigger bank can."""
+    return max(1, len(bank) // max(1, n))
+
+
+def _jitter(lane, wid, world):
+    """Stable tie-break key. Worlds used in the SAME week share a last-used
+    value, and Python's sort is stable, so they used to come back out in bank
+    order - as a block. That is why whole weeks recurred verbatim (week15 ==
+    week18 == 5/5 identical). Hashing (lane, week, world) shuffles within a tie
+    tier so the GROUPING changes every cycle even when the gap cannot.
+    hashlib, not hash(): str hashing is salted per process, which would make
+    re-renders of the same week pick different designs."""
+    return hashlib.sha1(f"{lane}|{wid}|{world}".encode()).hexdigest()
+
+
+def pick(lane, bank, n, wid, avoid_weeks=None, strict=True):
+    """Choose `n` worlds for `lane`/`wid`: block the worlds used in the recent
+    window, then take the least-recently-used, breaking ties with a per-week
+    hash so consecutive cycles do not reproduce the same cohort. The window
+    defaults to everything the bank can afford (cycle_weeks - 1) rather than a
+    flat 2, so a deep bank actually buys a longer gap. In strict mode, fail if
+    the bank cannot satisfy the rule. Deterministic given the ledger + bank.
+    Does not write."""
+    if avoid_weeks is None:
+        avoid_weeks = max(DEFAULT_AVOID_WEEKS, cycle_weeks(bank, n) - 1)
     used = _load().get("used", [])
     recent_weeks = _recent_weeks(used, lane, wid, avoid_weeks)
     blocked = _blocked_worlds(used, lane, recent_weeks)
     lu = _last_used(used, lane)
-    fresh = sorted([w for w in bank if w not in blocked], key=lambda w: lu.get(w, -1))
+    fresh = sorted([w for w in bank if w not in blocked],
+                   key=lambda w: (lu.get(w, -1), _jitter(lane, wid, w)))
     if len(fresh) >= n:
         return fresh[:n]
     if strict and not stale_fallback_allowed():
@@ -93,7 +118,8 @@ def pick(lane, bank, n, wid, avoid_weeks=DEFAULT_AVOID_WEEKS, strict=True):
             "explicit one-off stale-design fallback."
         )
     print(f"WARNING: stale design fallback for {lane}/{wid}; add {n - len(fresh)} new world(s).")
-    rest = sorted([w for w in bank if w in blocked], key=lambda w: lu.get(w, -1))
+    rest = sorted([w for w in bank if w in blocked],
+                  key=lambda w: (lu.get(w, -1), _jitter(lane, wid, w)))
     return (fresh + rest)[:n]
 
 
@@ -106,9 +132,11 @@ def record(lane, wid, worlds):
     _save(d)
 
 
-def shortfall(lane, bank, n, wid, avoid_weeks=DEFAULT_AVOID_WEEKS):
+def shortfall(lane, bank, n, wid, avoid_weeks=None):
     """How many posts this week are forced to reuse a recent world (0 = fully fresh).
     A positive number means author that many more worlds for the lane."""
+    if avoid_weeks is None:
+        avoid_weeks = max(DEFAULT_AVOID_WEEKS, cycle_weeks(bank, n) - 1)
     used = _load().get("used", [])
     recent_weeks = _recent_weeks(used, lane, wid, avoid_weeks)
     blocked = _blocked_worlds(used, lane, recent_weeks)

@@ -24,19 +24,63 @@ def cutout(src,dst,shadows=-0.30,highlights=0.0,target_h=1700):
     r,g,b,aa=img.split(); rgbimg=Image.merge("RGB",(r,g,b)).filter(ImageFilter.UnsharpMask(radius=2,percent=110,threshold=2))
     aa=aa.filter(ImageFilter.MinFilter(3)).filter(ImageFilter.GaussianBlur(0.6))
     Image.merge("RGBA",(*rgbimg.split(),aa)).save(dst); print("ok",os.path.basename(dst),img.size,flush=True)
+# Sources live under "Nuno Pictures/Generations/<group>/<category>/*.jpeg". Two
+# earlier gotchas are fixed here: the tree gained a "Generations" level (the old
+# base path no longer existed), and the walk only descended into <category>
+# dirs, so generations sitting LOOSE in a group folder were invisible forever -
+# that is how three usable Solo poses sat unused for months. Loose files are now
+# picked up as nuno_<group>_<i>. Run with --audit to list what is on disk vs
+# what each source maps to WITHOUT cutting anything.
 if __name__=="__main__":
-    H=os.path.expanduser; base=H("~/Downloads/Nuno Pictures")
+    H=os.path.expanduser; base=H("~/Downloads/Nuno Pictures/Generations")
     # heroes used by D1 (explicit names)
+    # Explicit names override the positional nuno_<tag>_<i> scheme, for heroes and
+    # for loose generations that deserve a semantic family rather than "solo_N".
     jobs={"nuno_cv.png":"Situational/CV/Gemini_Generated_Image_dsla2pdsla2pdsla.jpeg",
-          "nuno_thumbsup.png":"Solo/Do This/Gemini_Generated_Image_htumc0htumc0htum.jpeg"}
-    # whole library (Solo + Situational)
+          "nuno_thumbsup.png":"Solo/Do This/Gemini_Generated_Image_htumc0htumc0htum.jpeg",
+          # week22: loose Solo poses, filed by what they actually depict
+          "nuno_dothis_6.png":"Solo/Gemini_Generated_Image_aj4n5gaj4n5gaj4n.jpeg",   # points to camera
+          "nuno_offers_5.png":"Solo/Gemini_Generated_Image_ecbt9xecbt9xecbt.jpeg",   # navy folder + fist
+          "nuno_howto_5.png":"Solo/Gemini_Generated_Image_kaph5akaph5akaph.jpeg",    # open-palm explainer
+          "nuno_cv_9.png":"Solo/Gemini_Generated_Image_smtbasmtbasmtbas.jpeg"}       # glass "Portfolio" panel
+    # Held back on purpose - rembg leaves translucent artefacts or the wardrobe is
+    # off-brand. Listed so --audit stops reporting them as an outstanding gap.
+    SKIP={"nuno_cv_7.png",    # white sheet goes see-through; beige suit, not the navy blazer
+          "nuno_cv_9.png"}    # glass panel ghosts the background on dark worlds
+    # whole library (Solo + Situational). "Full Scene" is deliberately excluded:
+    # those are landscape two-person environment shots, not cutout material.
+    def _imgs(d):
+        return sorted(glob.glob(d+"/*.jpeg")+glob.glob(d+"/*.jpg"))
+    # A source already named explicitly above must not also be claimed by the
+    # positional walk, or it gets cut twice under two names (nuno_dothis_6 AND
+    # nuno_solo_1). setdefault only guards the NAME, so guard the SOURCE too.
+    claimed=set(jobs.values())
     for g in ["Solo","Situational"]:
-        for cat in sorted(os.listdir(os.path.join(base,g))):
-            cdir=os.path.join(base,g,cat)
+        gdir=os.path.join(base,g)
+        for cat in sorted(os.listdir(gdir)):
+            cdir=os.path.join(gdir,cat)
             if not os.path.isdir(cdir): continue
             tag=re.sub(r'[^a-z0-9]+','',cat.lower())
-            for i,f in enumerate(sorted(glob.glob(cdir+"/*.jpeg")+glob.glob(cdir+"/*.jpg")),1):
-                jobs.setdefault(f"nuno_{tag}_{i}.png",os.path.relpath(f,base))
-    for name,rel in jobs.items():
+            for i,f in enumerate(_imgs(cdir),1):
+                rel=os.path.relpath(f,base)
+                if rel not in claimed:
+                    jobs.setdefault(f"nuno_{tag}_{i}.png",rel)
+        # loose generations directly inside the group folder - previously skipped
+        for i,f in enumerate(_imgs(gdir),1):
+            rel=os.path.relpath(f,base)
+            if rel not in claimed:
+                jobs.setdefault(f"nuno_{g.lower()}_{i}.png",rel)
+
+    have={os.path.splitext(n)[0] for n in os.listdir("assets/nuno")}
+    todo={n:r for n,r in jobs.items() if os.path.splitext(n)[0] not in have and n not in SKIP}
+    if "--audit" in sys.argv:
+        for name,rel in sorted(jobs.items()):
+            tag="MISSING " if name in todo else ("skipped " if name in SKIP else "present ")
+            print(tag+name,"<-",rel)
+        print(f"AUDIT {len(jobs)} sources, {len(todo)} not yet cut",flush=True); raise SystemExit
+    # only cut what is missing, so a re-run is cheap and never clobbers a cutout
+    # that was hand-reviewed or deliberately dropped (e.g. nuno_cv_7, whose white
+    # sheet rembg eats through).
+    for name,rel in todo.items():
         cutout(os.path.join(base,rel),"assets/nuno/"+name)
-    print("LIBRARY DONE",len(jobs),flush=True)
+    print("LIBRARY DONE",len(todo),"new of",len(jobs),"sources",flush=True)

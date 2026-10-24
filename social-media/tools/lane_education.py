@@ -75,13 +75,14 @@ COVER_POOL = ["nuno_cv", "nuno_cv_2", "nuno_cv_3",
 # they must NOT be in the general fallback pool or they land on unrelated topics
 # (e.g. a "welcoming" pose on a Graduate Schemes cover). Kept only in TOPIC_POSES.
 CTA_POOL = ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1",
-            "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5", "nuno_howto_4"]   # + week21 fresh cutouts
+            "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5", "nuno_howto_4",
+            "nuno_dothis_6", "nuno_offers_5", "nuno_howto_5"]   # + week21, week22 fresh cutouts
 CTA_TOPIC_POSES = {
     "linkedin": ["nuno_phone", "nuno_tablet", "nuno_phone_2"],
     "tech": ["nuno_tablet", "nuno_tablet_cover", "nuno_phone"],
     "networking": ["nuno_phone", "nuno_authority_4", "nuno_authority_1"],
-    "apply": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5", "nuno_phone_2", "nuno_howto_4"],
-    "cv": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5", "nuno_phone_2", "nuno_howto_4"],
+    "apply": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5", "nuno_phone_2", "nuno_howto_4", "nuno_dothis_6", "nuno_offers_5", "nuno_howto_5"],
+    "cv": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5", "nuno_phone_2", "nuno_howto_4", "nuno_dothis_6", "nuno_offers_5", "nuno_howto_5"],
     "bullet_cv": ["nuno_cv_5", "nuno_cv_2", "nuno_cv_3"],
     "job_description": ["nuno_cv_3"],
     "followup": ["nuno_followup_phone", "nuno_phone", "nuno_tablet"],

@@ -59,6 +59,14 @@ TONES = {
     "nuno_interview_door": {"practical", "confident", "serious"},
     "nuno_cv_proof_highlight": {"practical", "serious"},
     "nuno_followup_phone": {"practical", "serious"},
+    # week22 additions - the three loose Solo/ generations the old dir-walk could
+    # never see (it only globbed Solo/<category>/, so files sitting directly in
+    # Solo/ were skipped). Opaque poses only; the fourth (glass "Portfolio"
+    # panel) is held back for the same reason as nuno_cv_7 and nuno_utility_2 -
+    # rembg leaves the translucent sheet ghosting over dark worlds.
+    "nuno_dothis_6": {"confident", "positive", "practical"},
+    "nuno_offers_5": {"positive", "confident"},
+    "nuno_howto_5": {"practical", "confident", "warm"},
 }
 
 
