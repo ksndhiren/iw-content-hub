@@ -9783,7 +9783,7 @@
       "id": "week22",
       "label": "Week 22",
       "weekCommencing": "2026-10-26",
-      "builtAt": 1792814298,
+      "builtAt": 1792829696,
       "posts": [
         {
           "id": "week22-mon-quote",
@@ -9945,7 +9945,11 @@
             "points": null,
             "cta": "Explore more internships at internwise.co.uk"
           },
-          "world": "ledger"
+          "world": "ledger",
+          "poses": {
+            "cover": "nuno_thoughtful_3",
+            "cta": "nuno_offers_5"
+          }
         },
         {
           "id": "week22-tue-quote",
@@ -10107,7 +10111,11 @@
             "points": null,
             "cta": "Discover more at internwise.co.uk"
           },
-          "world": "grid"
+          "world": "grid",
+          "poses": {
+            "cover": "nuno_utility_4",
+            "cta": "nuno_howto_5"
+          }
         },
         {
           "id": "week22-wed-quote",
@@ -10269,7 +10277,11 @@
             "points": null,
             "cta": "Discover more at internwise.co.uk"
           },
-          "world": "strip"
+          "world": "strip",
+          "poses": {
+            "cover": "nuno_cv_5",
+            "cta": "nuno_dothis_6"
+          }
         },
         {
           "id": "week22-thu-quote",

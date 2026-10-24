@@ -536,31 +536,6 @@
       "world": "spotlight"
     },
     {
-      "lane": "quote",
-      "week": "week22",
-      "world": "editorial"
-    },
-    {
-      "lane": "quote",
-      "week": "week22",
-      "world": "colorblock"
-    },
-    {
-      "lane": "quote",
-      "week": "week22",
-      "world": "paper"
-    },
-    {
-      "lane": "quote",
-      "week": "week22",
-      "world": "arc"
-    },
-    {
-      "lane": "quote",
-      "week": "week22",
-      "world": "blueprint"
-    },
-    {
       "lane": "edu_carousel",
       "week": "week22",
       "world": "ledger"
@@ -588,12 +563,17 @@
     {
       "lane": "conversation",
       "week": "week22",
+      "world": "cv_poll"
+    },
+    {
+      "lane": "conversation",
+      "week": "week22",
       "world": "marquee"
     },
     {
       "lane": "conversation",
       "week": "week22",
-      "world": "vote_cards"
+      "world": "route_map"
     },
     {
       "lane": "conversation",
@@ -603,12 +583,32 @@
     {
       "lane": "conversation",
       "week": "week22",
-      "world": "cv_poll"
+      "world": "vote_cards"
     },
     {
-      "lane": "conversation",
+      "lane": "quote",
       "week": "week22",
-      "world": "route_map"
+      "world": "arc"
+    },
+    {
+      "lane": "quote",
+      "week": "week22",
+      "world": "blueprint"
+    },
+    {
+      "lane": "quote",
+      "week": "week22",
+      "world": "colorblock"
+    },
+    {
+      "lane": "quote",
+      "week": "week22",
+      "world": "editorial"
+    },
+    {
+      "lane": "quote",
+      "week": "week22",
+      "world": "paper"
     }
   ]
 }

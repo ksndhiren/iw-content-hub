@@ -14,6 +14,7 @@ which poses to generate next - by family and count.
 Ledger: social-media/content/nuno_ledger.json  {"uses":[{cutout,week,date}, ...]}
 """
 from __future__ import annotations
+import hashlib
 import os, json, glob, datetime, copy
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -132,8 +133,14 @@ def _choose(candidates, week_id, log, today, fresh_days, exclude=None):
         lu = _last_use(log, c)
         fresh = lu is None or (datetime.date.fromisoformat(today) -
                                datetime.date.fromisoformat(lu)).days >= fresh_days
-        # sort: fresh first, then oldest last-use first (never-used = "" sorts first)
-        return (0 if fresh else 1, lu or "")
+        # sort: fresh first, then oldest last-use first (never-used = "" sorts first).
+        # Cutouts last used in the SAME week share a date, and Python's sort is
+        # stable, so ties used to resolve in pool order - the same faces came
+        # back together every cycle. Tie-break on a hash of (week, cutout) so the
+        # grouping changes from week to week. hashlib, not hash(): str hashing is
+        # salted per process, and a re-render must reproduce the shipped pose.
+        return (0 if fresh else 1, lu or "",
+                hashlib.sha1(f"{week_id}|{c}".encode()).hexdigest())
     pool.sort(key=key)
     best = pool[0]
     lu = _last_use(log, best)
