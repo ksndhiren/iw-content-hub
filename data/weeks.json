@@ -9778,6 +9778,796 @@
           }
         }
       ]
+    },
+    {
+      "id": "week22",
+      "label": "Week 22",
+      "weekCommencing": "2026-10-26",
+      "builtAt": 1792814298,
+      "posts": [
+        {
+          "id": "week22-mon-quote",
+          "day": "Mon 26 Oct",
+          "lane": "quote",
+          "title": "Quote: Johann Wolfgang von Goethe",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Feeling stuck in theory? Johann Wolfgang von Goethe reminds us that knowledge alone isn't enough. It's time to put plans into action. Whether you're ready to apply what you've learned or take that next step, start today. Find your path with internships that pay at www.internwise.co.uk.",
+          "hashtags": [
+            "#careergrowth",
+            "#internshipopportunities",
+            "#studentlife",
+            "#goethequotes",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Feeling stuck in theory? Johann Wolfgang von Goethe reminds us that knowledge alone isn't enough. It's time to put plans into action. Whether you're ready to apply what you've learned or take that next step, start today. Find your path with internships that pay at www.internwise.co.uk.",
+            "linkedin": "Johann Wolfgang von Goethe once said, 'Knowing is not enough; we must apply. Willing is not enough; we must do.' It's a reminder to turn our knowledge and willingness into action. If you're ready to take that leap and apply what you've learned, explore opportunities that pay. Start your journey with internwise.co.uk.",
+            "x": "Johann Wolfgang von Goethe said, 'Knowing is not enough; we must apply. Willing is not enough; we must do.' Ready to take action? Discover opportunities at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careergrowth",
+              "#internshipopportunities",
+              "#studentlife",
+              "#goethequotes",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#careeradvice",
+              "#internships",
+              "#professionaldevelopment"
+            ],
+            "x": [
+              "#careeradvice",
+              "#internwise"
+            ]
+          },
+          "quoteId": "q041",
+          "world": "editorial"
+        },
+        {
+          "id": "week22-mon-engagement",
+          "day": "Mon 26 Oct",
+          "lane": "engagement",
+          "title": "Where does your application actually stall?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Ever wonder why your job applications aren't hitting the mark? It's not always about your CV. Sometimes, the snag is further down the line. Identify where things go off-course - is it the cover letter, interview, or follow-up? Nail down the stage, and you'll know exactly where to focus your energy. Start tracking your next five applications and see where you need to tweak your approach. Ready to find your next internship? Head to www.internwise.co.uk.",
+          "hashtags": [
+            "#jobapplication",
+            "#internshiptips",
+            "#careergrowth",
+            "#graduatelife",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Ever wonder why your job applications aren't hitting the mark? It's not always about your CV. Sometimes, the snag is further down the line. Identify where things go off-course - is it the cover letter, interview, or follow-up? Nail down the stage, and you'll know exactly where to focus your energy. Start tracking your next five applications and see where you need to tweak your approach. Ready to find your next internship? Head to www.internwise.co.uk.",
+            "linkedin": "Are you stuck in the application process? A common mistake is rewriting your CV when the issue might be elsewhere. It's crucial to identify the exact stage where things fall apart. Is it the cover letter, the interview, or maybe the follow-up? By pinpointing this, you can direct your efforts towards the real problem. Track your next five applications to discover where you might be losing out. Explore opportunities and internships that match your skills at internwise.co.uk.",
+            "x": "Is your application process stalling? Identify the exact stage where it breaks down. Track your next five apps and focus on the true problem. Start at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#jobapplication",
+              "#internshiptips",
+              "#careergrowth",
+              "#graduatelife",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#careeradvice",
+              "#jobsearch",
+              "#internship"
+            ],
+            "x": [
+              "#jobsearch",
+              "#internships"
+            ]
+          },
+          "world": "marquee",
+          "ideaId": "c021"
+        },
+        {
+          "id": "week22-mon-education",
+          "day": "Mon 26 Oct",
+          "lane": "education",
+          "title": "Evaluate Internships Fast",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
+          ],
+          "status": "in-review",
+          "caption": "Unsure if an internship is worth your time? Here's how to assess its quality quickly. Look for real-world skill development, mentorship, and learning opportunities. These elements are crucial for boosting your future employability. Want more tips? Visit www.internwise.co.uk.",
+          "hashtags": [
+            "#internshiptips",
+            "#careergrowth",
+            "#mentorship",
+            "#skilldevelopment",
+            "#internwiseuk"
+          ],
+          "captions": {
+            "ig-fb": "Unsure if an internship is worth your time? Here's how to assess its quality quickly. Look for real-world skill development, mentorship, and learning opportunities. These elements are crucial for boosting your future employability. Want more tips? Visit www.internwise.co.uk.",
+            "linkedin": "Not all internships are created equal. To quickly assess their quality, focus on real-world skill applications, mentorship availability, and learning opportunities. These factors are key to enhancing your future career prospects. Discover more at internwise.co.uk.",
+            "x": "Evaluate internships by checking for skill development, mentorship, and learning opportunities. Boost your career prospects! internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internshiptips",
+              "#careergrowth",
+              "#mentorship",
+              "#skilldevelopment",
+              "#internwiseuk"
+            ],
+            "linkedin": [
+              "#internshipadvice",
+              "#careerdevelopment",
+              "#internwise"
+            ],
+            "x": [
+              "#internshiptips",
+              "#careeradvice"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Quick Check",
+            "headline": "Evaluate Internships Fast",
+            "tone": "practical",
+            "slides": [
+              {
+                "tag": "Skills Matter",
+                "title": "Real-World Skills",
+                "body": "Look for internships offering practical skills you can use in the job market."
+              },
+              {
+                "tag": "Mentorship Counts",
+                "title": "Find a Mentor",
+                "body": "A good mentor offers guidance and career advice. Check if the internship includes mentorship."
+              },
+              {
+                "tag": "Future Prospects",
+                "title": "Learning Opportunities",
+                "body": "Internships with learning opportunities boost your future employability. Ensure it's part of the package."
+              }
+            ],
+            "points": null,
+            "cta": "Explore more internships at internwise.co.uk"
+          },
+          "world": "ledger"
+        },
+        {
+          "id": "week22-tue-quote",
+          "day": "Tue 27 Oct",
+          "lane": "quote",
+          "title": "Quote: Charles Darwin",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Charles Darwin once said, 'A man who dares to waste one hour of time has not discovered the value of life.' Every moment counts when you're building your career. Why not use this hour to explore opportunities that could shape your future? Discover internships that match your ambitions at www.internwise.co.uk.",
+          "hashtags": [
+            "#careergoals",
+            "#internships",
+            "#darwinquotes",
+            "#timewellspent",
+            "#futureready"
+          ],
+          "captions": {
+            "ig-fb": "Charles Darwin once said, 'A man who dares to waste one hour of time has not discovered the value of life.' Every moment counts when you're building your career. Why not use this hour to explore opportunities that could shape your future? Discover internships that match your ambitions at www.internwise.co.uk.",
+            "linkedin": "Charles Darwin's words remind us of the importance of valuing our time: 'A man who dares to waste one hour of time has not discovered the value of life.' Make every hour count towards your career goals. Explore internships that help build skills and open doors at internwise.co.uk.",
+            "x": "Darwin said it best: don't waste your time. Discover the value of your future with internships. Find yours at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careergoals",
+              "#internships",
+              "#darwinquotes",
+              "#timewellspent",
+              "#futureready"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internships",
+              "#professionalgrowth"
+            ],
+            "x": [
+              "#internships",
+              "#careeradvice"
+            ]
+          },
+          "quoteId": "q042",
+          "world": "colorblock"
+        },
+        {
+          "id": "week22-tue-engagement",
+          "day": "Tue 27 Oct",
+          "lane": "engagement",
+          "title": "How long should you wait before chasing?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "When it comes to following up after an interview, timing is everything. Send a follow-up too soon, and it might feel like you're pushing. Wait too long, and you might seem disinterested. To avoid the guessing game, ask about the timeline during your interview. This way, you’ll know exactly when to check in. Ready to find an internship where you can put this advice to use? Visit www.internwise.co.uk.",
+          "hashtags": [
+            "#interviewtips",
+            "#careeradvice",
+            "#jobhunt",
+            "#internships",
+            "#graduatejobs"
+          ],
+          "captions": {
+            "ig-fb": "When it comes to following up after an interview, timing is everything. Send a follow-up too soon, and it might feel like you're pushing. Wait too long, and you might seem disinterested. To avoid the guessing game, ask about the timeline during your interview. This way, you’ll know exactly when to check in. Ready to find an internship where you can put this advice to use? Visit www.internwise.co.uk.",
+            "linkedin": "Following up after an interview is crucial, but the timing can be tricky. Too early and it might come off as pressure; too late and you risk fading into the background. The key? During your interview, ask when you should expect to hear back. It shows you're organised and genuinely interested. Ready to take this tip into the real world? Head over to internwise.co.uk to find your next opportunity.",
+            "x": "Timing your follow-up after an interview can be tricky. Ask for a timeline during the interview to know exactly when to check in. Start your search at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#interviewtips",
+              "#careeradvice",
+              "#jobhunt",
+              "#internships",
+              "#graduatejobs"
+            ],
+            "linkedin": [
+              "#interviewadvice",
+              "#careertips",
+              "#internships"
+            ],
+            "x": [
+              "#interviewadvice",
+              "#internships"
+            ]
+          },
+          "world": "vote_cards",
+          "ideaId": "c022"
+        },
+        {
+          "id": "week22-tue-education",
+          "day": "Tue 27 Oct",
+          "lane": "education",
+          "title": "Build Experience Without Jobs",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
+          ],
+          "status": "in-review",
+          "caption": "Graduating without work experience? Don't worry! Start small projects or volunteer to gain the practical skills employers love. Projects and volunteering show initiative and add hands-on examples to your CV. Ready to build your experience from scratch? Visit www.internwise.co.uk to get started!",
+          "hashtags": [
+            "#careeradvice",
+            "#graduatetips",
+            "#skillbuilding",
+            "#volunteer",
+            "#projectexperience"
+          ],
+          "captions": {
+            "ig-fb": "Graduating without work experience? Don't worry! Start small projects or volunteer to gain the practical skills employers love. Projects and volunteering show initiative and add hands-on examples to your CV. Ready to build your experience from scratch? Visit www.internwise.co.uk to get started!",
+            "linkedin": "Worried about entering the job market without experience? You can build your skills from scratch. Start by creating small projects or volunteering. These activities demonstrate initiative and provide practical skills that employers value over theory. Update your CV with these real-world examples to stand out. Learn more at internwise.co.uk.",
+            "x": "No work experience? No problem! Start small projects or volunteer to gain practical skills that employers value. Get tips at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careeradvice",
+              "#graduatetips",
+              "#skillbuilding",
+              "#volunteer",
+              "#projectexperience"
+            ],
+            "linkedin": [
+              "#graduateadvice",
+              "#skilldevelopment",
+              "#careergrowth"
+            ],
+            "x": [
+              "#careertips",
+              "#graduateadvice"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Experience Tips",
+            "headline": "Build Experience Without Jobs",
+            "tone": "practical",
+            "slides": [
+              {
+                "tag": "Initiative",
+                "title": "Start Small Projects",
+                "body": "Create your own mini-projects. Showcase your initiative and problem-solving skills."
+              },
+              {
+                "tag": "Volunteer",
+                "title": "Volunteer Your Skills",
+                "body": "Offer your skills to local groups or charities. Gain hands-on experience that adds value."
+              },
+              {
+                "tag": "Boost CV",
+                "title": "Add Practical Examples",
+                "body": "Include projects and volunteering on your CV. Show real-world skills employers value."
+              }
+            ],
+            "points": null,
+            "cta": "Discover more at internwise.co.uk"
+          },
+          "world": "grid"
+        },
+        {
+          "id": "week22-wed-quote",
+          "day": "Wed 28 Oct",
+          "lane": "quote",
+          "title": "Quote: Louisa May Alcott",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Learning to navigate life's challenges is like sailing through a storm. Embrace the journey as Louisa May Alcott reminds us: 'I am not afraid of storms, for I am learning how to sail my ship.' 🌊 Every internship is an opportunity to learn and grow. Start your journey today and explore internships at www.internwise.co.uk",
+          "hashtags": [
+            "#internships",
+            "#careergrowth",
+            "#paidinternships",
+            "#studentlife",
+            "#louisamayalcott"
+          ],
+          "captions": {
+            "ig-fb": "Learning to navigate life's challenges is like sailing through a storm. Embrace the journey as Louisa May Alcott reminds us: 'I am not afraid of storms, for I am learning how to sail my ship.' 🌊 Every internship is an opportunity to learn and grow. Start your journey today and explore internships at www.internwise.co.uk",
+            "linkedin": "Louisa May Alcott wisely said, 'I am not afraid of storms, for I am learning how to sail my ship.' In every challenge, there's a lesson waiting to be learned. As you step into the professional world, remember that each internship is a chance to develop your skills and steer your career in the right direction. Ready to set sail? Find your next opportunity at internwise.co.uk",
+            "x": "'I am not afraid of storms, for I am learning how to sail my ship.' - Louisa May Alcott 🌊 Embrace the journey and find internships that help you grow at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internships",
+              "#careergrowth",
+              "#paidinternships",
+              "#studentlife",
+              "#louisamayalcott"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internships",
+              "#learningjourney"
+            ],
+            "x": [
+              "#careergrowth",
+              "#internships"
+            ]
+          },
+          "quoteId": "q043",
+          "world": "paper"
+        },
+        {
+          "id": "week22-wed-engagement",
+          "day": "Wed 28 Oct",
+          "lane": "engagement",
+          "title": "Which part of the advert do you read first?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Ever skimmed a job advert just to zero in on the salary? You're not alone! But the real magic lies in understanding the tasks and responsibilities. That's where you'll discover if the role truly suits you. Dive deeper and read one advert properly today. Find your next opportunity at www.internwise.co.uk",
+          "hashtags": [
+            "#jobhunt",
+            "#careeradvice",
+            "#internships",
+            "#graduatejobs",
+            "#readthead"
+          ],
+          "captions": {
+            "ig-fb": "Ever skimmed a job advert just to zero in on the salary? You're not alone! But the real magic lies in understanding the tasks and responsibilities. That's where you'll discover if the role truly suits you. Dive deeper and read one advert properly today. Find your next opportunity at www.internwise.co.uk",
+            "linkedin": "When scanning job adverts, many of us head straight for the salary section. But the key to a successful application often lies in understanding the tasks and responsibilities. These elements determine if the role aligns with your skills and interests. Take the time to read one advert thoroughly today. Visit internwise.co.uk for your next opportunity.",
+            "x": "Do you jump to the salary bit in job ads? Try focusing on the tasks first. That's where you'll see if the role suits you. Check out internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#jobhunt",
+              "#careeradvice",
+              "#internships",
+              "#graduatejobs",
+              "#readthead"
+            ],
+            "linkedin": [
+              "#careeradvice",
+              "#internships",
+              "#graduatejobs"
+            ],
+            "x": [
+              "#jobsearch",
+              "#internships"
+            ]
+          },
+          "world": "shortlist_poll",
+          "ideaId": "c023"
+        },
+        {
+          "id": "week22-wed-education",
+          "day": "Wed 28 Oct",
+          "lane": "education",
+          "title": "Your CV Is Too Vague",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
+          ],
+          "status": "in-review",
+          "caption": "Is your CV failing to make an impact? Employers often spend just seconds skimming through CVs. To grab attention, ensure every detail counts. Highlight specific achievements rather than vague descriptions to stand out. Tailor your CV to match job descriptions, increasing its relevance. Ready to make your CV pop? Visit www.internwise.co.uk for more insights.",
+          "hashtags": [
+            "#cvtips",
+            "#careeradvice",
+            "#jobsearch",
+            "#graduatejobs",
+            "#internships"
+          ],
+          "captions": {
+            "ig-fb": "Is your CV failing to make an impact? Employers often spend just seconds skimming through CVs. To grab attention, ensure every detail counts. Highlight specific achievements rather than vague descriptions to stand out. Tailor your CV to match job descriptions, increasing its relevance. Ready to make your CV pop? Visit www.internwise.co.uk for more insights.",
+            "linkedin": "Wondering why your CV isn't landing interviews? Employers scan CVs in seconds, so precision is key. Specific achievements are more memorable than generic claims. Tailor your CV to job descriptions to boost relevance and impact. Start transforming your CV today at internwise.co.uk.",
+            "x": "Your CV needs specificity! Employers skim CVs quickly. Show concrete achievements & tailor to job descriptions. Details matter. internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#cvtips",
+              "#careeradvice",
+              "#jobsearch",
+              "#graduatejobs",
+              "#internships"
+            ],
+            "linkedin": [
+              "#cvadvice",
+              "#jobapplications",
+              "#careergrowth"
+            ],
+            "x": [
+              "#cvtips",
+              "#jobadvice"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "CV Tips",
+            "headline": "Your CV Is Too Vague",
+            "tone": "practical",
+            "slides": [
+              {
+                "tag": "Time Matters",
+                "title": "Few Seconds to Impress",
+                "body": "Employers scan your CV quickly. Make every word count."
+              },
+              {
+                "tag": "Be Specific",
+                "title": "Standout Achievements",
+                "body": "Replace vague claims with concrete successes."
+              },
+              {
+                "tag": "Tailor It",
+                "title": "Match the Job",
+                "body": "Align your CV with job descriptions for greater impact."
+              }
+            ],
+            "points": null,
+            "cta": "Discover more at internwise.co.uk"
+          },
+          "world": "strip"
+        },
+        {
+          "id": "week22-thu-quote",
+          "day": "Thu 29 Oct",
+          "lane": "quote",
+          "title": "Quote: Ada Lovelace",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Ever feel that the more you learn, the more you want to know? Ada Lovelace nailed it. Dive deep into your interests and let your curiosity guide you. Whether it's coding, marketing, or finance, there's an internship out there waiting for you. Discover new opportunities at www.internwise.co.uk.",
+          "hashtags": [
+            "#adalovelace",
+            "#curiosity",
+            "#internshipopportunities",
+            "#careergrowth",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Ever feel that the more you learn, the more you want to know? Ada Lovelace nailed it. Dive deep into your interests and let your curiosity guide you. Whether it's coding, marketing, or finance, there's an internship out there waiting for you. Discover new opportunities at www.internwise.co.uk.",
+            "linkedin": "Ada Lovelace once said, 'The more I study, the more insatiable do I feel my genius for it to be.' Embrace your thirst for knowledge and let it fuel your career journey. Exploring internships is a great way to delve deeper into your field of interest and enhance your skills. Check out available opportunities at internwise.co.uk.",
+            "x": "Ada Lovelace knew the joy of learning. Feel the same? Dive deeper into your passion with an internship. Explore options today at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#adalovelace",
+              "#curiosity",
+              "#internshipopportunities",
+              "#careergrowth",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#continuouslearning",
+              "#internships"
+            ],
+            "x": [
+              "#adalovelace",
+              "#internwise"
+            ]
+          },
+          "quoteId": "q036",
+          "world": "arc"
+        },
+        {
+          "id": "week22-thu-engagement",
+          "day": "Thu 29 Oct",
+          "lane": "engagement",
+          "title": "What does a good first week look like?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Your first week in an internship can set the tone for your entire experience. So, what should you expect? Ideally, you'll be introduced to the team, given a clear task, and know who to turn to for guidance. If any of these are missing, don't hesitate to ask! A proactive start leads to a fruitful journey. Find structured and supportive placements at www.internwise.co.uk. 🌟",
+          "hashtags": [
+            "#internlife",
+            "#careerstart",
+            "#internshipadvice",
+            "#firstweek",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Your first week in an internship can set the tone for your entire experience. So, what should you expect? Ideally, you'll be introduced to the team, given a clear task, and know who to turn to for guidance. If any of these are missing, don't hesitate to ask! A proactive start leads to a fruitful journey. Find structured and supportive placements at www.internwise.co.uk. 🌟",
+            "linkedin": "Starting a new internship? The first week is crucial. It should include meeting the team, being assigned a task, and knowing your go-to person for questions. If any of these elements are absent, speak up! A well-structured beginning is your gateway to success. Discover internships that provide this kind of support at internwise.co.uk.",
+            "x": "First week in an internship should include meeting your team, getting a task, and knowing who to ask for help. Missing any? Speak up! Find well-structured internships at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internlife",
+              "#careerstart",
+              "#internshipadvice",
+              "#firstweek",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#internshipadvice",
+              "#careerdevelopment",
+              "#internwise"
+            ],
+            "x": [
+              "#internlife",
+              "#internwise"
+            ]
+          },
+          "world": "cv_poll",
+          "ideaId": "c024"
+        },
+        {
+          "id": "week22-thu-education",
+          "day": "Thu 29 Oct",
+          "lane": "education",
+          "title": "Boost Your Interview Pitch",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Struggling to impress in interviews? Your pitch might be the culprit. Let's make it stronger. Begin with a compelling opening to grab attention. Highlight key skills that set you apart. Connect your experience directly to the role you're after. Show genuine enthusiasm and confidence - it really stands out. Remember, keep it concise and clear. Nail this, and you'll leave a lasting impression. For more tips, visit www.internwise.co.uk.",
+          "hashtags": [
+            "#interviewtips",
+            "#careeradvice",
+            "#jobhunt",
+            "#graduatejobs",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Struggling to impress in interviews? Your pitch might be the culprit. Let's make it stronger. Begin with a compelling opening to grab attention. Highlight key skills that set you apart. Connect your experience directly to the role you're after. Show genuine enthusiasm and confidence - it really stands out. Remember, keep it concise and clear. Nail this, and you'll leave a lasting impression. For more tips, visit www.internwise.co.uk.",
+            "linkedin": "Are your interview pitches falling flat? It might be time to refine your approach. Start with a strong opening that captures interest. Highlight your key skills and how they match the role. Show genuine enthusiasm and confidence - it’s memorable. Keep it concise to ensure clarity. Master these elements to stand out. Find more guidance at internwise.co.uk.",
+            "x": "Struggling with interviews? Your pitch might be the issue. Start strong, highlight your skills, and link them to the role. Stay concise and confident. More tips at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#interviewtips",
+              "#careeradvice",
+              "#jobhunt",
+              "#graduatejobs",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#interviewskills",
+              "#careerdevelopment",
+              "#graduatejobs"
+            ],
+            "x": [
+              "#interviewtips",
+              "#careeradvice"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Interview Tips",
+            "headline": "Boost Your Interview Pitch",
+            "tone": "practical",
+            "slides": null,
+            "points": [
+              "Start with a strong opening.",
+              "Highlight your key skills.",
+              "Link your experience to the role.",
+              "Show enthusiasm and confidence.",
+              "Keep it concise and clear."
+            ],
+            "cta": "Strengthen your pitch at internwise.co.uk"
+          },
+          "world": "message_lab"
+        },
+        {
+          "id": "week22-fri-quote",
+          "day": "Fri 30 Oct",
+          "lane": "quote",
+          "title": "Quote: Jane Austen",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Jane Austen knew the power of trusting your instincts. It's easy to get lost in the noise of opinions, but your inner guide is often the best advisor. Listen to it, learn from it, and let it guide your path. When it comes to your career, trust yourself to find the right opportunities. Start your journey with us at www.internwise.co.uk",
+          "hashtags": [
+            "#careeradvice",
+            "#trustyourself",
+            "#janeausten",
+            "#internships",
+            "#graduatejobs"
+          ],
+          "captions": {
+            "ig-fb": "Jane Austen knew the power of trusting your instincts. It's easy to get lost in the noise of opinions, but your inner guide is often the best advisor. Listen to it, learn from it, and let it guide your path. When it comes to your career, trust yourself to find the right opportunities. Start your journey with us at www.internwise.co.uk",
+            "linkedin": "Jane Austen once said, 'We have all a better guide in ourselves, if we would attend to it, than any other person can be.' It's a reminder to trust our instincts, especially when navigating career choices. Your inner voice can lead you to opportunities that align with your true potential. Ready to listen to your own guide? Explore internships and graduate jobs at internwise.co.uk",
+            "x": "Jane Austen reminds us to trust our instincts. Your inner guide knows best. Start your career journey with confidence at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careeradvice",
+              "#trustyourself",
+              "#janeausten",
+              "#internships",
+              "#graduatejobs"
+            ],
+            "linkedin": [
+              "#careergrowth",
+              "#internships",
+              "#graduatejobs"
+            ],
+            "x": [
+              "#careeradvice",
+              "#internships"
+            ]
+          },
+          "quoteId": "q037",
+          "world": "blueprint"
+        },
+        {
+          "id": "week22-fri-engagement",
+          "day": "Fri 30 Oct",
+          "lane": "engagement",
+          "title": "Which number would you put on your CV?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Ever thought about the power of a single number on your CV? A well-chosen statistic can speak louder than a whole paragraph of adjectives. Think about your achievements, pick a number you can confidently discuss in an interview, and let it shine on your CV. This small tweak might just set you apart. Ready to take the plunge? Start by exploring opportunities at www.internwise.co.uk.",
+          "hashtags": [
+            "#cvtips",
+            "#careeradvice",
+            "#internshipgoals",
+            "#standout",
+            "#internwiseuk"
+          ],
+          "captions": {
+            "ig-fb": "Ever thought about the power of a single number on your CV? A well-chosen statistic can speak louder than a whole paragraph of adjectives. Think about your achievements, pick a number you can confidently discuss in an interview, and let it shine on your CV. This small tweak might just set you apart. Ready to take the plunge? Start by exploring opportunities at www.internwise.co.uk.",
+            "linkedin": "Numbers on your CV can make a real difference. They cut through the fluff and give potential employers a clear snapshot of your achievements. Whether it's a percentage, a total, or a simple figure, choose one that you can back up with confidence during an interview. This single number can make your CV stand out in a stack. Consider putting one on your CV tonight. Explore the opportunities at internwise.co.uk to find internships where you can build more numbers to showcase.",
+            "x": "A single number on your CV can speak volumes. Choose one you can confidently discuss in interviews. Ready to make your CV stand out? Visit internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#cvtips",
+              "#careeradvice",
+              "#internshipgoals",
+              "#standout",
+              "#internwiseuk"
+            ],
+            "linkedin": [
+              "#cvtips",
+              "#careergrowth",
+              "#internwiseuk"
+            ],
+            "x": [
+              "#cvtips",
+              "#internwiseuk"
+            ]
+          },
+          "world": "route_map",
+          "ideaId": "c025"
+        },
+        {
+          "id": "week22-fri-education",
+          "day": "Fri 30 Oct",
+          "lane": "education",
+          "title": "Tackle Graduate Job Jitters",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Feeling overwhelmed by the graduate job market? You're not alone. Let's tackle those jitters with a strategic approach to job searching. Start by researching industry trends to understand where the growth is happening. This will not only guide your applications but also increase your chances of landing the right role. By targeting sectors with potential, you can save time and energy, focusing only on opportunities that truly fit your skills and ambitions. Ready to make your job search more effective? Dive into more tips and strategies at www.internwise.co.uk.",
+          "hashtags": [
+            "#graduatejobs",
+            "#jobsearchtips",
+            "#careeradvice",
+            "#ukgrads",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Feeling overwhelmed by the graduate job market? You're not alone. Let's tackle those jitters with a strategic approach to job searching. Start by researching industry trends to understand where the growth is happening. This will not only guide your applications but also increase your chances of landing the right role. By targeting sectors with potential, you can save time and energy, focusing only on opportunities that truly fit your skills and ambitions. Ready to make your job search more effective? Dive into more tips and strategies at www.internwise.co.uk.",
+            "linkedin": "Feeling overwhelmed by the graduate job market? It's a common challenge, but one you can overcome with a strategic approach. Start by understanding industry trends to identify sectors with growth potential. This targeted approach can significantly increase your chances of success and reduce time spent on roles that don't suit your skills. By focusing your efforts on industries that are expanding, you align your job search with real opportunities. Ready to turn your job search into a more successful venture? Find more insights and guidance at internwise.co.uk.",
+            "x": "Overwhelmed by the graduate job market? Focus on sectors with growth potential. Research trends, apply strategically, and boost your success odds. Learn more at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#graduatejobs",
+              "#jobsearchtips",
+              "#careeradvice",
+              "#ukgrads",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#graduatejobs",
+              "#careeradvice",
+              "#internwise"
+            ],
+            "x": [
+              "#graduatejobs",
+              "#careertips"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Job Search",
+            "headline": "Tackle Graduate Job Jitters",
+            "tone": "practical",
+            "slides": null,
+            "points": [
+              "Research industry trends",
+              "Target growing sectors",
+              "Apply strategically",
+              "Save time on wrong roles",
+              "Boost success odds"
+            ],
+            "cta": "Explore more at internwise.co.uk"
+          },
+          "world": "focus_studio"
+        }
+      ]
     }
   ]
 }

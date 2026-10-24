@@ -1,15 +1,42 @@
 {
-  "week": "week21",
-  "generatedAt": "2026-10-19T07:31:56Z",
+  "week": "week22",
+  "generatedAt": "2026-10-24T03:58:11Z",
   "needByFamily": {
-    "dothis": 1
+    "thoughtful": 1,
+    "offers": 1,
+    "dothis": 2,
+    "cv": 1
   },
   "repeats": [
     {
-      "label": "education/plum/cta",
+      "label": "education/ledger/cover",
+      "cutout": "nuno_thoughtful_3",
+      "family": "thoughtful",
+      "week": "week22"
+    },
+    {
+      "label": "education/ledger/cta",
+      "cutout": "nuno_offers_4",
+      "family": "offers",
+      "week": "week22"
+    },
+    {
+      "label": "education/grid/cta",
       "cutout": "nuno_dothis_1",
       "family": "dothis",
-      "week": "week21"
+      "week": "week22"
+    },
+    {
+      "label": "education/strip/cover",
+      "cutout": "nuno_cv_5",
+      "family": "cv",
+      "week": "week22"
+    },
+    {
+      "label": "education/strip/cta",
+      "cutout": "nuno_dothis_2",
+      "family": "dothis",
+      "week": "week22"
     }
   ]
 }
