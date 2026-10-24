@@ -1,0 +1,66 @@
+name: Build Pre-flight
+
+# Capacity check for the UPCOMING week, run mid-week. It runs every picker that
+# can refuse to build (education topics, quotes, conversation ideas, and each
+# design bank) and renders nothing, writes nothing, commits nothing.
+#
+# Why it exists: a topic or design shortfall used to surface for the first time
+# in Saturday's daily5-build, by which point the week was already late. Running
+# the same checks on Wednesday leaves three days to restock a bank before the
+# build needs it. A red run here means Saturday WILL fail - read the job summary
+# for which bank is short.
+#
+# Needs no API keys: no copy is written and no image is rendered.
+
+on:
+  schedule:
+    - cron: "41 6 * * 3"      # every Wednesday 06:41 UTC (off the top of the hour; those crons are the most contended and run hours late)
+  workflow_dispatch:
+    inputs:
+      week_id:
+        description: "Week id to check (e.g. week23). Blank = upcoming week."
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-preflight
+  cancel-in-progress: true
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # The renderers are imported at module scope, so the packages must be
+      # present - but no browser is ever launched, so skip `playwright install`
+      # and the chromium download with it.
+      - name: Install dependencies
+        run: pip install openai playwright pillow boto3
+
+      - name: Pre-flight the upcoming week
+        env:
+          WEEK_ID: ${{ github.event.inputs.week_id }}
+        run: |
+          set -o pipefail
+          python social-media/tools/build_week.py --preflight | tee /tmp/preflight.log
+
+      - name: Summarise
+        if: always()
+        run: |
+          {
+            echo '## Build pre-flight'
+            echo
+            echo '```'
+            cat /tmp/preflight.log 2>/dev/null || echo "(pre-flight produced no output - see the step log)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

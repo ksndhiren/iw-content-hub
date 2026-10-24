@@ -5,7 +5,7 @@ education topic) into brand-safe copy: reworded news, per-platform captions,
 education carousel slides. All brand rules live in SYSTEM so every call obeys
 them. Used by the build step; runs unattended in the cloud (needs OPENAI_API_KEY).
 
-    from writer import write_news, write_captions, write_education
+    from writer import write_news, write_captions, write_education, write_topic_angles
 """
 import os, json, sys, re
 
@@ -214,6 +214,62 @@ Return JSON with:
   }},
   "hashtags": {{"ig-fb": [5 tags], "linkedin": [3 tags], "x": [2 tags]}}"""
     return _chat(user, max_tokens=1400)
+
+
+def write_topic_angles(clusters, blocked_titles, per_cluster=1):
+    """Write fresh education topic angles for the topic engine's signal clusters.
+
+    clusters: [{"cluster": key, "signals": [headline, ...]}] - the scored signal
+    clusters the engine found this week.
+    blocked_titles: every education title already used or scheduled. The model
+    must not restate any of them.
+
+    This is what makes topic supply unbounded. The engine's static angle bank
+    (angle_for_cluster) is a dictionary of ten fixed titles, so it could only
+    ever emit one title per cluster - against a permanent posted-title ledger
+    that grows five rows a week, exhaustion was arithmetic, not bad luck.
+
+    Returns {"angles": [{cluster, title, hook, promise, takeaway, cta,
+    proof_points}]}. The engine falls back to the static bank for any cluster
+    the model skips, so a missing key or a failed call degrades, never breaks.
+    """
+    want = len(clusters) * per_cluster
+    listed = "\n".join(
+        f"- cluster \"{c['cluster']}\": " + " | ".join(c.get("signals", [])[:5])
+        for c in clusters
+    )
+    avoid = "\n".join(f"- {t}" for t in blocked_titles) or "- (nothing yet)"
+    user = f"""Write {want} education topic angles for Internwise short-form content.
+
+Each angle becomes one teaching carousel for UK students and graduates.
+
+SIGNAL CLUSTERS (what the audience is actually asking about this week):
+{listed}
+
+ALREADY PUBLISHED - do NOT restate any of these topics. A new angle on the same
+cluster is good and expected, but it must teach something materially different
+and must not reuse the distinctive wording of these titles:
+{avoid}
+
+Rules for every angle:
+- The title is a specific claim or question, max ~46 chars, no colons, title case.
+- Give {per_cluster} angle(s) per cluster listed above, and set "cluster" to that
+  exact cluster key.
+- Titles must be distinct from each other as well as from the published list.
+- Teach one concrete, actionable idea. No generic "tips for success" framing.
+- Obey every brand rule, including the paid-internship rule.
+
+Return JSON with:
+  "angles": array of {{
+     "cluster": the cluster key,
+     "title": the topic title,
+     "hook": one spoken opening line that names the reader's problem,
+     "promise": one line starting "I will show you..." or similar,
+     "takeaway": the single thing they should do differently, one line,
+     "cta": one line pointing to internwise.co.uk,
+     "proof_points": array of 2-3 short factual reasons this is true (no invented numbers)
+  }}"""
+    return _chat(user, max_tokens=2200)
 
 
 if __name__ == "__main__":

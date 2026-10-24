@@ -197,6 +197,30 @@ _NEWS_STOP = {"with", "from", "your", "this", "that", "will", "says", "said",
               "years", "week", "month", "new", "uk", "gov"}
 
 
+EDU_COLLIDE_THRESH = 0.34     # Jaccard; ~the old 0.5 overlap for equal-length titles
+COLLIDE_MIN_WORDS = 2         # a one-word set is too thin to call a repeat on
+
+
+def sets_collide(a, b, thresh, metric="jaccard", min_words=COLLIDE_MIN_WORDS):
+    """True when two significant-word sets describe the same topic.
+
+    metric="jaccard" divides the intersection by the UNION. The original
+    overlap coefficient divided by min(len(a), len(b)), which turned any short
+    set into a mass blocker: a two-word used-set blocked every title sharing
+    ONE word with it (1/2 = 0.5), which is how the single word "experience"
+    retired a whole topic. Union scaling judges the pair rather than its
+    shorter member.
+
+    metric="overlap" keeps the original coefficient for news, where both sets
+    are full headlines of comparable length and 0.4 is tuned for them; there
+    only the min_words floor is new.
+    """
+    if not a or not b or len(a) < min_words or len(b) < min_words:
+        return False
+    denom = len(a | b) if metric == "jaccard" else min(len(a), len(b))
+    return len(a & b) / denom >= thresh
+
+
 def _news_words(title):
     return {w for w in re.findall(r"[a-z]+", (title or "").lower())
             if len(w) >= 4 and w not in _NEWS_STOP}
@@ -211,8 +235,7 @@ def pick_distinct_news(pool, n, thresh=0.4):
     picked, picked_sets = [], []
     for it in pool:
         ws = _news_words(it.get("title", ""))
-        if any(ws and ps and len(ws & ps) / min(len(ws), len(ps)) >= thresh
-               for ps in picked_sets):
+        if any(sets_collide(ws, ps, thresh, metric="overlap") for ps in picked_sets):
             continue
         picked.append(it); picked_sets.append(ws)
         if len(picked) >= n:
@@ -277,7 +300,7 @@ def record_edu_used(wid, titles):
     json.dump(data, open(EDU_USED, "w"), indent=2, ensure_ascii=False)
 
 
-def pick_education(n, used_sets=None, thresh=0.5):
+def pick_education(n, used_sets=None, thresh=EDU_COLLIDE_THRESH):
     """Pick `n` education topics, demand-ranked, skipping any that repeat a topic
     used in the recent weeks (`used_sets`; defaults to the last EDU_DEDUP_WEEKS)
     OR any education topic already sent/scheduled through Ayrshare. Raises instead
@@ -302,8 +325,7 @@ def pick_education(n, used_sets=None, thresh=0.5):
 
     def is_recent(t):
         ws = _edu_words(t.get("title", ""))
-        return any(ws and us and len(ws & us) / min(len(ws), len(us)) >= thresh
-                   for us in used_sets)
+        return any(sets_collide(ws, us, thresh) for us in used_sets)
 
     fresh = [t for t in eligible if not is_recent(t)]
     picked = fresh[:n]
@@ -628,6 +650,58 @@ def build_news_post(wid, dkey, dlabel, pdate, img, item, issue_no=1, dry=False, 
                  nc["captions"], nc["hashtags"])
 
 
+def preflight(days=5):
+    """Dry capacity check: run every picker that can refuse to build, render
+    nothing, write nothing. Returns True when the week would build.
+
+    This exists because the Saturday build was the FIRST place a topic or
+    design shortfall showed up - by then the week is already late. Run it
+    mid-week and a shortfall surfaces while there is still time to restock.
+    Every picker below is read-only (design_ledger.pick and the topic pickers
+    all defer their ledger writes to a matching record() call), so this is safe
+    to run on a schedule.
+    """
+    wid, _, wc, _ = target_week()
+    print(f"PRE-FLIGHT {wid} (w/c {wc}) - {days} day(s), nothing is rendered or written\n")
+
+    quotes = {q["id"]: q for q in L.load("quotes_bank.json")["quotes"]}
+    conversation_ideas = L.load("conversation_ideas.json")["ideas"]
+    fmts = EDU_FORMAT_BY_DAY[:days]
+
+    checks = [
+        ("education topics", lambda: [t.get("title", "") for t in pick_education(days)]),
+        ("quote picks", lambda: pick_quote_ids(quotes, days, wid)),
+        ("conversation picks", lambda: [c.get("id") for c in pick_conversation_ideas(conversation_ideas, days, wid)]),
+        ("quote designs", lambda: design_ledger.pick("quote", QUOTE_WORLDS, days, wid)),
+        ("conversation designs", lambda: design_ledger.pick("conversation", CONVERSATION_WORLDS, days, wid)),
+        ("edu carousel designs", lambda: design_ledger.pick("edu_carousel", EDU_CAROUSEL_WORLDS, fmts.count("carousel"), wid)),
+        ("edu single designs", lambda: design_ledger.pick("edu_single", EDU_SINGLE_WORLDS, fmts.count("single"), wid)),
+    ]
+    emp_days = sorted(d for d in EMPLOYER_DAYS if d < days)
+    if emp_days:
+        checks.append(("employer designs",
+                       lambda: design_ledger.pick("employer", EMPLOYER_WORLDS, len(emp_days), wid)))
+
+    failures = []
+    for label, fn in checks:
+        try:
+            got = fn()
+            print(f"  OK    {label}: {got}")
+        except Exception as exc:
+            failures.append((label, exc))
+            print(f"  FAIL  {label}: {type(exc).__name__}: {exc}")
+
+    print()
+    if failures:
+        print(f"PRE-FLIGHT FAILED for {wid} - {len(failures)} of {len(checks)} check(s):")
+        for label, exc in failures:
+            print(f"  - {label}: {exc}")
+        print("\nThe Saturday build will fail on these unless the banks are restocked.")
+        return False
+    print(f"PRE-FLIGHT PASSED - {wid} has everything it needs to build.")
+    return True
+
+
 def build(days=5, dry=False):
     quotes = {q["id"]: q for q in L.load("quotes_bank.json")["quotes"]}
     angles = {a["id"]: a for a in L.load("employer_angles.json")["angles"]}
@@ -811,4 +885,6 @@ if __name__ == "__main__":
     for i, a in enumerate(sys.argv):
         if a == "--days" and i + 1 < len(sys.argv):
             days = int(sys.argv[i + 1])
+    if "--preflight" in sys.argv:
+        sys.exit(0 if preflight(days=days) else 1)
     build(days=days, dry="--dry" in sys.argv)

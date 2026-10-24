@@ -414,7 +414,7 @@ def cluster_key(text: str) -> str:
     return "-".join(words[:3]) or "career"
 
 
-def angle_for_cluster(cluster: str, sample_title: str) -> dict[str, str]:
+def angle_for_cluster(cluster: str) -> dict[str, str] | None:
     bank = {
         "cv": {
             "title": "The CV Line Recruiters Skip",
@@ -477,18 +477,13 @@ def angle_for_cluster(cluster: str, sample_title: str) -> dict[str, str]:
             "cta": "Save this before your next application batch.",
         },
     }
-    return bank.get(
-        cluster,
-        {
-            "title": clean_copy(sample_title)[:72],
-            "promise": "Let me turn this common job-search problem into a practical next step.",
-            "takeaway": "Make the next action specific enough that you can do it today.",
-            "cta": "Save this for your next application session.",
-        },
-    )
+    # Returns None for a cluster the bank does not cover. The caller drops it
+    # rather than inventing a title from the raw signal text.
+    return bank.get(cluster)
 
 
-def build_topics(signals: list[Signal], week_id: str) -> list[dict[str, Any]]:
+def build_topics(signals: list[Signal], week_id: str,
+                 angles_by_cluster: dict[str, dict[str, Any]] | None = None) -> list[dict[str, Any]]:
     clusters: dict[str, list[Signal]] = {}
     for signal in signals:
         if signal.meta.get("warning"):
@@ -502,7 +497,13 @@ def build_topics(signals: list[Signal], week_id: str) -> list[dict[str, Any]]:
         if cluster not in KNOWN_CLUSTERS and len(items) < 2:
             continue
         top = items[0]
-        angle = angle_for_cluster(cluster, top.title)
+        angle = (angles_by_cluster or {}).get(cluster) or angle_for_cluster(cluster)
+        if not angle:
+            # No written angle and no bank entry. Dropping the cluster is the
+            # point: the old fallback shipped the raw signal slug as a title,
+            # which is how "graduate schemes 2027" reached the topic bank.
+            print(f"skipping cluster without an angle: {cluster}", file=sys.stderr)
+            continue
         total_score = round(sum(item.score for item in items[:8]) / max(1, len(items[:8])) + min(len(items), 8) * 3, 1)
         normalized = max(1, min(5, round(total_score / 18)))
         topic_id = f"auto-{slugify(angle['title'])}"
@@ -520,12 +521,13 @@ def build_topics(signals: list[Signal], week_id: str) -> list[dict[str, Any]]:
                 "timeliness": max(3, normalized),
                 "discussion": max(3, normalized),
                 "brand_fit": 5,
+                "angle_source": "llm" if (angles_by_cluster or {}).get(cluster) else "bank",
                 "hook_candidates": [
-                    hook_for_cluster(cluster),
+                    angle.get("hook") or hook_for_cluster(cluster),
                     f"If you are stuck on {cluster.replace('-', ' ')}, watch this before your next application.",
                 ],
                 "promise": angle["promise"],
-                "proof_points": proof_points_for_cluster(cluster),
+                "proof_points": angle.get("proof_points") or proof_points_for_cluster(cluster),
                 "core_takeaway": angle["takeaway"],
                 "cta": angle["cta"],
                 "source_signals": [
@@ -541,6 +543,100 @@ def build_topics(signals: list[Signal], week_id: str) -> list[dict[str, Any]]:
             }
         )
     return sorted(topics, key=lambda item: item["signal_score"], reverse=True)
+
+
+AYRSHARE_POSTED = ROOT / "content" / "ayrshare_posted.json"
+EDU_USED = ROOT / "content" / "education_used.json"
+WEEKS_JSON = REPO_ROOT / "data" / "weeks.json"
+
+ANGLE_LLM_ENV = "IW_TOPIC_ANGLES_LLM"      # set to 0 to force the static bank
+
+
+def blocked_education_titles() -> list[str]:
+    """Every education title already scheduled through Ayrshare or used in a
+    recent build week. Read straight from the JSON rather than through
+    build_week, which imports the renderers (and so Playwright) - this engine
+    runs in a workflow that installs neither.
+    """
+    titles: list[str] = []
+    try:
+        posted_ids = {str(k).split(":", 1)[0] for k in json.loads(AYRSHARE_POSTED.read_text())}
+    except Exception:
+        posted_ids = set()
+    try:
+        weeks = json.loads(WEEKS_JSON.read_text()).get("weeks", [])
+    except Exception:
+        weeks = []
+    for week in weeks:
+        for post in week.get("posts", []):
+            if post.get("lane") == "education" and post.get("id") in posted_ids and post.get("title"):
+                titles.append(post["title"])
+    try:
+        titles += [r["title"] for r in json.loads(EDU_USED.read_text()).get("used", []) if r.get("title")]
+    except Exception:
+        pass
+    seen, out = set(), []
+    for t in titles:                                  # stable de-dup, newest order kept
+        if t.lower() not in seen:
+            seen.add(t.lower()); out.append(t)
+    return out
+
+
+def llm_angles(signals: list[Signal], per_cluster: int = 1) -> dict[str, dict[str, Any]]:
+    """Ask the writer for fresh angles per signal cluster, conditioned on every
+    title already published. Returns {cluster: angle}; empty on any failure, so
+    build_topics falls back to the static bank and the run still completes.
+    """
+    if os.getenv(ANGLE_LLM_ENV, "1").strip().lower() in {"0", "false", "no"}:
+        return {}
+    if not os.getenv("OPENAI_API_KEY"):
+        print("No OPENAI_API_KEY; using the static angle bank.", file=sys.stderr)
+        return {}
+
+    grouped: dict[str, list[Signal]] = {}
+    for signal in signals:
+        if signal.meta.get("warning"):
+            continue
+        grouped.setdefault(cluster_key(signal.text), []).append(signal)
+    clusters = [
+        {"cluster": key, "signals": [clean_copy(s.title or s.text) for s in
+                                     sorted(items, key=lambda i: i.score, reverse=True)]}
+        for key, items in grouped.items()
+    ]
+    if not clusters:
+        return {}
+
+    blocked = blocked_education_titles()
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import writer
+        out = writer.write_topic_angles(clusters, blocked, per_cluster=per_cluster)
+    except Exception as exc:
+        print(f"WARNING: LLM topic angles unavailable ({exc}); using the static "
+              "angle bank.", file=sys.stderr)
+        return {}
+
+    blocked_lower = {t.strip().lower() for t in blocked}
+    angles: dict[str, dict[str, Any]] = {}
+    for a in (out or {}).get("angles", []):
+        cluster, title = a.get("cluster"), clean_copy(a.get("title", ""))
+        if not cluster or not title or cluster in angles:
+            continue
+        if title.lower() in blocked_lower:            # the model restated a used title
+            print(f"WARNING: dropped LLM angle repeating a published title: {title}",
+                  file=sys.stderr)
+            continue
+        angles[cluster] = {
+            "title": title[:72],
+            "promise": clean_copy(a.get("promise", "")),
+            "takeaway": clean_copy(a.get("takeaway", "")),
+            "cta": clean_copy(a.get("cta", "")),
+            "hook": clean_copy(a.get("hook", "")),
+            "proof_points": [clean_copy(p) for p in a.get("proof_points", []) if p],
+        }
+    print(f"LLM angles: {len(angles)} cluster(s) written, "
+          f"{len(blocked)} published title(s) excluded.", file=sys.stderr)
+    return angles
 
 
 def hook_for_cluster(cluster: str) -> str:
@@ -703,6 +799,10 @@ def main() -> int:
     parser.add_argument("--top", type=int, default=None)
     parser.add_argument("--offline", action="store_true", help="Skip network sources and use configured seed questions.")
     parser.add_argument("--skip-scripts", action="store_true")
+    parser.add_argument("--no-llm", action="store_true",
+                        help="Skip LLM angle writing and use the static angle bank only.")
+    parser.add_argument("--per-cluster", type=int, default=1,
+                        help="How many fresh angles to write per signal cluster.")
     args = parser.parse_args()
 
     load_env_file(REPO_ROOT / ".env")
@@ -727,7 +827,9 @@ def main() -> int:
         useful_signals = fallback_signals(config)
         signals.extend(useful_signals)
 
-    topics = build_topics(useful_signals, week_id=f"auto-{date.today().isoformat()}")
+    angles = {} if args.no_llm else llm_angles(useful_signals, per_cluster=args.per_cluster)
+    topics = build_topics(useful_signals, week_id=f"auto-{date.today().isoformat()}",
+                          angles_by_cluster=angles)
     payload = {
         "week_id": f"auto-{date.today().isoformat()}",
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -752,7 +854,11 @@ def main() -> int:
         run_script_generator(args.topics_out, args.scripts_out, top=top)
         write_dashboard(args.shorts_out, payload, top=top)
 
-    print(json.dumps({"topics": len(topics), "top": [topic["id"] for topic in topics[:top]], "source_summary": payload["source_summary"]}, indent=2))
+    print(json.dumps({"topics": len(topics),
+                      "angle_sources": {src: len([t for t in topics if t.get("angle_source") == src])
+                                        for src in ("llm", "bank")},
+                      "top": [topic["id"] for topic in topics[:top]],
+                      "source_summary": payload["source_summary"]}, indent=2))
     return 0
 
 

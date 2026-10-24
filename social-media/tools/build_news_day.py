@@ -111,7 +111,7 @@ def pick_fresh(exclude_titles, max_age_days=5):
     pool = bw.pick_distinct_news(fetched, 8)
     for it in pool:
         ws = bw._news_words(it.get("title", ""))
-        if any(ws and es and len(ws & es) / min(len(ws), len(es)) >= 0.4 for es in excl_sets):
+        if any(bw.sets_collide(ws, es, 0.4, metric="overlap") for es in excl_sets):
             continue
         return it
     if bw.topic_repeat_allowed():

@@ -7,10 +7,19 @@ name: Topic Engine
 # data/shorts.json straight to main. That auto-redeploys the Cloudflare Pages
 # dashboard, where review happens.
 #
-# Requires two repo secrets (Settings -> Secrets and variables -> Actions):
-#   YOUTUBE_API_KEY, SERPAPI_API_KEY
-# Missing keys are handled gracefully (those sources are simply skipped), but
-# add both for full signal (Google Trends + YouTube).
+# Requires repo secrets (Settings -> Secrets and variables -> Actions):
+#   YOUTUBE_API_KEY, SERPAPI_API_KEY  - signal sources
+#   OPENAI_API_KEY                    - writes the topic ANGLES
+# Missing signal keys are handled gracefully (those sources are simply skipped),
+# but add both for full signal (Google Trends + YouTube).
+#
+# OPENAI_API_KEY is what makes topic supply unbounded. Without it the engine
+# falls back to angle_for_cluster(), a fixed bank of ten titles - and because
+# education dedup blocks every title already scheduled through Ayrshare
+# (permanently), a ten-title ceiling is guaranteed to exhaust. With the key, the
+# engine sends the week's signal clusters plus every published title to the
+# writer and gets back angles that avoid all of them. Set IW_TOPIC_ANGLES_LLM=0
+# or pass --no-llm to force the static bank.
 
 on:
   schedule:
@@ -36,11 +45,18 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install dependencies
+        run: pip install openai
+
       - name: Run topic engine
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
-        run: python social-media/tools/shorts_topic_engine.py | tee /tmp/topics.log
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+        run: |
+          set -o pipefail
+          python social-media/tools/shorts_topic_engine.py | tee /tmp/topics.log
 
       - name: Commit and push to main if there are changes
         run: |
