@@ -9783,7 +9783,7 @@
       "id": "week22",
       "label": "Week 22",
       "weekCommencing": "2026-10-26",
-      "builtAt": 1792829696,
+      "builtAt": 1792925955,
       "posts": [
         {
           "id": "week22-mon-quote",
@@ -10578,6 +10578,50 @@
             "cta": "Explore more at internwise.co.uk"
           },
           "world": "focus_studio"
+        },
+        {
+          "id": "week22-mon-news",
+          "day": "Mon 26 Oct",
+          "lane": "news",
+          "title": "Interns Secure Jobs After Hospital Experience",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "Graduates from a supported internship programme at East Sussex College have successfully secured paid employment after completing their placements at a UK hospital. This achievement was celebrated at a recent graduation ceremony.\n\nSuch internship programmes are crucial for students and graduates. They provide invaluable real-world experience, directly impacting employability and career prospects. When students engage in practical work environments, they learn skills that are often vital in securing future job opportunities.\n\nInternships are more than just a line on your CV. They provide a glimpse into professional life, helping you understand workplace dynamics and expectations. If you're considering an internship, look for those offering hands-on experience in your field of interest.\n\nSource: FE News.",
+          "hashtags": [
+            "#internships",
+            "#careers",
+            "#workexperience",
+            "#graduates",
+            "#ukjobs"
+          ],
+          "captions": {
+            "ig-fb": "Graduates from a supported internship programme at East Sussex College have successfully secured paid employment after completing their placements at a UK hospital. This achievement was celebrated at a recent graduation ceremony.\n\nSuch internship programmes are crucial for students and graduates. They provide invaluable real-world experience, directly impacting employability and career prospects. When students engage in practical work environments, they learn skills that are often vital in securing future job opportunities.\n\nInternships are more than just a line on your CV. They provide a glimpse into professional life, helping you understand workplace dynamics and expectations. If you're considering an internship, look for those offering hands-on experience in your field of interest.\n\nSource: FE News.",
+            "linkedin": "At East Sussex College, ten young people celebrated the culmination of a supported internship programme, where each secured paid employment following their hospital placements. This milestone highlights the critical role work experience plays in shaping career paths.\n\nReal-world placements provide students and graduates with essential skills and insights that significantly enhance their employability. Engaging in such environments not only boosts confidence but also equips individuals with practical knowledge applicable in various job sectors.\n\nFor those embarking on their career journey, internships offering genuine work experience can be a game-changer. Seek out opportunities that align with your career goals and offer the chance to gain hands-on experience.\n\nSource: FE News.",
+            "x": "Ten interns from East Sussex College secured jobs after completing placements at a UK hospital. This success highlights how real-world experience boosts employability. Choose internships offering practical experience for career growth. (Source: FE News)",
+            "threads": "Ten interns from East Sussex College celebrated securing jobs after completing hospital placements. This success underscores the value of real-world experience for employability. Seek internships offering practical skills to enhance your career prospects. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internships",
+              "#careers",
+              "#workexperience",
+              "#graduates",
+              "#ukjobs"
+            ],
+            "linkedin": [
+              "#internships",
+              "#careerdevelopment",
+              "#ukjobs"
+            ],
+            "x": [
+              "#internships",
+              "#careers"
+            ]
+          }
         }
       ]
     }
