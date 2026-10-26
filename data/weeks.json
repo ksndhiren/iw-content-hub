@@ -9783,7 +9783,7 @@
       "id": "week22",
       "label": "Week 22",
       "weekCommencing": "2026-10-26",
-      "builtAt": 1792986443,
+      "builtAt": 1792986847,
       "posts": [
         {
           "id": "week22-mon-quote",
@@ -10279,7 +10279,7 @@
           },
           "world": "strip",
           "poses": {
-            "cover": "nuno_cv_8",
+            "cover": "nuno_job_description",
             "cta": "nuno_offers_1"
           }
         },

@@ -87,8 +87,29 @@ def load():
     return _cache
 
 
+# --- superseded frames -------------------------------------------------------
+# Some cutouts exist twice: the raw photograph, and a finished version with the
+# Internwise site composited onto the device screen. The signature cannot see
+# that they are the same shot (a black screen and a bright screenshot are far
+# apart: nuno_offers_1 vs nuno_tablet measures 0.825), so the pairing is curated
+# here. Any request for the raw frame renders the finished one instead, which is
+# why week22 shipped a blank black tablet after the picker chose nuno_offers_1
+# where earlier weeks had landed on nuno_tablet.
+SUPERSEDED = {
+    "nuno_offers_1": "nuno_tablet",   # same shot; offers_1's tablet screen is blank
+}
+
+
+def preferred(cutout):
+    """The cutout to actually RENDER for this name (finished frame wins)."""
+    return SUPERSEDED.get(cutout, cutout)
+
+
 def canonical(cutout):
-    """The pose identity a cutout belongs to; its own name if unknown."""
+    """The pose identity a cutout belongs to; its own name if unknown.
+    Superseded frames resolve to their finished twin first, so the no-repeat
+    ledger treats the pair as the single photograph it is."""
+    cutout = preferred(cutout)
     return load().get(cutout, cutout)
 
 

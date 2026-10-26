@@ -32,6 +32,14 @@ ICONMARK = "data:image/svg+xml;base64,"+base64.b64encode(
 def img(path):
     return "data:image/png;base64,"+base64.b64encode(open(path,"rb").read()).decode()
 def nuno_src(name):
+    # Resolve superseded frames here rather than at pick time, so a week built
+    # earlier (whose stored poses name the raw frame) also re-renders with the
+    # finished one. See nuno_identity.SUPERSEDED.
+    try:
+        import nuno_identity
+        name = nuno_identity.preferred(name)
+    except Exception:
+        pass
     return img(os.path.join(BASE,"assets","nuno",name+".png"))
 
 # --- icon set (shared with wk12) ---

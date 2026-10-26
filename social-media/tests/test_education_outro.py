@@ -82,3 +82,27 @@ class TestNunoWidth:
 
     def test_unknown_pose_falls_back_to_the_requested_height(self):
         assert E._fit_h("nuno_does_not_exist", 740, E.MAX_NUNO_W) == 740
+
+
+class TestSupersededFrames:
+    """nuno_offers_1 and nuno_tablet are the same shot; only the latter has the
+    Internwise site composited onto the tablet. The signature cannot tell (a
+    black screen vs a bright screenshot measures 0.825 apart), so the pair is
+    curated - without it week22 shipped an outro holding a blank black tablet."""
+
+    def test_the_blank_frame_resolves_to_the_finished_one(self):
+        import nuno_identity
+        assert nuno_identity.preferred("nuno_offers_1") == "nuno_tablet"
+
+    def test_freshness_treats_the_pair_as_one_pose(self):
+        import nuno_identity
+        assert (nuno_identity.canonical("nuno_offers_1")
+                == nuno_identity.canonical("nuno_tablet"))
+
+    def test_an_ordinary_pose_is_untouched(self):
+        import nuno_identity
+        assert nuno_identity.preferred("nuno_dothis_5") == "nuno_dothis_5"
+
+    def test_rendering_the_blank_frame_draws_the_finished_file(self):
+        import lanes_common
+        assert lanes_common.nuno_src("nuno_offers_1") == lanes_common.nuno_src("nuno_tablet")
