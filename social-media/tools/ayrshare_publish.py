@@ -219,15 +219,25 @@ def _dkey(post):
     return post["id"].split("-")[-2] if post["id"].count("-") >= 2 else None
 
 
-def build_jobs(week, connected, want_status, use_schedule, only=None, days=None, stories=True, at=None, networks=None, force_only=False):
+def status_of(post, live):
+    """The post's effective status. The dashboard writes approvals to the shared
+    KV store, but weekly posts were gated on the FILE status alone, so clicking
+    Approve on the dashboard changed nothing the publisher could see - the only
+    posts that ever shipped were the ones a build had already written as
+    approved. The live store wins when it has a row; the file is the fallback."""
+    return live.get(post["id"]) or post.get("status")
+
+
+def build_jobs(week, connected, want_status, use_schedule, only=None, days=None, stories=True, at=None, networks=None, force_only=False, live_statuses=None):
+    live = live_statuses or {}
     jobs = []
     for post in week.get("posts", []):
         if only:
             if post["id"] != only:
                 continue
-            if post.get("status") != want_status and not force_only:
+            if status_of(post, live) != want_status and not force_only:
                 continue
-        elif post.get("status") != want_status:
+        elif status_of(post, live) != want_status:
             continue
         if days and _dkey(post) not in days:
             continue
@@ -331,7 +341,7 @@ def main():
 
     connected = active_networks()
     posted = load_posted()
-    jobs = build_jobs(week, connected, args.status, args.schedule, only=args.only,
+    jobs = build_jobs(week, connected, args.status, args.schedule, live_statuses=fetch_statuses(), only=args.only,
                       days=days, stories=True, at=args.at, networks=networks,
                       force_only=args.force_only)
 
