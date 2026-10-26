@@ -9783,7 +9783,7 @@
       "id": "week22",
       "label": "Week 22",
       "weekCommencing": "2026-10-26",
-      "builtAt": 1792986847,
+      "builtAt": 1793017845,
       "posts": [
         {
           "id": "week22-mon-quote",
@@ -10620,6 +10620,50 @@
             "x": [
               "#internships",
               "#careers"
+            ]
+          }
+        },
+        {
+          "id": "week22-tue-news",
+          "day": "Tue 27 Oct",
+          "lane": "news",
+          "title": "10 Years of Rail Apprenticeship Success",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "A UK college and a railway company are celebrating ten years of a successful apprenticeship programme. This partnership has focused on nurturing talent for the railway industry, marking a significant milestone in workforce development.\n\nThe success of this collaboration underscores the importance of practical training in the job market. For students and graduates, apprenticeships offer valuable opportunities to gain hands-on experience and develop skills that are directly applicable to their chosen fields.\n\nInternships, like apprenticeships, provide a bridge between classroom learning and the demands of the working world. They help you acquire the expertise that employers value, setting you on a path to a successful career.\n\nSource: FE News.",
+          "hashtags": [
+            "#apprenticeships",
+            "#skills",
+            "#internships",
+            "#careerdevelopment",
+            "#railindustry"
+          ],
+          "captions": {
+            "ig-fb": "A UK college and a railway company are celebrating ten years of a successful apprenticeship programme. This partnership has focused on nurturing talent for the railway industry, marking a significant milestone in workforce development.\n\nThe success of this collaboration underscores the importance of practical training in the job market. For students and graduates, apprenticeships offer valuable opportunities to gain hands-on experience and develop skills that are directly applicable to their chosen fields.\n\nInternships, like apprenticeships, provide a bridge between classroom learning and the demands of the working world. They help you acquire the expertise that employers value, setting you on a path to a successful career.\n\nSource: FE News.",
+            "linkedin": "A decade of successful apprenticeship collaboration between a UK college and a railway company has been celebrated recently. This partnership has been instrumental in cultivating skilled apprentices for the rail industry, showcasing the impact of hands-on training.\n\nThis achievement is a testament to the value of apprenticeships in addressing skill shortages and providing young individuals with essential industry experience. For those starting their careers, such programmes offer a vital stepping stone into the professional world.\n\nInternships offer similar benefits, equipping you with practical know-how and real-world experience. They are crucial in preparing you for future career challenges and opportunities.\n\nSource: FE News.",
+            "x": "A UK college & railway firm celebrate 10 years of successful apprenticeships. This highlights the value of practical training in filling skills gaps. Internships also offer real-world experience. (Source: FE News)",
+            "threads": "A decade-long partnership between a UK college and a railway company has successfully developed rail apprentices. This highlights the importance of practical training. Internships offer similar real-world experience for students and grads. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#apprenticeships",
+              "#skills",
+              "#internships",
+              "#careerdevelopment",
+              "#railindustry"
+            ],
+            "linkedin": [
+              "#apprenticeships",
+              "#skillsdevelopment",
+              "#internships"
+            ],
+            "x": [
+              "#apprenticeships",
+              "#careerskills"
             ]
           }
         }
