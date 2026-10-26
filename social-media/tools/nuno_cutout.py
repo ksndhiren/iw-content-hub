@@ -38,11 +38,14 @@ if __name__=="__main__":
     # for loose generations that deserve a semantic family rather than "solo_N".
     jobs={"nuno_cv.png":"Situational/CV/Gemini_Generated_Image_dsla2pdsla2pdsla.jpeg",
           "nuno_thumbsup.png":"Solo/Do This/Gemini_Generated_Image_htumc0htumc0htum.jpeg",
-          # week22: loose Solo poses, filed by what they actually depict
-          "nuno_dothis_6.png":"Solo/Gemini_Generated_Image_aj4n5gaj4n5gaj4n.jpeg",   # points to camera
-          "nuno_offers_5.png":"Solo/Gemini_Generated_Image_ecbt9xecbt9xecbt.jpeg",   # navy folder + fist
-          "nuno_howto_5.png":"Solo/Gemini_Generated_Image_kaph5akaph5akaph.jpeg",    # open-palm explainer
-          "nuno_cv_9.png":"Solo/Gemini_Generated_Image_smtbasmtbasmtbas.jpeg"}       # glass "Portfolio" panel
+          # The four loose Solo/ files are NOT new material: each is the same
+          # photograph as a cutout already in the library (verified identical by
+          # nuno_identity). Named here so the walk claims them and --audit stops
+          # reporting them as an outstanding gap.
+          "nuno_dothis_5.png":"Solo/Gemini_Generated_Image_aj4n5gaj4n5gaj4n.jpeg",  # == dothis_4
+          "nuno_cv_6.png":"Solo/Gemini_Generated_Image_ecbt9xecbt9xecbt.jpeg",      # == offers_cover
+          "nuno_howto_4.png":"Solo/Gemini_Generated_Image_kaph5akaph5akaph.jpeg",   # == utility_4
+          "nuno_cv_9.png":"Solo/Gemini_Generated_Image_smtbasmtbasmtbas.jpeg"}      # glass "Portfolio" panel
     # Held back on purpose - rembg leaves translucent artefacts or the wardrobe is
     # off-brand. Listed so --audit stops reporting them as an outstanding gap.
     SKIP={"nuno_cv_7.png",    # white sheet goes see-through; beige suit, not the navy blazer

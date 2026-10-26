@@ -17,6 +17,8 @@ from __future__ import annotations
 import hashlib
 import os, json, glob, datetime, copy
 
+import nuno_identity
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 SM   = os.path.dirname(HERE)
 LEDGER = os.path.join(SM, "content", "nuno_ledger.json")
@@ -60,14 +62,6 @@ TONES = {
     "nuno_interview_door": {"practical", "confident", "serious"},
     "nuno_cv_proof_highlight": {"practical", "serious"},
     "nuno_followup_phone": {"practical", "serious"},
-    # week22 additions - the three loose Solo/ generations the old dir-walk could
-    # never see (it only globbed Solo/<category>/, so files sitting directly in
-    # Solo/ were skipped). Opaque poses only; the fourth (glass "Portfolio"
-    # panel) is held back for the same reason as nuno_cv_7 and nuno_utility_2 -
-    # rembg leaves the translucent sheet ghosting over dark worlds.
-    "nuno_dothis_6": {"confident", "positive", "practical"},
-    "nuno_offers_5": {"positive", "confident"},
-    "nuno_howto_5": {"practical", "confident", "warm"},
 }
 
 
@@ -110,24 +104,39 @@ def _save(log):
 
 
 def _last_use(log, cutout):
-    ds = [u["date"] for u in log.get("uses", []) if u["cutout"] == cutout]
+    """Last use of this POSE, not this filename. The same photograph lives in the
+    library under several names (nuno_howto_4 == nuno_utility_4), so comparing
+    filenames let a pose that ran last week return this week as an alias and
+    count as fresh. Resolving through nuno_identity is what makes FRESH_DAYS real."""
+    want = nuno_identity.canonical(cutout)
+    ds = [u["date"] for u in log.get("uses", [])
+          if nuno_identity.canonical(u["cutout"]) == want]
     return max(ds) if ds else None
 
 
 def _used_in_week(log, week_id):
-    return {u["cutout"] for u in log.get("uses", []) if u.get("week") == week_id}
+    return {nuno_identity.canonical(u["cutout"])
+            for u in log.get("uses", []) if u.get("week") == week_id}
 
 
 def _choose(candidates, week_id, log, today, fresh_days, exclude=None):
     """Return (cutout, is_repeat). Freshest layout-safe candidate:
     prefer not-used-this-week, then never-used, then oldest last-use."""
     present = _on_disk()
-    blocked = set(exclude or [])
-    avail = [c for c in candidates if c in present and c not in blocked]
+    blocked = {nuno_identity.canonical(c) for c in (exclude or [])}
+    avail, seen = [], set()
+    for c in candidates:
+        canon = nuno_identity.canonical(c)
+        # Two aliases of one photograph must not both sit in the pool, or the
+        # picker "varies" the pose by swapping a filename for its own twin.
+        if c in present and canon not in blocked and canon not in seen:
+            seen.add(canon)
+            avail.append(c)
     if not avail:
         return (candidates[0] if candidates else None), True
     used_wk = _used_in_week(log, week_id)
-    pool = [c for c in avail if c not in used_wk] or avail   # avoid intra-week dupes
+    pool = [c for c in avail
+            if nuno_identity.canonical(c) not in used_wk] or avail   # avoid intra-week dupes
 
     def key(c):
         lu = _last_use(log, c)

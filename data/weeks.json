@@ -9783,7 +9783,7 @@
       "id": "week22",
       "label": "Week 22",
       "weekCommencing": "2026-10-26",
-      "builtAt": 1792925955,
+      "builtAt": 1792984873,
       "posts": [
         {
           "id": "week22-mon-quote",
@@ -9948,7 +9948,7 @@
           "world": "ledger",
           "poses": {
             "cover": "nuno_thoughtful_3",
-            "cta": "nuno_offers_5"
+            "cta": "nuno_offers_4"
           }
         },
         {
@@ -10113,8 +10113,8 @@
           },
           "world": "grid",
           "poses": {
-            "cover": "nuno_utility_4",
-            "cta": "nuno_howto_5"
+            "cover": "nuno_planning_1",
+            "cta": "nuno_howto_4"
           }
         },
         {
@@ -10279,8 +10279,8 @@
           },
           "world": "strip",
           "poses": {
-            "cover": "nuno_cv_5",
-            "cta": "nuno_dothis_6"
+            "cover": "nuno_cvpile",
+            "cta": "nuno_offers_1"
           }
         },
         {

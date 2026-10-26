@@ -75,14 +75,13 @@ COVER_POOL = ["nuno_cv", "nuno_cv_2", "nuno_cv_3",
 # they must NOT be in the general fallback pool or they land on unrelated topics
 # (e.g. a "welcoming" pose on a Graduate Schemes cover). Kept only in TOPIC_POSES.
 CTA_POOL = ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1",
-            "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5", "nuno_howto_4",
-            "nuno_dothis_6", "nuno_offers_5", "nuno_howto_5"]   # + week21, week22 fresh cutouts
+            "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5", "nuno_howto_4"]   # + week21 fresh cutouts
 CTA_TOPIC_POSES = {
     "linkedin": ["nuno_phone", "nuno_tablet", "nuno_phone_2"],
     "tech": ["nuno_tablet", "nuno_tablet_cover", "nuno_phone"],
     "networking": ["nuno_phone", "nuno_authority_4", "nuno_authority_1"],
-    "apply": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5", "nuno_phone_2", "nuno_howto_4", "nuno_dothis_6", "nuno_offers_5", "nuno_howto_5"],
-    "cv": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5", "nuno_phone_2", "nuno_howto_4", "nuno_dothis_6", "nuno_offers_5", "nuno_howto_5"],
+    "apply": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5", "nuno_phone_2", "nuno_howto_4"],
+    "cv": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5", "nuno_phone_2", "nuno_howto_4"],
     "bullet_cv": ["nuno_cv_5", "nuno_cv_2", "nuno_cv_3"],
     "job_description": ["nuno_cv_3"],
     "followup": ["nuno_followup_phone", "nuno_phone", "nuno_tablet"],
@@ -340,7 +339,7 @@ def cover_spine(p, copy, total, pose):
             + f"<div style=\"position:absolute;left:{x}px;top:250px;font-family:'DM Sans';font-weight:700;font-size:22px;"
               f"color:{p['accent']};letter-spacing:4px;\">{copy.get('eyebrow','INTERNWISE')[:26].upper()}</div>"
             + f"<div style='position:absolute;left:{x}px;top:296px;'>"
-              + L.hero(copy['headline'], "stack", p['ink'], p['accent'], hi=p['accent'], size=62, width=440)
+              + L.hero(copy['headline'], "stack", p['ink'], p['accent'], hi=p['accent'], size=81, width=440)
               + "</div>"
             + f"<div style=\"position:absolute;left:{x}px;bottom:48px;font-family:'DM Sans';font-weight:600;font-size:23px;"
               f"color:{p['accent']};\">Swipe to begin &rarr;</div>")
@@ -386,7 +385,7 @@ def cover_poster(p, copy, total, pose):
     # in canvas space, so the headline is bounded to the left column (width 430)
     # and sized so even the longest word clears him - no overlap on any pose.
     head = (f"<div style='position:absolute;left:56px;top:298px;'>"
-            + L.hero(copy['headline'], "serif_italic", p['ink'], p['accent'], hi=CORAL, size=62, width=430)
+            + L.hero(copy['headline'], "serif_italic", p['ink'], p['accent'], hi=CORAL, size=81, width=430)
             + "</div>")
     rule = f"<div style='position:absolute;left:58px;top:660px;width:120px;height:8px;background:{p['accent']};border-radius:4px;'></div>"
     return (_bg(p) + blob + _arc(p, right=-40, bottom=-40, size=720) + _nuno_whole(pose, h=800, right=-70)
@@ -447,7 +446,7 @@ def cover_bento(p, copy, total, pose):
             f"border-radius:21px;background:{p['accent']};'><span style=\"font-family:Inter;font-weight:800;font-size:20px;color:{p['deep']};letter-spacing:1px;\">01 / 0{total}</span></div>")
     headcard = _card(
         f"<div style=\"font-family:'DM Sans';font-weight:700;font-size:22px;color:{p['accent']};letter-spacing:4px;margin-bottom:18px;\">{copy.get('eyebrow','INTERNWISE')[:24].upper()}</div>"
-        + L.hero(copy['headline'], "boxed", p['ink'], p['accent'], hi=p['accent'], size=62, deep=p['deep'], width=436),
+        + L.hero(copy['headline'], "boxed", p['ink'], p['accent'], hi=p['accent'], size=81, deep=p['deep'], width=436),
         css="left:56px;top:300px;width:520px;", pad="40px 42px")
     return (_bg(p) + panel + linkedin_frame + _nuno_whole(pose, h=760, right=10) + _logo(left=56, top=44) + chip + headcard
             + _footer(p, swipe=True))
@@ -523,7 +522,7 @@ def cover_frame(p, copy, total, pose):
             f"padding:38px 38px 42px;'>"
             f"<div style='display:inline-flex;align-items:center;height:42px;padding:0 20px;border-radius:21px;background:{AMBER};margin-bottom:22px;'>"
             f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:19px;color:{NAVYT};letter-spacing:3px;\">{copy.get('eyebrow','GUIDE')[:20].upper()}</span></div>"
-            + L.hero(copy['headline'], "highlight", "#fff", AMBER, hi=CORAL, size=62, width=376) + "</div>")
+            + L.hero(copy['headline'], "highlight", "#fff", AMBER, hi=CORAL, size=81, width=376) + "</div>")
     tags = [s.get("tag", "") for s in copy.get("slides", []) if s.get("tag")][:3]
     chips = "".join(
         f"<span style=\"display:inline-flex;align-items:center;gap:9px;margin:0 10px 10px 0;padding:10px 16px;border-radius:13px;"
@@ -584,7 +583,7 @@ def cover_lens(p, copy, total, pose):
     eyebrow = (f"<div style=\"position:absolute;left:56px;top:250px;font-family:'DM Sans';font-weight:800;font-size:21px;"
                f"color:{p['accent']};letter-spacing:5px;\">{copy.get('eyebrow','INTERNWISE')[:24].upper()}</div>")
     head = (f"<div style='position:absolute;left:56px;top:296px;'>"
-            + L.hero(copy['headline'], "outline", p['ink'], p['accent'], hi=p['accent'], size=62, width=470)
+            + L.hero(copy['headline'], "outline", p['ink'], p['accent'], hi=p['accent'], size=81, width=470)
             + "</div>")
     rule = f"<div style='position:absolute;left:58px;top:640px;width:110px;height:7px;background:{p['accent']};border-radius:4px;'></div>"
     deco = (L.dots("left:58px;bottom:150px;", color="rgba(255,177,32,.38)", w=200, h=120)
@@ -639,7 +638,7 @@ def cover_ticket(p, copy, total, pose):
     eyebrow = (f"<div style=\"position:absolute;left:150px;top:250px;font-family:'DM Sans';font-weight:800;font-size:21px;"
                f"color:{p['accent']};letter-spacing:5px;\">{copy.get('eyebrow','INTERNWISE')[:22].upper()}</div>")
     head = (f"<div style='position:absolute;left:150px;top:294px;'>"
-            + L.hero(copy['headline'], "scalejump", p['ink'], p['accent'], hi=p['accent'], size=58, width=450)
+            + L.hero(copy['headline'], "scalejump", p['ink'], p['accent'], hi=p['accent'], size=75, width=450)
             + "</div>")
     swipe = (f"<div style=\"position:absolute;left:150px;bottom:56px;font-family:'DM Sans';font-weight:700;font-size:22px;"
              f"color:{p['accent']};\">Swipe to board &rarr;</div>")
@@ -1020,7 +1019,7 @@ def cover_marker(p, copy, total, pose):
                f"border-radius:12px;background:{AMBER};'>"
                f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:20px;color:{NAVYT};letter-spacing:3px;\">{copy.get('eyebrow','GUIDE')[:22].upper()}</span></div>")
     headblock = (f"<div style='position:absolute;left:{x}px;top:292px;width:452px;'>"
-                 + L.hero(copy['headline'], "underline", NAVYT, NAVYT, hi=AMBER, size=60, width=452)
+                 + L.hero(copy['headline'], "underline", NAVYT, NAVYT, hi=AMBER, size=78, width=452)
                  + "</div>")
     swipe = (f"<div style=\"position:absolute;left:{x}px;bottom:56px;font-family:'DM Sans';font-weight:800;font-size:22px;"
              f"color:{NAVYT};\">Swipe to begin &rarr;</div>")
@@ -1106,7 +1105,7 @@ def cover_flash(p, copy, total, pose):
         rule = f"<div style='position:absolute;left:{x+6}px;top:708px;width:210px;height:9px;background:{p['accent']};border-radius:4px;transform:skewX(-26deg);'></div>"
     else:
         head = (f"<div style='position:absolute;left:{x}px;top:294px;'>"
-                + L.hero(copy['headline'], "shadow", p['ink'], p['accent'], hi=CORAL, size=58, width=470)
+                + L.hero(copy['headline'], "shadow", p['ink'], p['accent'], hi=CORAL, size=75, width=470)
                 + "</div>")
         rule = f"<div style='position:absolute;left:{x+2}px;top:604px;width:120px;height:7px;background:{p['accent']};border-radius:4px;transform:skewX(-26deg);'></div>"
     return (_bg(p) + wedge + _arc(p, right=-60, bottom=-120, size=680) + _nuno_whole(pose, h=760, right=-60)
@@ -1210,7 +1209,7 @@ def cover_tabs(p, copy, total, pose):
                 f"<div style=\"font-family:'DM Sans';font-weight:800;font-size:15px;color:{p['mut']};letter-spacing:4px;margin-bottom:18px;\">IN THIS GUIDE</div>"
                 f"<div style='width:52px;height:4px;background:{p['accent']};border-radius:2px;margin-bottom:22px;'></div>{rows}</div>")
     block = (f"<div style='position:absolute;left:{x}px;top:342px;width:560px;'>"
-             + L.hero(copy['headline'], "quoted", p['ink'], p['accent'], hi=p['accent'], size=58, width=560)
+             + L.hero(copy['headline'], "quoted", p['ink'], p['accent'], hi=p['accent'], size=75, width=560)
              + f"{contents}</div>")
     swipe = (f"<div style=\"position:absolute;left:{x}px;bottom:56px;font-family:'DM Sans';font-weight:800;font-size:22px;"
              f"color:{p['accent']};\">Open chapter one &rarr;</div>")
@@ -1277,7 +1276,7 @@ def cover_ledger(p, copy, total, pose):
     eyebrow = (f"<div style=\"position:absolute;left:{x}px;top:250px;font-family:'DM Sans';font-weight:900;font-size:20px;"
                f"color:{p['accent']};letter-spacing:5px;\">{copy.get('eyebrow','INTERNWISE')[:24].upper()}</div>")
     head = (f"<div style='position:absolute;left:{x}px;top:296px;'>"
-            + L.hero(copy['headline'], "stack", p['ink'], p['accent'], hi=p['accent'], size=58, width=430) + "</div>")
+            + L.hero(copy['headline'], "stack", p['ink'], p['accent'], hi=p['accent'], size=75, width=430) + "</div>")
     entries = ""
     for i, sl in enumerate([sl for sl in copy.get("slides", []) if sl.get("tag")][:3], start=1):
         entries += (f"<div style='display:flex;align-items:center;gap:14px;margin-bottom:13px;'>"
@@ -1341,7 +1340,7 @@ def cover_grid(p, copy, total, pose):
                f"display:flex;align-items:center;'>"
                f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:19px;color:{p['accent']};letter-spacing:4px;\">{copy.get('eyebrow','INTERNWISE')[:22].upper()}</span></div>")
     head = (f"<div style='position:absolute;left:{x}px;top:300px;'>"
-            + L.hero(copy['headline'], "boxed", p['ink'], p['accent'], hi=p['accent'], size=60, deep=p['deep'], width=460) + "</div>")
+            + L.hero(copy['headline'], "boxed", p['ink'], p['accent'], hi=p['accent'], size=78, deep=p['deep'], width=460) + "</div>")
     ticks = "".join(f"<div style='width:{44 if i==0 else 22}px;height:6px;background:{p['accent']};"
                     f"opacity:{1 if i==0 else .3};margin-right:9px;'></div>" for i in range(total))
     bar = f"<div style='position:absolute;left:{x}px;bottom:150px;display:flex;align-items:center;'>{ticks}</div>"
@@ -1397,7 +1396,7 @@ def cover_strip(p, copy, total, pose):
     eyebrow = (f"<div style=\"position:absolute;left:{x+28}px;top:238px;font-family:'DM Sans';font-weight:900;font-size:19px;"
                f"color:{p['accent']};letter-spacing:5px;\">{copy.get('eyebrow','INTERNWISE')[:22].upper()}</div>")
     head = (f"<div style='position:absolute;left:{x+28}px;top:292px;'>"
-            + L.hero(copy['headline'], "quoted", p['ink'], p['accent'], hi=p['accent'], size=56, width=420) + "</div>")
+            + L.hero(copy['headline'], "quoted", p['ink'], p['accent'], hi=p['accent'], size=73, width=420) + "</div>")
     frames = (f"<div style=\"position:absolute;left:{x+28}px;bottom:200px;font-family:'DM Sans';font-weight:900;"
               f"font-size:17px;color:{p['mut']};letter-spacing:4px;\">FRAME 01 / {total:02d}</div>")
     swipe = (f"<div style=\"position:absolute;left:{x+28}px;bottom:70px;font-family:'DM Sans';font-weight:900;font-size:22px;"

@@ -200,6 +200,16 @@ def hero(text, move, ink, accent, hi=None, size=66, deep="#0A1830", width=None,
     lead, h = hero_split(text)
     if not h:
         return ""
+    # The LEAD words are set at `size` in a fixed-width column with keep-all, so
+    # a long word used to overrun it silently - which is why every caller kept
+    # `size` conservatively low and the headlines read small on a 1080 canvas.
+    # Fit the lead to the column instead, so callers can ask for big type and
+    # only the genuinely long headlines step down. Inter 800 averages ~0.55em
+    # per character at these sizes.
+    if width and lead:
+        longest = max(len(w) for w in lead.split())
+        if longest:
+            size = max(34, min(size, int(width / (longest * 0.55))))
     # A long hero word has to come down in size or it overruns the column.
     n = len(h.strip("?!.,:;"))
     def fit(mult, cap=1.0):
