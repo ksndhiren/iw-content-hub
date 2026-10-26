@@ -16,7 +16,7 @@ Nuno is always placed WHOLE (never cropped, zoomed or distorted).
 
     render_education(copy, world, out_dir)   # writes slide_1..N.png
 """
-import os, sys, json, datetime
+import os, re, sys, json, datetime
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lanes_common as L
 import nuno_ledger
@@ -264,9 +264,33 @@ def _icon_motif(icon, css, color, size=340):
     """A large, faint line-icon used as a background illustration for empty space."""
     return f"<div style='position:absolute;{css}line-height:0;'>{L.svg(icon, color, size)}</div>"
 
-def _nuno_whole(pose, h=820, right=-40, bottom=0):
+def _fit_h(pose, h, max_w):
+    """Height that keeps the cutout within `max_w`. Measures the PNG on disk (the
+    rendered src is an inlined data URI, so it cannot be measured). Falls back to
+    `h` if the file is missing, so a bad pose name never breaks a render."""
+    try:
+        from PIL import Image
+        f = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                         "assets", "nuno", str(pose) + ".png")
+        w0, h0 = Image.open(f).size
+        return int(h0 * max_w / w0) if w0 / h0 * h > max_w else h
+    except Exception:
+        return h
+
+
+
+# Most of the library is portrait (median aspect 0.88), so a height alone used to
+# be a safe size. A handful of cutouts are LANDSCAPE - nuno_cv_8 holds the CV out
+# at arm's length at 1.47:1 - and at h=740 that is 1086px wide on a 1080px canvas,
+# so the cutout reached right across the text column. Cap the drawn WIDTH too and
+# let height give way: portrait poses are untouched, wide ones stop overrunning.
+MAX_NUNO_W = 700
+
+
+def _nuno_whole(pose, h=820, right=-40, bottom=0, max_w=MAX_NUNO_W):
     """Founder cut-out placed WHOLE (no crop/zoom/distort) with a soft ground."""
     src = L.nuno_src(pose)
+    h = min(h, _fit_h(pose, h, max_w))
     # The ground shadow has to travel with him. It used to be pinned at a literal
     # right:150px, so any world that nudged `right` to clear the type left the
     # shadow behind under empty background.
@@ -718,11 +742,11 @@ def w_tipcard(copy, week_id='adhoc'):
                  f"<div style='flex:0 0 52px;width:52px;height:52px;border-radius:14px;background:{AMBER};display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:800;font-size:26px;color:{NAVYT};'>{i}</div>"
                  f"<span style=\"font-family:Inter;font-weight:700;font-size:33px;color:#1c2740;line-height:1.16;\">{pt}</span></div>")
     body = f"<div style='position:absolute;left:56px;right:70px;top:452px;'>{rows}</div>"
-    cta = (f"<div style='position:absolute;left:56px;bottom:46px;display:flex;align-items:center;gap:13px;'>"
+    cta = (f"<div style='position:absolute;left:56px;bottom:112px;width:560px;display:flex;align-items:center;gap:13px;'>"
            f"<div style='width:34px;height:34px;border-radius:50%;background:{CORAL};display:flex;align-items:center;justify-content:center;'>"
            f"<svg width='17' height='17' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'><path d='M7 17L17 7M9 7h8v8'/></svg></div>"
            f"<span style=\"font-family:Inter;font-weight:700;font-size:26px;color:{NAVYT};\">{copy.get('cta','internwise.co.uk')}</span></div>")
-    return bg + rules + band + logo + tab + head + body + cta
+    return bg + rules + band + logo + tab + head + body + cta + L.url_footer(left=56, bottom=46)
 
 def w_statement(copy, week_id='adhoc'):
     """Dark 'manifesto' - oversized ticks and a strong accent band, distinct from
@@ -741,8 +765,12 @@ def w_statement(copy, week_id='adhoc'):
                  f"<div style='flex:0 0 52px;width:52px;height:52px;border-radius:50%;background:{AMBER};display:flex;align-items:center;justify-content:center;'>{L.svg('check',DEEP,28)}</div>"
                  f"<span style=\"font-family:Inter;font-weight:700;font-size:33px;color:{INK};letter-spacing:-.3px;line-height:1.15;\">{pt}</span></div>")
     body = f"<div style='position:absolute;left:56px;right:64px;top:500px;'>{rows}</div>"
-    band = (f"<div style='position:absolute;left:0;right:0;bottom:0;height:120px;background:{AMBER};display:flex;align-items:center;'>"
-            f"<span style=\"font-family:Inter;font-weight:800;font-size:32px;color:{DEEP};margin-left:56px;letter-spacing:-.3px;\">{copy.get('cta','internwise.co.uk')}</span></div>")
+    # The closing line no longer carries the address (it printed twice), so the
+    # band has to show it: sentence at one end, internwise.co.uk at the other.
+    band = (f"<div style='position:absolute;left:0;right:0;bottom:0;height:120px;background:{AMBER};display:flex;"
+            f"align-items:center;justify-content:space-between;gap:32px;padding:0 56px;box-sizing:border-box;'>"
+            f"<span style=\"font-family:Inter;font-weight:800;font-size:32px;color:{DEEP};letter-spacing:-.3px;\">{copy.get('cta','')}</span>"
+            f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:24px;color:{DEEP};opacity:.74;letter-spacing:.6px;\">{L.URL}</span></div>")
     return bg + logo + eb + head + body + L.watermark(op=.04) + band
 
 def w_message_lab(copy, week_id='adhoc'):
@@ -770,7 +798,9 @@ def w_message_lab(copy, week_id='adhoc'):
                  f"<div style='width:50px;height:50px;border-radius:12px;background:{[AMBER,GREEN,CORAL][i-1]};display:flex;align-items:center;justify-content:center;font-family:Inter;font-weight:950;font-size:23px;color:{NAVYT};'>{i}</div>"
                  f"<div style=\"font-family:Inter;font-weight:900;font-size:30px;line-height:1.08;color:{NAVYT};\">{pt}</div></div>")
     body = f"<div style='position:absolute;left:210px;top:522px;width:520px;'>{rows}</div>"
-    cta = (f"<div style='position:absolute;left:210px;bottom:66px;height:62px;padding:0 28px;border-radius:31px;background:{NAVYT};display:flex;align-items:center;'>"
+    # The footer sits at bottom:44 and stands 34px tall, so a pill at bottom:66
+    # ran straight through it. Clear the footer's top edge (78) plus a gap.
+    cta = (f"<div style='position:absolute;left:210px;bottom:106px;height:62px;padding:0 28px;border-radius:31px;background:{NAVYT};display:flex;align-items:center;'>"
            f"<span style=\"font-family:Inter;font-weight:900;font-size:26px;color:#fff;\">{copy.get('cta','internwise.co.uk')}</span></div>")
     return bg + rail + logo + label + head + phone + body + cta + L.url_footer(left=210, color=COFFEE)
 
@@ -820,8 +850,10 @@ def w_bigidea(copy, week_id='adhoc'):
                   f"<span style='width:10px;height:10px;border-radius:50%;background:{p['accent']};'></span>"
                   f"<span style=\"font-family:Inter;font-weight:700;font-size:29px;color:{p['ink']};\">{pt}</span></div>")
     body = f"<div style='position:absolute;left:56px;right:80px;top:640px;'>{chips}</div>"
-    band = (f"<div style='position:absolute;left:0;right:0;bottom:0;height:112px;background:{p['accent']};display:flex;align-items:center;'>"
-            f"<span style=\"font-family:Inter;font-weight:800;font-size:31px;color:{p['deep']};margin-left:56px;letter-spacing:-.3px;\">{copy.get('cta','internwise.co.uk')}</span></div>")
+    band = (f"<div style='position:absolute;left:0;right:0;bottom:0;height:112px;background:{p['accent']};display:flex;"
+            f"align-items:center;justify-content:space-between;gap:32px;padding:0 56px;box-sizing:border-box;'>"
+            f"<span style=\"font-family:Inter;font-weight:800;font-size:31px;color:{p['deep']};letter-spacing:-.3px;\">{copy.get('cta','')}</span>"
+            f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:23px;color:{p['deep']};opacity:.74;letter-spacing:.6px;\">{L.URL}</span></div>")
     return bg + L.logo_tl() + eb + glyph + head + body + band
 
 def w_memo(copy, week_id='adhoc'):
@@ -873,9 +905,9 @@ def w_memo(copy, week_id='adhoc'):
     _pull = (copy.get("pull") or (pts[4] if len(pts) > 4 else "")).strip()
     side = (f"<div style=\"position:absolute;right:70px;top:790px;width:220px;font-family:'DM Sans';font-weight:900;font-size:28px;"
             f"line-height:1.08;color:#fff;\">{_pull}</div>") if _pull else ""
-    cta = (f"<div style='position:absolute;left:58px;bottom:56px;height:62px;padding:0 26px;border-radius:31px;background:{NAVYT};"
+    cta = (f"<div style='position:absolute;left:58px;bottom:118px;height:62px;padding:0 26px;border-radius:31px;background:{NAVYT};"
            f"display:flex;align-items:center;font-family:Inter;font-weight:950;font-size:27px;color:#fff;'>{copy.get('cta','Organise at internwise.co.uk')}</div>")
-    return bg + noise + navy + wire + logo + label + head + scribble + board + alert + side + cta
+    return bg + noise + navy + wire + logo + label + head + scribble + board + alert + side + cta + L.url_footer(left=58, bottom=48)
 
 def w_scorecard(copy, week_id='adhoc'):
     """Scorecard single: compact evaluation board with three marked criteria."""
@@ -917,11 +949,11 @@ def w_splitcard(copy, week_id='adhoc'):
     portrait = (f"<div style='position:absolute;right:56px;bottom:0;width:360px;height:548px;overflow:hidden;'>"
                 f"<img src='{L.nuno_src(pose)}' style='position:absolute;right:-92px;bottom:-24px;height:560px;filter:drop-shadow(0 18px 28px rgba(21,39,67,.18));'>"
                 f"</div>")
-    cta = (f"<div style='position:absolute;left:56px;bottom:46px;display:flex;align-items:center;gap:13px;'>"
+    cta = (f"<div style='position:absolute;left:56px;bottom:112px;width:560px;display:flex;align-items:center;gap:13px;'>"
            f"<div style='width:34px;height:34px;border-radius:50%;background:{CORAL};display:flex;align-items:center;justify-content:center;'>"
            f"<svg width='17' height='17' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'><path d='M7 17L17 7M9 7h8v8'/></svg></div>"
            f"<span style=\"font-family:Inter;font-weight:700;font-size:26px;color:{NAVYT};\">{copy.get('cta','internwise.co.uk')}</span></div>")
-    return bg + top + portrait + body + cta
+    return bg + top + portrait + body + cta + L.url_footer(left=56, bottom=46)
 
 
 def w_answerbank(copy, week_id='adhoc'):
@@ -1479,14 +1511,46 @@ def choose_poses(copy, world, week_id="adhoc"):
     return {"cover": cover_pose, "cta": cta_pose}
 
 
+# ------------------------------------------------------------------ closing line
+# Every outro already carries the address in its own chrome (the accent pill, or
+# the footer on the singles), so a cta sentence that ALSO ended in "... at
+# internwise.co.uk" printed it twice on one slide. This used to append the URL
+# when it was missing - exactly the wrong direction. Strip it instead and let the
+# chrome own the address; what remains is the conclusive line.
+_URL_TAIL = re.compile(
+    r"[\s,;:\u2013\u2014-]*\b(?:at|on|via|visit|head\s+to|go\s+to|start\s+at|find\s+(?:us|more|out\s+more)\s+at)?"
+    r"\s*(?:www\.)?internwise\.co\.uk[\s.!\u2192]*$", re.I)
+# What is left once the address goes, when the whole sentence WAS the address.
+# "Discover more at internwise.co.uk" -> "Discover more", which says nothing about
+# the lesson the reader just swiped through.
+_STUBS = re.compile(r"^(?:discover|explore|learn|find|see|read|browse|start|begin)"
+                    r"(?:\s+(?:out)?\s*more|\s+now|\s+today|\s+here)?$", re.I)
+FALLBACK_CTA = "Put one of these to work on your next application."
+
+
+def close_line(cta):
+    """The outro's conclusive sentence: the cta with the web address removed.
+
+    Two shapes turn up. Usually the address trails the sentence ("Strengthen your
+    pitch at internwise.co.uk"), and lopping the tail keeps a usable line. When it
+    sits mid-sentence instead ("Visit internwise.co.uk today") there is no line to
+    keep, so drop whole sentences that mention it and fall back if none survive.
+    """
+    line = _URL_TAIL.sub("", (cta or "").strip()).strip(" ,;:-\u2013\u2014")
+    if "internwise" in line.lower():
+        kept = [p for p in re.split(r"(?<=[.!?])\s+", line) if "internwise" not in p.lower()]
+        line = " ".join(kept).strip(" ,;:-\u2013\u2014")
+    if not line or _STUBS.match(line) or "internwise" in line.lower():
+        return FALLBACK_CTA
+    return line if line.endswith((".", "!", "?")) else line + "."
+
+
 def render_education(copy, world, out_dir, week_id="adhoc", poses=None):
     """Render a post. `poses` replays an earlier choose_poses() result instead of
     drawing new cutouts, which is what makes a re-render reproducible."""
     os.makedirs(out_dir, exist_ok=True)
     copy = {**copy}
-    cta = (copy.get("cta") or "").strip()
-    if "internwise.co.uk" not in cta.lower():
-        copy["cta"] = (cta.rstrip(".") + ". " if cta else "") + "Start at internwise.co.uk"
+    copy["cta"] = close_line(copy.get("cta"))
     if world in CAROUSEL:
         p = PAL[world]; w = CAROUSEL[world]
         slides = copy.get("slides", [])

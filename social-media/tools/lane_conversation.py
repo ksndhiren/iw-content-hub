@@ -513,14 +513,25 @@ def w_marquee(idea):
     options = idea.get("options", [])[:3]
     cols = [CORAL, AMBER, GREEN]
     inks = ["#fff", NAVYT, NAVYT]
+    # The column runs 470 -> 1080, but letter + label only filled its top ~230px,
+    # leaving a flat slab of colour across the bottom third of the poster. Lay the
+    # column out as a flex stack instead: letter at the top, the option set BIG in
+    # the middle, and the reply hint on the baseline, so the colour carries content
+    # all the way down.
     panels = ""
     for i, option in enumerate(options):
         x = i * 360
+        hint_ink = "rgba(255,255,255,.72)" if i == 0 else "rgba(21,39,67,.62)"
+        rule = "rgba(255,255,255,.34)" if i == 0 else "rgba(21,39,67,.26)"
         panels += (f"<div style='position:absolute;left:{x}px;top:470px;width:360px;bottom:0;background:{cols[i]};"
-                   f"padding:38px 30px;box-sizing:border-box;'>"
-                   f"<div style=\"font-family:IWSerif,Georgia,serif;font-size:110px;line-height:.78;color:{inks[i]};opacity:.34;\">{chr(65+i)}</div>"
-                   f"<div style=\"margin-top:22px;font-family:Inter;font-weight:900;font-size:38px;line-height:1.04;"
-                   f"letter-spacing:-1.2px;color:{inks[i]};\">{option}</div></div>")
+                   f"padding:34px 30px 38px;box-sizing:border-box;display:flex;flex-direction:column;"
+                   f"justify-content:space-between;'>"
+                   f"<div style=\"font-family:IWSerif,Georgia,serif;font-size:116px;line-height:.78;color:{inks[i]};opacity:.34;\">{chr(65+i)}</div>"
+                   f"<div style=\"font-family:Inter;font-weight:900;font-size:46px;line-height:1.02;"
+                   f"letter-spacing:-1.6px;color:{inks[i]};\">{option}</div>"
+                   f"<div style='border-top:3px solid {rule};padding-top:14px;'>"
+                   f"<span style=\"font-family:'DM Sans';font-weight:900;font-size:21px;letter-spacing:1.4px;"
+                   f"color:{hint_ink};\">REPLY {chr(65+i)}</span></div></div>")
     bg = f"<div style='position:absolute;inset:0;background:{NAVYT};'></div>"
     hook = (f"<div style='position:absolute;left:56px;top:178px;width:800px;'>"
             + L.hero(idea['hook'], "shadow", "#fff", AMBER, hi=CORAL, size=56, width=800) + "</div>")

@@ -206,7 +206,7 @@ Return JSON with:
   "headline": the cover headline (max ~40 chars),
   "tone": ONE of "serious" (evaluative/cautionary/analytical), "practical" (how-to/steps/tips), or "upbeat" (encouraging/celebratory) - pick the one that best fits how this topic should feel,
   {shape},
-  "cta": one line pointing to internwise.co.uk,
+  "cta": the closing line for the FINAL slide - ONE conclusive sentence (max ~70 chars) that lands what this lesson proved and names the next move. Write NO web address and do not mention Internwise: the slide design prints the address itself, so a URL here would show it twice. "Discover more" and "Explore more" say nothing about the lesson - be specific to THIS topic,
   "captions": {{
      "ig-fb": value-packed caption ending with a CTA to www.internwise.co.uk - write the URL out in full; do NOT say "link in bio" (<=2200),
      "linkedin": professional caption ending with "internwise.co.uk" (<=3000),

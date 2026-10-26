@@ -9783,7 +9783,7 @@
       "id": "week22",
       "label": "Week 22",
       "weekCommencing": "2026-10-26",
-      "builtAt": 1792984873,
+      "builtAt": 1792986443,
       "posts": [
         {
           "id": "week22-mon-quote",
@@ -9943,12 +9943,12 @@
               }
             ],
             "points": null,
-            "cta": "Explore more internships at internwise.co.uk"
+            "cta": "Skills, a mentor, real learning. Two out of three, walk away."
           },
           "world": "ledger",
           "poses": {
             "cover": "nuno_thoughtful_3",
-            "cta": "nuno_offers_4"
+            "cta": "nuno_dothis_5"
           }
         },
         {
@@ -10109,11 +10109,11 @@
               }
             ],
             "points": null,
-            "cta": "Discover more at internwise.co.uk"
+            "cta": "No job yet? Build the proof yourself, then put it on the CV."
           },
           "world": "grid",
           "poses": {
-            "cover": "nuno_planning_1",
+            "cover": "nuno_utility_3",
             "cta": "nuno_howto_4"
           }
         },
@@ -10275,11 +10275,11 @@
               }
             ],
             "points": null,
-            "cta": "Discover more at internwise.co.uk"
+            "cta": "Swap one vague line for a concrete result before you apply again."
           },
           "world": "strip",
           "poses": {
-            "cover": "nuno_cvpile",
+            "cover": "nuno_cv_8",
             "cta": "nuno_offers_1"
           }
         },
@@ -10427,7 +10427,7 @@
               "Show enthusiasm and confidence.",
               "Keep it concise and clear."
             ],
-            "cta": "Strengthen your pitch at internwise.co.uk"
+            "cta": "Rehearse it once out loud before your next interview."
           },
           "world": "message_lab"
         },
@@ -10575,7 +10575,7 @@
               "Save time on wrong roles",
               "Boost success odds"
             ],
-            "cta": "Explore more at internwise.co.uk"
+            "cta": "Pick one growing sector this week and apply there first."
           },
           "world": "focus_studio"
         },
