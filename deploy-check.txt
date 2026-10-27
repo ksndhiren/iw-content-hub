@@ -1,2 +1,0 @@
-cloudflare pages build ok
-build-command route, 2026-10-27T13:56Z

@@ -15,4 +15,10 @@ mkdir -p .pages-dist
 cp index.html app.js style.css logo.svg .pages-dist/
 cp -R data functions .pages-dist/
 [ -d images ] && cp -R images .pages-dist/ || true
-echo "staged $(find .pages-dist -type f | wc -l) files into .pages-dist"
+# Build stamp. Both builders set a commit SHA in the environment, so
+# /deploy-check.txt names the commit actually live - the quickest way to tell
+# whether a deploy landed without opening either dashboard.
+SHA="${CF_PAGES_COMMIT_SHA:-${GITHUB_SHA:-$(git rev-parse HEAD 2>/dev/null || echo unknown)}}"
+printf '%s\n%s\n' "$SHA" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > .pages-dist/deploy-check.txt
+
+echo "staged $(find .pages-dist -type f | wc -l) files into .pages-dist (commit $SHA)"
