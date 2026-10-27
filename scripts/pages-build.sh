@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
-# FALLBACK build command for Cloudflare Pages.
+# The build command for Cloudflare Pages, and the same staging step the GitHub
+# Actions deploy runs - one script, so the two paths cannot drift.
 #
-# Not needed while .cfignore is honoured: the Pages project builds from the repo
-# root with no build command, and .cfignore keeps the 958 MB asset tree out of
-# the upload. If a Cloudflare build ever fails on size again, set the project's
-# build command to `bash scripts/pages-build.sh`, set wrangler.toml's
-# pages_build_output_dir to ".pages-dist", and this stages the same file set
-# explicitly instead of relying on exclusion.
+# Set as the Pages project's build command (Settings -> Build configuration).
+# The output directory comes from wrangler.toml's pages_build_output_dir.
+#
+# .cfignore was tried first and the build system ignores it, so exclusion is out:
+# the deployment has to be an explicit subset instead. wrangler.toml itself is
+# NOT copied - Cloudflare reads it from the repo root for the KV binding, and
+# serving it only published the namespace id.
 set -euo pipefail
 rm -rf .pages-dist
 mkdir -p .pages-dist
-cp index.html app.js style.css logo.svg wrangler.toml .pages-dist/
+cp index.html app.js style.css logo.svg .pages-dist/
 cp -R data functions .pages-dist/
 [ -d images ] && cp -R images .pages-dist/ || true
 echo "staged $(find .pages-dist -type f | wc -l) files into .pages-dist"

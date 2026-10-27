@@ -2,7 +2,12 @@
 # Binds the STATUSES KV namespace so functions/api/statuses.js can read/write
 # shared post statuses across devices. Applied automatically on each Pages deploy.
 name = "iw-content-hub"
-pages_build_output_dir = "."
+# Was "." - which told Cloudflare to upload the entire repository root (~958 MB,
+# with a 38 MB model file past the 25 MiB per-file asset limit). Every
+# Cloudflare-side build failed on it. scripts/pages-build.sh stages just the
+# dashboard into .pages-dist; set the Pages project's build command to
+# `bash scripts/pages-build.sh` so this directory exists at upload time.
+pages_build_output_dir = ".pages-dist"
 compatibility_date = "2025-06-01"
 
 [[kv_namespaces]]

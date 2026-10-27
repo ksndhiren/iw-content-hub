@@ -59,23 +59,16 @@ jobs:
             /data/
             /functions/
             /images/
+            /scripts/
 
       - name: Prepare Pages artifact
-        run: |
-          set -euo pipefail
-          rm -rf .pages-dist
-          mkdir -p .pages-dist
-          cp index.html app.js style.css logo.svg wrangler.toml .pages-dist/
-          cp -R data functions .pages-dist/
-          # Weekly/featured graphics are gitignored (served from R2), so the
-          # images/ tree is absent in CI. Copy it only when present so the
-          # deploy does not fail under `set -e`.
-          [ -d images ] && cp -R images .pages-dist/ || true
+        # Same script the Cloudflare-side build runs, so the two paths cannot drift.
+        run: bash scripts/pages-build.sh
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy .pages-dist --project-name=iw-content-hub --branch=main --commit-dirty=true
+          command: pages deploy --project-name=iw-content-hub --branch=main --commit-dirty=true
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
