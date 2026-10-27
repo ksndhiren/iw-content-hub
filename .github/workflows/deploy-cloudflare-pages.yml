@@ -1,23 +1,33 @@
 name: Deploy Cloudflare Pages
 
-# DORMANT since 2026-10-27. Cloudflare builds the dashboard from the connected
-# repository itself, so this workflow no longer deploys on every push. It was by
-# far the biggest steady-state consumer of GitHub Actions minutes - 211 runs and
-# 328 billable minutes in October alone, roughly 8 deploys a day, because it
-# listened for `workflow_run: types: [completed]` on six workflows and fired even
-# when the upstream run FAILED or pushed nothing at all.
+# This workflow deploys the dashboard. Cloudflare's own Git integration is
+# connected and set to "Automatic deployments enabled", but its builds FAIL:
+# wrangler.toml sets pages_build_output_dir = ".", and the repo root is ~958 MB
+# with social-media/models/EDSR_x2.pb at 38 MB, past Cloudflare's 25 MiB
+# per-file asset limit. Every Cloudflare-side build lands as "No deployment
+# available" in the Pages dashboard. Commit 08ae1e9 briefly made this workflow
+# dispatch-only to save Actions minutes; main then stopped deploying at all, so
+# the automatic triggers are back. Do not remove them again until a Cloudflare
+# build config stages a subset of files (see "Prepare Pages artifact" below for
+# exactly what the deployment needs) and you have seen it go green.
 #
-# Kept (dispatch-only, so it costs nothing unless you press the button) as a
-# one-click fallback: if the Cloudflare-side build is ever misconfigured or
-# paused, running this still deploys the current main.
+# Cost control, since this was October's biggest minute consumer (211 runs, 328
+# minutes - about 8 deploys a day):
+#   * the sparse checkout takes a run from ~60s to ~25s;
+#   * `if` skips the deploy when the upstream build FAILED - previously
+#     `types: [completed]` fired even on failure, deploying nothing new.
 #
-# NOTE for whoever restores the automatic path: wrangler.toml sets
-# pages_build_output_dir = ".", but the repo root is ~958 MB and
-# social-media/models/EDSR_x2.pb alone is 38 MB - past Cloudflare's 25 MiB
-# per-file asset limit. That is why the step below stages a .pages-dist folder
-# with just the dashboard files. A Cloudflare-side build must do the equivalent.
+# Bot commits authored with GITHUB_TOKEN do not raise `push`, which is why the
+# content workflows are listed under workflow_run as well.
 
 on:
+  push:
+    branches:
+      - main
+  workflow_run:
+    workflows: ["Daily Sync", "Daily-5 Build", "Topic Engine", "News - Day-Prior Build", "Featured Jobs - Publish & Prune"]
+    types: [completed]
+    branches: [main]
   workflow_dispatch: {}
 
 permissions:
@@ -32,6 +42,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    # A failed upstream run has nothing new to deploy.
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
