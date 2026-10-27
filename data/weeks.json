@@ -9783,7 +9783,7 @@
       "id": "week22",
       "label": "Week 22",
       "weekCommencing": "2026-10-26",
-      "builtAt": 1793017845,
+      "builtAt": 1793124725,
       "posts": [
         {
           "id": "week22-mon-quote",
@@ -10664,6 +10664,50 @@
             "x": [
               "#apprenticeships",
               "#careerskills"
+            ]
+          }
+        },
+        {
+          "id": "week22-wed-news",
+          "day": "Wed 28 Oct",
+          "lane": "news",
+          "title": "Ban Proposed on Salary History Questions",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "In the UK, a major equality watchdog has proposed a ban on employers asking candidates about their salary history or expectations during recruitment. This recommendation is aimed at fostering fairer pay practices. Why does this matter? For students and graduates, this could mean a more level playing field when entering the job market. It shifts the focus from past earnings to the skills and potential you bring to the table. What's the takeaway here? If you're starting your career, focus on building a strong skillset and gaining experience through internships. This way, you can negotiate salaries based on your capabilities rather than your past pay. Source: Personnel Today.",
+          "hashtags": [
+            "#fairpay",
+            "#students",
+            "#graduates",
+            "#internships",
+            "#ukjobs"
+          ],
+          "captions": {
+            "ig-fb": "In the UK, a major equality watchdog has proposed a ban on employers asking candidates about their salary history or expectations during recruitment. This recommendation is aimed at fostering fairer pay practices. Why does this matter? For students and graduates, this could mean a more level playing field when entering the job market. It shifts the focus from past earnings to the skills and potential you bring to the table. What's the takeaway here? If you're starting your career, focus on building a strong skillset and gaining experience through internships. This way, you can negotiate salaries based on your capabilities rather than your past pay. Source: Personnel Today.",
+            "linkedin": "A significant proposal from a UK equality watchdog seeks to ban employers from inquiring about salary history or expectations during recruitment. This change is intended to support fair pay practices and create a more equitable job market. For students and recent graduates, this could lead to fairer hiring by concentrating on what you can offer now rather than your past earnings. So, what's the practical advice? Focus on developing your skills and accumulating relevant experience through internships. This way, you can confidently negotiate your worth in your future roles. Source: Personnel Today.",
+            "x": "UK watchdog proposes banning salary history questions in recruitment. This aims to ensure fair pay practices, benefiting students/grads by focusing on skills over past pay. Build skills via internships for better salary negotiations. (Source: Personnel Today)",
+            "threads": "A UK watchdog suggests banning salary history questions in recruitment to promote fair pay practices. This benefits students/graduates by focusing on skills over past earnings. Use internships to build skills and negotiate better salaries. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#fairpay",
+              "#students",
+              "#graduates",
+              "#internships",
+              "#ukjobs"
+            ],
+            "linkedin": [
+              "#fairpay",
+              "#graduatejobs",
+              "#internships"
+            ],
+            "x": [
+              "#fairpay",
+              "#ukjobs"
             ]
           }
         }
