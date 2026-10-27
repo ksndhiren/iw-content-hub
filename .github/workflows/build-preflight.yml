@@ -32,20 +32,44 @@ concurrency:
 jobs:
   preflight:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # These render graphics, so they need the asset library - but not the
+          # 413 MB of committed render byproducts and test output under
+          # campaigns/ and test_output*/, which .gitignore covers today and no
+          # script reads. Leading '!' excludes.
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/social-media/campaigns/
+            !/social-media/tools/campaigns/
+            !/social-media/test_output/
+            !/social-media/test_output_cv/
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: automation/requirements-render.txt
 
       # The renderers are imported at module scope, so the packages must be
       # present - but no browser is ever launched, so skip `playwright install`
       # and the chromium download with it.
+      - name: Cache the Playwright browser
+        id: pw
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ms-playwright-chromium-${{ hashFiles('automation/requirements-render.txt') }}
+
       - name: Install dependencies
-        run: pip install openai playwright pillow boto3
+        timeout-minutes: 6
+        run: |
+          pip install -r automation/requirements-render.txt
 
       - name: Pre-flight the upcoming week
         env:

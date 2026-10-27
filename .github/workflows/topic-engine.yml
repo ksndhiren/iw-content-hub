@@ -36,9 +36,22 @@ concurrency:
 jobs:
   discover:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # These render graphics, so they need the asset library - but not the
+          # 413 MB of committed render byproducts and test output under
+          # campaigns/ and test_output*/, which .gitignore covers today and no
+          # script reads. Leading '!' excludes.
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/social-media/campaigns/
+            !/social-media/tools/campaigns/
+            !/social-media/test_output/
+            !/social-media/test_output_cv/
 
       - name: Set up Python
         uses: actions/setup-python@v5

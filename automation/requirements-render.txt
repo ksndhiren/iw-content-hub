@@ -1,0 +1,10 @@
+# Shared dependency set for the graphic-rendering workflows (Daily-5 Build,
+# News - Day-Prior Build, Build Preflight). Kept as a file rather than inline
+# `pip install` arguments so actions/setup-python can cache the wheel download
+# against its hash - an inline install has nothing to key a cache on.
+openai
+playwright>=1.40
+pillow>=10.0
+boto3>=1.34
+requests
+python-dotenv

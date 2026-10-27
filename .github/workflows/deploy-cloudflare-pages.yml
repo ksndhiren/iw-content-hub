@@ -1,16 +1,23 @@
 name: Deploy Cloudflare Pages
 
+# DORMANT since 2026-10-27. Cloudflare builds the dashboard from the connected
+# repository itself, so this workflow no longer deploys on every push. It was by
+# far the biggest steady-state consumer of GitHub Actions minutes - 211 runs and
+# 328 billable minutes in October alone, roughly 8 deploys a day, because it
+# listened for `workflow_run: types: [completed]` on six workflows and fired even
+# when the upstream run FAILED or pushed nothing at all.
+#
+# Kept (dispatch-only, so it costs nothing unless you press the button) as a
+# one-click fallback: if the Cloudflare-side build is ever misconfigured or
+# paused, running this still deploys the current main.
+#
+# NOTE for whoever restores the automatic path: wrangler.toml sets
+# pages_build_output_dir = ".", but the repo root is ~958 MB and
+# social-media/models/EDSR_x2.pb alone is 38 MB - past Cloudflare's 25 MiB
+# per-file asset limit. That is why the step below stages a .pages-dist folder
+# with just the dashboard files. A Cloudflare-side build must do the equivalent.
+
 on:
-  push:
-    branches:
-      - main
-  # Human pushes trigger the deploy above. Bot commits (GITHUB_TOKEN) do NOT
-  # trigger `push`, so also deploy after the automated build workflows finish -
-  # workflow_run fires even for GITHUB_TOKEN-authored runs.
-  workflow_run:
-    workflows: ["Daily-5 Build", "Topic Engine", "Featured Jobs Sync", "Featured Jobs - Publish & Prune", "Analytics Build", "News - Day-Prior Build"]
-    types: [completed]
-    branches: [main]
   workflow_dispatch: {}
 
 permissions:
@@ -24,9 +31,22 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Only the dashboard payload; the 958 MB asset tree is not deployed.
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /index.html
+            /app.js
+            /style.css
+            /logo.svg
+            /wrangler.toml
+            /data/
+            /functions/
+            /images/
 
       - name: Prepare Pages artifact
         run: |

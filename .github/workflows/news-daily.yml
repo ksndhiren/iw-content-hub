@@ -51,18 +51,41 @@ concurrency:
 jobs:
   build-news:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # These render graphics, so they need the asset library - but not the
+          # 413 MB of committed render byproducts and test output under
+          # campaigns/ and test_output*/, which .gitignore covers today and no
+          # script reads. Leading '!' excludes.
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/social-media/campaigns/
+            !/social-media/tools/campaigns/
+            !/social-media/test_output/
+            !/social-media/test_output_cv/
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: automation/requirements-render.txt
+
+      - name: Cache the Playwright browser
+        id: pw
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ms-playwright-chromium-${{ hashFiles('automation/requirements-render.txt') }}
 
       - name: Install dependencies
+        timeout-minutes: 6
         run: |
-          pip install openai playwright pillow boto3 requests python-dotenv
+          pip install -r automation/requirements-render.txt
           python -m playwright install --with-deps chromium
 
       - name: Build the day-prior news post
