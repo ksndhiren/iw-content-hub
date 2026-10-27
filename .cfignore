@@ -1,1 +1,29 @@
-assets/
+# Files Cloudflare Pages must NOT upload.
+#
+# The Pages project builds from the repository root (wrangler.toml sets
+# pages_build_output_dir = "."), and the root is ~958 MB: the social-media build
+# workspace alone carries 376 MB of fonts and cut-outs, and
+# social-media/models/EDSR_x2.pb is 38 MB - past Cloudflare's 25 MiB per-file
+# asset limit. That single file is why every Cloudflare-side build failed with
+# "No deployment available" while the GitHub Actions workflow (which staged a
+# small .pages-dist folder) kept succeeding beside it.
+#
+# With the excludes below the deployment is 128 files / 93 MB, largest file
+# 3.2 MB - the same set the Actions workflow has always shipped:
+#   index.html app.js style.css logo.svg wrangler.toml data/ functions/ images/
+#
+# Syntax is .gitignore's. Keep this in step with the "Prepare Pages artifact"
+# step in .github/workflows/deploy-cloudflare-pages.yml.
+
+# The build workspace: renderers, fonts, Nuno cut-outs, campaign outputs, models.
+social-media/
+
+# Featured-jobs automation - runs in CI, never served.
+automation/
+
+# Repo tooling and docs.
+.github/
+.claude/
+.wrangler/
+scripts/
+*.md
