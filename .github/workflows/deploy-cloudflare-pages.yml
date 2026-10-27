@@ -1,33 +1,29 @@
 name: Deploy Cloudflare Pages
 
-# This workflow deploys the dashboard. Cloudflare's own Git integration is
-# connected and set to "Automatic deployments enabled", but its builds FAIL:
-# wrangler.toml sets pages_build_output_dir = ".", and the repo root is ~958 MB
-# with social-media/models/EDSR_x2.pb at 38 MB, past Cloudflare's 25 MiB
-# per-file asset limit. Every Cloudflare-side build lands as "No deployment
-# available" in the Pages dashboard. Commit 08ae1e9 briefly made this workflow
-# dispatch-only to save Actions minutes; main then stopped deploying at all, so
-# the automatic triggers are back. Do not remove them again until a Cloudflare
-# build config stages a subset of files (see "Prepare Pages artifact" below for
-# exactly what the deployment needs) and you have seen it go green.
+# MANUAL FALLBACK ONLY. Cloudflare deploys this repository itself: its Pages
+# build runs scripts/pages-build.sh (the project's build command) and uploads
+# .pages-dist, on Cloudflare's own free build minutes. Verified 2026-10-27 -
+# commit 4523d90 was live 80 seconds after the push, /api/statuses answering 200
+# with the STATUSES KV binding intact.
 #
-# Cost control, since this was October's biggest minute consumer (211 runs, 328
-# minutes - about 8 deploys a day):
-#   * the sparse checkout takes a run from ~60s to ~25s;
-#   * `if` skips the deploy when the upstream build FAILED - previously
-#     `types: [completed]` fired even on failure, deploying nothing new.
+# The automatic triggers are gone so this cannot race that build. Two deployers
+# on one project meant last-writer-wins per push, and `cancel-in-progress` only
+# ever coordinated the Actions side of it.
 #
-# Bot commits authored with GITHUB_TOKEN do not raise `push`, which is why the
-# content workflows are listed under workflow_run as well.
+# Press "Run workflow" if Cloudflare is ever down or its build is misconfigured;
+# this deploys the current main the same way, through wrangler. It shares
+# scripts/pages-build.sh with the Cloudflare build, so both ship an identical
+# file set.
+#
+# History: this was October's biggest consumer of GitHub Actions minutes - 211
+# runs and 328 billable minutes, about 8 deploys a day, because it listened for
+# `workflow_run: types: [completed]` across six workflows and fired even when
+# the upstream run had failed or pushed nothing.
+#
+# To check what is actually live, without opening either dashboard:
+#   curl -s https://iw-content-hub.pages.dev/deploy-check.txt   # prints the commit SHA
 
 on:
-  push:
-    branches:
-      - main
-  workflow_run:
-    workflows: ["Daily Sync", "Daily-5 Build", "Topic Engine", "News - Day-Prior Build", "Featured Jobs - Publish & Prune"]
-    types: [completed]
-    branches: [main]
   workflow_dispatch: {}
 
 permissions:
@@ -42,8 +38,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    # A failed upstream run has nothing new to deploy.
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
