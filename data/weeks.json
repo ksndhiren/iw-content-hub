@@ -9783,7 +9783,7 @@
       "id": "week22",
       "label": "Week 22",
       "weekCommencing": "2026-10-26",
-      "builtAt": 1793124725,
+      "builtAt": 1793182069,
       "posts": [
         {
           "id": "week22-mon-quote",
@@ -10708,6 +10708,50 @@
             "x": [
               "#fairpay",
               "#ukjobs"
+            ]
+          }
+        },
+        {
+          "id": "week22-thu-news",
+          "day": "Thu 29 Oct",
+          "lane": "news",
+          "title": "New Programmes for Pharmacy Technicians",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "A UK college has launched two new higher education programmes specifically designed for pharmacy technicians. These programmes aim to develop advanced clinical skills to meet the increasing demands of the healthcare sector. For students and graduates, this means an opportunity to enhance their skill set and prepare for the evolving needs of the profession. Understanding these changes can guide you towards further education and career advancement. Participating in internships alongside these programmes can provide practical experience, making you more competitive in the job market. Source: FE News.",
+          "hashtags": [
+            "#pharmacytechnicians",
+            "#healthcareskills",
+            "#highereducation",
+            "#careergrowth",
+            "#internships"
+          ],
+          "captions": {
+            "ig-fb": "A UK college has launched two new higher education programmes specifically designed for pharmacy technicians. These programmes aim to develop advanced clinical skills to meet the increasing demands of the healthcare sector. For students and graduates, this means an opportunity to enhance their skill set and prepare for the evolving needs of the profession. Understanding these changes can guide you towards further education and career advancement. Participating in internships alongside these programmes can provide practical experience, making you more competitive in the job market. Source: FE News.",
+            "linkedin": "In response to the growing demands of the healthcare sector, a UK college has introduced two innovative higher education programmes for pharmacy technicians. These programmes are designed to help technicians develop advanced clinical skills, crucial for addressing current industry needs. For students and recent graduates, this presents a valuable chance to gain specialised knowledge and skills that are increasingly important. Such initiatives highlight the importance of continuous education and adaptation in the ever-evolving healthcare landscape. Complementing these programmes with internships can provide the hands-on experience necessary for a successful career. Source: FE News.",
+            "x": "A UK college launches programmes for pharmacy technicians to enhance clinical skills. This offers students a chance for advanced learning, aligning education with industry needs. Internships can further boost readiness. (Source: FE News)",
+            "threads": "A UK college has launched new programmes for pharmacy technicians, helping them develop advanced skills for the healthcare sector's growing demands. This gives students a chance to upskill and meet industry needs. Internships can enhance this learning with practical experience. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#pharmacytechnicians",
+              "#healthcareskills",
+              "#highereducation",
+              "#careergrowth",
+              "#internships"
+            ],
+            "linkedin": [
+              "#pharmacytechnicians",
+              "#healthcareeducation",
+              "#careerdevelopment"
+            ],
+            "x": [
+              "#pharmacytechnicians",
+              "#healthcareskills"
             ]
           }
         }
