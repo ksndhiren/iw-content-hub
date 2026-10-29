@@ -86,6 +86,9 @@ def recent_posts(limit=5):
     pairs = re.findall(r"<loc>(.*?)</loc>\s*<lastmod>(.*?)</lastmod>", xml)
     arts = []
     for u, d in pairs:
+        # XML escapes '&' in <loc>, so a category like "startup-hiring-&-internships"
+        # arrives as "...-&amp;-...". Posting that raw gives a 404 link.
+        u = html.unescape(u)
         if "/blog/" not in u:
             continue
         tail = u.split("/blog/", 1)[1].strip("/")
