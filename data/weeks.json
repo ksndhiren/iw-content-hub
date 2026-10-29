@@ -9783,7 +9783,7 @@
       "id": "week22",
       "label": "Week 22",
       "weekCommencing": "2026-10-26",
-      "builtAt": 1793182069,
+      "builtAt": 1793262892,
       "posts": [
         {
           "id": "week22-mon-quote",
@@ -10752,6 +10752,50 @@
             "x": [
               "#pharmacytechnicians",
               "#healthcareskills"
+            ]
+          }
+        },
+        {
+          "id": "week22-fri-news",
+          "day": "Fri 30 Oct",
+          "lane": "news",
+          "title": "Hands-On Careers Gain Popularity Amid AI Rise",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "A recent national survey has highlighted a growing trend among college students and their parents in the UK: a shift towards hands-on careers. As AI continues to advance, there's a strong belief that practical skills are irreplaceable. The survey results show a rising confidence that careers requiring manual skills will remain crucial in the future. \n\nFor students and graduates, this underscores the importance of pursuing paths that offer tangible skills. As the job market evolves, being equipped with practical expertise provides a distinct advantage that AI cannot replicate. \n\nOne key takeaway for those at the start of their careers is the value of gaining hands-on experience. Internships serve as an excellent way to develop these skills, offering real-world applications and insight into industries where manual skills are prized. \n\nSource: FE News.",
+          "hashtags": [
+            "#handsoncareers",
+            "#ai",
+            "#internships",
+            "#ukjobs",
+            "#skills"
+          ],
+          "captions": {
+            "ig-fb": "A recent national survey has highlighted a growing trend among college students and their parents in the UK: a shift towards hands-on careers. As AI continues to advance, there's a strong belief that practical skills are irreplaceable. The survey results show a rising confidence that careers requiring manual skills will remain crucial in the future. \n\nFor students and graduates, this underscores the importance of pursuing paths that offer tangible skills. As the job market evolves, being equipped with practical expertise provides a distinct advantage that AI cannot replicate. \n\nOne key takeaway for those at the start of their careers is the value of gaining hands-on experience. Internships serve as an excellent way to develop these skills, offering real-world applications and insight into industries where manual skills are prized. \n\nSource: FE News.",
+            "linkedin": "Recent findings from a national survey indicate that both students and parents in the UK are increasingly turning towards hands-on careers. Despite the rapid advancements in AI, there's a strong belief that practical skills hold enduring value. Students preparing for these careers express confidence in the essential nature of the skills they're acquiring. \n\nThis trend highlights a critical insight for students and graduates: while AI is reshaping many industries, the demand for practical, manual skills remains robust. Choosing a career path that emphasises these skills could ensure job security in an uncertain future. \n\nFor those entering the job market, pursuing internships can be a strategic move. These opportunities provide the hands-on experience that is highly valued by employers, helping to bridge the gap between academic learning and industry demands. \n\nSource: FE News.",
+            "x": "Survey shows UK students & parents favour hands-on careers over AI, valuing practical skills for future job security. Internships offer crucial experience. (Source: FE News)",
+            "threads": "A UK survey highlights a shift towards hands-on careers, with students and parents valuing practical skills over AI's rise. This trend underscores the importance of gaining real-world experience through internships, ensuring you stay competitive. Visit www.internwise.co.uk for opportunities."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#handsoncareers",
+              "#ai",
+              "#internships",
+              "#ukjobs",
+              "#skills"
+            ],
+            "linkedin": [
+              "#handsoncareers",
+              "#ai",
+              "#internships"
+            ],
+            "x": [
+              "#handsoncareers",
+              "#ai"
             ]
           }
         }

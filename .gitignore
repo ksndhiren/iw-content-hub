@@ -42,3 +42,6 @@ social-media/assets/quote_authors/_cutout/
 
 # Generated into .pages-dist at build time by scripts/pages-build.sh
 deploy-check.txt
+
+# Cloudflare Pages staging dir, rebuilt by scripts/pages-build.sh on every deploy
+.pages-dist/
