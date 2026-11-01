@@ -10800,6 +10800,58 @@
           }
         }
       ]
+    },
+    {
+      "id": "week23",
+      "label": "Week 23",
+      "weekCommencing": "2026-11-02",
+      "builtAt": 1793537610,
+      "posts": [
+        {
+          "id": "week23-mon-news",
+          "day": "Mon 2 Nov",
+          "lane": "news",
+          "title": "Students Team Up with Professional Chefs",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "Catering and Hospitality students at a UK college recently had the chance to work alongside professional chefs, putting their skills to the test in a real-world environment. This hands-on experience is a crucial part of their education, allowing them to bridge the gap between classroom learning and actual practice.\n\nFor students and graduates, experiences like these emphasize the importance of applying theoretical knowledge in practical settings. It prepares them for the challenges of the workplace and enhances their employability.\n\nInternships offer similar benefits, providing students with the opportunity to gain industry insights and practical skills, making them more competitive in the job market.\n\nSource: FE News.",
+          "hashtags": [
+            "#culinaryskills",
+            "#studentexperience",
+            "#ukeducation",
+            "#careerdevelopment",
+            "#internships"
+          ],
+          "captions": {
+            "ig-fb": "Catering and Hospitality students at a UK college recently had the chance to work alongside professional chefs, putting their skills to the test in a real-world environment. This hands-on experience is a crucial part of their education, allowing them to bridge the gap between classroom learning and actual practice.\n\nFor students and graduates, experiences like these emphasize the importance of applying theoretical knowledge in practical settings. It prepares them for the challenges of the workplace and enhances their employability.\n\nInternships offer similar benefits, providing students with the opportunity to gain industry insights and practical skills, making them more competitive in the job market.\n\nSource: FE News.",
+            "linkedin": "A group of Catering and Hospitality students from a UK college recently worked alongside professional chefs to gain valuable hands-on experience. This collaboration allowed students to apply their classroom knowledge in a practical setting, enhancing their culinary skills and preparing them for future career opportunities.\n\nFor students and recent graduates, such experiences are a vital part of their education. They provide a deeper understanding of the industry and help build confidence for entering the workforce.\n\nInternships offer a similar pathway, giving students the chance to develop real-world skills and insights, which are essential for a successful transition from education to employment.\n\nSource: FE News.",
+            "x": "UK college students gained hands-on culinary experience by working with professional chefs. Such practical opportunities are key for career readiness, highlighting the importance of internships in building skills. (Source: FE News)",
+            "threads": "Catering students at a UK college gained hands-on experience by working with professional chefs. This highlights the importance of real-world practice and internships in building career skills. Learn more at www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#culinaryskills",
+              "#studentexperience",
+              "#ukeducation",
+              "#careerdevelopment",
+              "#internships"
+            ],
+            "linkedin": [
+              "#studentexperience",
+              "#careerskills",
+              "#internships"
+            ],
+            "x": [
+              "#careerskills",
+              "#internships"
+            ]
+          }
+        }
+      ]
     }
   ]
 }
