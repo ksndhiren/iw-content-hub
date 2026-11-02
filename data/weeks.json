@@ -10805,7 +10805,7 @@
       "id": "week23",
       "label": "Week 23",
       "weekCommencing": "2026-11-02",
-      "builtAt": 1793537610,
+      "builtAt": 1793631948,
       "posts": [
         {
           "id": "week23-mon-news",
@@ -10848,6 +10848,50 @@
             "x": [
               "#careerskills",
               "#internships"
+            ]
+          }
+        },
+        {
+          "id": "week23-tue-news",
+          "day": "Tue 3 Nov",
+          "lane": "news",
+          "title": "Scottish Football's Young Talent Crisis",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "Scottish football is facing a significant challenge with a decrease in homegrown players making it to the top levels. This has raised concerns about the future of the sport in Scotland and the development pathways available to young talent. \n\nFor students and graduates, the situation serves as a reminder of the critical role that early skill development and opportunities play in career success. Whether in sports or any other field, nurturing talent early is crucial.\n\nInternships can be a valuable tool in this process. By gaining hands-on experience, students can enhance their skills and better prepare for the competitive job market. Practical experience can make all the difference in setting out on a successful career path.\n\nSource: BBC UK.",
+          "hashtags": [
+            "#scottishfootball",
+            "#talentdevelopment",
+            "#internships",
+            "#careers",
+            "#skillbuilding"
+          ],
+          "captions": {
+            "ig-fb": "Scottish football is facing a significant challenge with a decrease in homegrown players making it to the top levels. This has raised concerns about the future of the sport in Scotland and the development pathways available to young talent. \n\nFor students and graduates, the situation serves as a reminder of the critical role that early skill development and opportunities play in career success. Whether in sports or any other field, nurturing talent early is crucial.\n\nInternships can be a valuable tool in this process. By gaining hands-on experience, students can enhance their skills and better prepare for the competitive job market. Practical experience can make all the difference in setting out on a successful career path.\n\nSource: BBC UK.",
+            "linkedin": "Scottish football is currently grappling with a pressing issue: a decline in homegrown players reaching the elite level. This trend has sparked concerns about the sport's future in Scotland and the effectiveness of talent development programs.\n\nFor those embarking on their careers, this scenario underscores the importance of skill development and early opportunities. It highlights the need for structured pathways that support young people in reaching their full potential.\n\nInternships offer a concrete solution for students and graduates to gain valuable experience and hone their skills. By engaging in internships, they can better equip themselves for the demands of the professional world, setting a strong foundation for their careers.\n\nSource: BBC UK.",
+            "x": "Scottish football struggles with fewer homegrown players reaching top levels, highlighting the need for better talent development. Students can learn from this by focusing on building skills early. Internships are a key way to gain experience. (Source: BBC UK)",
+            "threads": "Scottish football's talent pipeline is under strain with fewer local players making it to the top. This highlights the need for early skills development. Students should focus on gaining experience through internships to prepare for future challenges. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#scottishfootball",
+              "#talentdevelopment",
+              "#internships",
+              "#careers",
+              "#skillbuilding"
+            ],
+            "linkedin": [
+              "#talentdevelopment",
+              "#internships",
+              "#careergrowth"
+            ],
+            "x": [
+              "#scottishfootball",
+              "#skillbuilding"
             ]
           }
         }
