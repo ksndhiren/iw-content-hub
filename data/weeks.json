@@ -10805,7 +10805,7 @@
       "id": "week23",
       "label": "Week 23",
       "weekCommencing": "2026-11-02",
-      "builtAt": 1793631948,
+      "builtAt": 1793713930,
       "posts": [
         {
           "id": "week23-mon-news",
@@ -10892,6 +10892,50 @@
             "x": [
               "#scottishfootball",
               "#skillbuilding"
+            ]
+          }
+        },
+        {
+          "id": "week23-wed-news",
+          "day": "Wed 4 Nov",
+          "lane": "news",
+          "title": "Youth Job Grant Faces Application Hurdle",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "The UK government has launched a £3,000 Youth Jobs Grant aimed at helping young job seekers. But there's a catch: the application process is complex and may deter many from applying successfully. This is crucial because the grant's benefits are only reachable if youth can access them. What does this mean for you? Navigating applications is a vital skill. Start by seeking guidance and practising with easier forms. Internships can also help by offering opportunities that build your confidence and experience. Source: FE News.",
+          "hashtags": [
+            "#youthjobs",
+            "#ukcareers",
+            "#internships",
+            "#jobgrants",
+            "#careerdevelopment"
+          ],
+          "captions": {
+            "ig-fb": "The UK government has launched a £3,000 Youth Jobs Grant aimed at helping young job seekers. But there's a catch: the application process is complex and may deter many from applying successfully. This is crucial because the grant's benefits are only reachable if youth can access them. What does this mean for you? Navigating applications is a vital skill. Start by seeking guidance and practising with easier forms. Internships can also help by offering opportunities that build your confidence and experience. Source: FE News.",
+            "linkedin": "A new £3,000 Youth Jobs Grant has been introduced by the UK government to assist young job seekers. However, the complexity of the application process is creating a barrier to access. This matters because the grant's potential impact is limited if applicants struggle with paperwork. Understanding how to navigate application processes is increasingly important. For students and graduates, this highlights the need for clear guidance and practice in completing forms. Internships can serve as a valuable step in building the necessary skills and confidence to tackle these challenges, offering paid, structured experiences. Source: FE News.",
+            "x": "The UK’s £3,000 Youth Jobs Grant is meant to help young job seekers, but a tricky application process may limit its reach. Simplifying applications could make a big difference. Internships offer paid experience to build confidence and skills. (Source: FE News)",
+            "threads": "The new £3,000 Youth Jobs Grant aims to support young job seekers, but its complex application process poses a challenge. Navigating these forms is crucial. Internships can provide the paid experience needed to boost confidence and skills. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#youthjobs",
+              "#ukcareers",
+              "#internships",
+              "#jobgrants",
+              "#careerdevelopment"
+            ],
+            "linkedin": [
+              "#youthemployment",
+              "#ukjobs",
+              "#internwise"
+            ],
+            "x": [
+              "#youthjobs",
+              "#internwise"
             ]
           }
         }
