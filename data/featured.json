@@ -3,66 +3,6 @@
   "label": "Featured Jobs",
   "posts": [
     {
-      "id": "job-35314",
-      "sourceId": "35314",
-      "sourceUrl": "https://www.internwise.co.uk/job/35314/hr-intern",
-      "addedAt": "2026-11-03T13:56:02Z",
-      "day": "WHITE CROSS CLINIC LIMITED",
-      "title": "HR Intern",
-      "platform": "Featured Job",
-      "format": "Single",
-      "slides": [
-        "job-35314-2026-08-19-employers-sm-ads-v1.png"
-      ],
-      "status": "in-review",
-      "caption": "Ready to break into hr? Get hands-on with a growing UK team.\n\n📍 London, United Kingdom, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35314/hr-intern",
-      "hashtags": [
-        "#internship",
-        "#londonjobs",
-        "#internships",
-        "#hiring",
-        "#graduatejobs"
-      ],
-      "captions": {
-        "ig-fb": "Ready to break into hr? Get hands-on with a growing UK team.\n\n📍 London, United Kingdom, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35314/hr-intern",
-        "linkedin": "Ready to break into hr? Get hands-on with a growing UK team.\n\n📍 London, United Kingdom, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35314/hr-intern",
-        "x": "Ready to break into hr? Get hands-on with a growing UK team.\n\n📍 London, United Kingdom, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35314/hr-intern"
-      },
-      "hashtagsByPlatform": {
-        "ig-fb": [
-          "#internship",
-          "#londonjobs",
-          "#internships",
-          "#hiring",
-          "#graduatejobs"
-        ],
-        "linkedin": [
-          "#hiring",
-          "#internship",
-          "#internships",
-          "#careers"
-        ],
-        "x": [
-          "#internships",
-          "#hiring"
-        ]
-      },
-      "sector": "HR",
-      "sectorStyle": "generic",
-      "palette": {
-        "version": "2026-08-19-employers-sm-ads-v1",
-        "style": "generic",
-        "sector": "HR",
-        "accent": "#8BD42B",
-        "accentDark": "#3FA985",
-        "background": [
-          "#26343F",
-          "#43586A"
-        ],
-        "spark": "#D4FF3D"
-      }
-    },
-    {
       "id": "job-35269",
       "sourceId": "35269",
       "sourceUrl": "https://www.internwise.co.uk/job/35269/administrative-support-intern",
