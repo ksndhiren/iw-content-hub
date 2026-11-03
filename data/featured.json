@@ -1,5 +1,186 @@
 {
   "id": "featured",
   "label": "Featured Jobs",
-  "posts": []
+  "posts": [
+    {
+      "id": "job-35314",
+      "sourceId": "35314",
+      "sourceUrl": "https://www.internwise.co.uk/job/35314/hr-intern",
+      "addedAt": "2026-11-03T13:56:02Z",
+      "day": "WHITE CROSS CLINIC LIMITED",
+      "title": "HR Intern",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35314-2026-08-19-employers-sm-ads-v1.png"
+      ],
+      "status": "in-review",
+      "caption": "Ready to break into hr? Get hands-on with a growing UK team.\n\n📍 London, United Kingdom, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35314/hr-intern",
+      "hashtags": [
+        "#internship",
+        "#londonjobs",
+        "#internships",
+        "#hiring",
+        "#graduatejobs"
+      ],
+      "captions": {
+        "ig-fb": "Ready to break into hr? Get hands-on with a growing UK team.\n\n📍 London, United Kingdom, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35314/hr-intern",
+        "linkedin": "Ready to break into hr? Get hands-on with a growing UK team.\n\n📍 London, United Kingdom, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35314/hr-intern",
+        "x": "Ready to break into hr? Get hands-on with a growing UK team.\n\n📍 London, United Kingdom, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35314/hr-intern"
+      },
+      "hashtagsByPlatform": {
+        "ig-fb": [
+          "#internship",
+          "#londonjobs",
+          "#internships",
+          "#hiring",
+          "#graduatejobs"
+        ],
+        "linkedin": [
+          "#hiring",
+          "#internship",
+          "#internships",
+          "#careers"
+        ],
+        "x": [
+          "#internships",
+          "#hiring"
+        ]
+      },
+      "sector": "HR",
+      "sectorStyle": "generic",
+      "palette": {
+        "version": "2026-08-19-employers-sm-ads-v1",
+        "style": "generic",
+        "sector": "HR",
+        "accent": "#8BD42B",
+        "accentDark": "#3FA985",
+        "background": [
+          "#26343F",
+          "#43586A"
+        ],
+        "spark": "#D4FF3D"
+      }
+    },
+    {
+      "id": "job-35269",
+      "sourceId": "35269",
+      "sourceUrl": "https://www.internwise.co.uk/job/35269/administrative-support-intern",
+      "addedAt": "2026-11-03T13:56:02Z",
+      "day": "WHITE CROSS CLINIC LIMITED",
+      "title": "Administrative Support Intern",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35269-2026-08-19-employers-sm-ads-v1.png"
+      ],
+      "status": "in-review",
+      "caption": "Serious about a administrative support career? Get the experience employers actually look for.\n\n📍 UK, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35269/administrative-support-intern",
+      "hashtags": [
+        "#internship",
+        "#londonjobs",
+        "#internships",
+        "#hiring",
+        "#graduatejobs"
+      ],
+      "captions": {
+        "ig-fb": "Serious about a administrative support career? Get the experience employers actually look for.\n\n📍 UK, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35269/administrative-support-intern",
+        "linkedin": "Serious about a administrative support career? Get the experience employers actually look for.\n\n📍 UK, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35269/administrative-support-intern",
+        "x": "Serious about a administrative support career? Get the experience employers actually look for.\n\n📍 UK, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35269/administrative-support-intern"
+      },
+      "hashtagsByPlatform": {
+        "ig-fb": [
+          "#internship",
+          "#londonjobs",
+          "#internships",
+          "#hiring",
+          "#graduatejobs"
+        ],
+        "linkedin": [
+          "#hiring",
+          "#internship",
+          "#internships",
+          "#careers"
+        ],
+        "x": [
+          "#internships",
+          "#hiring"
+        ]
+      },
+      "sector": "Administration",
+      "sectorStyle": "generic",
+      "palette": {
+        "version": "2026-08-19-employers-sm-ads-v1",
+        "style": "generic",
+        "sector": "Administration",
+        "accent": "#4F7CAC",
+        "accentDark": "#3FA985",
+        "background": [
+          "#26343F",
+          "#43586A"
+        ],
+        "spark": "#D4FF3D"
+      }
+    },
+    {
+      "id": "job-35205",
+      "sourceId": "35205",
+      "sourceUrl": "https://www.internwise.co.uk/job/35205/business-advertising",
+      "addedAt": "2026-11-03T13:56:02Z",
+      "day": "WHITE CROSS CLINIC LIMITED",
+      "title": "Business Advertising",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35205-2026-08-19-employers-sm-ads-v1.png"
+      ],
+      "status": "in-review",
+      "caption": "Serious about a business advertising career? Get the experience employers actually look for.\n\n📍 London, United Kingdom, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35205/business-advertising",
+      "hashtags": [
+        "#internship",
+        "#londonjobs",
+        "#marketingjobs",
+        "#hiring",
+        "#graduatejobs"
+      ],
+      "captions": {
+        "ig-fb": "Serious about a business advertising career? Get the experience employers actually look for.\n\n📍 London, United Kingdom, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35205/business-advertising",
+        "linkedin": "Serious about a business advertising career? Get the experience employers actually look for.\n\n📍 London, United Kingdom, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35205/business-advertising",
+        "x": "Serious about a business advertising career? Get the experience employers actually look for.\n\n📍 London, United Kingdom, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35205/business-advertising"
+      },
+      "hashtagsByPlatform": {
+        "ig-fb": [
+          "#internship",
+          "#londonjobs",
+          "#marketingjobs",
+          "#hiring",
+          "#graduatejobs"
+        ],
+        "linkedin": [
+          "#hiring",
+          "#internship",
+          "#marketingjobs",
+          "#careers"
+        ],
+        "x": [
+          "#marketingjobs",
+          "#hiring"
+        ]
+      },
+      "sector": "Advertising",
+      "sectorStyle": "marketing",
+      "palette": {
+        "version": "2026-08-19-employers-sm-ads-v1",
+        "style": "marketing",
+        "sector": "Advertising",
+        "accent": "#E24A68",
+        "accentDark": "#D2415C",
+        "background": [
+          "#7E2038",
+          "#C43F5C"
+        ],
+        "spark": "#D4FF3D"
+      }
+    }
+  ]
 }
