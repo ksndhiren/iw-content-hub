@@ -32,3 +32,7 @@ Keep this file updated whenever a new quote-author portrait is added. Quote grap
 | Johann Wolfgang von Goethe | `johann-wolfgang-von-goethe.jpg` | https://commons.wikimedia.org/wiki/File:Goethe_(Stieler_1828).jpg | Public domain. |
 | Charles Darwin | `charles-darwin.jpg` | https://commons.wikimedia.org/wiki/File:Charles_Darwin_seated_crop.jpg | Public domain. |
 | Louisa May Alcott | `louisa-may-alcott.jpg` | https://commons.wikimedia.org/wiki/File:Louisa_May_Alcott,_c._1870_-_Warren%27s_Portraits,_Boston.jpg | Public domain. |
+| Isaac Newton | `isaac-newton.jpg` | https://commons.wikimedia.org/wiki/File:GodfreyKneller-IsaacNewton-1689.jpg | Public domain, Godfrey Kneller (1689). |
+| Oscar Wilde | `oscar-wilde.jpg` | https://commons.wikimedia.org/wiki/File:Oscar_Wilde_by_Napoleon_Sarony._Three-quarter-length_photograph,_seated.jpg | Public domain, Napoleon Sarony (1882). Cropped to head and torso. |
+| Charles Dickens | `charles-dickens.jpg` | https://commons.wikimedia.org/wiki/File:Dickens_Gurney_head.jpg | Public domain, Jeremiah Gurney (1867). |
+| Samuel Smiles | `samuel-smiles.jpg` | https://commons.wikimedia.org/wiki/File:Samuel_Smiles_by_Sir_George_Reid.jpg | Public domain, Sir George Reid (1877). |

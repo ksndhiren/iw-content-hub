@@ -22,6 +22,206 @@
   },
   "topics": [
     {
+      "source_post": "gsc-site-2026-10-30",
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "angle_source": "search-demand",
+      "id": "gsc-what-to-wear-internship-interview",
+      "title": "What to Wear to an Internship Interview",
+      "source_cluster": "internship interview what to wear dress code",
+      "signal_score": 96,
+      "hook_candidates": [
+        "Not sure what to wear to your internship interview?",
+        "Dress one step smarter than the team you are joining."
+      ],
+      "promise": "Pick the right interview outfit for any internship in five minutes.",
+      "proof_points": [
+        "Check the company's own photos and LinkedIn to see how the team actually dresses.",
+        "Aim one step smarter than the team: smart-casual for most offices, a suit for law and finance.",
+        "For video interviews, a plain top works best on camera and your background matters too.",
+        "If unsure, it is fine to ask the recruiter what the dress code is."
+      ],
+      "core_takeaway": "Dress one step smarter than the team you want to join.",
+      "cta": "Find your next internship at internwise.co.uk",
+      "source_signals": [
+        {
+          "source": "google_search_console",
+          "title": "Site page 'what should you wear to internship interviews': 466 impressions, position 6.5",
+          "url": "",
+          "score": 96,
+          "meta": {
+            "property": "https://www.internwise.co.uk/",
+            "window": "2026-07-30..2026-10-27"
+          }
+        }
+      ]
+    },
+    {
+      "source_post": "gsc-site-2026-10-30",
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "angle_source": "search-demand",
+      "id": "gsc-where-to-find-internships",
+      "title": "Where to Actually Find Internships",
+      "source_cluster": "how to find internships uk where to look",
+      "signal_score": 94,
+      "hook_candidates": [
+        "Applying everywhere and hearing nothing back?",
+        "Most internships are not where you are looking."
+      ],
+      "promise": "Know the five places UK internships are actually advertised, and how to use each one.",
+      "proof_points": [
+        "Specialist internship boards list paid UK roles in one place, filtered by sector and location.",
+        "Your university careers service often holds roles that never reach public job boards.",
+        "Company careers pages post early, often before roles are syndicated anywhere else.",
+        "Small businesses hire from speculative emails: a short note with your CV can create a role."
+      ],
+      "core_takeaway": "Use three channels well instead of ten badly.",
+      "cta": "Find your next internship at internwise.co.uk",
+      "source_signals": [
+        {
+          "source": "google_search_console",
+          "title": "'how to find internships' cluster ~430 impressions (site GSC, 90 days)",
+          "url": "",
+          "score": 94,
+          "meta": {
+            "property": "https://www.internwise.co.uk/",
+            "window": "2026-07-30..2026-10-27"
+          }
+        }
+      ]
+    },
+    {
+      "source_post": "gsc-site-2026-10-30",
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "angle_source": "search-demand",
+      "id": "gsc-internship-strengths-weaknesses",
+      "title": "Strengths and Weaknesses: Answers for Interns",
+      "source_cluster": "interview strengths weaknesses answers examples",
+      "signal_score": 88,
+      "hook_candidates": [
+        "Dreading the strengths and weaknesses question?",
+        "There is a right way to answer the weakness question."
+      ],
+      "promise": "Answer the strengths and weaknesses question honestly, with examples that fit an internship.",
+      "proof_points": [
+        "Pick strengths the job advert asks for and prove each with one quick example.",
+        "Choose a real weakness that is not essential to the role.",
+        "Always show what you are doing to improve it.",
+        "Avoid fake weaknesses like 'I work too hard': interviewers hear it every day."
+      ],
+      "core_takeaway": "A real weakness plus a real fix beats a fake weakness every time.",
+      "cta": "Find your next internship at internwise.co.uk",
+      "source_signals": [
+        {
+          "source": "google_search_console",
+          "title": "'internship strengths and weaknesses examples' and 'what are you passionate about' answer queries",
+          "url": "",
+          "score": 88,
+          "meta": {
+            "property": "https://www.internwise.co.uk/",
+            "window": "2026-07-30..2026-10-27"
+          }
+        }
+      ]
+    },
+    {
+      "source_post": "gsc-site-2026-10-30",
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "angle_source": "search-demand",
+      "id": "gsc-introduce-yourself-new-intern",
+      "title": "How to Introduce Yourself as a New Intern",
+      "source_cluster": "introduce yourself new intern first day",
+      "signal_score": 90,
+      "hook_candidates": [
+        "What do you say on day one?",
+        "Your first hello sets the tone for the whole internship."
+      ],
+      "promise": "A simple first-day introduction that makes people remember you for the right reasons.",
+      "proof_points": [
+        "Say your name, your role and how long you are with the team.",
+        "Add one line on what you are studying or what interests you.",
+        "Ask one question about their work: people remember who was curious.",
+        "Follow up with a short message to your manager at the end of day one."
+      ],
+      "core_takeaway": "Name, role, one interest, one question. Then listen.",
+      "cta": "Find your next internship at internwise.co.uk",
+      "source_signals": [
+        {
+          "source": "google_search_console",
+          "title": "Site page 'how to introduce yourself as a new intern': position 4.6",
+          "url": "",
+          "score": 90,
+          "meta": {
+            "property": "https://www.internwise.co.uk/",
+            "window": "2026-07-30..2026-10-27"
+          }
+        }
+      ]
+    },
+    {
+      "source_post": "gsc-site-2026-10-30",
+      "pain": 5,
+      "specificity": 5,
+      "curiosity": 4,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "angle_source": "search-demand",
+      "id": "gsc-what-interns-actually-do",
+      "title": "What Interns Actually Do All Day",
+      "source_cluster": "what do interns do intern responsibilities",
+      "signal_score": 86,
+      "hook_candidates": [
+        "What will you actually do as an intern?",
+        "It is not all coffee runs."
+      ],
+      "promise": "Know what a good internship day looks like, so you can spot a bad one.",
+      "proof_points": [
+        "Most interns support real projects: research, drafting, data and content.",
+        "Expect some shadowing in meetings to learn how the team works.",
+        "A good internship gives you one piece of work you own by the end.",
+        "If it is only admin and errands, ask your manager for a project."
+      ],
+      "core_takeaway": "A good internship ends with something you can point to.",
+      "cta": "Find your next internship at internwise.co.uk",
+      "source_signals": [
+        {
+          "source": "google_search_console",
+          "title": "'what do interns do' / 'what does a social media intern do' cluster ~560 impressions",
+          "url": "",
+          "score": 86,
+          "meta": {
+            "property": "https://www.internwise.co.uk/",
+            "window": "2026-07-30..2026-10-27"
+          }
+        }
+      ]
+    },
+    {
       "id": "auto-your-cv-must-speak-clearly",
       "title": "Your CV Must Speak Clearly",
       "source_post": "automated-topic-engine",
@@ -571,7 +771,7 @@
       "source_signals": [
         {
           "source": "youtube",
-          "title": "\ud83d\udcbc MBA Profile Building Strategy 2026 | Internship, LinkedIn & Networking Tips #mba #shorts",
+          "title": "💼 MBA Profile Building Strategy 2026 | Internship, LinkedIn & Networking Tips #mba #shorts",
           "url": "https://www.youtube.com/watch?v=mbtinpvgz38",
           "score": 26.02,
           "meta": {
@@ -582,7 +782,7 @@
         },
         {
           "source": "youtube",
-          "title": "\ud83d\ude31 ChatGPT KILLED LinkedIn \ud83d\udd25 #shorts",
+          "title": "😱 ChatGPT KILLED LinkedIn 🔥 #shorts",
           "url": "https://www.youtube.com/watch?v=hDtSuF3gAQc",
           "score": 24.8,
           "meta": {

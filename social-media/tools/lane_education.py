@@ -74,14 +74,16 @@ COVER_POOL = ["nuno_cv", "nuno_cv_2", "nuno_cv_3",
 # NOTE: welcoming/offers/tablet cover poses are TOPIC-ONLY (networking/offer/tech) -
 # they must NOT be in the general fallback pool or they land on unrelated topics
 # (e.g. a "welcoming" pose on a Graduate Schemes cover). Kept only in TOPIC_POSES.
-CTA_POOL = ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1",
+# nuno_dothis_1 is pixel-identical to nuno_thumbsup (see nuno_identity.py), and the
+# thumbs-up is banned on education carousels, so it is in no CTA pool.
+CTA_POOL = ["nuno_dothis_2", "nuno_offers_1",
             "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5", "nuno_howto_4"]   # + week21 fresh cutouts
 CTA_TOPIC_POSES = {
     "linkedin": ["nuno_phone", "nuno_tablet", "nuno_phone_2"],
     "tech": ["nuno_tablet", "nuno_tablet_cover", "nuno_phone"],
     "networking": ["nuno_phone", "nuno_authority_4", "nuno_authority_1"],
-    "apply": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5", "nuno_phone_2", "nuno_howto_4"],
-    "cv": ["nuno_dothis_1", "nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5", "nuno_phone_2", "nuno_howto_4"],
+    "apply": ["nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5", "nuno_phone_2", "nuno_howto_4"],
+    "cv": ["nuno_dothis_2", "nuno_offers_1", "nuno_dothis_4", "nuno_offers_4", "nuno_dothis_5", "nuno_phone_2", "nuno_howto_4"],
     "bullet_cv": ["nuno_cv_5", "nuno_cv_2", "nuno_cv_3"],
     "job_description": ["nuno_cv_3"],
     "followup": ["nuno_followup_phone", "nuno_phone", "nuno_tablet"],
@@ -986,7 +988,9 @@ def w_answerbank(copy, week_id='adhoc'):
              f"</div>")
     cards = ""
     colors = ["#fff", AMBER, GREEN, "#fff", CORAL]
-    positions = [(86, 622, -2), (328, 586, 2.2), (584, 628, -1.3), (226, 806, 1.5), (510, 820, -2.3)]
+    # Card 5 used to sit at x=510 and run under the CTA box (which starts at x~660)
+    # whenever its line wrapped; cards 4-5 now finish left of it.
+    positions = [(86, 622, -2), (328, 586, 2.2), (584, 628, -1.3), (96, 800, 1.5), (366, 826, -2.3)]
     for i, pt in enumerate(pts):
         left, top, rot = positions[i]
         color = colors[i]
@@ -1480,7 +1484,53 @@ CAROUSEL = {
     "grid": {"cover": cover_grid, "content": content_grid, "cta": cta_grid},
     "strip": {"cover": cover_strip, "content": content_strip, "cta": cta_strip},
 }
-SINGLE = {"tipcard": w_tipcard, "statement": w_statement,
+def w_badge(copy, week_id='adhoc'):
+    """First-day 'HELLO my name is' lanyard badge on a violet ground - for intro,
+    first-week and networking topics, where the badge IS the metaphor. The badge
+    carries the formula in handwriting; the steps sit on a ruled script card."""
+    VIO, VIO2 = "#5B3FD0", "#33228A"
+    RED = "#E5483F"; PAPER = "#FFF8EC"; NAVYT = "#152743"
+    bg = (f"<div style='position:absolute;inset:0;background:radial-gradient(90% 80% at 80% 10%,{VIO},{VIO2});'></div>"
+          + L.dots("left:470px;top:120px;", color="rgba(255,255,255,.18)", w=150, h=110))
+    logo = L.logo_tl()
+    eb = (f"<div style='position:absolute;left:56px;top:196px;display:inline-flex;align-items:center;height:46px;padding:0 22px;"
+          f"border-radius:23px;background:{AMBER};'><span style=\"font-family:'DM Sans';font-weight:800;font-size:20px;"
+          f"color:{DEEP};letter-spacing:3px;\">{copy.get('eyebrow','FIRST DAY')[:20].upper()}</span></div>")
+    head = (f"<div style='position:absolute;left:56px;top:266px;width:500px;'>"
+            + L.hero(copy['headline'], "scalejump", "#FFFFFF", AMBER, hi=AMBER, size=60, width=500) + "</div>")
+    # Lanyard: two straps meeting at a clip, then the badge hanging slightly askew.
+    straps = (f"<svg style='position:absolute;left:0;top:0;' width='1080' height='260' viewBox='0 0 1080 260'>"
+              f"<path d='M742 -10 L800 168' stroke='{AMBER}' stroke-width='22' stroke-linecap='round'/>"
+              f"<path d='M880 -10 L824 168' stroke='#E09A12' stroke-width='22' stroke-linecap='round'/></svg>")
+    clip = ("<div style='position:absolute;left:792px;top:160px;width:40px;height:44px;border-radius:8px;"
+            "background:linear-gradient(#D9DEE7,#A9B3C2);border:3px solid #0A1830;'></div>")
+    write = copy.get("badge") or "Name, role, one interest, one question"
+    badge = (f"<div style='position:absolute;left:612px;top:196px;width:400px;transform:rotate(4deg);"
+             f"background:{PAPER};border:4px solid #0A1830;border-radius:26px;box-shadow:10px 12px 0 rgba(10,24,48,.55);overflow:hidden;'>"
+             f"<div style='height:16px;'></div>"
+             f"<div style='margin:0 18px;border-radius:14px;background:{RED};padding:16px 0 14px;text-align:center;'>"
+             f"<div style=\"font-family:Inter;font-weight:900;font-size:66px;line-height:.95;color:#fff;letter-spacing:-1px;\">HELLO</div>"
+             f"<div style=\"font-family:'DM Sans';font-weight:700;font-size:24px;color:#fff;letter-spacing:1px;\">my name is</div></div>"
+             f"<div style=\"padding:22px 30px 30px;font-family:IWSerif,Georgia,serif;font-style:italic;font-size:38px;line-height:1.18;"
+             f"color:{NAVYT};text-align:center;\">{write}</div></div>")
+    pts = copy.get("points", [])[:6]
+    cells = ""
+    for i, pt in enumerate(pts, 1):
+        span = "grid-column:1/-1;" if i == len(pts) and len(pts) % 2 else ""   # no orphan gap on odd counts
+        cells += (f"<div style='display:flex;gap:16px;align-items:center;{span}'>"
+                  f"<div style='flex:0 0 48px;width:48px;height:48px;border-radius:50%;background:{VIO};display:flex;align-items:center;"
+                  f"justify-content:center;font-family:Inter;font-weight:800;font-size:24px;color:#fff;'>{i}</div>"
+                  f"<span style=\"font-family:Inter;font-weight:700;font-size:30px;line-height:1.14;color:{NAVYT};letter-spacing:-.3px;\">{pt}</span></div>")
+    script = (f"<div style='position:absolute;left:44px;right:44px;top:636px;height:318px;box-sizing:border-box;padding:34px 36px;"
+              f"background:{PAPER};border:4px solid #0A1830;border-radius:26px;box-shadow:10px 10px 0 rgba(10,24,48,.55);"
+              f"display:grid;grid-template-columns:1fr 1fr;column-gap:34px;row-gap:26px;align-content:center;'>{cells}</div>")
+    foot = (f"<div style='position:absolute;left:56px;right:56px;bottom:30px;display:flex;align-items:center;justify-content:space-between;gap:24px;'>"
+            f"<span style=\"font-family:Inter;font-weight:800;font-size:27px;color:#fff;letter-spacing:-.2px;\">{copy.get('cta','')}</span>"
+            f"<span style=\"flex:none;font-family:'DM Sans';font-weight:800;font-size:22px;color:{AMBER};letter-spacing:.6px;\">{L.URL}</span></div>")
+    return bg + logo + eb + head + straps + clip + badge + script + foot
+
+
+SINGLE = {"tipcard": w_tipcard, "statement": w_statement, "badge": w_badge,
           "bigidea": w_bigidea, "splitcard": w_splitcard,
           "memo": w_memo, "scorecard": w_scorecard,
           "message_lab": w_message_lab, "focus_studio": w_focus_studio,

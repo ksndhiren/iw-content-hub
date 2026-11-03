@@ -14,6 +14,7 @@ part of the weekly batch unless the user explicitly asks to bring them back.
     python3 tools/build_week.py                 # full 5-day week
     python3 tools/build_week.py --days 1         # just Monday (cheap validation)
     python3 tools/build_week.py --dry            # plan only, no render/write
+    WEEK_ID=week23 python3 tools/build_week.py --start 1   # late build: Tue-Fri of week23
 """
 import os, sys, json, re, datetime, hashlib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -159,7 +160,7 @@ EDU_CAROUSEL_WORLDS = ["navy", "plum", "teal", "cream", "midnight", "slate",
 # message_lab / focus_studio / answerbank were authored into lane_education.SINGLE
 # but never listed here, so the ledger could only ever see 6 of the 9 singles.
 EDU_SINGLE_WORLDS = ["tipcard", "statement", "bigidea", "splitcard", "memo", "scorecard",
-                     "message_lab", "focus_studio", "answerbank"]
+                     "message_lab", "focus_studio", "answerbank", "badge"]
 CONVERSATION_WORLDS = ["decision", "proofboard", "debate", "scorecard", "signal",
                        "vote_cards", "shortlist_poll", "cv_poll", "route_map", "comment_wall",
                        "ballot", "dial", "receipt", "stickies", "bars", "marquee"]
@@ -702,49 +703,61 @@ def preflight(days=5):
     return True
 
 
-def build(days=5, dry=False):
+def build(days=5, dry=False, start=0):
+    # start > 0 skips weekdays that have already passed (a late build mid-week):
+    # posts keep their real day ids, and every pick is sized to the remaining days.
+    slots = list(range(start, days))
+    n = len(slots)
     quotes = {q["id"]: q for q in L.load("quotes_bank.json")["quotes"]}
     angles = {a["id"]: a for a in L.load("employer_angles.json")["angles"]}
     conversation_ideas = L.load("conversation_ideas.json")["ideas"]
     wid, wlabel, wc, mon = target_week()
     # Rotate the quote bank by week, but block recent quote IDs/authors so the
     # same quote cannot reappear just because the visual world changed.
-    week_quotes = pick_quote_ids(quotes, days, wid)
-    week_conversation = pick_conversation_ideas(conversation_ideas, days, wid)
+    week_quotes = pick_quote_ids(quotes, n, wid)
+    week_conversation = pick_conversation_ideas(conversation_ideas, n, wid)
 
     # DESIGN SELECTION goes through the no-repeat ledger (the hard rule: a new
     # design direction per post every week). Each lane picks worlds NOT used in
     # the recent lookback window; if the bank is too shallow, design_ledger raises
     # instead of silently reusing a stale look. Replaces the old week_offset rotation.
-    q_worlds = design_ledger.pick("quote", QUOTE_WORLDS, days, wid)
-    emp_days = sorted(d for d in EMPLOYER_DAYS if d < days)
+    def pick_worlds(lane, bank, k, full):
+        # The repeat window is sized from a FULL week (`full` posts), not `k`: pick()
+        # derives it from the bank / posts ratio, so a late Tue-Fri build would
+        # otherwise widen the window and block worlds a normal week may use.
+        window = max(design_ledger.DEFAULT_AVOID_WEEKS, design_ledger.cycle_weeks(bank, full) - 1)
+        return design_ledger.pick(lane, bank, k, wid, avoid_weeks=window)
+
+    q_worlds = pick_worlds("quote", QUOTE_WORLDS, n, days)
+    emp_days = sorted(d for d in EMPLOYER_DAYS if start <= d < days)
     emp_worlds = design_ledger.pick("employer", EMPLOYER_WORLDS, len(emp_days), wid)
     week_emp = {d: (emp_worlds[i], EMPLOYER_ANGLE[emp_worlds[i]]) for i, d in enumerate(emp_days)}
     # avoid_weeks=1 blocked only the single previous week, and the bank held exactly
     # 10 worlds for 5 slots, so the lane alternated between two fixed sets: week19
     # and week21 shipped the identical five designs. 16 worlds + a 2-week block
     # means a conversation design cannot come back inside three weeks.
-    conversation_worlds = design_ledger.pick("conversation", CONVERSATION_WORLDS, days, wid)
-    fmts = EDU_FORMAT_BY_DAY[:days]
-    edu_car = design_ledger.pick("edu_carousel", EDU_CAROUSEL_WORLDS, fmts.count("carousel"), wid)
-    edu_sing = design_ledger.pick("edu_single", EDU_SINGLE_WORLDS, fmts.count("single"), wid)
+    conversation_worlds = pick_worlds("conversation", CONVERSATION_WORLDS, n, days)
+    fmts = [EDU_FORMAT_BY_DAY[i] for i in slots]
+    full_fmts = EDU_FORMAT_BY_DAY[:days]
+    edu_car = pick_worlds("edu_carousel", EDU_CAROUSEL_WORLDS, fmts.count("carousel"), full_fmts.count("carousel"))
+    edu_sing = pick_worlds("edu_single", EDU_SINGLE_WORLDS, fmts.count("single"), full_fmts.count("single"))
     car_i = sing_i = 0
     img = os.path.join(HUB, "images", wid)
     daylist = [(DKEYS[i], (mon + datetime.timedelta(days=i)).strftime("%a %d %b").replace(" 0", " ")) for i in range(5)]
-    edu_topics = pick_education(days)
+    edu_topics = pick_education(n)
     if not dry:
         record_edu_used(wid, [t.get("title", "") for t in edu_topics])
     posts = []
-    print(f"Building {wid} (w/c {wc}) - {days} day(s)")
+    print(f"Building {wid} (w/c {wc}) - {n} day(s)" + (f", from {daylist[start][1]}" if start else ""))
 
-    for di in range(days):
+    for si, di in enumerate(slots):
         dkey, dlabel = daylist[di]
         print(f"\n=== {dlabel} ===")
 
         # NEWS is built day-prior by build_news_day.py so it is never stale.
 
         # QUOTE
-        world = q_worlds[di]; qid = week_quotes[di]; q = quotes[qid]
+        world = q_worlds[si]; qid = week_quotes[si]; q = quotes[qid]
         cap = writer.write_captions("quote", f"Quote by {q['author']}", q["text"], q.get("cta"))
         pid = f"{wid}-{dkey}-quote"
         if not dry:
@@ -756,8 +769,8 @@ def build(days=5, dry=False):
 
         # POLL / CONVERSATION lane. Keep it useful and brand-safe; featured jobs
         # remain a separate queue.
-        idea = week_conversation[di]
-        world = conversation_worlds[di]
+        idea = week_conversation[si]
+        world = conversation_worlds[si]
         visual_hook = idea.get("hook", "Career conversation")
         onscreen = ". ".join([visual_hook, idea.get("subhead", ""), idea.get("takeaway", ""), idea.get("cta", "")])
         cap = writer.write_captions("engagement", visual_hook, onscreen)
@@ -788,14 +801,18 @@ def build(days=5, dry=False):
             world = edu_car[car_i]; car_i += 1
         else:
             world = edu_sing[sing_i]; sing_i += 1
-        topic = edu_topics[di] if di < len(edu_topics) else {"title": "Career tips", "hook": "", "promise": "", "core_takeaway": "", "proof_points": []}
+        topic = edu_topics[si] if si < len(edu_topics) else {"title": "Career tips", "hook": "", "promise": "", "core_takeaway": "", "proof_points": []}
         tp = {"title": topic.get("title", ""), "hook": (topic.get("hook_candidates") or [""])[0],
               "promise": topic.get("promise", ""), "core_takeaway": topic.get("core_takeaway", ""),
               "proof_points": topic.get("proof_points", [])}
         ec = writer.write_education(tp, fmt=fmt, slides=3)   # cover + 3 teaching + CTA = 5-slide carousel
+        poses = {}
         pid = f"{wid}-{dkey}-education"
         if not dry:
-            paths = lane_education.render_education(ec, world, os.path.join(img, pid), week_id=wid)
+            # Keep the chosen cutouts on the post so rerender_week.py can replay them;
+            # without them a single post cannot be re-rendered later.
+            poses = lane_education.choose_poses(ec, world, wid)
+            paths = lane_education.render_education(ec, world, os.path.join(img, pid), week_id=wid, poses=poses)
             slides = [os.path.basename(p) for p in sorted(paths)]
         else:
             slides = ["slide_1.png"] * (7 if fmt == "carousel" else 1)
@@ -806,6 +823,8 @@ def build(days=5, dry=False):
         # has to regenerate it - the not-stored problem that used to force drift.
         posts[-1]["onSlide"] = {k: ec.get(k) for k in ("eyebrow", "headline", "tone", "slides", "points", "cta")}
         posts[-1]["world"] = world
+        if not dry and poses:
+            posts[-1]["poses"] = poses
 
     if not dry and nuno_ledger.REPEATS:
         need = {}
@@ -822,7 +841,7 @@ def build(days=5, dry=False):
 
     if not dry:
         # Commit the design choices so next week's build avoids them (the hard rule).
-        design_ledger.record("quote", wid, q_worlds[:days])
+        design_ledger.record("quote", wid, q_worlds[:n])
         if emp_worlds:
             design_ledger.record("employer", wid, emp_worlds)
         if edu_car:
@@ -830,7 +849,7 @@ def build(days=5, dry=False):
         if edu_sing:
             design_ledger.record("edu_single", wid, edu_sing)
         if conversation_worlds:
-            design_ledger.record("conversation", wid, conversation_worlds[:days])
+            design_ledger.record("conversation", wid, conversation_worlds[:n])
 
     if not dry:
         # Render each story-lane post's 1080x1920 Story companion from its cover
@@ -881,10 +900,12 @@ def build(days=5, dry=False):
 
 
 if __name__ == "__main__":
-    days = 5
+    days, start = 5, 0
     for i, a in enumerate(sys.argv):
         if a == "--days" and i + 1 < len(sys.argv):
             days = int(sys.argv[i + 1])
+        if a == "--start" and i + 1 < len(sys.argv):
+            start = int(sys.argv[i + 1])           # 1 = start Tuesday, for a late build
     if "--preflight" in sys.argv:
         sys.exit(0 if preflight(days=days) else 1)
-    build(days=days, dry="--dry" in sys.argv)
+    build(days=days, dry="--dry" in sys.argv, start=start)

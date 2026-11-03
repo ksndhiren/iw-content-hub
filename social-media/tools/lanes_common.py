@@ -109,18 +109,21 @@ def dots(css, color="rgba(255,177,32,.45)", w=176, h=120):
     return (f"<div style='position:absolute;{css}width:{w}px;height:{h}px;"
             f"background-image:radial-gradient({color} 3px,transparent 3px);background-size:24px 24px;'></div>")
 
-def render(out_dir, filename, inner, page_css=""):
-    """Render one 1080x1080 slide (device_scale_factor=2 -> 2160px)."""
+def render(out_dir, filename, inner, page_css="", w=1080, h=1080):
+    """Render one slide at w x h (device_scale_factor=2 -> double that in px).
+
+    Defaults to the square 1080x1080 feed slide every lane used originally. The
+    infographic lane passes 1080x1350 for the 4:5 portrait card."""
     os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, filename)
     html = (f"<!DOCTYPE html><html><head><meta charset='utf-8'><style>{F}"
             f"*{{margin:0;padding:0;box-sizing:border-box;}}"
-            f"body{{width:1080px;height:1080px;overflow:hidden;}}"
-            f".r{{width:1080px;height:1080px;position:relative;overflow:hidden;}}{page_css}"
+            f"body{{width:{w}px;height:{h}px;overflow:hidden;}}"
+            f".r{{width:{w}px;height:{h}px;position:relative;overflow:hidden;}}{page_css}"
             f"</style></head><body><div class='r'>{inner}</div></body></html>")
     with sync_playwright() as p:
         br = p.chromium.launch()
-        pg = br.new_page(viewport={"width":1080,"height":1080}, device_scale_factor=2)
+        pg = br.new_page(viewport={"width":w,"height":h}, device_scale_factor=2)
         pg.set_content(html, wait_until="networkidle")
         pg.screenshot(path=path, type="png"); br.close()
     print("  ok", os.path.relpath(path, BASE))
@@ -225,6 +228,11 @@ def hero(text, move, ink, accent, hi=None, size=66, deep="#0A1830", width=None,
         if n > 12:   s *= 0.70
         elif n > 9:  s *= 0.82
         elif n > 7:  s *= 0.92
+        # The steps above are a guess at length; the column is the real limit.
+        # "Internships" in the highlight move ran ~45px past a 376px card. Cap the
+        # hero so ~0.5em per character plus the move's padding fits `width`.
+        if width and n:
+            s = min(s, (width - 28) / (n * 0.50))
         return round(s * cap)
 
     base = (f"font-family:Inter;font-weight:{lead_weight};font-size:{size}px;line-height:1.02;"

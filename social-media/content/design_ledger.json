@@ -609,6 +609,66 @@
       "lane": "quote",
       "week": "week22",
       "world": "paper"
+    },
+    {
+      "lane": "edu_carousel",
+      "week": "week23",
+      "world": "slate"
+    },
+    {
+      "lane": "edu_carousel",
+      "week": "week23",
+      "world": "cream"
+    },
+    {
+      "lane": "edu_single",
+      "week": "week23",
+      "world": "answerbank"
+    },
+    {
+      "lane": "edu_single",
+      "week": "week23",
+      "world": "badge"
+    },
+    {
+      "lane": "conversation",
+      "week": "week23",
+      "world": "comment_wall"
+    },
+    {
+      "lane": "conversation",
+      "week": "week23",
+      "world": "decision"
+    },
+    {
+      "lane": "conversation",
+      "week": "week23",
+      "world": "proofboard"
+    },
+    {
+      "lane": "conversation",
+      "week": "week23",
+      "world": "scorecard"
+    },
+    {
+      "lane": "quote",
+      "week": "week23",
+      "world": "band"
+    },
+    {
+      "lane": "quote",
+      "week": "week23",
+      "world": "bubble"
+    },
+    {
+      "lane": "quote",
+      "week": "week23",
+      "world": "gallery"
+    },
+    {
+      "lane": "quote",
+      "week": "week23",
+      "world": "minimal"
     }
   ]
 }

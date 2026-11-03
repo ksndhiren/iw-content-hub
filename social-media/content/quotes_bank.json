@@ -338,6 +338,42 @@
       "theme": "resilience",
       "cta": "Learn as you go - internwise.co.uk",
       "used": null
+    },
+    {
+      "id": "q044",
+      "text": "If I have seen further, it is by standing on the shoulders of giants.",
+      "author": "Isaac Newton",
+      "theme": "mentors",
+      "cta": "Find your giants - internwise.co.uk",
+      "used": null,
+      "source": "Letter to Robert Hooke, 5 Feb 1675/76 (spelling modernised)"
+    },
+    {
+      "id": "q045",
+      "text": "Experience is the name everyone gives to their mistakes.",
+      "author": "Oscar Wilde",
+      "theme": "learning",
+      "cta": "Start collecting yours - internwise.co.uk",
+      "used": null,
+      "source": "Lady Windermere's Fan (1892), Act III"
+    },
+    {
+      "id": "q046",
+      "text": "Procrastination is the thief of time. Collar him!",
+      "author": "Charles Dickens",
+      "theme": "action",
+      "cta": "Apply today - internwise.co.uk",
+      "used": null,
+      "source": "David Copperfield (1850), ch. 12, spoken by Mr Micawber"
+    },
+    {
+      "id": "q047",
+      "text": "We learn wisdom from failure much more than from success.",
+      "author": "Samuel Smiles",
+      "theme": "resilience",
+      "cta": "Try again - internwise.co.uk",
+      "used": null,
+      "source": "Self-Help (1859), ch. 11"
     }
   ]
 }

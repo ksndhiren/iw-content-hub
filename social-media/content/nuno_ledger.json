@@ -909,6 +909,31 @@
       "cutout": "nuno_thoughtful_2",
       "week": "adhoc",
       "date": "2026-10-26"
+    },
+    {
+      "cutout": "nuno_suit",
+      "week": "week23",
+      "date": "2026-11-03"
+    },
+    {
+      "cutout": "nuno_dothis_4",
+      "week": "week23",
+      "date": "2026-11-03"
+    },
+    {
+      "cutout": "nuno_phone",
+      "week": "week23",
+      "date": "2026-11-03"
+    },
+    {
+      "cutout": "nuno_tablet",
+      "week": "week23",
+      "date": "2026-11-03"
+    },
+    {
+      "cutout": "nuno_thoughtful_2",
+      "week": "adhoc",
+      "date": "2026-11-03"
     }
   ]
 }
