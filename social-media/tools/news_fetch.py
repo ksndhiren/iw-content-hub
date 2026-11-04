@@ -93,6 +93,17 @@ EXCLUDED_JOB_TYPES = re.compile(
     r"\b(plumb(?:er|ers|ing)|gas engineer|heating engineer|boiler repair|"
     r"electrician|carpenter|joiner|bricklayer|roofer|scaffold(?:er|ing)|"
     r"construction trade|manual trades?|butcher|butchery|engineering profession)\b", re.I)
+# Sport is fine as an industry (marketing, media, analytics, events roles) but
+# stories about playing careers - footballers, academies, homegrown talent -
+# are not Internwise news. Rejected unless an off-pitch job angle is present.
+SPORT_PLAYING = re.compile(
+    r"\b(football\w*|soccer|rugby|cricket\w*|premiership|premier league|"
+    r"championship side|athletes?|players?|squads?|homegrown|first.?team|"
+    r"academy (?:players?|graduates?|products?)|scouts?|transfer window)\b", re.I)
+SPORT_INDUSTRY_JOB = re.compile(
+    r"\b(sports? (?:marketing|media|business|industry|management|science|"
+    r"analytics?|journalism|events?)|marketing|media|analyst|journalis\w+|"
+    r"physio\w*|commercial|ticketing|events team|broadcast\w*)\b", re.I)
 
 # --- UK-ONLY GUARD -----------------------------------------------------------
 # Internwise news is about the UK job market only. Even UK publications carry the
@@ -142,6 +153,8 @@ def _is_job_market_relevant(hay):
     if ORG_PR_OR_LOCAL_ONLY.search(hay):
         return False
     if EXCLUDED_JOB_TYPES.search(hay):
+        return False
+    if SPORT_PLAYING.search(hay) and not SPORT_INDUSTRY_JOB.search(hay):
         return False
     if LIFESTYLE_MONEY.search(hay) and not CORE_JOB_MARKET.search(hay):
         return False

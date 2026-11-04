@@ -1530,7 +1530,276 @@ def w_badge(copy, week_id='adhoc'):
     return bg + logo + eb + head + straps + clip + badge + script + foot
 
 
+
+# ------------------------------------------------- object-metaphor singles
+# The badge set the pattern: one illustrated object that IS the topic, carrying
+# the formula in its own voice, over a ruled card of steps and a one-line close.
+# These siblings reuse that skeleton with a different object, ground and hero move
+# so a week of them never reads as one template.
+OBJ_PAPER, NAVYT, EDGE = "#FFF8EC", "#152743", "#0A1830"
+
+
+def _step_cells(pts, num_bg, ink=NAVYT, size=30):
+    cells = ""
+    for i, pt in enumerate(pts, 1):
+        span = "grid-column:1/-1;" if i == len(pts) and len(pts) % 2 else ""   # no orphan gap on odd counts
+        cells += (f"<div style='display:flex;gap:16px;align-items:center;{span}'>"
+                  f"<div style='flex:0 0 48px;width:48px;height:48px;border-radius:50%;background:{num_bg};display:flex;align-items:center;"
+                  f"justify-content:center;font-family:Inter;font-weight:800;font-size:24px;color:#fff;'>{i}</div>"
+                  f"<span style=\"font-family:Inter;font-weight:700;font-size:{size}px;line-height:1.14;color:{ink};letter-spacing:-.3px;\">{pt}</span></div>")
+    return cells
+
+
+def _paper_card(inner, top=636, height=318, grid=True):
+    layout = ("display:grid;grid-template-columns:1fr 1fr;column-gap:34px;row-gap:26px;align-content:center;"
+              if grid else "display:flex;gap:40px;")
+    return (f"<div style='position:absolute;left:44px;right:44px;top:{top}px;height:{height}px;box-sizing:border-box;padding:34px 36px;"
+            f"background:{OBJ_PAPER};border:4px solid {EDGE};border-radius:26px;box-shadow:10px 10px 0 rgba(10,24,48,.55);{layout}'>{inner}</div>")
+
+
+def _obj_foot(cta, ink="#fff", url_ink=AMBER):
+    return (f"<div style='position:absolute;left:56px;right:56px;bottom:30px;display:flex;align-items:center;justify-content:space-between;gap:24px;'>"
+            f"<span style=\"font-family:Inter;font-weight:800;font-size:27px;color:{ink};letter-spacing:-.2px;\">{cta}</span>"
+            f"<span style=\"flex:none;font-family:'DM Sans';font-weight:800;font-size:22px;color:{url_ink};letter-spacing:.6px;\">{L.URL}</span></div>")
+
+
+def _obj_pill(text, left, top, bg=AMBER, ink=DEEP):
+    return (f"<div style='position:absolute;left:{left}px;top:{top}px;display:inline-flex;align-items:center;height:46px;padding:0 22px;"
+            f"border-radius:23px;background:{bg};'><span style=\"font-family:'DM Sans';font-weight:800;font-size:20px;"
+            f"color:{ink};letter-spacing:3px;\">{text[:22].upper()}</span></div>")
+
+
+def w_swingtag(copy, week_id='adhoc'):
+    """Clothes hanger with a kraft swing tag, on emerald - for dress-code and
+    'how to present yourself' topics. The tag reads like a garment label
+    (STYLE / FIT / CARE), so the advice arrives as the outfit's own spec."""
+    EM, EM2, KRAFT, BROWN = "#17876A", "#0B4A3C", "#EBD3A2", "#7A5A2E"
+    bg = (f"<div style='position:absolute;inset:0;background:radial-gradient(95% 85% at 82% 8%,{EM},{EM2});'></div>"
+          + L.dots("left:470px;top:110px;", color="rgba(255,255,255,.16)", w=130, h=110))
+    head = (f"<div style='position:absolute;left:56px;top:266px;width:520px;'>"
+            + L.hero(copy['headline'], "serif_italic", "#FFFFFF", AMBER, hi=AMBER, size=60, width=520) + "</div>")
+    hanger = ("<svg style='position:absolute;left:0;top:0;' width='1080' height='300' viewBox='0 0 1080 300'>"
+              "<path d='M826 104 L826 80 C826 50 864 44 866 70 C867 84 856 90 848 92' stroke='#DCE3EA' stroke-width='9' fill='none' stroke-linecap='round'/>"
+              "<path d='M826 104 L664 190 Q648 202 670 202 L982 202 Q1004 202 988 190 Z' stroke='#DCE3EA' stroke-width='11' fill='none' stroke-linejoin='round'/>"
+              "<path d='M826 202 C820 226 822 246 826 268' stroke='#F4ECDD' stroke-width='4' fill='none'/></svg>")
+    rows = ""
+    for lab, val in (copy.get("tag") or [["STYLE", "Smart-casual"], ["FIT", "One step smarter"]])[:3]:
+        rows += (f"<div style='border-top:2px dashed rgba(122,90,46,.45);padding:8px 0 6px;'>"
+                 f"<div style=\"font-family:'DM Sans';font-weight:800;font-size:17px;letter-spacing:4px;color:{BROWN};\">{lab.upper()}</div>"
+                 f"<div style=\"font-family:IWSerif,Georgia,serif;font-style:italic;font-size:33px;line-height:1.1;color:{NAVYT};\">{val}</div></div>")
+    bars = "".join(f"<div style='width:{w}px;height:34px;background:{NAVYT};'></div>"
+                   for w in (4, 2, 6, 3, 2, 5, 2, 7, 3, 2, 4, 6, 2, 3, 5, 2, 4))
+    tag = (f"<div style='position:absolute;left:660px;top:244px;width:330px;transform:rotate(-5deg);transform-origin:50% 28px;"
+           f"background:{KRAFT};border:4px solid {EDGE};box-shadow:10px 12px 0 rgba(4,30,24,.5);"
+           f"clip-path:polygon(18% 0,82% 0,100% 12%,100% 100%,0 100%,0 12%);padding:52px 28px 18px;box-sizing:border-box;'>"
+           f"<div style='position:absolute;left:50%;top:16px;width:22px;height:22px;margin-left:-11px;border-radius:50%;background:{EM2};border:3px solid {EDGE};'></div>"
+           f"<div style=\"font-family:Inter;font-weight:900;font-size:22px;letter-spacing:3px;color:{NAVYT};text-align:center;margin-bottom:8px;\">{copy.get('tag_title','INTERVIEW FIT')}</div>"
+           f"{rows}<div style='display:flex;gap:4px;justify-content:center;margin-top:10px;'>{bars}</div></div>")
+    card = _paper_card(_step_cells(copy.get("points", [])[:6], EM))
+    return bg + L.logo_tl() + _obj_pill(copy.get('eyebrow', 'DRESS CODE'), 56, 196) + head + hanger + tag + card + _obj_foot(copy.get('cta', ''))
+
+
+def w_metro(copy, week_id='adhoc'):
+    """A route map on a cream ground - for 'where to look / which channels'
+    topics. Each channel is a station on one line; a single ticket from
+    'applying everywhere' to 'your internship' carries the promise."""
+    CREAM, LINE, MUTED = "#F4EFE6", "#E5483F", "#5B6B82"
+    bg = (f"<div style='position:absolute;inset:0;background:{CREAM};"
+          f"background-image:linear-gradient(rgba(21,39,67,.05) 2px,transparent 2px),linear-gradient(90deg,rgba(21,39,67,.05) 2px,transparent 2px);"
+          f"background-size:54px 54px;'></div>")
+    logo = f"<div style='position:absolute;left:56px;top:44px;'><img src='{L.DARKLOGO}' style='height:{L.LOGO}px;'></div>"
+    head = (f"<div style='position:absolute;left:56px;top:266px;width:560px;'>"
+            + L.hero(copy['headline'], "highlight", NAVYT, NAVYT, hi=AMBER, size=60, width=560) + "</div>")
+    frm, to = copy.get("ticket") or ["Applying everywhere", "Your internship"]
+    notch = "radial-gradient(circle at 0 50%,transparent 18px,#000 19px) left/51% 100% no-repeat,radial-gradient(circle at 100% 50%,transparent 18px,#000 19px) right/51% 100% no-repeat"
+    ticket = (f"<div style='position:absolute;left:660px;top:170px;width:360px;transform:rotate(6deg);filter:drop-shadow(10px 12px 0 rgba(10,24,48,.35));'>"
+              f"<div style='background:{AMBER};-webkit-mask:{notch};mask:{notch};padding:24px 34px 26px;'>"
+              f"<div style=\"display:flex;justify-content:space-between;font-family:'DM Sans';font-weight:800;font-size:17px;letter-spacing:4px;color:{NAVYT};\">"
+              f"<span>SINGLE</span><span>ADULT</span></div>"
+              f"<div style='border-top:3px dashed rgba(21,39,67,.35);margin:14px 0 12px;'></div>"
+              f"<div style=\"font-family:'DM Sans';font-weight:800;font-size:16px;letter-spacing:3px;color:rgba(21,39,67,.65);\">FROM</div>"
+              f"<div style=\"font-family:IWSerif,Georgia,serif;font-style:italic;font-size:31px;line-height:1.1;color:{NAVYT};margin-bottom:10px;\">{frm}</div>"
+              f"<div style=\"font-family:'DM Sans';font-weight:800;font-size:16px;letter-spacing:3px;color:rgba(21,39,67,.65);\">TO</div>"
+              f"<div style=\"font-family:Inter;font-weight:900;font-size:34px;line-height:1.05;color:{NAVYT};\">{to}</div></div></div>")
+    stops = (copy.get("stops") or [])[:5]
+    n = max(len(stops), 2)
+    x0, x1, ly = 70, 922, 168                      # line ends and height inside the map card
+    xs = [x0 + (x1 - x0) * i / (n - 1) for i in range(n)]
+    svg = (f"<svg style='position:absolute;left:0;top:0;' width='992' height='340'>"
+           f"<line x1='{x0-30}' y1='{ly}' x2='{x1+30}' y2='{ly}' stroke='{LINE}' stroke-width='18' stroke-linecap='round'/></svg>")
+    nodes = labels = ""
+    for i, ((name, note), x) in enumerate(zip(stops, xs)):
+        last = i == len(stops) - 1
+        d = 58 if last else 46
+        nodes += (f"<div style='position:absolute;left:{x-d/2}px;top:{ly-d/2}px;width:{d}px;height:{d}px;border-radius:50%;box-sizing:border-box;"
+                  f"background:{'#fff' if not last else NAVYT};border:7px solid {NAVYT};display:flex;align-items:center;justify-content:center;"
+                  f"font-family:Inter;font-weight:900;font-size:{20 if not last else 22}px;color:{NAVYT if not last else '#fff'};'>{i+1}</div>")
+        above = i % 2 == 0
+        w = 300
+        left = x - 26 if i == 0 else (x - w + 26 if last else x - w / 2)
+        align = "left" if i == 0 else ("right" if last else "center")
+        pos = f"bottom:{340-ly+44}px;" if above else f"top:{ly+44}px;"
+        labels += (f"<div style='position:absolute;left:{left}px;width:{w}px;{pos}text-align:{align};'>"
+                   f"<div style=\"font-family:Inter;font-weight:900;font-size:27px;line-height:1.05;color:{NAVYT};letter-spacing:-.4px;\">{name}</div>"
+                   f"<div style=\"font-family:'DM Sans';font-weight:700;font-size:21px;line-height:1.2;color:{MUTED};margin-top:5px;\">{note}</div></div>")
+    route = (f"<div style='position:absolute;left:44px;top:600px;width:992px;height:340px;box-sizing:border-box;background:#fff;"
+             f"border:4px solid {EDGE};border-radius:26px;box-shadow:10px 10px 0 rgba(10,24,48,.35);overflow:hidden;'>"
+             f"{svg}{nodes}{labels}</div>")
+    return (bg + logo + _obj_pill(copy.get('eyebrow', 'WHERE TO LOOK'), 56, 196, bg=NAVYT, ink="#fff") + head + ticket + route
+            + _obj_foot(copy.get('cta', ''), ink=NAVYT, url_ink=LINE))
+
+
+def w_scales(copy, week_id='adhoc'):
+    """A level balance scale on deep blue - for two-sided answers (strengths and
+    weaknesses, pros and cons). Each pan holds one side's rule; the card below
+    splits the steps into the same two columns."""
+    BL, BL2, BRASS = "#1D6FB8", "#0B2F5A", "#FFC34D"
+    left_lab, right_lab = copy.get("sides") or ["Strengths", "Weaknesses"]
+    left_pan, right_pan = copy.get("pans") or ["+ proof", "+ a fix"]
+    bg = (f"<div style='position:absolute;inset:0;background:radial-gradient(95% 85% at 80% 12%,{BL},{BL2});'></div>"
+          + L.dots("left:440px;top:120px;", color="rgba(255,255,255,.16)", w=130, h=110))
+    head = (f"<div style='position:absolute;left:56px;top:266px;width:540px;'>"
+            + L.hero(copy['headline'], "underline", "#FFFFFF", "#FFFFFF", hi=AMBER, size=56, width=540) + "</div>")
+    cx, by, lc, rc, py = 790, 196, 626, 954, 470     # post x, beam y, pan centres, pan y
+    scale = (f"<svg style='position:absolute;left:0;top:0;' width='1080' height='640' viewBox='0 0 1080 640'>"
+             f"<g stroke='{EDGE}' stroke-width='4' stroke-linejoin='round'>"
+             f"<path d='M{cx-90} 600 Q{cx} 556 {cx+90} 600 Z' fill='{BRASS}'/>"
+             f"<rect x='{cx-11}' y='{by}' width='22' height='{590-by}' fill='{BRASS}'/>"
+             f"<rect x='{lc}' y='{by-10}' width='{rc-lc}' height='20' rx='10' fill='{BRASS}'/>"
+             f"<circle cx='{cx}' cy='{by}' r='22' fill='{BRASS}'/><circle cx='{cx}' cy='{by-40}' r='14' fill='{BRASS}'/></g>"
+             f"<g stroke='#F4ECDD' stroke-width='3'>"
+             f"<line x1='{lc}' y1='{by}' x2='{lc-84}' y2='{py}'/><line x1='{lc}' y1='{by}' x2='{lc+84}' y2='{py}'/>"
+             f"<line x1='{rc}' y1='{by}' x2='{rc-84}' y2='{py}'/><line x1='{rc}' y1='{by}' x2='{rc+84}' y2='{py}'/></g>"
+             f"<g stroke='{EDGE}' stroke-width='4' fill='{BRASS}'>"
+             f"<path d='M{lc-96} {py} Q{lc} {py+62} {lc+96} {py} Z'/><path d='M{rc-96} {py} Q{rc} {py+62} {rc+96} {py} Z'/></g></svg>")
+    def pan_card(x, lab, val, col, rot):
+        return (f"<div style='position:absolute;left:{x-82}px;top:{py-128}px;width:164px;height:124px;box-sizing:border-box;padding:14px 10px;"
+                f"background:{col};border:4px solid {EDGE};border-radius:16px;transform:rotate({rot}deg);text-align:center;"
+                f"box-shadow:6px 6px 0 rgba(10,24,48,.4);'>"
+                f"<div style=\"font-family:'DM Sans';font-weight:800;font-size:{15 if len(lab) <= 10 else 12}px;letter-spacing:{2.5 if len(lab) <= 10 else 1.2}px;color:{NAVYT};\">{lab.upper()}</div>"
+                f"<div style=\"font-family:IWSerif,Georgia,serif;font-style:italic;font-size:34px;line-height:1.05;color:{NAVYT};margin-top:8px;\">{val}</div></div>")
+    pans = pan_card(lc, left_lab, left_pan, GREEN, -3) + pan_card(rc, right_lab, right_pan, CORAL, 3)
+    def col(lab, dot, items):
+        li = "".join(f"<div style='display:flex;gap:14px;align-items:flex-start;margin-top:16px;'>"
+                     f"<div style='flex:0 0 14px;height:14px;margin-top:11px;border-radius:50%;background:{dot};border:3px solid {EDGE};'></div>"
+                     f"<span style=\"font-family:Inter;font-weight:700;font-size:28px;line-height:1.15;color:{NAVYT};letter-spacing:-.3px;\">{t}</span></div>"
+                     for t in items)
+        return (f"<div style='flex:1;'><div style=\"font-family:'DM Sans';font-weight:800;font-size:19px;letter-spacing:4px;color:{NAVYT};\">"
+                f"{lab.upper()}</div>{li}</div>")
+    card = _paper_card(col(left_lab, GREEN, copy.get("left", [])[:3])
+                       + f"<div style='width:3px;background:rgba(21,39,67,.15);'></div>"
+                       + col(right_lab, CORAL, copy.get("right", [])[:3]), grid=False)
+    return bg + L.logo_tl() + _obj_pill(copy.get('eyebrow', 'INTERVIEW'), 56, 196) + head + scale + pans + card + _obj_foot(copy.get('cta', ''))
+
+
+
+def w_planner(copy, week_id='adhoc'):
+    """A spiral desk-diary page on warm orange - for 'what a day/week actually
+    looks like' topics. The timetable IS the content; a sticky note carries the
+    myth the post is busting."""
+    OR, OR2, SUN = "#F28C3B", "#B84A1E", "#FFE27A"
+    bg = (f"<div style='position:absolute;inset:0;background:radial-gradient(95% 85% at 82% 8%,{OR},{OR2});'></div>"
+          + L.dots("left:470px;top:110px;", color="rgba(255,255,255,.2)", w=130, h=110))
+    head = (f"<div style='position:absolute;left:56px;top:266px;width:560px;'>"
+            + L.hero(copy['headline'], "highlight", "#FFFFFF", NAVYT, hi=SUN, size=60, width=560) + "</div>")
+    sticky = (f"<div style='position:absolute;left:690px;top:150px;width:320px;height:300px;box-sizing:border-box;padding:56px 30px 26px;"
+              f"background:{SUN};transform:rotate(5deg);box-shadow:10px 12px 0 rgba(70,20,5,.35);border:4px solid {EDGE};'>"
+              f"<div style='position:absolute;left:50%;top:-16px;width:120px;height:34px;margin-left:-60px;background:rgba(255,255,255,.55);transform:rotate(-4deg);'></div>"
+              f"<div style=\"font-family:'DM Sans';font-weight:800;font-size:17px;letter-spacing:4px;color:{OR2};\">{copy.get('note_label','MYTH')}</div>"
+              f"<div style=\"font-family:IWSerif,Georgia,serif;font-style:italic;font-size:38px;line-height:1.12;color:{NAVYT};margin-top:10px;\">{copy.get('note','')}</div></div>")
+    rings = "".join(f"<div style='position:absolute;top:-22px;left:{x}px;width:20px;height:44px;border-radius:10px;background:#D9DEE7;border:4px solid {EDGE};'></div>"
+                    for x in range(70, 960, 74))
+    rows = ""
+    for t, what in (copy.get("day") or [])[:5]:
+        rows += (f"<div style='display:flex;align-items:center;gap:26px;height:58px;border-bottom:2px solid rgba(21,39,67,.10);'>"
+                 f"<div style=\"flex:0 0 104px;font-family:'DM Sans';font-weight:800;font-size:26px;color:{OR2};\">{t}</div>"
+                 f"<div style=\"font-family:Inter;font-weight:700;font-size:29px;color:{NAVYT};letter-spacing:-.3px;\">{what}</div></div>")
+    page = (f"<div style='position:absolute;left:44px;top:560px;width:992px;height:396px;box-sizing:border-box;padding:40px 44px 0;"
+            f"background:{OBJ_PAPER};border:4px solid {EDGE};border-radius:22px;box-shadow:10px 10px 0 rgba(70,20,5,.4);"
+            f"background-image:linear-gradient(90deg,transparent 168px,rgba(229,72,63,.35) 168px,rgba(229,72,63,.35) 171px,transparent 171px);'>"
+            f"{rings}<div style=\"display:flex;justify-content:space-between;font-family:'DM Sans';font-weight:800;font-size:18px;letter-spacing:4px;color:{NAVYT};margin-bottom:6px;position:relative;background:{OBJ_PAPER};padding-bottom:6px;\">"
+            f"<span>{copy.get('page_title','A TYPICAL DAY')}</span><span style='color:{OR2};'>{copy.get('page_day','TUESDAY')}</span></div>{rows}</div>")
+    return bg + L.logo_tl() + _obj_pill(copy.get('eyebrow', 'INTERN LIFE'), 56, 196, bg=NAVYT, ink="#fff") + head + sticky + page + _obj_foot(copy.get('cta', ''))
+
+
+def w_player(copy, week_id='adhoc'):
+    """A music player with a spinning record, on magenta - for 'build your
+    answer' topics with a time limit. Each step is a track with its own running
+    time, so the tracklist adds up to the answer's length."""
+    MG, MG2, APP = "#D0397A", "#5E1240", "#1E0F2B"
+    bg = (f"<div style='position:absolute;inset:0;background:radial-gradient(95% 85% at 82% 8%,{MG},{MG2});'></div>"
+          + L.dots("left:450px;top:110px;", color="rgba(255,255,255,.18)", w=130, h=110))
+    head = (f"<div style='position:absolute;left:56px;top:266px;width:540px;'>"
+            + L.hero(copy['headline'], "serif_italic", "#FFFFFF", AMBER, hi=AMBER, size=56, width=540) + "</div>")
+    grooves = "".join(f"<circle cx='190' cy='190' r='{r}' fill='none' stroke='rgba(255,255,255,.08)' stroke-width='2'/>" for r in range(80, 186, 12))
+    record = (f"<svg style='position:absolute;left:640px;top:120px;' width='380' height='380' viewBox='0 0 380 380'>"
+              f"<circle cx='190' cy='190' r='186' fill='#0B0710' stroke='{EDGE}' stroke-width='4'/>{grooves}"
+              f"<path d='M190 20 A170 170 0 0 1 330 100' stroke='rgba(255,255,255,.22)' stroke-width='10' fill='none' stroke-linecap='round'/>"
+              f"<circle cx='190' cy='190' r='74' fill='{AMBER}' stroke='{EDGE}' stroke-width='4'/>"
+              f"<circle cx='190' cy='190' r='8' fill='{EDGE}'/>"
+              f"<text x='190' y='176' text-anchor='middle' font-family='DM Sans' font-weight='800' font-size='15' letter-spacing='3' fill='{NAVYT}'>{copy.get('label_top','YOUR')}</text>"
+              f"<text x='190' y='218' text-anchor='middle' font-family='DM Sans' font-weight='800' font-size='15' letter-spacing='3' fill='{NAVYT}'>{copy.get('label_bottom','ANSWER')}</text></svg>")
+    tracks = ""
+    for i, (name, dur) in enumerate((copy.get("tracks") or [])[:5], 1):
+        live = i == 1
+        tracks += (f"<div style='display:flex;align-items:center;gap:22px;height:56px;border-top:1px solid rgba(255,255,255,.10);'>"
+                   f"<div style=\"flex:0 0 30px;font-family:Inter;font-weight:800;font-size:24px;color:{AMBER if live else 'rgba(255,255,255,.5)'};\">{i}</div>"
+                   f"<div style=\"flex:1;font-family:Inter;font-weight:700;font-size:29px;color:#fff;letter-spacing:-.3px;\">{name}</div>"
+                   f"<div style=\"font-family:'DM Sans';font-weight:700;font-size:22px;color:rgba(255,255,255,.6);\">{dur}</div></div>")
+    play = (f"<svg width='150' height='44' viewBox='0 0 150 44'>"
+            f"<path d='M14 10v24M38 10 20 22l18 12z' fill='#fff' stroke='#fff' stroke-width='3' stroke-linejoin='round'/>"
+            f"<circle cx='75' cy='22' r='21' fill='{AMBER}'/><path d='M68 12v20l16-10z' fill='{APP}'/>"
+            f"<path d='M136 10v24M112 10l18 12-18 12z' fill='#fff' stroke='#fff' stroke-width='3' stroke-linejoin='round'/></svg>")
+    app = (f"<div style='position:absolute;left:44px;top:546px;width:992px;height:412px;box-sizing:border-box;padding:28px 40px 0;"
+           f"background:{APP};border:4px solid {EDGE};border-radius:26px;box-shadow:10px 10px 0 rgba(20,4,14,.5);'>"
+           f"<div style='display:flex;align-items:center;justify-content:space-between;'>"
+           f"<div><div style=\"font-family:'DM Sans';font-weight:800;font-size:16px;letter-spacing:4px;color:{AMBER};\">NOW PLAYING</div>"
+           f"<div style=\"font-family:Inter;font-weight:900;font-size:34px;color:#fff;letter-spacing:-.5px;margin-top:4px;\">{copy.get('track','')}</div></div>{play}</div>"
+           f"<div style='display:flex;align-items:center;gap:16px;margin:16px 0 14px;'>"
+           f"<span style=\"font-family:'DM Sans';font-weight:700;font-size:19px;color:rgba(255,255,255,.6);\">0:00</span>"
+           f"<div style='flex:1;height:8px;border-radius:4px;background:rgba(255,255,255,.18);position:relative;'>"
+           f"<div style='position:absolute;left:0;top:0;bottom:0;width:22%;border-radius:4px;background:{AMBER};'></div>"
+           f"<div style='position:absolute;left:22%;top:50%;width:20px;height:20px;margin:-10px 0 0 -10px;border-radius:50%;background:#fff;'></div></div>"
+           f"<span style=\"font-family:'DM Sans';font-weight:700;font-size:19px;color:rgba(255,255,255,.6);\">{copy.get('length','1:00')}</span></div>"
+           f"{tracks}</div>")
+    return bg + L.logo_tl() + _obj_pill(copy.get('eyebrow', 'INTERVIEW'), 56, 196) + head + record + app + _obj_foot(copy.get('cta', ''))
+
+
+def w_rec(copy, week_id='adhoc'):
+    """A laptop mid-recording on a dark studio ground - for recorded and video
+    interview topics. The REC light, countdown and on-screen question set the
+    scene; a hand-drawn arrow points at the camera, which is the main lesson."""
+    INKB, RED = "#151A26", "#FF4D4D"
+    bg = (f"<div style='position:absolute;inset:0;background:radial-gradient(70% 60% at 78% 24%,#33405C,{INKB} 70%);'></div>"
+          + L.dots("left:450px;top:110px;", color="rgba(255,255,255,.14)", w=130, h=110))
+    head = (f"<div style='position:absolute;left:56px;top:266px;width:520px;'>"
+            + L.hero(copy['headline'], "underline", "#FFFFFF", "#FFFFFF", hi=RED, size=56, width=520) + "</div>")
+    q = copy.get("screen_q", "Q2 of 5: Why this role?")
+    laptop = (f"<div style='position:absolute;left:600px;top:150px;width:420px;height:290px;box-sizing:border-box;padding:26px 18px 18px;"
+              f"background:#0A0D14;border:4px solid {EDGE};border-radius:22px;box-shadow:10px 12px 0 rgba(0,0,0,.45);'>"
+              f"<div style='position:absolute;left:50%;top:9px;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:#7CF0B0;box-shadow:0 0 10px #7CF0B0;'></div>"
+              f"<div style='position:relative;width:100%;height:100%;border-radius:10px;overflow:hidden;background:linear-gradient(160deg,#4B5D80,#26324A);'>"
+              f"<svg style='position:absolute;left:50%;bottom:0;margin-left:-80px;' width='160' height='150' viewBox='0 0 160 150'>"
+              f"<circle cx='80' cy='52' r='34' fill='#9FB0CC'/><path d='M14 150c0-44 30-66 66-66s66 22 66 66z' fill='#9FB0CC'/></svg>"
+              f"<div style='position:absolute;left:12px;top:12px;display:flex;align-items:center;gap:8px;height:30px;padding:0 12px;border-radius:15px;background:rgba(0,0,0,.45);'>"
+              f"<div style='width:12px;height:12px;border-radius:50%;background:{RED};'></div>"
+              f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:15px;letter-spacing:2px;color:#fff;\">REC</span></div>"
+              f"<div style=\"position:absolute;right:12px;top:10px;font-family:Inter;font-weight:900;font-size:28px;color:#fff;\">{copy.get('timer','0:58')}</div>"
+              f"<div style=\"position:absolute;left:12px;right:12px;bottom:12px;padding:10px 14px;border-radius:10px;background:rgba(0,0,0,.55);"
+              f"font-family:Inter;font-weight:800;font-size:20px;color:#fff;\">{q}</div></div></div>"
+              f"<div style='position:absolute;left:560px;top:436px;width:500px;height:22px;border-radius:0 0 18px 18px;background:#C9D1DD;border:4px solid {EDGE};'></div>")
+    arrow = (f"<svg style='position:absolute;left:0;top:0;' width='1080' height='200' viewBox='0 0 1080 200'>"
+             f"<path d='M700 92 C740 54 770 52 800 150' stroke='{AMBER}' stroke-width='5' fill='none' stroke-linecap='round'/>"
+             f"<path d='M786 136 L801 156 L812 133' stroke='{AMBER}' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>"
+             f"<div style=\"position:absolute;left:404px;top:66px;width:280px;text-align:right;font-family:IWSerif,Georgia,serif;font-style:italic;"
+             f"font-size:32px;line-height:1.05;color:{AMBER};transform:rotate(-4deg);\">{copy.get('arrow_note','Look here, not at you')}</div>")
+    card = _paper_card(_step_cells(copy.get("points", [])[:6], RED), top=512, height=370)
+    return bg + L.logo_tl() + _obj_pill(copy.get('eyebrow', 'VIDEO INTERVIEW'), 56, 196, bg=RED, ink="#fff") + head + laptop + arrow + card + _obj_foot(copy.get('cta', ''))
+
+
 SINGLE = {"tipcard": w_tipcard, "statement": w_statement, "badge": w_badge,
+          "swingtag": w_swingtag, "metro": w_metro, "scales": w_scales,
+          "planner": w_planner, "player": w_player, "rec": w_rec,
           "bigidea": w_bigidea, "splitcard": w_splitcard,
           "memo": w_memo, "scorecard": w_scorecard,
           "message_lab": w_message_lab, "focus_studio": w_focus_studio,

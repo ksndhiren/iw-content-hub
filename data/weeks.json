@@ -10805,101 +10805,842 @@
       "id": "week23",
       "label": "Week 23",
       "weekCommencing": "2026-11-02",
-      "builtAt": 1793655639,
+      "builtAt": 1793761690,
       "posts": [
         {
-          "id": "week23-tue-quote",
-          "day": "Tue 3 Nov",
-          "lane": "quote",
-          "title": "Quote: Charles Dickens",
+          "id": "week23-mon-news",
+          "day": "Mon 2 Nov",
+          "lane": "news",
+          "title": "Students Team Up with Professional Chefs",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "Catering and Hospitality students at a UK college recently had the chance to work alongside professional chefs, putting their skills to the test in a real-world environment. This hands-on experience is a crucial part of their education, allowing them to bridge the gap between classroom learning and actual practice.\n\nFor students and graduates, experiences like these emphasize the importance of applying theoretical knowledge in practical settings. It prepares them for the challenges of the workplace and enhances their employability.\n\nInternships offer similar benefits, providing students with the opportunity to gain industry insights and practical skills, making them more competitive in the job market.\n\nSource: FE News.",
+          "hashtags": [
+            "#culinaryskills",
+            "#studentexperience",
+            "#ukeducation",
+            "#careerdevelopment",
+            "#internships"
+          ],
+          "captions": {
+            "ig-fb": "Catering and Hospitality students at a UK college recently had the chance to work alongside professional chefs, putting their skills to the test in a real-world environment. This hands-on experience is a crucial part of their education, allowing them to bridge the gap between classroom learning and actual practice.\n\nFor students and graduates, experiences like these emphasize the importance of applying theoretical knowledge in practical settings. It prepares them for the challenges of the workplace and enhances their employability.\n\nInternships offer similar benefits, providing students with the opportunity to gain industry insights and practical skills, making them more competitive in the job market.\n\nSource: FE News.",
+            "linkedin": "A group of Catering and Hospitality students from a UK college recently worked alongside professional chefs to gain valuable hands-on experience. This collaboration allowed students to apply their classroom knowledge in a practical setting, enhancing their culinary skills and preparing them for future career opportunities.\n\nFor students and recent graduates, such experiences are a vital part of their education. They provide a deeper understanding of the industry and help build confidence for entering the workforce.\n\nInternships offer a similar pathway, giving students the chance to develop real-world skills and insights, which are essential for a successful transition from education to employment.\n\nSource: FE News.",
+            "x": "UK college students gained hands-on culinary experience by working with professional chefs. Such practical opportunities are key for career readiness, highlighting the importance of internships in building skills. (Source: FE News)",
+            "threads": "Catering students at a UK college gained hands-on experience by working with professional chefs. This highlights the importance of real-world practice and internships in building career skills. Learn more at www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#culinaryskills",
+              "#studentexperience",
+              "#ukeducation",
+              "#careerdevelopment",
+              "#internships"
+            ],
+            "linkedin": [
+              "#studentexperience",
+              "#careerskills",
+              "#internships"
+            ],
+            "x": [
+              "#careerskills",
+              "#internships"
+            ]
+          }
+        },
+        {
+          "id": "week23-wed-news",
+          "day": "Wed 4 Nov",
+          "lane": "news",
+          "title": "Youth Job Grant Faces Application Hurdle",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "The UK government has launched a £3,000 Youth Jobs Grant aimed at helping young job seekers. But there's a catch: the application process is complex and may deter many from applying successfully. This is crucial because the grant's benefits are only reachable if youth can access them. What does this mean for you? Navigating applications is a vital skill. Start by seeking guidance and practising with easier forms. Internships can also help by offering opportunities that build your confidence and experience. Source: FE News.",
+          "hashtags": [
+            "#youthjobs",
+            "#ukcareers",
+            "#internships",
+            "#jobgrants",
+            "#careerdevelopment"
+          ],
+          "captions": {
+            "ig-fb": "The UK government has launched a £3,000 Youth Jobs Grant aimed at helping young job seekers. But there's a catch: the application process is complex and may deter many from applying successfully. This is crucial because the grant's benefits are only reachable if youth can access them. What does this mean for you? Navigating applications is a vital skill. Start by seeking guidance and practising with easier forms. Internships can also help by offering opportunities that build your confidence and experience. Source: FE News.",
+            "linkedin": "A new £3,000 Youth Jobs Grant has been introduced by the UK government to assist young job seekers. However, the complexity of the application process is creating a barrier to access. This matters because the grant's potential impact is limited if applicants struggle with paperwork. Understanding how to navigate application processes is increasingly important. For students and graduates, this highlights the need for clear guidance and practice in completing forms. Internships can serve as a valuable step in building the necessary skills and confidence to tackle these challenges, offering paid, structured experiences. Source: FE News.",
+            "x": "The UK’s £3,000 Youth Jobs Grant is meant to help young job seekers, but a tricky application process may limit its reach. Simplifying applications could make a big difference. Internships offer paid experience to build confidence and skills. (Source: FE News)",
+            "threads": "The new £3,000 Youth Jobs Grant aims to support young job seekers, but its complex application process poses a challenge. Navigating these forms is crucial. Internships can provide the paid experience needed to boost confidence and skills. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#youthjobs",
+              "#ukcareers",
+              "#internships",
+              "#jobgrants",
+              "#careerdevelopment"
+            ],
+            "linkedin": [
+              "#youthemployment",
+              "#ukjobs",
+              "#internwise"
+            ],
+            "x": [
+              "#youthjobs",
+              "#internwise"
+            ]
+          }
+        },
+        {
+          "id": "week23-wed-tip",
+          "day": "Wed 4 Nov",
+          "lane": "education",
+          "time": "11:00",
+          "title": "What Interns Actually Do All Day",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Charles Dickens was onto something when he said, 'Procrastination is the thief of time. Collar him!' Time is precious, especially when it comes to jumpstarting your career. Don't let opportunities slip through your fingers. Dive into a wealth of internships and graduate jobs today at www.internwise.co.uk.",
+          "caption": "Ever wondered what interns actually do all day? It is not all coffee runs.\n\nA typical day mixes a team catch-up, time on your own project, a meeting you sit in on, and a quick check-in on how it went. The best internships give you real work and real feedback.\n\nSave this for your first week, and send it to a friend who is about to start.\n\nFind internships with real work at internwise.co.uk",
           "hashtags": [
-            "#careerready",
-            "#internships",
-            "#graduatejobs",
-            "#timetoact",
-            "#internwise"
+            "#internshiptips",
+            "#internlife",
+            "#studentlife",
+            "#careeradvice",
+            "#ukinternships"
           ],
           "captions": {
-            "ig-fb": "Charles Dickens was onto something when he said, 'Procrastination is the thief of time. Collar him!' Time is precious, especially when it comes to jumpstarting your career. Don't let opportunities slip through your fingers. Dive into a wealth of internships and graduate jobs today at www.internwise.co.uk.",
-            "linkedin": "Charles Dickens aptly warned us, 'Procrastination is the thief of time. Collar him!' In the fast-moving world of careers, every minute counts. Whether you're looking to gain experience or start your graduate journey, the time to act is now. Explore numerous opportunities waiting for you at internwise.co.uk.",
-            "x": "Charles Dickens said it best: 'Procrastination is the thief of time. Collar him!' Time to seize the day and grab those internships. Start now at internwise.co.uk."
+            "ig-fb": "Ever wondered what interns actually do all day? It is not all coffee runs.\n\nA typical day mixes a team catch-up, time on your own project, a meeting you sit in on, and a quick check-in on how it went. The best internships give you real work and real feedback.\n\nSave this for your first week, and send it to a friend who is about to start.\n\nFind internships with real work at internwise.co.uk",
+            "linkedin": "\"What do interns actually do?\" is one of the most common questions students search before they apply.\n\nA good internship day usually includes a team catch-up, time on a project of your own, sitting in on a meeting, and a chance to share progress and get feedback. If a role is all errands and no learning, that is worth asking about at interview.\n\nFind internships with real work at internwise.co.uk",
+            "x": "What do interns actually do all day? Catch-ups, your own project, meetings, feedback. Not just coffee runs. internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#careerready",
+              "#internshiptips",
+              "#internlife",
+              "#studentlife",
+              "#careeradvice",
+              "#ukinternships"
+            ],
+            "linkedin": [
               "#internships",
+              "#earlycareers",
+              "#careeradvice"
+            ],
+            "x": [
+              "#internshiptips",
+              "#internlife"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Intern Life",
+            "headline": "What Interns Actually Do All Day",
+            "tone": "practical",
+            "note_label": "MYTH",
+            "note": "It is all coffee runs and photocopying.",
+            "page_title": "A TYPICAL INTERN DAY",
+            "page_day": "TUESDAY",
+            "day": [
+              [
+                "9:30",
+                "Team catch-up on today's plan"
+              ],
+              [
+                "10:00",
+                "Work on your own project"
+              ],
+              [
+                "12:30",
+                "Lunch with the team"
+              ],
+              [
+                "14:00",
+                "Sit in on a meeting, take notes"
+              ],
+              [
+                "16:30",
+                "Share progress, ask for feedback"
+              ]
+            ],
+            "cta": "Real work, real feedback, every day."
+          },
+          "world": "planner"
+        },
+        {
+          "id": "week23-wed-education",
+          "day": "Wed 4 Nov",
+          "lane": "education",
+          "title": "Where to Actually Find Internships",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
+          ],
+          "status": "in-review",
+          "caption": "Applying everywhere but getting nowhere? Discover the five places UK internships are truly advertised and how to use each effectively. 🌟\n\n1. Specialist Internship Boards: These list paid UK roles in one place, filtered by sector and location. Perfect for targeting your search.\n\n2. University Careers Service: Your uni holds roles that often never reach public job boards. Don't overlook this goldmine!\n\n3. Company Careers Pages: Check these early. Many post roles before they appear anywhere else.\n\n4. Speculative Emails: Small businesses may hire from a well-crafted email with your CV. It's worth a shot.\n\nRemember: it's better to use three channels well than ten badly. 🎯\n\nStart your focused search today at www.internwise.co.uk",
+          "hashtags": [
+            "#internshiphunt",
+            "#careertips",
+            "#ukinternships",
+            "#studentlife",
+            "#graduatejobs"
+          ],
+          "captions": {
+            "ig-fb": "Applying everywhere but getting nowhere? Discover the five places UK internships are truly advertised and how to use each effectively. 🌟\n\n1. Specialist Internship Boards: These list paid UK roles in one place, filtered by sector and location. Perfect for targeting your search.\n\n2. University Careers Service: Your uni holds roles that often never reach public job boards. Don't overlook this goldmine!\n\n3. Company Careers Pages: Check these early. Many post roles before they appear anywhere else.\n\n4. Speculative Emails: Small businesses may hire from a well-crafted email with your CV. It's worth a shot.\n\nRemember: it's better to use three channels well than ten badly. 🎯\n\nStart your focused search today at www.internwise.co.uk",
+            "linkedin": "Feeling stuck applying everywhere but hearing nothing back? Let's narrow down your search to the places where UK internships are genuinely advertised. \n\n1. Specialist Internship Boards: These boards list roles, conveniently filtered by sector and location. It's your one-stop shop.\n\n2. University Careers Service: Don't underestimate the value of your university's careers service. They often have exclusive roles.\n\n3. Company Careers Pages: Get in early; companies post here first, before roles are syndicated elsewhere.\n\n4. Speculative Emails: A short, targeted email to small businesses, complete with your CV, could lead to an opportunity. \n\nFocus your efforts on three smart channels for better results. Start today at internwise.co.uk.",
+            "x": "Struggling to find internships? Learn where they're really advertised and how to use each channel effectively. Start your focused search at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internshiphunt",
+              "#careertips",
+              "#ukinternships",
+              "#studentlife",
+              "#graduatejobs"
+            ],
+            "linkedin": [
+              "#careeradvice",
+              "#internship",
+              "#graduatejobs"
+            ],
+            "x": [
+              "#internship",
+              "#careeradvice"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Find Internships",
+            "headline": "Where to Actually Find Internships",
+            "tone": "practical",
+            "slides": [
+              {
+                "tag": "Specialist Boards",
+                "title": "Use Internship Boards",
+                "body": "Specialist boards list UK internships in one place. Filter by sector and location, then set alerts."
+              },
+              {
+                "tag": "Uni Resources",
+                "title": "Check Careers Services",
+                "body": "Your careers service hears about roles that never reach public boards. Ask what is open this month."
+              },
+              {
+                "tag": "Direct Approach",
+                "title": "Email Small Businesses",
+                "body": "Many small firms never advertise. A short email with your CV and one idea for them can create a role."
+              }
+            ],
+            "points": null,
+            "cta": "Use three channels well instead of ten badly."
+          },
+          "world": "cream",
+          "poses": {
+            "cover": "nuno_phone",
+            "cta": "nuno_tablet"
+          }
+        },
+        {
+          "id": "week23-wed-engagement",
+          "day": "Wed 4 Nov",
+          "lane": "engagement",
+          "title": "Which gap on your CV worries you most?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Ever felt like your CV has a gap the size of the Grand Canyon? Remember, every gap is just a story waiting to be told. Whether it's travel, family, or learning, there's always a way to frame it positively. Don't let silence speak for you. Find the right role to fill those spaces at www.internwise.co.uk.",
+          "hashtags": [
+            "#careeradvice",
+            "#cvtips",
+            "#internships",
+            "#jobsearch",
+            "#graduatejobs"
+          ],
+          "captions": {
+            "ig-fb": "Ever felt like your CV has a gap the size of the Grand Canyon? Remember, every gap is just a story waiting to be told. Whether it's travel, family, or learning, there's always a way to frame it positively. Don't let silence speak for you. Find the right role to fill those spaces at www.internwise.co.uk.",
+            "linkedin": "Worried about those gaps in your CV? You're not alone. Each gap tells a story and offers a chance for growth. Instead of letting them linger, address them with clarity. One line can bridge the divide and show potential employers your resilience and adaptability. Explore opportunities that make your CV shine at internwise.co.uk.",
+            "x": "Mind the gap on your CV! Every career break has a reason. Tell your story and find the right match at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careeradvice",
+              "#cvtips",
+              "#internships",
+              "#jobsearch",
+              "#graduatejobs"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internships",
+              "#jobopportunities"
+            ],
+            "x": [
+              "#careeradvice",
+              "#jobsearch"
+            ]
+          },
+          "world": "proofboard",
+          "ideaId": "c027"
+        },
+        {
+          "id": "week23-wed-quote",
+          "day": "Wed 4 Nov",
+          "lane": "quote",
+          "title": "Quote: Samuel Smiles",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Every setback has a lesson to teach. Samuel Smiles reminds us that wisdom often comes through our failures, not our successes. Embrace the journey, learn from the past, and keep moving forward. Discover your next opportunity at www.internwise.co.uk.",
+          "hashtags": [
+            "#wisdominfailure",
+            "#growthmindset",
+            "#internshipjourney",
+            "#samuelsmiles",
+            "#internwiseuk"
+          ],
+          "captions": {
+            "ig-fb": "Every setback has a lesson to teach. Samuel Smiles reminds us that wisdom often comes through our failures, not our successes. Embrace the journey, learn from the past, and keep moving forward. Discover your next opportunity at www.internwise.co.uk.",
+            "linkedin": "Samuel Smiles teaches us an important lesson: wisdom is often born from failure. Each challenge is a stepping stone to growth and understanding. Embrace your journey's ups and downs, learn from your experiences, and keep striving. Explore opportunities to grow at internwise.co.uk.",
+            "x": "Samuel Smiles said it best: wisdom often comes from failure, not success. Embrace your journey and learn from every step. Discover opportunities at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#wisdominfailure",
+              "#growthmindset",
+              "#internshipjourney",
+              "#samuelsmiles",
+              "#internwiseuk"
+            ],
+            "linkedin": [
+              "#careergrowth",
+              "#learningjourney",
+              "#internwiseuk"
+            ],
+            "x": [
+              "#wisdom",
+              "#internwiseuk"
+            ]
+          },
+          "quoteId": "q047",
+          "world": "band"
+        },
+        {
+          "id": "week23-thu-tip",
+          "day": "Thu 5 Nov",
+          "lane": "education",
+          "time": "11:00",
+          "title": "What Are You Passionate About?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "\"What are you passionate about?\" sounds easy until you are in the interview.\n\nTreat it like a 60-second track: name one real interest, say what you actually did about it, share what it taught you, then link it to the role.\n\nOne real interest beats \"everything\" every time. Save this and practise it out loud before your next interview.\n\nMore interview help at internwise.co.uk",
+          "hashtags": [
+            "#interviewtips",
+            "#interviewquestions",
+            "#careeradvice",
+            "#graduatejobs",
+            "#internships"
+          ],
+          "captions": {
+            "ig-fb": "\"What are you passionate about?\" sounds easy until you are in the interview.\n\nTreat it like a 60-second track: name one real interest, say what you actually did about it, share what it taught you, then link it to the role.\n\nOne real interest beats \"everything\" every time. Save this and practise it out loud before your next interview.\n\nMore interview help at internwise.co.uk",
+            "linkedin": "\"What are you passionate about?\" is a question many candidates search for before an interview, and it is easy to answer vaguely.\n\nA simple structure that fits in about a minute: one genuine interest, what you did about it, what it taught you, and how it connects to the role. Specific beats enthusiastic.\n\nMore interview help at internwise.co.uk",
+            "x": "\"What are you passionate about?\" One real interest, what you did, what you learned, why it fits the role. 60 seconds. internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#interviewtips",
+              "#interviewquestions",
+              "#careeradvice",
               "#graduatejobs",
-              "#timetoact",
+              "#internships"
+            ],
+            "linkedin": [
+              "#interviewtips",
+              "#earlycareers",
+              "#graduatejobs"
+            ],
+            "x": [
+              "#interviewtips",
+              "#interviewquestions"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Interview Question",
+            "headline": "What Are You Passionate About?",
+            "tone": "practical",
+            "label_top": "YOUR",
+            "label_bottom": "ANSWER",
+            "track": "Your 60-second answer",
+            "length": "1:00",
+            "tracks": [
+              [
+                "Name one real interest",
+                "0:10"
+              ],
+              [
+                "Say what you did about it",
+                "0:20"
+              ],
+              [
+                "Share what it taught you",
+                "0:15"
+              ],
+              [
+                "Link it to this role",
+                "0:15"
+              ]
+            ],
+            "cta": "One real interest beats “everything”."
+          },
+          "world": "player"
+        },
+        {
+          "id": "week23-thu-education",
+          "day": "Thu 5 Nov",
+          "lane": "education",
+          "title": "Master Strengths & Weaknesses",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Dreading the strengths and weaknesses question in interviews? You're not alone! Here's how to tackle it with confidence and authenticity. First, align your strengths with what the job advert calls for and back them up with a quick example. For weaknesses, choose something not vital to the role and highlight what you're doing to improve. Avoid clichés like 'I work too hard'; they don't impress anymore. Remember, a real weakness plus a real fix beats a fake weakness every time. Ready to shine in your next interview? Head to www.internwise.co.uk for more tips!",
+          "hashtags": [
+            "#interviewtips",
+            "#careeradvice",
+            "#internship",
+            "#jobsearch",
+            "#professionalgrowth"
+          ],
+          "captions": {
+            "ig-fb": "Dreading the strengths and weaknesses question in interviews? You're not alone! Here's how to tackle it with confidence and authenticity. First, align your strengths with what the job advert calls for and back them up with a quick example. For weaknesses, choose something not vital to the role and highlight what you're doing to improve. Avoid clichés like 'I work too hard'; they don't impress anymore. Remember, a real weakness plus a real fix beats a fake weakness every time. Ready to shine in your next interview? Head to www.internwise.co.uk for more tips!",
+            "linkedin": "Interviews can be nerve-wracking, especially when it comes to discussing strengths and weaknesses. But with a few smart strategies, you can turn this question into an opportunity to shine. Match your strengths to the job requirements and prove them with examples. When it comes to weaknesses, choose something that isn't crucial to the role and show how you're working on it. Steer clear of overused clichés like 'I work too hard'. A genuine weakness with a concrete improvement plan is far more effective. Ready to master your next interview? Visit internwise.co.uk for more insights.",
+            "x": "Mastering the strengths and weaknesses question is key. Match strengths to job needs, pick a real weakness, and show your improvement plan. Avoid clichés like 'workaholic'. Learn more: internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#interviewtips",
+              "#careeradvice",
+              "#internship",
+              "#jobsearch",
+              "#professionalgrowth"
+            ],
+            "linkedin": [
+              "#interviewpreparation",
+              "#careerdevelopment",
+              "#internshiptips"
+            ],
+            "x": [
+              "#interviewtips",
+              "#careeradvice"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Interview Tips",
+            "headline": "Master Strengths & Weaknesses",
+            "tone": "practical",
+            "slides": null,
+            "points": [
+              "Match strengths to the advert",
+              "Prove each one with an example",
+              "Pick a real weakness, not core to the role",
+              "Show how you are improving it",
+              "Skip “I work too hard”"
+            ],
+            "cta": "A real weakness with a real fix beats a fake one."
+          },
+          "world": "answerbank"
+        },
+        {
+          "id": "week23-thu-engagement",
+          "day": "Thu 5 Nov",
+          "lane": "engagement",
+          "title": "What would you want to know before accepting?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Before you dive into that exciting new opportunity, have you asked the right questions? It's easy to get caught up in the excitement of a new role, but knowing what to ask before accepting can make all the difference. Consider these: What's the team culture like? Are there growth opportunities? How is feedback handled? None of these questions are impolite - they're essential. Be informed, be prepared, and find your next internship at www.internwise.co.uk.",
+          "hashtags": [
+            "#internshipadvice",
+            "#careerquestions",
+            "#ukinternships",
+            "#askbeforeaccepting",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Before you dive into that exciting new opportunity, have you asked the right questions? It's easy to get caught up in the excitement of a new role, but knowing what to ask before accepting can make all the difference. Consider these: What's the team culture like? Are there growth opportunities? How is feedback handled? None of these questions are impolite - they're essential. Be informed, be prepared, and find your next internship at www.internwise.co.uk.",
+            "linkedin": "You've got an offer on the table - congrats! But before you jump in, have you asked the crucial questions? Understanding the team culture, the growth opportunities, and the feedback process can set you up for success. Remember, asking isn't rude; it's smart. Stay informed and compare offers to find the right fit for you at internwise.co.uk.",
+            "x": "Got an internship offer? Before you say yes, ask about team culture, growth opportunities, and feedback. It's not rude, it's smart. Explore more internships at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internshipadvice",
+              "#careerquestions",
+              "#ukinternships",
+              "#askbeforeaccepting",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#internshipadvice",
+              "#careergrowth",
+              "#internwise"
+            ],
+            "x": [
+              "#internshipadvice",
+              "#internwise"
+            ]
+          },
+          "world": "decision",
+          "ideaId": "c028"
+        },
+        {
+          "id": "week23-thu-quote",
+          "day": "Thu 5 Nov",
+          "lane": "quote",
+          "title": "Quote: Michael Faraday",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Michael Faraday once said, \"Nothing is too wonderful to be true, if it be consistent with the laws of nature.\" This week, let that inspire you to aim higher and explore the limitless possibilities in your journey. Whether you're looking to start your career or switch paths, opportunities are out there waiting. Uncover them with us at www.internwise.co.uk.",
+          "hashtags": [
+            "#inspiration",
+            "#careergoals",
+            "#internships",
+            "#aimhigher",
+            "#michaelfaraday"
+          ],
+          "captions": {
+            "ig-fb": "Michael Faraday once said, \"Nothing is too wonderful to be true, if it be consistent with the laws of nature.\" This week, let that inspire you to aim higher and explore the limitless possibilities in your journey. Whether you're looking to start your career or switch paths, opportunities are out there waiting. Uncover them with us at www.internwise.co.uk.",
+            "linkedin": "Michael Faraday's quote, \"Nothing is too wonderful to be true, if it be consistent with the laws of nature,\" reminds us to push the boundaries of what's possible. In your career, this means taking those leaps of faith, exploring new avenues, and believing in the potential of every opportunity. As you set your sights on new heights, remember that the right internship can be a powerful catalyst. Discover the next step in your journey at internwise.co.uk.",
+            "x": "Michael Faraday said, \"Nothing is too wonderful to be true, if it be consistent with the laws of nature.\" Let this inspire you to aim higher this week. Discover opportunities waiting for you at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#inspiration",
+              "#careergoals",
+              "#internships",
+              "#aimhigher",
+              "#michaelfaraday"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internships",
+              "#inspiration"
+            ],
+            "x": [
+              "#inspiration",
+              "#internships"
+            ]
+          },
+          "quoteId": "q038",
+          "world": "bubble"
+        },
+        {
+          "id": "week23-fri-tip",
+          "day": "Fri 6 Nov",
+          "lane": "education",
+          "time": "11:00",
+          "title": "Ace the One-Way Video Interview",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Recorded video interviews feel strange: no interviewer, just you, a question and a timer.\n\nDo the practice question first. Put the camera at eye level with light in front of you. Use the prep time to jot three points. Look at the lens, not at your own face. And finish your point, you do not have to fill the timer.\n\nSave this for your next one-way interview.\n\nFind your next role at internwise.co.uk",
+          "hashtags": [
+            "#videointerview",
+            "#interviewtips",
+            "#graduatejobs",
+            "#internships",
+            "#careeradvice"
+          ],
+          "captions": {
+            "ig-fb": "Recorded video interviews feel strange: no interviewer, just you, a question and a timer.\n\nDo the practice question first. Put the camera at eye level with light in front of you. Use the prep time to jot three points. Look at the lens, not at your own face. And finish your point, you do not have to fill the timer.\n\nSave this for your next one-way interview.\n\nFind your next role at internwise.co.uk",
+            "linkedin": "More early-careers employers now use one-way video interviews, where candidates record answers to on-screen questions against a timer.\n\nFive habits that help: do the practice question, set the camera at eye level with light in front, use prep time to note three points, look at the lens rather than the preview, and stop when the point is made.\n\nFind your next role at internwise.co.uk",
+            "x": "One-way video interview? Practise first, camera at eye level, three quick notes, eyes on the lens, finish your point. internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#videointerview",
+              "#interviewtips",
+              "#graduatejobs",
+              "#internships",
+              "#careeradvice"
+            ],
+            "linkedin": [
+              "#interviewtips",
+              "#earlycareers",
+              "#hiring"
+            ],
+            "x": [
+              "#videointerview",
+              "#interviewtips"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Video Interview",
+            "headline": "Ace the One-Way Video Interview",
+            "tone": "practical",
+            "timer": "0:58",
+            "screen_q": "Q2 of 5: Why this role?",
+            "arrow_note": "Eyes on the lens",
+            "points": [
+              "Do the practice question first",
+              "Camera at eye level, light in front",
+              "Use prep time to jot three points",
+              "Look at the lens, not your face",
+              "Finish your point, not the timer"
+            ],
+            "cta": "Treat the lens like the interviewer."
+          },
+          "world": "rec"
+        },
+        {
+          "id": "week23-fri-education",
+          "day": "Fri 6 Nov",
+          "lane": "education",
+          "title": "Your First-Day Intro, Sorted",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Starting an internship can be nerve-wracking, but introducing yourself doesn’t have to be! Here’s a simple way to make a memorable first impression:\n\n1. Say your name, your role, and how long you’ll be with the team. \n2. Add a line about what you’re studying or an interest you have. This adds a personal touch.\n3. Ask a question about their work. Being curious shows you’re engaged and ready to learn.\n4. Listen. It’s not just about speaking; absorbing information is key.\n5. At the end of the day, send a brief message to your manager thanking them for the welcome. It shows professionalism and gratitude.\n\nRemember, your introduction sets the tone for your time there. So go on, make it count! Learn more about making the most of your internship at www.internwise.co.uk",
+          "hashtags": [
+            "#internshiptips",
+            "#firstday",
+            "#professionalgrowth",
+            "#careeradvice",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Starting an internship can be nerve-wracking, but introducing yourself doesn’t have to be! Here’s a simple way to make a memorable first impression:\n\n1. Say your name, your role, and how long you’ll be with the team. \n2. Add a line about what you’re studying or an interest you have. This adds a personal touch.\n3. Ask a question about their work. Being curious shows you’re engaged and ready to learn.\n4. Listen. It’s not just about speaking; absorbing information is key.\n5. At the end of the day, send a brief message to your manager thanking them for the welcome. It shows professionalism and gratitude.\n\nRemember, your introduction sets the tone for your time there. So go on, make it count! Learn more about making the most of your internship at www.internwise.co.uk",
+            "linkedin": "Day one as an intern can be both exciting and daunting. To make a lasting impression, start with a strong introduction:\n\n- Introduce yourself: Share your name, your role, and the length of your internship.\n- Highlight your academic focus or a personal interest to add depth to your intro.\n- Ask a thoughtful question about their work. This shows your eagerness to learn and engage.\n- Listen carefully to their responses. It's important to absorb as much as you share.\n- Send a short thank you message to your manager at the end of the day. A small gesture that underlines your professional approach.\n\nThese steps will help you make a positive impact right from the start. For more internship tips, visit internwise.co.uk",
+            "x": "Nail your intern intro: Name, role, interest, question. Listen well, follow up with your manager. Start strong! internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internshiptips",
+              "#firstday",
+              "#professionalgrowth",
+              "#careeradvice",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#internship",
+              "#careerdevelopment",
+              "#professionaltips"
+            ],
+            "x": [
+              "#internadvice",
+              "#careerstarter"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "First Day",
+            "headline": "Your First-Day Intro, Sorted",
+            "tone": "practical",
+            "slides": null,
+            "points": [
+              "Your name and role",
+              "What you study or enjoy",
+              "How long you are with them",
+              "One question about their work",
+              "A thank-you note at 5pm"
+            ],
+            "cta": "Then stop talking and listen.",
+            "badge": "Name, role, one interest, one question"
+          },
+          "world": "badge"
+        },
+        {
+          "id": "week23-fri-engagement",
+          "day": "Fri 6 Nov",
+          "lane": "engagement",
+          "title": "Which feedback would you actually act on?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Ever received a rejection email that offered no insight? It's frustrating, right? 🧐 The truth is, the feedback that does offer guidance can be more valuable than the job itself. Don’t be afraid to ask employers what could have changed their decision. Use this feedback to refine your approach and come back stronger. Ready to apply with more confidence? Explore internships and graduate jobs at www.internwise.co.uk",
+          "hashtags": [
+            "#careergrowth",
+            "#internships",
+            "#feedbackmatters",
+            "#jobsearch",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Ever received a rejection email that offered no insight? It's frustrating, right? 🧐 The truth is, the feedback that does offer guidance can be more valuable than the job itself. Don’t be afraid to ask employers what could have changed their decision. Use this feedback to refine your approach and come back stronger. Ready to apply with more confidence? Explore internships and graduate jobs at www.internwise.co.uk",
+            "linkedin": "Rejection emails can be tough, especially when they leave you hanging with no feedback. The right feedback, however, is a goldmine of information. It can be more valuable than the role itself. So, why not reach out and ask what could have changed their mind? Use that insight to sharpen your skills and reapply smarter than before. Ready to level up? Find your next opportunity at internwise.co.uk",
+            "x": "Rejection emails often lack feedback. But the ones that do share insights are priceless. Don’t hesitate to ask what could have changed their mind. Apply again, but better: internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careergrowth",
+              "#internships",
+              "#feedbackmatters",
+              "#jobsearch",
               "#internwise"
             ],
             "linkedin": [
               "#careeradvice",
-              "#internships",
-              "#graduateopportunities"
+              "#internshipopportunities",
+              "#internwise"
             ],
             "x": [
-              "#internships",
-              "#graduatejobs"
+              "#careertips",
+              "#internwise"
             ]
           },
-          "quoteId": "q046",
-          "world": "minimal"
+          "world": "scorecard",
+          "ideaId": "c029"
         },
         {
-          "id": "week23-tue-engagement",
-          "day": "Tue 3 Nov",
-          "lane": "engagement",
-          "title": "How many roles should you apply for a week?",
+          "id": "week23-fri-quote",
+          "day": "Fri 6 Nov",
+          "lane": "quote",
+          "title": "Quote: Alexander Graham Bell",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Feeling overwhelmed by job applications? You're not alone. Focus on quality over quantity. Tailored applications stand out more than mass submissions. Aim to apply for a number of roles you can personalise each week. Ready to give your job hunt a boost? Discover internships at www.internwise.co.uk.",
+          "caption": "Alexander Graham Bell reminds us to focus our energy on the task at hand. It's a great reminder for when you're diving into your internship. One step at a time, one task at a time. Discover your next opportunity at www.internwise.co.uk",
           "hashtags": [
-            "#jobsearchtips",
             "#internshipadvice",
-            "#careergoals",
-            "#qualityoverquantity",
-            "#internwiseuk"
+            "#focus",
+            "#careergrowth",
+            "#internwise",
+            "#opportunity"
           ],
           "captions": {
-            "ig-fb": "Feeling overwhelmed by job applications? You're not alone. Focus on quality over quantity. Tailored applications stand out more than mass submissions. Aim to apply for a number of roles you can personalise each week. Ready to give your job hunt a boost? Discover internships at www.internwise.co.uk.",
-            "linkedin": "Applying for jobs can feel like a numbers game, but it's all about quality over quantity. Tailoring your applications to match specific roles can make all the difference. Set a realistic goal for how many you can customise each week, and stick to it. Explore opportunities that fit you perfectly at internwise.co.uk.",
-            "x": "Job hunting? Focus on quality over quantity. Tailor your applications and make them count. Find your next opportunity at internwise.co.uk."
+            "ig-fb": "Alexander Graham Bell reminds us to focus our energy on the task at hand. It's a great reminder for when you're diving into your internship. One step at a time, one task at a time. Discover your next opportunity at www.internwise.co.uk",
+            "linkedin": "Alexander Graham Bell's words encourage us to focus our thoughts on the task in front of us. This approach is crucial in internships where learning and growth are key. Stay focused, and success will follow. Ready to find your internship? Visit internwise.co.uk",
+            "x": "Alexander Graham Bell said it best: focus on the task at hand. Perfect advice for any intern. Find your next role at internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#jobsearchtips",
               "#internshipadvice",
-              "#careergoals",
-              "#qualityoverquantity",
-              "#internwiseuk"
+              "#focus",
+              "#careergrowth",
+              "#internwise",
+              "#opportunity"
             ],
             "linkedin": [
-              "#jobsearchadvice",
-              "#careerdevelopment",
-              "#internwiseuk"
+              "#internship",
+              "#careeradvice",
+              "#focus"
             ],
             "x": [
-              "#jobhunt",
-              "#internwiseuk"
+              "#internship",
+              "#careeradvice"
             ]
           },
-          "world": "comment_wall",
-          "ideaId": "c026"
+          "quoteId": "q039",
+          "world": "gallery"
         },
         {
-          "id": "week23-tue-education",
-          "day": "Tue 3 Nov",
+          "id": "week23-sat-tip",
+          "day": "Sat 7 Nov",
+          "lane": "education",
+          "time": "11:00",
+          "title": "Apprenticeship or University?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Apprenticeship or university? There is no wrong answer, only the right fit for you.\n\nApprenticeships pay you while you train, the training is covered, and degree apprenticeships can still get you a degree. University gives you a wider choice of subjects and time to try internships, with fees usually paid through a student loan.\n\nWhich way are you leaning? Tell us below, and save this if you are still deciding.\n\nExplore your options at internwise.co.uk",
+          "hashtags": [
+            "#apprenticeships",
+            "#university",
+            "#careeradvice",
+            "#studentlife",
+            "#futurecareers"
+          ],
+          "captions": {
+            "ig-fb": "Apprenticeship or university? There is no wrong answer, only the right fit for you.\n\nApprenticeships pay you while you train, the training is covered, and degree apprenticeships can still get you a degree. University gives you a wider choice of subjects and time to try internships, with fees usually paid through a student loan.\n\nWhich way are you leaning? Tell us below, and save this if you are still deciding.\n\nExplore your options at internwise.co.uk",
+            "linkedin": "Apprenticeship or university is one of the biggest decisions young people make, and both routes lead to strong careers.\n\nApprenticeships combine paid work with training, and degree apprenticeships include a full degree. University offers a broader choice of subjects and time to build experience through internships, with fees usually covered by a student loan.\n\nThe best choice is the one that fits how you learn. Explore your options at internwise.co.uk",
+            "x": "Apprenticeship or university? Earn while you learn, or study and explore. Pick the route that fits how you learn. internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#apprenticeships",
+              "#university",
+              "#careeradvice",
+              "#studentlife",
+              "#futurecareers"
+            ],
+            "linkedin": [
+              "#apprenticeships",
+              "#earlycareers",
+              "#education"
+            ],
+            "x": [
+              "#apprenticeships",
+              "#university"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Your Next Step",
+            "headline": "Apprenticeship or University?",
+            "tone": "practical",
+            "sides": [
+              "Apprenticeship",
+              "University"
+            ],
+            "pans": [
+              "earn + learn",
+              "study + explore"
+            ],
+            "left": [
+              "Paid while you train",
+              "Training costs covered",
+              "Degree apprenticeships exist"
+            ],
+            "right": [
+              "Wider choice of subjects",
+              "Fees, usually with a loan",
+              "Time for internships"
+            ],
+            "cta": "Pick the route that fits how you learn."
+          },
+          "world": "scales"
+        },
+        {
+          "id": "week23-sat-education",
+          "day": "Sat 7 Nov",
           "lane": "education",
           "title": "Nail Your Interview Outfit",
           "platform": "Multi-Platform",
@@ -10974,599 +11715,94 @@
           }
         },
         {
-          "id": "week23-wed-quote",
-          "day": "Wed 4 Nov",
-          "lane": "quote",
-          "title": "Quote: Samuel Smiles",
+          "id": "week23-sat-engagement",
+          "day": "Sat 7 Nov",
+          "lane": "engagement",
+          "title": "How many roles should you apply for a week?",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Every setback has a lesson to teach. Samuel Smiles reminds us that wisdom often comes through our failures, not our successes. Embrace the journey, learn from the past, and keep moving forward. Discover your next opportunity at www.internwise.co.uk.",
+          "caption": "Feeling overwhelmed by job applications? You're not alone. Focus on quality over quantity. Tailored applications stand out more than mass submissions. Aim to apply for a number of roles you can personalise each week. Ready to give your job hunt a boost? Discover internships at www.internwise.co.uk.",
           "hashtags": [
-            "#wisdominfailure",
-            "#growthmindset",
-            "#internshipjourney",
-            "#samuelsmiles",
+            "#jobsearchtips",
+            "#internshipadvice",
+            "#careergoals",
+            "#qualityoverquantity",
             "#internwiseuk"
           ],
           "captions": {
-            "ig-fb": "Every setback has a lesson to teach. Samuel Smiles reminds us that wisdom often comes through our failures, not our successes. Embrace the journey, learn from the past, and keep moving forward. Discover your next opportunity at www.internwise.co.uk.",
-            "linkedin": "Samuel Smiles teaches us an important lesson: wisdom is often born from failure. Each challenge is a stepping stone to growth and understanding. Embrace your journey's ups and downs, learn from your experiences, and keep striving. Explore opportunities to grow at internwise.co.uk.",
-            "x": "Samuel Smiles said it best: wisdom often comes from failure, not success. Embrace your journey and learn from every step. Discover opportunities at internwise.co.uk."
+            "ig-fb": "Feeling overwhelmed by job applications? You're not alone. Focus on quality over quantity. Tailored applications stand out more than mass submissions. Aim to apply for a number of roles you can personalise each week. Ready to give your job hunt a boost? Discover internships at www.internwise.co.uk.",
+            "linkedin": "Applying for jobs can feel like a numbers game, but it's all about quality over quantity. Tailoring your applications to match specific roles can make all the difference. Set a realistic goal for how many you can customise each week, and stick to it. Explore opportunities that fit you perfectly at internwise.co.uk.",
+            "x": "Job hunting? Focus on quality over quantity. Tailor your applications and make them count. Find your next opportunity at internwise.co.uk."
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#wisdominfailure",
-              "#growthmindset",
-              "#internshipjourney",
-              "#samuelsmiles",
-              "#internwiseuk"
-            ],
-            "linkedin": [
-              "#careergrowth",
-              "#learningjourney",
-              "#internwiseuk"
-            ],
-            "x": [
-              "#wisdom",
-              "#internwiseuk"
-            ]
-          },
-          "quoteId": "q047",
-          "world": "band"
-        },
-        {
-          "id": "week23-wed-engagement",
-          "day": "Wed 4 Nov",
-          "lane": "engagement",
-          "title": "Which gap on your CV worries you most?",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Ever felt like your CV has a gap the size of the Grand Canyon? Remember, every gap is just a story waiting to be told. Whether it's travel, family, or learning, there's always a way to frame it positively. Don't let silence speak for you. Find the right role to fill those spaces at www.internwise.co.uk.",
-          "hashtags": [
-            "#careeradvice",
-            "#cvtips",
-            "#internships",
-            "#jobsearch",
-            "#graduatejobs"
-          ],
-          "captions": {
-            "ig-fb": "Ever felt like your CV has a gap the size of the Grand Canyon? Remember, every gap is just a story waiting to be told. Whether it's travel, family, or learning, there's always a way to frame it positively. Don't let silence speak for you. Find the right role to fill those spaces at www.internwise.co.uk.",
-            "linkedin": "Worried about those gaps in your CV? You're not alone. Each gap tells a story and offers a chance for growth. Instead of letting them linger, address them with clarity. One line can bridge the divide and show potential employers your resilience and adaptability. Explore opportunities that make your CV shine at internwise.co.uk.",
-            "x": "Mind the gap on your CV! Every career break has a reason. Tell your story and find the right match at internwise.co.uk."
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#careeradvice",
-              "#cvtips",
-              "#internships",
-              "#jobsearch",
-              "#graduatejobs"
-            ],
-            "linkedin": [
-              "#careerdevelopment",
-              "#internships",
-              "#jobopportunities"
-            ],
-            "x": [
-              "#careeradvice",
-              "#jobsearch"
-            ]
-          },
-          "world": "proofboard",
-          "ideaId": "c027"
-        },
-        {
-          "id": "week23-wed-education",
-          "day": "Wed 4 Nov",
-          "lane": "education",
-          "title": "Where to Actually Find Internships",
-          "platform": "Multi-Platform",
-          "format": "Carousel",
-          "slides": [
-            "slide_1.png",
-            "slide_2.png",
-            "slide_3.png",
-            "slide_4.png",
-            "slide_5.png"
-          ],
-          "status": "in-review",
-          "caption": "Applying everywhere but getting nowhere? Discover the five places UK internships are truly advertised and how to use each effectively. 🌟\n\n1. **Specialist Internship Boards**: These list paid UK roles in one place, filtered by sector and location. Perfect for targeting your search.\n\n2. **University Careers Service**: Your uni holds roles that often never reach public job boards. Don't overlook this goldmine!\n\n3. **Company Careers Pages**: Check these early. Many post roles before they appear anywhere else.\n\n4. **Speculative Emails**: Small businesses may hire from a well-crafted email with your CV. It's worth a shot.\n\nRemember: it's better to use three channels well than ten badly. 🎯\n\nStart your focused search today at www.internwise.co.uk",
-          "hashtags": [
-            "#internshiphunt",
-            "#careertips",
-            "#ukinternships",
-            "#studentlife",
-            "#graduatejobs"
-          ],
-          "captions": {
-            "ig-fb": "Applying everywhere but getting nowhere? Discover the five places UK internships are truly advertised and how to use each effectively. 🌟\n\n1. **Specialist Internship Boards**: These list paid UK roles in one place, filtered by sector and location. Perfect for targeting your search.\n\n2. **University Careers Service**: Your uni holds roles that often never reach public job boards. Don't overlook this goldmine!\n\n3. **Company Careers Pages**: Check these early. Many post roles before they appear anywhere else.\n\n4. **Speculative Emails**: Small businesses may hire from a well-crafted email with your CV. It's worth a shot.\n\nRemember: it's better to use three channels well than ten badly. 🎯\n\nStart your focused search today at www.internwise.co.uk",
-            "linkedin": "Feeling stuck applying everywhere but hearing nothing back? Let's narrow down your search to the places where UK internships are genuinely advertised. \n\n1. **Specialist Internship Boards**: These boards list roles, conveniently filtered by sector and location. It's your one-stop shop.\n\n2. **University Careers Service**: Don't underestimate the value of your university's careers service. They often have exclusive roles.\n\n3. **Company Careers Pages**: Get in early; companies post here first, before roles are syndicated elsewhere.\n\n4. **Speculative Emails**: A short, targeted email to small businesses, complete with your CV, could lead to an opportunity. \n\nFocus your efforts on three smart channels for better results. Start today at internwise.co.uk.",
-            "x": "Struggling to find internships? Learn where they're really advertised and how to use each channel effectively. Start your focused search at internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#internshiphunt",
-              "#careertips",
-              "#ukinternships",
-              "#studentlife",
-              "#graduatejobs"
-            ],
-            "linkedin": [
-              "#careeradvice",
-              "#internship",
-              "#graduatejobs"
-            ],
-            "x": [
-              "#internship",
-              "#careeradvice"
-            ]
-          },
-          "onSlide": {
-            "eyebrow": "Find Internships",
-            "headline": "Where to Actually Find Internships",
-            "tone": "practical",
-            "slides": [
-              {
-                "tag": "Specialist Boards",
-                "title": "Use Internship Boards",
-                "body": "Specialist boards list UK internships in one place. Filter by sector and location, then set alerts."
-              },
-              {
-                "tag": "Uni Resources",
-                "title": "Check Careers Services",
-                "body": "Your careers service hears about roles that never reach public boards. Ask what is open this month."
-              },
-              {
-                "tag": "Direct Approach",
-                "title": "Email Small Businesses",
-                "body": "Many small firms never advertise. A short email with your CV and one idea for them can create a role."
-              }
-            ],
-            "points": null,
-            "cta": "Use three channels well instead of ten badly."
-          },
-          "world": "cream",
-          "poses": {
-            "cover": "nuno_phone",
-            "cta": "nuno_tablet"
-          }
-        },
-        {
-          "id": "week23-thu-quote",
-          "day": "Thu 5 Nov",
-          "lane": "quote",
-          "title": "Quote: Michael Faraday",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Michael Faraday once said, \"Nothing is too wonderful to be true, if it be consistent with the laws of nature.\" This week, let that inspire you to aim higher and explore the limitless possibilities in your journey. Whether you're looking to start your career or switch paths, opportunities are out there waiting. Uncover them with us at www.internwise.co.uk.",
-          "hashtags": [
-            "#inspiration",
-            "#careergoals",
-            "#internships",
-            "#aimhigher",
-            "#michaelfaraday"
-          ],
-          "captions": {
-            "ig-fb": "Michael Faraday once said, \"Nothing is too wonderful to be true, if it be consistent with the laws of nature.\" This week, let that inspire you to aim higher and explore the limitless possibilities in your journey. Whether you're looking to start your career or switch paths, opportunities are out there waiting. Uncover them with us at www.internwise.co.uk.",
-            "linkedin": "Michael Faraday's quote, \"Nothing is too wonderful to be true, if it be consistent with the laws of nature,\" reminds us to push the boundaries of what's possible. In your career, this means taking those leaps of faith, exploring new avenues, and believing in the potential of every opportunity. As you set your sights on new heights, remember that the right internship can be a powerful catalyst. Discover the next step in your journey at internwise.co.uk.",
-            "x": "Michael Faraday said, \"Nothing is too wonderful to be true, if it be consistent with the laws of nature.\" Let this inspire you to aim higher this week. Discover opportunities waiting for you at internwise.co.uk."
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#inspiration",
+              "#jobsearchtips",
+              "#internshipadvice",
               "#careergoals",
-              "#internships",
-              "#aimhigher",
-              "#michaelfaraday"
+              "#qualityoverquantity",
+              "#internwiseuk"
             ],
             "linkedin": [
+              "#jobsearchadvice",
               "#careerdevelopment",
-              "#internships",
-              "#inspiration"
+              "#internwiseuk"
             ],
             "x": [
-              "#inspiration",
-              "#internships"
+              "#jobhunt",
+              "#internwiseuk"
             ]
           },
-          "quoteId": "q038",
-          "world": "bubble"
+          "world": "comment_wall",
+          "ideaId": "c026"
         },
         {
-          "id": "week23-thu-engagement",
-          "day": "Thu 5 Nov",
-          "lane": "engagement",
-          "title": "What would you want to know before accepting?",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Before you dive into that exciting new opportunity, have you asked the right questions? It's easy to get caught up in the excitement of a new role, but knowing what to ask before accepting can make all the difference. Consider these: What's the team culture like? Are there growth opportunities? How is feedback handled? None of these questions are impolite - they're essential. Be informed, be prepared, and find your next internship at www.internwise.co.uk.",
-          "hashtags": [
-            "#internshipadvice",
-            "#careerquestions",
-            "#ukinternships",
-            "#askbeforeaccepting",
-            "#internwise"
-          ],
-          "captions": {
-            "ig-fb": "Before you dive into that exciting new opportunity, have you asked the right questions? It's easy to get caught up in the excitement of a new role, but knowing what to ask before accepting can make all the difference. Consider these: What's the team culture like? Are there growth opportunities? How is feedback handled? None of these questions are impolite - they're essential. Be informed, be prepared, and find your next internship at www.internwise.co.uk.",
-            "linkedin": "You've got an offer on the table - congrats! But before you jump in, have you asked the crucial questions? Understanding the team culture, the growth opportunities, and the feedback process can set you up for success. Remember, asking isn't rude; it's smart. Stay informed and compare offers to find the right fit for you at internwise.co.uk.",
-            "x": "Got an internship offer? Before you say yes, ask about team culture, growth opportunities, and feedback. It's not rude—it's smart. Explore more internships at internwise.co.uk."
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#internshipadvice",
-              "#careerquestions",
-              "#ukinternships",
-              "#askbeforeaccepting",
-              "#internwise"
-            ],
-            "linkedin": [
-              "#internshipadvice",
-              "#careergrowth",
-              "#internwise"
-            ],
-            "x": [
-              "#internshipadvice",
-              "#internwise"
-            ]
-          },
-          "world": "decision",
-          "ideaId": "c028"
-        },
-        {
-          "id": "week23-thu-education",
-          "day": "Thu 5 Nov",
-          "lane": "education",
-          "title": "Master Strengths & Weaknesses",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Dreading the strengths and weaknesses question in interviews? You're not alone! Here's how to tackle it with confidence and authenticity. First, align your strengths with what the job advert calls for and back them up with a quick example. For weaknesses, choose something not vital to the role and highlight what you're doing to improve. Avoid clichés like 'I work too hard'; they don't impress anymore. Remember, a real weakness plus a real fix beats a fake weakness every time. Ready to shine in your next interview? Head to www.internwise.co.uk for more tips!",
-          "hashtags": [
-            "#interviewtips",
-            "#careeradvice",
-            "#internship",
-            "#jobsearch",
-            "#professionalgrowth"
-          ],
-          "captions": {
-            "ig-fb": "Dreading the strengths and weaknesses question in interviews? You're not alone! Here's how to tackle it with confidence and authenticity. First, align your strengths with what the job advert calls for and back them up with a quick example. For weaknesses, choose something not vital to the role and highlight what you're doing to improve. Avoid clichés like 'I work too hard'; they don't impress anymore. Remember, a real weakness plus a real fix beats a fake weakness every time. Ready to shine in your next interview? Head to www.internwise.co.uk for more tips!",
-            "linkedin": "Interviews can be nerve-wracking, especially when it comes to discussing strengths and weaknesses. But with a few smart strategies, you can turn this question into an opportunity to shine. Match your strengths to the job requirements and prove them with examples. When it comes to weaknesses, choose something that isn't crucial to the role and show how you're working on it. Steer clear of overused clichés like 'I work too hard'. A genuine weakness with a concrete improvement plan is far more effective. Ready to master your next interview? Visit internwise.co.uk for more insights.",
-            "x": "Mastering the strengths and weaknesses question is key. Match strengths to job needs, pick a real weakness, and show your improvement plan. Avoid clichés like 'workaholic'. Learn more: internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#interviewtips",
-              "#careeradvice",
-              "#internship",
-              "#jobsearch",
-              "#professionalgrowth"
-            ],
-            "linkedin": [
-              "#interviewpreparation",
-              "#careerdevelopment",
-              "#internshiptips"
-            ],
-            "x": [
-              "#interviewtips",
-              "#careeradvice"
-            ]
-          },
-          "onSlide": {
-            "eyebrow": "Interview Tips",
-            "headline": "Master Strengths & Weaknesses",
-            "tone": "practical",
-            "slides": null,
-            "points": [
-              "Match strengths to the advert",
-              "Prove each one with an example",
-              "Pick a real weakness, not core to the role",
-              "Show how you are improving it",
-              "Skip “I work too hard”"
-            ],
-            "cta": "A real weakness with a real fix beats a fake one."
-          },
-          "world": "answerbank"
-        },
-        {
-          "id": "week23-fri-quote",
-          "day": "Fri 6 Nov",
+          "id": "week23-sat-quote",
+          "day": "Sat 7 Nov",
           "lane": "quote",
-          "title": "Quote: Alexander Graham Bell",
+          "title": "Quote: Charles Dickens",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Alexander Graham Bell reminds us to focus our energy on the task at hand. It's a great reminder for when you're diving into your internship. One step at a time, one task at a time. Discover your next opportunity at www.internwise.co.uk",
+          "caption": "Charles Dickens was onto something when he said, 'Procrastination is the thief of time. Collar him!' Time is precious, especially when it comes to jumpstarting your career. Don't let opportunities slip through your fingers. Dive into a wealth of internships and graduate jobs today at www.internwise.co.uk.",
           "hashtags": [
-            "#internshipadvice",
-            "#focus",
-            "#careergrowth",
-            "#internwise",
-            "#opportunity"
-          ],
-          "captions": {
-            "ig-fb": "Alexander Graham Bell reminds us to focus our energy on the task at hand. It's a great reminder for when you're diving into your internship. One step at a time, one task at a time. Discover your next opportunity at www.internwise.co.uk",
-            "linkedin": "Alexander Graham Bell's words encourage us to focus our thoughts on the task in front of us. This approach is crucial in internships where learning and growth are key. Stay focused, and success will follow. Ready to find your internship? Visit internwise.co.uk",
-            "x": "Alexander Graham Bell said it best: focus on the task at hand. Perfect advice for any intern. Find your next role at internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#internshipadvice",
-              "#focus",
-              "#careergrowth",
-              "#internwise",
-              "#opportunity"
-            ],
-            "linkedin": [
-              "#internship",
-              "#careeradvice",
-              "#focus"
-            ],
-            "x": [
-              "#internship",
-              "#careeradvice"
-            ]
-          },
-          "quoteId": "q039",
-          "world": "gallery"
-        },
-        {
-          "id": "week23-fri-engagement",
-          "day": "Fri 6 Nov",
-          "lane": "engagement",
-          "title": "Which feedback would you actually act on?",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Ever received a rejection email that offered no insight? It's frustrating, right? 🧐 The truth is, the feedback that does offer guidance can be more valuable than the job itself. Don’t be afraid to ask employers what could have changed their decision. Use this feedback to refine your approach and come back stronger. Ready to apply with more confidence? Explore internships and graduate jobs at www.internwise.co.uk",
-          "hashtags": [
-            "#careergrowth",
+            "#careerready",
             "#internships",
-            "#feedbackmatters",
-            "#jobsearch",
+            "#graduatejobs",
+            "#timetoact",
             "#internwise"
           ],
           "captions": {
-            "ig-fb": "Ever received a rejection email that offered no insight? It's frustrating, right? 🧐 The truth is, the feedback that does offer guidance can be more valuable than the job itself. Don’t be afraid to ask employers what could have changed their decision. Use this feedback to refine your approach and come back stronger. Ready to apply with more confidence? Explore internships and graduate jobs at www.internwise.co.uk",
-            "linkedin": "Rejection emails can be tough, especially when they leave you hanging with no feedback. The right feedback, however, is a goldmine of information. It can be more valuable than the role itself. So, why not reach out and ask what could have changed their mind? Use that insight to sharpen your skills and reapply smarter than before. Ready to level up? Find your next opportunity at internwise.co.uk",
-            "x": "Rejection emails often lack feedback. But the ones that do share insights are priceless. Don’t hesitate to ask what could have changed their mind. Apply again, but better: internwise.co.uk"
+            "ig-fb": "Charles Dickens was onto something when he said, 'Procrastination is the thief of time. Collar him!' Time is precious, especially when it comes to jumpstarting your career. Don't let opportunities slip through your fingers. Dive into a wealth of internships and graduate jobs today at www.internwise.co.uk.",
+            "linkedin": "Charles Dickens aptly warned us, 'Procrastination is the thief of time. Collar him!' In the fast-moving world of careers, every minute counts. Whether you're looking to gain experience or start your graduate journey, the time to act is now. Explore numerous opportunities waiting for you at internwise.co.uk.",
+            "x": "Charles Dickens said it best: 'Procrastination is the thief of time. Collar him!' Time to seize the day and grab those internships. Start now at internwise.co.uk."
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#careergrowth",
+              "#careerready",
               "#internships",
-              "#feedbackmatters",
-              "#jobsearch",
+              "#graduatejobs",
+              "#timetoact",
               "#internwise"
             ],
             "linkedin": [
               "#careeradvice",
-              "#internshipopportunities",
-              "#internwise"
-            ],
-            "x": [
-              "#careertips",
-              "#internwise"
-            ]
-          },
-          "world": "scorecard",
-          "ideaId": "c029"
-        },
-        {
-          "id": "week23-fri-education",
-          "day": "Fri 6 Nov",
-          "lane": "education",
-          "title": "Your First-Day Intro, Sorted",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "caption": "Starting an internship can be nerve-wracking, but introducing yourself doesn’t have to be! Here’s a simple way to make a memorable first impression:\n\n1. Say your name, your role, and how long you’ll be with the team. \n2. Add a line about what you’re studying or an interest you have. This adds a personal touch.\n3. Ask a question about their work. Being curious shows you’re engaged and ready to learn.\n4. Listen. It’s not just about speaking; absorbing information is key.\n5. At the end of the day, send a brief message to your manager thanking them for the welcome. It shows professionalism and gratitude.\n\nRemember, your introduction sets the tone for your time there. So go on, make it count! Learn more about making the most of your internship at www.internwise.co.uk",
-          "hashtags": [
-            "#internshiptips",
-            "#firstday",
-            "#professionalgrowth",
-            "#careeradvice",
-            "#internwise"
-          ],
-          "captions": {
-            "ig-fb": "Starting an internship can be nerve-wracking, but introducing yourself doesn’t have to be! Here’s a simple way to make a memorable first impression:\n\n1. Say your name, your role, and how long you’ll be with the team. \n2. Add a line about what you’re studying or an interest you have. This adds a personal touch.\n3. Ask a question about their work. Being curious shows you’re engaged and ready to learn.\n4. Listen. It’s not just about speaking; absorbing information is key.\n5. At the end of the day, send a brief message to your manager thanking them for the welcome. It shows professionalism and gratitude.\n\nRemember, your introduction sets the tone for your time there. So go on, make it count! Learn more about making the most of your internship at www.internwise.co.uk",
-            "linkedin": "Day one as an intern can be both exciting and daunting. To make a lasting impression, start with a strong introduction:\n\n- Introduce yourself: Share your name, your role, and the length of your internship.\n- Highlight your academic focus or a personal interest to add depth to your intro.\n- Ask a thoughtful question about their work. This shows your eagerness to learn and engage.\n- Listen carefully to their responses. It's important to absorb as much as you share.\n- Send a short thank you message to your manager at the end of the day. A small gesture that underlines your professional approach.\n\nThese steps will help you make a positive impact right from the start. For more internship tips, visit internwise.co.uk",
-            "x": "Nail your intern intro: Name, role, interest, question. Listen well, follow up with your manager. Start strong! internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#internshiptips",
-              "#firstday",
-              "#professionalgrowth",
-              "#careeradvice",
-              "#internwise"
-            ],
-            "linkedin": [
-              "#internship",
-              "#careerdevelopment",
-              "#professionaltips"
-            ],
-            "x": [
-              "#internadvice",
-              "#careerstarter"
-            ]
-          },
-          "onSlide": {
-            "eyebrow": "First Day",
-            "headline": "Your First-Day Intro, Sorted",
-            "tone": "practical",
-            "slides": null,
-            "points": [
-              "Your name and role",
-              "What you study or enjoy",
-              "How long you are with them",
-              "One question about their work",
-              "A thank-you note at 5pm"
-            ],
-            "cta": "Then stop talking and listen.",
-            "badge": "Name, role, one interest, one question"
-          },
-          "world": "badge"
-        },
-        {
-          "id": "week23-mon-news",
-          "day": "Mon 2 Nov",
-          "lane": "news",
-          "title": "Students Team Up with Professional Chefs",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "approved",
-          "caption": "Catering and Hospitality students at a UK college recently had the chance to work alongside professional chefs, putting their skills to the test in a real-world environment. This hands-on experience is a crucial part of their education, allowing them to bridge the gap between classroom learning and actual practice.\n\nFor students and graduates, experiences like these emphasize the importance of applying theoretical knowledge in practical settings. It prepares them for the challenges of the workplace and enhances their employability.\n\nInternships offer similar benefits, providing students with the opportunity to gain industry insights and practical skills, making them more competitive in the job market.\n\nSource: FE News.",
-          "hashtags": [
-            "#culinaryskills",
-            "#studentexperience",
-            "#ukeducation",
-            "#careerdevelopment",
-            "#internships"
-          ],
-          "captions": {
-            "ig-fb": "Catering and Hospitality students at a UK college recently had the chance to work alongside professional chefs, putting their skills to the test in a real-world environment. This hands-on experience is a crucial part of their education, allowing them to bridge the gap between classroom learning and actual practice.\n\nFor students and graduates, experiences like these emphasize the importance of applying theoretical knowledge in practical settings. It prepares them for the challenges of the workplace and enhances their employability.\n\nInternships offer similar benefits, providing students with the opportunity to gain industry insights and practical skills, making them more competitive in the job market.\n\nSource: FE News.",
-            "linkedin": "A group of Catering and Hospitality students from a UK college recently worked alongside professional chefs to gain valuable hands-on experience. This collaboration allowed students to apply their classroom knowledge in a practical setting, enhancing their culinary skills and preparing them for future career opportunities.\n\nFor students and recent graduates, such experiences are a vital part of their education. They provide a deeper understanding of the industry and help build confidence for entering the workforce.\n\nInternships offer a similar pathway, giving students the chance to develop real-world skills and insights, which are essential for a successful transition from education to employment.\n\nSource: FE News.",
-            "x": "UK college students gained hands-on culinary experience by working with professional chefs. Such practical opportunities are key for career readiness, highlighting the importance of internships in building skills. (Source: FE News)",
-            "threads": "Catering students at a UK college gained hands-on experience by working with professional chefs. This highlights the importance of real-world practice and internships in building career skills. Learn more at www.internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#culinaryskills",
-              "#studentexperience",
-              "#ukeducation",
-              "#careerdevelopment",
-              "#internships"
-            ],
-            "linkedin": [
-              "#studentexperience",
-              "#careerskills",
-              "#internships"
-            ],
-            "x": [
-              "#careerskills",
-              "#internships"
-            ]
-          }
-        },
-        {
-          "id": "week23-tue-news",
-          "day": "Tue 3 Nov",
-          "lane": "news",
-          "title": "Scottish Football's Young Talent Crisis",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "approved",
-          "caption": "Scottish football is facing a significant challenge with a decrease in homegrown players making it to the top levels. This has raised concerns about the future of the sport in Scotland and the development pathways available to young talent. \n\nFor students and graduates, the situation serves as a reminder of the critical role that early skill development and opportunities play in career success. Whether in sports or any other field, nurturing talent early is crucial.\n\nInternships can be a valuable tool in this process. By gaining hands-on experience, students can enhance their skills and better prepare for the competitive job market. Practical experience can make all the difference in setting out on a successful career path.\n\nSource: BBC UK.",
-          "hashtags": [
-            "#scottishfootball",
-            "#talentdevelopment",
-            "#internships",
-            "#careers",
-            "#skillbuilding"
-          ],
-          "captions": {
-            "ig-fb": "Scottish football is facing a significant challenge with a decrease in homegrown players making it to the top levels. This has raised concerns about the future of the sport in Scotland and the development pathways available to young talent. \n\nFor students and graduates, the situation serves as a reminder of the critical role that early skill development and opportunities play in career success. Whether in sports or any other field, nurturing talent early is crucial.\n\nInternships can be a valuable tool in this process. By gaining hands-on experience, students can enhance their skills and better prepare for the competitive job market. Practical experience can make all the difference in setting out on a successful career path.\n\nSource: BBC UK.",
-            "linkedin": "Scottish football is currently grappling with a pressing issue: a decline in homegrown players reaching the elite level. This trend has sparked concerns about the sport's future in Scotland and the effectiveness of talent development programs.\n\nFor those embarking on their careers, this scenario underscores the importance of skill development and early opportunities. It highlights the need for structured pathways that support young people in reaching their full potential.\n\nInternships offer a concrete solution for students and graduates to gain valuable experience and hone their skills. By engaging in internships, they can better equip themselves for the demands of the professional world, setting a strong foundation for their careers.\n\nSource: BBC UK.",
-            "x": "Scottish football struggles with fewer homegrown players reaching top levels, highlighting the need for better talent development. Students can learn from this by focusing on building skills early. Internships are a key way to gain experience. (Source: BBC UK)",
-            "threads": "Scottish football's talent pipeline is under strain with fewer local players making it to the top. This highlights the need for early skills development. Students should focus on gaining experience through internships to prepare for future challenges. www.internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#scottishfootball",
-              "#talentdevelopment",
               "#internships",
-              "#careers",
-              "#skillbuilding"
-            ],
-            "linkedin": [
-              "#talentdevelopment",
-              "#internships",
-              "#careergrowth"
+              "#graduateopportunities"
             ],
             "x": [
-              "#scottishfootball",
-              "#skillbuilding"
+              "#internships",
+              "#graduatejobs"
             ]
-          }
-        },
-        {
-          "id": "week23-wed-news",
-          "day": "Wed 4 Nov",
-          "lane": "news",
-          "title": "Youth Job Grant Faces Application Hurdle",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "approved",
-          "caption": "The UK government has launched a £3,000 Youth Jobs Grant aimed at helping young job seekers. But there's a catch: the application process is complex and may deter many from applying successfully. This is crucial because the grant's benefits are only reachable if youth can access them. What does this mean for you? Navigating applications is a vital skill. Start by seeking guidance and practising with easier forms. Internships can also help by offering opportunities that build your confidence and experience. Source: FE News.",
-          "hashtags": [
-            "#youthjobs",
-            "#ukcareers",
-            "#internships",
-            "#jobgrants",
-            "#careerdevelopment"
-          ],
-          "captions": {
-            "ig-fb": "The UK government has launched a £3,000 Youth Jobs Grant aimed at helping young job seekers. But there's a catch: the application process is complex and may deter many from applying successfully. This is crucial because the grant's benefits are only reachable if youth can access them. What does this mean for you? Navigating applications is a vital skill. Start by seeking guidance and practising with easier forms. Internships can also help by offering opportunities that build your confidence and experience. Source: FE News.",
-            "linkedin": "A new £3,000 Youth Jobs Grant has been introduced by the UK government to assist young job seekers. However, the complexity of the application process is creating a barrier to access. This matters because the grant's potential impact is limited if applicants struggle with paperwork. Understanding how to navigate application processes is increasingly important. For students and graduates, this highlights the need for clear guidance and practice in completing forms. Internships can serve as a valuable step in building the necessary skills and confidence to tackle these challenges, offering paid, structured experiences. Source: FE News.",
-            "x": "The UK’s £3,000 Youth Jobs Grant is meant to help young job seekers, but a tricky application process may limit its reach. Simplifying applications could make a big difference. Internships offer paid experience to build confidence and skills. (Source: FE News)",
-            "threads": "The new £3,000 Youth Jobs Grant aims to support young job seekers, but its complex application process poses a challenge. Navigating these forms is crucial. Internships can provide the paid experience needed to boost confidence and skills. www.internwise.co.uk"
           },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#youthjobs",
-              "#ukcareers",
-              "#internships",
-              "#jobgrants",
-              "#careerdevelopment"
-            ],
-            "linkedin": [
-              "#youthemployment",
-              "#ukjobs",
-              "#internwise"
-            ],
-            "x": [
-              "#youthjobs",
-              "#internwise"
-            ]
-          }
+          "quoteId": "q046",
+          "world": "minimal"
         }
       ]
     }

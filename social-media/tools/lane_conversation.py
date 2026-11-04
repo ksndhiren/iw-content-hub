@@ -127,9 +127,11 @@ def w_proofboard(idea):
             f"background:{NAVYT};box-shadow:0 20px 40px rgba(21,39,67,.18);'>{_option_rows(options, [AMBER, GREEN, CORAL], dark=True)}</div>")
     takeaway = (f"<div style='position:absolute;right:92px;top:612px;width:278px;font-family:IWSerif,Georgia,serif;font-style:italic;"
                 f"font-weight:700;font-size:29px;line-height:1.2;color:{NAVYT};'>{idea.get('takeaway','')}</div>")
-    cta = (f"<div style='position:absolute;right:92px;bottom:118px;height:54px;padding:0 20px;border-radius:8px;background:{AMBER};"
+    # Comment pill and CTA share one row clear of the board (it ends at 904):
+    # the pill used to sit on the board's bottom edge, half on, half off.
+    cta = (f"<div style='position:absolute;right:92px;top:930px;height:54px;padding:0 20px;border-radius:8px;background:{AMBER};"
            f"display:flex;align-items:center;font-family:Inter;font-weight:900;font-size:22px;color:{NAVYT};'>{idea.get('cta','Start at internwise.co.uk')}</div>")
-    return bg + _logo_dark() + pinboard + top_rule + label + headline + note + profile + card + takeaway + cta + _comment_prompt(88, 900)
+    return bg + _logo_dark() + pinboard + top_rule + label + headline + note + profile + card + takeaway + cta + _comment_prompt(88, 934)
 
 
 def w_debate(idea):

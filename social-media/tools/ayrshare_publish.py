@@ -199,14 +199,16 @@ def schedule_iso(week, post, at=None):
     LANE_TIME is UK wall-clock; we localise to Europe/London (handles BST/GMT
     automatically) then convert to UTC for Ayrshare. Past times return None so
     the caller posts immediately instead of getting rejected. `at` (\"HH:MM\")
-    overrides the lane time for a one-off custom slot."""
+    overrides the lane time for a one-off custom slot.
+    A post's own `time` field ("HH:MM") beats the lane time, so a second post in
+    the same lane on one day gets its own slot instead of colliding."""
     wc = week.get("weekCommencing")
     if not wc:
         return None
     mon = datetime.date.fromisoformat(wc)
     dkey = post["id"].split("-")[-2] if post["id"].count("-") >= 2 else None
     di = DAY_INDEX.get(dkey, 0)
-    hh, mm = (at or LANE_TIME.get(post.get("lane"), "09:00")).split(":")
+    hh, mm = (at or post.get("time") or LANE_TIME.get(post.get("lane"), "09:00")).split(":")
     when_uk = datetime.datetime.combine(
         mon + datetime.timedelta(days=di), datetime.time(int(hh), int(mm)),
         tzinfo=ZoneInfo("Europe/London"))
