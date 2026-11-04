@@ -10805,7 +10805,7 @@
       "id": "week23",
       "label": "Week 23",
       "weekCommencing": "2026-11-02",
-      "builtAt": 1793761690,
+      "builtAt": 1793800735,
       "posts": [
         {
           "id": "week23-mon-news",
@@ -11803,6 +11803,50 @@
           },
           "quoteId": "q046",
           "world": "minimal"
+        },
+        {
+          "id": "week23-thu-news",
+          "day": "Thu 5 Nov",
+          "lane": "news",
+          "title": "Fake Job Interviews Used in Crypto Heist",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "An alarming incident has emerged in the job market. A major cryptocurrency exchange disclosed a $6.3 billion hack engineered through fake job interviews. An engineer, contacted via a legitimate job-hunting platform, was led into a trap with phony interviews conducted by impostors posing as company representatives.\n\nThis situation underscores the increasing risks present in online job-seeking environments. For students and graduates embarking on their career journeys, it's essential to remain cautious and verify the legitimacy of job offers and interviews. Even when approached through well-known platforms, double-checking the credentials of potential employers can prevent falling victim to scams.\n\nInternships stand out as a safer alternative. By engaging with verified companies, they provide a genuine avenue to develop professional skills and gain industry insights, all while safeguarding against fraudulent activities. Internwise is committed to connecting you with trustworthy opportunities. Stay informed and make informed decisions. Source: BBC Business.",
+          "hashtags": [
+            "#jobsafety",
+            "#internships",
+            "#careeradvice",
+            "#cryptosecurity",
+            "#graduatejobs"
+          ],
+          "captions": {
+            "ig-fb": "An alarming incident has emerged in the job market. A major cryptocurrency exchange disclosed a $6.3 billion hack engineered through fake job interviews. An engineer, contacted via a legitimate job-hunting platform, was led into a trap with phony interviews conducted by impostors posing as company representatives.\n\nThis situation underscores the increasing risks present in online job-seeking environments. For students and graduates embarking on their career journeys, it's essential to remain cautious and verify the legitimacy of job offers and interviews. Even when approached through well-known platforms, double-checking the credentials of potential employers can prevent falling victim to scams.\n\nInternships stand out as a safer alternative. By engaging with verified companies, they provide a genuine avenue to develop professional skills and gain industry insights, all while safeguarding against fraudulent activities. Internwise is committed to connecting you with trustworthy opportunities. Stay informed and make informed decisions. Source: BBC Business.",
+            "linkedin": "A significant security breach has been reported by a leading cryptocurrency exchange, revealing a $6.3 billion hack that was executed through deceptive job interviews. An engineer fell into the trap after being contacted by impostors through a legitimate job platform, highlighting a new dimension of risk in job searching.\n\nFor students and recent graduates, this incident serves as a stark reminder of the potential dangers lurking in online job markets. Vigilance is crucial, even when using reputable platforms. Always verify the authenticity of job offers and the identities of interviewers to safeguard your personal and professional information.\n\nInternships offer a protective buffer against such scams. They allow you to work with established, vetted companies, providing valuable experience and learning opportunities without the risk of falling prey to fraudulent schemes. Internwise is dedicated to helping you find secure, rewarding internships that build your career. Stay alert and informed. Source: BBC Business.",
+            "x": "A crypto exchange reports a $6.3bn hack via fake job interviews. Job seekers must verify employer credentials to avoid scams. Internships offer safer, verified paths for experience. (Source: BBC Business)",
+            "threads": "A major crypto exchange faced a $6.3bn hack via bogus job interviews. For job seekers, verifying employer authenticity is crucial. Internships provide safer, verified experiences with reputable companies. Stay alert! www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#jobsafety",
+              "#internships",
+              "#careeradvice",
+              "#cryptosecurity",
+              "#graduatejobs"
+            ],
+            "linkedin": [
+              "#jobmarket",
+              "#careersafety",
+              "#internships"
+            ],
+            "x": [
+              "#jobsafety",
+              "#internships"
+            ]
+          }
         }
       ]
     }
