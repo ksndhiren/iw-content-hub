@@ -1,11 +1,41 @@
 {
-  "generatedAt": "2026-11-04T14:06:32Z",
+  "generatedAt": "2026-11-05T14:26:01Z",
   "windowRecords": 80,
-  "byLane": {},
-  "byDay": {},
-  "byHour": {},
-  "topPosts": [],
-  "insights": [],
+  "byLane": {
+    "education": {
+      "posts": 1,
+      "engagement": 0,
+      "avg": 0.0
+    }
+  },
+  "byDay": {
+    "Wed": {
+      "posts": 1,
+      "engagement": 0,
+      "avg": 0.0
+    }
+  },
+  "byHour": {
+    "3": {
+      "posts": 1,
+      "engagement": 0,
+      "avg": 0.0
+    }
+  },
+  "topPosts": [
+    {
+      "lane": "education",
+      "network": "pinterest",
+      "engagement": 0,
+      "created": "2026-11-04T03:26:08Z",
+      "caption": "Dreading the strengths and weaknesses question in interviews? You're not alone! Here's how to tackle it with confidence "
+    }
+  ],
+  "insights": [
+    "Your strongest topic is Education (0.0 avg engagement/post). Make more of it.",
+    "Wed is your best posting day (0.0 avg engagement/post).",
+    "Posts around 03:00 UTC perform best (0.0 avg engagement/post)."
+  ],
   "laneLabels": {
     "education": "Education",
     "news": "News",
