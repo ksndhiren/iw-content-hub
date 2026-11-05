@@ -10805,7 +10805,7 @@
       "id": "week23",
       "label": "Week 23",
       "weekCommencing": "2026-11-02",
-      "builtAt": 1793800735,
+      "builtAt": 1793888311,
       "posts": [
         {
           "id": "week23-mon-news",
@@ -11845,6 +11845,50 @@
             "x": [
               "#jobsafety",
               "#internships"
+            ]
+          }
+        },
+        {
+          "id": "week23-fri-news",
+          "day": "Fri 6 Nov",
+          "lane": "news",
+          "title": "Apprentice Takes Stage at Major Conference",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "An apprentice from a UK college recently had the chance to speak at a major regional conference. This opportunity put them on stage alongside well-known figures, showcasing the unique experiences apprenticeships can offer beyond traditional learning paths.\n\nFor students and recent graduates, this highlights the importance of considering apprenticeships. They can provide not just practical skills but also unexpected opportunities to network and grow professionally.\n\nInternships can similarly offer hands-on experiences that enrich your career journey. Whether it's an apprenticeship or an internship, real-world exposure is invaluable for early-career development.\n\nSource: FE News.",
+          "hashtags": [
+            "#apprenticeship",
+            "#careergrowth",
+            "#networking",
+            "#internships",
+            "#skills"
+          ],
+          "captions": {
+            "ig-fb": "An apprentice from a UK college recently had the chance to speak at a major regional conference. This opportunity put them on stage alongside well-known figures, showcasing the unique experiences apprenticeships can offer beyond traditional learning paths.\n\nFor students and recent graduates, this highlights the importance of considering apprenticeships. They can provide not just practical skills but also unexpected opportunities to network and grow professionally.\n\nInternships can similarly offer hands-on experiences that enrich your career journey. Whether it's an apprenticeship or an internship, real-world exposure is invaluable for early-career development.\n\nSource: FE News.",
+            "linkedin": "In a remarkable opportunity, a UK apprentice spoke at a regional conference, sharing the stage with notable figures. This event highlights how apprenticeships can offer experiences beyond typical expectations, providing platforms for young professionals to shine.\n\nFor students and graduates, such opportunities emphasize the potential of apprenticeships to offer more than just skill-building. They present chances to network and gain exposure, crucial for early career advancement.\n\nInternships can also serve as a gateway to practical experiences, offering insights and opportunities that traditional education paths might not provide. Engaging in either can significantly enhance your professional journey.\n\nSource: FE News.",
+            "x": "A UK apprentice recently spoke at a regional conference, sharing the stage with prominent figures. This highlights how apprenticeships can provide unexpected opportunities for networking and growth. Consider hands-on roles for unique career boosts! (Source: FE News)",
+            "threads": "A UK apprentice recently spoke at a regional conference, highlighting the unexpected opportunities apprenticeships offer. For students and grads, hands-on roles like internships can provide similar career boosts. Visit www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#apprenticeship",
+              "#careergrowth",
+              "#networking",
+              "#internships",
+              "#skills"
+            ],
+            "linkedin": [
+              "#apprenticeship",
+              "#careerdevelopment",
+              "#networking"
+            ],
+            "x": [
+              "#apprenticeship",
+              "#careergrowth"
             ]
           }
         }
