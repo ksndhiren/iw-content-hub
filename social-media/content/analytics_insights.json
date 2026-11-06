@@ -1,40 +1,130 @@
 {
-  "generatedAt": "2026-11-05T14:26:01Z",
+  "generatedAt": "2026-11-06T14:02:46Z",
   "windowRecords": 80,
   "byLane": {
     "education": {
-      "posts": 1,
+      "posts": 8,
+      "engagement": 0,
+      "avg": 0.0
+    },
+    "tip": {
+      "posts": 8,
+      "engagement": 0,
+      "avg": 0.0
+    },
+    "news": {
+      "posts": 8,
+      "engagement": 0,
+      "avg": 0.0
+    },
+    "quote": {
+      "posts": 6,
+      "engagement": 0,
+      "avg": 0.0
+    },
+    "engagement": {
+      "posts": 2,
       "engagement": 0,
       "avg": 0.0
     }
   },
   "byDay": {
     "Wed": {
-      "posts": 1,
+      "posts": 24,
+      "engagement": 0,
+      "avg": 0.0
+    },
+    "Fri": {
+      "posts": 6,
+      "engagement": 1,
+      "avg": 0.2
+    },
+    "Thu": {
+      "posts": 8,
       "engagement": 0,
       "avg": 0.0
     }
   },
   "byHour": {
     "3": {
-      "posts": 1,
+      "posts": 24,
+      "engagement": 0,
+      "avg": 0.0
+    },
+    "9": {
+      "posts": 6,
+      "engagement": 1,
+      "avg": 0.2
+    },
+    "14": {
+      "posts": 8,
       "engagement": 0,
       "avg": 0.0
     }
   },
   "topPosts": [
     {
+      "lane": null,
+      "network": "linkedin",
+      "engagement": 1,
+      "created": "2026-11-06T09:28:03Z",
+      "caption": "How to Retain Interns in Startups\n\nDiscover practical ways to retain interns in startups with clear expectations, owners"
+    },
+    {
       "lane": "education",
-      "network": "pinterest",
+      "network": "linkedin",
       "engagement": 0,
-      "created": "2026-11-04T03:26:08Z",
-      "caption": "Dreading the strengths and weaknesses question in interviews? You're not alone! Here's how to tackle it with confidence "
+      "created": "2026-11-04T03:27:15Z",
+      "caption": "Day one as an intern can be both exciting and daunting. To make a lasting impression, start with a strong introduction:\n"
+    },
+    {
+      "lane": "education",
+      "network": "gmb",
+      "engagement": 0,
+      "created": "2026-11-04T03:27:25Z",
+      "caption": "Starting an internship can be nerve-wracking, but introducing yourself doesn’t have to be! Here’s a simple way to make a"
+    },
+    {
+      "lane": "education",
+      "network": "threads",
+      "engagement": 0,
+      "created": "2026-11-04T03:27:18Z",
+      "caption": "Starting an internship can be nerve-wracking, but introducing yourself doesn’t have to be! Here’s a simple way to make a"
+    },
+    {
+      "lane": "education",
+      "network": "facebook",
+      "engagement": 0,
+      "created": "2026-11-04T03:27:17Z",
+      "caption": "Starting an internship can be nerve-wracking, but introducing yourself doesn’t have to be! Here’s a simple way to make a"
+    },
+    {
+      "lane": "education",
+      "network": "facebook",
+      "engagement": 0,
+      "created": "2026-11-04T03:27:33Z",
+      "caption": "Your First-Day Intro, Sorted"
+    },
+    {
+      "lane": "education",
+      "network": "instagram",
+      "engagement": 0,
+      "created": "2026-11-04T03:27:31Z",
+      "caption": "Your First-Day Intro, Sorted"
+    },
+    {
+      "lane": "education",
+      "network": "instagram",
+      "engagement": 0,
+      "created": "2026-11-04T03:27:12Z",
+      "caption": "Starting an internship can be nerve-wracking, but introducing yourself doesn’t have to be! Here’s a simple way to make a"
     }
   ],
   "insights": [
     "Your strongest topic is Education (0.0 avg engagement/post). Make more of it.",
-    "Wed is your best posting day (0.0 avg engagement/post).",
-    "Posts around 03:00 UTC perform best (0.0 avg engagement/post)."
+    "Fri is your best posting day (0.2 avg engagement/post).",
+    "Posts around 09:00 UTC perform best (0.2 avg engagement/post).",
+    "Education is underperforming (0.0 avg) - rework the angle or post it at a stronger time."
   ],
   "laneLabels": {
     "education": "Education",
