@@ -11893,6 +11893,58 @@
           }
         }
       ]
+    },
+    {
+      "id": "week24",
+      "label": "Week 24",
+      "weekCommencing": "2026-11-09",
+      "builtAt": 1794142678,
+      "posts": [
+        {
+          "id": "week24-mon-news",
+          "day": "Mon 9 Nov",
+          "lane": "news",
+          "title": "Tough Interviews: What We Can Learn",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "Job interviews can sometimes take unexpected turns, with candidates sharing stories of bizarre and uncomfortable questions they've faced. These experiences highlight the unpredictable nature of the hiring process.\n\nFor students and graduates entering the job market, it's crucial to be ready for anything. Being prepared for unusual interview scenarios can help you stay calm and composed under pressure.\n\nOne practical takeaway is the value of internships. They provide a chance to practice interview skills and build confidence in a low-stakes setting, preparing you for future job interviews. Source: BBC Business.",
+          "hashtags": [
+            "#jobinterviews",
+            "#careerskills",
+            "#internships",
+            "#studentlife",
+            "#jobpreparation"
+          ],
+          "captions": {
+            "ig-fb": "Job interviews can sometimes take unexpected turns, with candidates sharing stories of bizarre and uncomfortable questions they've faced. These experiences highlight the unpredictable nature of the hiring process.\n\nFor students and graduates entering the job market, it's crucial to be ready for anything. Being prepared for unusual interview scenarios can help you stay calm and composed under pressure.\n\nOne practical takeaway is the value of internships. They provide a chance to practice interview skills and build confidence in a low-stakes setting, preparing you for future job interviews. Source: BBC Business.",
+            "linkedin": "In the world of job interviews, some candidates have reported facing truly strange and uncomfortable questions. These anecdotes shed light on the unpredictable challenges one might encounter during job interviews.\n\nFor those just starting their careers, understanding that interviews might not go as expected is key. Preparation and staying calm when faced with unusual questions can make a significant difference.\n\nInternships are an excellent way to hone your interview skills. They offer a supportive environment to practice and gain confidence, helping you tackle future interviews with ease. Source: BBC Business.",
+            "x": "Job interviews can be unpredictable, with candidates sharing tales of bizarre questions. For students/grads, this means being prepared for anything. Internships can help you practice and build confidence. (Source: BBC Business)",
+            "threads": "Interviews can be unpredictable, as shared by candidates who've faced odd questions. This highlights the need for preparation. Internships offer a chance to practice in a supportive setting. Learn from each experience. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#jobinterviews",
+              "#careerskills",
+              "#internships",
+              "#studentlife",
+              "#jobpreparation"
+            ],
+            "linkedin": [
+              "#careeradvice",
+              "#interviewskills",
+              "#internships"
+            ],
+            "x": [
+              "#jobinterviews",
+              "#internships"
+            ]
+          }
+        }
+      ]
     }
   ]
 }
