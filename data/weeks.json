@@ -11898,7 +11898,7 @@
       "id": "week24",
       "label": "Week 24",
       "weekCommencing": "2026-11-09",
-      "builtAt": 1794219640,
+      "builtAt": 1794238603,
       "posts": [
         {
           "id": "week24-mon-news",
@@ -12762,6 +12762,50 @@
           },
           "quoteId": "q044",
           "world": "split"
+        },
+        {
+          "id": "week24-tue-news",
+          "day": "Tue 10 Nov",
+          "lane": "news",
+          "title": "£5.3m Centre Opens for SEND Learners",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "Exeter College has launched a £5.3 million centre aimed at supporting learners with special educational needs and disabilities (SEND). This facility is designed to build skills, confidence, and independence in a state-of-the-art environment tailored to their needs.\n\nWhy does this matter? For SEND learners, having dedicated resources and support can be transformative. It means gaining the practical skills and self-assurance needed to navigate future careers. The centre's focus on personalised learning can significantly impact their personal and professional growth.\n\nFor students and graduates, internships are a vital next step. They provide practical experience in real-world settings, helping to solidify the skills learned in educational environments like the new Exeter centre. Internships give students a chance to apply their skills and build networks that are crucial for career development.\n\nSource: FE News.",
+          "hashtags": [
+            "#sendsupport",
+            "#skillsdevelopment",
+            "#internships",
+            "#education",
+            "#careergrowth"
+          ],
+          "captions": {
+            "ig-fb": "Exeter College has launched a £5.3 million centre aimed at supporting learners with special educational needs and disabilities (SEND). This facility is designed to build skills, confidence, and independence in a state-of-the-art environment tailored to their needs.\n\nWhy does this matter? For SEND learners, having dedicated resources and support can be transformative. It means gaining the practical skills and self-assurance needed to navigate future careers. The centre's focus on personalised learning can significantly impact their personal and professional growth.\n\nFor students and graduates, internships are a vital next step. They provide practical experience in real-world settings, helping to solidify the skills learned in educational environments like the new Exeter centre. Internships give students a chance to apply their skills and build networks that are crucial for career development.\n\nSource: FE News.",
+            "linkedin": "A new £5.3 million centre has been opened at Exeter College to support learners with special educational needs and disabilities (SEND). This state-of-the-art facility aims to enhance the skills, confidence, and independence of SEND students in a supportive environment.\n\nThe opening of such a centre is significant as it addresses the unique needs of SEND learners, offering them tailored support to develop essential life and career skills. This initiative helps bridge the gap between education and the workplace, creating better opportunities for these students.\n\nFor those embarking on their career journey, internships can amplify this learning experience. By engaging in internships, SEND learners can apply their skills in actual work settings, gaining valuable experience and building professional networks that are key to their future success.\n\nSource: FE News.",
+            "x": "Exeter College's new £5.3m centre supports SEND learners by enhancing skills, confidence, and independence. Internships can further solidify these gains, providing real-world experience. (Source: FE News)",
+            "threads": "Exeter College's £5.3m centre offers SEND learners tailored support to enhance skills and independence. Internships can extend these gains, providing valuable real-world experience. Learn more at www.internwise.co.uk (Source: FE News)"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#sendsupport",
+              "#skillsdevelopment",
+              "#internships",
+              "#education",
+              "#careergrowth"
+            ],
+            "linkedin": [
+              "#sendeducation",
+              "#skillsdevelopment",
+              "#internships"
+            ],
+            "x": [
+              "#sendsupport",
+              "#internships"
+            ]
+          }
         }
       ]
     },
