@@ -1,0 +1,106 @@
+{
+  "article": "a",
+  "role_line1": "Marketing",
+  "role_line2": "Intern",
+  "structure": "a tall vertical cutaway cross-section of a lively creative marketing agency building in the centre of a portrait canvas, with a giant billboard frame on its roof showing only bold abstract colour blocks.",
+  "character": "young marketing intern (a man in his early 20s, curly black hair, mint green jumper, lanyard)",
+  "scenes": [
+    "he arrives with a coffee and checks a laptop showing colourful abstract line graphs and bar charts.",
+    "he stands at a big planning wall covered in colourful sticky notes and a calendar grid, planning with two teammates.",
+    "he types at a desk while abstract speech bubbles and envelope shapes float up out of his laptop.",
+    "a meeting room with a designer: a mood board of colour swatches and abstract poster sketches on the wall.",
+    "he presents a big rising arrow chart on a screen to his manager, who gives a thumbs up; the city at dusk outside."
+  ],
+  "props": "a giant megaphone, a target with an arrow in the bullseye, envelopes, heart and thumbs-up icons, a magnifying glass, paper planes, a winding cable",
+  "steps": [
+    {
+      "n": 1,
+      "time": "09:00",
+      "title": "Check the numbers",
+      "body": "Yesterday's email and social results.",
+      "target": [
+        430,
+        1400
+      ],
+      "card": [
+        22,
+        1085,
+        250
+      ]
+    },
+    {
+      "n": 2,
+      "time": "10:00",
+      "title": "Plan content",
+      "body": "Next week's posts and emails, with the team.",
+      "target": [
+        430,
+        1180
+      ],
+      "card": [
+        820,
+        905,
+        240
+      ]
+    },
+    {
+      "n": 3,
+      "time": "12:00",
+      "title": "Write copy",
+      "body": "A blog intro, three captions, one subject line.",
+      "target": [
+        400,
+        940
+      ],
+      "card": [
+        22,
+        700,
+        250
+      ]
+    },
+    {
+      "n": 4,
+      "time": "14:00",
+      "title": "Campaign brief",
+      "body": "Audience, message and deadline, agreed with design.",
+      "target": [
+        460,
+        720
+      ],
+      "card": [
+        820,
+        520,
+        240
+      ]
+    },
+    {
+      "n": 5,
+      "time": "16:30",
+      "title": "Report back",
+      "body": "What worked today, and what to test next.",
+      "target": [
+        430,
+        460
+      ],
+      "card": [
+        22,
+        300,
+        250
+      ],
+      "accent": "coral"
+    }
+  ],
+  "tools": [
+    "Google Analytics",
+    "Canva",
+    "HubSpot or Mailchimp"
+  ],
+  "tools_card": [
+    820,
+    230,
+    240
+  ],
+  "cta": "Find marketing internships",
+  "title_width": 330,
+  "title_size": 58
+}

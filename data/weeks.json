@@ -11898,7 +11898,7 @@
       "id": "week24",
       "label": "Week 24",
       "weekCommencing": "2026-11-09",
-      "builtAt": 1794215611,
+      "builtAt": 1794219640,
       "posts": [
         {
           "id": "week24-mon-news",
@@ -11943,52 +11943,6 @@
               "#internships"
             ]
           }
-        },
-        {
-          "id": "week24-mon-infographic",
-          "day": "Mon 9 Nov",
-          "lane": "infographic",
-          "title": "Career Map: Every Type of Marketing Role",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "time": "11:00",
-          "world": "infographic",
-          "caption": "\"I want to work in marketing\" is not a job title.\n\nSocial, content, SEO, analytics, PR: five very different jobs, and each one wants a different application. Pick one, then aim everything at it.\n\nSave this for when you start applying. Send it to the friend who \"wants to do marketing\".\n\nFull guide to every role: link in bio.",
-          "hashtags": [
-            "#marketingcareers",
-            "#graduatejobsuk",
-            "#internshipsuk",
-            "#careeradvice"
-          ],
-          "captions": {
-            "ig-fb": "\"I want to work in marketing\" is not a job title.\n\nSocial, content, SEO, analytics, PR: five very different jobs, and each one wants a different application. Pick one, then aim everything at it.\n\nSave this for when you start applying. Send it to the friend who \"wants to do marketing\".\n\nFull guide to every role: link in bio.",
-            "linkedin": "\"I want to work in marketing\" is not a job title, and recruiters can tell when an application is aimed at all of it at once.\n\nWe mapped five entry routes into marketing, what each role does day to day, and the four checks to make before applying. The candidates who stand out pick one lane and build one piece of proof for it.\n\nFull guide: https://www.internwise.co.uk/candidate-journey/career-paths/types-of-marketing-roles-to-succeed-in-marketing-career",
-            "x": "\"I want to work in marketing\" is not a job title. Five marketing roles, what each one actually does, and where to start with no experience. Save it.\n\nFull guide: internwise.co.uk",
-            "threads": "\"I want to work in marketing\" is not a job title.\n\nSocial, content, SEO, analytics, PR: five very different jobs. Pick one, then aim everything at it.\n\nSave this for when you start applying. Full guide at internwise.co.uk"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#marketingcareers",
-              "#graduatejobsuk",
-              "#internshipsuk",
-              "#careeradvice"
-            ],
-            "linkedin": [
-              "#marketingcareers",
-              "#earlycareers",
-              "#graduatejobs"
-            ],
-            "x": [
-              "#marketingcareers",
-              "#internships"
-            ]
-          },
-          "altText": "Infographic titled \"Every Type of Marketing Role\". Five roles and what each does: social media executive, content marketer, SEO and PPC executive, marketing analyst, PR and comms assistant. Entry-level starting roles, four myths to drop, and a four-point ready-to-apply checklist.",
-          "link": "https://www.internwise.co.uk/candidate-journey/career-paths/types-of-marketing-roles-to-succeed-in-marketing-career"
         },
         {
           "id": "week24-mon-education",
@@ -12067,49 +12021,50 @@
           }
         },
         {
-          "id": "week24-mon-engagement",
+          "id": "week24-mon-infographic",
           "day": "Mon 9 Nov",
-          "lane": "engagement",
-          "title": "Where do employers find you first?",
+          "lane": "infographic",
+          "title": "A Day in the Life: Accounting Intern",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Ever wondered where employers first spot you? It's often your CV, LinkedIn profile, or perhaps even your portfolio. Whichever they open first deserves an hour of your attention this week. Make sure it's strong, polished, and a true reflection of your skills. Take some time today to tidy one up. Need an internship to boost your profile? Visit www.internwise.co.uk",
+          "time": "16:30",
+          "world": "dayinlife",
+          "role": "accounting",
+          "caption": "What does an accounting intern actually do all day?\n\nNot just spreadsheets. Reconciliations, month-end meetings, expenses, and plenty of questions you are allowed to ask.\n\nSave this if finance is on your list, and send it to the friend who thinks accounting is all maths.\n\nFind accounting internships: link in bio.",
           "hashtags": [
-            "#internship",
-            "#careertips",
-            "#jobhunt",
-            "#graduatejobs",
-            "#internwise"
+            "#accountingintern",
+            "#financecareers",
+            "#internshipsuk",
+            "#dayinthelife"
           ],
           "captions": {
-            "ig-fb": "Ever wondered where employers first spot you? It's often your CV, LinkedIn profile, or perhaps even your portfolio. Whichever they open first deserves an hour of your attention this week. Make sure it's strong, polished, and a true reflection of your skills. Take some time today to tidy one up. Need an internship to boost your profile? Visit www.internwise.co.uk",
-            "linkedin": "Employers often get their first impression of you from your CV, LinkedIn profile, or portfolio. Whichever one they open first is crucial. Spend an hour this week refining it to showcase your skills and strengths. A little effort can make all the difference in standing out. Ready to find an internship that complements your profile? Check out internwise.co.uk",
-            "x": "Where do employers find you first? CV, LinkedIn, or portfolio? Make the first thing they open your strongest asset. Tidy one up today! Visit internwise.co.uk"
+            "ig-fb": "What does an accounting intern actually do all day?\n\nNot just spreadsheets. Reconciliations, month-end meetings, expenses, and plenty of questions you are allowed to ask.\n\nSave this if finance is on your list, and send it to the friend who thinks accounting is all maths.\n\nFind accounting internships: link in bio.",
+            "linkedin": "What does an accounting intern actually do all day?\n\nA typical day: plan the tasks from the finance team, match receipts and invoices to the bank statement, sit in on the month-end numbers, and close the day with expenses checked and tomorrow's list written. Excel does most of the heavy lifting, alongside tools like Xero or Sage.\n\nIf you are considering finance, this is the job behind the job title.\n\nhttps://www.internwise.co.uk",
+            "x": "Reconciliations, month-end meetings, filing and a lot of Excel. A day in the life of an accounting intern.\n\ninternwise.co.uk",
+            "threads": "What does an accounting intern actually do all day?\n\nNot just spreadsheets. Reconciliations, month-end meetings, expenses, and plenty of questions you are allowed to ask.\n\nSave this if finance is on your list, and send it to the friend who thinks accounting is all maths.\n\nFind accounting internships: internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#internship",
-              "#careertips",
-              "#jobhunt",
-              "#graduatejobs",
-              "#internwise"
+              "#accountingintern",
+              "#financecareers",
+              "#internshipsuk",
+              "#dayinthelife"
             ],
             "linkedin": [
-              "#careeradvice",
-              "#internship",
-              "#professionalgrowth"
+              "#accounting",
+              "#internships",
+              "#earlycareers"
             ],
             "x": [
-              "#careertips",
-              "#internwise"
+              "#internships",
+              "#dayinthelife"
             ]
           },
-          "world": "debate",
-          "ideaId": "c030"
+          "altText": "Five floors of a cut-away office building show one accounting intern's day from morning to evening: arriving and planning at 08:45, reconciliations at 09:30, a month-end meeting at 11:30, lunch with the team at 13:00, and filing before heading home at 17:30. Tools: Excel, Xero or Sage, expense apps."
         },
         {
           "id": "week24-mon-quote",
@@ -12155,51 +12110,6 @@
           },
           "quoteId": "q051",
           "world": "stamp"
-        },
-        {
-          "id": "week24-tue-infographic",
-          "day": "Tue 10 Nov",
-          "lane": "infographic",
-          "title": "Your 2027 Internship Deadline Map",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "time": "11:00",
-          "world": "infographic",
-          "caption": "If you want a summer 2027 internship, the clock started in September.\n\nBanking closes first. Law vacation schemes close Dec to Jan. Tech, consulting and most grad schemes are \"rolling\", which means they close when they are full, not on the date you wrote down.\n\nSave this, then check your top three employers' careers pages tonight.\n\nBrowse open internships: link in bio.",
-          "hashtags": [
-            "#internships2027",
-            "#summerinternship",
-            "#internshipsuk",
-            "#graduateschemes"
-          ],
-          "captions": {
-            "ig-fb": "If you want a summer 2027 internship, the clock started in September.\n\nBanking closes first. Law vacation schemes close Dec to Jan. Tech, consulting and most grad schemes are \"rolling\", which means they close when they are full, not on the date you wrote down.\n\nSave this, then check your top three employers' careers pages tonight.\n\nBrowse open internships: link in bio.",
-            "linkedin": "Summer 2027 internships are being filled right now.\n\nA quick map of when each sector usually closes, and the trap most students fall into: \"rolling\" deadlines close when places fill, not on a fixed date. Applying in November rather than January can be the whole difference.\n\nIf you mentor students or run a society, this one is worth sharing.\n\nBrowse open internships: https://www.internwise.co.uk",
-            "x": "Summer 2027 internships are filling now. \"Rolling\" deadlines close when places fill, not on a date. When each sector usually closes, and what to apply for this month.\n\ninternwise.co.uk",
-            "threads": "If you want a summer 2027 internship, the clock started in September.\n\nBanking closes first. Law vacation schemes close Dec to Jan. \"Rolling\" means it closes when it is full.\n\nSave this, then check your top three employers' careers pages tonight."
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#internships2027",
-              "#summerinternship",
-              "#internshipsuk",
-              "#graduateschemes"
-            ],
-            "linkedin": [
-              "#internships",
-              "#earlycareers",
-              "#graduaterecruitment"
-            ],
-            "x": [
-              "#internships2027",
-              "#graduatejobs"
-            ]
-          },
-          "altText": "Infographic titled \"Your 2027 Internship Deadline Map\". Typical closing windows by sector: banking and finance (many October to November), law vacation schemes (December to January), tech and engineering (often rolling, some 1 December), consulting and Big 4 (rolling), graduate schemes (mostly rolling). What to apply for this month, four deadline traps, and a pre-submit checklist."
         },
         {
           "id": "week24-tue-education",
@@ -12278,49 +12188,50 @@
           }
         },
         {
-          "id": "week24-tue-engagement",
+          "id": "week24-tue-infographic",
           "day": "Tue 10 Nov",
-          "lane": "engagement",
-          "title": "Which interview question do you dread most?",
+          "lane": "infographic",
+          "title": "A Day in the Life: Marketing Intern",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Interviews can be nerve-wracking, especially when you get that one dreaded question. Is it 'Tell me about yourself?' or maybe 'What's your biggest weakness?' Whatever it is, facing it head-on can make all the difference. Tonight, take five minutes to jot down your answer and rehearse it out loud. You’ll thank yourself later. 🌟 Start preparing today and find internships that match your skills at www.internwise.co.uk.",
+          "time": "16:30",
+          "world": "dayinlife",
+          "role": "marketing",
+          "caption": "What does a marketing intern actually do all day?\n\nCheck the numbers, plan content, write copy, brief design, report back. Most days are a loop of those five.\n\nSave this before your next application, so you can talk about the real job, not the job title.\n\nFind marketing internships: link in bio.",
           "hashtags": [
-            "#interviewprep",
-            "#careerready",
-            "#internshiptips",
-            "#jobsearch",
-            "#graduatejobs"
+            "#marketingintern",
+            "#marketingcareers",
+            "#internshipsuk",
+            "#dayinthelife"
           ],
           "captions": {
-            "ig-fb": "Interviews can be nerve-wracking, especially when you get that one dreaded question. Is it 'Tell me about yourself?' or maybe 'What's your biggest weakness?' Whatever it is, facing it head-on can make all the difference. Tonight, take five minutes to jot down your answer and rehearse it out loud. You’ll thank yourself later. 🌟 Start preparing today and find internships that match your skills at www.internwise.co.uk.",
-            "linkedin": "Facing interview questions can feel like a daunting task, especially when one catches you off guard. Is it the classic 'Where do you see yourself in five years?' or perhaps 'Why should we hire you?' Whatever your dreaded question might be, preparation is your best ally. Spend a few minutes tonight writing down your response and practise saying it aloud. Remember, confidence grows with rehearsal. For more interview tips and to explore internships, visit internwise.co.uk.",
-            "x": "What's your most dreaded interview question? Tackle it head-on by practising your answer tonight. Preparation boosts confidence! Find your next internship at internwise.co.uk."
+            "ig-fb": "What does a marketing intern actually do all day?\n\nCheck the numbers, plan content, write copy, brief design, report back. Most days are a loop of those five.\n\nSave this before your next application, so you can talk about the real job, not the job title.\n\nFind marketing internships: link in bio.",
+            "linkedin": "What does a marketing intern actually do all day?\n\nStart with yesterday's results, plan next week's posts and emails with the team, write copy (blog intros, captions, subject lines), brief design on a campaign, and finish by reporting what worked and what to test next. Tools you will see: Google Analytics, Canva, HubSpot or Mailchimp.\n\nCandidates who can describe this day in an interview stand out.\n\nhttps://www.internwise.co.uk",
+            "x": "Numbers, content plans, copy, campaign briefs and a report. A day in the life of a marketing intern.\n\ninternwise.co.uk",
+            "threads": "What does a marketing intern actually do all day?\n\nCheck the numbers, plan content, write copy, brief design, report back. Most days are a loop of those five.\n\nSave this before your next application, so you can talk about the real job, not the job title.\n\nFind marketing internships: internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#interviewprep",
-              "#careerready",
-              "#internshiptips",
-              "#jobsearch",
-              "#graduatejobs"
+              "#marketingintern",
+              "#marketingcareers",
+              "#internshipsuk",
+              "#dayinthelife"
             ],
             "linkedin": [
-              "#interviewpreparation",
-              "#careeradvice",
-              "#graduateopportunities"
+              "#marketing",
+              "#internships",
+              "#earlycareers"
             ],
             "x": [
-              "#interviewtips",
-              "#internships"
+              "#internships",
+              "#dayinthelife"
             ]
           },
-          "world": "signal",
-          "ideaId": "c031"
+          "altText": "A cut-away agency building with a billboard on the roof shows one marketing intern's day: checking results at 09:00, planning content at 10:00, writing copy at 12:00, a campaign brief at 14:00 and reporting back at 16:30. Tools: Google Analytics, Canva, HubSpot or Mailchimp."
         },
         {
           "id": "week24-tue-quote",
@@ -12366,51 +12277,6 @@
           },
           "quoteId": "q052",
           "world": "manifesto"
-        },
-        {
-          "id": "week24-wed-infographic",
-          "day": "Wed 11 Nov",
-          "lane": "infographic",
-          "title": "Does an Internship Count as Work Experience?",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "time": "11:00",
-          "world": "infographic",
-          "caption": "Yes. An internship counts as work experience, paid or unpaid.\n\nThe mistake is how people write it: \"helped with various tasks\", tucked under Education. Give it a job title, dates, and one result with a number.\n\nSave this for your next CV update.\n\nFind your next internship: link in bio.",
-          "hashtags": [
-            "#cvtips",
-            "#workexperience",
-            "#internshipsuk",
-            "#studentlife"
-          ],
-          "captions": {
-            "ig-fb": "Yes. An internship counts as work experience, paid or unpaid.\n\nThe mistake is how people write it: \"helped with various tasks\", tucked under Education. Give it a job title, dates, and one result with a number.\n\nSave this for your next CV update.\n\nFind your next internship: link in bio.",
-            "linkedin": "One of the most-searched questions we see: does an internship count as work experience?\n\nYes, paid or unpaid, and placement years are often a candidate's strongest entry. What weakens it is the write-up. Hiring managers skim for a title, dates and a result, not a list of duties.\n\nFind internships: https://www.internwise.co.uk",
-            "x": "Does an internship count as work experience? Yes, paid or unpaid. Write it with a job title, dates and one result with a number, not \"helped with various tasks\".\n\ninternwise.co.uk",
-            "threads": "Yes. An internship counts as work experience, paid or unpaid.\n\nThe mistake is the write-up: \"helped with various tasks\", tucked under Education. Give it a job title, dates and one result with a number.\n\nSave this for your next CV update."
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#cvtips",
-              "#workexperience",
-              "#internshipsuk",
-              "#studentlife"
-            ],
-            "linkedin": [
-              "#earlycareers",
-              "#cvtips",
-              "#internships"
-            ],
-            "x": [
-              "#cvtips",
-              "#internships"
-            ]
-          },
-          "altText": "Infographic titled \"Does an Internship Count as Experience?\". Paid internship, unpaid internship, placement year and volunteering count, and work shadowing partly counts. How to write it, mistakes to avoid, and a four-point check for a strong CV entry."
         },
         {
           "id": "week24-wed-education",
@@ -12489,49 +12355,50 @@
           }
         },
         {
-          "id": "week24-wed-engagement",
+          "id": "week24-wed-infographic",
           "day": "Wed 11 Nov",
-          "lane": "engagement",
-          "title": "Which assessment centre task worries you most?",
+          "lane": "infographic",
+          "title": "A Day in the Life: Graphic Design Intern",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Assessment centres can feel daunting, especially when you're trying to make a great impression. But remember, it's all about showing how you think and work with others. Whether it's the group task, the presentation, or the case study, pick the one that makes you sweat and practise it this week. Speak your thoughts out loud - assessors need to hear your plan! And when you're ready, explore internships waiting for you at www.internwise.co.uk.",
+          "time": "16:30",
+          "world": "dayinlife",
+          "role": "graphic-design",
+          "caption": "What does a graphic design intern actually do all day?\n\nRead the brief, sketch first, build it, take feedback, export it properly. The sketching and the feedback are where you learn most.\n\nSave this, and send it to the designer friend building their portfolio.\n\nFind design internships: link in bio.",
           "hashtags": [
-            "#assessmentcentre",
-            "#internshiptips",
-            "#thinkoutloud",
-            "#graduatejobs",
-            "#internwiseuk"
+            "#graphicdesignintern",
+            "#designcareers",
+            "#internshipsuk",
+            "#dayinthelife"
           ],
           "captions": {
-            "ig-fb": "Assessment centres can feel daunting, especially when you're trying to make a great impression. But remember, it's all about showing how you think and work with others. Whether it's the group task, the presentation, or the case study, pick the one that makes you sweat and practise it this week. Speak your thoughts out loud - assessors need to hear your plan! And when you're ready, explore internships waiting for you at www.internwise.co.uk.",
-            "linkedin": "Feeling the heat of assessment centres? It's natural to worry about the different tasks, whether it's the group exercises, presentations, or case studies. The key is to articulate your thought process clearly. Assessors can only evaluate what they hear, so think out loud. Choose the part that challenges you most and practise this week. Boost your confidence and showcase your skills. When you're ready, find internship opportunities at internwise.co.uk.",
-            "x": "Nervous about assessment centres? Pick the task that worries you most & practise. Think out loud so assessors can hear your process. Find internships at internwise.co.uk."
+            "ig-fb": "What does a graphic design intern actually do all day?\n\nRead the brief, sketch first, build it, take feedback, export it properly. The sketching and the feedback are where you learn most.\n\nSave this, and send it to the designer friend building their portfolio.\n\nFind design internships: link in bio.",
+            "linkedin": "What does a graphic design intern actually do all day?\n\nRead the brief (who it is for, where it runs, when it is due), sketch quick thumbnails on paper, build the layouts in Figma or Adobe on brand, show the senior designer and revise, then export at the right sizes into the right folder.\n\nThat last step sounds small. Teams notice who does it well.\n\nhttps://www.internwise.co.uk",
+            "x": "Brief, sketches, layouts, feedback, export. A day in the life of a graphic design intern.\n\ninternwise.co.uk",
+            "threads": "What does a graphic design intern actually do all day?\n\nRead the brief, sketch first, build it, take feedback, export it properly. The sketching and the feedback are where you learn most.\n\nSave this, and send it to the designer friend building their portfolio.\n\nFind design internships: internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#assessmentcentre",
-              "#internshiptips",
-              "#thinkoutloud",
-              "#graduatejobs",
-              "#internwiseuk"
+              "#graphicdesignintern",
+              "#designcareers",
+              "#internshipsuk",
+              "#dayinthelife"
             ],
             "linkedin": [
-              "#graduateopportunities",
-              "#assessmentcentretips",
-              "#internships"
+              "#graphicdesign",
+              "#internships",
+              "#earlycareers"
             ],
             "x": [
-              "#internshipadvice",
-              "#graduatejobs"
+              "#internships",
+              "#dayinthelife"
             ]
           },
-          "world": "bars",
-          "ideaId": "c032"
+          "altText": "A cut-away studio shaped like a giant sketchbook shows one graphic design intern's day: reading the brief at 09:30, sketching ideas at 10:30, building layouts at 13:00, a feedback round at 15:00 and exporting files at 17:00. Tools: Figma, Illustrator, Photoshop."
         },
         {
           "id": "week24-wed-quote",
@@ -12577,53 +12444,6 @@
           },
           "quoteId": "q053",
           "world": "marquee"
-        },
-        {
-          "id": "week24-thu-infographic",
-          "day": "Thu 12 Nov",
-          "lane": "infographic",
-          "title": "Write an Internship Ad That Gets Applicants",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "time": "11:00",
-          "world": "infographic",
-          "caption": "Hiring an intern? Students read three things first: pay, tasks, dates.\n\nSwap the vague lines for clear ones and watch the applications change. Save this for your next job post.\n\nPost your internship on Internwise: link in bio.",
-          "hashtags": [
-            "#hiringuk",
-            "#internships",
-            "#smallbusinessuk",
-            "#startuphiring"
-          ],
-          "captions": {
-            "ig-fb": "Hiring an intern? Students read three things first: pay, tasks, dates.\n\nSwap the vague lines for clear ones and watch the applications change. Save this for your next job post.\n\nPost your internship on Internwise: link in bio.",
-            "linkedin": "Your internship ad is competing with hundreds of others, and students decide in seconds.\n\nThey look for three things first: the pay, the tasks and the dates. \"Competitive salary\" and \"ad hoc tasks\" tell them nothing. \"£12.71 an hour, run our Instagram, starts 12 January\" tells them everything.\n\nFour checks before you post, plus five lines to swap out.\n\nPost your internship on Internwise: https://www.internwise.co.uk/employers",
-            "x": "Hiring an intern? Students read three things first: pay, tasks, dates. \"Competitive salary\" tells them nothing. Five vague lines to swap, and four checks before you post.\n\ninternwise.co.uk/employers",
-            "threads": "Hiring an intern? Students read three things first: pay, tasks, dates.\n\nSwap the vague lines for clear ones and watch the applications change. Save this for your next job post.\n\nPost your internship at internwise.co.uk/employers"
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#hiringuk",
-              "#internships",
-              "#smallbusinessuk",
-              "#startuphiring"
-            ],
-            "linkedin": [
-              "#hiring",
-              "#internships",
-              "#smallbusiness",
-              "#earlycareers"
-            ],
-            "x": [
-              "#hiring",
-              "#internships"
-            ]
-          },
-          "altText": "Infographic for employers titled \"Write an Internship Ad That Gets Applicants\". Five vague ad phrases with clear replacements, what candidates look for, what puts them off, and a four-point pre-posting checklist.",
-          "link": "https://www.internwise.co.uk/employers"
         },
         {
           "id": "week24-thu-education",
@@ -12701,49 +12521,50 @@
           "world": "timecard"
         },
         {
-          "id": "week24-thu-engagement",
+          "id": "week24-thu-infographic",
           "day": "Thu 12 Nov",
-          "lane": "engagement",
-          "title": "When do you start applying for summer internships?",
+          "lane": "infographic",
+          "title": "A Day in the Life: HR Intern",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Wondering when to kick off your summer internship search? Many companies start their recruitment in autumn and spots fill up fast, often before the new year. If your dream sector hires early, now's the time to act. Take five minutes today to check three deadlines - it could make all the difference. Start exploring at www.internwise.co.uk and discover your next big opportunity!",
+          "time": "16:30",
+          "world": "dayinlife",
+          "role": "hr",
+          "caption": "What does an HR intern actually do all day?\n\nScreen CVs, book interviews, get new starters ready, and keep people's records safe. You see hiring from the other side of the desk.\n\nSave this if you are curious about HR, or if you just want to know what happens to your CV after you press apply.\n\nFind HR internships: link in bio.",
           "hashtags": [
-            "#internshiptips",
-            "#careeradvice",
-            "#summerinternship",
-            "#gradjobs",
-            "#internwise"
+            "#hrintern",
+            "#hrcareers",
+            "#internshipsuk",
+            "#dayinthelife"
           ],
           "captions": {
-            "ig-fb": "Wondering when to kick off your summer internship search? Many companies start their recruitment in autumn and spots fill up fast, often before the new year. If your dream sector hires early, now's the time to act. Take five minutes today to check three deadlines - it could make all the difference. Start exploring at www.internwise.co.uk and discover your next big opportunity!",
-            "linkedin": "Thinking about your summer internship? Many programmes open in autumn and are filled well before the new year. If your chosen industry is one of those that recruit early, this month is the prime time to start applying. Don't wait until it's too late - check three deadlines today and secure your spot. Visit internwise.co.uk to get started.",
-            "x": "Summer internships may open in autumn, filling up before the new year. If your sector recruits early, now’s the time to apply. Check three deadlines today at internwise.co.uk"
+            "ig-fb": "What does an HR intern actually do all day?\n\nScreen CVs, book interviews, get new starters ready, and keep people's records safe. You see hiring from the other side of the desk.\n\nSave this if you are curious about HR, or if you just want to know what happens to your CV after you press apply.\n\nFind HR internships: link in bio.",
+            "linkedin": "What does an HR intern actually do all day?\n\nAnswer interview requests and new-starter questions, screen CVs against the role's must-haves, schedule interviews, prepare onboarding (welcome packs, IT access, first-day plans) and keep staff records accurate and confidential.\n\nIt is also the best seat in the building for learning how hiring really works.\n\nhttps://www.internwise.co.uk",
+            "x": "CV screening, interview bookings, onboarding and confidential records. A day in the life of an HR intern.\n\ninternwise.co.uk",
+            "threads": "What does an HR intern actually do all day?\n\nScreen CVs, book interviews, get new starters ready, and keep people's records safe. You see hiring from the other side of the desk.\n\nSave this if you are curious about HR, or if you just want to know what happens to your CV after you press apply.\n\nFind HR internships: internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#internshiptips",
-              "#careeradvice",
-              "#summerinternship",
-              "#gradjobs",
-              "#internwise"
+              "#hrintern",
+              "#hrcareers",
+              "#internshipsuk",
+              "#dayinthelife"
             ],
             "linkedin": [
-              "#internship",
-              "#graduatejobs",
-              "#careeradvice"
+              "#humanresources",
+              "#internships",
+              "#earlycareers"
             ],
             "x": [
               "#internships",
-              "#graduatejobs"
+              "#dayinthelife"
             ]
           },
-          "world": "dial",
-          "ideaId": "c033"
+          "altText": "A cut-away office with an ID badge hanging from the roof shows one HR intern's day: inbox and calendar at 09:00, screening CVs at 10:00, booking interviews at 11:30, onboarding prep at 14:00 and updating records at 16:30. Tools: Excel, an HR system, Outlook calendar."
         },
         {
           "id": "week24-thu-quote",
@@ -12789,51 +12610,6 @@
           },
           "quoteId": "q040",
           "world": "notebook"
-        },
-        {
-          "id": "week24-fri-infographic",
-          "day": "Fri 13 Nov",
-          "lane": "infographic",
-          "title": "Tell Me About Yourself in 60 Seconds",
-          "platform": "Multi-Platform",
-          "format": "Single",
-          "slides": [
-            "slide_1.png"
-          ],
-          "status": "in-review",
-          "time": "11:00",
-          "world": "infographic",
-          "caption": "Every interview starts here, and most people ramble.\n\nThe formula: who you are now, one proof with a number, why this role. 60 to 90 seconds, then stop.\n\nSave it. Practise it out loud three times before your next interview.\n\nFind your next interview: link in bio.",
-          "hashtags": [
-            "#interviewtips",
-            "#tellmeaboutyourself",
-            "#graduatejobsuk",
-            "#internshipsuk"
-          ],
-          "captions": {
-            "ig-fb": "Every interview starts here, and most people ramble.\n\nThe formula: who you are now, one proof with a number, why this role. 60 to 90 seconds, then stop.\n\nSave it. Practise it out loud three times before your next interview.\n\nFind your next interview: link in bio.",
-            "linkedin": "\"Tell me about yourself\" is the first question in almost every interview, and the easiest to get wrong.\n\nA simple structure for early-career candidates: start with now, give one result with a number, and finish on why this role. Keep it under 90 seconds.\n\nWorth sharing with anyone interviewing this month.\n\nFind internships: https://www.internwise.co.uk",
-            "x": "\"Tell me about yourself\" in 60 seconds: who you are now, one proof with a number, why this role. Then stop. Save it and practise out loud.\n\ninternwise.co.uk",
-            "threads": "Every interview starts here, and most people ramble.\n\nThe formula: who you are now, one proof with a number, why this role. 60 to 90 seconds, then stop.\n\nSave it. Practise it out loud three times before your next interview."
-          },
-          "hashtagsByPlatform": {
-            "ig-fb": [
-              "#interviewtips",
-              "#tellmeaboutyourself",
-              "#graduatejobsuk",
-              "#internshipsuk"
-            ],
-            "linkedin": [
-              "#interviewtips",
-              "#earlycareers",
-              "#graduatejobs"
-            ],
-            "x": [
-              "#interviewtips",
-              "#jobsearch"
-            ]
-          },
-          "altText": "Infographic titled \"Tell Me About Yourself in 60 Seconds\". Five common mistakes with better versions, what to include, what to leave out, and a four-point 60-second check."
         },
         {
           "id": "week24-fri-education",
@@ -12897,49 +12673,50 @@
           "world": "letter"
         },
         {
-          "id": "week24-fri-engagement",
+          "id": "week24-fri-infographic",
           "day": "Fri 13 Nov",
-          "lane": "engagement",
-          "title": "What do you do after a rejection email?",
+          "lane": "infographic",
+          "title": "A Day in the Life: Social Media Intern",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "in-review",
-          "caption": "Got that dreaded rejection email? It's tough, but your next steps can make a difference. Take a moment to reflect, then ask for feedback. Most candidates skip this step, but it can provide invaluable insight for your future applications. Give it a go this week - you might be surprised at what you learn. Explore more opportunities at www.internwise.co.uk.",
+          "time": "16:30",
+          "world": "dayinlife",
+          "role": "social-media",
+          "caption": "What does a social media intern actually do all day?\n\nReply first, scan trends, create, schedule, report. Less scrolling than you would think, more planning.\n\nSave this and send it to the friend who says they want to do social media for a living.\n\nFind social media internships: link in bio.",
           "hashtags": [
-            "#careeradvice",
-            "#careertips",
-            "#internship",
-            "#jobhunt",
-            "#feedback"
+            "#socialmediaintern",
+            "#socialmediamarketing",
+            "#internshipsuk",
+            "#dayinthelife"
           ],
           "captions": {
-            "ig-fb": "Got that dreaded rejection email? It's tough, but your next steps can make a difference. Take a moment to reflect, then ask for feedback. Most candidates skip this step, but it can provide invaluable insight for your future applications. Give it a go this week - you might be surprised at what you learn. Explore more opportunities at www.internwise.co.uk.",
-            "linkedin": "Rejection emails can feel disheartening, but they're not the end of the road. What you choose to do next can set you apart. Take a moment to breathe, then reach out for feedback. It's a step many overlook, but it can be a game-changer for your next application. Ready to find your next opportunity? Visit internwise.co.uk.",
-            "x": "Rejection stings, but your next steps matter. Ask for feedback - it's a move most skip. Ready to find your next path? internwise.co.uk"
+            "ig-fb": "What does a social media intern actually do all day?\n\nReply first, scan trends, create, schedule, report. Less scrolling than you would think, more planning.\n\nSave this and send it to the friend who says they want to do social media for a living.\n\nFind social media internships: link in bio.",
+            "linkedin": "What does a social media intern actually do all day?\n\nReply to comments and messages first, scan trends and check they fit the brand, create content (a short video, captions, a designed post), queue the week in a scheduler, and report which posts earned saves and shares, and why.\n\nThe reporting is what turns a social media intern into a marketer.\n\nhttps://www.internwise.co.uk",
+            "x": "Replies, trends, content, scheduling and reports. A day in the life of a social media intern.\n\ninternwise.co.uk",
+            "threads": "What does a social media intern actually do all day?\n\nReply first, scan trends, create, schedule, report. Less scrolling than you would think, more planning.\n\nSave this and send it to the friend who says they want to do social media for a living.\n\nFind social media internships: internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#careeradvice",
-              "#careertips",
-              "#internship",
-              "#jobhunt",
-              "#feedback"
+              "#socialmediaintern",
+              "#socialmediamarketing",
+              "#internshipsuk",
+              "#dayinthelife"
             ],
             "linkedin": [
-              "#careeradvice",
-              "#jobsearch",
-              "#feedback"
+              "#socialmedia",
+              "#internships",
+              "#earlycareers"
             ],
             "x": [
-              "#careeradvice",
-              "#jobsearch"
+              "#internships",
+              "#dayinthelife"
             ]
           },
-          "world": "stickies",
-          "ideaId": "c034"
+          "altText": "A giant smartphone cut away into five floors shows one social media intern's day: replying to comments at 09:00, a trend scan at 10:00, creating content at 11:30, scheduling posts at 14:00 and reporting at 16:30. Tools: Canva, CapCut, Meta Business Suite."
         },
         {
           "id": "week24-fri-quote",

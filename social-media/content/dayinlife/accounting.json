@@ -1,0 +1,104 @@
+{
+  "article": "an",
+  "role_line1": "Accounting",
+  "role_line2": "Intern",
+  "structure": "a tall vertical cutaway cross-section of a modern UK city office building, standing in the centre of a portrait canvas.",
+  "character": "young accounting intern (a woman in her early 20s, dark hair in a ponytail, navy blazer, lanyard)",
+  "scenes": [
+    "she arrives holding a coffee cup, greeting a receptionist; a round wall clock with no numbers.",
+    "she sits at a desk with two monitors showing abstract spreadsheet grids and bar charts, matching paper receipts and invoices spread on the desk, a desk calculator.",
+    "a small glass meeting room: she takes notes while a friendly manager points at a pie chart on a screen.",
+    "a rooftop cafe terrace with a striped awning and an umbrella: she eats lunch and chats with a colleague.",
+    "she files colour-coded folders into a cabinet beside a laptop, the city skyline at dusk through the window, then heads home."
+  ],
+  "props": "an oversized calculator, a stack of coins, a pie chart, interlocking gear cogs, paper planes, a winding cable, a giant ticking clock",
+  "steps": [
+    {
+      "n": 1,
+      "time": "08:45",
+      "title": "Arrive and plan",
+      "body": "Coffee, inbox, today's tasks.",
+      "target": [
+        290,
+        1330
+      ],
+      "card": [
+        22,
+        930,
+        210
+      ]
+    },
+    {
+      "n": 2,
+      "time": "09:30",
+      "title": "Reconciliations",
+      "body": "Match receipts and invoices to the bank statement.",
+      "target": [
+        470,
+        1080
+      ],
+      "card": [
+        828,
+        880,
+        230
+      ]
+    },
+    {
+      "n": 3,
+      "time": "11:30",
+      "title": "Month-end meeting",
+      "body": "Notes as your manager walks through the numbers.",
+      "target": [
+        380,
+        880
+      ],
+      "card": [
+        22,
+        470,
+        232
+      ]
+    },
+    {
+      "n": 4,
+      "time": "13:00",
+      "title": "Lunch with the team",
+      "body": "Ask how they got into finance.",
+      "target": [
+        700,
+        650
+      ],
+      "card": [
+        828,
+        330,
+        230
+      ]
+    },
+    {
+      "n": 5,
+      "time": "17:30",
+      "title": "File and head home",
+      "body": "Expenses checked, tomorrow's list written.",
+      "target": [
+        600,
+        350
+      ],
+      "card": [
+        22,
+        214,
+        232
+      ],
+      "accent": "coral"
+    }
+  ],
+  "tools": [
+    "Excel",
+    "Xero or Sage",
+    "Expense apps"
+  ],
+  "tools_card": [
+    828,
+    580,
+    230
+  ],
+  "cta": "Find accounting internships"
+}

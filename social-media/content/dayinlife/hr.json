@@ -1,0 +1,105 @@
+{
+  "article": "an",
+  "role_line1": "HR",
+  "role_line2": "Intern",
+  "structure": "a tall vertical cutaway cross-section of a friendly modern office building in the centre of a portrait canvas, with a giant ID lanyard badge hanging from a hook on its roof (the badge shows only an abstract person silhouette).",
+  "character": "young HR intern (a South Asian man in his early 20s, neat short hair, light blue shirt, lanyard)",
+  "scenes": [
+    "he arrives with a coffee and checks a laptop showing an abstract calendar grid and envelope shapes.",
+    "he reviews a neat stack of CV papers (abstract lines and small portrait boxes) with a highlighter, ticking some.",
+    "he talks on a headset beside a wall calendar with coloured blocks, while a candidate waits on a sofa in a small reception.",
+    "he packs welcome bags with a notebook, a mug and a lanyard, and sets up a laptop on an empty desk for a new starter.",
+    "he locks documents into a filing cabinet, a small padlock floating above it, a laptop showing an abstract table; dusk through the window."
+  ],
+  "props": "a giant magnifying glass over a person silhouette, a handshake, jigsaw puzzle pieces, ID badges, a padlock, paper planes, a winding cable",
+  "steps": [
+    {
+      "n": 1,
+      "time": "09:00",
+      "title": "Inbox and calendar",
+      "body": "Interview requests and new-starter questions.",
+      "target": [
+        342,
+        1400
+      ],
+      "card": [
+        22,
+        1085,
+        250
+      ]
+    },
+    {
+      "n": 2,
+      "time": "10:00",
+      "title": "Screen CVs",
+      "body": "Check each CV against the must-haves.",
+      "target": [
+        352,
+        1170
+      ],
+      "card": [
+        820,
+        905,
+        240
+      ]
+    },
+    {
+      "n": 3,
+      "time": "11:30",
+      "title": "Book interviews",
+      "body": "Schedule candidates, send confirmations.",
+      "target": [
+        332,
+        960
+      ],
+      "card": [
+        22,
+        700,
+        250
+      ]
+    },
+    {
+      "n": 4,
+      "time": "14:00",
+      "title": "Onboarding prep",
+      "body": "Welcome packs, IT access, first-day plans.",
+      "target": [
+        422,
+        760
+      ],
+      "card": [
+        820,
+        520,
+        240
+      ]
+    },
+    {
+      "n": 5,
+      "time": "16:30",
+      "title": "Update records",
+      "body": "Accurate, up to date and confidential.",
+      "target": [
+        472,
+        540
+      ],
+      "card": [
+        22,
+        300,
+        250
+      ],
+      "accent": "coral"
+    }
+  ],
+  "tools": [
+    "Excel",
+    "An HR system",
+    "Outlook calendar"
+  ],
+  "tools_card": [
+    820,
+    230,
+    240
+  ],
+  "cta": "Find HR internships",
+  "title_width": 440
+}

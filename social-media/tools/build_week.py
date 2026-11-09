@@ -45,6 +45,9 @@ EDU_USED = os.path.join(L.BASE, "content", "education_used.json")   # cross-week
 EDU_DEDUP_WEEKS = 2                                                  # don't reuse a topic within N weeks
 QUOTE_DEDUP_WEEKS = 4                                                # do not repeat quote text/author in recent weeks
 CONVERSATION_DEDUP_WEEKS = 8                                         # do not repeat fifth-post ideas in recent weeks
+# Polls are paused (Nov 2026): too little channel activity for them to earn replies.
+# Flip back to True to bring the poll/conversation lane back into the weekly build.
+POLLS_ENABLED = False
 TOPIC_REPEAT_OVERRIDE_ENV = "IW_ALLOW_TOPIC_REPEAT"                      # explicit emergency override only
 DKEYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 NEWS_IMAGE_USED = os.path.join(L.BASE, "content", "news_image_used.json")
@@ -672,9 +675,11 @@ def preflight(days=5):
     checks = [
         ("education topics", lambda: [t.get("title", "") for t in pick_education(days)]),
         ("quote picks", lambda: pick_quote_ids(quotes, days, wid)),
-        ("conversation picks", lambda: [c.get("id") for c in pick_conversation_ideas(conversation_ideas, days, wid)]),
+        *([("conversation picks", lambda: [c.get("id") for c in pick_conversation_ideas(conversation_ideas, days, wid)])]
+          if POLLS_ENABLED else []),
         ("quote designs", lambda: design_ledger.pick("quote", QUOTE_WORLDS, days, wid)),
-        ("conversation designs", lambda: design_ledger.pick("conversation", CONVERSATION_WORLDS, days, wid)),
+        *([("conversation designs", lambda: design_ledger.pick("conversation", CONVERSATION_WORLDS, days, wid))]
+          if POLLS_ENABLED else []),
         ("edu carousel designs", lambda: design_ledger.pick("edu_carousel", EDU_CAROUSEL_WORLDS, fmts.count("carousel"), wid)),
         ("edu single designs", lambda: design_ledger.pick("edu_single", EDU_SINGLE_WORLDS, fmts.count("single"), wid)),
     ]
@@ -715,7 +720,7 @@ def build(days=5, dry=False, start=0):
     # Rotate the quote bank by week, but block recent quote IDs/authors so the
     # same quote cannot reappear just because the visual world changed.
     week_quotes = pick_quote_ids(quotes, n, wid)
-    week_conversation = pick_conversation_ideas(conversation_ideas, n, wid)
+    week_conversation = pick_conversation_ideas(conversation_ideas, n, wid) if POLLS_ENABLED else []
 
     # DESIGN SELECTION goes through the no-repeat ledger (the hard rule: a new
     # design direction per post every week). Each lane picks worlds NOT used in
@@ -736,7 +741,7 @@ def build(days=5, dry=False, start=0):
     # 10 worlds for 5 slots, so the lane alternated between two fixed sets: week19
     # and week21 shipped the identical five designs. 16 worlds + a 2-week block
     # means a conversation design cannot come back inside three weeks.
-    conversation_worlds = pick_worlds("conversation", CONVERSATION_WORLDS, n, days)
+    conversation_worlds = pick_worlds("conversation", CONVERSATION_WORLDS, n, days) if POLLS_ENABLED else []
     fmts = [EDU_FORMAT_BY_DAY[i] for i in slots]
     full_fmts = EDU_FORMAT_BY_DAY[:days]
     edu_car = pick_worlds("edu_carousel", EDU_CAROUSEL_WORLDS, fmts.count("carousel"), full_fmts.count("carousel"))
@@ -769,18 +774,19 @@ def build(days=5, dry=False, start=0):
 
         # POLL / CONVERSATION lane. Keep it useful and brand-safe; featured jobs
         # remain a separate queue.
-        idea = week_conversation[si]
-        world = conversation_worlds[si]
-        visual_hook = idea.get("hook", "Career conversation")
-        onscreen = ". ".join([visual_hook, idea.get("subhead", ""), idea.get("takeaway", ""), idea.get("cta", "")])
-        cap = writer.write_captions("engagement", visual_hook, onscreen)
-        pid = f"{wid}-{dkey}-engagement"
-        if not dry:
-            lane_conversation.render_conversation(idea, world, os.path.join(img, pid))
-        posts.append(_post(pid, dlabel, "engagement", visual_hook, "Single", ["slide_1.png"],
-                           cap["captions"], cap["hashtags"]))
-        posts[-1]["world"] = world
-        posts[-1]["ideaId"] = idea.get("id")
+        if POLLS_ENABLED:
+            idea = week_conversation[si]
+            world = conversation_worlds[si]
+            visual_hook = idea.get("hook", "Career conversation")
+            onscreen = ". ".join([visual_hook, idea.get("subhead", ""), idea.get("takeaway", ""), idea.get("cta", "")])
+            cap = writer.write_captions("engagement", visual_hook, onscreen)
+            pid = f"{wid}-{dkey}-engagement"
+            if not dry:
+                lane_conversation.render_conversation(idea, world, os.path.join(img, pid))
+            posts.append(_post(pid, dlabel, "engagement", visual_hook, "Single", ["slide_1.png"],
+                               cap["captions"], cap["hashtags"]))
+            posts[-1]["world"] = world
+            posts[-1]["ideaId"] = idea.get("id")
 
         # EMPLOYER - disabled by default. Featured jobs remain separate.
         if di in EMPLOYER_DAYS:

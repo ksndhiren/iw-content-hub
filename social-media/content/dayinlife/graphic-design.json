@@ -1,0 +1,106 @@
+{
+  "article": "a",
+  "role_line1": "Graphic Design",
+  "role_line2": "Intern",
+  "title_size": 56,
+  "structure": "a tall vertical cutaway building shaped like a giant upright sketchbook with a spiral binding down one side, standing in the centre of a portrait canvas, a giant pencil leaning against it.",
+  "character": "young graphic design intern (a woman in her early 20s, short auburn bob, round glasses, mustard cardigan)",
+  "scenes": [
+    "she reads a printed design brief with a coffee at a desk, a pinboard of abstract images beside her.",
+    "she sketches small thumbnail layouts with pencils in a sketchbook at a tilted drafting table.",
+    "she works at a large monitor with a drawing tablet and stylus, a colourful abstract layout on screen, colour swatches beside her.",
+    "she presents printed layouts pinned on a wall to a senior designer, who points at one of them.",
+    "she drags files into neat colour-coded folders on screen beside a stack of finished posters; dusk through the window."
+  ],
+  "props": "a giant paintbrush, a colour palette, a ruler, a pen-tool bezier curve with square nodes, a giant eraser, a fan of colour swatches, paper planes",
+  "steps": [
+    {
+      "n": 1,
+      "time": "09:30",
+      "title": "Read the brief",
+      "body": "Who it's for, where it runs, when it's due.",
+      "target": [
+        446,
+        1360
+      ],
+      "card": [
+        22,
+        1085,
+        250
+      ]
+    },
+    {
+      "n": 2,
+      "time": "10:30",
+      "title": "Sketch ideas",
+      "body": "Quick thumbnails on paper first.",
+      "target": [
+        476,
+        1120
+      ],
+      "card": [
+        820,
+        905,
+        240
+      ]
+    },
+    {
+      "n": 3,
+      "time": "13:00",
+      "title": "Build it",
+      "body": "Layouts in Figma or Adobe, on brand.",
+      "target": [
+        456,
+        900
+      ],
+      "card": [
+        22,
+        700,
+        250
+      ]
+    },
+    {
+      "n": 4,
+      "time": "15:00",
+      "title": "Feedback round",
+      "body": "Show the senior designer, then revise.",
+      "target": [
+        636,
+        660
+      ],
+      "card": [
+        820,
+        520,
+        240
+      ]
+    },
+    {
+      "n": 5,
+      "time": "17:00",
+      "title": "Export and file",
+      "body": "Right sizes, clear names, right folder.",
+      "target": [
+        556,
+        400
+      ],
+      "card": [
+        22,
+        300,
+        250
+      ],
+      "accent": "coral"
+    }
+  ],
+  "tools": [
+    "Figma",
+    "Illustrator",
+    "Photoshop"
+  ],
+  "tools_card": [
+    820,
+    230,
+    240
+  ],
+  "cta": "Find design internships",
+  "title_width": 480
+}

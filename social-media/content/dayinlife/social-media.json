@@ -1,0 +1,106 @@
+{
+  "article": "a",
+  "role_line1": "Social<br>Media",
+  "role_line2": "Intern",
+  "title_size": 60,
+  "structure": "a giant smartphone standing upright like a tower in the centre of a portrait canvas, its screen cut away to reveal stacked floors inside, with the camera notch at the top.",
+  "character": "young social media intern (a Black woman in her early 20s, long braids, coral top, lanyard)",
+  "scenes": [
+    "she arrives with a coffee and checks her phone while abstract chat bubbles and heart shapes float up from it.",
+    "she scrolls a tablet of abstract video thumbnails, a magnifying glass beside her, a rising trend line on a wall screen.",
+    "she films a short video on a phone mounted on a ring-light tripod while a colleague holds up a product.",
+    "she sits at a laptop showing a calendar grid of small colourful square thumbnails, arranging them.",
+    "she studies a screen with a bar chart while bookmark and share-arrow icons rise from it; dusk through the window."
+  ],
+  "props": "hearts, chat bubbles, bookmark icons, share arrows, a ring light, a camera, a play button, notification bells, a winding cable",
+  "steps": [
+    {
+      "n": 1,
+      "time": "09:00",
+      "title": "Reply first",
+      "body": "Comments and messages before anything else.",
+      "target": [
+        398,
+        1320
+      ],
+      "card": [
+        22,
+        1085,
+        250
+      ]
+    },
+    {
+      "n": 2,
+      "time": "10:00",
+      "title": "Trend scan",
+      "body": "What's trending, and does it fit the brand?",
+      "target": [
+        388,
+        1080
+      ],
+      "card": [
+        820,
+        905,
+        240
+      ]
+    },
+    {
+      "n": 3,
+      "time": "11:30",
+      "title": "Create content",
+      "body": "Film a short video, write captions, design a post.",
+      "target": [
+        508,
+        840
+      ],
+      "card": [
+        22,
+        700,
+        250
+      ]
+    },
+    {
+      "n": 4,
+      "time": "14:00",
+      "title": "Schedule posts",
+      "body": "Queue the week's posts in a scheduler.",
+      "target": [
+        628,
+        580
+      ],
+      "card": [
+        820,
+        520,
+        240
+      ]
+    },
+    {
+      "n": 5,
+      "time": "16:30",
+      "title": "Report",
+      "body": "Which posts got saves and shares, and why.",
+      "target": [
+        588,
+        340
+      ],
+      "card": [
+        22,
+        300,
+        250
+      ],
+      "accent": "coral"
+    }
+  ],
+  "tools": [
+    "Canva",
+    "CapCut",
+    "Meta Business Suite"
+  ],
+  "tools_card": [
+    820,
+    230,
+    240
+  ],
+  "cta": "Find social media internships",
+  "title_width": 270
+}
