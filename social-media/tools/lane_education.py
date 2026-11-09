@@ -580,19 +580,25 @@ def content_frame(p, n, total, slide):
     return (_bg(p) + _dot_texture("rgba(21,39,67,.045)") + motif + _frame_border(p)
             + _logo(L.DARKLOGO, left=x, top=70) + badge + tag + head + body + prog)
 
+def _cta_stack(left, top, inner, gap=24):
+    """Headline, CTA line and URL pill in normal flow, so a CTA that wraps to an
+    extra line pushes the pill down instead of running underneath it."""
+    return (f"<div style='position:absolute;left:{left}px;top:{top}px;display:flex;flex-direction:column;"
+            f"align-items:flex-start;gap:{gap}px;'>{inner}</div>")
+
+
 def cta_frame(p, copy, total, pose):
     x = 78
     eyebrow = (f"<div style=\"position:absolute;left:{x}px;top:250px;font-family:'DM Sans';font-weight:800;font-size:21px;"
                f"color:{p['accent']};letter-spacing:5px;\">YOUR MOVE</div>")
-    head = (f"<div style=\"position:absolute;left:{x}px;top:296px;width:460px;font-family:Inter;font-weight:800;"
+    head = (f"<div style=\"width:460px;font-family:Inter;font-weight:800;"
             f"font-size:58px;line-height:1.04;letter-spacing:-1.8px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
-    sub = (f"<div style=\"position:absolute;left:{x}px;top:540px;width:430px;font-family:'DM Sans';font-weight:500;"
+    sub = (f"<div style=\"width:430px;font-family:'DM Sans';font-weight:500;"
            f"font-size:33px;line-height:1.34;color:{p['mut']};\">{copy.get('cta','')}</div>")
     nuno_right = -40
     return (_bg(p) + _dot_texture("rgba(21,39,67,.045)") + _frame_border(p)
             + _nuno_whole(pose, h=700, right=nuno_right)
-            + _logo(L.DARKLOGO, left=x, top=70) + eyebrow + head + sub
-            + f"<div style='position:absolute;left:{x}px;top:680px;'>{_pill(p, dark_ink=True)}</div>")
+            + _logo(L.DARKLOGO, left=x, top=70) + eyebrow + _cta_stack(x, 296, head + sub + _pill(p, dark_ink=True)))
 
 
 # =================================================================================
@@ -641,12 +647,11 @@ def cta_lens(p, copy, total, pose):
             f"border:56px solid {p['accent']};opacity:.9;'></div>")
     eyebrow = (f"<div style=\"position:absolute;left:56px;top:250px;font-family:'DM Sans';font-weight:800;font-size:21px;"
                f"color:{p['accent']};letter-spacing:5px;\">YOUR MOVE</div>")
-    head = (f"<div style=\"position:absolute;left:56px;top:298px;width:450px;font-family:Inter;font-weight:800;"
+    head = (f"<div style=\"width:450px;font-family:Inter;font-weight:800;"
             f"font-size:58px;line-height:1.04;letter-spacing:-1.8px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
-    sub = (f"<div style=\"position:absolute;left:58px;top:540px;width:420px;font-family:'DM Sans';font-weight:500;"
+    sub = (f"<div style=\"width:420px;font-family:'DM Sans';font-weight:500;"
            f"font-size:33px;line-height:1.34;color:{p['mut']};\">{copy.get('cta','')}</div>")
-    return (_bg(p) + ring + _nuno_whole(pose, h=720, right=-60) + _logo(left=56, top=44) + eyebrow + head + sub
-            + f"<div style='position:absolute;left:58px;top:690px;'>{_pill(p)}</div>")
+    return (_bg(p) + ring + _nuno_whole(pose, h=720, right=-60) + _logo(left=56, top=44) + eyebrow + _cta_stack(58, 298, head + sub + _pill(p)))
 
 
 # =================================================================================
@@ -708,15 +713,14 @@ def cta_ticket(p, copy, total, pose):
             f"display:flex;align-items:center;justify-content:center;'>"
             f"<span style=\"font-family:Inter;font-weight:800;font-size:24px;color:{p['deep']};letter-spacing:6px;"
             f"writing-mode:vertical-rl;transform:rotate(180deg);\">YOUR MOVE</span></div>")
-    head = (f"<div style=\"position:absolute;left:150px;top:298px;width:450px;font-family:Inter;font-weight:800;"
+    head = (f"<div style=\"width:450px;font-family:Inter;font-weight:800;"
             f"font-size:56px;line-height:1.04;letter-spacing:-1.6px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
-    sub = (f"<div style=\"position:absolute;left:150px;top:540px;width:420px;font-family:'DM Sans';font-weight:500;"
+    sub = (f"<div style=\"width:420px;font-family:'DM Sans';font-weight:500;"
            f"font-size:33px;line-height:1.34;color:{p['mut']};\">{copy.get('cta','')}</div>")
     image = _nuno_whole(pose, h=720, right=-60)
     if "job description" in copy.get("headline", "").lower():
         image = _nuno_whole(pose, h=700, right=-70)
-    return (_bg(p) + image + stub + _logo(left=150, top=44) + head + sub
-            + f"<div style='position:absolute;left:150px;top:690px;'>{_pill(p)}</div>")
+    return (_bg(p) + image + stub + _logo(left=150, top=44) + _cta_stack(150, 298, head + sub + _pill(p)))
 
 
 # =================================================================================
@@ -1059,8 +1063,42 @@ def cover_marker(p, copy, total, pose):
                  + "</div>")
     swipe = (f"<div style=\"position:absolute;left:{x}px;bottom:56px;font-family:'DM Sans';font-weight:800;font-size:22px;"
              f"color:{NAVYT};\">Swipe to begin &rarr;</div>")
-    return (_bg(p) + tex + glow + _nuno_whole(pose, h=770, right=-150)
+    props = _journalism_props(NAVYT) if "journalis" in copy.get("headline", "").lower() else ""
+    return (_bg(p) + tex + glow + props + _nuno_whole(pose, h=770, right=-150)
             + _logo(L.DARKLOGO, left=x, top=52) + eyebrow + headblock + swipe)
+
+
+def _journalism_props(ink):
+    """Newsroom props for journalism hooks: a newspaper page behind Nuno and a
+    reporter's notepad under the headline. No masthead, date or issue number."""
+    grey = "rgba(21,39,67,.16)"
+    cols = "".join(
+        f"<div style='flex:1;display:flex;flex-direction:column;gap:11px;'>"
+        + "".join(f"<div style='height:9px;width:{w}%;background:{grey};border-radius:2px;'></div>"
+                  for w in (100, 92, 100, 86, 100, 95, 70, 100, 90, 100, 82, 100, 94, 60))
+        + "</div>" for _ in range(3))
+    paper = (f"<div style='position:absolute;left:520px;top:120px;width:500px;height:620px;transform:rotate(5deg);box-sizing:border-box;"
+             f"padding:34px 32px;background:#FBF8F1;border:3px solid rgba(21,39,67,.22);box-shadow:12px 14px 0 rgba(21,39,67,.08);'>"
+             f"<div style='height:30px;width:88%;background:rgba(21,39,67,.55);border-radius:3px;'></div>"
+             f"<div style='height:30px;width:64%;background:rgba(21,39,67,.55);border-radius:3px;margin-top:12px;'></div>"
+             f"<div style='height:4px;background:rgba(21,39,67,.35);margin:22px 0 20px;'></div>"
+             f"<div style='height:170px;background:rgba(21,39,67,.10);border-radius:4px;margin-bottom:22px;'></div>"
+             f"<div style='display:flex;gap:22px;'>{cols}</div></div>")
+    rings = "".join(f"<div style='width:16px;height:30px;border-radius:8px;border:4px solid {ink};background:#F4EFE4;'></div>" for _ in range(6))
+    lines = "".join(f"<div style='height:2px;background:rgba(21,39,67,.14);margin-top:38px;'></div>" for _ in range(3))
+    pad = (f"<div style='position:absolute;left:66px;top:604px;width:330px;transform:rotate(-4deg);'>"
+           f"<div style='display:flex;justify-content:space-around;padding:0 26px;margin-bottom:-16px;position:relative;'>{rings}</div>"
+           f"<div style='box-sizing:border-box;height:330px;padding:34px 28px;background:#fff;border:4px solid {ink};border-radius:10px;"
+           f"box-shadow:8px 10px 0 rgba(21,39,67,.14);'>"
+           f"<div style=\"font-family:'DM Sans';font-weight:800;font-size:20px;letter-spacing:4px;color:#B07A12;\">STORY NOTES</div>"
+           f"<div style=\"font-family:IWSerif,Georgia,serif;font-style:italic;font-size:36px;line-height:1.15;color:{ink};margin-top:12px;\">"
+           f"Who? What?<br>Where? When?<br>Why?</div>{lines}</div></div>")
+    pencil = (f"<svg style='position:absolute;left:330px;top:862px;transform:rotate(-38deg);' width='210' height='34' viewBox='0 0 210 34'>"
+              f"<rect x='30' y='4' width='160' height='26' fill='{AMBER}' stroke='{ink}' stroke-width='3'/>"
+              f"<rect x='186' y='4' width='20' height='26' rx='4' fill='#E5483F' stroke='{ink}' stroke-width='3'/>"
+              f"<path d='M30 4 L4 17 L30 30 Z' fill='#F1D9B0' stroke='{ink}' stroke-width='3' stroke-linejoin='round'/>"
+              f"<path d='M4 17 L12 13 L12 21 Z' fill='{ink}'/></svg>")
+    return paper + pad + pencil
 
 def content_marker(p, n, total, slide):
     x = 78
@@ -1085,17 +1123,16 @@ def cta_marker(p, copy, total, pose):
     NAVYT = p["deep"]; GOLD = "#B07A12"
     eyebrow = (f"<div style=\"position:absolute;left:{x}px;top:250px;font-family:'DM Sans';font-weight:800;font-size:21px;"
                f"color:{GOLD};letter-spacing:5px;\">YOUR MOVE</div>")
-    headblock = (f"<div style='position:absolute;left:{x}px;top:296px;width:452px;'>"
+    headblock = (f"<div style='width:452px;'>"
                  f"<div style=\"font-family:Inter;font-weight:800;font-size:58px;line-height:1.04;letter-spacing:-1.8px;"
                  f"color:{NAVYT};word-break:keep-all;\">{copy['headline']}</div>"
                  f"<div style='margin-top:18px;width:210px;height:18px;background:{AMBER};opacity:.85;"
                  f"transform:rotate(-1.4deg);border-radius:3px;'></div></div>")
-    sub = (f"<div style=\"position:absolute;left:{x}px;top:560px;width:430px;font-family:'DM Sans';font-weight:500;"
+    sub = (f"<div style=\"width:430px;font-family:'DM Sans';font-weight:500;"
            f"font-size:33px;line-height:1.34;color:{p['mut']};\">{copy.get('cta','')}</div>")
     return (_bg(p) + _dot_texture("rgba(21,39,67,.045)") + _glow("rgba(255,177,32,.16)")
             + _nuno_whole(pose, h=700, right=-40)
-            + _logo(L.DARKLOGO, left=x, top=70) + eyebrow + headblock + sub
-            + f"<div style='position:absolute;left:{x}px;top:700px;'>{_pill(p, dark_ink=True)}</div>")
+            + _logo(L.DARKLOGO, left=x, top=70) + eyebrow + _cta_stack(x, 296, headblock + sub + _pill(p, dark_ink=True)))
 
 
 # =================================================================================
@@ -1170,13 +1207,12 @@ def cta_flash(p, copy, total, pose):
     wedge = _wedge(p['accent'], "left:0;bottom:0;", 400, .12, "bl")
     eyebrow = (f"<div style=\"position:absolute;left:{x}px;top:250px;font-family:'DM Sans';font-weight:800;font-size:21px;"
                f"color:{p['accent']};letter-spacing:5px;\">YOUR MOVE</div>")
-    head = (f"<div style=\"position:absolute;left:{x}px;top:298px;width:450px;font-family:Inter;font-weight:800;"
+    head = (f"<div style=\"width:450px;font-family:Inter;font-weight:800;"
             f"font-size:58px;line-height:1.04;letter-spacing:-1.8px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
-    sub = (f"<div style=\"position:absolute;left:{x}px;top:540px;width:420px;font-family:'DM Sans';font-weight:500;"
+    sub = (f"<div style=\"width:420px;font-family:'DM Sans';font-weight:500;"
            f"font-size:33px;line-height:1.34;color:{p['mut']};\">{copy.get('cta','')}</div>")
     return (_bg(p) + wedge + _arc(p, right=-60, bottom=-120, size=640) + _nuno_whole(pose, h=720, right=-60)
-            + _logo(left=x, top=44) + eyebrow + head + sub
-            + f"<div style='position:absolute;left:{x}px;top:690px;'>{_pill(p)}</div>")
+            + _logo(left=x, top=44) + eyebrow + _cta_stack(x, 298, head + sub + _pill(p)))
 
 
 # =================================================================================
@@ -1282,13 +1318,12 @@ def cta_tabs(p, copy, total, pose):
         pose = "nuno_tablet"
     eyebrow = (f"<div style=\"position:absolute;left:{x}px;top:300px;font-family:'DM Sans';font-weight:800;font-size:21px;"
                f"color:{p['accent']};letter-spacing:5px;\">YOUR MOVE</div>")
-    head = (f"<div style=\"position:absolute;left:{x}px;top:346px;width:450px;font-family:Inter;font-weight:800;"
+    head = (f"<div style=\"width:450px;font-family:Inter;font-weight:800;"
             f"font-size:56px;line-height:1.04;letter-spacing:-1.7px;color:{p['ink']};word-break:keep-all;\">{copy['headline']}</div>")
-    sub = (f"<div style=\"position:absolute;left:{x}px;top:566px;width:420px;font-family:'DM Sans';font-weight:500;"
+    sub = (f"<div style=\"width:420px;font-family:'DM Sans';font-weight:500;"
            f"font-size:33px;line-height:1.34;color:{p['mut']};\">{copy.get('cta','')}</div>")
     return (_bg(p) + _folder_tabs(p, total, total) + _arc(p) + _nuno_whole(pose, h=720, right=-60)
-            + _logo(left=x, top=44) + eyebrow + head + sub
-            + f"<div style='position:absolute;left:{x}px;top:706px;'>{_pill(p)}</div>")
+            + _logo(left=x, top=44) + eyebrow + _cta_stack(x, 346, head + sub + _pill(p)))
 
 
 

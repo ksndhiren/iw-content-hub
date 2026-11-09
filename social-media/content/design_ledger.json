@@ -686,6 +686,16 @@
       "world": "marker"
     },
     {
+      "lane": "edu_single",
+      "week": "week24",
+      "world": "timecard"
+    },
+    {
+      "lane": "edu_single",
+      "week": "week24",
+      "world": "letter"
+    },
+    {
       "lane": "conversation",
       "week": "week24",
       "world": "bars"
@@ -734,16 +744,6 @@
       "lane": "quote",
       "week": "week24",
       "world": "stamp"
-    },
-    {
-      "lane": "edu_single",
-      "week": "week24",
-      "world": "timecard"
-    },
-    {
-      "lane": "edu_single",
-      "week": "week24",
-      "world": "letter"
     }
   ]
 }
