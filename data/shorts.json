@@ -1,33 +1,33 @@
 {
   "id": "shorts",
   "label": "Shorts / Reels",
-  "generatedAt": "2026-11-02T13:16:01.603692+00:00",
+  "generatedAt": "2026-11-09T13:43:13.839115+00:00",
   "status": "automated-topic-research",
   "posts": [
     {
-      "id": "auto-2026-11-02-auto-your-cv-must-speak-clearly",
-      "topicId": "auto-your-cv-must-speak-clearly",
-      "weekId": "auto-2026-11-02",
+      "id": "auto-2026-11-09-auto-your-cv-needs-real-feedback",
+      "topicId": "auto-your-cv-needs-real-feedback",
+      "weekId": "auto-2026-11-09",
       "day": "Auto",
-      "title": "Your CV Must Speak Clearly",
+      "title": "Your CV Needs Real Feedback",
       "platform": "TikTok / Reels / Shorts",
       "format": "Short/Reel",
       "status": "script-ready",
       "durationTargetSeconds": 52,
       "viralScore": 100.0,
-      "signalScore": 90.0,
-      "scriptPath": "social-media/video/scripts/auto-2026-11-02/auto-your-cv-must-speak-clearly/script.json",
-      "briefPath": "social-media/video/scripts/auto-2026-11-02/auto-your-cv-must-speak-clearly/brief.md",
+      "signalScore": 105.9,
+      "scriptPath": "social-media/video/scripts/auto-2026-11-09/auto-your-cv-needs-real-feedback/script.json",
+      "briefPath": "social-media/video/scripts/auto-2026-11-09/auto-your-cv-needs-real-feedback/brief.md",
       "videoPath": null,
       "thumbnailPath": null,
       "heygenStatus": "manual",
-      "spokenScript": "Frustrated by CV rejections? I will show you how to make your CV clear and concise. First: Clear CVs are easier for recruiters to scan quickly. Second: Active verbs demonstrate impact and contribution. Third: Bullet points help highlight key skills and achievements. The rule is simple: Use bullet points and active verbs to highlight achievements. Learn how to craft a standout CV at internwise.co.uk.",
+      "spokenScript": "Have you applied to dozens of jobs but only got a couple of interviews? I will show you how to gather meaningful feedback on your CV. First: CVs reviewed by industry professionals often stand out more. Second: Targeted feedback can highlight overlooked strengths. Third: Real-world feedback helps align CVs with employer expectations. The rule is simple: Ask professionals in your field for targeted CV advice. Get tailored feedback at internwise.co.uk",
       "scenePlan": [
         {
           "scene": 1,
           "target_seconds": 15,
-          "heygen_voiceover": "Frustrated by CV rejections? I will show you how to make your CV clear and concise.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: cv. Scene setting: a modern internship interview waiting room with anxious candidates in soft focus behind Nuno. Camera: medium close-up, Nuno seated forward, direct eye contact, documentary realism. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Frustrated by CV rejections? I will show you how to make your CV clear and concise.",
+          "heygen_voiceover": "Have you applied to dozens of jobs but only got a couple of interviews? I will show you how to gather meaningful feedback on your CV.",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: cv. Scene setting: a modern internship interview waiting room with anxious candidates in soft focus behind Nuno. Camera: medium close-up, Nuno seated forward, direct eye contact, documentary realism. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Have you applied to dozens of jobs but only got a couple of interviews? I will show you how to gather meaningful feedback on your CV.",
           "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a modern internship interview waiting room with anxious candidates in soft focus behind Nuno, medium close-up, Nuno seated forward, direct eye contact, documentary realism, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
           "effect": "slow push-in from chest-up to close-up",
           "transition_out": "fast whip pan into the next scene"
@@ -35,8 +35,8 @@
         {
           "scene": 2,
           "target_seconds": 15,
-          "heygen_voiceover": "First: Clear CVs are easier for recruiters to scan quickly. Second: Active verbs demonstrate impact and contribution.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: cv. Scene setting: a glass-walled interview room where a recruiter reviews a CV in the blurred background. Camera: over-the-shoulder depth, Nuno half-profile then turns to camera. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: First: Clear CVs are easier for recruiters to scan quickly. Second: Active verbs demonstrate impact and contribution.",
+          "heygen_voiceover": "First: CVs reviewed by industry professionals often stand out more. Second: Targeted feedback can highlight overlooked strengths.",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: cv. Scene setting: a glass-walled interview room where a recruiter reviews a CV in the blurred background. Camera: over-the-shoulder depth, Nuno half-profile then turns to camera. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: First: CVs reviewed by industry professionals often stand out more. Second: Targeted feedback can highlight overlooked strengths.",
           "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a glass-walled interview room where a recruiter reviews a CV in the blurred background, over-the-shoulder depth, Nuno half-profile then turns to camera, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
           "effect": "subtle parallax drift with a slow zoom out",
           "transition_out": "blur dissolve into evidence close-up"
@@ -44,8 +44,8 @@
         {
           "scene": 3,
           "target_seconds": 15,
-          "heygen_voiceover": "Third: Bullet points help highlight key skills and achievements. The rule is simple: Use bullet points and active verbs to highlight achievements.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: cv. Scene setting: a close-up CV review board with highlighted sections, sticky notes, and recruiter marks. Camera: Nuno beside the board, pointing to the strongest evidence area without readable text overlays. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Third: Bullet points help highlight key skills and achievements. The rule is simple: Use bullet points and active verbs to highlight achievements.",
+          "heygen_voiceover": "Third: Real-world feedback helps align CVs with employer expectations. The rule is simple: Ask professionals in your field for targeted CV advice.",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: cv. Scene setting: a close-up CV review board with highlighted sections, sticky notes, and recruiter marks. Camera: Nuno beside the board, pointing to the strongest evidence area without readable text overlays. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Third: Real-world feedback helps align CVs with employer expectations. The rule is simple: Ask professionals in your field for targeted CV advice.",
           "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a close-up CV review board with highlighted sections, sticky notes, and recruiter marks, Nuno beside the board, pointing to the strongest evidence area without readable text overlays, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
           "effect": "slow lateral slide from CV detail to Nuno's face",
           "transition_out": "match cut on Nuno's hand movement"
@@ -53,8 +53,8 @@
         {
           "scene": 4,
           "target_seconds": 15,
-          "heygen_voiceover": "Learn how to craft a standout CV at internwise.co.uk.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: cv. Scene setting: calm office corridor after the interview, warm Internwise navy and amber accents in the environment. Camera: confident close-up, Nuno walking slowly with the camera then stopping for the final line. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Learn how to craft a standout CV at internwise.co.uk.",
+          "heygen_voiceover": "Get tailored feedback at internwise.co.uk",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: cv. Scene setting: calm office corridor after the interview, warm Internwise navy and amber accents in the environment. Camera: confident close-up, Nuno walking slowly with the camera then stopping for the final line. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Get tailored feedback at internwise.co.uk",
           "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in calm office corridor after the interview, warm Internwise navy and amber accents in the environment, confident close-up, Nuno walking slowly with the camera then stopping for the final line, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
           "effect": "slow zoom out, slight background music lift",
           "transition_out": "fade to branded end card"
@@ -67,12 +67,12 @@
         "Has comment/share potential.",
         "Save-worthy practical takeaway."
       ],
-      "caption": "Frustrated by CV rejections?\n\nUse bullet points and active verbs to highlight achievements.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+      "caption": "Have you applied to dozens of jobs but only got a couple of interviews?\n\nAsk professionals in your field for targeted CV advice.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
       "captions": {
-        "instagram": "Frustrated by CV rejections?\n\nUse bullet points and active verbs to highlight achievements.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
-        "tiktok": "Frustrated by CV rejections?\n\nUse bullet points and active verbs to highlight achievements.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
-        "youtube": "Frustrated by CV rejections?\n\nUse bullet points and active verbs to highlight achievements.\n\n#internship #careeradvice #graduatejobs",
-        "linkedin": "Frustrated by CV rejections?\n\nUse bullet points and active verbs to highlight achievements.\n\nShort, practical, and built for students preparing for the next step.\n\n#careeradvice #earlycareers #graduatejobs"
+        "instagram": "Have you applied to dozens of jobs but only got a couple of interviews?\n\nAsk professionals in your field for targeted CV advice.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+        "tiktok": "Have you applied to dozens of jobs but only got a couple of interviews?\n\nAsk professionals in your field for targeted CV advice.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+        "youtube": "Have you applied to dozens of jobs but only got a couple of interviews?\n\nAsk professionals in your field for targeted CV advice.\n\n#internship #careeradvice #graduatejobs",
+        "linkedin": "Have you applied to dozens of jobs but only got a couple of interviews?\n\nAsk professionals in your field for targeted CV advice.\n\nShort, practical, and built for students preparing for the next step.\n\n#careeradvice #earlycareers #graduatejobs"
       },
       "hashtags": [
         "#internship",
@@ -84,6 +84,24 @@
       "sourceSignals": [
         {
           "source": "reddit_rss",
+          "title": "I'm stuck between deciding three different offers, I'd love some guidance.",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1xomcgn/im_stuck_between_deciding_three_different_offers/",
+          "score": 126.5,
+          "meta": {
+            "feed": "UK jobs - internship CV"
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "[0 YoE, MSc. Engineering Student, Junior Software Engineer, Italy/Turkey] Seeking Resume Feedback - 100+ Applications, Only 2 Interviews",
+          "url": "https://www.reddit.com/r/resumes/comments/1xprryh/0_yoe_msc_engineering_student_junior_software/",
+          "score": 112.7,
+          "meta": {
+            "feed": "Resumes - internship"
+          }
+        },
+        {
+          "source": "reddit_rss",
           "title": "17 y/o girl from North London looking for any job - please help",
           "url": "https://www.reddit.com/r/UKJobs/comments/1lnhi17/17_yo_girl_from_north_london_looking_for_any_job/",
           "score": 85.8,
@@ -93,9 +111,9 @@
         },
         {
           "source": "reddit_rss",
-          "title": "Urgent Resume Concern: How low of a GPA is low enough to leave off for a top-tier CPG company?",
-          "url": "https://www.reddit.com/r/resumes/comments/1xjwaeu/urgent_resume_concern_how_low_of_a_gpa_is_low/",
-          "score": 75.9,
+          "title": "[0YoE, CS student, Software Engineering Intern, Ontario] seeking resume review feedback",
+          "url": "https://www.reddit.com/r/resumes/comments/1xr3m7q/0yoe_cs_student_software_engineering_intern/",
+          "score": 72.45,
           "meta": {
             "feed": "Resumes - internship"
           }
@@ -117,51 +135,33 @@
           "meta": {
             "configured": true
           }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "[0 YoE, Student, Unemployed, United Kingdom] Looking for resume feedback/",
-          "url": "https://www.reddit.com/r/resumes/comments/1xg8he7/0_yoe_student_unemployed_united_kingdom_looking/",
-          "score": 62.1,
-          "meta": {
-            "feed": "Resumes - internship"
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "Need some Advice",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1tcbujl/need_some_advice/",
-          "score": 60.5,
-          "meta": {
-            "feed": "UK jobs - internship CV"
-          }
         }
       ]
     },
     {
-      "id": "auto-2026-11-02-auto-expand-experience-without-jobs",
-      "topicId": "auto-expand-experience-without-jobs",
-      "weekId": "auto-2026-11-02",
+      "id": "auto-2026-11-09-auto-failing-interviews-try-this",
+      "topicId": "auto-failing-interviews-try-this",
+      "weekId": "auto-2026-11-09",
       "day": "Auto",
-      "title": "Expand Experience Without Jobs",
+      "title": "Failing Interviews? Try This",
       "platform": "TikTok / Reels / Shorts",
       "format": "Short/Reel",
       "status": "script-ready",
       "durationTargetSeconds": 52,
       "viralScore": 89.2,
-      "signalScore": 72.7,
-      "scriptPath": "social-media/video/scripts/auto-2026-11-02/auto-expand-experience-without-jobs/script.json",
-      "briefPath": "social-media/video/scripts/auto-2026-11-02/auto-expand-experience-without-jobs/brief.md",
+      "signalScore": 76.9,
+      "scriptPath": "social-media/video/scripts/auto-2026-11-09/auto-failing-interviews-try-this/script.json",
+      "briefPath": "social-media/video/scripts/auto-2026-11-09/auto-failing-interviews-try-this/brief.md",
       "videoPath": null,
       "thumbnailPath": null,
       "heygenStatus": "manual",
-      "spokenScript": "Worried you can't get a job without experience? I will show you how to gain valuable skills outside traditional roles. First: Online courses offer practical projects to showcase on your CV. Second: Volunteer work builds transferable skills valued by employers. Third: Demonstrating self-initiative is attractive to recruiters. The rule is simple: Engage in online courses and volunteer projects to build your CV. Explore more ways to build your experience at internwise.co.uk.",
+      "spokenScript": "Feeling stuck after multiple unsuccessful interviews? I will show you how to identify and tackle common interview pitfalls. First: Self-assessment helps in improving interview performance. Second: Identifying patterns can lead to targeted improvements. Third: Feedback from previous interviews can guide future success. The rule is simple: Review past interviews to spot and address your weak points. Get interview insights at internwise.co.uk",
       "scenePlan": [
         {
           "scene": 1,
           "target_seconds": 15,
-          "heygen_voiceover": "Worried you can't get a job without experience? I will show you how to gain valuable skills outside traditional roles.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: experience. Scene setting: a modern internship interview waiting room with anxious candidates in soft focus behind Nuno. Camera: medium close-up, Nuno seated forward, direct eye contact, documentary realism. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Worried you can't get a job without experience? I will show you how to gain valuable skills outside traditional roles.",
+          "heygen_voiceover": "Feeling stuck after multiple unsuccessful interviews? I will show you how to identify and tackle common interview pitfalls.",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: interview. Scene setting: a modern internship interview waiting room with anxious candidates in soft focus behind Nuno. Camera: medium close-up, Nuno seated forward, direct eye contact, documentary realism. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Feeling stuck after multiple unsuccessful interviews? I will show you how to identify and tackle common interview pitfalls.",
           "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a modern internship interview waiting room with anxious candidates in soft focus behind Nuno, medium close-up, Nuno seated forward, direct eye contact, documentary realism, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
           "effect": "slow push-in from chest-up to close-up",
           "transition_out": "fast whip pan into the next scene"
@@ -169,8 +169,8 @@
         {
           "scene": 2,
           "target_seconds": 15,
-          "heygen_voiceover": "First: Online courses offer practical projects to showcase on your CV. Second: Volunteer work builds transferable skills valued by employers.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: experience. Scene setting: a glass-walled interview room where a recruiter reviews a CV in the blurred background. Camera: over-the-shoulder depth, Nuno half-profile then turns to camera. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: First: Online courses offer practical projects to showcase on your CV. Second: Volunteer work builds transferable skills valued by employers.",
+          "heygen_voiceover": "First: Self-assessment helps in improving interview performance. Second: Identifying patterns can lead to targeted improvements.",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: interview. Scene setting: a glass-walled interview room where a recruiter reviews a CV in the blurred background. Camera: over-the-shoulder depth, Nuno half-profile then turns to camera. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: First: Self-assessment helps in improving interview performance. Second: Identifying patterns can lead to targeted improvements.",
           "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a glass-walled interview room where a recruiter reviews a CV in the blurred background, over-the-shoulder depth, Nuno half-profile then turns to camera, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
           "effect": "subtle parallax drift with a slow zoom out",
           "transition_out": "blur dissolve into evidence close-up"
@@ -178,8 +178,8 @@
         {
           "scene": 3,
           "target_seconds": 15,
-          "heygen_voiceover": "Third: Demonstrating self-initiative is attractive to recruiters. The rule is simple: Engage in online courses and volunteer projects to build your CV.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: experience. Scene setting: a close-up CV review board with highlighted sections, sticky notes, and recruiter marks. Camera: Nuno beside the board, pointing to the strongest evidence area without readable text overlays. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Third: Demonstrating self-initiative is attractive to recruiters. The rule is simple: Engage in online courses and volunteer projects to build your CV.",
+          "heygen_voiceover": "Third: Feedback from previous interviews can guide future success. The rule is simple: Review past interviews to spot and address your weak points.",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: interview. Scene setting: a close-up CV review board with highlighted sections, sticky notes, and recruiter marks. Camera: Nuno beside the board, pointing to the strongest evidence area without readable text overlays. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Third: Feedback from previous interviews can guide future success. The rule is simple: Review past interviews to spot and address your weak points.",
           "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a close-up CV review board with highlighted sections, sticky notes, and recruiter marks, Nuno beside the board, pointing to the strongest evidence area without readable text overlays, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
           "effect": "slow lateral slide from CV detail to Nuno's face",
           "transition_out": "match cut on Nuno's hand movement"
@@ -187,8 +187,8 @@
         {
           "scene": 4,
           "target_seconds": 15,
-          "heygen_voiceover": "Explore more ways to build your experience at internwise.co.uk.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: experience. Scene setting: calm office corridor after the interview, warm Internwise navy and amber accents in the environment. Camera: confident close-up, Nuno walking slowly with the camera then stopping for the final line. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Explore more ways to build your experience at internwise.co.uk.",
+          "heygen_voiceover": "Get interview insights at internwise.co.uk",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: interview. Scene setting: calm office corridor after the interview, warm Internwise navy and amber accents in the environment. Camera: confident close-up, Nuno walking slowly with the camera then stopping for the final line. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Get interview insights at internwise.co.uk",
           "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in calm office corridor after the interview, warm Internwise navy and amber accents in the environment, confident close-up, Nuno walking slowly with the camera then stopping for the final line, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
           "effect": "slow zoom out, slight background music lift",
           "transition_out": "fade to branded end card"
@@ -199,12 +199,12 @@
         "Has comment/share potential.",
         "Save-worthy practical takeaway."
       ],
-      "caption": "Worried you can't get a job without experience?\n\nEngage in online courses and volunteer projects to build your CV.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+      "caption": "Feeling stuck after multiple unsuccessful interviews?\n\nReview past interviews to spot and address your weak points.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
       "captions": {
-        "instagram": "Worried you can't get a job without experience?\n\nEngage in online courses and volunteer projects to build your CV.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
-        "tiktok": "Worried you can't get a job without experience?\n\nEngage in online courses and volunteer projects to build your CV.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
-        "youtube": "Worried you can't get a job without experience?\n\nEngage in online courses and volunteer projects to build your CV.\n\n#internship #careeradvice #graduatejobs",
-        "linkedin": "Worried you can't get a job without experience?\n\nEngage in online courses and volunteer projects to build your CV.\n\nShort, practical, and built for students preparing for the next step.\n\n#careeradvice #earlycareers #graduatejobs"
+        "instagram": "Feeling stuck after multiple unsuccessful interviews?\n\nReview past interviews to spot and address your weak points.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+        "tiktok": "Feeling stuck after multiple unsuccessful interviews?\n\nReview past interviews to spot and address your weak points.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+        "youtube": "Feeling stuck after multiple unsuccessful interviews?\n\nReview past interviews to spot and address your weak points.\n\n#internship #careeradvice #graduatejobs",
+        "linkedin": "Feeling stuck after multiple unsuccessful interviews?\n\nReview past interviews to spot and address your weak points.\n\nShort, practical, and built for students preparing for the next step.\n\n#careeradvice #earlycareers #graduatejobs"
       },
       "hashtags": [
         "#internship",
@@ -216,66 +216,64 @@
       "sourceSignals": [
         {
           "source": "reddit_rss",
-          "title": "Struggling to find a sponsored job in the UK despite relevant experience - looking for advice or leads",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1xedssw/struggling_to_find_a_sponsored_job_in_the_uk/",
-          "score": 105.6,
+          "title": "Struggling to build my life after finishing my MSc in 2021, what can I do with no proper experience?",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1skrt65/struggling_to_build_my_life_after_finishing_my/",
+          "score": 113.3,
           "meta": {
             "feed": "UK jobs - internship CV"
           }
         },
         {
           "source": "reddit_rss",
-          "title": "What are the ways to make yourself more employable as an engineering graduate?",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1osoxqw/what_are_the_ways_to_make_yourself_more/",
-          "score": 75.9,
+          "title": "[0 YoE, Student, Accounting Internship, Canada]",
+          "url": "https://www.reddit.com/r/resumes/comments/1xln92a/0_yoe_student_accounting_internship_canada/",
+          "score": 56.35,
+          "meta": {
+            "feed": "Resumes - internship"
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "Graduated July 2025 and got unlucky - Am I cooked? Need advice on next Steps!",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1vvdyeq/graduated_july_2025_and_got_unlucky_am_i_cooked/",
+          "score": 53.9,
           "meta": {
             "feed": "UK jobs - internship CV"
           }
         },
         {
           "source": "reddit_rss",
-          "title": "2:2 from top 5 university, no internships, no experience. Am I cooked?",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1wdh6eb/22_from_top_5_university_no_internships_no/",
-          "score": 55.0,
+          "title": "Quitting low-skilled full-time job - bad look on corporate interviews?",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1k22kh0/quitting_lowskilled_fulltime_job_bad_look_on/",
+          "score": 48.4,
           "meta": {
             "feed": "UK jobs - internship CV"
           }
         },
         {
           "source": "seed_question",
-          "title": "how to get graduate job with no experience",
+          "title": "why do I keep failing interviews",
           "url": "",
-          "score": 47.0,
+          "score": 44.0,
           "meta": {
             "configured": true
           }
         },
         {
           "source": "reddit_rss",
-          "title": "MSc HR + CIPD Level 7 grad seeking entry-level role - willing to relocate (Visa expires in 17mo)",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1lpu0tc/msc_hr_cipd_level_7_grad_seeking_entrylevel_role/",
-          "score": 45.1,
+          "title": "[0 YoE, New Grad(Expected Dec 2026), Software Engineer, US]",
+          "url": "https://www.reddit.com/r/resumes/comments/1xqlv3d/0_yoe_new_gradexpected_dec_2026_software_engineer/",
+          "score": 43.7,
           "meta": {
-            "feed": "UK jobs - internship CV"
-          }
-        },
-        {
-          "source": "youtube",
-          "title": "Laitkam ha Faith Foundation Shillong | Graduate passed | No Experience | Jobs in Meghalaya",
-          "url": "https://www.youtube.com/watch?v=kNTCZIScAP0",
-          "score": 23.05,
-          "meta": {
-            "query": "no experience cv graduate",
-            "views": 2227,
-            "views_per_day": 13.6
+            "feed": "Resumes - internship"
           }
         }
       ]
     },
     {
-      "id": "auto-2026-11-02-auto-know-your-internship-rights",
+      "id": "auto-2026-11-09-auto-know-your-internship-rights",
       "topicId": "auto-know-your-internship-rights",
-      "weekId": "auto-2026-11-02",
+      "weekId": "auto-2026-11-09",
       "day": "Auto",
       "title": "Know Your Internship Rights",
       "platform": "TikTok / Reels / Shorts",
@@ -284,18 +282,18 @@
       "durationTargetSeconds": 52,
       "viralScore": 89.2,
       "signalScore": 71.7,
-      "scriptPath": "social-media/video/scripts/auto-2026-11-02/auto-know-your-internship-rights/script.json",
-      "briefPath": "social-media/video/scripts/auto-2026-11-02/auto-know-your-internship-rights/brief.md",
+      "scriptPath": "social-media/video/scripts/auto-2026-11-09/auto-know-your-internship-rights/script.json",
+      "briefPath": "social-media/video/scripts/auto-2026-11-09/auto-know-your-internship-rights/brief.md",
       "videoPath": null,
       "thumbnailPath": null,
       "heygenStatus": "manual",
-      "spokenScript": "Confused about your rights during internships? I will show you how to understand and assert your legal rights. First: UK law requires payment for work that meets employment criteria. Second: Communicating rights can prevent exploitation. Third: Knowledge empowers you to negotiate fair terms. The rule is simple: Research your rights and communicate them confidently to employers. Learn more about internship rights at internwise.co.uk.",
+      "spokenScript": "Confused about your rights as an intern? I will show you how to understand your legal rights in internships. First: In the UK, most internships should be paid at least the National Minimum Wage. Second: Knowing your rights can help you negotiate better terms. Third: Legal advice can clarify complex internship situations. The rule is simple: Ensure your internship complies with legal requirements for pay. Understand your rights at internwise.co.uk",
       "scenePlan": [
         {
           "scene": 1,
           "target_seconds": 15,
-          "heygen_voiceover": "Confused about your rights during internships? I will show you how to understand and assert your legal rights.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: internship-rights. Scene setting: a modern internship interview waiting room with anxious candidates in soft focus behind Nuno. Camera: medium close-up, Nuno seated forward, direct eye contact, documentary realism. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Confused about your rights during internships? I will show you how to understand and assert your legal rights.",
+          "heygen_voiceover": "Confused about your rights as an intern? I will show you how to understand your legal rights in internships.",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: internship-rights. Scene setting: a modern internship interview waiting room with anxious candidates in soft focus behind Nuno. Camera: medium close-up, Nuno seated forward, direct eye contact, documentary realism. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Confused about your rights as an intern? I will show you how to understand your legal rights in internships.",
           "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a modern internship interview waiting room with anxious candidates in soft focus behind Nuno, medium close-up, Nuno seated forward, direct eye contact, documentary realism, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
           "effect": "slow push-in from chest-up to close-up",
           "transition_out": "fast whip pan into the next scene"
@@ -303,8 +301,8 @@
         {
           "scene": 2,
           "target_seconds": 15,
-          "heygen_voiceover": "First: UK law requires payment for work that meets employment criteria. Second: Communicating rights can prevent exploitation.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: internship-rights. Scene setting: a glass-walled interview room where a recruiter reviews a CV in the blurred background. Camera: over-the-shoulder depth, Nuno half-profile then turns to camera. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: First: UK law requires payment for work that meets employment criteria. Second: Communicating rights can prevent exploitation.",
+          "heygen_voiceover": "First: In the UK, most internships should be paid at least the National Minimum Wage. Second: Knowing your rights can help you negotiate better terms.",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: internship-rights. Scene setting: a glass-walled interview room where a recruiter reviews a CV in the blurred background. Camera: over-the-shoulder depth, Nuno half-profile then turns to camera. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: First: In the UK, most internships should be paid at least the National Minimum Wage. Second: Knowing your rights can help you negotiate better terms.",
           "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a glass-walled interview room where a recruiter reviews a CV in the blurred background, over-the-shoulder depth, Nuno half-profile then turns to camera, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
           "effect": "subtle parallax drift with a slow zoom out",
           "transition_out": "blur dissolve into evidence close-up"
@@ -312,8 +310,8 @@
         {
           "scene": 3,
           "target_seconds": 15,
-          "heygen_voiceover": "Third: Knowledge empowers you to negotiate fair terms. The rule is simple: Research your rights and communicate them confidently to employers.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: internship-rights. Scene setting: a close-up CV review board with highlighted sections, sticky notes, and recruiter marks. Camera: Nuno beside the board, pointing to the strongest evidence area without readable text overlays. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Third: Knowledge empowers you to negotiate fair terms. The rule is simple: Research your rights and communicate them confidently to employers.",
+          "heygen_voiceover": "Third: Legal advice can clarify complex internship situations. The rule is simple: Ensure your internship complies with legal requirements for pay.",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: internship-rights. Scene setting: a close-up CV review board with highlighted sections, sticky notes, and recruiter marks. Camera: Nuno beside the board, pointing to the strongest evidence area without readable text overlays. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Third: Legal advice can clarify complex internship situations. The rule is simple: Ensure your internship complies with legal requirements for pay.",
           "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a close-up CV review board with highlighted sections, sticky notes, and recruiter marks, Nuno beside the board, pointing to the strongest evidence area without readable text overlays, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
           "effect": "slow lateral slide from CV detail to Nuno's face",
           "transition_out": "match cut on Nuno's hand movement"
@@ -321,8 +319,8 @@
         {
           "scene": 4,
           "target_seconds": 15,
-          "heygen_voiceover": "Learn more about internship rights at internwise.co.uk.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: internship-rights. Scene setting: calm office corridor after the interview, warm Internwise navy and amber accents in the environment. Camera: confident close-up, Nuno walking slowly with the camera then stopping for the final line. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Learn more about internship rights at internwise.co.uk.",
+          "heygen_voiceover": "Understand your rights at internwise.co.uk",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: internship-rights. Scene setting: calm office corridor after the interview, warm Internwise navy and amber accents in the environment. Camera: confident close-up, Nuno walking slowly with the camera then stopping for the final line. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Understand your rights at internwise.co.uk",
           "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in calm office corridor after the interview, warm Internwise navy and amber accents in the environment, confident close-up, Nuno walking slowly with the camera then stopping for the final line, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
           "effect": "slow zoom out, slight background music lift",
           "transition_out": "fade to branded end card"
@@ -333,12 +331,12 @@
         "Has comment/share potential.",
         "Save-worthy practical takeaway."
       ],
-      "caption": "Confused about your rights during internships?\n\nResearch your rights and communicate them confidently to employers.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+      "caption": "Confused about your rights as an intern?\n\nEnsure your internship complies with legal requirements for pay.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
       "captions": {
-        "instagram": "Confused about your rights during internships?\n\nResearch your rights and communicate them confidently to employers.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
-        "tiktok": "Confused about your rights during internships?\n\nResearch your rights and communicate them confidently to employers.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
-        "youtube": "Confused about your rights during internships?\n\nResearch your rights and communicate them confidently to employers.\n\n#internship #careeradvice #graduatejobs",
-        "linkedin": "Confused about your rights during internships?\n\nResearch your rights and communicate them confidently to employers.\n\nShort, practical, and built for students preparing for the next step.\n\n#careeradvice #earlycareers #graduatejobs"
+        "instagram": "Confused about your rights as an intern?\n\nEnsure your internship complies with legal requirements for pay.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+        "tiktok": "Confused about your rights as an intern?\n\nEnsure your internship complies with legal requirements for pay.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+        "youtube": "Confused about your rights as an intern?\n\nEnsure your internship complies with legal requirements for pay.\n\n#internship #careeradvice #graduatejobs",
+        "linkedin": "Confused about your rights as an intern?\n\nEnsure your internship complies with legal requirements for pay.\n\nShort, practical, and built for students preparing for the next step.\n\n#careeradvice #earlycareers #graduatejobs"
       },
       "hashtags": [
         "#internship",
@@ -378,29 +376,29 @@
       ]
     },
     {
-      "id": "auto-2026-11-02-auto-revamp-your-interview-story",
-      "topicId": "auto-revamp-your-interview-story",
-      "weekId": "auto-2026-11-02",
+      "id": "auto-2026-11-09-auto-evaluate-internship-quality",
+      "topicId": "auto-evaluate-internship-quality",
+      "weekId": "auto-2026-11-09",
       "day": "Auto",
-      "title": "Revamp Your Interview Story",
+      "title": "Evaluate Internship Quality",
       "platform": "TikTok / Reels / Shorts",
       "format": "Short/Reel",
       "status": "script-ready",
       "durationTargetSeconds": 52,
       "viralScore": 89.2,
-      "signalScore": 70.5,
-      "scriptPath": "social-media/video/scripts/auto-2026-11-02/auto-revamp-your-interview-story/script.json",
-      "briefPath": "social-media/video/scripts/auto-2026-11-02/auto-revamp-your-interview-story/brief.md",
+      "signalScore": 71.2,
+      "scriptPath": "social-media/video/scripts/auto-2026-11-09/auto-evaluate-internship-quality/script.json",
+      "briefPath": "social-media/video/scripts/auto-2026-11-09/auto-evaluate-internship-quality/brief.md",
       "videoPath": null,
       "thumbnailPath": null,
       "heygenStatus": "manual",
-      "spokenScript": "Struggling to nail your interview pitch? I will show you how to craft a compelling interview narrative. First: A structured story is memorable and engaging. Second: Clarity helps interviewers follow your career journey. Third: A strong narrative demonstrates self-awareness and growth. The rule is simple: Structure your story with a clear beginning, middle, and end. Find more interview insights at internwise.co.uk.",
+      "spokenScript": "Wondering if your internship is a good learning experience? I will show you how to evaluate the quality of your internship. First: Quality internships provide mentorship and skill development. Second: Good internships align with your career goals. Third: Feedback from current or past interns can offer insights. The rule is simple: Check if your internship offers growth and learning opportunities. Learn more at internwise.co.uk",
       "scenePlan": [
         {
           "scene": 1,
           "target_seconds": 15,
-          "heygen_voiceover": "Struggling to nail your interview pitch? I will show you how to craft a compelling interview narrative.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: interview. Scene setting: a modern internship interview waiting room with anxious candidates in soft focus behind Nuno. Camera: medium close-up, Nuno seated forward, direct eye contact, documentary realism. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Struggling to nail your interview pitch? I will show you how to craft a compelling interview narrative.",
+          "heygen_voiceover": "Wondering if your internship is a good learning experience? I will show you how to evaluate the quality of your internship.",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: internship-quality. Scene setting: a modern internship interview waiting room with anxious candidates in soft focus behind Nuno. Camera: medium close-up, Nuno seated forward, direct eye contact, documentary realism. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Wondering if your internship is a good learning experience? I will show you how to evaluate the quality of your internship.",
           "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a modern internship interview waiting room with anxious candidates in soft focus behind Nuno, medium close-up, Nuno seated forward, direct eye contact, documentary realism, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
           "effect": "slow push-in from chest-up to close-up",
           "transition_out": "fast whip pan into the next scene"
@@ -408,8 +406,8 @@
         {
           "scene": 2,
           "target_seconds": 15,
-          "heygen_voiceover": "First: A structured story is memorable and engaging. Second: Clarity helps interviewers follow your career journey.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: interview. Scene setting: a glass-walled interview room where a recruiter reviews a CV in the blurred background. Camera: over-the-shoulder depth, Nuno half-profile then turns to camera. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: First: A structured story is memorable and engaging. Second: Clarity helps interviewers follow your career journey.",
+          "heygen_voiceover": "First: Quality internships provide mentorship and skill development. Second: Good internships align with your career goals.",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: internship-quality. Scene setting: a glass-walled interview room where a recruiter reviews a CV in the blurred background. Camera: over-the-shoulder depth, Nuno half-profile then turns to camera. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: First: Quality internships provide mentorship and skill development. Second: Good internships align with your career goals.",
           "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a glass-walled interview room where a recruiter reviews a CV in the blurred background, over-the-shoulder depth, Nuno half-profile then turns to camera, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
           "effect": "subtle parallax drift with a slow zoom out",
           "transition_out": "blur dissolve into evidence close-up"
@@ -417,8 +415,8 @@
         {
           "scene": 3,
           "target_seconds": 15,
-          "heygen_voiceover": "Third: A strong narrative demonstrates self-awareness and growth. The rule is simple: Structure your story with a clear beginning, middle, and end.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: interview. Scene setting: a close-up CV review board with highlighted sections, sticky notes, and recruiter marks. Camera: Nuno beside the board, pointing to the strongest evidence area without readable text overlays. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Third: A strong narrative demonstrates self-awareness and growth. The rule is simple: Structure your story with a clear beginning, middle, and end.",
+          "heygen_voiceover": "Third: Feedback from current or past interns can offer insights. The rule is simple: Check if your internship offers growth and learning opportunities.",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: internship-quality. Scene setting: a close-up CV review board with highlighted sections, sticky notes, and recruiter marks. Camera: Nuno beside the board, pointing to the strongest evidence area without readable text overlays. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Third: Feedback from current or past interns can offer insights. The rule is simple: Check if your internship offers growth and learning opportunities.",
           "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a close-up CV review board with highlighted sections, sticky notes, and recruiter marks, Nuno beside the board, pointing to the strongest evidence area without readable text overlays, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
           "effect": "slow lateral slide from CV detail to Nuno's face",
           "transition_out": "match cut on Nuno's hand movement"
@@ -426,8 +424,8 @@
         {
           "scene": 4,
           "target_seconds": 15,
-          "heygen_voiceover": "Find more interview insights at internwise.co.uk.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: interview. Scene setting: calm office corridor after the interview, warm Internwise navy and amber accents in the environment. Camera: confident close-up, Nuno walking slowly with the camera then stopping for the final line. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Find more interview insights at internwise.co.uk.",
+          "heygen_voiceover": "Learn more at internwise.co.uk",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: internship-quality. Scene setting: calm office corridor after the interview, warm Internwise navy and amber accents in the environment. Camera: confident close-up, Nuno walking slowly with the camera then stopping for the final line. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Learn more at internwise.co.uk",
           "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in calm office corridor after the interview, warm Internwise navy and amber accents in the environment, confident close-up, Nuno walking slowly with the camera then stopping for the final line, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
           "effect": "slow zoom out, slight background music lift",
           "transition_out": "fade to branded end card"
@@ -438,12 +436,12 @@
         "Has comment/share potential.",
         "Save-worthy practical takeaway."
       ],
-      "caption": "Struggling to nail your interview pitch?\n\nStructure your story with a clear beginning, middle, and end.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+      "caption": "Wondering if your internship is a good learning experience?\n\nCheck if your internship offers growth and learning opportunities.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
       "captions": {
-        "instagram": "Struggling to nail your interview pitch?\n\nStructure your story with a clear beginning, middle, and end.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
-        "tiktok": "Struggling to nail your interview pitch?\n\nStructure your story with a clear beginning, middle, and end.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
-        "youtube": "Struggling to nail your interview pitch?\n\nStructure your story with a clear beginning, middle, and end.\n\n#internship #careeradvice #graduatejobs",
-        "linkedin": "Struggling to nail your interview pitch?\n\nStructure your story with a clear beginning, middle, and end.\n\nShort, practical, and built for students preparing for the next step.\n\n#careeradvice #earlycareers #graduatejobs"
+        "instagram": "Wondering if your internship is a good learning experience?\n\nCheck if your internship offers growth and learning opportunities.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+        "tiktok": "Wondering if your internship is a good learning experience?\n\nCheck if your internship offers growth and learning opportunities.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+        "youtube": "Wondering if your internship is a good learning experience?\n\nCheck if your internship offers growth and learning opportunities.\n\n#internship #careeradvice #graduatejobs",
+        "linkedin": "Wondering if your internship is a good learning experience?\n\nCheck if your internship offers growth and learning opportunities.\n\nShort, practical, and built for students preparing for the next step.\n\n#careeradvice #earlycareers #graduatejobs"
       },
       "hashtags": [
         "#internship",
@@ -455,134 +453,13 @@
       "sourceSignals": [
         {
           "source": "reddit_rss",
-          "title": "Struggling to build my life after finishing my MSc in 2021, what can I do with no proper experience?",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1skrt65/struggling_to_build_my_life_after_finishing_my/",
-          "score": 113.3,
-          "meta": {
-            "feed": "UK jobs - internship CV"
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "[0 YoE, Student, Accounting Internship, Canada]",
-          "url": "https://www.reddit.com/r/resumes/comments/1xln92a/0_yoe_student_accounting_internship_canada/",
-          "score": 56.35,
+          "title": "[0 YoE, Student, Software Engineering/Data Co-op, Canada]",
+          "url": "https://www.reddit.com/r/resumes/comments/1xrfeq6/0_yoe_student_software_engineeringdata_coop_canada/",
+          "score": 89.7,
           "meta": {
             "feed": "Resumes - internship"
           }
         },
-        {
-          "source": "reddit_rss",
-          "title": "Graduated July 2025 and got unlucky - Am I cooked? Need advice on next Steps!",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1vvdyeq/graduated_july_2025_and_got_unlucky_am_i_cooked/",
-          "score": 53.9,
-          "meta": {
-            "feed": "UK jobs - internship CV"
-          }
-        },
-        {
-          "source": "seed_question",
-          "title": "why do I keep failing interviews",
-          "url": "",
-          "score": 44.0,
-          "meta": {
-            "configured": true
-          }
-        },
-        {
-          "source": "seed_question",
-          "title": "how to answer tell me about yourself internship",
-          "url": "",
-          "score": 37.0,
-          "meta": {
-            "configured": true
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "[0 YoE, New Grad, Software Engineering, United States] New Grad not getting callbacks",
-          "url": "https://www.reddit.com/r/resumes/comments/1xe93bb/0_yoe_new_grad_software_engineering_united_states/",
-          "score": 25.3,
-          "meta": {
-            "feed": "Resumes - internship"
-          }
-        }
-      ]
-    },
-    {
-      "id": "auto-2026-11-02-auto-assess-internship-value-quickly",
-      "topicId": "auto-assess-internship-value-quickly",
-      "weekId": "auto-2026-11-02",
-      "day": "Auto",
-      "title": "Assess Internship Value Quickly",
-      "platform": "TikTok / Reels / Shorts",
-      "format": "Short/Reel",
-      "status": "script-ready",
-      "durationTargetSeconds": 52,
-      "viralScore": 72.1,
-      "signalScore": 57.2,
-      "scriptPath": "social-media/video/scripts/auto-2026-11-02/auto-assess-internship-value-quickly/script.json",
-      "briefPath": "social-media/video/scripts/auto-2026-11-02/auto-assess-internship-value-quickly/brief.md",
-      "videoPath": null,
-      "thumbnailPath": null,
-      "heygenStatus": "manual",
-      "spokenScript": "Unsure if an internship is worth your time? I will show you how to evaluate an internship's potential benefits. First: Mentorship provides guidance and professional growth. Second: Learning opportunities enhance your skill set. Third: Quality experiences pave the way for future roles. The rule is simple: Look for learning opportunities and mentor access. Discover ways to assess internships at internwise.co.uk.",
-      "scenePlan": [
-        {
-          "scene": 1,
-          "target_seconds": 15,
-          "heygen_voiceover": "Unsure if an internship is worth your time? I will show you how to evaluate an internship's potential benefits.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: internship-quality. Scene setting: a modern internship interview waiting room with anxious candidates in soft focus behind Nuno. Camera: medium close-up, Nuno seated forward, direct eye contact, documentary realism. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Unsure if an internship is worth your time? I will show you how to evaluate an internship's potential benefits.",
-          "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a modern internship interview waiting room with anxious candidates in soft focus behind Nuno, medium close-up, Nuno seated forward, direct eye contact, documentary realism, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
-          "effect": "slow push-in from chest-up to close-up",
-          "transition_out": "fast whip pan into the next scene"
-        },
-        {
-          "scene": 2,
-          "target_seconds": 15,
-          "heygen_voiceover": "First: Mentorship provides guidance and professional growth. Second: Learning opportunities enhance your skill set.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: internship-quality. Scene setting: a glass-walled interview room where a recruiter reviews a CV in the blurred background. Camera: over-the-shoulder depth, Nuno half-profile then turns to camera. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: First: Mentorship provides guidance and professional growth. Second: Learning opportunities enhance your skill set.",
-          "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a glass-walled interview room where a recruiter reviews a CV in the blurred background, over-the-shoulder depth, Nuno half-profile then turns to camera, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
-          "effect": "subtle parallax drift with a slow zoom out",
-          "transition_out": "blur dissolve into evidence close-up"
-        },
-        {
-          "scene": 3,
-          "target_seconds": 15,
-          "heygen_voiceover": "Third: Quality experiences pave the way for future roles. The rule is simple: Look for learning opportunities and mentor access.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: internship-quality. Scene setting: a close-up CV review board with highlighted sections, sticky notes, and recruiter marks. Camera: Nuno beside the board, pointing to the strongest evidence area without readable text overlays. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Third: Quality experiences pave the way for future roles. The rule is simple: Look for learning opportunities and mentor access.",
-          "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a close-up CV review board with highlighted sections, sticky notes, and recruiter marks, Nuno beside the board, pointing to the strongest evidence area without readable text overlays, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
-          "effect": "slow lateral slide from CV detail to Nuno's face",
-          "transition_out": "match cut on Nuno's hand movement"
-        },
-        {
-          "scene": 4,
-          "target_seconds": 15,
-          "heygen_voiceover": "Discover ways to assess internships at internwise.co.uk.",
-          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: internship-quality. Scene setting: calm office corridor after the interview, warm Internwise navy and amber accents in the environment. Camera: confident close-up, Nuno walking slowly with the camera then stopping for the final line. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Discover ways to assess internships at internwise.co.uk.",
-          "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in calm office corridor after the interview, warm Internwise navy and amber accents in the environment, confident close-up, Nuno walking slowly with the camera then stopping for the final line, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
-          "effect": "slow zoom out, slight background music lift",
-          "transition_out": "fade to branded end card"
-        }
-      ],
-      "selectionRationale": [
-        "Creates an open loop that earns the next few seconds."
-      ],
-      "caption": "Unsure if an internship is worth your time?\n\nLook for learning opportunities and mentor access.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
-      "captions": {
-        "instagram": "Unsure if an internship is worth your time?\n\nLook for learning opportunities and mentor access.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
-        "tiktok": "Unsure if an internship is worth your time?\n\nLook for learning opportunities and mentor access.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
-        "youtube": "Unsure if an internship is worth your time?\n\nLook for learning opportunities and mentor access.\n\n#internship #careeradvice #graduatejobs",
-        "linkedin": "Unsure if an internship is worth your time?\n\nLook for learning opportunities and mentor access.\n\nShort, practical, and built for students preparing for the next step.\n\n#careeradvice #earlycareers #graduatejobs"
-      },
-      "hashtags": [
-        "#internship",
-        "#graduatejobs",
-        "#careeradvice",
-        "#jobsearch",
-        "#internwise"
-      ],
-      "sourceSignals": [
         {
           "source": "reddit_rss",
           "title": "Is this internship at the European Food Safety Authority a good way into procurement?",
@@ -594,18 +471,9 @@
         },
         {
           "source": "reddit_rss",
-          "title": "Quitting my job due to severe burnout and emotional distress.",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1t4f13n/quitting_my_job_due_to_severe_burnout_and/",
-          "score": 61.6,
-          "meta": {
-            "feed": "UK jobs - internship CV"
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "[0.5 YoE, Gameplay Engineer, Riot Games Internship, Amsterdam]",
-          "url": "https://www.reddit.com/r/resumes/comments/1xl46b0/05_yoe_gameplay_engineer_riot_games_internship/",
-          "score": 39.1,
+          "title": "[0 YoE, Graduate Student, New Grad Software Engineer, US]",
+          "url": "https://www.reddit.com/r/resumes/comments/1xr6dxa/0_yoe_graduate_student_new_grad_software_engineer/",
+          "score": 66.7,
           "meta": {
             "feed": "Resumes - internship"
           }
@@ -614,11 +482,141 @@
           "source": "youtube",
           "title": "10/10 things I did to land my first luxury internship at LVMH Paris",
           "url": "https://www.youtube.com/watch?v=gaYZB9gR7nY",
-          "score": 13.14,
+          "score": 13.13,
           "meta": {
             "query": "internship cv advice shorts",
-            "views": 1849,
-            "views_per_day": 35.6
+            "views": 1905,
+            "views_per_day": 32.3
+          }
+        }
+      ]
+    },
+    {
+      "id": "auto-2026-11-09-auto-experience-isn-t-everything",
+      "topicId": "auto-experience-isn-t-everything",
+      "weekId": "auto-2026-11-09",
+      "day": "Auto",
+      "title": "Experience Isn't Everything",
+      "platform": "TikTok / Reels / Shorts",
+      "format": "Short/Reel",
+      "status": "script-ready",
+      "durationTargetSeconds": 52,
+      "viralScore": 72.1,
+      "signalScore": 62.8,
+      "scriptPath": "social-media/video/scripts/auto-2026-11-09/auto-experience-isn-t-everything/script.json",
+      "briefPath": "social-media/video/scripts/auto-2026-11-09/auto-experience-isn-t-everything/brief.md",
+      "videoPath": null,
+      "thumbnailPath": null,
+      "heygenStatus": "manual",
+      "spokenScript": "Worried that your lack of experience is holding you back? I will show you how to demonstrate employability without experience. First: Employers value skills and potential, not just experience. Second: Projects can showcase your initiative and abilities. Third: Transferable skills are often as important as direct experience. The rule is simple: Highlight transferable skills and relevant projects. See how at internwise.co.uk",
+      "scenePlan": [
+        {
+          "scene": 1,
+          "target_seconds": 15,
+          "heygen_voiceover": "Worried that your lack of experience is holding you back? I will show you how to demonstrate employability without experience.",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: experience. Scene setting: a modern internship interview waiting room with anxious candidates in soft focus behind Nuno. Camera: medium close-up, Nuno seated forward, direct eye contact, documentary realism. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Worried that your lack of experience is holding you back? I will show you how to demonstrate employability without experience.",
+          "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a modern internship interview waiting room with anxious candidates in soft focus behind Nuno, medium close-up, Nuno seated forward, direct eye contact, documentary realism, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
+          "effect": "slow push-in from chest-up to close-up",
+          "transition_out": "fast whip pan into the next scene"
+        },
+        {
+          "scene": 2,
+          "target_seconds": 15,
+          "heygen_voiceover": "First: Employers value skills and potential, not just experience. Second: Projects can showcase your initiative and abilities.",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: experience. Scene setting: a glass-walled interview room where a recruiter reviews a CV in the blurred background. Camera: over-the-shoulder depth, Nuno half-profile then turns to camera. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: First: Employers value skills and potential, not just experience. Second: Projects can showcase your initiative and abilities.",
+          "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a glass-walled interview room where a recruiter reviews a CV in the blurred background, over-the-shoulder depth, Nuno half-profile then turns to camera, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
+          "effect": "subtle parallax drift with a slow zoom out",
+          "transition_out": "blur dissolve into evidence close-up"
+        },
+        {
+          "scene": 3,
+          "target_seconds": 15,
+          "heygen_voiceover": "Third: Transferable skills are often as important as direct experience. The rule is simple: Highlight transferable skills and relevant projects.",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: experience. Scene setting: a close-up CV review board with highlighted sections, sticky notes, and recruiter marks. Camera: Nuno beside the board, pointing to the strongest evidence area without readable text overlays. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: Third: Transferable skills are often as important as direct experience. The rule is simple: Highlight transferable skills and relevant projects.",
+          "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in a close-up CV review board with highlighted sections, sticky notes, and recruiter marks, Nuno beside the board, pointing to the strongest evidence area without readable text overlays, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
+          "effect": "slow lateral slide from CV detail to Nuno's face",
+          "transition_out": "match cut on Nuno's hand movement"
+        },
+        {
+          "scene": 4,
+          "target_seconds": 15,
+          "heygen_voiceover": "See how at internwise.co.uk",
+          "video_prompt": "Vertical 9:16 cinematic short-form video scene for Internwise. Nuno is the presenter and main face of the scene. Topic context: experience. Scene setting: calm office corridor after the interview, warm Internwise navy and amber accents in the environment. Camera: confident close-up, Nuno walking slowly with the camera then stopping for the final line. Natural office lighting, realistic UK early-careers environment, premium but approachable, navy and amber brand accents, no on-screen text, no subtitles, no logos except natural end-card later. Voiceover meaning: See how at internwise.co.uk",
+          "image_prompt": "Create a vertical 9:16 photorealistic reference image for Gemini: Nuno in calm office corridor after the interview, warm Internwise navy and amber accents in the environment, confident close-up, Nuno walking slowly with the camera then stopping for the final line, Internwise navy and amber accents, realistic office detail, no on-screen text, no captions.",
+          "effect": "slow zoom out, slight background music lift",
+          "transition_out": "fade to branded end card"
+        }
+      ],
+      "selectionRationale": [
+        "Creates an open loop that earns the next few seconds."
+      ],
+      "caption": "Worried that your lack of experience is holding you back?\n\nHighlight transferable skills and relevant projects.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+      "captions": {
+        "instagram": "Worried that your lack of experience is holding you back?\n\nHighlight transferable skills and relevant projects.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+        "tiktok": "Worried that your lack of experience is holding you back?\n\nHighlight transferable skills and relevant projects.\n\nSave this before your next application or interview.\n\n#internship #graduatejobs #careeradvice #jobsearch #internwise",
+        "youtube": "Worried that your lack of experience is holding you back?\n\nHighlight transferable skills and relevant projects.\n\n#internship #careeradvice #graduatejobs",
+        "linkedin": "Worried that your lack of experience is holding you back?\n\nHighlight transferable skills and relevant projects.\n\nShort, practical, and built for students preparing for the next step.\n\n#careeradvice #earlycareers #graduatejobs"
+      },
+      "hashtags": [
+        "#internship",
+        "#graduatejobs",
+        "#careeradvice",
+        "#jobsearch",
+        "#internwise"
+      ],
+      "sourceSignals": [
+        {
+          "source": "reddit_rss",
+          "title": "What are the ways to make yourself more employable as an engineering graduate?",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1osoxqw/what_are_the_ways_to_make_yourself_more/",
+          "score": 75.9,
+          "meta": {
+            "feed": "UK jobs - internship CV"
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "2:2 from top 5 university, no internships, no experience. Am I cooked?",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1wdh6eb/22_from_top_5_university_no_internships_no/",
+          "score": 55.0,
+          "meta": {
+            "feed": "UK jobs - internship CV"
+          }
+        },
+        {
+          "source": "seed_question",
+          "title": "how to get graduate job with no experience",
+          "url": "",
+          "score": 47.0,
+          "meta": {
+            "configured": true
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "MSc HR + CIPD Level 7 grad seeking entry-level role - willing to relocate (Visa expires in 17mo)",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1lpu0tc/msc_hr_cipd_level_7_grad_seeking_entrylevel_role/",
+          "score": 45.1,
+          "meta": {
+            "feed": "UK jobs - internship CV"
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "Looking for a industry shift",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1krzkqh/looking_for_a_industry_shift/",
+          "score": 35.2,
+          "meta": {
+            "feed": "UK jobs - internship CV"
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "Really short term experience, add or leave off?",
+          "url": "https://www.reddit.com/r/resumes/comments/1xkf6b1/really_short_term_experience_add_or_leave_off/",
+          "score": 10.35,
+          "meta": {
+            "feed": "Resumes - internship"
           }
         }
       ]

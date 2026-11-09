@@ -1,10 +1,10 @@
 {
-  "week_id": "auto-2026-11-02",
-  "generated_at": "2026-11-02T13:16:01.603692+00:00",
+  "week_id": "auto-2026-11-09",
+  "generated_at": "2026-11-09T13:43:13.839115+00:00",
   "default_duration_seconds": 52,
   "source_summary": {
     "reddit_rss_signals": 50,
-    "google_trends_signals": 17,
+    "google_trends_signals": 18,
     "youtube_signals": 40,
     "seed_question_signals": 5,
     "warnings": [
@@ -22,416 +22,11 @@
   },
   "topics": [
     {
-      "source_post": "gsc-site-2026-11-08",
-      "pain": 4,
-      "specificity": 5,
-      "curiosity": 5,
-      "utility": 5,
-      "timeliness": 4,
-      "discussion": 4,
-      "brand_fit": 5,
-      "angle_source": "search-demand",
-      "id": "gsc-what-does-a-sales-executive-do",
-      "title": "What Does a Sales Executive Actually Do?",
-      "source_cluster": "sales executive job role day to day",
-      "signal_score": 98,
-      "hook_candidates": [
-        "What does a sales executive actually do all day?",
-        "Sales is one of the most common graduate roles, and one of the least explained."
-      ],
-      "promise": "Understand the sales executive role well enough to decide if it suits you and apply with the right proof.",
-      "proof_points": [
-        "Find new customers: research leads, call, email and follow up.",
-        "Run meetings or demos and work out what the customer actually needs.",
-        "Keep a pipeline up to date in a CRM so the team can see every deal.",
-        "Hit a monthly or quarterly target, often with commission on top of base pay.",
-        "Proof that helps you apply: any customer-facing job, a fundraising total, or a society you grew."
-      ],
-      "core_takeaway": "Sales rewards people who listen well, follow up and can show a number they moved.",
-      "cta": "Browse sales roles at internwise.co.uk",
-      "source_signals": [
-        {
-          "source": "google_search_console",
-          "title": "Site queries 'what is a sales executive' (1,652), 'what does a sales executive do' (665), 'what does sales executive do' (264), 'what is sales executive job' (191): about 2,770 impressions",
-          "url": "",
-          "score": 98,
-          "meta": {
-            "property": "https://www.internwise.co.uk/",
-            "window": "2026-08-09..2026-11-07"
-          }
-        }
-      ]
-    },
-    {
-      "source_post": "gsc-site-2026-11-08",
-      "pain": 4,
-      "specificity": 5,
-      "curiosity": 5,
-      "utility": 5,
-      "timeliness": 4,
-      "discussion": 4,
-      "brand_fit": 5,
-      "angle_source": "search-demand",
-      "id": "gsc-what-is-commercial-experience",
-      "title": "What Is Commercial Experience?",
-      "source_cluster": "commercial experience meaning commercial work",
-      "signal_score": 97,
-      "hook_candidates": [
-        "Job ads keep asking for commercial experience. What does it actually mean?",
-        "You probably have more commercial experience than you think."
-      ],
-      "promise": "Know what employers mean by commercial experience and spot the experience you already have.",
-      "proof_points": [
-        "Commercial experience means work done in a business that has to make money or serve paying customers.",
-        "Retail, hospitality, call centres and sales jobs all count.",
-        "Internships, placements and freelance work for real clients count too.",
-        "Running a small online shop, or managing a society budget or sponsorship, can count.",
-        "On your CV, show the business side: customers served, sales made, money saved or raised."
-      ],
-      "core_takeaway": "If you have served customers or handled money for an organisation, you have commercial experience. Say so with a number.",
-      "cta": "Find roles that build it at internwise.co.uk",
-      "source_signals": [
-        {
-          "source": "google_search_console",
-          "title": "Site queries 'what is commercial experience' (1,287), 'what is commercial work' (161): about 1,450 impressions",
-          "url": "",
-          "score": 97,
-          "meta": {
-            "property": "https://www.internwise.co.uk/",
-            "window": "2026-08-09..2026-11-07"
-          }
-        }
-      ]
-    },
-    {
-      "source_post": "gsc-site-2026-11-08",
-      "pain": 4,
-      "specificity": 5,
-      "curiosity": 5,
-      "utility": 5,
-      "timeliness": 4,
-      "discussion": 4,
-      "brand_fit": 5,
-      "angle_source": "search-demand",
-      "id": "gsc-journalism-without-a-degree",
-      "title": "How to Get Into Journalism Without a Degree",
-      "source_cluster": "journalism without a degree get into journalism uk",
-      "signal_score": 95,
-      "hook_candidates": [
-        "Want to be a journalist but do not have a journalism degree?",
-        "Editors hire the clippings, not the certificate."
-      ],
-      "promise": "Map the realistic routes into UK journalism that do not need a journalism degree.",
-      "proof_points": [
-        "Start publishing now: student media, a local news site, a newsletter or a niche blog.",
-        "Build a small portfolio of published pieces, sometimes called clippings.",
-        "Look at journalism apprenticeships, where you train and get paid at the same time.",
-        "Consider an NCTJ qualification, the industry's best-known training route.",
-        "Learn the practical skills editors ask for: shorthand, fast accurate writing, basic video and social."
-      ],
-      "core_takeaway": "Editors want proof you can find and write a story. Start publishing before you apply.",
-      "cta": "Find media and journalism roles at internwise.co.uk",
-      "source_signals": [
-        {
-          "source": "google_search_console",
-          "title": "Site queries 'how to become a journalist without a degree' (319), 'how to get into journalism' (215), 'how to get into journalism without a degree' (200) and related: about 950 impressions",
-          "url": "",
-          "score": 95,
-          "meta": {
-            "property": "https://www.internwise.co.uk/",
-            "window": "2026-08-09..2026-11-07"
-          }
-        }
-      ]
-    },
-    {
-      "source_post": "gsc-site-2026-11-08",
-      "pain": 4,
-      "specificity": 5,
-      "curiosity": 5,
-      "utility": 5,
-      "timeliness": 4,
-      "discussion": 4,
-      "brand_fit": 5,
-      "angle_source": "search-demand",
-      "id": "gsc-hours-per-week-available",
-      "title": "How Many Hours a Week Are You Available to Work?",
-      "source_cluster": "how many hours per week are you available to work application question",
-      "signal_score": 96,
-      "hook_candidates": [
-        "Application form asks how many hours a week you can work. What do you put?",
-        "An honest, specific answer beats \"flexible\"."
-      ],
-      "promise": "Answer the availability question honestly and specifically, without underselling yourself.",
-      "proof_points": [
-        "Give a clear number or range, like 15 to 20 hours, not just \"flexible\".",
-        "Name the days or times you can work, especially around lectures.",
-        "Match the advert where you can: full time usually means 35 to 40 hours.",
-        "On a Student visa, check your limit: degree-level students can usually work up to 20 hours a week in term time.",
-        "Never promise hours you cannot keep. It is the fastest way to lose a good role."
-      ],
-      "core_takeaway": "Give a specific, honest number and the times you can do it.",
-      "cta": "Find roles that fit your hours at internwise.co.uk",
-      "source_signals": [
-        {
-          "source": "google_search_console",
-          "title": "Site queries 'how many hours per week are you available to work' (594) and '...work?' (388): about 980 impressions",
-          "url": "",
-          "score": 96,
-          "meta": {
-            "property": "https://www.internwise.co.uk/",
-            "window": "2026-08-09..2026-11-07"
-          }
-        }
-      ]
-    },
-    {
-      "source_post": "gsc-site-2026-11-08",
-      "pain": 4,
-      "specificity": 5,
-      "curiosity": 5,
-      "utility": 5,
-      "timeliness": 4,
-      "discussion": 4,
-      "brand_fit": 5,
-      "angle_source": "search-demand",
-      "id": "gsc-cover-letter-opening-lines",
-      "title": "Cover Letter Opening Lines That Get Read",
-      "source_cluster": "cover letter opening lines examples",
-      "signal_score": 94,
-      "hook_candidates": [
-        "Most cover letters lose the reader in the first line.",
-        "\"I am writing to apply for...\" is the line everyone skips."
-      ],
-      "promise": "Swap a forgettable first line for one that makes a recruiter read on.",
-      "proof_points": [
-        "Lead with a result: \"Last summer I grew our society's Instagram from 300 to 1,200 followers.\"",
-        "Show you know them: name a recent project, product or campaign of theirs.",
-        "Connect the dots: say in one line why your skill fits this exact role.",
-        "Cut the filler: they already know which role you are applying for.",
-        "Keep it to two sentences, then get to your proof."
-      ],
-      "core_takeaway": "Open with proof or a specific reason, not the job title.",
-      "cta": "Find your next role at internwise.co.uk",
-      "source_signals": [
-        {
-          "source": "google_search_console",
-          "title": "Site query 'cover letter opening lines' (796) plus 'best cover letter opening lines': about 800 impressions",
-          "url": "",
-          "score": 94,
-          "meta": {
-            "property": "https://www.internwise.co.uk/",
-            "window": "2026-08-09..2026-11-07"
-          }
-        }
-      ]
-    },
-    {
-      "source_post": "gsc-site-2026-10-30",
-      "pain": 5,
-      "specificity": 5,
-      "curiosity": 4,
-      "utility": 5,
-      "timeliness": 4,
-      "discussion": 4,
-      "brand_fit": 5,
-      "angle_source": "search-demand",
-      "id": "gsc-what-to-wear-internship-interview",
-      "title": "What to Wear to an Internship Interview",
-      "source_cluster": "internship interview what to wear dress code",
-      "signal_score": 96,
-      "hook_candidates": [
-        "Not sure what to wear to your internship interview?",
-        "Dress one step smarter than the team you are joining."
-      ],
-      "promise": "Pick the right interview outfit for any internship in five minutes.",
-      "proof_points": [
-        "Check the company's own photos and LinkedIn to see how the team actually dresses.",
-        "Aim one step smarter than the team: smart-casual for most offices, a suit for law and finance.",
-        "For video interviews, a plain top works best on camera and your background matters too.",
-        "If unsure, it is fine to ask the recruiter what the dress code is."
-      ],
-      "core_takeaway": "Dress one step smarter than the team you want to join.",
-      "cta": "Find your next internship at internwise.co.uk",
-      "source_signals": [
-        {
-          "source": "google_search_console",
-          "title": "Site page 'what should you wear to internship interviews': 466 impressions, position 6.5",
-          "url": "",
-          "score": 96,
-          "meta": {
-            "property": "https://www.internwise.co.uk/",
-            "window": "2026-07-30..2026-10-27"
-          }
-        }
-      ]
-    },
-    {
-      "source_post": "gsc-site-2026-10-30",
-      "pain": 5,
-      "specificity": 5,
-      "curiosity": 4,
-      "utility": 5,
-      "timeliness": 4,
-      "discussion": 4,
-      "brand_fit": 5,
-      "angle_source": "search-demand",
-      "id": "gsc-where-to-find-internships",
-      "title": "Where to Actually Find Internships",
-      "source_cluster": "how to find internships uk where to look",
-      "signal_score": 94,
-      "hook_candidates": [
-        "Applying everywhere and hearing nothing back?",
-        "Most internships are not where you are looking."
-      ],
-      "promise": "Know the five places UK internships are actually advertised, and how to use each one.",
-      "proof_points": [
-        "Specialist internship boards list paid UK roles in one place, filtered by sector and location.",
-        "Your university careers service often holds roles that never reach public job boards.",
-        "Company careers pages post early, often before roles are syndicated anywhere else.",
-        "Small businesses hire from speculative emails: a short note with your CV can create a role."
-      ],
-      "core_takeaway": "Use three channels well instead of ten badly.",
-      "cta": "Find your next internship at internwise.co.uk",
-      "source_signals": [
-        {
-          "source": "google_search_console",
-          "title": "'how to find internships' cluster ~430 impressions (site GSC, 90 days)",
-          "url": "",
-          "score": 94,
-          "meta": {
-            "property": "https://www.internwise.co.uk/",
-            "window": "2026-07-30..2026-10-27"
-          }
-        }
-      ]
-    },
-    {
-      "source_post": "gsc-site-2026-10-30",
-      "pain": 5,
-      "specificity": 5,
-      "curiosity": 4,
-      "utility": 5,
-      "timeliness": 4,
-      "discussion": 4,
-      "brand_fit": 5,
-      "angle_source": "search-demand",
-      "id": "gsc-internship-strengths-weaknesses",
-      "title": "Strengths and Weaknesses: Answers for Interns",
-      "source_cluster": "interview strengths weaknesses answers examples",
-      "signal_score": 88,
-      "hook_candidates": [
-        "Dreading the strengths and weaknesses question?",
-        "There is a right way to answer the weakness question."
-      ],
-      "promise": "Answer the strengths and weaknesses question honestly, with examples that fit an internship.",
-      "proof_points": [
-        "Pick strengths the job advert asks for and prove each with one quick example.",
-        "Choose a real weakness that is not essential to the role.",
-        "Always show what you are doing to improve it.",
-        "Avoid fake weaknesses like 'I work too hard': interviewers hear it every day."
-      ],
-      "core_takeaway": "A real weakness plus a real fix beats a fake weakness every time.",
-      "cta": "Find your next internship at internwise.co.uk",
-      "source_signals": [
-        {
-          "source": "google_search_console",
-          "title": "'internship strengths and weaknesses examples' and 'what are you passionate about' answer queries",
-          "url": "",
-          "score": 88,
-          "meta": {
-            "property": "https://www.internwise.co.uk/",
-            "window": "2026-07-30..2026-10-27"
-          }
-        }
-      ]
-    },
-    {
-      "source_post": "gsc-site-2026-10-30",
-      "pain": 5,
-      "specificity": 5,
-      "curiosity": 4,
-      "utility": 5,
-      "timeliness": 4,
-      "discussion": 4,
-      "brand_fit": 5,
-      "angle_source": "search-demand",
-      "id": "gsc-introduce-yourself-new-intern",
-      "title": "How to Introduce Yourself as a New Intern",
-      "source_cluster": "introduce yourself new intern first day",
-      "signal_score": 90,
-      "hook_candidates": [
-        "What do you say on day one?",
-        "Your first hello sets the tone for the whole internship."
-      ],
-      "promise": "A simple first-day introduction that makes people remember you for the right reasons.",
-      "proof_points": [
-        "Say your name, your role and how long you are with the team.",
-        "Add one line on what you are studying or what interests you.",
-        "Ask one question about their work: people remember who was curious.",
-        "Follow up with a short message to your manager at the end of day one."
-      ],
-      "core_takeaway": "Name, role, one interest, one question. Then listen.",
-      "cta": "Find your next internship at internwise.co.uk",
-      "source_signals": [
-        {
-          "source": "google_search_console",
-          "title": "Site page 'how to introduce yourself as a new intern': position 4.6",
-          "url": "",
-          "score": 90,
-          "meta": {
-            "property": "https://www.internwise.co.uk/",
-            "window": "2026-07-30..2026-10-27"
-          }
-        }
-      ]
-    },
-    {
-      "source_post": "gsc-site-2026-10-30",
-      "pain": 5,
-      "specificity": 5,
-      "curiosity": 4,
-      "utility": 5,
-      "timeliness": 4,
-      "discussion": 4,
-      "brand_fit": 5,
-      "angle_source": "search-demand",
-      "id": "gsc-what-interns-actually-do",
-      "title": "What Interns Actually Do All Day",
-      "source_cluster": "what do interns do intern responsibilities",
-      "signal_score": 86,
-      "hook_candidates": [
-        "What will you actually do as an intern?",
-        "It is not all coffee runs."
-      ],
-      "promise": "Know what a good internship day looks like, so you can spot a bad one.",
-      "proof_points": [
-        "Most interns support real projects: research, drafting, data and content.",
-        "Expect some shadowing in meetings to learn how the team works.",
-        "A good internship gives you one piece of work you own by the end.",
-        "If it is only admin and errands, ask your manager for a project."
-      ],
-      "core_takeaway": "A good internship ends with something you can point to.",
-      "cta": "Find your next internship at internwise.co.uk",
-      "source_signals": [
-        {
-          "source": "google_search_console",
-          "title": "'what do interns do' / 'what does a social media intern do' cluster ~560 impressions",
-          "url": "",
-          "score": 86,
-          "meta": {
-            "property": "https://www.internwise.co.uk/",
-            "window": "2026-07-30..2026-10-27"
-          }
-        }
-      ]
-    },
-    {
-      "id": "auto-your-cv-must-speak-clearly",
-      "title": "Your CV Must Speak Clearly",
+      "id": "auto-your-cv-needs-real-feedback",
+      "title": "Your CV Needs Real Feedback",
       "source_post": "automated-topic-engine",
       "source_cluster": "cv",
-      "signal_score": 90.0,
+      "signal_score": 105.9,
       "pain": 5,
       "specificity": 5,
       "curiosity": 5,
@@ -441,18 +36,36 @@
       "brand_fit": 5,
       "angle_source": "llm",
       "hook_candidates": [
-        "Frustrated by CV rejections?",
+        "Have you applied to dozens of jobs but only got a couple of interviews?",
         "If you are stuck on cv, watch this before your next application."
       ],
-      "promise": "I will show you how to make your CV clear and concise.",
+      "promise": "I will show you how to gather meaningful feedback on your CV.",
       "proof_points": [
-        "Clear CVs are easier for recruiters to scan quickly.",
-        "Active verbs demonstrate impact and contribution.",
-        "Bullet points help highlight key skills and achievements."
+        "CVs reviewed by industry professionals often stand out more.",
+        "Targeted feedback can highlight overlooked strengths.",
+        "Real-world feedback helps align CVs with employer expectations."
       ],
-      "core_takeaway": "Use bullet points and active verbs to highlight achievements.",
-      "cta": "Learn how to craft a standout CV at internwise.co.uk.",
+      "core_takeaway": "Ask professionals in your field for targeted CV advice.",
+      "cta": "Get tailored feedback at internwise.co.uk",
       "source_signals": [
+        {
+          "source": "reddit_rss",
+          "title": "I'm stuck between deciding three different offers, I'd love some guidance.",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1xomcgn/im_stuck_between_deciding_three_different_offers/",
+          "score": 126.5,
+          "meta": {
+            "feed": "UK jobs - internship CV"
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "[0 YoE, MSc. Engineering Student, Junior Software Engineer, Italy/Turkey] Seeking Resume Feedback - 100+ Applications, Only 2 Interviews",
+          "url": "https://www.reddit.com/r/resumes/comments/1xprryh/0_yoe_msc_engineering_student_junior_software/",
+          "score": 112.7,
+          "meta": {
+            "feed": "Resumes - internship"
+          }
+        },
         {
           "source": "reddit_rss",
           "title": "17 y/o girl from North London looking for any job - please help",
@@ -464,9 +77,9 @@
         },
         {
           "source": "reddit_rss",
-          "title": "Urgent Resume Concern: How low of a GPA is low enough to leave off for a top-tier CPG company?",
-          "url": "https://www.reddit.com/r/resumes/comments/1xjwaeu/urgent_resume_concern_how_low_of_a_gpa_is_low/",
-          "score": 75.9,
+          "title": "[0YoE, CS student, Software Engineering Intern, Ontario] seeking resume review feedback",
+          "url": "https://www.reddit.com/r/resumes/comments/1xr3m7q/0yoe_cs_student_software_engineering_intern/",
+          "score": 72.45,
           "meta": {
             "feed": "Resumes - internship"
           }
@@ -488,33 +101,15 @@
           "meta": {
             "configured": true
           }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "[0 YoE, Student, Unemployed, United Kingdom] Looking for resume feedback/",
-          "url": "https://www.reddit.com/r/resumes/comments/1xg8he7/0_yoe_student_unemployed_united_kingdom_looking/",
-          "score": 62.1,
-          "meta": {
-            "feed": "Resumes - internship"
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "Need some Advice",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1tcbujl/need_some_advice/",
-          "score": 60.5,
-          "meta": {
-            "feed": "UK jobs - internship CV"
-          }
         }
       ]
     },
     {
-      "id": "auto-expand-experience-without-jobs",
-      "title": "Expand Experience Without Jobs",
+      "id": "auto-failing-interviews-try-this",
+      "title": "Failing Interviews? Try This",
       "source_post": "automated-topic-engine",
-      "source_cluster": "experience",
-      "signal_score": 72.7,
+      "source_cluster": "interview",
+      "signal_score": 76.9,
       "pain": 4,
       "specificity": 4,
       "curiosity": 5,
@@ -524,27 +119,224 @@
       "brand_fit": 5,
       "angle_source": "llm",
       "hook_candidates": [
-        "Worried you can't get a job without experience?",
-        "If you are stuck on experience, watch this before your next application."
+        "Feeling stuck after multiple unsuccessful interviews?",
+        "If you are stuck on interview, watch this before your next application."
       ],
-      "promise": "I will show you how to gain valuable skills outside traditional roles.",
+      "promise": "I will show you how to identify and tackle common interview pitfalls.",
       "proof_points": [
-        "Online courses offer practical projects to showcase on your CV.",
-        "Volunteer work builds transferable skills valued by employers.",
-        "Demonstrating self-initiative is attractive to recruiters."
+        "Self-assessment helps in improving interview performance.",
+        "Identifying patterns can lead to targeted improvements.",
+        "Feedback from previous interviews can guide future success."
       ],
-      "core_takeaway": "Engage in online courses and volunteer projects to build your CV.",
-      "cta": "Explore more ways to build your experience at internwise.co.uk.",
+      "core_takeaway": "Review past interviews to spot and address your weak points.",
+      "cta": "Get interview insights at internwise.co.uk",
       "source_signals": [
         {
           "source": "reddit_rss",
-          "title": "Struggling to find a sponsored job in the UK despite relevant experience - looking for advice or leads",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1xedssw/struggling_to_find_a_sponsored_job_in_the_uk/",
-          "score": 105.6,
+          "title": "Struggling to build my life after finishing my MSc in 2021, what can I do with no proper experience?",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1skrt65/struggling_to_build_my_life_after_finishing_my/",
+          "score": 113.3,
           "meta": {
             "feed": "UK jobs - internship CV"
           }
         },
+        {
+          "source": "reddit_rss",
+          "title": "[0 YoE, Student, Accounting Internship, Canada]",
+          "url": "https://www.reddit.com/r/resumes/comments/1xln92a/0_yoe_student_accounting_internship_canada/",
+          "score": 56.35,
+          "meta": {
+            "feed": "Resumes - internship"
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "Graduated July 2025 and got unlucky - Am I cooked? Need advice on next Steps!",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1vvdyeq/graduated_july_2025_and_got_unlucky_am_i_cooked/",
+          "score": 53.9,
+          "meta": {
+            "feed": "UK jobs - internship CV"
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "Quitting low-skilled full-time job - bad look on corporate interviews?",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1k22kh0/quitting_lowskilled_fulltime_job_bad_look_on/",
+          "score": 48.4,
+          "meta": {
+            "feed": "UK jobs - internship CV"
+          }
+        },
+        {
+          "source": "seed_question",
+          "title": "why do I keep failing interviews",
+          "url": "",
+          "score": 44.0,
+          "meta": {
+            "configured": true
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "[0 YoE, New Grad(Expected Dec 2026), Software Engineer, US]",
+          "url": "https://www.reddit.com/r/resumes/comments/1xqlv3d/0_yoe_new_gradexpected_dec_2026_software_engineer/",
+          "score": 43.7,
+          "meta": {
+            "feed": "Resumes - internship"
+          }
+        }
+      ]
+    },
+    {
+      "id": "auto-know-your-internship-rights",
+      "title": "Know Your Internship Rights",
+      "source_post": "automated-topic-engine",
+      "source_cluster": "internship-rights",
+      "signal_score": 71.7,
+      "pain": 4,
+      "specificity": 4,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "angle_source": "llm",
+      "hook_candidates": [
+        "Confused about your rights as an intern?",
+        "If you are stuck on internship rights, watch this before your next application."
+      ],
+      "promise": "I will show you how to understand your legal rights in internships.",
+      "proof_points": [
+        "In the UK, most internships should be paid at least the National Minimum Wage.",
+        "Knowing your rights can help you negotiate better terms.",
+        "Legal advice can clarify complex internship situations."
+      ],
+      "core_takeaway": "Ensure your internship complies with legal requirements for pay.",
+      "cta": "Understand your rights at internwise.co.uk",
+      "source_signals": [
+        {
+          "source": "reddit_rss",
+          "title": "Unpaid internship: Should I do it then claim NMW at the end?",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1qhkby2/unpaid_internship_should_i_do_it_then_claim_nmw/",
+          "score": 63.8,
+          "meta": {
+            "feed": "UK jobs - internship CV"
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "UK Internship Advice - Am I Legally a Worker Entitled to Pay, and How Should I Approach the Company About It?",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1l81qp4/uk_internship_advice_am_i_legally_a_worker/",
+          "score": 63.8,
+          "meta": {
+            "feed": "UK jobs - internship CV"
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "Has anyone heard of Crown Fund (London/New York)? Legit or should I be cautious?",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1uhar8z/has_anyone_heard_of_crown_fund_londonnew_york/",
+          "score": 60.5,
+          "meta": {
+            "feed": "UK jobs - internship CV"
+          }
+        }
+      ]
+    },
+    {
+      "id": "auto-evaluate-internship-quality",
+      "title": "Evaluate Internship Quality",
+      "source_post": "automated-topic-engine",
+      "source_cluster": "internship-quality",
+      "signal_score": 71.2,
+      "pain": 4,
+      "specificity": 4,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "angle_source": "llm",
+      "hook_candidates": [
+        "Wondering if your internship is a good learning experience?",
+        "If you are stuck on internship quality, watch this before your next application."
+      ],
+      "promise": "I will show you how to evaluate the quality of your internship.",
+      "proof_points": [
+        "Quality internships provide mentorship and skill development.",
+        "Good internships align with your career goals.",
+        "Feedback from current or past interns can offer insights."
+      ],
+      "core_takeaway": "Check if your internship offers growth and learning opportunities.",
+      "cta": "Learn more at internwise.co.uk",
+      "source_signals": [
+        {
+          "source": "reddit_rss",
+          "title": "[0 YoE, Student, Software Engineering/Data Co-op, Canada]",
+          "url": "https://www.reddit.com/r/resumes/comments/1xrfeq6/0_yoe_student_software_engineeringdata_coop_canada/",
+          "score": 89.7,
+          "meta": {
+            "feed": "Resumes - internship"
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "Is this internship at the European Food Safety Authority a good way into procurement?",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1uwjau7/is_this_internship_at_the_european_food_safety/",
+          "score": 67.1,
+          "meta": {
+            "feed": "UK jobs - internship CV"
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "[0 YoE, Graduate Student, New Grad Software Engineer, US]",
+          "url": "https://www.reddit.com/r/resumes/comments/1xr6dxa/0_yoe_graduate_student_new_grad_software_engineer/",
+          "score": 66.7,
+          "meta": {
+            "feed": "Resumes - internship"
+          }
+        },
+        {
+          "source": "youtube",
+          "title": "10/10 things I did to land my first luxury internship at LVMH Paris",
+          "url": "https://www.youtube.com/watch?v=gaYZB9gR7nY",
+          "score": 13.13,
+          "meta": {
+            "query": "internship cv advice shorts",
+            "views": 1905,
+            "views_per_day": 32.3
+          }
+        }
+      ]
+    },
+    {
+      "id": "auto-experience-isn-t-everything",
+      "title": "Experience Isn't Everything",
+      "source_post": "automated-topic-engine",
+      "source_cluster": "experience",
+      "signal_score": 62.8,
+      "pain": 3,
+      "specificity": 3,
+      "curiosity": 4,
+      "utility": 4,
+      "timeliness": 3,
+      "discussion": 3,
+      "brand_fit": 5,
+      "angle_source": "llm",
+      "hook_candidates": [
+        "Worried that your lack of experience is holding you back?",
+        "If you are stuck on experience, watch this before your next application."
+      ],
+      "promise": "I will show you how to demonstrate employability without experience.",
+      "proof_points": [
+        "Employers value skills and potential, not just experience.",
+        "Projects can showcase your initiative and abilities.",
+        "Transferable skills are often as important as direct experience."
+      ],
+      "core_takeaway": "Highlight transferable skills and relevant projects.",
+      "cta": "See how at internwise.co.uk",
+      "source_signals": [
         {
           "source": "reddit_rss",
           "title": "What are the ways to make yourself more employable as an engineering graduate?",
@@ -582,151 +374,19 @@
           }
         },
         {
-          "source": "youtube",
-          "title": "Laitkam ha Faith Foundation Shillong | Graduate passed | No Experience | Jobs in Meghalaya",
-          "url": "https://www.youtube.com/watch?v=kNTCZIScAP0",
-          "score": 23.05,
-          "meta": {
-            "query": "no experience cv graduate",
-            "views": 2227,
-            "views_per_day": 13.6
-          }
-        }
-      ]
-    },
-    {
-      "id": "auto-know-your-internship-rights",
-      "title": "Know Your Internship Rights",
-      "source_post": "automated-topic-engine",
-      "source_cluster": "internship-rights",
-      "signal_score": 71.7,
-      "pain": 4,
-      "specificity": 4,
-      "curiosity": 5,
-      "utility": 5,
-      "timeliness": 4,
-      "discussion": 4,
-      "brand_fit": 5,
-      "angle_source": "llm",
-      "hook_candidates": [
-        "Confused about your rights during internships?",
-        "If you are stuck on internship rights, watch this before your next application."
-      ],
-      "promise": "I will show you how to understand and assert your legal rights.",
-      "proof_points": [
-        "UK law requires payment for work that meets employment criteria.",
-        "Communicating rights can prevent exploitation.",
-        "Knowledge empowers you to negotiate fair terms."
-      ],
-      "core_takeaway": "Research your rights and communicate them confidently to employers.",
-      "cta": "Learn more about internship rights at internwise.co.uk.",
-      "source_signals": [
-        {
           "source": "reddit_rss",
-          "title": "Unpaid internship: Should I do it then claim NMW at the end?",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1qhkby2/unpaid_internship_should_i_do_it_then_claim_nmw/",
-          "score": 63.8,
+          "title": "Looking for a industry shift",
+          "url": "https://www.reddit.com/r/UKJobs/comments/1krzkqh/looking_for_a_industry_shift/",
+          "score": 35.2,
           "meta": {
             "feed": "UK jobs - internship CV"
           }
         },
         {
           "source": "reddit_rss",
-          "title": "UK Internship Advice - Am I Legally a Worker Entitled to Pay, and How Should I Approach the Company About It?",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1l81qp4/uk_internship_advice_am_i_legally_a_worker/",
-          "score": 63.8,
-          "meta": {
-            "feed": "UK jobs - internship CV"
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "Has anyone heard of Crown Fund (London/New York)? Legit or should I be cautious?",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1uhar8z/has_anyone_heard_of_crown_fund_londonnew_york/",
-          "score": 60.5,
-          "meta": {
-            "feed": "UK jobs - internship CV"
-          }
-        }
-      ]
-    },
-    {
-      "id": "auto-revamp-your-interview-story",
-      "title": "Revamp Your Interview Story",
-      "source_post": "automated-topic-engine",
-      "source_cluster": "interview",
-      "signal_score": 70.5,
-      "pain": 4,
-      "specificity": 4,
-      "curiosity": 5,
-      "utility": 5,
-      "timeliness": 4,
-      "discussion": 4,
-      "brand_fit": 5,
-      "angle_source": "llm",
-      "hook_candidates": [
-        "Struggling to nail your interview pitch?",
-        "If you are stuck on interview, watch this before your next application."
-      ],
-      "promise": "I will show you how to craft a compelling interview narrative.",
-      "proof_points": [
-        "A structured story is memorable and engaging.",
-        "Clarity helps interviewers follow your career journey.",
-        "A strong narrative demonstrates self-awareness and growth."
-      ],
-      "core_takeaway": "Structure your story with a clear beginning, middle, and end.",
-      "cta": "Find more interview insights at internwise.co.uk.",
-      "source_signals": [
-        {
-          "source": "reddit_rss",
-          "title": "Struggling to build my life after finishing my MSc in 2021, what can I do with no proper experience?",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1skrt65/struggling_to_build_my_life_after_finishing_my/",
-          "score": 113.3,
-          "meta": {
-            "feed": "UK jobs - internship CV"
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "[0 YoE, Student, Accounting Internship, Canada]",
-          "url": "https://www.reddit.com/r/resumes/comments/1xln92a/0_yoe_student_accounting_internship_canada/",
-          "score": 56.35,
-          "meta": {
-            "feed": "Resumes - internship"
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "Graduated July 2025 and got unlucky - Am I cooked? Need advice on next Steps!",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1vvdyeq/graduated_july_2025_and_got_unlucky_am_i_cooked/",
-          "score": 53.9,
-          "meta": {
-            "feed": "UK jobs - internship CV"
-          }
-        },
-        {
-          "source": "seed_question",
-          "title": "why do I keep failing interviews",
-          "url": "",
-          "score": 44.0,
-          "meta": {
-            "configured": true
-          }
-        },
-        {
-          "source": "seed_question",
-          "title": "how to answer tell me about yourself internship",
-          "url": "",
-          "score": 37.0,
-          "meta": {
-            "configured": true
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "[0 YoE, New Grad, Software Engineering, United States] New Grad not getting callbacks",
-          "url": "https://www.reddit.com/r/resumes/comments/1xe93bb/0_yoe_new_grad_software_engineering_united_states/",
-          "score": 25.3,
+          "title": "Really short term experience, add or leave off?",
+          "url": "https://www.reddit.com/r/resumes/comments/1xkf6b1/really_short_term_experience_add_or_leave_off/",
+          "score": 10.35,
           "meta": {
             "feed": "Resumes - internship"
           }
@@ -734,78 +394,11 @@
       ]
     },
     {
-      "id": "auto-assess-internship-value-quickly",
-      "title": "Assess Internship Value Quickly",
-      "source_post": "automated-topic-engine",
-      "source_cluster": "internship-quality",
-      "signal_score": 57.2,
-      "pain": 3,
-      "specificity": 3,
-      "curiosity": 4,
-      "utility": 4,
-      "timeliness": 3,
-      "discussion": 3,
-      "brand_fit": 5,
-      "angle_source": "llm",
-      "hook_candidates": [
-        "Unsure if an internship is worth your time?",
-        "If you are stuck on internship quality, watch this before your next application."
-      ],
-      "promise": "I will show you how to evaluate an internship's potential benefits.",
-      "proof_points": [
-        "Mentorship provides guidance and professional growth.",
-        "Learning opportunities enhance your skill set.",
-        "Quality experiences pave the way for future roles."
-      ],
-      "core_takeaway": "Look for learning opportunities and mentor access.",
-      "cta": "Discover ways to assess internships at internwise.co.uk.",
-      "source_signals": [
-        {
-          "source": "reddit_rss",
-          "title": "Is this internship at the European Food Safety Authority a good way into procurement?",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1uwjau7/is_this_internship_at_the_european_food_safety/",
-          "score": 67.1,
-          "meta": {
-            "feed": "UK jobs - internship CV"
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "Quitting my job due to severe burnout and emotional distress.",
-          "url": "https://www.reddit.com/r/UKJobs/comments/1t4f13n/quitting_my_job_due_to_severe_burnout_and/",
-          "score": 61.6,
-          "meta": {
-            "feed": "UK jobs - internship CV"
-          }
-        },
-        {
-          "source": "reddit_rss",
-          "title": "[0.5 YoE, Gameplay Engineer, Riot Games Internship, Amsterdam]",
-          "url": "https://www.reddit.com/r/resumes/comments/1xl46b0/05_yoe_gameplay_engineer_riot_games_internship/",
-          "score": 39.1,
-          "meta": {
-            "feed": "Resumes - internship"
-          }
-        },
-        {
-          "source": "youtube",
-          "title": "10/10 things I did to land my first luxury internship at LVMH Paris",
-          "url": "https://www.youtube.com/watch?v=gaYZB9gR7nY",
-          "score": 13.14,
-          "meta": {
-            "query": "internship cv advice shorts",
-            "views": 1849,
-            "views_per_day": 35.6
-          }
-        }
-      ]
-    },
-    {
-      "id": "auto-navigate-graduate-job-options",
-      "title": "Navigate Graduate Job Options",
+      "id": "auto-graduate-jobs-timing-matters",
+      "title": "Graduate Jobs: Timing Matters",
       "source_post": "automated-topic-engine",
       "source_cluster": "graduate-jobs",
-      "signal_score": 56.2,
+      "signal_score": 58.6,
       "pain": 3,
       "specificity": 3,
       "curiosity": 4,
@@ -815,17 +408,17 @@
       "brand_fit": 5,
       "angle_source": "llm",
       "hook_candidates": [
-        "Feeling overwhelmed by graduate job choices?",
+        "Worried that you're too late to apply for graduate jobs?",
         "If you are stuck on graduate jobs, watch this before your next application."
       ],
-      "promise": "I will show you how to refine your job search to find the right fit.",
+      "promise": "I will show you the best timeline for landing a graduate position.",
       "proof_points": [
-        "Alignment with values leads to greater job satisfaction.",
-        "Identifying key industries narrows down job searches.",
-        "Targeted applications increase the chance of success."
+        "Graduate schemes often open a year before start dates.",
+        "Early application can offer the best chance at competitive positions.",
+        "Knowing recruitment cycles helps in timely applications."
       ],
-      "core_takeaway": "Focus on industries that align with your values and skills.",
-      "cta": "Explore graduate job tips at internwise.co.uk.",
+      "core_takeaway": "Start applying early to maximise your chances.",
+      "cta": "Find more tips at internwise.co.uk",
       "source_signals": [
         {
           "source": "reddit_rss",
@@ -843,7 +436,7 @@
           "score": 49.0,
           "meta": {
             "seed": "graduate jobs",
-            "rising_value": 1900.0
+            "rising_value": 3850.0
           }
         },
         {
@@ -853,7 +446,7 @@
           "score": 49.0,
           "meta": {
             "seed": "graduate jobs",
-            "rising_value": 600.0
+            "rising_value": 550.0
           }
         },
         {
@@ -866,34 +459,35 @@
           }
         },
         {
-          "source": "google_trends_serpapi",
-          "title": "history graduate jobs",
-          "url": "",
-          "score": 19.0,
+          "source": "youtube",
+          "title": "RRB NTPC Under-Graduate CEN 07/2026 Short Notice Out | RRB NTPC UG 2026 Notification | Radhika Ma\u2019am",
+          "url": "https://www.youtube.com/watch?v=ztSSIP_SeAU",
+          "score": 35.91,
           "meta": {
-            "seed": "graduate jobs",
-            "rising_value": 100.0
+            "query": "graduate job interview tips shorts",
+            "views": 322863,
+            "views_per_day": 6726.3
           }
         },
         {
           "source": "youtube",
           "title": "HCL TECH Hiring Fresher for Graduate Trainee At Service Desk #shorts #jobs",
           "url": "https://www.youtube.com/watch?v=gd4govmnULM",
-          "score": 9.28,
+          "score": 9.24,
           "meta": {
             "query": "graduate job interview tips shorts",
-            "views": 2455,
-            "views_per_day": 70.1
+            "views": 2520,
+            "views_per_day": 60.0
           }
         }
       ]
     },
     {
-      "id": "auto-craft-cover-letters-that-connect",
-      "title": "Craft Cover Letters That Connect",
+      "id": "auto-cover-letter-basics",
+      "title": "Cover Letter Basics",
       "source_post": "automated-topic-engine",
       "source_cluster": "cover-letter",
-      "signal_score": 51.0,
+      "signal_score": 56.3,
       "pain": 3,
       "specificity": 3,
       "curiosity": 4,
@@ -903,17 +497,17 @@
       "brand_fit": 5,
       "angle_source": "llm",
       "hook_candidates": [
-        "Worried your cover letter feels generic?",
+        "Unsure what to include in a cover letter?",
         "If you are stuck on cover letter, watch this before your next application."
       ],
-      "promise": "I will show you how to tailor your cover letter to each role.",
+      "promise": "I will show you the essential elements of a strong cover letter.",
       "proof_points": [
-        "Personalisation shows genuine interest in the company.",
-        "Specific examples highlight relevant skills and experiences.",
-        "Tailored letters stand out to hiring managers."
+        "A well-tailored cover letter can capture an employer's attention.",
+        "Highlighting achievements shows your value to potential employers.",
+        "Personalisation demonstrates genuine interest in the role."
       ],
-      "core_takeaway": "Personalise your cover letter with specific examples and company insights.",
-      "cta": "Get more cover letter advice at internwise.co.uk.",
+      "core_takeaway": "Tailor your cover letter to the job and highlight key achievements.",
+      "cta": "Craft better applications at internwise.co.uk",
       "source_signals": [
         {
           "source": "google_trends_serpapi",
@@ -922,37 +516,37 @@
           "score": 66.0,
           "meta": {
             "seed": "cover letter internship",
-            "rising_value": 400.0
+            "rising_value": 5000.0
           }
         },
         {
           "source": "google_trends_serpapi",
-          "title": "how long should a cover letter be for an internship",
+          "title": "what is a cover letter when applying for a job",
           "url": "",
-          "score": 41.0,
+          "score": 59.0,
           "meta": {
             "seed": "cover letter internship",
-            "rising_value": 90.0
+            "rising_value": 5000.0
           }
         },
         {
           "source": "google_trends_serpapi",
           "title": "cover letter format",
           "url": "",
-          "score": 19.0,
+          "score": 17.0,
           "meta": {
             "seed": "cover letter internship",
-            "rising_value": 60.0
+            "rising_value": 40.0
           }
         }
       ]
     },
     {
-      "id": "auto-elevate-your-linkedin-presence",
-      "title": "Elevate Your LinkedIn Presence",
+      "id": "auto-boost-your-linkedin-presence",
+      "title": "Boost Your LinkedIn Presence",
       "source_post": "automated-topic-engine",
       "source_cluster": "linkedin",
-      "signal_score": 37.0,
+      "signal_score": 34.6,
       "pain": 3,
       "specificity": 3,
       "curiosity": 3,
@@ -965,77 +559,67 @@
         "Is your LinkedIn profile not getting noticed?",
         "If you are stuck on linkedin, watch this before your next application."
       ],
-      "promise": "I will show you how to enhance your LinkedIn profile for better visibility.",
+      "promise": "I will show you how to make your LinkedIn profile stand out.",
       "proof_points": [
-        "A strong headline attracts recruiter attention.",
-        "Keywords increase searchability and visibility.",
-        "Achievements demonstrate expertise and impact."
+        "A strong headline grabs attention and communicates your value.",
+        "Networking increases visibility and job opportunities.",
+        "Active profiles attract recruiter interest."
       ],
-      "core_takeaway": "Optimise your headline and summary with keywords and achievements.",
-      "cta": "Find LinkedIn profile tips at internwise.co.uk.",
+      "core_takeaway": "Enhance your LinkedIn with a strong headline and active networking.",
+      "cta": "Strengthen your profile at internwise.co.uk",
       "source_signals": [
         {
           "source": "youtube",
-          "title": "💼 MBA Profile Building Strategy 2026 | Internship, LinkedIn & Networking Tips #mba #shorts",
+          "title": "\ud83d\udcbc MBA Profile Building Strategy 2026 | Internship, LinkedIn & Networking Tips #mba #shorts",
           "url": "https://www.youtube.com/watch?v=mbtinpvgz38",
-          "score": 26.02,
+          "score": 26.01,
           "meta": {
             "query": "internship cv advice shorts",
-            "views": 446,
-            "views_per_day": 3.8
-          }
-        },
-        {
-          "source": "youtube",
-          "title": "😱 ChatGPT KILLED LinkedIn 🔥 #shorts",
-          "url": "https://www.youtube.com/watch?v=hDtSuF3gAQc",
-          "score": 24.8,
-          "meta": {
-            "query": "linkedin profile job search",
-            "views": 120906,
-            "views_per_day": 2948.9
+            "views": 448,
+            "views_per_day": 3.6
           }
         },
         {
           "source": "youtube",
           "title": "Linkedin Profile Kaise Banaye | Linkedin Account Kaise Banaye | Linkedin Me Login Kaise Kare",
           "url": "https://www.youtube.com/watch?v=WqKWWs1itGs",
-          "score": 24.78,
+          "score": 24.76,
           "meta": {
             "query": "linkedin profile job search",
-            "views": 98292,
-            "views_per_day": 945.1
+            "views": 104459,
+            "views_per_day": 941.1
           }
         },
         {
-          "source": "google_trends_serpapi",
-          "title": "linkedin",
-          "url": "",
-          "score": 18.0,
+          "source": "youtube",
+          "title": "\ud83d\ude31 ChatGPT KILLED LinkedIn \ud83d\udd25 #shorts",
+          "url": "https://www.youtube.com/watch?v=hDtSuF3gAQc",
+          "score": 23.14,
           "meta": {
-            "seed": "cover letter internship",
-            "rising_value": 50.0
+            "query": "linkedin profile job search",
+            "views": 121655,
+            "views_per_day": 2534.5
           }
         },
         {
           "source": "youtube",
           "title": "I literally used Claude (and Apify and LinkedIn) to apply to unlimited jobs",
           "url": "https://www.youtube.com/watch?v=AOgvN2ePeRM",
-          "score": 16.49,
+          "score": 16.59,
           "meta": {
             "query": "linkedin profile job search",
-            "views": 130082,
-            "views_per_day": 873.0
+            "views": 139972,
+            "views_per_day": 897.3
           }
         }
       ]
     },
     {
-      "id": "auto-master-assessment-centre-dynamics",
-      "title": "Master Assessment Centre Dynamics",
+      "id": "auto-prepare-for-assessment-centres",
+      "title": "Prepare for Assessment Centres",
       "source_post": "automated-topic-engine",
       "source_cluster": "assessment-centre",
-      "signal_score": 26.0,
+      "signal_score": 23.0,
       "pain": 3,
       "specificity": 3,
       "curiosity": 3,
@@ -1045,46 +629,36 @@
       "brand_fit": 5,
       "angle_source": "llm",
       "hook_candidates": [
-        "Stressed about upcoming assessment centres?",
+        "Feeling anxious about upcoming assessment centres?",
         "If you are stuck on assessment centre, watch this before your next application."
       ],
-      "promise": "I will show you how to navigate group exercises and individual tasks effectively.",
+      "promise": "I will show you how to prepare effectively for assessment centres.",
       "proof_points": [
-        "Collaboration shows teamwork ability.",
-        "Effective communication is crucial in group settings.",
-        "Problem-solving skills are highly valued by employers."
+        "Simulating assessment tasks boosts confidence.",
+        "Understanding the format reduces stress.",
+        "Preparation helps in performing under pressure."
       ],
-      "core_takeaway": "Focus on collaboration, communication, and problem-solving skills.",
-      "cta": "Learn more about assessment centres at internwise.co.uk.",
+      "core_takeaway": "Practice real scenarios and get familiar with the process.",
+      "cta": "Ace your assessment at internwise.co.uk",
       "source_signals": [
         {
           "source": "google_trends_serpapi",
-          "title": "fixated threat assessment centre",
+          "title": "pwc assessment centre",
           "url": "",
-          "score": 21.0,
+          "score": 20.0,
           "meta": {
             "seed": "assessment centre",
-            "rising_value": 80.0
-          }
-        },
-        {
-          "source": "google_trends_serpapi",
-          "title": "online assessment centre",
-          "url": "",
-          "score": 19.0,
-          "meta": {
-            "seed": "assessment centre",
-            "rising_value": 60.0
+            "rising_value": 70.0
           }
         }
       ]
     },
     {
-      "id": "auto-streamline-your-job-search",
-      "title": "Streamline Your Job Search",
+      "id": "auto-automate-your-job-search",
+      "title": "Automate Your Job Search",
       "source_post": "automated-topic-engine",
       "source_cluster": "job-search",
-      "signal_score": 17.7,
+      "signal_score": 18.4,
       "pain": 3,
       "specificity": 3,
       "curiosity": 3,
@@ -1094,31 +668,40 @@
       "brand_fit": 5,
       "angle_source": "llm",
       "hook_candidates": [
-        "Feeling lost in your job search process?",
+        "Exhausted from the endless job application process?",
         "If you are stuck on job search, watch this before your next application."
       ],
-      "promise": "I will show you how to create an efficient job search strategy.",
+      "promise": "I will show you how to automate parts of your job search.",
       "proof_points": [
-        "Clear goals provide direction and focus.",
-        "Tracking applications helps manage follow-ups.",
-        "Organisation increases productivity and reduces stress."
+        "Automation tools can save time and reduce stress.",
+        "Tracking applications helps in following up efficiently.",
+        "Streamlined processes can increase application volume."
       ],
-      "core_takeaway": "Set clear goals and track applications to stay organised.",
-      "cta": "Enhance your job search strategy at internwise.co.uk.",
+      "core_takeaway": "Use technology to streamline and track your job applications.",
+      "cta": "Learn how at internwise.co.uk",
       "source_signals": [
         {
           "source": "youtube",
           "title": "One guy automated his entire job search with Claude Code #ai #automation",
           "url": "https://www.youtube.com/watch?v=2vKU3J29FJw",
-          "score": 14.67,
+          "score": 14.49,
           "meta": {
             "query": "linkedin profile job search",
-            "views": 269146,
-            "views_per_day": 1416.6
+            "views": 270188,
+            "views_per_day": 1371.5
+          }
+        },
+        {
+          "source": "reddit_rss",
+          "title": "[1.5 yrs, Security Engineer/Analyst Intern, Entry-Level SOC/Security Analyst, NJ/Philadelphia]",
+          "url": "https://www.reddit.com/r/resumes/comments/1xnog3z/15_yrs_security_engineeranalyst_intern_entrylevel/",
+          "score": 10.35,
+          "meta": {
+            "feed": "Resumes - internship"
           }
         }
       ]
     }
   ],
-  "fingerprint": "eac909f1835ff8df"
+  "fingerprint": "e871e63d420cb455"
 }
