@@ -210,10 +210,14 @@ def schedule_iso(week, post, at=None):
     the same lane on one day gets its own slot instead of colliding."""
     wc = week.get("weekCommencing")
     if not wc:
-        return None
-    mon = datetime.date.fromisoformat(wc)
-    dkey = post["id"].split("-")[-2] if post["id"].count("-") >= 2 else None
-    di = DAY_INDEX.get(dkey, 0)
+        if not at:
+            return None
+        # Undated posts (featured jobs) with a one-off --at: that time today, UK.
+        mon, di = datetime.datetime.now(ZoneInfo("Europe/London")).date(), 0
+    else:
+        mon = datetime.date.fromisoformat(wc)
+        dkey = post["id"].split("-")[-2] if post["id"].count("-") >= 2 else None
+        di = DAY_INDEX.get(dkey, 0)
     hh, mm = (at or post.get("time") or LANE_TIME.get(post.get("lane"), "09:00")).split(":")
     when_uk = datetime.datetime.combine(
         mon + datetime.timedelta(days=di), datetime.time(int(hh), int(mm)),
