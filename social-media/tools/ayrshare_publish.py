@@ -83,6 +83,9 @@ LANE_NETWORKS = {
     "featured":  ["instagram", "facebook", "linkedin", "threads", "gmb", "pinterest"],
     # Infographics are save-and-send reference cards: every network, Pinterest included.
     "infographic": ["instagram", "facebook", "linkedin", "twitter", "threads", "gmb", "pinterest"],
+    # Employer hiring guides: where employers are (LinkedIn first), plus search-led
+    # Pinterest and Google Business. Kept off the candidate-first IG/Threads/X feeds.
+    "employer_guide": ["linkedin", "facebook", "gmb", "pinterest"],
 }
 # Instagram location tagging (IG feed only). Ayrshare tags a location by a
 # Facebook Page ID (or "@pagename") for a place with a physical location - a whole
@@ -103,7 +106,7 @@ LOCATION_LANES = {"news", "education"}
 # closes the evening.
 LANE_TIME = {"news": "08:00", "education": "13:30", "engagement": "16:30",
              "quote": "20:00", "employer": "20:30", "featured": "17:30",
-             "infographic": "16:30"}
+             "infographic": "16:30", "employer_guide": "10:00"}
 DAY_INDEX = {"mon": 0, "tue": 1, "wed": 2, "thu": 3, "fri": 4, "sat": 5, "sun": 6}
 
 

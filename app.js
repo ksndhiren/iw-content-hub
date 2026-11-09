@@ -338,7 +338,8 @@
     const labels = {
       engagement: 'Poll',
       fun: 'Fun',
-      infographic: 'Infographic'
+      infographic: 'Infographic',
+      employer_guide: 'Employer guide'
     };
     return labels[lane] || lane;
   }

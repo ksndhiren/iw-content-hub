@@ -48,6 +48,9 @@ CONVERSATION_DEDUP_WEEKS = 8                                         # do not re
 # Polls are paused (Nov 2026): too little channel activity for them to earn replies.
 # Flip back to True to bring the poll/conversation lane back into the weekly build.
 POLLS_ENABLED = False
+# Lanes prepared outside this batch (news day-prior; employer guides and day-in-the-life
+# infographics ahead of time). A batch run keeps these posts instead of wiping them.
+PREPARED_LANES = {"news", "employer_guide", "infographic"}
 TOPIC_REPEAT_OVERRIDE_ENV = "IW_ALLOW_TOPIC_REPEAT"                      # explicit emergency override only
 DKEYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 NEWS_IMAGE_USED = os.path.join(L.BASE, "content", "news_image_used.json")
@@ -894,14 +897,14 @@ def build(days=5, dry=False, start=0):
     # Preserve any news posts already added for this week by the day-prior news
     # job, so a batch re-run never wipes news that has been built/approved.
     prev = next((w for w in data["weeks"] if w.get("id") == wid), None)
-    carry = [p for p in (prev or {}).get("posts", []) if p.get("lane") == "news"]
+    carry = [p for p in (prev or {}).get("posts", []) if p.get("lane") in PREPARED_LANES]
     data["weeks"] = [w for w in data["weeks"] if w.get("id") != wid]
     built_at = int(datetime.datetime.now(datetime.timezone.utc).timestamp())
     data["weeks"].append({"id": wid, "label": wlabel, "weekCommencing": wc,
                           "builtAt": built_at, "posts": posts + carry})
     json.dump(data, open(WEEKS, "w"), indent=2, ensure_ascii=False)
     print(f"\nWrote {len(posts)} posts to weeks.json ({wid})"
-          + (f" (+{len(carry)} existing news preserved)" if carry else "") + ".")
+          + (f" (+{len(carry)} prepared posts preserved)" if carry else "") + ".")
     return posts
 
 

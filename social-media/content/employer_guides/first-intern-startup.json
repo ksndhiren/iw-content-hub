@@ -1,0 +1,114 @@
+{
+  "slug": "first-intern-startup",
+  "query": "startup intern",
+  "kicker": "EMPLOYER GUIDE · STARTUPS",
+  "title_pre": "Hiring Your First",
+  "title_hi": "Intern",
+  "title_post": "as a Startup",
+  "title_size": 92,
+  "sub": "6 steps for small, fast-moving teams",
+  "badge": [
+    "6",
+    "STEPS"
+  ],
+  "cover_photo": "18999184",
+  "cover_inset": "12662808",
+  "steps": [
+    {
+      "title": "Pick one clear project",
+      "hi": "one clear",
+      "icon": "flag",
+      "photo": "6914003",
+      "points": [
+        "Choose work with a visible outcome",
+        "Write a one-page brief",
+        "Agree what done looks like"
+      ],
+      "tip": "A focused project beats a list of random tasks."
+    },
+    {
+      "title": "Cover the basics",
+      "hi": "basics",
+      "icon": "idcard",
+      "photo": "5387261",
+      "points": [
+        "Right to work check before they start",
+        "Written terms from day one",
+        "Employers' liability insurance in place"
+      ],
+      "tip": "First hire? GOV.UK's employer guidance walks you through it."
+    },
+    {
+      "title": "Sell the startup experience",
+      "hi": "startup",
+      "icon": "megaphone",
+      "photo": "5961077",
+      "points": [
+        "Real responsibility from week one",
+        "Direct access to the founders",
+        "Skills across many areas at once"
+      ],
+      "tip": "Students want learning and access. Show both in your ad."
+    },
+    {
+      "title": "Hire for attitude",
+      "hi": "attitude",
+      "icon": "bulb",
+      "photo": "7793196",
+      "points": [
+        "Curiosity and a will to learn",
+        "Comfortable when plans change",
+        "Able to work on their own"
+      ],
+      "tip": "Use a short task to see how they approach a problem."
+    },
+    {
+      "title": "Make time to mentor",
+      "hi": "mentor",
+      "icon": "calendar",
+      "photo": "6931379",
+      "points": [
+        "Book a weekly one-to-one",
+        "Give feedback little and often",
+        "Explain why decisions are made"
+      ],
+      "tip": "Even 30 minutes a week keeps an intern on track."
+    },
+    {
+      "title": "Plan the ending",
+      "hi": "ending",
+      "icon": "handshake",
+      "photo": "6913219",
+      "points": [
+        "End with a presentation of their work",
+        "Write them a reference",
+        "Keep the door open for a future role"
+      ],
+      "tip": "Your first intern could become your first graduate hire."
+    }
+  ],
+  "cta_title": "Ready to grow your startup team?",
+  "cta_hi": "startup team",
+  "cta_icon": "rocket",
+  "cta_sub": "Save this plan for when you make your first hire.",
+  "cta_url": "internwise.co.uk/employers",
+  "post_title": "Hiring Your First Intern as a Startup",
+  "captions": {
+    "linkedin": "Hiring your first intern as a startup? Start here.\n\nA startup internship can be one of the best learning experiences a student gets, if you set it up well:\n\n1. Pick one clear project with a visible outcome\n2. Cover the basics: right to work, written terms, insurance\n3. Sell the startup experience: responsibility and access to founders\n4. Hire for attitude, not a long CV\n5. Make time to mentor, even 30 minutes a week\n6. Plan the ending: a final presentation, a reference, an open door\n\nSave this for when you make your first hire.\n\nFind your first intern at internwise.co.uk/employers",
+    "ig-fb": "Hiring your first intern as a startup: pick one clear project, cover the basics, sell the startup experience, hire for attitude, make time to mentor and plan the ending. Save this for your first hire. internwise.co.uk/employers"
+  },
+  "hashtags": {
+    "linkedin": [
+      "#startups",
+      "#hiring",
+      "#internships"
+    ],
+    "ig-fb": [
+      "#startupuk",
+      "#hiringinterns",
+      "#internships",
+      "#founders"
+    ]
+  },
+  "altText": "Employer guide carousel: hiring your first intern as a startup in 6 steps. Pick one clear project, cover the basics, sell the startup experience, hire for attitude, make time to mentor, and plan the ending."
+}
