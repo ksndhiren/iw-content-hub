@@ -36,3 +36,9 @@ Keep this file updated whenever a new quote-author portrait is added. Quote grap
 | Oscar Wilde | `oscar-wilde.jpg` | https://commons.wikimedia.org/wiki/File:Oscar_Wilde_by_Napoleon_Sarony._Three-quarter-length_photograph,_seated.jpg | Public domain, Napoleon Sarony (1882). Cropped to head and torso. |
 | Charles Dickens | `charles-dickens.jpg` | https://commons.wikimedia.org/wiki/File:Dickens_Gurney_head.jpg | Public domain, Jeremiah Gurney (1867). |
 | Samuel Smiles | `samuel-smiles.jpg` | https://commons.wikimedia.org/wiki/File:Samuel_Smiles_by_Sir_George_Reid.jpg | Public domain, Sir George Reid (1877). |
+| Thomas Carlyle | `thomas-carlyle.jpg` | https://commons.wikimedia.org/wiki/File:Thomas_Carlyle._Photograph_by_Elliott_%26_Fry._Wellcome_V0027634.jpg | CC BY 4.0, Elliott & Fry, Wellcome Collection. |
+| Ralph Waldo Emerson | `ralph-waldo-emerson.jpg` | https://commons.wikimedia.org/wiki/File:Ralph_Waldo_Emerson_by_Josiah_Johnson_Hawes_1857.jpg | Public domain, Josiah Johnson Hawes (1857). |
+| Henry David Thoreau | `henry-david-thoreau.jpg` | https://commons.wikimedia.org/wiki/File:Benjamin_D._Maxham_-_Henry_David_Thoreau_-_Restored.jpg | Public domain, Benjamin D. Maxham (1856). |
+| Seneca | `seneca.jpg` | https://commons.wikimedia.org/wiki/File:Duble_herma_of_Socrates_and_Seneca_Antikensammlung_Berlin_07.jpg | CC BY-SA 3.0, author Calidius. Seneca face of the Berlin double herm. |
+| Helen Keller | `helen-keller.jpg` | https://commons.wikimedia.org/wiki/File:Helen_Keller_(circa_1904).jpg | Public domain (c. 1904). |
+| Marcus Aurelius | `marcus-aurelius.jpg` | https://commons.wikimedia.org/wiki/File:Marcus_Aurelius_Glyptothek_Munich.jpg | Public domain, photo Bibi Saint-Pol. |

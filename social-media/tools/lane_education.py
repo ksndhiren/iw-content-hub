@@ -1797,9 +1797,70 @@ def w_rec(copy, week_id='adhoc'):
     return bg + L.logo_tl() + _obj_pill(copy.get('eyebrow', 'VIDEO INTERVIEW'), 56, 196, bg=RED, ink="#fff") + head + laptop + arrow + card + _obj_foot(copy.get('cta', ''))
 
 
+def w_timecard(copy, week_id='adhoc'):
+    """A manila clock-in card on indigo - for availability and working-hours
+    topics. The card is the model answer: named days, real times and a total,
+    stamped AVAILABLE, so the post shows the specific reply it recommends."""
+    IN, IN2, MANILA, RED = "#5446D8", "#1E1660", "#EFDDAE", "#D8433B"
+    bg = (f"<div style='position:absolute;inset:0;background:radial-gradient(95% 85% at 82% 8%,{IN},{IN2});'></div>"
+          + L.dots("left:470px;top:110px;", color="rgba(255,255,255,.16)", w=130, h=110))
+    head = (f"<div style='position:absolute;left:56px;top:266px;width:540px;'>"
+            + L.hero(copy['headline'], "underline", "#FFFFFF", "#FFFFFF", hi=AMBER, size=60, width=540) + "</div>")
+    rows = ""
+    for day, hrs in (copy.get("shifts") or [])[:3]:
+        rows += (f"<div style='display:flex;justify-content:space-between;align-items:baseline;padding:9px 0;border-bottom:2px solid rgba(21,39,67,.18);'>"
+                 f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:22px;letter-spacing:3px;color:{NAVYT};\">{day.upper()}</span>"
+                 f"<span style=\"font-family:IWSerif,Georgia,serif;font-style:italic;font-size:31px;color:{NAVYT};\">{hrs}</span></div>")
+    total = (f"<div style='display:flex;justify-content:space-between;align-items:baseline;padding-top:12px;'>"
+             f"<span style=\"font-family:'DM Sans';font-weight:800;font-size:22px;letter-spacing:3px;color:{RED};\">TOTAL</span>"
+             f"<span style=\"font-family:Inter;font-weight:900;font-size:36px;color:{NAVYT};letter-spacing:-.5px;\">{copy.get('total','16 hrs')}</span></div>")
+    stamp = (f"<div style='display:flex;justify-content:flex-end;margin-top:12px;'><div style='padding:6px 14px;border:4px solid {RED};border-radius:8px;"
+             f"transform:rotate(-8deg);font-family:Inter;font-weight:900;font-size:22px;letter-spacing:3px;color:{RED};opacity:.85;'>AVAILABLE</div></div>")
+    card = (f"<div style='position:absolute;left:640px;top:150px;width:360px;transform:rotate(-4deg);box-sizing:border-box;padding:24px 30px 22px;"
+            f"background:{MANILA};border:4px solid {EDGE};border-radius:10px;box-shadow:10px 12px 0 rgba(12,8,50,.45);'>"
+            f"<div style=\"font-family:Inter;font-weight:900;font-size:24px;letter-spacing:4px;color:{NAVYT};\">TIME CARD</div>"
+            f"<div style=\"font-family:'DM Sans';font-weight:700;font-size:18px;letter-spacing:2px;color:rgba(21,39,67,.6);margin:4px 0 6px;\">{copy.get('card_note','MY AVAILABILITY')}</div>"
+            f"{rows}{total}{stamp}</div>")
+    ticks = "".join(f"<line x1='60' y1='10' x2='60' y2='20' stroke='{NAVYT}' stroke-width='4' transform='rotate({a} 60 60)'/>" for a in range(0, 360, 30))
+    clock = (f"<svg style='position:absolute;left:910px;top:96px;' width='120' height='120' viewBox='0 0 120 120'>"
+             f"<circle cx='60' cy='60' r='54' fill='#fff' stroke='{EDGE}' stroke-width='5'/>{ticks}"
+             f"<line x1='60' y1='60' x2='60' y2='28' stroke='{NAVYT}' stroke-width='6' stroke-linecap='round'/>"
+             f"<line x1='60' y1='60' x2='84' y2='70' stroke='{RED}' stroke-width='5' stroke-linecap='round'/>"
+             f"<circle cx='60' cy='60' r='6' fill='{EDGE}'/></svg>")
+    steps = _paper_card(_step_cells(copy.get("points", [])[:6], IN))
+    return bg + L.logo_tl() + _obj_pill(copy.get('eyebrow', 'WORK HOURS'), 56, 196) + head + card + clock + steps + _obj_foot(copy.get('cta', ''))
+
+
+def w_letter(copy, week_id='adhoc'):
+    """A cover letter sliding out of its envelope, on burgundy - for opening-line
+    and first-impression topics. The weak opener is struck through in red and
+    the better line is written and highlighted underneath it."""
+    BU, BU2, ENV = "#A3304F", "#4A0F22", "#F2E6D0"
+    bg = (f"<div style='position:absolute;inset:0;background:radial-gradient(95% 85% at 82% 8%,{BU},{BU2});'></div>"
+          + L.dots("left:470px;top:110px;", color="rgba(255,255,255,.16)", w=130, h=110))
+    head = (f"<div style='position:absolute;left:56px;top:266px;width:540px;'>"
+            + L.hero(copy['headline'], "serif_italic", "#FFFFFF", AMBER, hi=AMBER, size=60, width=540) + "</div>")
+    envelope = (f"<svg style='position:absolute;left:600px;top:396px;' width='440' height='200' viewBox='0 0 440 200'>"
+                f"<rect x='4' y='4' width='432' height='192' rx='14' fill='{ENV}' stroke='{EDGE}' stroke-width='4'/>"
+                f"<path d='M4 18 L220 120 L436 18' fill='none' stroke='{EDGE}' stroke-width='4' stroke-linejoin='round'/></svg>")
+    ruled = "".join("<div style='height:2px;background:rgba(21,39,67,.10);margin-top:22px;'></div>" for _ in range(2))
+    sheet = (f"<div style='position:absolute;left:640px;top:118px;width:360px;height:300px;transform:rotate(-3deg);box-sizing:border-box;padding:26px 28px;"
+             f"background:#fff;border:4px solid {EDGE};border-radius:8px;box-shadow:8px 10px 0 rgba(40,4,16,.4);'>"
+             f"<div style=\"font-family:'DM Sans';font-weight:700;font-size:22px;color:rgba(21,39,67,.6);\">Dear Hiring Manager,</div>"
+             f"<div style=\"margin-top:14px;font-family:'DM Sans';font-weight:700;font-size:23px;line-height:1.25;color:rgba(21,39,67,.45);"
+             f"text-decoration:line-through;text-decoration-color:#E5483F;text-decoration-thickness:4px;\">"
+             f"{copy.get('weak','I am writing to apply for the role of...')}</div>"
+             f"<div style=\"margin-top:14px;font-family:IWSerif,Georgia,serif;font-style:italic;font-size:29px;line-height:1.18;color:{NAVYT};\">"
+             f"<span style='background:linear-gradient(transparent 55%,{AMBER}aa 55%);'>{copy.get('strong','')}</span></div>{ruled}</div>")
+    steps = _paper_card(_step_cells(copy.get("points", [])[:6], BU))
+    return (bg + L.logo_tl() + _obj_pill(copy.get('eyebrow', 'COVER LETTERS'), 56, 196) + head + sheet + envelope + steps
+            + _obj_foot(copy.get('cta', '')))
+
+
 SINGLE = {"tipcard": w_tipcard, "statement": w_statement, "badge": w_badge,
           "swingtag": w_swingtag, "metro": w_metro, "scales": w_scales,
           "planner": w_planner, "player": w_player, "rec": w_rec,
+          "timecard": w_timecard, "letter": w_letter,
           "bigidea": w_bigidea, "splitcard": w_splitcard,
           "memo": w_memo, "scorecard": w_scorecard,
           "message_lab": w_message_lab, "focus_studio": w_focus_studio,

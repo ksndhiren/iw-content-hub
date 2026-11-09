@@ -151,7 +151,7 @@ def w_debate(idea):
                  f"<div style=\"margin-top:8px;font-family:Inter;font-weight:950;font-size:36px;line-height:1.05;color:#fff;\">{option}</div></div>")
     cta = (f"<div style='position:absolute;right:72px;bottom:90px;width:430px;font-family:IWSerif,Georgia,serif;font-style:italic;"
            f"font-weight:700;font-size:34px;line-height:1.12;color:{AMBER};'>{idea.get('cta','Start at internwise.co.uk')}</div>")
-    return bg + split + _logo_dark() + _comment_prompt(548, 104, dark=True) + hook + sub + rows + cta + L.watermark(w=380, right=-80, bottom=-120, op=.06)
+    return bg + split + _logo_dark() + _comment_prompt(578, 664, dark=True) + hook + sub + rows + cta + L.watermark(w=380, right=-80, bottom=-120, op=.06)
 
 
 def w_scorecard(idea):

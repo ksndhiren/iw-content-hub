@@ -22,6 +22,211 @@
   },
   "topics": [
     {
+      "source_post": "gsc-site-2026-11-08",
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "angle_source": "search-demand",
+      "id": "gsc-what-does-a-sales-executive-do",
+      "title": "What Does a Sales Executive Actually Do?",
+      "source_cluster": "sales executive job role day to day",
+      "signal_score": 98,
+      "hook_candidates": [
+        "What does a sales executive actually do all day?",
+        "Sales is one of the most common graduate roles, and one of the least explained."
+      ],
+      "promise": "Understand the sales executive role well enough to decide if it suits you and apply with the right proof.",
+      "proof_points": [
+        "Find new customers: research leads, call, email and follow up.",
+        "Run meetings or demos and work out what the customer actually needs.",
+        "Keep a pipeline up to date in a CRM so the team can see every deal.",
+        "Hit a monthly or quarterly target, often with commission on top of base pay.",
+        "Proof that helps you apply: any customer-facing job, a fundraising total, or a society you grew."
+      ],
+      "core_takeaway": "Sales rewards people who listen well, follow up and can show a number they moved.",
+      "cta": "Browse sales roles at internwise.co.uk",
+      "source_signals": [
+        {
+          "source": "google_search_console",
+          "title": "Site queries 'what is a sales executive' (1,652), 'what does a sales executive do' (665), 'what does sales executive do' (264), 'what is sales executive job' (191): about 2,770 impressions",
+          "url": "",
+          "score": 98,
+          "meta": {
+            "property": "https://www.internwise.co.uk/",
+            "window": "2026-08-09..2026-11-07"
+          }
+        }
+      ]
+    },
+    {
+      "source_post": "gsc-site-2026-11-08",
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "angle_source": "search-demand",
+      "id": "gsc-what-is-commercial-experience",
+      "title": "What Is Commercial Experience?",
+      "source_cluster": "commercial experience meaning commercial work",
+      "signal_score": 97,
+      "hook_candidates": [
+        "Job ads keep asking for commercial experience. What does it actually mean?",
+        "You probably have more commercial experience than you think."
+      ],
+      "promise": "Know what employers mean by commercial experience and spot the experience you already have.",
+      "proof_points": [
+        "Commercial experience means work done in a business that has to make money or serve paying customers.",
+        "Retail, hospitality, call centres and sales jobs all count.",
+        "Internships, placements and freelance work for real clients count too.",
+        "Running a small online shop, or managing a society budget or sponsorship, can count.",
+        "On your CV, show the business side: customers served, sales made, money saved or raised."
+      ],
+      "core_takeaway": "If you have served customers or handled money for an organisation, you have commercial experience. Say so with a number.",
+      "cta": "Find roles that build it at internwise.co.uk",
+      "source_signals": [
+        {
+          "source": "google_search_console",
+          "title": "Site queries 'what is commercial experience' (1,287), 'what is commercial work' (161): about 1,450 impressions",
+          "url": "",
+          "score": 97,
+          "meta": {
+            "property": "https://www.internwise.co.uk/",
+            "window": "2026-08-09..2026-11-07"
+          }
+        }
+      ]
+    },
+    {
+      "source_post": "gsc-site-2026-11-08",
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "angle_source": "search-demand",
+      "id": "gsc-journalism-without-a-degree",
+      "title": "How to Get Into Journalism Without a Degree",
+      "source_cluster": "journalism without a degree get into journalism uk",
+      "signal_score": 95,
+      "hook_candidates": [
+        "Want to be a journalist but do not have a journalism degree?",
+        "Editors hire the clippings, not the certificate."
+      ],
+      "promise": "Map the realistic routes into UK journalism that do not need a journalism degree.",
+      "proof_points": [
+        "Start publishing now: student media, a local news site, a newsletter or a niche blog.",
+        "Build a small portfolio of published pieces, sometimes called clippings.",
+        "Look at journalism apprenticeships, where you train and get paid at the same time.",
+        "Consider an NCTJ qualification, the industry's best-known training route.",
+        "Learn the practical skills editors ask for: shorthand, fast accurate writing, basic video and social."
+      ],
+      "core_takeaway": "Editors want proof you can find and write a story. Start publishing before you apply.",
+      "cta": "Find media and journalism roles at internwise.co.uk",
+      "source_signals": [
+        {
+          "source": "google_search_console",
+          "title": "Site queries 'how to become a journalist without a degree' (319), 'how to get into journalism' (215), 'how to get into journalism without a degree' (200) and related: about 950 impressions",
+          "url": "",
+          "score": 95,
+          "meta": {
+            "property": "https://www.internwise.co.uk/",
+            "window": "2026-08-09..2026-11-07"
+          }
+        }
+      ]
+    },
+    {
+      "source_post": "gsc-site-2026-11-08",
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "angle_source": "search-demand",
+      "id": "gsc-hours-per-week-available",
+      "title": "How Many Hours a Week Are You Available to Work?",
+      "source_cluster": "how many hours per week are you available to work application question",
+      "signal_score": 96,
+      "hook_candidates": [
+        "Application form asks how many hours a week you can work. What do you put?",
+        "An honest, specific answer beats \"flexible\"."
+      ],
+      "promise": "Answer the availability question honestly and specifically, without underselling yourself.",
+      "proof_points": [
+        "Give a clear number or range, like 15 to 20 hours, not just \"flexible\".",
+        "Name the days or times you can work, especially around lectures.",
+        "Match the advert where you can: full time usually means 35 to 40 hours.",
+        "On a Student visa, check your limit: degree-level students can usually work up to 20 hours a week in term time.",
+        "Never promise hours you cannot keep. It is the fastest way to lose a good role."
+      ],
+      "core_takeaway": "Give a specific, honest number and the times you can do it.",
+      "cta": "Find roles that fit your hours at internwise.co.uk",
+      "source_signals": [
+        {
+          "source": "google_search_console",
+          "title": "Site queries 'how many hours per week are you available to work' (594) and '...work?' (388): about 980 impressions",
+          "url": "",
+          "score": 96,
+          "meta": {
+            "property": "https://www.internwise.co.uk/",
+            "window": "2026-08-09..2026-11-07"
+          }
+        }
+      ]
+    },
+    {
+      "source_post": "gsc-site-2026-11-08",
+      "pain": 4,
+      "specificity": 5,
+      "curiosity": 5,
+      "utility": 5,
+      "timeliness": 4,
+      "discussion": 4,
+      "brand_fit": 5,
+      "angle_source": "search-demand",
+      "id": "gsc-cover-letter-opening-lines",
+      "title": "Cover Letter Opening Lines That Get Read",
+      "source_cluster": "cover letter opening lines examples",
+      "signal_score": 94,
+      "hook_candidates": [
+        "Most cover letters lose the reader in the first line.",
+        "\"I am writing to apply for...\" is the line everyone skips."
+      ],
+      "promise": "Swap a forgettable first line for one that makes a recruiter read on.",
+      "proof_points": [
+        "Lead with a result: \"Last summer I grew our society's Instagram from 300 to 1,200 followers.\"",
+        "Show you know them: name a recent project, product or campaign of theirs.",
+        "Connect the dots: say in one line why your skill fits this exact role.",
+        "Cut the filler: they already know which role you are applying for.",
+        "Keep it to two sentences, then get to your proof."
+      ],
+      "core_takeaway": "Open with proof or a specific reason, not the job title.",
+      "cta": "Find your next role at internwise.co.uk",
+      "source_signals": [
+        {
+          "source": "google_search_console",
+          "title": "Site query 'cover letter opening lines' (796) plus 'best cover letter opening lines': about 800 impressions",
+          "url": "",
+          "score": 94,
+          "meta": {
+            "property": "https://www.internwise.co.uk/",
+            "window": "2026-08-09..2026-11-07"
+          }
+        }
+      ]
+    },
+    {
       "source_post": "gsc-site-2026-10-30",
       "pain": 5,
       "specificity": 5,

@@ -11898,8 +11898,822 @@
       "id": "week24",
       "label": "Week 24",
       "weekCommencing": "2026-11-09",
-      "builtAt": 1794142678,
+      "builtAt": 1794169549,
       "posts": [
+        {
+          "id": "week24-mon-quote",
+          "day": "Mon 9 Nov",
+          "lane": "quote",
+          "title": "Quote: Seneca",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Seneca reminds us that while we wait, life doesn't slow down. What are you putting off? Whether it's applying for that dream internship or taking a leap into a new career path, now's the time. Don't let opportunities pass by. Start your journey today with Internwise. Find internships at www.internwise.co.uk",
+          "hashtags": [
+            "#internshipopportunity",
+            "#careergrowth",
+            "#senecawisdom",
+            "#actnow",
+            "#internwiseuk"
+          ],
+          "captions": {
+            "ig-fb": "Seneca reminds us that while we wait, life doesn't slow down. What are you putting off? Whether it's applying for that dream internship or taking a leap into a new career path, now's the time. Don't let opportunities pass by. Start your journey today with Internwise. Find internships at www.internwise.co.uk",
+            "linkedin": "Procrastination can be the biggest roadblock to success. Seneca's words resonate with anyone who's ever hesitated. If you're considering internships or graduate roles, remember that each day counts. Take action now and set the course for your future. Explore opportunities with Internwise at internwise.co.uk",
+            "x": "Seneca said it best: life moves fast while we wait. Don’t delay your next step. Apply for internships today at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internshipopportunity",
+              "#careergrowth",
+              "#senecawisdom",
+              "#actnow",
+              "#internwiseuk"
+            ],
+            "linkedin": [
+              "#careeradvice",
+              "#internships",
+              "#internwiseuk"
+            ],
+            "x": [
+              "#careeradvice",
+              "#internwiseuk"
+            ]
+          },
+          "quoteId": "q051",
+          "world": "stamp"
+        },
+        {
+          "id": "week24-mon-engagement",
+          "day": "Mon 9 Nov",
+          "lane": "engagement",
+          "title": "Where do employers find you first?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Ever wondered where employers first spot you? It's often your CV, LinkedIn profile, or perhaps even your portfolio. Whichever they open first deserves an hour of your attention this week. Make sure it's strong, polished, and a true reflection of your skills. Take some time today to tidy one up. Need an internship to boost your profile? Visit www.internwise.co.uk",
+          "hashtags": [
+            "#internship",
+            "#careertips",
+            "#jobhunt",
+            "#graduatejobs",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Ever wondered where employers first spot you? It's often your CV, LinkedIn profile, or perhaps even your portfolio. Whichever they open first deserves an hour of your attention this week. Make sure it's strong, polished, and a true reflection of your skills. Take some time today to tidy one up. Need an internship to boost your profile? Visit www.internwise.co.uk",
+            "linkedin": "Employers often get their first impression of you from your CV, LinkedIn profile, or portfolio. Whichever one they open first is crucial. Spend an hour this week refining it to showcase your skills and strengths. A little effort can make all the difference in standing out. Ready to find an internship that complements your profile? Check out internwise.co.uk",
+            "x": "Where do employers find you first? CV, LinkedIn, or portfolio? Make the first thing they open your strongest asset. Tidy one up today! Visit internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internship",
+              "#careertips",
+              "#jobhunt",
+              "#graduatejobs",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#careeradvice",
+              "#internship",
+              "#professionalgrowth"
+            ],
+            "x": [
+              "#careertips",
+              "#internwise"
+            ]
+          },
+          "world": "debate",
+          "ideaId": "c030"
+        },
+        {
+          "id": "week24-mon-education",
+          "day": "Mon 9 Nov",
+          "lane": "education",
+          "title": "What Do Sales Executives Do?",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
+          ],
+          "status": "in-review",
+          "caption": "Ever wonder what a sales executive does all day? 🤔 From finding new customers to hitting targets, this role is all about building connections and meeting goals. \n\nIf you have experience in any customer-facing role, or if you've ever grown a society or raised funds, you're already on the right track! \n\nExplore the sales executive role and see if it suits you. www.internwise.co.uk",
+          "hashtags": [
+            "#salescareer",
+            "#careerinsight",
+            "#jobsearch",
+            "#graduatejobs",
+            "#internships"
+          ],
+          "captions": {
+            "ig-fb": "Ever wonder what a sales executive does all day? 🤔 From finding new customers to hitting targets, this role is all about building connections and meeting goals. \n\nIf you have experience in any customer-facing role, or if you've ever grown a society or raised funds, you're already on the right track! \n\nExplore the sales executive role and see if it suits you. www.internwise.co.uk",
+            "linkedin": "Curious about the role of a sales executive? This position involves finding new customers, understanding their needs, and hitting targets. It's perfect for those who can listen, follow up, and demonstrate impact with numbers. \n\nHave experience in customer service or fundraising? You might be a great fit. Learn more at internwise.co.uk",
+            "x": "What do sales executives actually do? They find customers, understand needs, and hit targets. Think you're a fit? Check it out at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#salescareer",
+              "#careerinsight",
+              "#jobsearch",
+              "#graduatejobs",
+              "#internships"
+            ],
+            "linkedin": [
+              "#salesroles",
+              "#careergrowth",
+              "#graduatejobs"
+            ],
+            "x": [
+              "#salesjobs",
+              "#careergrowth"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Career Insight",
+            "headline": "What Do Sales Executives Do?",
+            "tone": "upbeat",
+            "slides": [
+              {
+                "tag": "Lead Generation",
+                "title": "Find New Customers",
+                "body": "Research companies that could buy, then reach out by phone, email or LinkedIn. Most deals start with the follow-up, not the first message."
+              },
+              {
+                "tag": "Customer Needs",
+                "title": "Ask, Then Listen",
+                "body": "Run calls, meetings or demos to learn what the customer is trying to fix. Good sales people ask more questions than they answer."
+              },
+              {
+                "tag": "Targets",
+                "title": "Hit a Number",
+                "body": "You work to a monthly or quarterly target and log every deal in a CRM. Many roles pay commission on top of a base salary."
+              }
+            ],
+            "points": null,
+            "cta": "Served customers or raised money? Lead your application with that number."
+          },
+          "world": "midnight",
+          "poses": {
+            "cover": "nuno_authority_1",
+            "cta": "nuno_dothis_2"
+          }
+        },
+        {
+          "id": "week24-tue-quote",
+          "day": "Tue 10 Nov",
+          "lane": "quote",
+          "title": "Quote: Helen Keller",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Feeling stuck in your job search? Remember Helen Keller's wisdom: 'Optimism is the faith that leads to achievement; nothing can be done without hope.' Keep your spirits high and keep applying. The right opportunity is out there waiting for you. Start your journey at www.internwise.co.uk",
+          "hashtags": [
+            "#careeradvice",
+            "#internships",
+            "#graduatejobs",
+            "#jobsearch",
+            "#staypositive"
+          ],
+          "captions": {
+            "ig-fb": "Feeling stuck in your job search? Remember Helen Keller's wisdom: 'Optimism is the faith that leads to achievement; nothing can be done without hope.' Keep your spirits high and keep applying. The right opportunity is out there waiting for you. Start your journey at www.internwise.co.uk",
+            "linkedin": "In the words of Helen Keller, 'Optimism is the faith that leads to achievement; nothing can be done without hope.' As you navigate your career path, let optimism be your guide. Persevere, adapt, and continue applying - your hard work will pay off. Discover your next opportunity with us at internwise.co.uk.",
+            "x": "Helen Keller said, 'Optimism is the faith that leads to achievement.' Let hope drive your job search. Explore what's possible at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careeradvice",
+              "#internships",
+              "#graduatejobs",
+              "#jobsearch",
+              "#staypositive"
+            ],
+            "linkedin": [
+              "#careergrowth",
+              "#internshipopportunities",
+              "#professionaldevelopment"
+            ],
+            "x": [
+              "#jobhunt",
+              "#keepgoing"
+            ]
+          },
+          "quoteId": "q052",
+          "world": "manifesto"
+        },
+        {
+          "id": "week24-tue-engagement",
+          "day": "Tue 10 Nov",
+          "lane": "engagement",
+          "title": "Which interview question do you dread most?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Interviews can be nerve-wracking, especially when you get that one dreaded question. Is it 'Tell me about yourself?' or maybe 'What's your biggest weakness?' Whatever it is, facing it head-on can make all the difference. Tonight, take five minutes to jot down your answer and rehearse it out loud. You’ll thank yourself later. 🌟 Start preparing today and find internships that match your skills at www.internwise.co.uk.",
+          "hashtags": [
+            "#interviewprep",
+            "#careerready",
+            "#internshiptips",
+            "#jobsearch",
+            "#graduatejobs"
+          ],
+          "captions": {
+            "ig-fb": "Interviews can be nerve-wracking, especially when you get that one dreaded question. Is it 'Tell me about yourself?' or maybe 'What's your biggest weakness?' Whatever it is, facing it head-on can make all the difference. Tonight, take five minutes to jot down your answer and rehearse it out loud. You’ll thank yourself later. 🌟 Start preparing today and find internships that match your skills at www.internwise.co.uk.",
+            "linkedin": "Facing interview questions can feel like a daunting task, especially when one catches you off guard. Is it the classic 'Where do you see yourself in five years?' or perhaps 'Why should we hire you?' Whatever your dreaded question might be, preparation is your best ally. Spend a few minutes tonight writing down your response and practise saying it aloud. Remember, confidence grows with rehearsal. For more interview tips and to explore internships, visit internwise.co.uk.",
+            "x": "What's your most dreaded interview question? Tackle it head-on by practising your answer tonight. Preparation boosts confidence! Find your next internship at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#interviewprep",
+              "#careerready",
+              "#internshiptips",
+              "#jobsearch",
+              "#graduatejobs"
+            ],
+            "linkedin": [
+              "#interviewpreparation",
+              "#careeradvice",
+              "#graduateopportunities"
+            ],
+            "x": [
+              "#interviewtips",
+              "#internships"
+            ]
+          },
+          "world": "signal",
+          "ideaId": "c031"
+        },
+        {
+          "id": "week24-tue-education",
+          "day": "Tue 10 Nov",
+          "lane": "education",
+          "title": "What Is Commercial Experience?",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
+          ],
+          "status": "in-review",
+          "caption": "Job ads often mention 'commercial experience'. But what does it mean? It's any work done in businesses that serve paying customers. If you've worked in retail, hospitality, or sales, you've got it! Internships and freelancing count too. Even running a small online shop or managing a society's budget can qualify. Use numbers on your CV to highlight your impact, like customers served or money raised. Want to boost your CV? Visit www.internwise.co.uk.",
+          "hashtags": [
+            "#careeradvice",
+            "#commercialexperience",
+            "#internships",
+            "#jobhunt",
+            "#graduatejobs"
+          ],
+          "captions": {
+            "ig-fb": "Job ads often mention 'commercial experience'. But what does it mean? It's any work done in businesses that serve paying customers. If you've worked in retail, hospitality, or sales, you've got it! Internships and freelancing count too. Even running a small online shop or managing a society's budget can qualify. Use numbers on your CV to highlight your impact, like customers served or money raised. Want to boost your CV? Visit www.internwise.co.uk.",
+            "linkedin": "Ever wondered what employers mean by 'commercial experience'? It’s any job where you've worked in a business that serves paying customers. Think retail, hospitality, or sales roles. Even internships, placements, and freelance gigs for real clients count. Managed a society's budget or run an online shop? That’s commercial experience too. Highlight this on your CV by showing numbers: customers served, sales made, or money raised. Ready to enhance your CV? Visit internwise.co.uk.",
+            "x": "Commercial experience means work in businesses serving customers. If you've worked in retail or managed a budget, you already have it! Show your numbers on your CV. Learn more at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careeradvice",
+              "#commercialexperience",
+              "#internships",
+              "#jobhunt",
+              "#graduatejobs"
+            ],
+            "linkedin": [
+              "#careertips",
+              "#commercialexperience",
+              "#graduatejobs"
+            ],
+            "x": [
+              "#careeradvice",
+              "#graduatejobs"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Job Ad Jargon",
+            "headline": "What Is Commercial Experience?",
+            "tone": "practical",
+            "slides": [
+              {
+                "tag": "Definition",
+                "title": "What It Really Means",
+                "body": "Work for an organisation that has to make money or serve paying customers. Employers want proof you know how a business runs."
+              },
+              {
+                "tag": "Examples",
+                "title": "You Probably Have It",
+                "body": "Retail, hospitality, call centres and sales jobs all count. So do internships, placements and freelance work for real clients."
+              },
+              {
+                "tag": "On Your CV",
+                "title": "Show the Business Side",
+                "body": "Name the customers you served, the sales you made or the money you saved. A society budget or a small online shop counts too."
+              }
+            ],
+            "points": null,
+            "cta": "Served customers or handled money? You have commercial experience. Say so with a number."
+          },
+          "world": "flash",
+          "poses": {
+            "cover": "nuno_utility_3",
+            "cta": "nuno_offers_4"
+          }
+        },
+        {
+          "id": "week24-wed-quote",
+          "day": "Wed 11 Nov",
+          "lane": "quote",
+          "title": "Quote: Marcus Aurelius",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Honesty is your best asset, especially when it comes to your CV. A truthful representation of your skills and experiences sets you apart and builds trust. Remember Marcus Aurelius' wise words: 'If it is not right, do not do it; if it is not true, do not say it.' Ready to find internships that value integrity? Discover your path at www.internwise.co.uk.",
+          "hashtags": [
+            "#honesty",
+            "#integrity",
+            "#careeradvice",
+            "#internships",
+            "#marcusaurelius"
+          ],
+          "captions": {
+            "ig-fb": "Honesty is your best asset, especially when it comes to your CV. A truthful representation of your skills and experiences sets you apart and builds trust. Remember Marcus Aurelius' wise words: 'If it is not right, do not do it; if it is not true, do not say it.' Ready to find internships that value integrity? Discover your path at www.internwise.co.uk.",
+            "linkedin": "Marcus Aurelius reminds us of the power of honesty with his quote: 'If it is not right, do not do it; if it is not true, do not say it.' In the professional world, integrity in your CV and interactions can open doors and build long-lasting relationships. Stay true to yourself and showcase your genuine skills. Ready to explore opportunities that value authenticity? Visit internwise.co.uk.",
+            "x": "Marcus Aurelius said it best: 'If it is not right, do not do it; if it is not true, do not say it.' Honesty in your CV builds trust and opens doors. Explore internships that value integrity at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#honesty",
+              "#integrity",
+              "#careeradvice",
+              "#internships",
+              "#marcusaurelius"
+            ],
+            "linkedin": [
+              "#careeradvice",
+              "#integrity",
+              "#internships"
+            ],
+            "x": [
+              "#honesty",
+              "#careeradvice"
+            ]
+          },
+          "quoteId": "q053",
+          "world": "marquee"
+        },
+        {
+          "id": "week24-wed-engagement",
+          "day": "Wed 11 Nov",
+          "lane": "engagement",
+          "title": "Which assessment centre task worries you most?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Assessment centres can feel daunting, especially when you're trying to make a great impression. But remember, it's all about showing how you think and work with others. Whether it's the group task, the presentation, or the case study, pick the one that makes you sweat and practise it this week. Speak your thoughts out loud - assessors need to hear your plan! And when you're ready, explore internships waiting for you at www.internwise.co.uk.",
+          "hashtags": [
+            "#assessmentcentre",
+            "#internshiptips",
+            "#thinkoutloud",
+            "#graduatejobs",
+            "#internwiseuk"
+          ],
+          "captions": {
+            "ig-fb": "Assessment centres can feel daunting, especially when you're trying to make a great impression. But remember, it's all about showing how you think and work with others. Whether it's the group task, the presentation, or the case study, pick the one that makes you sweat and practise it this week. Speak your thoughts out loud - assessors need to hear your plan! And when you're ready, explore internships waiting for you at www.internwise.co.uk.",
+            "linkedin": "Feeling the heat of assessment centres? It's natural to worry about the different tasks, whether it's the group exercises, presentations, or case studies. The key is to articulate your thought process clearly. Assessors can only evaluate what they hear, so think out loud. Choose the part that challenges you most and practise this week. Boost your confidence and showcase your skills. When you're ready, find internship opportunities at internwise.co.uk.",
+            "x": "Nervous about assessment centres? Pick the task that worries you most & practise. Think out loud so assessors can hear your process. Find internships at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#assessmentcentre",
+              "#internshiptips",
+              "#thinkoutloud",
+              "#graduatejobs",
+              "#internwiseuk"
+            ],
+            "linkedin": [
+              "#graduateopportunities",
+              "#assessmentcentretips",
+              "#internships"
+            ],
+            "x": [
+              "#internshipadvice",
+              "#graduatejobs"
+            ]
+          },
+          "world": "bars",
+          "ideaId": "c032"
+        },
+        {
+          "id": "week24-wed-education",
+          "day": "Wed 11 Nov",
+          "lane": "education",
+          "title": "Journalism Without a Degree",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
+          ],
+          "status": "in-review",
+          "caption": "Dreaming of a journalism career but don't have a degree? No worries! Start your journey by publishing in student media, local news sites, or creating a niche blog. Build a portfolio by collecting your best clippings to showcase your skills. Explore journalism apprenticeships for hands-on training while getting paid. An NCTJ qualification can also open doors, teaching you shorthand, fast writing, and basic video production. Editors want proof you can find and tell a story, so start now. Ready to dive in? Visit www.internwise.co.uk for more insights!",
+          "hashtags": [
+            "#journalismcareer",
+            "#nodegreeneeded",
+            "#startpublishing",
+            "#journalismapprenticeship",
+            "#nctj"
+          ],
+          "captions": {
+            "ig-fb": "Dreaming of a journalism career but don't have a degree? No worries! Start your journey by publishing in student media, local news sites, or creating a niche blog. Build a portfolio by collecting your best clippings to showcase your skills. Explore journalism apprenticeships for hands-on training while getting paid. An NCTJ qualification can also open doors, teaching you shorthand, fast writing, and basic video production. Editors want proof you can find and tell a story, so start now. Ready to dive in? Visit www.internwise.co.uk for more insights!",
+            "linkedin": "You don't need a degree to start a career in journalism. Begin by publishing articles in student media or on a blog, and build a portfolio of your best work. Look into journalism apprenticeships for on-the-job training with pay. Consider gaining practical skills through an NCTJ qualification, which covers shorthand, fast writing, and social media proficiency. Editors look for evidence of your ability to find and write compelling stories. Start preparing now. Learn more at internwise.co.uk.",
+            "x": "No journalism degree? No problem. Start by publishing your work, building a portfolio, and exploring apprenticeships. Editors want proof you can write a story. Start today! internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#journalismcareer",
+              "#nodegreeneeded",
+              "#startpublishing",
+              "#journalismapprenticeship",
+              "#nctj"
+            ],
+            "linkedin": [
+              "#journalismcareer",
+              "#nodegreeneeded",
+              "#nctj"
+            ],
+            "x": [
+              "#journalismcareer",
+              "#nodegreeneeded"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "No Degree?",
+            "headline": "Journalism Without a Degree",
+            "tone": "practical",
+            "slides": [
+              {
+                "tag": "Get Published",
+                "title": "Start Publishing Now",
+                "body": "Write for student media, a local news site or your own newsletter. Editors hire people who already find and finish stories."
+              },
+              {
+                "tag": "Build Proof",
+                "title": "Collect Your Clippings",
+                "body": "Keep your five best published pieces behind one portfolio link. Add at least one piece in the area you want to cover."
+              },
+              {
+                "tag": "Train On The Job",
+                "title": "Look at Apprenticeships",
+                "body": "Journalism apprenticeships let you train and earn at the same time. The NCTJ diploma is the industry's best-known qualification."
+              }
+            ],
+            "points": null,
+            "cta": "Editors want proof you can find and write a story. Start publishing this week."
+          },
+          "world": "marker",
+          "poses": {
+            "cover": "nuno_utility_4",
+            "cta": "nuno_offers_1"
+          }
+        },
+        {
+          "id": "week24-thu-quote",
+          "day": "Thu 12 Nov",
+          "lane": "quote",
+          "title": "Quote: Leonardo da Vinci",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Leonardo da Vinci reminds us that obstacles are just challenges waiting for our determination. Keep pushing forward and tackle each barrier with resolve. Your career journey is full of opportunities. Start exploring internships today at www.internwise.co.uk.",
+          "hashtags": [
+            "#motivationmonday",
+            "#careerjourney",
+            "#internships",
+            "#graduatejobs",
+            "#keepgoing"
+          ],
+          "captions": {
+            "ig-fb": "Leonardo da Vinci reminds us that obstacles are just challenges waiting for our determination. Keep pushing forward and tackle each barrier with resolve. Your career journey is full of opportunities. Start exploring internships today at www.internwise.co.uk.",
+            "linkedin": "Leonardo da Vinci once said, 'Obstacles cannot crush me; every obstacle yields to stern resolve.' This speaks directly to the heart of every ambitious student and graduate. Challenges are stepping stones to success. Stay determined and keep exploring your career path. Discover exciting internship opportunities at internwise.co.uk.",
+            "x": "Leonardo da Vinci said it best: 'Obstacles cannot crush me.' Keep pushing through every challenge with determination. Find your next opportunity at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#motivationmonday",
+              "#careerjourney",
+              "#internships",
+              "#graduatejobs",
+              "#keepgoing"
+            ],
+            "linkedin": [
+              "#careeradvice",
+              "#internshipopportunities",
+              "#graduatejobs"
+            ],
+            "x": [
+              "#motivation",
+              "#careergrowth"
+            ]
+          },
+          "quoteId": "q040",
+          "world": "notebook"
+        },
+        {
+          "id": "week24-thu-engagement",
+          "day": "Thu 12 Nov",
+          "lane": "engagement",
+          "title": "When do you start applying for summer internships?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Wondering when to kick off your summer internship search? Many companies start their recruitment in autumn and spots fill up fast, often before the new year. If your dream sector hires early, now's the time to act. Take five minutes today to check three deadlines - it could make all the difference. Start exploring at www.internwise.co.uk and discover your next big opportunity!",
+          "hashtags": [
+            "#internshiptips",
+            "#careeradvice",
+            "#summerinternship",
+            "#gradjobs",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Wondering when to kick off your summer internship search? Many companies start their recruitment in autumn and spots fill up fast, often before the new year. If your dream sector hires early, now's the time to act. Take five minutes today to check three deadlines - it could make all the difference. Start exploring at www.internwise.co.uk and discover your next big opportunity!",
+            "linkedin": "Thinking about your summer internship? Many programmes open in autumn and are filled well before the new year. If your chosen industry is one of those that recruit early, this month is the prime time to start applying. Don't wait until it's too late - check three deadlines today and secure your spot. Visit internwise.co.uk to get started.",
+            "x": "Summer internships may open in autumn, filling up before the new year. If your sector recruits early, now’s the time to apply. Check three deadlines today at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internshiptips",
+              "#careeradvice",
+              "#summerinternship",
+              "#gradjobs",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#internship",
+              "#graduatejobs",
+              "#careeradvice"
+            ],
+            "x": [
+              "#internships",
+              "#graduatejobs"
+            ]
+          },
+          "world": "dial",
+          "ideaId": "c033"
+        },
+        {
+          "id": "week24-thu-education",
+          "day": "Thu 12 Nov",
+          "lane": "education",
+          "title": "How Many Hours Can You Work?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "When an application asks how many hours you're available to work, it's crucial to answer honestly and specifically. Don’t just say you're flexible. If you can manage 15 to 20 hours a week, say so. Mention the days or times you can work, especially if you have lectures to plan around. Try to match the job advert's expectations - full-time roles usually mean 35 to 40 hours. If you're on a Student visa, remember degree-level students can often work up to 20 hours a week in term time. Never promise more hours than you can commit to - it’s the quickest way to lose a good role. Be clear, be honest, and set yourself up for success. Check out www.internwise.co.uk for more tips.",
+          "hashtags": [
+            "#studentjobs",
+            "#worksmart",
+            "#careertips",
+            "#ukinternships",
+            "#jobapplications"
+          ],
+          "captions": {
+            "ig-fb": "When an application asks how many hours you're available to work, it's crucial to answer honestly and specifically. Don’t just say you're flexible. If you can manage 15 to 20 hours a week, say so. Mention the days or times you can work, especially if you have lectures to plan around. Try to match the job advert's expectations - full-time roles usually mean 35 to 40 hours. If you're on a Student visa, remember degree-level students can often work up to 20 hours a week in term time. Never promise more hours than you can commit to - it’s the quickest way to lose a good role. Be clear, be honest, and set yourself up for success. Check out www.internwise.co.uk for more tips.",
+            "linkedin": "When you're asked about your availability on a job application, it's crucial to be both honest and specific. Don't just say you're flexible - give a clear range like 15 to 20 hours a week if that's what you can manage. Specify the days or times you're available, especially if you have lectures to work around. Align your availability with the job advert's expectations where possible. For full-time roles, this usually means 35 to 40 hours. If you're on a Student visa, remember that degree-level students can typically work up to 20 hours a week during term time. Never promise more hours than you can realistically commit to. This honesty not only helps you but also builds trust with potential employers. For more insights, visit internwise.co.uk.",
+            "x": "Be clear on your work availability: state hours, days, and match job expectations. Honesty is key! internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#studentjobs",
+              "#worksmart",
+              "#careertips",
+              "#ukinternships",
+              "#jobapplications"
+            ],
+            "linkedin": [
+              "#internships",
+              "#careeradvice",
+              "#studentjobs"
+            ],
+            "x": [
+              "#careertips",
+              "#studentjobs"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Work Hours",
+            "headline": "How Many Hours Can You Work?",
+            "tone": "practical",
+            "slides": null,
+            "points": [
+              "Give a number or a range",
+              "Name your days and times",
+              "Plan around lectures",
+              "Match the advert's hours",
+              "Check any visa hour limit",
+              "Never over-promise"
+            ],
+            "cta": "Honest and specific beats “flexible”.",
+            "shifts": [
+              [
+                "Mon",
+                "2pm - 6pm"
+              ],
+              [
+                "Wed",
+                "9am - 1pm"
+              ],
+              [
+                "Fri",
+                "10am - 6pm"
+              ]
+            ],
+            "total": "16 hrs",
+            "card_note": "MY AVAILABILITY"
+          },
+          "world": "timecard"
+        },
+        {
+          "id": "week24-fri-quote",
+          "day": "Fri 13 Nov",
+          "lane": "quote",
+          "title": "Quote: Isaac Newton",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Isaac Newton once said, 'If I have seen further, it is by standing on the shoulders of giants.' 🌟 Who are the giants in your life? At Internwise, we believe every step forward is built on the support and knowledge of those who came before us. Discover opportunities to learn from industry leaders and grow your career. 🏆 Start your journey today at www.internwise.co.uk.",
+          "hashtags": [
+            "#careergrowth",
+            "#internshipopportunities",
+            "#inspiredlearning",
+            "#findyourgiants",
+            "#internwiseuk"
+          ],
+          "captions": {
+            "ig-fb": "Isaac Newton once said, 'If I have seen further, it is by standing on the shoulders of giants.' 🌟 Who are the giants in your life? At Internwise, we believe every step forward is built on the support and knowledge of those who came before us. Discover opportunities to learn from industry leaders and grow your career. 🏆 Start your journey today at www.internwise.co.uk.",
+            "linkedin": "Isaac Newton's timeless wisdom reminds us of the importance of learning from those who have paved the way. When you stand on the shoulders of giants, you can see further and achieve more. At Internwise, we connect you with opportunities to work with industry experts who can help you grow. Whether you're starting out or looking to expand your horizons, find your giants and take the next step in your career at internwise.co.uk.",
+            "x": "Isaac Newton saw further by standing on the shoulders of giants. Who are your giants? Explore internships where you can learn from the best at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careergrowth",
+              "#internshipopportunities",
+              "#inspiredlearning",
+              "#findyourgiants",
+              "#internwiseuk"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#mentorship",
+              "#internwiseuk"
+            ],
+            "x": [
+              "#careeradvice",
+              "#internwiseuk"
+            ]
+          },
+          "quoteId": "q044",
+          "world": "split"
+        },
+        {
+          "id": "week24-fri-engagement",
+          "day": "Fri 13 Nov",
+          "lane": "engagement",
+          "title": "What do you do after a rejection email?",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Got that dreaded rejection email? It's tough, but your next steps can make a difference. Take a moment to reflect, then ask for feedback. Most candidates skip this step, but it can provide invaluable insight for your future applications. Give it a go this week - you might be surprised at what you learn. Explore more opportunities at www.internwise.co.uk.",
+          "hashtags": [
+            "#careeradvice",
+            "#careertips",
+            "#internship",
+            "#jobhunt",
+            "#feedback"
+          ],
+          "captions": {
+            "ig-fb": "Got that dreaded rejection email? It's tough, but your next steps can make a difference. Take a moment to reflect, then ask for feedback. Most candidates skip this step, but it can provide invaluable insight for your future applications. Give it a go this week - you might be surprised at what you learn. Explore more opportunities at www.internwise.co.uk.",
+            "linkedin": "Rejection emails can feel disheartening, but they're not the end of the road. What you choose to do next can set you apart. Take a moment to breathe, then reach out for feedback. It's a step many overlook, but it can be a game-changer for your next application. Ready to find your next opportunity? Visit internwise.co.uk.",
+            "x": "Rejection stings, but your next steps matter. Ask for feedback - it's a move most skip. Ready to find your next path? internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careeradvice",
+              "#careertips",
+              "#internship",
+              "#jobhunt",
+              "#feedback"
+            ],
+            "linkedin": [
+              "#careeradvice",
+              "#jobsearch",
+              "#feedback"
+            ],
+            "x": [
+              "#careeradvice",
+              "#jobsearch"
+            ]
+          },
+          "world": "stickies",
+          "ideaId": "c034"
+        },
+        {
+          "id": "week24-fri-education",
+          "day": "Fri 13 Nov",
+          "lane": "education",
+          "title": "Cover Letter Opening Lines",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Most cover letters fail at the start. Why? They kick off with the obvious - the job title. Instead, make them memorable. Lead with proof of what you can do. Mention their latest project. Connect your skills to the role like a pro. Keep it punchy - two sentences max. Ready to make your cover letter a standout? Visit www.internwise.co.uk for more insights.",
+          "hashtags": [
+            "#coverlettertips",
+            "#jobhunt",
+            "#careeradvice",
+            "#graduatejobs",
+            "#internships"
+          ],
+          "captions": {
+            "ig-fb": "Most cover letters fail at the start. Why? They kick off with the obvious - the job title. Instead, make them memorable. Lead with proof of what you can do. Mention their latest project. Connect your skills to the role like a pro. Keep it punchy - two sentences max. Ready to make your cover letter a standout? Visit www.internwise.co.uk for more insights.",
+            "linkedin": "First impressions count, especially in cover letters. Avoid starting with the job title - they already know it. Instead, showcase a result you've achieved, mention a recent project of theirs, or connect your skills to the role. Keep it brief and impactful. Want to craft a cover letter that stands out? Head to internwise.co.uk.",
+            "x": "Ditch the job title from your cover letter's first line. Start with proof of your skills or mention their work. Two sentences max. internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#coverlettertips",
+              "#jobhunt",
+              "#careeradvice",
+              "#graduatejobs",
+              "#internships"
+            ],
+            "linkedin": [
+              "#coverlettertips",
+              "#careeradvice",
+              "#graduatejobs"
+            ],
+            "x": [
+              "#jobhunt",
+              "#coverletter"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Cover Letters",
+            "headline": "Cover Letter Opening Lines",
+            "tone": "practical",
+            "slides": null,
+            "points": [
+              "Lead with a result",
+              "Mention their recent work",
+              "Link your skill to the role",
+              "Cut the job title line",
+              "Skip “My name is...”",
+              "Keep it to two sentences"
+            ],
+            "cta": "Open with proof, not the job title.",
+            "weak": "I am writing to apply for the role of...",
+            "strong": "Last summer I grew our society's Instagram from 300 to 1,200."
+          },
+          "world": "letter"
+        },
         {
           "id": "week24-mon-news",
           "day": "Mon 9 Nov",

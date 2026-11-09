@@ -184,6 +184,10 @@ def hero_split(text):
     if _is_content(last) and len(last.strip("?!.,:;")) >= 4:
         return " ".join(words[:-1]), last
     content = [w for w in words if _is_content(w) and len(w.strip("?!.,:;")) >= 4]
+    # Everything after the hero joins it, so a hero early in a long hook dragged
+    # "assessment centre worries you most?" into one squeezed line. Prefer a hero
+    # in the last three words; only fall back to the longest word anywhere.
+    content = [w for w in content if words.index(w) >= len(words) - 3] or content
     if content:
         hero = max(content, key=lambda w: len(w))
         i = words.index(hero)
@@ -258,8 +262,8 @@ def hero(text, move, ink, accent, hi=None, size=66, deep="#0A1830", width=None,
         # A hairline stroke disappears at thumbnail size on a dark ground, which is
         # exactly where these are read. Scale the stroke with the type.
         stroke = max(4, round(fit(1.42) * 0.055))
-        hero_html = (f"<div style=\"font-family:Inter;font-weight:900;font-size:{fit(1.42)}px;"
-                     f"line-height:.94;letter-spacing:-3px;margin-top:8px;color:transparent;"
+        hero_html = (f"<div style=\"font-family:InterStatic,Inter;font-weight:700;font-size:{fit(1.42)}px;"
+                     f"line-height:.94;letter-spacing:-1px;margin-top:8px;color:transparent;"
                      f"-webkit-text-stroke:{stroke}px {accent};\">{h}</div>")
     elif move == "scalejump":
         hero_html = (f"<div style=\"font-family:Inter;font-weight:900;font-size:{fit(1.70)}px;"

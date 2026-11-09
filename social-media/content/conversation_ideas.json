@@ -401,6 +401,136 @@
       ],
       "takeaway": "Make the first thing they open the strongest thing you have.",
       "cta": "Tidy one of the three today."
+    },
+    {
+      "id": "c031",
+      "format": "decision_prompt",
+      "hook": "Which interview question do you dread most?",
+      "subhead": "The one you dread is the one worth rehearsing first.",
+      "options": [
+        "Tell me about yourself",
+        "Your biggest weakness",
+        "Why should we hire you"
+      ],
+      "takeaway": "Write the dreaded answer down, then say it out loud three times.",
+      "cta": "Practise one answer tonight."
+    },
+    {
+      "id": "c032",
+      "format": "decision_prompt",
+      "hook": "Which assessment centre task worries you most?",
+      "subhead": "Each task tests the same thing: how you think with other people watching.",
+      "options": [
+        "The group task",
+        "The presentation",
+        "The case study"
+      ],
+      "takeaway": "Think out loud. Assessors can only mark what they can hear.",
+      "cta": "Pick one and rehearse it this week."
+    },
+    {
+      "id": "c033",
+      "format": "decision_prompt",
+      "hook": "When do you start applying for summer internships?",
+      "subhead": "Many summer schemes open in autumn and fill before the new year.",
+      "options": [
+        "Autumn",
+        "After Christmas",
+        "In the spring"
+      ],
+      "takeaway": "If your target sector recruits early, the best time is this month.",
+      "cta": "Check three deadlines today."
+    },
+    {
+      "id": "c034",
+      "format": "decision_prompt",
+      "hook": "What do you do after a rejection email?",
+      "subhead": "What you do in the next 24 hours matters more than the email.",
+      "options": [
+        "Ask for feedback",
+        "Apply somewhere similar",
+        "Take a day off"
+      ],
+      "takeaway": "Ask for one line of feedback. Most candidates never do.",
+      "cta": "Send one feedback request this week."
+    },
+    {
+      "id": "c035",
+      "format": "decision_prompt",
+      "hook": "Which networking move feels least awkward?",
+      "subhead": "Small, specific messages beat big, vague asks.",
+      "options": [
+        "Comment on a post",
+        "Message an alumnus",
+        "Go to a careers fair"
+      ],
+      "takeaway": "One short, specific question gets more replies than a request for a job.",
+      "cta": "Send one message this week."
+    },
+    {
+      "id": "c036",
+      "format": "decision_prompt",
+      "hook": "How do you research a company before an interview?",
+      "subhead": "Interviewers notice when you know what happened this month.",
+      "options": [
+        "Their website",
+        "Recent news",
+        "Staff on LinkedIn"
+      ],
+      "takeaway": "One recent news story beats a line from the About page.",
+      "cta": "Find one recent story before your next interview."
+    },
+    {
+      "id": "c037",
+      "format": "decision_prompt",
+      "hook": "Which skill would you learn this month?",
+      "subhead": "One practical skill, shown on your CV, beats a long list of interests.",
+      "options": [
+        "Excel",
+        "Presenting",
+        "Basic coding"
+      ],
+      "takeaway": "Pick one, finish one short course, and add the result to your CV.",
+      "cta": "Start one skill this week."
+    },
+    {
+      "id": "c038",
+      "format": "decision_prompt",
+      "hook": "How would you open your cover letter?",
+      "subhead": "The first line decides whether they read the second.",
+      "options": [
+        "The standard opener",
+        "A result you are proud of",
+        "Why this company"
+      ],
+      "takeaway": "Open with proof, not with the job title you are applying for.",
+      "cta": "Rewrite your first line today."
+    },
+    {
+      "id": "c039",
+      "format": "decision_prompt",
+      "hook": "What do you check first before a video interview?",
+      "subhead": "Most video interview problems are fixed in the ten minutes before.",
+      "options": [
+        "The tech",
+        "The background",
+        "The lighting"
+      ],
+      "takeaway": "Test the link, the sound and the light the day before, not five minutes before.",
+      "cta": "Do a test call tonight."
+    },
+    {
+      "id": "c040",
+      "format": "decision_prompt",
+      "hook": "What would you ask at the end of an interview?",
+      "subhead": "Your questions are the last thing they remember.",
+      "options": [
+        "What does success look like?",
+        "What would I learn first?",
+        "What are the next steps?"
+      ],
+      "takeaway": "Ask one question about the role and one about the next step.",
+      "cta": "Write two questions before your next interview."
     }
   ]
 }

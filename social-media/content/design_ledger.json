@@ -669,6 +669,81 @@
       "lane": "quote",
       "week": "week23",
       "world": "minimal"
+    },
+    {
+      "lane": "edu_carousel",
+      "week": "week24",
+      "world": "midnight"
+    },
+    {
+      "lane": "edu_carousel",
+      "week": "week24",
+      "world": "flash"
+    },
+    {
+      "lane": "edu_carousel",
+      "week": "week24",
+      "world": "marker"
+    },
+    {
+      "lane": "conversation",
+      "week": "week24",
+      "world": "bars"
+    },
+    {
+      "lane": "conversation",
+      "week": "week24",
+      "world": "debate"
+    },
+    {
+      "lane": "conversation",
+      "week": "week24",
+      "world": "dial"
+    },
+    {
+      "lane": "conversation",
+      "week": "week24",
+      "world": "signal"
+    },
+    {
+      "lane": "conversation",
+      "week": "week24",
+      "world": "stickies"
+    },
+    {
+      "lane": "quote",
+      "week": "week24",
+      "world": "manifesto"
+    },
+    {
+      "lane": "quote",
+      "week": "week24",
+      "world": "marquee"
+    },
+    {
+      "lane": "quote",
+      "week": "week24",
+      "world": "notebook"
+    },
+    {
+      "lane": "quote",
+      "week": "week24",
+      "world": "split"
+    },
+    {
+      "lane": "quote",
+      "week": "week24",
+      "world": "stamp"
+    },
+    {
+      "lane": "edu_single",
+      "week": "week24",
+      "world": "timecard"
+    },
+    {
+      "lane": "edu_single",
+      "week": "week24",
+      "world": "letter"
     }
   ]
 }

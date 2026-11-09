@@ -374,6 +374,60 @@
       "cta": "Turn the no into your next yes - internwise.co.uk",
       "used": null,
       "source": "Self-Help (1859), ch. 11"
+    },
+    {
+      "id": "q048",
+      "text": "Blessed is he who has found his work; let him ask no other blessedness.",
+      "author": "Thomas Carlyle",
+      "theme": "purpose",
+      "cta": "Find work worth finding - internwise.co.uk",
+      "used": null,
+      "source": "Past and Present (1843), Book III, ch. 11"
+    },
+    {
+      "id": "q049",
+      "text": "Nothing great was ever achieved without enthusiasm.",
+      "author": "Ralph Waldo Emerson",
+      "theme": "motivation",
+      "cta": "Apply for the role that excites you - internwise.co.uk",
+      "used": null,
+      "source": "\"Circles\", Essays: First Series (1841)"
+    },
+    {
+      "id": "q050",
+      "text": "It is not enough to be industrious; so are the ants. What are you industrious about?",
+      "author": "Henry David Thoreau",
+      "theme": "purpose",
+      "cta": "Point your effort somewhere - internwise.co.uk",
+      "used": null,
+      "source": "Letter to H. G. O. Blake, 16 Nov 1857"
+    },
+    {
+      "id": "q051",
+      "text": "While we are postponing, life speeds by.",
+      "author": "Seneca",
+      "theme": "action",
+      "cta": "Send the application today - internwise.co.uk",
+      "used": null,
+      "source": "Letters to Lucilius, Letter I (trans. Gummere)"
+    },
+    {
+      "id": "q052",
+      "text": "Optimism is the faith that leads to achievement; nothing can be done without hope.",
+      "author": "Helen Keller",
+      "theme": "resilience",
+      "cta": "Keep hoping, keep applying - internwise.co.uk",
+      "used": null,
+      "source": "Optimism (1903)"
+    },
+    {
+      "id": "q053",
+      "text": "If it is not right, do not do it; if it is not true, do not say it.",
+      "author": "Marcus Aurelius",
+      "theme": "integrity",
+      "cta": "Honest CVs win the long game - internwise.co.uk",
+      "used": null,
+      "source": "Meditations, XII.17 (trans. Long)"
     }
   ]
 }

@@ -36,6 +36,10 @@ def fonts():
         for fn,w in [("Inter-Bold.ttf",700),("Inter-SemiBold.ttf",600),("Inter-Regular.ttf",400)]:
             b=_b64(os.path.join(FN,fn))
             if b: css+=f"@font-face{{font-family:'Inter';src:url(data:font/truetype;base64,{b});font-weight:{w};}}"
+    # The variable font keeps overlapping contours, which -webkit-text-stroke draws
+    # as stray inner lines. Outlined type uses the static Bold, whose contours are merged.
+    b=_b64(os.path.join(FN,"Inter-Bold.ttf"))
+    if b: css+=f"@font-face{{font-family:'InterStatic';src:url(data:font/truetype;base64,{b});font-weight:700;}}"
     for fn,w in [("DMSans-Bold.ttf",700),("DMSans-Medium.ttf",500),("DMSans-Regular.ttf",400)]:
         b=_b64(os.path.join(FN,fn))
         if b: css+=f"@font-face{{font-family:'DM Sans';src:url(data:font/truetype;base64,{b});font-weight:{w};}}"

@@ -934,6 +934,36 @@
       "cutout": "nuno_thoughtful_2",
       "week": "adhoc",
       "date": "2026-11-03"
+    },
+    {
+      "cutout": "nuno_authority_1",
+      "week": "week24",
+      "date": "2026-11-08"
+    },
+    {
+      "cutout": "nuno_dothis_2",
+      "week": "week24",
+      "date": "2026-11-08"
+    },
+    {
+      "cutout": "nuno_utility_3",
+      "week": "week24",
+      "date": "2026-11-08"
+    },
+    {
+      "cutout": "nuno_offers_4",
+      "week": "week24",
+      "date": "2026-11-08"
+    },
+    {
+      "cutout": "nuno_utility_4",
+      "week": "week24",
+      "date": "2026-11-08"
+    },
+    {
+      "cutout": "nuno_offers_1",
+      "week": "week24",
+      "date": "2026-11-08"
     }
   ]
 }

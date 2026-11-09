@@ -1,35 +1,42 @@
 {
-  "week": "week23",
-  "generatedAt": "2026-11-02T21:35:05Z",
+  "week": "week24",
+  "generatedAt": "2026-11-08T20:13:57Z",
   "needByFamily": {
     "authority": 1,
-    "dothis": 2,
-    "thoughtful": 1
+    "dothis": 1,
+    "offers": 2,
+    "utility": 1
   },
   "repeats": [
     {
-      "label": "education/slate/cover",
+      "label": "education/midnight/cover",
       "cutout": "nuno_authority_1",
       "family": "authority",
-      "week": "week23"
+      "week": "week24"
     },
     {
-      "label": "education/slate/cta",
-      "cutout": "nuno_dothis_4",
+      "label": "education/midnight/cta",
+      "cutout": "nuno_dothis_2",
       "family": "dothis",
-      "week": "week23"
+      "week": "week24"
     },
     {
-      "label": "education/cream/cover",
-      "cutout": "nuno_thoughtful_2",
-      "family": "thoughtful",
-      "week": "week23"
+      "label": "education/flash/cta",
+      "cutout": "nuno_offers_4",
+      "family": "offers",
+      "week": "week24"
     },
     {
-      "label": "education/cream/cta",
-      "cutout": "nuno_dothis_1",
-      "family": "dothis",
-      "week": "week23"
+      "label": "education/marker/cover",
+      "cutout": "nuno_utility_4",
+      "family": "utility",
+      "week": "week24"
+    },
+    {
+      "label": "education/marker/cta",
+      "cutout": "nuno_offers_1",
+      "family": "offers",
+      "week": "week24"
     }
   ]
 }
