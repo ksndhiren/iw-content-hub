@@ -19,7 +19,7 @@ NAVY_TOP, NAVY_BOT = (26, 26, 46), (12, 12, 28)
 # Lanes that get a Story companion (IG + FB). Employer posts to Facebook (and,
 # once linked, Instagram), so it needs a story.png too - without one the Story
 # job fails at post time with Ayrshare error 164 (media not found).
-STORY_LANES = {"news", "quote", "fun", "education", "employer", "engagement"}
+STORY_LANES = {"news", "quote", "fun", "education", "employer", "engagement", "infographic"}
 
 
 def _bg():
@@ -32,22 +32,25 @@ def _bg():
     return bg
 
 
-def _mask():
-    m = Image.new("L", (CARD, CARD), 0)
-    ImageDraw.Draw(m).rounded_rectangle([0, 0, CARD, CARD], radius=RADIUS, fill=255)
+def _mask(w=CARD, h=CARD):
+    m = Image.new("L", (w, h), 0)
+    ImageDraw.Draw(m).rounded_rectangle([0, 0, w, h], radius=RADIUS, fill=255)
     return m
 
 
 def make_story(src, dst):
-    card = Image.open(src).convert("RGB").resize((CARD, CARD), Image.LANCZOS)
+    card = Image.open(src).convert("RGB")
+    # Keep the slide's own ratio: the 4:5 infographic was squashed into a square.
+    cw, ch = CARD, round(CARD * card.height / card.width)
+    card = card.resize((cw, ch), Image.LANCZOS)
     bg = _bg()
-    cx, cy = (W - CARD) // 2, (H - CARD) // 2
+    cx, cy = (W - cw) // 2, (H - ch) // 2
     shadow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     ImageDraw.Draw(shadow).rounded_rectangle(
-        [cx, cy + 16, cx + CARD, cy + CARD + 16], radius=RADIUS, fill=(0, 0, 0, 150))
+        [cx, cy + 16, cx + cw, cy + ch + 16], radius=RADIUS, fill=(0, 0, 0, 150))
     shadow = shadow.filter(ImageFilter.GaussianBlur(28))
     bg.paste(Image.new("RGB", (W, H), (0, 0, 0)), (0, 0), shadow.split()[3])
-    bg.paste(card, (cx, cy), _mask())
+    bg.paste(card, (cx, cy), _mask(cw, ch))
     os.makedirs(os.path.dirname(dst), exist_ok=True)
     bg.save(dst, "PNG")
 

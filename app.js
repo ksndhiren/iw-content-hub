@@ -337,7 +337,8 @@
   function laneLabel(lane) {
     const labels = {
       engagement: 'Poll',
-      fun: 'Fun'
+      fun: 'Fun',
+      infographic: 'Infographic'
     };
     return labels[lane] || lane;
   }
