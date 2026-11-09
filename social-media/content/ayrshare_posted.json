@@ -7511,5 +7511,125 @@
     "at": "2026-11-09T15:37:02.675772",
     "network": "facebook",
     "scheduleDate": "2026-11-10T08:00:00Z"
+  },
+  "week24-mon-employerguide:linkedin": {
+    "id": "2uJUaT1YkA1nBVQFnE5v",
+    "at": "2026-11-09T18:06:15.831363",
+    "network": "linkedin",
+    "scheduleDate": null
+  },
+  "week24-mon-employerguide:facebook": {
+    "id": "aGWJB3KIYr4aSJA9xzdL",
+    "at": "2026-11-09T18:06:27.232415",
+    "network": "facebook",
+    "scheduleDate": null
+  },
+  "week24-mon-employerguide:gmb": {
+    "id": "gFKiRiThMa9RPqqxz6rH",
+    "at": "2026-11-09T18:06:31.944574",
+    "network": "gmb",
+    "scheduleDate": null
+  },
+  "week24-mon-employerguide:pinterest": {
+    "id": "xjt0ik8I0oGBk1l59WPM",
+    "at": "2026-11-09T18:06:38.623288",
+    "network": "pinterest",
+    "scheduleDate": null
+  },
+  "week24-tue-employerguide:linkedin": {
+    "id": "RKbttJUZq35UMAsnMghN",
+    "at": "2026-11-09T18:06:45.479482",
+    "network": "linkedin",
+    "scheduleDate": "2026-11-10T10:00:00Z"
+  },
+  "week24-tue-employerguide:facebook": {
+    "id": "2QDeBFpUZ3XlCIVAdRTO",
+    "at": "2026-11-09T18:06:48.512958",
+    "network": "facebook",
+    "scheduleDate": "2026-11-10T10:00:00Z"
+  },
+  "week24-tue-employerguide:gmb": {
+    "id": "WpO2cRlXZfhjMwR4DSaB",
+    "at": "2026-11-09T18:06:50.308713",
+    "network": "gmb",
+    "scheduleDate": "2026-11-10T10:00:00Z"
+  },
+  "week24-tue-employerguide:pinterest": {
+    "id": "a7OO1gApsS0mTD23xpaB",
+    "at": "2026-11-09T18:06:52.730752",
+    "network": "pinterest",
+    "scheduleDate": "2026-11-10T10:00:00Z"
+  },
+  "week24-wed-employerguide:linkedin": {
+    "id": "weM6HR43TsVG1hvJ1vyI",
+    "at": "2026-11-09T18:06:56.111376",
+    "network": "linkedin",
+    "scheduleDate": "2026-11-11T10:00:00Z"
+  },
+  "week24-wed-employerguide:facebook": {
+    "id": "mXszaibFOb0xURYI7Gqx",
+    "at": "2026-11-09T18:06:59.387735",
+    "network": "facebook",
+    "scheduleDate": "2026-11-11T10:00:00Z"
+  },
+  "week24-wed-employerguide:gmb": {
+    "id": "qAXvJg6iGcONv8ck1wvW",
+    "at": "2026-11-09T18:07:01.946860",
+    "network": "gmb",
+    "scheduleDate": "2026-11-11T10:00:00Z"
+  },
+  "week24-wed-employerguide:pinterest": {
+    "id": "rZ49pUXLj3Sk15OXPtxk",
+    "at": "2026-11-09T18:07:03.591292",
+    "network": "pinterest",
+    "scheduleDate": "2026-11-11T10:00:00Z"
+  },
+  "week24-thu-employerguide:linkedin": {
+    "id": "uoxQNy35qhJkxi6rnYtW",
+    "at": "2026-11-09T18:07:08.194251",
+    "network": "linkedin",
+    "scheduleDate": "2026-11-12T10:00:00Z"
+  },
+  "week24-thu-employerguide:facebook": {
+    "id": "HyJGySKo89xYu6i7CUnR",
+    "at": "2026-11-09T18:07:16.489156",
+    "network": "facebook",
+    "scheduleDate": "2026-11-12T10:00:00Z"
+  },
+  "week24-thu-employerguide:gmb": {
+    "id": "RXfU7NHQotyMiYdaojWc",
+    "at": "2026-11-09T18:07:19.151908",
+    "network": "gmb",
+    "scheduleDate": "2026-11-12T10:00:00Z"
+  },
+  "week24-thu-employerguide:pinterest": {
+    "id": "R9JW1AatuiBuA2YvF4Vk",
+    "at": "2026-11-09T18:07:20.431471",
+    "network": "pinterest",
+    "scheduleDate": "2026-11-12T10:00:00Z"
+  },
+  "week24-fri-employerguide:linkedin": {
+    "id": "Iw6qaD0vblB8PfUuh8Ha",
+    "at": "2026-11-09T18:07:25.705252",
+    "network": "linkedin",
+    "scheduleDate": "2026-11-13T10:00:00Z"
+  },
+  "week24-fri-employerguide:facebook": {
+    "id": "ajQwhPJ8AdPP70zW4cpJ",
+    "at": "2026-11-09T18:07:40.247665",
+    "network": "facebook",
+    "scheduleDate": "2026-11-13T10:00:00Z"
+  },
+  "week24-fri-employerguide:gmb": {
+    "id": "ozsCkNpb1PtcZkWDT8Lw",
+    "at": "2026-11-09T18:07:43.575194",
+    "network": "gmb",
+    "scheduleDate": "2026-11-13T10:00:00Z"
+  },
+  "week24-fri-employerguide:pinterest": {
+    "id": "90mWrsYTbFzETKuMVfIS",
+    "at": "2026-11-09T18:07:45.468508",
+    "network": "pinterest",
+    "scheduleDate": "2026-11-13T10:00:00Z"
   }
 }

@@ -267,7 +267,13 @@ def cta(g):
 
 def render_guide(slug, out_dir):
     g = json.load(open(os.path.join(SPECS, slug + ".json")))
-    slides = [cover(g)] + [step(g, i) for i in range(len(g["steps"]))] + [cta(g)]
+    world = g.get("world", "playbook")
+    if world == "playbook":
+        fc, fs, fe = cover, step, cta
+    else:
+        import employer_guide_worlds as WD
+        fc, fs, fe = WD.WORLDS[world]
+    slides = [fc(g)] + [fs(g, i) for i in range(len(g["steps"]))] + [fe(g)]
     return [L.render(out_dir, f"slide_{k + 1}.png", html, w=W, h=H) for k, html in enumerate(slides)]
 
 
@@ -295,7 +301,7 @@ def add_to_week(wid, slugs, upload=True):
                       "platform": "Multi-Platform", "format": "Carousel",
                       "slides": [os.path.basename(p) for p in paths], "status": "in-review", "time": TIME,
                       "caption": caps["ig-fb"], "hashtags": tags["ig-fb"], "captions": caps,
-                      "hashtagsByPlatform": tags, "altText": g["altText"], "world": "playbook",
+                      "hashtagsByPlatform": tags, "altText": g["altText"], "world": g.get("world", "playbook"),
                       "guide": slug, "searchQuery": g.get("query", "")})
     data = json.load(open(B.WEEKS))
     week = next((w for w in data["weeks"] if w.get("id") == wid), None)

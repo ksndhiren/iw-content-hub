@@ -12806,17 +12806,10 @@
               "#internships"
             ]
           }
-        }
-      ]
-    },
-    {
-      "id": "week25",
-      "label": "Week 25",
-      "weekCommencing": "2026-11-16",
-      "posts": [
+        },
         {
-          "id": "week25-mon-employerguide",
-          "day": "Mon 16 Nov",
+          "id": "week24-mon-employerguide",
+          "day": "Mon 9 Nov",
           "lane": "employer_guide",
           "title": "How to Hire an Intern in the UK: 6 Steps",
           "platform": "Multi-Platform",
@@ -12831,7 +12824,7 @@
             "slide_7.png",
             "slide_8.png"
           ],
-          "status": "in-review",
+          "status": "approved",
           "time": "10:00",
           "caption": "How to hire an intern in the UK: 6 steps from first idea to first day. Define the role, get the paperwork right, write a clear job ad, advertise where students look, interview fairly, then onboard and mentor. Save this checklist for your next hire. internwise.co.uk/employers",
           "hashtags": [
@@ -12863,104 +12856,8 @@
           "searchQuery": "how to hire an intern uk"
         },
         {
-          "id": "week25-tue-employerguide",
-          "day": "Tue 17 Nov",
-          "lane": "employer_guide",
-          "title": "Admin Intern Job Description Template",
-          "platform": "Multi-Platform",
-          "format": "Carousel",
-          "slides": [
-            "slide_1.png",
-            "slide_2.png",
-            "slide_3.png",
-            "slide_4.png",
-            "slide_5.png",
-            "slide_6.png",
-            "slide_7.png",
-            "slide_8.png"
-          ],
-          "status": "in-review",
-          "time": "10:00",
-          "caption": "Admin intern job description template. Copy and adapt it in 6 parts: job title, about the role, key tasks, skills, practical details and how to apply. Works for any intern role. Save it for your next hire. internwise.co.uk/employers",
-          "hashtags": [
-            "#hiringinterns",
-            "#jobdescription",
-            "#internships",
-            "#smallbusinessuk"
-          ],
-          "captions": {
-            "linkedin": "Admin intern job description: a template you can copy.\n\nA clear job description gets you better applications. Here is the structure we recommend, in 6 parts:\n\n1. Job title: the words students actually search for\n2. About the role: the team, the goal, the supervisor\n3. Key tasks: 4 to 6 real ones\n4. Skills: must-haves separate from nice-to-haves\n5. Practical details: dates, hours, location, who can apply\n6. How to apply: what to send, the closing date, when they will hear back\n\nSwipe through, save it, and adapt it for any intern role.\n\nPost your internship at internwise.co.uk/employers",
-            "ig-fb": "Admin intern job description template. Copy and adapt it in 6 parts: job title, about the role, key tasks, skills, practical details and how to apply. Works for any intern role. Save it for your next hire. internwise.co.uk/employers"
-          },
-          "hashtagsByPlatform": {
-            "linkedin": [
-              "#hiring",
-              "#jobdescription",
-              "#internships"
-            ],
-            "ig-fb": [
-              "#hiringinterns",
-              "#jobdescription",
-              "#internships",
-              "#smallbusinessuk"
-            ]
-          },
-          "altText": "Employer guide carousel: an admin intern job description template in 6 parts. Job title, about the role, key tasks, skills you need, practical details, and how to apply, each with example lines.",
-          "world": "playbook",
-          "guide": "intern-job-description-template",
-          "searchQuery": "admin intern job description"
-        },
-        {
-          "id": "week25-wed-employerguide",
-          "day": "Wed 18 Nov",
-          "lane": "employer_guide",
-          "title": "The Benefits of Hiring Interns for Small Businesses",
-          "platform": "Multi-Platform",
-          "format": "Carousel",
-          "slides": [
-            "slide_1.png",
-            "slide_2.png",
-            "slide_3.png",
-            "slide_4.png",
-            "slide_5.png",
-            "slide_6.png",
-            "slide_7.png",
-            "slide_8.png"
-          ],
-          "status": "in-review",
-          "time": "10:00",
-          "caption": "The benefits of hiring interns for small businesses: fresh ideas, extra capacity, digital skills, a chance to try before you hire, mentoring experience for your team and a stronger employer brand. Save this for your next planning meeting. internwise.co.uk/employers",
-          "hashtags": [
-            "#smallbusinessuk",
-            "#hiringinterns",
-            "#internships",
-            "#teamgrowth"
-          ],
-          "captions": {
-            "linkedin": "The benefits of hiring interns, for small businesses.\n\nInterns are not just for big graduate schemes. For a small team, the right intern can bring:\n\n1. Fresh ideas and new eyes on old processes\n2. Extra capacity for the project stuck on the back burner\n3. Digital and social media skills\n4. A low-risk way to try before you hire\n5. Mentoring experience for your own staff\n6. A stronger employer brand with students and universities\n\nWhich of these would make the biggest difference to your team?\n\nFind your next intern at internwise.co.uk/employers",
-            "ig-fb": "The benefits of hiring interns for small businesses: fresh ideas, extra capacity, digital skills, a chance to try before you hire, mentoring experience for your team and a stronger employer brand. Save this for your next planning meeting. internwise.co.uk/employers"
-          },
-          "hashtagsByPlatform": {
-            "linkedin": [
-              "#smallbusiness",
-              "#hiring",
-              "#internships"
-            ],
-            "ig-fb": [
-              "#smallbusinessuk",
-              "#hiringinterns",
-              "#internships",
-              "#teamgrowth"
-            ]
-          },
-          "altText": "Employer guide carousel: 6 benefits of hiring interns for small businesses. Fresh ideas, extra capacity, digital and social skills, try before you hire, develop your team, and grow your employer brand.",
-          "world": "playbook",
-          "guide": "benefits-of-hiring-interns",
-          "searchQuery": "benefits of hiring interns"
-        },
-        {
-          "id": "week25-thu-employerguide",
-          "day": "Thu 19 Nov",
+          "id": "week24-tue-employerguide",
+          "day": "Tue 10 Nov",
           "lane": "employer_guide",
           "title": "Screening and Shortlisting Intern Applicants",
           "platform": "Multi-Platform",
@@ -12975,7 +12872,7 @@
             "slide_7.png",
             "slide_8.png"
           ],
-          "status": "in-review",
+          "status": "approved",
           "time": "10:00",
           "caption": "Screening and shortlisting intern applicants in 6 steps: set your criteria, build a simple scorecard, look for potential, reduce bias, add a short task and close the loop with everyone. Save it for your next hiring round. internwise.co.uk/employers",
           "hashtags": [
@@ -13002,13 +12899,109 @@
             ]
           },
           "altText": "Employer guide carousel: screening and shortlisting intern applicants in 6 steps. Set your criteria first, build a simple scorecard, look for potential, reduce bias, add a short task, and close the loop.",
-          "world": "playbook",
+          "world": "pipeline",
           "guide": "screening-and-shortlisting",
           "searchQuery": "screening and shortlisting in recruitment process"
         },
         {
-          "id": "week25-fri-employerguide",
-          "day": "Fri 20 Nov",
+          "id": "week24-wed-employerguide",
+          "day": "Wed 11 Nov",
+          "lane": "employer_guide",
+          "title": "Admin Intern Job Description Template",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png",
+            "slide_8.png"
+          ],
+          "status": "approved",
+          "time": "10:00",
+          "caption": "Admin intern job description template. Copy and adapt it in 6 parts: job title, about the role, key tasks, skills, practical details and how to apply. Works for any intern role. Save it for your next hire. internwise.co.uk/employers",
+          "hashtags": [
+            "#hiringinterns",
+            "#jobdescription",
+            "#internships",
+            "#smallbusinessuk"
+          ],
+          "captions": {
+            "linkedin": "Admin intern job description: a template you can copy.\n\nA clear job description gets you better applications. Here is the structure we recommend, in 6 parts:\n\n1. Job title: the words students actually search for\n2. About the role: the team, the goal, the supervisor\n3. Key tasks: 4 to 6 real ones\n4. Skills: must-haves separate from nice-to-haves\n5. Practical details: dates, hours, location, who can apply\n6. How to apply: what to send, the closing date, when they will hear back\n\nSwipe through, save it, and adapt it for any intern role.\n\nPost your internship at internwise.co.uk/employers",
+            "ig-fb": "Admin intern job description template. Copy and adapt it in 6 parts: job title, about the role, key tasks, skills, practical details and how to apply. Works for any intern role. Save it for your next hire. internwise.co.uk/employers"
+          },
+          "hashtagsByPlatform": {
+            "linkedin": [
+              "#hiring",
+              "#jobdescription",
+              "#internships"
+            ],
+            "ig-fb": [
+              "#hiringinterns",
+              "#jobdescription",
+              "#internships",
+              "#smallbusinessuk"
+            ]
+          },
+          "altText": "Employer guide carousel: an admin intern job description template in 6 parts. Job title, about the role, key tasks, skills you need, practical details, and how to apply, each with example lines.",
+          "world": "document",
+          "guide": "intern-job-description-template",
+          "searchQuery": "admin intern job description"
+        },
+        {
+          "id": "week24-thu-employerguide",
+          "day": "Thu 12 Nov",
+          "lane": "employer_guide",
+          "title": "The Benefits of Hiring Interns for Small Businesses",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png",
+            "slide_8.png"
+          ],
+          "status": "approved",
+          "time": "10:00",
+          "caption": "The benefits of hiring interns for small businesses: fresh ideas, extra capacity, digital skills, a chance to try before you hire, mentoring experience for your team and a stronger employer brand. Save this for your next planning meeting. internwise.co.uk/employers",
+          "hashtags": [
+            "#smallbusinessuk",
+            "#hiringinterns",
+            "#internships",
+            "#teamgrowth"
+          ],
+          "captions": {
+            "linkedin": "The benefits of hiring interns, for small businesses.\n\nInterns are not just for big graduate schemes. For a small team, the right intern can bring:\n\n1. Fresh ideas and new eyes on old processes\n2. Extra capacity for the project stuck on the back burner\n3. Digital and social media skills\n4. A low-risk way to try before you hire\n5. Mentoring experience for your own staff\n6. A stronger employer brand with students and universities\n\nWhich of these would make the biggest difference to your team?\n\nFind your next intern at internwise.co.uk/employers",
+            "ig-fb": "The benefits of hiring interns for small businesses: fresh ideas, extra capacity, digital skills, a chance to try before you hire, mentoring experience for your team and a stronger employer brand. Save this for your next planning meeting. internwise.co.uk/employers"
+          },
+          "hashtagsByPlatform": {
+            "linkedin": [
+              "#smallbusiness",
+              "#hiring",
+              "#internships"
+            ],
+            "ig-fb": [
+              "#smallbusinessuk",
+              "#hiringinterns",
+              "#internships",
+              "#teamgrowth"
+            ]
+          },
+          "altText": "Employer guide carousel: 6 benefits of hiring interns for small businesses. Fresh ideas, extra capacity, digital and social skills, try before you hire, develop your team, and grow your employer brand.",
+          "world": "editorial",
+          "guide": "benefits-of-hiring-interns",
+          "searchQuery": "benefits of hiring interns"
+        },
+        {
+          "id": "week24-fri-employerguide",
+          "day": "Fri 13 Nov",
           "lane": "employer_guide",
           "title": "Hiring Your First Intern as a Startup",
           "platform": "Multi-Platform",
@@ -13023,7 +13016,7 @@
             "slide_7.png",
             "slide_8.png"
           ],
-          "status": "in-review",
+          "status": "approved",
           "time": "10:00",
           "caption": "Hiring your first intern as a startup: pick one clear project, cover the basics, sell the startup experience, hire for attitude, make time to mentor and plan the ending. Save this for your first hire. internwise.co.uk/employers",
           "hashtags": [
@@ -13050,12 +13043,11 @@
             ]
           },
           "altText": "Employer guide carousel: hiring your first intern as a startup in 6 steps. Pick one clear project, cover the basics, sell the startup experience, hire for attitude, make time to mentor, and plan the ending.",
-          "world": "playbook",
+          "world": "pop",
           "guide": "first-intern-startup",
           "searchQuery": "startup intern"
         }
-      ],
-      "builtAt": 1794234261
+      ]
     }
   ]
 }
