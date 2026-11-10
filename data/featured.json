@@ -3,61 +3,181 @@
   "label": "Featured Jobs",
   "posts": [
     {
-      "id": "job-35269",
-      "sourceId": "35269",
-      "sourceUrl": "https://www.internwise.co.uk/job/35269/administrative-support-intern",
-      "addedAt": "2026-11-09T15:45:18Z",
-      "day": "WHITE CROSS CLINIC LIMITED",
-      "title": "Administrative Support Intern",
+      "id": "job-35403",
+      "sourceId": "35403",
+      "sourceUrl": "https://www.internwise.co.uk/job/35403/ai-development-intern-software-fintech-rd",
+      "addedAt": "2026-11-10T14:38:12Z",
+      "day": "FINTECH SOFTWARE ENGINEERS LTD",
+      "title": "AI Development Intern - Software & Fintech R&D",
       "platform": "Featured Job",
       "format": "Single",
       "slides": [
-        "job-35269-2026-08-19-employers-sm-ads-v1.png"
+        "job-35403-2026-08-19-employers-sm-ads-v1.png"
       ],
       "status": "in-review",
-      "caption": "Serious about a administrative support career? Get the experience employers actually look for.\n\n📍 UK, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35269/administrative-support-intern",
+      "caption": "Serious about a ai development software and fintech randd career? Get the experience employers actually look for.\n\n📍 Bedford, East of England\n\nApply now 👉 https://www.internwise.co.uk/job/35403/ai-development-intern-software-fintech-rd",
       "hashtags": [
         "#internship",
         "#londonjobs",
-        "#internships",
+        "#marketingjobs",
         "#hiring",
         "#graduatejobs"
       ],
       "captions": {
-        "ig-fb": "Serious about a administrative support career? Get the experience employers actually look for.\n\n📍 UK, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35269/administrative-support-intern",
-        "linkedin": "Serious about a administrative support career? Get the experience employers actually look for.\n\n📍 UK, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35269/administrative-support-intern",
-        "x": "Serious about a administrative support career? Get the experience employers actually look for.\n\n📍 UK, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35269/administrative-support-intern"
+        "ig-fb": "Serious about a ai development software and fintech randd career? Get the experience employers actually look for.\n\n📍 Bedford, East of England\n\nApply now 👉 https://www.internwise.co.uk/job/35403/ai-development-intern-software-fintech-rd",
+        "linkedin": "Serious about a ai development software and fintech randd career? Get the experience employers actually look for.\n\n📍 Bedford, East of England\n\nApply now 👉 https://www.internwise.co.uk/job/35403/ai-development-intern-software-fintech-rd",
+        "x": "Serious about a ai development software and fintech randd career? Get the experience employers actually look for.\n\n📍 Bedford, East of England\n\nApply now 👉 https://www.internwise.co.uk/job/35403/ai-development-intern-software-fintech-rd"
       },
       "hashtagsByPlatform": {
         "ig-fb": [
           "#internship",
           "#londonjobs",
-          "#internships",
+          "#marketingjobs",
           "#hiring",
           "#graduatejobs"
         ],
         "linkedin": [
           "#hiring",
           "#internship",
-          "#internships",
+          "#marketingjobs",
           "#careers"
         ],
         "x": [
-          "#internships",
+          "#marketingjobs",
           "#hiring"
         ]
       },
-      "sector": "Administration",
-      "sectorStyle": "generic",
+      "sector": "Development",
+      "sectorStyle": "marketing",
       "palette": {
         "version": "2026-08-19-employers-sm-ads-v1",
-        "style": "generic",
-        "sector": "Administration",
-        "accent": "#4F7CAC",
-        "accentDark": "#3FA985",
+        "style": "marketing",
+        "sector": "Development",
+        "accent": "#2BD452",
+        "accentDark": "#D2415C",
         "background": [
-          "#26343F",
-          "#43586A"
+          "#7E2038",
+          "#C43F5C"
+        ],
+        "spark": "#D4FF3D"
+      }
+    },
+    {
+      "id": "job-35316",
+      "sourceId": "35316",
+      "sourceUrl": "https://www.internwise.co.uk/job/35316/buyerprocurement",
+      "addedAt": "2026-11-10T14:38:12Z",
+      "day": "WHITE CROSS CLINIC LIMITED",
+      "title": "Buyer/Procurement",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35316-2026-08-19-employers-sm-ads-v1.png"
+      ],
+      "status": "in-review",
+      "caption": "A natural at winning people over? Learn to pitch, close and grow real revenue.\n\n📍 London, United Kingdom, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35316/buyerprocurement",
+      "hashtags": [
+        "#internship",
+        "#londonjobs",
+        "#salesjobs",
+        "#hiring",
+        "#graduatejobs"
+      ],
+      "captions": {
+        "ig-fb": "A natural at winning people over? Learn to pitch, close and grow real revenue.\n\n📍 London, United Kingdom, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35316/buyerprocurement",
+        "linkedin": "A natural at winning people over? Learn to pitch, close and grow real revenue.\n\n📍 London, United Kingdom, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35316/buyerprocurement",
+        "x": "A natural at winning people over? Learn to pitch, close and grow real revenue.\n\n📍 London, United Kingdom, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35316/buyerprocurement"
+      },
+      "hashtagsByPlatform": {
+        "ig-fb": [
+          "#internship",
+          "#londonjobs",
+          "#salesjobs",
+          "#hiring",
+          "#graduatejobs"
+        ],
+        "linkedin": [
+          "#hiring",
+          "#internship",
+          "#salesjobs",
+          "#careers"
+        ],
+        "x": [
+          "#salesjobs",
+          "#hiring"
+        ]
+      },
+      "sector": "Procurement",
+      "sectorStyle": "sales",
+      "palette": {
+        "version": "2026-08-19-employers-sm-ads-v1",
+        "style": "sales",
+        "sector": "Procurement",
+        "accent": "#582BD4",
+        "accentDark": "#E5771E",
+        "background": [
+          "#5A2A12",
+          "#A85A1E"
+        ],
+        "spark": "#D4FF3D"
+      }
+    },
+    {
+      "id": "job-35205",
+      "sourceId": "35205",
+      "sourceUrl": "https://www.internwise.co.uk/job/35205/business-advertising",
+      "addedAt": "2026-11-10T14:38:12Z",
+      "day": "WHITE CROSS CLINIC LIMITED",
+      "title": "Business Advertising",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35205-2026-08-19-employers-sm-ads-v1.png"
+      ],
+      "status": "in-review",
+      "caption": "Serious about a business advertising career? Get the experience employers actually look for.\n\n📍 London, United Kingdom, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35205/business-advertising",
+      "hashtags": [
+        "#internship",
+        "#londonjobs",
+        "#marketingjobs",
+        "#hiring",
+        "#graduatejobs"
+      ],
+      "captions": {
+        "ig-fb": "Serious about a business advertising career? Get the experience employers actually look for.\n\n📍 London, United Kingdom, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35205/business-advertising",
+        "linkedin": "Serious about a business advertising career? Get the experience employers actually look for.\n\n📍 London, United Kingdom, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35205/business-advertising",
+        "x": "Serious about a business advertising career? Get the experience employers actually look for.\n\n📍 London, United Kingdom, Central London\n\nApply now 👉 https://www.internwise.co.uk/job/35205/business-advertising"
+      },
+      "hashtagsByPlatform": {
+        "ig-fb": [
+          "#internship",
+          "#londonjobs",
+          "#marketingjobs",
+          "#hiring",
+          "#graduatejobs"
+        ],
+        "linkedin": [
+          "#hiring",
+          "#internship",
+          "#marketingjobs",
+          "#careers"
+        ],
+        "x": [
+          "#marketingjobs",
+          "#hiring"
+        ]
+      },
+      "sector": "Advertising",
+      "sectorStyle": "marketing",
+      "palette": {
+        "version": "2026-08-19-employers-sm-ads-v1",
+        "style": "marketing",
+        "sector": "Advertising",
+        "accent": "#E24A68",
+        "accentDark": "#D2415C",
+        "background": [
+          "#7E2038",
+          "#C43F5C"
         ],
         "spark": "#D4FF3D"
       }
