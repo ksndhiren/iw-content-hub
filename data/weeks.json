@@ -11898,7 +11898,7 @@
       "id": "week24",
       "label": "Week 24",
       "weekCommencing": "2026-11-09",
-      "builtAt": 1794238603,
+      "builtAt": 1794321213,
       "posts": [
         {
           "id": "week24-mon-news",
@@ -13046,6 +13046,50 @@
           "world": "pop",
           "guide": "first-intern-startup",
           "searchQuery": "startup intern"
+        },
+        {
+          "id": "week24-wed-news",
+          "day": "Wed 11 Nov",
+          "lane": "news",
+          "title": "Kirklees College Celebrates Graduates",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "Kirklees College recently held a graduation ceremony at Cedar Court Hotel in Huddersfield, celebrating students who completed Higher Education and Higher Skills courses. This event marks an important milestone, recognising the hard work and dedication of graduates who have equipped themselves with advanced skills.\n\nFor students and recent graduates, this highlights the value of pursuing higher education. Having a higher qualification can significantly enhance your job prospects, making you stand out in a competitive job market.\n\nInternships play a critical role in this journey. They offer a chance to apply your academic knowledge in real-world settings, enhancing your employability. Practical experience gained through internships can make you a more attractive candidate to potential employers.\n\nWhether you've graduated or are still studying, consider how internships can boost your career readiness. Source: FE News.",
+          "hashtags": [
+            "#graduation",
+            "#highereducation",
+            "#careerready",
+            "#internships",
+            "#ukgraduates"
+          ],
+          "captions": {
+            "ig-fb": "Kirklees College recently held a graduation ceremony at Cedar Court Hotel in Huddersfield, celebrating students who completed Higher Education and Higher Skills courses. This event marks an important milestone, recognising the hard work and dedication of graduates who have equipped themselves with advanced skills.\n\nFor students and recent graduates, this highlights the value of pursuing higher education. Having a higher qualification can significantly enhance your job prospects, making you stand out in a competitive job market.\n\nInternships play a critical role in this journey. They offer a chance to apply your academic knowledge in real-world settings, enhancing your employability. Practical experience gained through internships can make you a more attractive candidate to potential employers.\n\nWhether you've graduated or are still studying, consider how internships can boost your career readiness. Source: FE News.",
+            "linkedin": "Kirklees College recently hosted its annual graduation ceremony at Cedar Court Hotel in Huddersfield, honouring students who completed Higher Education and Higher Skills courses. This event celebrated the achievements of graduates who have invested in their education to gain advanced qualifications.\n\nThis celebration underscores the importance of higher education in boosting career opportunities. For students and graduates, having a higher qualification can provide a significant advantage in the job market, opening doors to better employment prospects.\n\nInternships are a vital part of this equation. They offer practical experience, allowing you to apply your academic learning in real-world scenarios. This practical edge can make you more appealing to employers and enhance your career readiness.\n\nIf you're a student or recent graduate, consider the role internships can play in your career path. Source: FE News.",
+            "x": "Kirklees College celebrated its graduates at Cedar Court Hotel, showcasing the value of higher education. Graduates with advanced skills stand out in the job market. Internships offer practical experience, boosting employability. (Source: FE News)",
+            "threads": "Kirklees College marked its graduates' achievements at Cedar Court Hotel. Higher education equips you with valuable skills for the job market. Internships add practical experience, enhancing your appeal to employers. Explore more at www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#graduation",
+              "#highereducation",
+              "#careerready",
+              "#internships",
+              "#ukgraduates"
+            ],
+            "linkedin": [
+              "#highereducation",
+              "#graduatecareers",
+              "#internships"
+            ],
+            "x": [
+              "#graduation",
+              "#internships"
+            ]
+          }
         }
       ]
     }
