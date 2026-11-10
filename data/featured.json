@@ -3,66 +3,6 @@
   "label": "Featured Jobs",
   "posts": [
     {
-      "id": "job-35403",
-      "sourceId": "35403",
-      "sourceUrl": "https://www.internwise.co.uk/job/35403/ai-development-intern-software-fintech-rd",
-      "addedAt": "2026-11-10T14:38:12Z",
-      "day": "FINTECH SOFTWARE ENGINEERS LTD",
-      "title": "AI Development Intern - Software & Fintech R&D",
-      "platform": "Featured Job",
-      "format": "Single",
-      "slides": [
-        "job-35403-2026-08-19-employers-sm-ads-v1.png"
-      ],
-      "status": "in-review",
-      "caption": "Serious about a ai development software and fintech randd career? Get the experience employers actually look for.\n\n📍 Bedford, East of England\n\nApply now 👉 https://www.internwise.co.uk/job/35403/ai-development-intern-software-fintech-rd",
-      "hashtags": [
-        "#internship",
-        "#londonjobs",
-        "#marketingjobs",
-        "#hiring",
-        "#graduatejobs"
-      ],
-      "captions": {
-        "ig-fb": "Serious about a ai development software and fintech randd career? Get the experience employers actually look for.\n\n📍 Bedford, East of England\n\nApply now 👉 https://www.internwise.co.uk/job/35403/ai-development-intern-software-fintech-rd",
-        "linkedin": "Serious about a ai development software and fintech randd career? Get the experience employers actually look for.\n\n📍 Bedford, East of England\n\nApply now 👉 https://www.internwise.co.uk/job/35403/ai-development-intern-software-fintech-rd",
-        "x": "Serious about a ai development software and fintech randd career? Get the experience employers actually look for.\n\n📍 Bedford, East of England\n\nApply now 👉 https://www.internwise.co.uk/job/35403/ai-development-intern-software-fintech-rd"
-      },
-      "hashtagsByPlatform": {
-        "ig-fb": [
-          "#internship",
-          "#londonjobs",
-          "#marketingjobs",
-          "#hiring",
-          "#graduatejobs"
-        ],
-        "linkedin": [
-          "#hiring",
-          "#internship",
-          "#marketingjobs",
-          "#careers"
-        ],
-        "x": [
-          "#marketingjobs",
-          "#hiring"
-        ]
-      },
-      "sector": "Development",
-      "sectorStyle": "marketing",
-      "palette": {
-        "version": "2026-08-19-employers-sm-ads-v1",
-        "style": "marketing",
-        "sector": "Development",
-        "accent": "#2BD452",
-        "accentDark": "#D2415C",
-        "background": [
-          "#7E2038",
-          "#C43F5C"
-        ],
-        "spark": "#D4FF3D"
-      }
-    },
-    {
       "id": "job-35316",
       "sourceId": "35316",
       "sourceUrl": "https://www.internwise.co.uk/job/35316/buyerprocurement",
