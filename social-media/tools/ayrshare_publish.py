@@ -178,8 +178,22 @@ def caption_for(post, net):
     return _trim(text, NET_LIMIT.get(net, 5000))
 
 
+def _versioned(url, local):
+    """R2 serves images with a one-year immutable cache, so re-rendering a post
+    under the same path (e.g. replacing a day's news) made Instagram and the
+    other networks fetch the OLD cached image. A content hash in the query
+    string gives every distinct render its own URL."""
+    if os.path.exists(local):
+        import hashlib
+        with open(local, "rb") as fh:
+            return f"{url}?v={hashlib.md5(fh.read()).hexdigest()[:10]}"
+    return url
+
+
 def media_for(post, week_id):
-    return [f"{R2_BASE}/{week_id}/{post['id']}/{s}" for s in post.get("slides", [])]
+    return [_versioned(f"{R2_BASE}/{week_id}/{post['id']}/{s}",
+                       os.path.join(HUB, "images", week_id, post["id"], s))
+            for s in post.get("slides", [])]
 
 
 def remote_media_exists(url):
@@ -281,6 +295,7 @@ def build_jobs(week, connected, want_status, use_schedule, only=None, days=None,
             story_url = f"{R2_BASE}/{week['id']}/{post['id']}/story.png"
             if not (os.path.exists(local_story) or remote_media_exists(story_url)):
                 continue
+            story_url = _versioned(story_url, local_story)
             if "instagram" in nets:
                 jobs.append({"pid": post["id"], "lane": lane, "network": "instagram", "kind": "story",
                              "text": post.get("title", " ")[:60], "trimmed": False,
