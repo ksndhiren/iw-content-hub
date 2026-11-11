@@ -1,11 +1,77 @@
 {
-  "generatedAt": "2026-11-10T14:38:58Z",
+  "generatedAt": "2026-11-11T13:59:43Z",
   "windowRecords": 80,
-  "byLane": {},
-  "byDay": {},
-  "byHour": {},
-  "topPosts": [],
-  "insights": [],
+  "byLane": {
+    "education": {
+      "posts": 6,
+      "engagement": 0,
+      "avg": 0.0
+    }
+  },
+  "byDay": {
+    "Mon": {
+      "posts": 6,
+      "engagement": 0,
+      "avg": 0.0
+    }
+  },
+  "byHour": {
+    "10": {
+      "posts": 6,
+      "engagement": 0,
+      "avg": 0.0
+    }
+  },
+  "topPosts": [
+    {
+      "lane": "education",
+      "network": "linkedin",
+      "engagement": 0,
+      "created": "2026-11-09T10:32:51Z",
+      "caption": "You don't need a degree to start a career in journalism. Begin by publishing articles in student media or on a blog, and"
+    },
+    {
+      "lane": "education",
+      "network": "pinterest",
+      "engagement": 0,
+      "created": "2026-11-09T10:33:02Z",
+      "caption": "Dreaming of a journalism career but don't have a degree? No worries! Start your journey by publishing in student media, "
+    },
+    {
+      "lane": "education",
+      "network": "facebook",
+      "engagement": 0,
+      "created": "2026-11-09T10:32:56Z",
+      "caption": "Dreaming of a journalism career but don't have a degree? No worries! Start your journey by publishing in student media, "
+    },
+    {
+      "lane": "education",
+      "network": "instagram",
+      "engagement": 0,
+      "created": "2026-11-09T10:32:48Z",
+      "caption": "Dreaming of a journalism career but don't have a degree? No worries! Start your journey by publishing in student media, "
+    },
+    {
+      "lane": "education",
+      "network": "gmb",
+      "engagement": 0,
+      "created": "2026-11-09T10:33:01Z",
+      "caption": "Dreaming of a journalism career but don't have a degree? No worries! Start your journey by publishing in student media, "
+    },
+    {
+      "lane": "education",
+      "network": "threads",
+      "engagement": 0,
+      "created": "2026-11-09T10:33:00Z",
+      "caption": "Dreaming of a journalism career but don't have a degree? No worries! Start your journey by publishing in student media, "
+    }
+  ],
+  "insights": [
+    "Your strongest topic is Education (0.0 avg engagement/post). Make more of it.",
+    "Mon is your best posting day (0.0 avg engagement/post).",
+    "Posts around 10:00 UTC perform best (0.0 avg engagement/post).",
+    "Education is underperforming (0.0 avg) - rework the angle or post it at a stronger time."
+  ],
   "laneLabels": {
     "education": "Education",
     "news": "News",
