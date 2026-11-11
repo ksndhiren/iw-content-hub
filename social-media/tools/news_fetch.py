@@ -89,6 +89,22 @@ ORG_PR_OR_LOCAL_ONLY = re.compile(
     r"regional workforce summit|conference to bring industry together|"
     r"appoints .*managing director|promotion of .*leader|"
     r"students lend their skills|shine at .*festival|recognised for driving growth)\b", re.I)
+# Single-institution PR: a named college/university/school promoting its own
+# event, building or students ("Kirklees College celebrates graduates", "Exeter
+# College's new £5.3m centre opens"). Internwise does not promote institutions,
+# so these are rejected even when they mention students or skills. Sector-wide
+# stories ("Colleges face pay and funding issues") name no institution and pass.
+NAMED_INSTITUTION = re.compile(
+    r"\b(?:[A-Z][\w'&.-]+ ){1,4}(?:College|University|Academy|School|Institute|Campus)\b"
+    r"|\b(?:University|College) of (?:[A-Z][\w'&.-]+ ?){1,3}")
+INSTITUTION_PROMO = re.compile(
+    r"\b(celebrat\w+|graduat(?:es|ion) (?:ceremony|celebration)|ceremony|"
+    r"opens?|opening|officially opened|unveil\w*|launch(?:es|ed)?|"
+    r"new (?:centre|center|campus|building|facility|hub|wing)|centre opens|"
+    r"open (?:day|evening)|awards? (?:evening|night|ceremony)|"
+    r"anniversary|welcomes?|visit(?:s|ed)?|showcase\w*|take ?over|"
+    r"students? (?:shine|impress|win|scoop)|graduates? (?:after|from)|"
+    r"placement propels|dream job|success stor\w+)\b", re.I)
 EXCLUDED_JOB_TYPES = re.compile(
     r"\b(plumb(?:er|ers|ing)|gas engineer|heating engineer|boiler repair|"
     r"electrician|carpenter|joiner|bricklayer|roofer|scaffold(?:er|ing)|"
@@ -151,6 +167,8 @@ def _is_job_market_relevant(hay):
     if NON_NEWS_FLUFF.search(hay):
         return False
     if ORG_PR_OR_LOCAL_ONLY.search(hay):
+        return False
+    if NAMED_INSTITUTION.search(hay) and INSTITUTION_PROMO.search(hay):
         return False
     if EXCLUDED_JOB_TYPES.search(hay):
         return False
