@@ -11898,7 +11898,7 @@
       "id": "week24",
       "label": "Week 24",
       "weekCommencing": "2026-11-09",
-      "builtAt": 1794386569,
+      "builtAt": 1794404897,
       "posts": [
         {
           "id": "week24-mon-news",
@@ -13088,6 +13088,50 @@
             "x": [
               "#ai",
               "#careerskills"
+            ]
+          }
+        },
+        {
+          "id": "week24-thu-news",
+          "day": "Thu 12 Nov",
+          "lane": "news",
+          "title": "UK Employers Must List Salaries in Ads",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "UK employers are now required to include salary information in job advertisements. This regulatory change is designed to promote transparency and fairness across the job market. By knowing the salary upfront, applicants can make better-informed decisions and negotiate effectively. \n\nThis development is particularly beneficial for students and graduates entering the workforce, as it can help them understand industry pay standards and ensure they are fairly compensated. \n\ninternships are crucial in bridging the gap between education and the professional world, providing real-world experience and a clearer understanding of salary expectations. \n\nSource: The Guardian.",
+          "hashtags": [
+            "#jobmarket",
+            "#transparency",
+            "#fairpay",
+            "#internships",
+            "#ukjobs"
+          ],
+          "captions": {
+            "ig-fb": "UK employers are now required to include salary information in job advertisements. This regulatory change is designed to promote transparency and fairness across the job market. By knowing the salary upfront, applicants can make better-informed decisions and negotiate effectively. \n\nThis development is particularly beneficial for students and graduates entering the workforce, as it can help them understand industry pay standards and ensure they are fairly compensated. \n\ninternships are crucial in bridging the gap between education and the professional world, providing real-world experience and a clearer understanding of salary expectations. \n\nSource: The Guardian.",
+            "linkedin": "A new regulation mandates that UK employers must disclose salary details in their job ads, aiming to enhance transparency and fairness in hiring practices. This change is expected to particularly benefit young professionals entering the workforce by providing them with clear expectations around compensation.\n\nFor students and graduates, having salary information readily available can lead to more informed career choices and the ability to negotiate pay confidently. \n\nEngaging in internships is an excellent way for early-career individuals to gain valuable work experience while understanding the market's compensation standards. These internships allow you to step into the professional world with a realistic view of salary expectations.\n\nSource: The Guardian.",
+            "x": "UK employers must now list salaries in job ads. This boosts transparency, helping students and grads make informed career decisions. internships also offer insight into fair compensation. (Source: The Guardian)",
+            "threads": "UK employers now need to list salaries in job ads, enhancing transparency. This helps students and grads make informed decisions. internships offer insight into fair compensation. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#jobmarket",
+              "#transparency",
+              "#fairpay",
+              "#internships",
+              "#ukjobs"
+            ],
+            "linkedin": [
+              "#jobmarket",
+              "#transparency",
+              "#fairpay"
+            ],
+            "x": [
+              "#jobmarket",
+              "#fairpay"
             ]
           }
         }
