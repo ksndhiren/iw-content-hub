@@ -42,3 +42,13 @@ Keep this file updated whenever a new quote-author portrait is added. Quote grap
 | Seneca | `seneca.jpg` | https://commons.wikimedia.org/wiki/File:Duble_herma_of_Socrates_and_Seneca_Antikensammlung_Berlin_07.jpg | CC BY-SA 3.0, author Calidius. Seneca face of the Berlin double herm. |
 | Helen Keller | `helen-keller.jpg` | https://commons.wikimedia.org/wiki/File:Helen_Keller_(circa_1904).jpg | Public domain (c. 1904). |
 | Marcus Aurelius | `marcus-aurelius.jpg` | https://commons.wikimedia.org/wiki/File:Marcus_Aurelius_Glyptothek_Munich.jpg | Public domain, photo Bibi Saint-Pol. |
+| Mark Twain | `mark-twain.jpg` | https://commons.wikimedia.org/wiki/File:Mark_Twain_by_AF_Bradley_(cropped_2).jpg | Public domain. Auto-added by quote_topup.py. |
+| George Eliot | `george-eliot.jpg` | https://commons.wikimedia.org/wiki/File:George_Eliot,_por_Fran%C3%A7ois_D%27Albert_Durade.jpg | Public domain. Auto-added by quote_topup.py. |
+| Charlotte Brontë | `charlotte-bront.jpg` | https://commons.wikimedia.org/wiki/File:Charlotte_Bront%C3%AB_by_Patrick_Branwell_Bront%C3%AB_restored.jpg | Public domain. Auto-added by quote_topup.py. |
+| Mary Shelley | `mary-shelley.jpg` | https://commons.wikimedia.org/wiki/File:Mary_Wollstonecraft_Shelley_Rothwell.tif | Public domain. Auto-added by quote_topup.py. |
+| Virginia Woolf | `virginia-woolf.jpg` | https://commons.wikimedia.org/wiki/File:George_Charles_Beresford_-_Virginia_Woolf_in_1902_-_Restoration.jpg | Public domain. Auto-added by quote_topup.py. |
+| Henry Ford | `henry-ford.jpg` | https://commons.wikimedia.org/wiki/File:Henry_ford_1919.jpg | Public domain. Auto-added by quote_topup.py. |
+| John Ruskin | `john-ruskin.jpg` | https://commons.wikimedia.org/wiki/File:John_Ruskin_1863.jpg | Public domain. Auto-added by quote_topup.py. |
+| Leo Tolstoy | `leo-tolstoy.jpg` | https://commons.wikimedia.org/wiki/File:Leo_Tolstoy_1908_Portrait_(3x4_cropped).jpg | Public domain. Auto-added by quote_topup.py. |
+| Victor Hugo | `victor-hugo.jpg` | https://commons.wikimedia.org/wiki/File:Victor_Hugo_by_%C3%89tienne_Carjat_1876_-_full.jpg | Public domain. Auto-added by quote_topup.py. |
+| Robert Louis Stevenson | `robert-louis-stevenson.jpg` | https://commons.wikimedia.org/wiki/File:Robert_Louis_Stevenson_by_Henry_Walter_Barnett_bw.jpg | Public domain. Auto-added by quote_topup.py. |

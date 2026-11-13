@@ -1,0 +1,70 @@
+name: Quote Bank Top-up
+
+# Keeps the Saturday Daily-5 build from running out of quotes (it failed on
+# 7 Nov 2026 with only 3 fresh portrait-backed quotes for 5 slots). Every
+# Tuesday, before Wednesday's build pre-flight, this adds NEW authors until the
+# bank holds 15 fresh quotes. Quote text comes verbatim from the cited "Sourced"
+# section of English Wikiquote; portraits only when the Commons licence is
+# public domain / CC0 / CC BY / CC BY-SA (logged in SOURCES.md). OpenAI only
+# chooses among those verified quotes and writes the theme/CTA.
+#
+# Requires repo secret: OPENAI_API_KEY (falls back to keyword choice without it).
+
+on:
+  schedule:
+    - cron: "23 5 * * 2"      # every Tuesday 05:23 UTC (off the hour: top-of-hour crons run late)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: quote-topup
+  cancel-in-progress: false
+
+jobs:
+  topup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/social-media/campaigns/
+            !/social-media/tools/campaigns/
+            !/social-media/test_output/
+            !/social-media/test_output_cv/
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests pillow openai
+
+      - name: Top up the quote bank
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+        run: python social-media/tools/quote_topup.py
+
+      - name: Commit and push to main if there are changes
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Bank already healthy - nothing to commit."
+            exit 0
+          fi
+          git config user.name  "internwise-content-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add social-media/content/quotes_bank.json social-media/content/quote_author_seeds.json \
+                  social-media/assets/quote_authors/SOURCES.md
+          # Portraits are gitignored by default (third-party photos stay local);
+          # these were licence-checked as free, so they are force-added.
+          git add -f social-media/assets/quote_authors/*.jpg
+          git commit -m "Quote bank top-up ($(date -u +%Y-%m-%d))"
+          git pull --rebase origin main
+          git push origin HEAD:main
