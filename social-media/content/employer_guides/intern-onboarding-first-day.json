@@ -1,0 +1,115 @@
+{
+  "slug": "intern-onboarding-first-day",
+  "query": "intern onboarding checklist",
+  "world": "ticket",
+  "kicker": "EMPLOYER GUIDE · ONBOARDING",
+  "title_pre": "Your Intern's",
+  "title_hi": "First Day",
+  "title_post": "Checklist",
+  "sub": "5 steps to a great start",
+  "badge": [
+    "5",
+    "STEPS"
+  ],
+  "unit": "step",
+  "cover_q": "welcome new employee office smiling",
+  "inset_q": "office desk laptop welcome",
+  "steps": [
+    {
+      "title": "Before they arrive",
+      "hi": "Before",
+      "icon": "mail",
+      "time": "THE WEEK BEFORE",
+      "q": "laptop setup new desk",
+      "points": [
+        "Send a welcome email with times",
+        "Set up laptop and logins",
+        "Tell the team who is starting"
+      ],
+      "tip": "A welcome email ends first-day nerves before they start.",
+      "photo": "4240493"
+    },
+    {
+      "title": "Welcome and tour",
+      "hi": "Welcome",
+      "icon": "handshake",
+      "time": "09:00",
+      "q": "office tour colleagues",
+      "points": [
+        "Meet them at the door",
+        "Show the kitchen, toilets and exits",
+        "Introduce them to their buddy"
+      ],
+      "tip": "Pick a buddy who is not their manager.",
+      "photo": "7964210"
+    },
+    {
+      "title": "Tools and access",
+      "hi": "Tools",
+      "icon": "idcard",
+      "time": "10:30",
+      "q": "it support laptop setup office",
+      "points": [
+        "Check every login works",
+        "Show where files live",
+        "Explain how the team talks"
+      ],
+      "tip": "Keep a written list of tools so nothing is missed.",
+      "photo": "20432916"
+    },
+    {
+      "title": "A first real task",
+      "hi": "real task",
+      "icon": "target",
+      "time": "13:30",
+      "q": "young man working laptop office focused",
+      "points": [
+        "Small and finishable today",
+        "Linked to real work",
+        "Clear who to ask for help"
+      ],
+      "tip": "Finishing something on day one feels great.",
+      "photo": "7255439"
+    },
+    {
+      "title": "End-of-day check-in",
+      "hi": "check-in",
+      "icon": "heart",
+      "time": "16:30",
+      "q": "manager conversation coffee office",
+      "points": [
+        "Ask how the day went",
+        "Answer their questions",
+        "Share the plan for the week"
+      ],
+      "tip": "Ten minutes at 4:30 sets the tone for the whole internship.",
+      "photo": "5668504"
+    }
+  ],
+  "cta_title": "Ready for their first day?",
+  "cta_hi": "first day",
+  "cta_icon": "flag",
+  "cta_sub": "Save this checklist for your next starter.",
+  "post_title": "Your Intern's First Day: An Onboarding Checklist",
+  "captions": {
+    "linkedin": "Your intern's first day: a simple onboarding checklist.\n\n1. Before they arrive: a welcome email, laptop and logins ready\n2. 09:00 welcome, a tour and an introduction to their buddy\n3. 10:30 tools and access: check every login works\n4. 13:30 a first real task, small and finishable\n5. 16:30 an end-of-day check-in and the plan for the week\n\nSave it for your next starter.\n\nAdvertise your internship at internwise.co.uk/employers",
+    "ig-fb": "Your intern's first day in 5 steps: prepare before they arrive, welcome and tour, tools and access, a first real task and an end-of-day check-in. Save it for your next starter. internwise.co.uk/employers"
+  },
+  "hashtags": {
+    "linkedin": [
+      "#onboarding",
+      "#internships",
+      "#hiring"
+    ],
+    "ig-fb": [
+      "#onboarding",
+      "#hiringinterns",
+      "#internships",
+      "#smallbusinessuk"
+    ]
+  },
+  "altText": "Employer guide carousel styled as boarding passes: your intern's first day checklist in 5 steps. Before they arrive, welcome and tour, tools and access, a first real task, and an end-of-day check-in.",
+  "cta_url": "internwise.co.uk/employers",
+  "cover_photo": "39737146",
+  "cover_inset": "6611936"
+}

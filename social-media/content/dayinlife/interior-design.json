@@ -1,0 +1,105 @@
+{
+  "article": "an",
+  "role_line1": "Interior Design",
+  "role_line2": "Intern",
+  "structure": "a tall vertical cutaway cross-section of a stylish townhouse in the centre of a portrait canvas, with a giant fabric swatch book fanned open on its roof (swatches show only plain colours and simple patterns).",
+  "character": "young interior design intern (a Black woman in her early 20s, natural curly hair tied up, mustard jumper, tape measure clipped to her belt)",
+  "scenes": [
+    "she pins fabric swatches, paint chips and photos onto a large mood board on an easel, holding a coffee.",
+    "she measures a bare room with a long tape measure while noting numbers on a clipboard (abstract lines only).",
+    "she works at a desk on a laptop showing an abstract 3D room layout made of simple blocks.",
+    "she unpacks sample boxes of tiles and wood flooring, laying them out on a big table to compare.",
+    "she presents a neat sample board to a smiling client at a small round table; dusk through the window."
+  ],
+  "props": "a giant paint roller, colour wheel, armchair silhouette, pendant lamp, pot plant, ruler, a winding tape measure",
+  "steps": [
+    {
+      "n": 1,
+      "time": "09:00",
+      "title": "Mood boards",
+      "body": "Pull colours, textures and references together.",
+      "target": [
+        490,
+        1230
+      ],
+      "card": [
+        22,
+        1110,
+        250
+      ]
+    },
+    {
+      "n": 2,
+      "time": "10:30",
+      "title": "Site measure",
+      "body": "Measure rooms and note windows and doors.",
+      "target": [
+        480,
+        1040
+      ],
+      "card": [
+        820,
+        941,
+        240
+      ]
+    },
+    {
+      "n": 3,
+      "time": "12:00",
+      "title": "Draw the layout",
+      "body": "Plan the space in a design program.",
+      "target": [
+        510,
+        880
+      ],
+      "card": [
+        22,
+        787,
+        250
+      ]
+    },
+    {
+      "n": 4,
+      "time": "14:00",
+      "title": "Order samples",
+      "body": "Fabrics, tiles and finishes to compare.",
+      "target": [
+        520,
+        720
+      ],
+      "card": [
+        820,
+        633,
+        240
+      ]
+    },
+    {
+      "n": 5,
+      "time": "16:30",
+      "title": "Client board",
+      "body": "Present the scheme for feedback.",
+      "target": [
+        500,
+        540
+      ],
+      "card": [
+        22,
+        460,
+        250
+      ],
+      "accent": "coral"
+    }
+  ],
+  "tools": [
+    "SketchUp",
+    "AutoCAD",
+    "Pinterest"
+  ],
+  "tools_card": [
+    820,
+    230,
+    240
+  ],
+  "cta": "Find interior design internships",
+  "title_width": 440
+}

@@ -1,0 +1,110 @@
+{
+  "slug": "tasks-to-give-an-intern",
+  "query": "what do interns do",
+  "world": "kanban",
+  "kicker": "EMPLOYER GUIDE · IDEAS",
+  "title_pre": "What Can an",
+  "title_hi": "Intern Do?",
+  "title_post": "",
+  "sub": "15 real tasks, team by team",
+  "badge": [
+    "15",
+    "TASKS"
+  ],
+  "unit": "team",
+  "cover_q": "young team working together office laptops",
+  "inset_q": "intern taking notes meeting",
+  "steps": [
+    {
+      "title": "Marketing",
+      "hi": "Marketing",
+      "icon": "megaphone",
+      "q": "woman planning content notebook desk",
+      "points": [
+        "Draft and schedule social posts",
+        "Research what competitors post",
+        "Write a monthly results report"
+      ],
+      "tip": "Give them a channel to look after, not just tasks.",
+      "photo": "6347921"
+    },
+    {
+      "title": "Sales",
+      "hi": "Sales",
+      "icon": "target",
+      "q": "young professional phone call office",
+      "points": [
+        "Research and build lead lists",
+        "Tidy up the CRM",
+        "Prepare notes before client calls"
+      ],
+      "tip": "Let them sit in on calls before making any.",
+      "photo": "7964492"
+    },
+    {
+      "title": "Operations",
+      "hi": "Operations",
+      "icon": "clipboard",
+      "q": "organised office documents folders",
+      "points": [
+        "Map a messy process",
+        "Update guides and templates",
+        "Organise shared folders"
+      ],
+      "tip": "Fresh eyes spot what everyone else works around.",
+      "photo": "8297536"
+    },
+    {
+      "title": "Data and research",
+      "hi": "Data",
+      "icon": "chart",
+      "q": "young man spreadsheet laptop office",
+      "points": [
+        "Run a short customer survey",
+        "Clean up a spreadsheet",
+        "Summarise findings in one page"
+      ],
+      "tip": "Ask for a one-page summary, not a long report.",
+      "photo": "34639577"
+    },
+    {
+      "title": "Projects",
+      "hi": "Projects",
+      "icon": "rocket",
+      "q": "young woman presenting idea team",
+      "points": [
+        "Plan a small event",
+        "Test a new tool for the team",
+        "Pitch one improvement idea"
+      ],
+      "tip": "End with a pitch. It builds confidence and you might use it.",
+      "photo": "7609947"
+    }
+  ],
+  "cta_title": "Ready to plan their first month?",
+  "cta_hi": "first month",
+  "cta_icon": "star",
+  "cta_sub": "Pick 5 tasks from these lists to start.",
+  "post_title": "What Can an Intern Do? 15 Real Tasks to Give Them",
+  "captions": {
+    "linkedin": "What can an intern actually do? 15 real tasks, team by team.\n\nMarketing: social posts, competitor research, a monthly report\nSales: lead lists, CRM clean-up, call prep\nOperations: map a process, update templates, organise folders\nData: a customer survey, spreadsheet clean-up, a one-page summary\nProjects: plan an event, test a tool, pitch an idea\n\nReal work makes better interns, and better hires.\n\nAdvertise your internship at internwise.co.uk/employers",
+    "ig-fb": "What can an intern do? 15 real tasks across marketing, sales, operations, data and projects. Pick 5 to plan their first month. internwise.co.uk/employers"
+  },
+  "hashtags": {
+    "linkedin": [
+      "#internships",
+      "#smallbusiness",
+      "#hiring"
+    ],
+    "ig-fb": [
+      "#hiringinterns",
+      "#internships",
+      "#smallbusinessuk",
+      "#teamwork"
+    ]
+  },
+  "altText": "Employer guide carousel styled as a task board: 15 real tasks to give an intern across marketing, sales, operations, data and research, and projects.",
+  "cta_url": "internwise.co.uk/employers",
+  "cover_photo": "8518624",
+  "cover_inset": "9391629"
+}

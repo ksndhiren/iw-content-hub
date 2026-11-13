@@ -1,0 +1,115 @@
+{
+  "slug": "structure-internship-programme",
+  "query": "internship programme",
+  "world": "blueprint",
+  "kicker": "EMPLOYER GUIDE · PROGRAMME",
+  "title_pre": "How to Structure a",
+  "title_hi": "12-Week",
+  "title_post": "Internship",
+  "sub": "A simple plan from day one to the final review",
+  "badge": [
+    "12",
+    "WEEKS"
+  ],
+  "unit": "phase",
+  "cover_q": "team planning whiteboard office",
+  "inset_q": "young intern laptop office",
+  "steps": [
+    {
+      "title": "Week 1: Settle in",
+      "hi": "Settle in",
+      "icon": "flag",
+      "q": "new employee welcome office",
+      "phase": "WEEK 1",
+      "points": [
+        "Welcome, tour and tool access",
+        "Meet their manager and a buddy",
+        "Agree 2 or 3 goals together"
+      ],
+      "tip": "Write the goals down. You will review them in week 12.",
+      "photo": "7580986"
+    },
+    {
+      "title": "Weeks 2-4: Learn the basics",
+      "hi": "Learn",
+      "icon": "bulb",
+      "q": "mentor explaining computer screen",
+      "phase": "WEEKS 2-4",
+      "points": [
+        "Shadow the team",
+        "Take on small, real tasks",
+        "Weekly 1-to-1 with their manager"
+      ],
+      "tip": "Small wins early build confidence fast.",
+      "photo": "8199604"
+    },
+    {
+      "title": "Weeks 5-8: Own a project",
+      "hi": "Own",
+      "icon": "target",
+      "q": "young professional working focused",
+      "phase": "WEEKS 5-8",
+      "points": [
+        "Give one clear project",
+        "Set a deadline and check-ins",
+        "Let them make decisions"
+      ],
+      "tip": "Ownership is what interns remember most.",
+      "photo": "12912013"
+    },
+    {
+      "title": "Weeks 9-11: Deliver",
+      "hi": "Deliver",
+      "icon": "chart",
+      "q": "presentation meeting office team",
+      "phase": "WEEKS 9-11",
+      "points": [
+        "Finish and polish the project",
+        "Present it to the team",
+        "Gather feedback from colleagues"
+      ],
+      "tip": "A short presentation gives them something for their CV.",
+      "photo": "8424451"
+    },
+    {
+      "title": "Week 12: Review",
+      "hi": "Review",
+      "icon": "handshake",
+      "q": "handshake office manager",
+      "phase": "WEEK 12",
+      "points": [
+        "Review the week 1 goals",
+        "Give honest written feedback",
+        "Talk about what comes next"
+      ],
+      "tip": "Great interns are your future graduate hires.",
+      "photo": "5668839"
+    }
+  ],
+  "cta_title": "Ready to plan your programme?",
+  "cta_hi": "programme",
+  "cta_icon": "calendar",
+  "cta_sub": "Save this plan and adapt it to your team.",
+  "post_title": "How to Structure a 12-Week Internship Programme",
+  "captions": {
+    "linkedin": "How to structure a 12-week internship programme.\n\nWeek 1: settle in. Tools, a buddy and 2 or 3 written goals\nWeeks 2-4: learn the basics with small, real tasks\nWeeks 5-8: own one clear project\nWeeks 9-11: deliver it and present to the team\nWeek 12: review the goals and talk about what comes next\n\nA clear structure is the difference between an intern who makes tea and one who makes an impact.\n\nAdvertise your internship at internwise.co.uk/employers",
+    "ig-fb": "A 12-week internship programme plan: settle in, learn the basics, own a project, deliver it, then review. Save it and adapt it to your team. internwise.co.uk/employers"
+  },
+  "hashtags": {
+    "linkedin": [
+      "#internships",
+      "#earlycareers",
+      "#hiring"
+    ],
+    "ig-fb": [
+      "#internshipprogramme",
+      "#hiringinterns",
+      "#internships",
+      "#smallbusinessuk"
+    ]
+  },
+  "altText": "Employer guide carousel styled as a blueprint: how to structure a 12-week internship programme. Week 1 settle in, weeks 2 to 4 learn the basics, weeks 5 to 8 own a project, weeks 9 to 11 deliver, week 12 review.",
+  "cta_url": "internwise.co.uk/employers",
+  "cover_photo": "6803517",
+  "cover_inset": "7651626"
+}

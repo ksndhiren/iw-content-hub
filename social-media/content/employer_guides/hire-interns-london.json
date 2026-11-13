@@ -1,0 +1,123 @@
+{
+  "slug": "hire-interns-london",
+  "query": "hire interns in london",
+  "world": "transit",
+  "kicker": "EMPLOYER GUIDE · HIRING",
+  "title_pre": "How to",
+  "title_hi": "Hire Interns",
+  "title_post": "in London",
+  "sub": "6 places to find great applicants",
+  "badge": [
+    "6",
+    "STOPS"
+  ],
+  "unit": "stop",
+  "cover_q": "london street office workers",
+  "inset_q": "young professional smiling london",
+  "steps": [
+    {
+      "title": "Write a clear advert",
+      "hi": "clear",
+      "icon": "pen",
+      "q": "writing laptop office desk",
+      "points": [
+        "Say what they will actually do",
+        "List the must-have skills only",
+        "Give dates, hours and location"
+      ],
+      "tip": "A specific advert gets fewer, better applications.",
+      "photo": "9263102"
+    },
+    {
+      "title": "Use an internship job board",
+      "hi": "job board",
+      "icon": "megaphone",
+      "q": "student browsing laptop",
+      "points": [
+        "Reach students actively looking",
+        "Post once, reach many courses",
+        "Keep the advert live until you close"
+      ],
+      "tip": "Pick boards built for students and graduates.",
+      "photo": "5554261"
+    },
+    {
+      "title": "Call university careers teams",
+      "hi": "careers teams",
+      "icon": "users",
+      "q": "students group campus talking",
+      "points": [
+        "London has dozens of universities",
+        "Ask about job boards and mailing lists",
+        "Build a relationship for next year"
+      ],
+      "tip": "One good careers contact can fill roles every year.",
+      "photo": "7972662"
+    },
+    {
+      "title": "Ask your own network",
+      "hi": "network",
+      "icon": "handshake",
+      "q": "business people networking coffee",
+      "points": [
+        "Share the role on LinkedIn",
+        "Ask staff to pass it on",
+        "Use local business groups"
+      ],
+      "tip": "Referrals often bring the most motivated applicants.",
+      "photo": "6931202"
+    },
+    {
+      "title": "Meet students at events",
+      "hi": "events",
+      "icon": "calendar",
+      "q": "careers fair students talking",
+      "points": [
+        "Book a stand at a careers fair",
+        "Give a short talk to a society",
+        "Bring a simple sign-up sheet"
+      ],
+      "tip": "Ten minutes face to face beats a hundred cold emails.",
+      "photo": "7972561"
+    },
+    {
+      "title": "Make applying easy",
+      "hi": "easy",
+      "icon": "clipboard",
+      "q": "woman applying job smartphone",
+      "points": [
+        "Ask for a CV and a few short questions",
+        "Make it work on a phone",
+        "Reply to everyone who applies"
+      ],
+      "tip": "Long forms lose the best applicants first.",
+      "photo": "6578413"
+    }
+  ],
+  "cta_title": "Ready to find your London intern?",
+  "cta_hi": "London intern",
+  "cta_icon": "target",
+  "cta_sub": "Save this route for your next hiring round.",
+  "post_title": "How to Hire Interns in London: 6 Places to Look",
+  "captions": {
+    "linkedin": "Hiring an intern in London? Here are 6 places to find great applicants.\n\n1. Write a clear advert: real tasks, must-have skills, dates and hours\n2. Use an internship job board that students actually search\n3. Call university careers teams (London has dozens)\n4. Ask your own network and share it on LinkedIn\n5. Meet students at careers fairs and society talks\n6. Make applying easy, especially on a phone\n\nSave this for your next hiring round.\n\nAdvertise your internship at internwise.co.uk/employers",
+    "ig-fb": "How to hire interns in London: write a clear advert, use an internship job board, call university careers teams, ask your network, meet students at events and make applying easy. Save it for your next hiring round. internwise.co.uk/employers"
+  },
+  "hashtags": {
+    "linkedin": [
+      "#hiring",
+      "#internships",
+      "#londonbusiness"
+    ],
+    "ig-fb": [
+      "#hiringinterns",
+      "#londonbusiness",
+      "#internships",
+      "#smallbusinessuk"
+    ]
+  },
+  "altText": "Employer guide carousel styled as a route map: how to hire interns in London in 6 stops. Write a clear advert, use an internship job board, call university careers teams, ask your network, meet students at events, and make applying easy.",
+  "cta_url": "internwise.co.uk/employers",
+  "cover_photo": "18104541",
+  "cover_inset": "29180736"
+}

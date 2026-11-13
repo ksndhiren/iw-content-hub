@@ -1,0 +1,105 @@
+{
+  "article": "a",
+  "role_line1": "Project Management",
+  "role_line2": "Intern",
+  "structure": "a tall vertical cutaway cross-section of a busy open-plan office tower in the centre of a portrait canvas, with a giant clipboard checklist standing on its roof (ticks only, no words).",
+  "character": "young project management intern (a mixed-race woman in her early 20s, braids in a high bun, green shirt, laptop under her arm)",
+  "scenes": [
+    "she leads a short stand-up meeting with three colleagues around a tall table, holding a coffee.",
+    "she updates a large wall board with sticky notes moving between three columns.",
+    "she reviews a laptop showing an abstract timeline with coloured bars (a Gantt shape).",
+    "she flags a red sticky note to a colleague, the two of them pointing at a calendar.",
+    "she types a short update at her desk, a small tick and envelope floating above; dusk through the window."
+  ],
+  "props": "a giant hourglass, a calendar, a flag on a mountain, cogs, a checklist, sticky notes, arrows joining in a loop",
+  "steps": [
+    {
+      "n": 1,
+      "time": "09:00",
+      "title": "Daily stand-up",
+      "body": "Who is doing what, and any blockers.",
+      "target": [
+        582,
+        1303
+      ],
+      "card": [
+        22,
+        1110,
+        250
+      ]
+    },
+    {
+      "n": 2,
+      "time": "10:30",
+      "title": "Update the board",
+      "body": "Move tasks and set clear owners.",
+      "target": [
+        495,
+        1145
+      ],
+      "card": [
+        820,
+        970,
+        240
+      ]
+    },
+    {
+      "n": 3,
+      "time": "12:00",
+      "title": "Track the timeline",
+      "body": "Check each milestone is on time.",
+      "target": [
+        503,
+        987
+      ],
+      "card": [
+        22,
+        828,
+        250
+      ]
+    },
+    {
+      "n": 4,
+      "time": "14:00",
+      "title": "Flag risks",
+      "body": "Raise problems early, not late.",
+      "target": [
+        495,
+        836
+      ],
+      "card": [
+        820,
+        692,
+        240
+      ]
+    },
+    {
+      "n": 5,
+      "time": "16:30",
+      "title": "Send the update",
+      "body": "A short status note for the team.",
+      "target": [
+        534,
+        670
+      ],
+      "card": [
+        22,
+        543,
+        250
+      ],
+      "accent": "coral"
+    }
+  ],
+  "tools": [
+    "Trello",
+    "Microsoft Project",
+    "Excel"
+  ],
+  "tools_card": [
+    820,
+    230,
+    240
+  ],
+  "cta": "Find project management internships",
+  "title_width": 440
+}

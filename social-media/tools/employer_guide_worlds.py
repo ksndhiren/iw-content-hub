@@ -506,3 +506,7 @@ WORLDS = {
     "editorial": (ed_cover, ed_step, ed_cta),
     "pop": (pop_cover, pop_step, pop_cta),
 }
+
+# Second bank of worlds (week 25+): transit, swiss, blueprint, kanban, ticket.
+from employer_guide_worlds_b import WORLDS_B  # noqa: E402
+WORLDS.update(WORLDS_B)

@@ -1,0 +1,105 @@
+{
+  "article": "an",
+  "role_line1": "SEO",
+  "role_line2": "Intern",
+  "structure": "a tall vertical cutaway cross-section of a bright modern tech office building in the centre of a portrait canvas, with a giant magnifying glass leaning on its roof over a simple search bar shape.",
+  "character": "young SEO intern (a white man in his early 20s, round glasses, short ginger hair, green hoodie, headphones round his neck)",
+  "scenes": [
+    "he arrives with a coffee and checks a big monitor showing an abstract line chart going up.",
+    "he types into a laptop beside floating search bar shapes and a list of short abstract word blocks.",
+    "he edits a webpage mock-up on screen made of grey blocks, with small heading and image boxes highlighted.",
+    "he reads a spreadsheet of abstract coloured rows on two monitors, circling one row with a marker.",
+    "he presents a simple bar chart on a wall screen to two colleagues at a small table; dusk through the window."
+  ],
+  "props": "a giant magnifying glass, chain links, an upward arrow, a trophy, a spider web made of lines, cogs, a rocket",
+  "steps": [
+    {
+      "n": 1,
+      "time": "09:00",
+      "title": "Check rankings",
+      "body": "See which pages moved overnight.",
+      "target": [
+        440,
+        1180
+      ],
+      "card": [
+        22,
+        1076,
+        250
+      ]
+    },
+    {
+      "n": 2,
+      "time": "10:00",
+      "title": "Keyword research",
+      "body": "Find what people actually search for.",
+      "target": [
+        430,
+        1000
+      ],
+      "card": [
+        820,
+        903,
+        240
+      ]
+    },
+    {
+      "n": 3,
+      "time": "11:30",
+      "title": "Optimise a page",
+      "body": "Titles, headings and internal links.",
+      "target": [
+        440,
+        850
+      ],
+      "card": [
+        22,
+        758,
+        250
+      ]
+    },
+    {
+      "n": 4,
+      "time": "14:00",
+      "title": "Site audit",
+      "body": "Spot broken links and slow pages.",
+      "target": [
+        450,
+        700
+      ],
+      "card": [
+        820,
+        614,
+        240
+      ]
+    },
+    {
+      "n": 5,
+      "time": "16:30",
+      "title": "Report results",
+      "body": "Share traffic wins with the team.",
+      "target": [
+        430,
+        530
+      ],
+      "card": [
+        22,
+        450,
+        250
+      ],
+      "accent": "coral"
+    }
+  ],
+  "tools": [
+    "Google Search Console",
+    "Google Analytics",
+    "Screaming Frog"
+  ],
+  "tools_card": [
+    820,
+    230,
+    240
+  ],
+  "cta": "Find SEO internships",
+  "title_width": 440
+}

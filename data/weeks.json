@@ -13136,6 +13136,480 @@
           }
         }
       ]
+    },
+    {
+      "id": "week25",
+      "label": "Week 25",
+      "weekCommencing": "2026-11-16",
+      "posts": [
+        {
+          "id": "week25-mon-employerguide",
+          "day": "Mon 16 Nov",
+          "lane": "employer_guide",
+          "title": "How to Hire Interns in London: 6 Places to Look",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png",
+            "slide_8.png"
+          ],
+          "status": "in-review",
+          "time": "10:00",
+          "caption": "How to hire interns in London: write a clear advert, use an internship job board, call university careers teams, ask your network, meet students at events and make applying easy. Save it for your next hiring round. internwise.co.uk/employers",
+          "hashtags": [
+            "#hiringinterns",
+            "#londonbusiness",
+            "#internships",
+            "#smallbusinessuk"
+          ],
+          "captions": {
+            "linkedin": "Hiring an intern in London? Here are 6 places to find great applicants.\n\n1. Write a clear advert: real tasks, must-have skills, dates and hours\n2. Use an internship job board that students actually search\n3. Call university careers teams (London has dozens)\n4. Ask your own network and share it on LinkedIn\n5. Meet students at careers fairs and society talks\n6. Make applying easy, especially on a phone\n\nSave this for your next hiring round.\n\nAdvertise your internship at internwise.co.uk/employers",
+            "ig-fb": "How to hire interns in London: write a clear advert, use an internship job board, call university careers teams, ask your network, meet students at events and make applying easy. Save it for your next hiring round. internwise.co.uk/employers"
+          },
+          "hashtagsByPlatform": {
+            "linkedin": [
+              "#hiring",
+              "#internships",
+              "#londonbusiness"
+            ],
+            "ig-fb": [
+              "#hiringinterns",
+              "#londonbusiness",
+              "#internships",
+              "#smallbusinessuk"
+            ]
+          },
+          "altText": "Employer guide carousel styled as a route map: how to hire interns in London in 6 stops. Write a clear advert, use an internship job board, call university careers teams, ask your network, meet students at events, and make applying easy.",
+          "world": "transit",
+          "guide": "hire-interns-london",
+          "searchQuery": "hire interns in london"
+        },
+        {
+          "id": "week25-tue-employerguide",
+          "day": "Tue 17 Nov",
+          "lane": "employer_guide",
+          "title": "Marketing Intern Job Description Template",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "time": "10:00",
+          "caption": "A marketing intern job description in 5 parts: title and summary, what they will do, the skills you need, what they will learn, and how to apply. Save it for when you next hire. internwise.co.uk/employers",
+          "hashtags": [
+            "#marketingintern",
+            "#hiringinterns",
+            "#internships",
+            "#smallbusinessuk"
+          ],
+          "captions": {
+            "linkedin": "Writing a marketing intern job description? Use this structure.\n\n1. Title and summary: a plain title students actually search for\n2. What they will do: five or six real tasks\n3. Skills you need: must-haves split from nice-to-haves\n4. What they will learn: tools, mentor, a project they own\n5. How to apply: hours, dates, location, closing date\n\nSave it for when you next hire.\n\nAdvertise your internship at internwise.co.uk/employers",
+            "ig-fb": "A marketing intern job description in 5 parts: title and summary, what they will do, the skills you need, what they will learn, and how to apply. Save it for when you next hire. internwise.co.uk/employers"
+          },
+          "hashtagsByPlatform": {
+            "linkedin": [
+              "#marketing",
+              "#hiring",
+              "#internships"
+            ],
+            "ig-fb": [
+              "#marketingintern",
+              "#hiringinterns",
+              "#internships",
+              "#smallbusinessuk"
+            ]
+          },
+          "altText": "Employer guide carousel in a bold poster style: a marketing intern job description template in 5 parts. Title and summary, what they will do, skills you need, what they will learn, and how to apply.",
+          "world": "swiss",
+          "guide": "marketing-intern-job-description",
+          "searchQuery": "marketing intern job description"
+        },
+        {
+          "id": "week25-wed-employerguide",
+          "day": "Wed 18 Nov",
+          "lane": "employer_guide",
+          "title": "How to Structure a 12-Week Internship Programme",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "time": "10:00",
+          "caption": "A 12-week internship programme plan: settle in, learn the basics, own a project, deliver it, then review. Save it and adapt it to your team. internwise.co.uk/employers",
+          "hashtags": [
+            "#internshipprogramme",
+            "#hiringinterns",
+            "#internships",
+            "#smallbusinessuk"
+          ],
+          "captions": {
+            "linkedin": "How to structure a 12-week internship programme.\n\nWeek 1: settle in. Tools, a buddy and 2 or 3 written goals\nWeeks 2-4: learn the basics with small, real tasks\nWeeks 5-8: own one clear project\nWeeks 9-11: deliver it and present to the team\nWeek 12: review the goals and talk about what comes next\n\nA clear structure is the difference between an intern who makes tea and one who makes an impact.\n\nAdvertise your internship at internwise.co.uk/employers",
+            "ig-fb": "A 12-week internship programme plan: settle in, learn the basics, own a project, deliver it, then review. Save it and adapt it to your team. internwise.co.uk/employers"
+          },
+          "hashtagsByPlatform": {
+            "linkedin": [
+              "#internships",
+              "#earlycareers",
+              "#hiring"
+            ],
+            "ig-fb": [
+              "#internshipprogramme",
+              "#hiringinterns",
+              "#internships",
+              "#smallbusinessuk"
+            ]
+          },
+          "altText": "Employer guide carousel styled as a blueprint: how to structure a 12-week internship programme. Week 1 settle in, weeks 2 to 4 learn the basics, weeks 5 to 8 own a project, weeks 9 to 11 deliver, week 12 review.",
+          "world": "blueprint",
+          "guide": "structure-internship-programme",
+          "searchQuery": "internship programme"
+        },
+        {
+          "id": "week25-thu-employerguide",
+          "day": "Thu 19 Nov",
+          "lane": "employer_guide",
+          "title": "What Can an Intern Do? 15 Real Tasks to Give Them",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "time": "10:00",
+          "caption": "What can an intern do? 15 real tasks across marketing, sales, operations, data and projects. Pick 5 to plan their first month. internwise.co.uk/employers",
+          "hashtags": [
+            "#hiringinterns",
+            "#internships",
+            "#smallbusinessuk",
+            "#teamwork"
+          ],
+          "captions": {
+            "linkedin": "What can an intern actually do? 15 real tasks, team by team.\n\nMarketing: social posts, competitor research, a monthly report\nSales: lead lists, CRM clean-up, call prep\nOperations: map a process, update templates, organise folders\nData: a customer survey, spreadsheet clean-up, a one-page summary\nProjects: plan an event, test a tool, pitch an idea\n\nReal work makes better interns, and better hires.\n\nAdvertise your internship at internwise.co.uk/employers",
+            "ig-fb": "What can an intern do? 15 real tasks across marketing, sales, operations, data and projects. Pick 5 to plan their first month. internwise.co.uk/employers"
+          },
+          "hashtagsByPlatform": {
+            "linkedin": [
+              "#internships",
+              "#smallbusiness",
+              "#hiring"
+            ],
+            "ig-fb": [
+              "#hiringinterns",
+              "#internships",
+              "#smallbusinessuk",
+              "#teamwork"
+            ]
+          },
+          "altText": "Employer guide carousel styled as a task board: 15 real tasks to give an intern across marketing, sales, operations, data and research, and projects.",
+          "world": "kanban",
+          "guide": "tasks-to-give-an-intern",
+          "searchQuery": "what do interns do"
+        },
+        {
+          "id": "week25-fri-employerguide",
+          "day": "Fri 20 Nov",
+          "lane": "employer_guide",
+          "title": "Your Intern's First Day: An Onboarding Checklist",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "time": "10:00",
+          "caption": "Your intern's first day in 5 steps: prepare before they arrive, welcome and tour, tools and access, a first real task and an end-of-day check-in. Save it for your next starter. internwise.co.uk/employers",
+          "hashtags": [
+            "#onboarding",
+            "#hiringinterns",
+            "#internships",
+            "#smallbusinessuk"
+          ],
+          "captions": {
+            "linkedin": "Your intern's first day: a simple onboarding checklist.\n\n1. Before they arrive: a welcome email, laptop and logins ready\n2. 09:00 welcome, a tour and an introduction to their buddy\n3. 10:30 tools and access: check every login works\n4. 13:30 a first real task, small and finishable\n5. 16:30 an end-of-day check-in and the plan for the week\n\nSave it for your next starter.\n\nAdvertise your internship at internwise.co.uk/employers",
+            "ig-fb": "Your intern's first day in 5 steps: prepare before they arrive, welcome and tour, tools and access, a first real task and an end-of-day check-in. Save it for your next starter. internwise.co.uk/employers"
+          },
+          "hashtagsByPlatform": {
+            "linkedin": [
+              "#onboarding",
+              "#internships",
+              "#hiring"
+            ],
+            "ig-fb": [
+              "#onboarding",
+              "#hiringinterns",
+              "#internships",
+              "#smallbusinessuk"
+            ]
+          },
+          "altText": "Employer guide carousel styled as boarding passes: your intern's first day checklist in 5 steps. Before they arrive, welcome and tour, tools and access, a first real task, and an end-of-day check-in.",
+          "world": "ticket",
+          "guide": "intern-onboarding-first-day",
+          "searchQuery": "intern onboarding checklist"
+        },
+        {
+          "id": "week25-mon-infographic",
+          "day": "Mon 16 Nov",
+          "lane": "infographic",
+          "title": "A Day in the Life: Interior Design Intern",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "time": "16:30",
+          "world": "dayinlife",
+          "role": "interior-design",
+          "caption": "What does an interior design intern actually do all day?\n\nMood boards, measuring rooms, drawing layouts, ordering samples and presenting a scheme to a client. It is far more practical than scrolling Pinterest.\n\nSave this if interior design is on your list, and share it with a friend who is curious.\n\nFind interior design internships: link in bio.",
+          "hashtags": [
+            "#interiordesign",
+            "#interiordesignintern",
+            "#internshipsuk",
+            "#dayinthelife"
+          ],
+          "captions": {
+            "ig-fb": "What does an interior design intern actually do all day?\n\nMood boards, measuring rooms, drawing layouts, ordering samples and presenting a scheme to a client. It is far more practical than scrolling Pinterest.\n\nSave this if interior design is on your list, and share it with a friend who is curious.\n\nFind interior design internships: link in bio.",
+            "linkedin": "What does an Interior Design intern actually do all day?\n\nMood boards at 9, a site measure at 10:30, a room layout in SketchUp by lunch, fabric and tile samples in the afternoon, then a client board to present before the day is out.\n\nIf you are considering interior design, this is the job behind the job title.\n\nhttps://www.internwise.co.uk",
+            "x": "Mood boards, site measures, room layouts and client boards. A day in the life of an Interior Design intern.\n\ninternwise.co.uk",
+            "threads": "What does an interior design intern actually do all day?\n\nMood boards, measuring rooms, drawing layouts, ordering samples and presenting a scheme to a client. It is far more practical than scrolling Pinterest.\n\nSave this if interior design is on your list, and share it with a friend who is curious.\n\nFind interior design internships: internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#interiordesign",
+              "#interiordesignintern",
+              "#internshipsuk",
+              "#dayinthelife"
+            ],
+            "linkedin": [
+              "#interiordesign",
+              "#internships",
+              "#earlycareers"
+            ],
+            "x": [
+              "#internships",
+              "#dayinthelife"
+            ]
+          },
+          "altText": "Five floors of a cut-away building show one interior design intern's day from morning to evening: mood boards at 09:00; site measure at 10:30; draw the layout at 12:00; order samples at 14:00; client board at 16:30. Tools: SketchUp, AutoCAD, Pinterest."
+        },
+        {
+          "id": "week25-tue-infographic",
+          "day": "Tue 17 Nov",
+          "lane": "infographic",
+          "title": "A Day in the Life: SEO Intern",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "time": "16:30",
+          "world": "dayinlife",
+          "role": "seo",
+          "caption": "What does an SEO intern actually do all day?\n\nChecking rankings, finding what people really search for, fixing pages and reporting the wins. Curiosity matters more than code.\n\nSave this if SEO is on your list, and share it with a friend who is curious.\n\nFind SEO internships: link in bio.",
+          "hashtags": [
+            "#seo",
+            "#digitalmarketing",
+            "#internshipsuk",
+            "#dayinthelife"
+          ],
+          "captions": {
+            "ig-fb": "What does an SEO intern actually do all day?\n\nChecking rankings, finding what people really search for, fixing pages and reporting the wins. Curiosity matters more than code.\n\nSave this if SEO is on your list, and share it with a friend who is curious.\n\nFind SEO internships: link in bio.",
+            "linkedin": "What does an SEO intern actually do all day?\n\nRankings checked at 9, keyword research at 10, a page optimised by lunch, a site audit for broken links in the afternoon, then a short report on what moved. Google Search Console and Analytics do most of the heavy lifting.\n\nIf you are considering SEO, this is the job behind the job title.\n\nhttps://www.internwise.co.uk",
+            "x": "Rankings, keyword research, page fixes and reports. A day in the life of an SEO intern.\n\ninternwise.co.uk",
+            "threads": "What does an SEO intern actually do all day?\n\nChecking rankings, finding what people really search for, fixing pages and reporting the wins. Curiosity matters more than code.\n\nSave this if SEO is on your list, and share it with a friend who is curious.\n\nFind SEO internships: internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#seo",
+              "#digitalmarketing",
+              "#internshipsuk",
+              "#dayinthelife"
+            ],
+            "linkedin": [
+              "#seo",
+              "#internships",
+              "#digitalmarketing"
+            ],
+            "x": [
+              "#internships",
+              "#dayinthelife"
+            ]
+          },
+          "altText": "Five floors of a cut-away building show one SEO intern's day from morning to evening: check rankings at 09:00; keyword research at 10:00; optimise a page at 11:30; site audit at 14:00; report results at 16:30. Tools: Google Search Console, Google Analytics, Screaming Frog."
+        },
+        {
+          "id": "week25-wed-infographic",
+          "day": "Wed 18 Nov",
+          "lane": "infographic",
+          "title": "A Day in the Life: PR Intern",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "time": "16:30",
+          "world": "dayinlife",
+          "role": "pr",
+          "caption": "What does a PR intern actually do all day?\n\nMonitoring the news, writing press releases, pitching journalists, packing send-outs and logging every piece of coverage.\n\nSave this if PR is on your list, and share it with a friend who is curious.\n\nFind PR internships: link in bio.",
+          "hashtags": [
+            "#publicrelations",
+            "#printern",
+            "#internshipsuk",
+            "#dayinthelife"
+          ],
+          "captions": {
+            "ig-fb": "What does a PR intern actually do all day?\n\nMonitoring the news, writing press releases, pitching journalists, packing send-outs and logging every piece of coverage.\n\nSave this if PR is on your list, and share it with a friend who is curious.\n\nFind PR internships: link in bio.",
+            "linkedin": "What does a PR intern actually do all day?\n\nMedia monitoring at 9, a press release drafted by 10:30, journalist pitches at midday, product send-outs in the afternoon, and every article logged before home time.\n\nIf you are considering PR, this is the job behind the job title.\n\nhttps://www.internwise.co.uk",
+            "x": "Press releases, journalist pitches, send-outs and coverage. A day in the life of a PR intern.\n\ninternwise.co.uk",
+            "threads": "What does a PR intern actually do all day?\n\nMonitoring the news, writing press releases, pitching journalists, packing send-outs and logging every piece of coverage.\n\nSave this if PR is on your list, and share it with a friend who is curious.\n\nFind PR internships: internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#publicrelations",
+              "#printern",
+              "#internshipsuk",
+              "#dayinthelife"
+            ],
+            "linkedin": [
+              "#publicrelations",
+              "#internships",
+              "#earlycareers"
+            ],
+            "x": [
+              "#internships",
+              "#dayinthelife"
+            ]
+          },
+          "altText": "Five floors of a cut-away building show one PR intern's day from morning to evening: media monitoring at 09:00; write a release at 10:30; pitch journalists at 12:00; prep send-outs at 14:00; log coverage at 16:30. Tools: Cision, Canva, Google Docs."
+        },
+        {
+          "id": "week25-thu-infographic",
+          "day": "Thu 19 Nov",
+          "lane": "infographic",
+          "title": "A Day in the Life: Real Estate Intern",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "time": "16:30",
+          "world": "dayinlife",
+          "role": "real-estate",
+          "caption": "What does a real estate intern actually do all day?\n\nChecking new listings, photographing homes, showing people round, updating the system and sometimes handing over the keys.\n\nSave this if real estate is on your list, and share it with a friend who is curious.\n\nFind real estate internships: link in bio.",
+          "hashtags": [
+            "#realestate",
+            "#propertycareers",
+            "#internshipsuk",
+            "#dayinthelife"
+          ],
+          "captions": {
+            "ig-fb": "What does a real estate intern actually do all day?\n\nChecking new listings, photographing homes, showing people round, updating the system and sometimes handing over the keys.\n\nSave this if real estate is on your list, and share it with a friend who is curious.\n\nFind real estate internships: link in bio.",
+            "linkedin": "What does a Real Estate intern actually do all day?\n\nNew listings and price changes at 9, photographing a home at 10:30, viewings at midday, logging feedback and following up leads in the afternoon, and helping close a let or sale by the end of the day.\n\nIf you are considering real estate, this is the job behind the job title.\n\nhttps://www.internwise.co.uk",
+            "x": "Listings, viewings, photos and handing over keys. A day in the life of a Real Estate intern.\n\ninternwise.co.uk",
+            "threads": "What does a real estate intern actually do all day?\n\nChecking new listings, photographing homes, showing people round, updating the system and sometimes handing over the keys.\n\nSave this if real estate is on your list, and share it with a friend who is curious.\n\nFind real estate internships: internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#realestate",
+              "#propertycareers",
+              "#internshipsuk",
+              "#dayinthelife"
+            ],
+            "linkedin": [
+              "#realestate",
+              "#internships",
+              "#earlycareers"
+            ],
+            "x": [
+              "#internships",
+              "#dayinthelife"
+            ]
+          },
+          "altText": "Five floors of a cut-away building show one real estate intern's day from morning to evening: check listings at 09:00; photograph a home at 10:30; viewings at 12:00; update the system at 14:00; hand over keys at 16:30. Tools: Rightmove, A CRM system, Excel."
+        },
+        {
+          "id": "week25-fri-infographic",
+          "day": "Fri 20 Nov",
+          "lane": "infographic",
+          "title": "A Day in the Life: Project Management Intern",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "time": "16:30",
+          "world": "dayinlife",
+          "role": "project-management",
+          "caption": "What does a project management intern actually do all day?\n\nRunning stand-ups, moving tasks on the board, tracking the timeline, flagging risks early and sending a clear update.\n\nSave this if project management is on your list, and share it with a friend who is curious.\n\nFind project management internships: link in bio.",
+          "hashtags": [
+            "#projectmanagement",
+            "#pmintern",
+            "#internshipsuk",
+            "#dayinthelife"
+          ],
+          "captions": {
+            "ig-fb": "What does a project management intern actually do all day?\n\nRunning stand-ups, moving tasks on the board, tracking the timeline, flagging risks early and sending a clear update.\n\nSave this if project management is on your list, and share it with a friend who is curious.\n\nFind project management internships: link in bio.",
+            "linkedin": "What does a Project Management intern actually do all day?\n\nA daily stand-up at 9, the task board updated by 10:30, the timeline checked at midday, risks flagged in the afternoon, and a short status update to the team before home time. Trello, Microsoft Project and Excel are the everyday tools.\n\nIf you are considering project management, this is the job behind the job title.\n\nhttps://www.internwise.co.uk",
+            "x": "Stand-ups, task boards, timelines and status updates. A day in the life of a Project Management intern.\n\ninternwise.co.uk",
+            "threads": "What does a project management intern actually do all day?\n\nRunning stand-ups, moving tasks on the board, tracking the timeline, flagging risks early and sending a clear update.\n\nSave this if project management is on your list, and share it with a friend who is curious.\n\nFind project management internships: internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#projectmanagement",
+              "#pmintern",
+              "#internshipsuk",
+              "#dayinthelife"
+            ],
+            "linkedin": [
+              "#projectmanagement",
+              "#internships",
+              "#earlycareers"
+            ],
+            "x": [
+              "#internships",
+              "#dayinthelife"
+            ]
+          },
+          "altText": "Five floors of a cut-away building show one project management intern's day from morning to evening: daily stand-up at 09:00; update the board at 10:30; track the timeline at 12:00; flag risks at 14:00; send the update at 16:30. Tools: Trello, Microsoft Project, Excel."
+        }
+      ],
+      "builtAt": 1794564802
     }
   ]
 }

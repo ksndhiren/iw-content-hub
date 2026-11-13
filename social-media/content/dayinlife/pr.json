@@ -1,0 +1,105 @@
+{
+  "article": "a",
+  "role_line1": "PR",
+  "role_line2": "Intern",
+  "structure": "a tall vertical cutaway cross-section of a lively media agency building in the centre of a portrait canvas, with a giant megaphone on its roof pointing up at the sky.",
+  "character": "young PR intern (a South Asian woman in her early 20s, long dark hair, cream blazer, phone in hand)",
+  "scenes": [
+    "she arrives with a coffee and flicks through a stack of newspapers and a tablet showing abstract headline blocks.",
+    "she types at a laptop with a long document of abstract lines, a small envelope icon flying out.",
+    "she talks on the phone at her desk beside a wall of contact cards and a corkboard of abstract cuttings.",
+    "she packs neat gift boxes with a product, a card and tissue paper ready for sending.",
+    "she sticks a printed article cutting into a big folder, smiling, a small tick floating above; dusk through the window."
+  ],
+  "props": "a giant megaphone, speech bubbles, a camera, a microphone, newspapers, a paper plane, a star burst",
+  "steps": [
+    {
+      "n": 1,
+      "time": "09:00",
+      "title": "Media monitoring",
+      "body": "Track news and mentions of clients.",
+      "target": [
+        472,
+        1343
+      ],
+      "card": [
+        22,
+        1110,
+        250
+      ]
+    },
+    {
+      "n": 2,
+      "time": "10:30",
+      "title": "Write a release",
+      "body": "Draft a short, newsworthy press release.",
+      "target": [
+        512,
+        1177
+      ],
+      "card": [
+        820,
+        999,
+        240
+      ]
+    },
+    {
+      "n": 3,
+      "time": "12:00",
+      "title": "Pitch journalists",
+      "body": "Call and email the right contacts.",
+      "target": [
+        464,
+        1010
+      ],
+      "card": [
+        22,
+        849,
+        250
+      ]
+    },
+    {
+      "n": 4,
+      "time": "14:00",
+      "title": "Prep send-outs",
+      "body": "Package products for press and creators.",
+      "target": [
+        504,
+        836
+      ],
+      "card": [
+        820,
+        692,
+        240
+      ]
+    },
+    {
+      "n": 5,
+      "time": "16:30",
+      "title": "Log coverage",
+      "body": "Clip every article and share the wins.",
+      "target": [
+        512,
+        654
+      ],
+      "card": [
+        22,
+        529,
+        250
+      ],
+      "accent": "coral"
+    }
+  ],
+  "tools": [
+    "Cision",
+    "Canva",
+    "Google Docs"
+  ],
+  "tools_card": [
+    820,
+    230,
+    240
+  ],
+  "cta": "Find PR internships",
+  "title_width": 440
+}

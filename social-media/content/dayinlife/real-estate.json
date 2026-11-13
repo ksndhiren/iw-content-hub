@@ -1,0 +1,105 @@
+{
+  "article": "a",
+  "role_line1": "Real Estate",
+  "role_line2": "Intern",
+  "structure": "a tall vertical cutaway cross-section of a smart high-street estate agency building in the centre of a portrait canvas, with a giant house-shaped key on its roof.",
+  "character": "young real estate intern (an East Asian man in his early 20s, short black hair, navy suit, no tie, clipboard)",
+  "scenes": [
+    "he arrives with a coffee and checks a laptop showing abstract property listing cards with house icons.",
+    "he photographs a bright empty living room with a camera on a small tripod.",
+    "he shows a young couple around a flat, pointing at a large window.",
+    "he updates a big wall board of property cards with coloured pins, a phone tucked at his shoulder.",
+    "he hands a set of keys across a desk to a smiling person, a small house icon floating above; dusk through the window."
+  ],
+  "props": "a giant key, a SOLD sign shape with no text, a house silhouette, a map pin, a calculator, a door, a padlock",
+  "steps": [
+    {
+      "n": 1,
+      "time": "09:00",
+      "title": "Check listings",
+      "body": "New properties and price changes.",
+      "target": [
+        481,
+        1343
+      ],
+      "card": [
+        22,
+        1110,
+        250
+      ]
+    },
+    {
+      "n": 2,
+      "time": "10:30",
+      "title": "Photograph a home",
+      "body": "Bright, tidy shots for the listing.",
+      "target": [
+        465,
+        1137
+      ],
+      "card": [
+        820,
+        963,
+        240
+      ]
+    },
+    {
+      "n": 3,
+      "time": "12:00",
+      "title": "Viewings",
+      "body": "Show buyers or renters around.",
+      "target": [
+        505,
+        987
+      ],
+      "card": [
+        22,
+        828,
+        250
+      ]
+    },
+    {
+      "n": 4,
+      "time": "14:00",
+      "title": "Update the system",
+      "body": "Log feedback and follow up leads.",
+      "target": [
+        481,
+        812
+      ],
+      "card": [
+        820,
+        671,
+        240
+      ]
+    },
+    {
+      "n": 5,
+      "time": "16:30",
+      "title": "Hand over keys",
+      "body": "Help close a let or sale.",
+      "target": [
+        528,
+        654
+      ],
+      "card": [
+        22,
+        529,
+        250
+      ],
+      "accent": "coral"
+    }
+  ],
+  "tools": [
+    "Rightmove",
+    "A CRM system",
+    "Excel"
+  ],
+  "tools_card": [
+    820,
+    230,
+    240
+  ],
+  "cta": "Find real estate internships",
+  "title_width": 440
+}
