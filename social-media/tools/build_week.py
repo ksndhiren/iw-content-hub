@@ -493,7 +493,7 @@ def _news_image_queries(item, headline):
             "inclusive workplace young disabled professional laptop",
             "young professional wheelchair office support employment",
         ]
-    if "ai" in source or "automation" in source:
+    if re.search(r"\bai\b", source) or "automation" in source:   # word match: "main" must not count as AI
         queries += [
             "student professional technology workplace artificial intelligence",
             "young professionals laptop technology office artificial intelligence",
@@ -523,7 +523,7 @@ def _news_image_caption(item, headline):
         return "Recruitment ideas, recognised on the awards floor."
     if "disabled" in source or "disability" in source or "long-term health" in source:
         return "Workplace support, turned into experience."
-    if "ai" in source or "automation" in source:
+    if re.search(r"\bai\b", source) or "automation" in source:   # word match: "main" must not count as AI
         return "Technology is reshaping early-career hiring."
     if "skill" in source or "training" in source:
         return "Skills training is becoming career currency."

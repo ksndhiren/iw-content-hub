@@ -11898,7 +11898,7 @@
       "id": "week24",
       "label": "Week 24",
       "weekCommencing": "2026-11-09",
-      "builtAt": 1794404897,
+      "builtAt": 1794579325,
       "posts": [
         {
           "id": "week24-mon-news",
@@ -13132,6 +13132,50 @@
             "x": [
               "#jobmarket",
               "#fairpay"
+            ]
+          }
+        },
+        {
+          "id": "week24-fri-news",
+          "day": "Fri 13 Nov",
+          "lane": "news",
+          "title": "Skilled Worker Visa Applications Fall 42%",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "Skilled Worker visa applications have fallen by 42% in a year.\n\nOfficial figures show 25,300 main applications in the year to October 2026. Health and Care Worker applications fell 61% to 7,300, and Youth Mobility Scheme applications fell 6% to 20,700.\n\nThe drop follows a run of policy changes. Since July 2025, most roles need to be at degree level (RQF 6) to be sponsored, and the English language requirement rose in January 2026.\n\nIf you are an international student hoping to stay and work in the UK, check early whether the roles you want can be sponsored, and build UK experience that makes you stand out to employers who still sponsor.\n\nSource: Personnel Today, using official UK visa statistics.",
+          "hashtags": [
+            "#ukvisa",
+            "#internationalstudents",
+            "#graduatejobs",
+            "#ukjobs",
+            "#careeradvice"
+          ],
+          "captions": {
+            "ig-fb": "Skilled Worker visa applications have fallen by 42% in a year.\n\nOfficial figures show 25,300 main applications in the year to October 2026. Health and Care Worker applications fell 61% to 7,300, and Youth Mobility Scheme applications fell 6% to 20,700.\n\nThe drop follows a run of policy changes. Since July 2025, most roles need to be at degree level (RQF 6) to be sponsored, and the English language requirement rose in January 2026.\n\nIf you are an international student hoping to stay and work in the UK, check early whether the roles you want can be sponsored, and build UK experience that makes you stand out to employers who still sponsor.\n\nSource: Personnel Today, using official UK visa statistics.",
+            "linkedin": "Skilled Worker visa applications have fallen by 42% in a year.\n\nOfficial entry clearance figures show 25,300 main applications in the year to October 2026. Health and Care Worker applications fell 61% to 7,300, and Youth Mobility Scheme applications fell 6% to 20,700.\n\nThe fall follows policy changes since 2023, including raising the skills threshold for sponsored roles to degree level (RQF 6) in July 2025, a higher Immigration Skills Charge and a tougher English language requirement from January 2026.\n\nFor international students planning to work in the UK, the practical takeaway is to check sponsorship eligibility early and to build relevant UK experience that helps them stand out to the employers who still sponsor.\n\nSource: Personnel Today, using official UK visa statistics.",
+            "x": "Skilled Worker visa applications fell 42% to 25,300 in the year to October 2026. International students: check early whether the roles you want can be sponsored. (Source: Personnel Today)",
+            "threads": "Skilled Worker visa applications fell 42% in a year, to 25,300. Most sponsored roles now need to be at degree level. International students hoping to work in the UK: check sponsorship early and build UK experience that helps you stand out. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#ukvisa",
+              "#internationalstudents",
+              "#graduatejobs",
+              "#ukjobs",
+              "#careeradvice"
+            ],
+            "linkedin": [
+              "#immigration",
+              "#graduates",
+              "#earlycareers"
+            ],
+            "x": [
+              "#ukjobs",
+              "#graduates"
             ]
           }
         }
