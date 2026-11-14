@@ -964,6 +964,36 @@
       "cutout": "nuno_offers_1",
       "week": "week24",
       "date": "2026-11-08"
+    },
+    {
+      "cutout": "nuno_thoughtful_3",
+      "week": "week25",
+      "date": "2026-11-14"
+    },
+    {
+      "cutout": "nuno_dothis_4",
+      "week": "week25",
+      "date": "2026-11-14"
+    },
+    {
+      "cutout": "nuno_planning_1",
+      "week": "week25",
+      "date": "2026-11-14"
+    },
+    {
+      "cutout": "nuno_offers_1",
+      "week": "week25",
+      "date": "2026-11-14"
+    },
+    {
+      "cutout": "nuno_phone_2",
+      "week": "week25",
+      "date": "2026-11-14"
+    },
+    {
+      "cutout": "nuno_phone_2",
+      "week": "week25",
+      "date": "2026-11-14"
     }
   ]
 }

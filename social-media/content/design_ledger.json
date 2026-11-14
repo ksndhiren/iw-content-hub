@@ -744,6 +744,56 @@
       "lane": "quote",
       "week": "week24",
       "world": "stamp"
+    },
+    {
+      "lane": "quote",
+      "week": "week25",
+      "world": "horizon"
+    },
+    {
+      "lane": "quote",
+      "week": "week25",
+      "world": "monument"
+    },
+    {
+      "lane": "quote",
+      "week": "week25",
+      "world": "spotlight"
+    },
+    {
+      "lane": "quote",
+      "week": "week25",
+      "world": "prism"
+    },
+    {
+      "lane": "quote",
+      "week": "week25",
+      "world": "paper"
+    },
+    {
+      "lane": "edu_carousel",
+      "week": "week25",
+      "world": "tabs"
+    },
+    {
+      "lane": "edu_carousel",
+      "week": "week25",
+      "world": "teal"
+    },
+    {
+      "lane": "edu_carousel",
+      "week": "week25",
+      "world": "plum"
+    },
+    {
+      "lane": "edu_single",
+      "week": "week25",
+      "world": "statement"
+    },
+    {
+      "lane": "edu_single",
+      "week": "week25",
+      "world": "tipcard"
     }
   ]
 }

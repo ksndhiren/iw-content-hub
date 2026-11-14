@@ -13185,7 +13185,577 @@
       "id": "week25",
       "label": "Week 25",
       "weekCommencing": "2026-11-16",
+      "builtAt": 1794665054,
       "posts": [
+        {
+          "id": "week25-mon-quote",
+          "day": "Mon 16 Nov",
+          "lane": "quote",
+          "title": "Quote: Charlotte Brontë",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Feeling a bit lost on your career path? Remember, 'Liberty lends us her wings and Hope guides us by her star.' Let Charlotte Brontë's words remind you that your journey is unique and filled with potential. Start exploring opportunities to shine at www.internwise.co.uk. ✨",
+          "hashtags": [
+            "#careerjourney",
+            "#charlottebronte",
+            "#internshipopportunities",
+            "#findyourpath",
+            "#internwiseuk"
+          ],
+          "captions": {
+            "ig-fb": "Feeling a bit lost on your career path? Remember, 'Liberty lends us her wings and Hope guides us by her star.' Let Charlotte Brontë's words remind you that your journey is unique and filled with potential. Start exploring opportunities to shine at www.internwise.co.uk. ✨",
+            "linkedin": "As Charlotte Brontë beautifully put it, 'Liberty lends us her wings and Hope guides us by her star.' Your career journey is a chance to explore and grow. Let hope be your guide as you pursue new opportunities. Discover internships and graduate roles that can help you soar at internwise.co.uk.",
+            "x": "Charlotte Brontë reminds us: 'Liberty lends us her wings and Hope guides us by her star.' Let hope guide your career journey. Discover opportunities at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careerjourney",
+              "#charlottebronte",
+              "#internshipopportunities",
+              "#findyourpath",
+              "#internwiseuk"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internships",
+              "#graduatejobs"
+            ],
+            "x": [
+              "#careerjourney",
+              "#internwiseuk"
+            ]
+          },
+          "quoteId": "q056",
+          "world": "horizon"
+        },
+        {
+          "id": "week25-mon-education",
+          "day": "Mon 16 Nov",
+          "lane": "education",
+          "title": "Is Your Internship Worth It?",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
+          ],
+          "status": "in-review",
+          "caption": "Wondering if your internship is a good learning experience? Here's how to evaluate its quality. Seek mentorship, align it with your career goals, and gather feedback from others. Make sure your time is well spent in gaining valuable skills and insights. Check out more tips for your career journey at www.internwise.co.uk.",
+          "hashtags": [
+            "#internshipguide",
+            "#careergrowth",
+            "#mentorship",
+            "#skilldevelopment",
+            "#careergoals"
+          ],
+          "captions": {
+            "ig-fb": "Wondering if your internship is a good learning experience? Here's how to evaluate its quality. Seek mentorship, align it with your career goals, and gather feedback from others. Make sure your time is well spent in gaining valuable skills and insights. Check out more tips for your career journey at www.internwise.co.uk.",
+            "linkedin": "Internships can be pivotal in shaping your career path. But how can you tell if yours is a valuable experience? Look for mentorship and skill development opportunities, ensure it aligns with your career goals, and get feedback from current or past interns. These steps can help you assess the quality of your internship. Discover more at internwise.co.uk.",
+            "x": "Not sure if your internship is valuable? Evaluate it for mentorship, career alignment, and feedback. Find guidance at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internshipguide",
+              "#careergrowth",
+              "#mentorship",
+              "#skilldevelopment",
+              "#careergoals"
+            ],
+            "linkedin": [
+              "#internshipquality",
+              "#careerdevelopment",
+              "#mentorship"
+            ],
+            "x": [
+              "#internshiptips",
+              "#careergrowth"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Internship Guide",
+            "headline": "Is Your Internship Worth It?",
+            "tone": "practical",
+            "slides": [
+              {
+                "tag": "Mentorship",
+                "title": "Seek Guidance",
+                "body": "Does your internship offer quality mentorship and skill development?"
+              },
+              {
+                "tag": "Career Alignment",
+                "title": "Match Your Goals",
+                "body": "Ensure the role aligns with your career aspirations and interests."
+              },
+              {
+                "tag": "Peer Feedback",
+                "title": "Learn From Others",
+                "body": "Talk to current or past interns for real insights about the role."
+              }
+            ],
+            "points": null,
+            "cta": "Evaluate your internship for growth and learning opportunities."
+          },
+          "world": "tabs",
+          "poses": {
+            "cover": "nuno_thoughtful_3",
+            "cta": "nuno_dothis_4"
+          }
+        },
+        {
+          "id": "week25-tue-quote",
+          "day": "Tue 17 Nov",
+          "lane": "quote",
+          "title": "Quote: Mary Shelley",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Mary Shelley reminds us to live fully and spread happiness. What better way to start than by finding a role that excites you and contributes to others' joy too? Dive into new opportunities and let your career journey begin. Explore what's out there with us at www.internwise.co.uk",
+          "hashtags": [
+            "#careerjoy",
+            "#internshipjourney",
+            "#maryshelley",
+            "#findyourpath",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Mary Shelley reminds us to live fully and spread happiness. What better way to start than by finding a role that excites you and contributes to others' joy too? Dive into new opportunities and let your career journey begin. Explore what's out there with us at www.internwise.co.uk",
+            "linkedin": "Mary Shelley once said, \"Live, and be happy, and make others so.\" This timeless advice is as relevant today as ever. As you embark on your professional journey, remember that happiness in your work can positively impact those around you. Seek opportunities that align with your passions and values. Your path starts here: internwise.co.uk",
+            "x": "Mary Shelley advises: \"Live, and be happy, and make others so.\" Start your career journey with roles that inspire and uplift at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careerjoy",
+              "#internshipjourney",
+              "#maryshelley",
+              "#findyourpath",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#careeradvice",
+              "#internships",
+              "#maryshelley"
+            ],
+            "x": [
+              "#careerjoy",
+              "#internwise"
+            ]
+          },
+          "quoteId": "q057",
+          "world": "monument"
+        },
+        {
+          "id": "week25-tue-education",
+          "day": "Tue 17 Nov",
+          "lane": "education",
+          "title": "Experience Isn't Everything",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
+          ],
+          "status": "in-review",
+          "caption": "Lack experience? No problem! Employers care about your skills and potential. Highlight your transferable skills and relevant projects to showcase your initiative and abilities. Remember, experience isn't everything. Visit www.internwise.co.uk to learn more!",
+          "hashtags": [
+            "#careertips",
+            "#transferableskills",
+            "#employability",
+            "#graduatejobs",
+            "#internships"
+          ],
+          "captions": {
+            "ig-fb": "Lack experience? No problem! Employers care about your skills and potential. Highlight your transferable skills and relevant projects to showcase your initiative and abilities. Remember, experience isn't everything. Visit www.internwise.co.uk to learn more!",
+            "linkedin": "Worried about lacking experience? Don't be! Employers value skills and potential just as much. Highlight your transferable skills and showcase your initiative through relevant projects. Remember, it's not just about experience. Head to internwise.co.uk for more insights.",
+            "x": "Experience isn't everything. Focus on skills and projects to shine. Learn more at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careertips",
+              "#transferableskills",
+              "#employability",
+              "#graduatejobs",
+              "#internships"
+            ],
+            "linkedin": [
+              "#careeradvice",
+              "#skillsdevelopment",
+              "#graduateopportunities"
+            ],
+            "x": [
+              "#careertips",
+              "#skillsmatter"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Career Tips",
+            "headline": "Experience Isn't Everything",
+            "tone": "practical",
+            "slides": [
+              {
+                "tag": "Employability",
+                "title": "Skills Over Experience",
+                "body": "Employers value skills and potential, not just experience."
+              },
+              {
+                "tag": "Initiative",
+                "title": "Projects Matter",
+                "body": "Showcase your initiative and abilities through relevant projects."
+              },
+              {
+                "tag": "Transferable Skills",
+                "title": "Skills That Count",
+                "body": "Transferable skills can be as important as direct experience."
+              }
+            ],
+            "points": null,
+            "cta": "Focus on skills and projects to boost employability."
+          },
+          "world": "teal",
+          "poses": {
+            "cover": "nuno_planning_1",
+            "cta": "nuno_offers_1"
+          }
+        },
+        {
+          "id": "week25-wed-quote",
+          "day": "Wed 18 Nov",
+          "lane": "quote",
+          "title": "Quote: Virginia Woolf",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Remember, there's no rush to fit into a mould. Embrace who you are and let your unique qualities shine through. Virginia Woolf reminds us that authenticity is key. As you start your career journey, stay true to yourself. Explore opportunities that align with who you are at www.internwise.co.uk.",
+          "hashtags": [
+            "#beyourself",
+            "#careerjourney",
+            "#internshipsuk",
+            "#virginiawoolf",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Remember, there's no rush to fit into a mould. Embrace who you are and let your unique qualities shine through. Virginia Woolf reminds us that authenticity is key. As you start your career journey, stay true to yourself. Explore opportunities that align with who you are at www.internwise.co.uk.",
+            "linkedin": "Virginia Woolf once said, 'No need to hurry. No need to sparkle. No need to be anybody but oneself.' In a world full of expectations, it's essential to stay true to your own values and strengths. As you embark on your professional path, remember that authenticity is your greatest asset. Explore how Internwise can connect you with opportunities that celebrate your individuality at internwise.co.uk.",
+            "x": "Virginia Woolf nails it: 'No need to hurry. No need to sparkle. No need to be anybody but oneself.' Stay true to you. Discover opportunities that match your unique self at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#beyourself",
+              "#careerjourney",
+              "#internshipsuk",
+              "#virginiawoolf",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#authenticity",
+              "#careeradvice",
+              "#internwiseuk"
+            ],
+            "x": [
+              "#beauthentic",
+              "#internwise"
+            ]
+          },
+          "quoteId": "q058",
+          "world": "spotlight"
+        },
+        {
+          "id": "week25-wed-education",
+          "day": "Wed 18 Nov",
+          "lane": "education",
+          "title": "Make Your LinkedIn Shine",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
+          ],
+          "status": "in-review",
+          "caption": "Is your LinkedIn profile not getting noticed? Let’s change that! A strong headline can instantly communicate your value, while active networking opens doors to new opportunities. Plus, keeping your profile updated attracts recruiters, bringing you closer to that dream job. Follow these practical steps to make your LinkedIn stand out and start connecting with the right people today! For more career tips and job opportunities, visit www.internwise.co.uk.",
+          "hashtags": [
+            "#linkedintips",
+            "#careergrowth",
+            "#networking",
+            "#jobsearch",
+            "#graduatejobs"
+          ],
+          "captions": {
+            "ig-fb": "Is your LinkedIn profile not getting noticed? Let’s change that! A strong headline can instantly communicate your value, while active networking opens doors to new opportunities. Plus, keeping your profile updated attracts recruiters, bringing you closer to that dream job. Follow these practical steps to make your LinkedIn stand out and start connecting with the right people today! For more career tips and job opportunities, visit www.internwise.co.uk.",
+            "linkedin": "Is your LinkedIn profile not getting the attention it deserves? Craft a strong headline to capture interest and showcase your value. Engage actively with your network to increase visibility and job prospects. An active profile draws recruiter interest, leading to more opportunities. Follow these tips to elevate your LinkedIn game. For more insights and opportunities, visit internwise.co.uk.",
+            "x": "Your LinkedIn profile should stand out! Use a strong headline, network actively, and keep your profile updated to attract recruiters. Learn more at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#linkedintips",
+              "#careergrowth",
+              "#networking",
+              "#jobsearch",
+              "#graduatejobs"
+            ],
+            "linkedin": [
+              "#linkedinpresence",
+              "#careeradvice",
+              "#graduatejobs"
+            ],
+            "x": [
+              "#linkedintips",
+              "#jobsearch"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "LinkedIn Tips",
+            "headline": "Make Your LinkedIn Shine",
+            "tone": "practical",
+            "slides": [
+              {
+                "tag": "Headline Power",
+                "title": "Craft a Strong Headline",
+                "body": "Your headline should grab attention and show your value."
+              },
+              {
+                "tag": "Grow Network",
+                "title": "Network Actively",
+                "body": "Engage with peers and professionals to boost your visibility."
+              },
+              {
+                "tag": "Stay Active",
+                "title": "Keep Your Profile Active",
+                "body": "Regular updates attract recruiter interest and job offers."
+              }
+            ],
+            "points": null,
+            "cta": "Apply these tips to boost your LinkedIn presence today."
+          },
+          "world": "plum",
+          "poses": {
+            "cover": "nuno_phone_2",
+            "cta": "nuno_phone_2"
+          }
+        },
+        {
+          "id": "week25-thu-quote",
+          "day": "Thu 19 Nov",
+          "lane": "quote",
+          "title": "Quote: Henry Ford",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Feeling overwhelmed? Take a leaf out of Henry Ford's book: \"Nothing is particularly hard if you subdivide it into small jobs.\" Tackle your tasks one step at a time and you'll see the progress unfold. Ready to start your career journey? Explore internships at www.internwise.co.uk.",
+          "hashtags": [
+            "#careeradvice",
+            "#internships",
+            "#henryfordquote",
+            "#careerjourney",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Feeling overwhelmed? Take a leaf out of Henry Ford's book: \"Nothing is particularly hard if you subdivide it into small jobs.\" Tackle your tasks one step at a time and you'll see the progress unfold. Ready to start your career journey? Explore internships at www.internwise.co.uk.",
+            "linkedin": "Henry Ford once said, \"Nothing is particularly hard if you subdivide it into small jobs.\" Breaking big tasks into smaller, manageable parts can make all the difference in achieving your goals. As you step into the professional world, remember that every small step counts. Discover internship opportunities at internwise.co.uk.",
+            "x": "Henry Ford wisely noted: \"Nothing is particularly hard if you subdivide it into small jobs.\" Remember this as you dive into your career. Every small step matters! Explore internships at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careeradvice",
+              "#internships",
+              "#henryfordquote",
+              "#careerjourney",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#careeradvice",
+              "#internships",
+              "#professionalgrowth"
+            ],
+            "x": [
+              "#careertips",
+              "#internships"
+            ]
+          },
+          "quoteId": "q059",
+          "world": "prism"
+        },
+        {
+          "id": "week25-thu-education",
+          "day": "Thu 19 Nov",
+          "lane": "education",
+          "title": "Get Real Feedback on Your CV",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Have you applied to dozens of jobs but only got a couple of interviews? It might be time to get some real feedback on your CV. \n\nHere's how:\n\n1. Reach out to professionals in your field. They can provide targeted advice that highlights your strengths.\n\n2. Use industry insights to align your CV with what employers are looking for.\n\n3. Tailored feedback often helps your CV stand out.\n\n4. Keep improving. Your CV should evolve with you.\n\nReal feedback can make all the difference. Connect with professionals and start refining your CV today.\n\nVisit www.internwise.co.uk for more career advice and opportunities.",
+          "hashtags": [
+            "#cvtips",
+            "#careeradvice",
+            "#jobhunt",
+            "#feedback",
+            "#professionalgrowth"
+          ],
+          "captions": {
+            "ig-fb": "Have you applied to dozens of jobs but only got a couple of interviews? It might be time to get some real feedback on your CV. \n\nHere's how:\n\n1. Reach out to professionals in your field. They can provide targeted advice that highlights your strengths.\n\n2. Use industry insights to align your CV with what employers are looking for.\n\n3. Tailored feedback often helps your CV stand out.\n\n4. Keep improving. Your CV should evolve with you.\n\nReal feedback can make all the difference. Connect with professionals and start refining your CV today.\n\nVisit www.internwise.co.uk for more career advice and opportunities.",
+            "linkedin": "Struggling to get interviews despite sending out countless applications? It might be time to gather real feedback on your CV.\n\nHere's how to make your CV shine:\n\n- Connect with industry professionals for targeted advice. They can help you highlight strengths you might have overlooked.\n\n- Align your CV with employer expectations using insights from those in your field.\n\n- Tailored feedback helps your CV stand out from the crowd.\n\n- Continuous improvement is essential. Make sure your CV evolves as you gain experience.\n\nReady to take your CV to the next level? Start by seeking out professionals who can offer meaningful feedback.\n\nFor more career insights, visit internwise.co.uk.",
+            "x": "Applied to many jobs with few interviews? Get real CV feedback from industry pros. Start refining today. internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#cvtips",
+              "#careeradvice",
+              "#jobhunt",
+              "#feedback",
+              "#professionalgrowth"
+            ],
+            "linkedin": [
+              "#cvadvice",
+              "#careerdevelopment",
+              "#jobsearch"
+            ],
+            "x": [
+              "#cvadvice",
+              "#careertips"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "CV Tips",
+            "headline": "Get Real Feedback on Your CV",
+            "tone": "practical",
+            "slides": null,
+            "points": [
+              "Seek advice from industry pros",
+              "Highlight hidden strengths",
+              "Align CV with job expectations",
+              "Stand out with tailored feedback",
+              "Continuous improvement is key"
+            ],
+            "cta": "Reach out to professionals for CV feedback today."
+          },
+          "world": "statement"
+        },
+        {
+          "id": "week25-fri-quote",
+          "day": "Fri 20 Nov",
+          "lane": "quote",
+          "title": "Quote: John Ruskin",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Thinking, knowing, and believing are the easy parts. It's what we do that truly matters. Take that step, make a difference, and see how far action can take you. Ready to take the leap? Find your next opportunity at www.internwise.co.uk",
+          "hashtags": [
+            "#takeaction",
+            "#internships",
+            "#careergrowth",
+            "#johnruskin",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Thinking, knowing, and believing are the easy parts. It's what we do that truly matters. Take that step, make a difference, and see how far action can take you. Ready to take the leap? Find your next opportunity at www.internwise.co.uk",
+            "linkedin": "John Ruskin reminds us that actions speak louder than thoughts or beliefs. It's the steps we take that shape our path and future. If you're ready to make your actions count, explore internship opportunities that could define your career. Visit internwise.co.uk",
+            "x": "John Ruskin said it's our actions, not thoughts, that matter most. Ready to act? Discover opportunities at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#takeaction",
+              "#internships",
+              "#careergrowth",
+              "#johnruskin",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internships",
+              "#johnruskin"
+            ],
+            "x": [
+              "#internships",
+              "#careeradvice"
+            ]
+          },
+          "quoteId": "q060",
+          "world": "paper"
+        },
+        {
+          "id": "week25-fri-education",
+          "day": "Fri 20 Nov",
+          "lane": "education",
+          "title": "Master Your Interviews",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Feeling stuck after multiple unsuccessful interviews? It's time to turn things around. Start by reflecting on your past interviews. Identify any recurring mistakes and seek feedback to guide your future success. Practice makes perfect, so tailor your responses to common questions and build your confidence. Every interview is a learning opportunity. Use your past experiences as a roadmap to ace the next one. Visit www.internwise.co.uk for more insights.",
+          "hashtags": [
+            "#interviewsuccess",
+            "#careergrowth",
+            "#jobhunt",
+            "#graduates",
+            "#internships"
+          ],
+          "captions": {
+            "ig-fb": "Feeling stuck after multiple unsuccessful interviews? It's time to turn things around. Start by reflecting on your past interviews. Identify any recurring mistakes and seek feedback to guide your future success. Practice makes perfect, so tailor your responses to common questions and build your confidence. Every interview is a learning opportunity. Use your past experiences as a roadmap to ace the next one. Visit www.internwise.co.uk for more insights.",
+            "linkedin": "Feeling stuck after multiple unsuccessful interviews? You're not alone, and there's a way forward. The key is to learn from experience. Start by reflecting on your past interviews. What went well? Where could you improve? Identifying patterns in your performance can lead to targeted improvements. Seek feedback from previous interviewers if possible, and use this guidance to practice tailored responses. Confidence grows with preparation, so make every interview count. Turn past setbacks into future successes. Visit internwise.co.uk for more insights.",
+            "x": "Struggling with interviews? Reflect on past experiences. Identify patterns, seek feedback, and practice tailored responses. Turn setbacks into success. internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#interviewsuccess",
+              "#careergrowth",
+              "#jobhunt",
+              "#graduates",
+              "#internships"
+            ],
+            "linkedin": [
+              "#interviewtips",
+              "#careerdevelopment",
+              "#graduatejobs"
+            ],
+            "x": [
+              "#interviewtips",
+              "#careeradvice"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Interview Tips",
+            "headline": "Master Your Interviews",
+            "tone": "practical",
+            "slides": null,
+            "points": [
+              "Reflect on past interviews",
+              "Pinpoint recurring mistakes",
+              "Seek constructive feedback",
+              "Practice tailored responses",
+              "Stay calm and confident"
+            ],
+            "cta": "Use past interviews as a roadmap for success."
+          },
+          "world": "tipcard"
+        },
         {
           "id": "week25-mon-employerguide",
           "day": "Mon 16 Nov",
@@ -13652,8 +14222,7 @@
           },
           "altText": "Five floors of a cut-away building show one project management intern's day from morning to evening: daily stand-up at 09:00; update the board at 10:30; track the timeline at 12:00; flag risks at 14:00; send the update at 16:30. Tools: Trello, Microsoft Project, Excel."
         }
-      ],
-      "builtAt": 1794564802
+      ]
     }
   ]
 }
