@@ -13185,7 +13185,7 @@
       "id": "week25",
       "label": "Week 25",
       "weekCommencing": "2026-11-16",
-      "builtAt": 1794665054,
+      "builtAt": 1794750029,
       "posts": [
         {
           "id": "week25-mon-quote",
@@ -14221,6 +14221,50 @@
             ]
           },
           "altText": "Five floors of a cut-away building show one project management intern's day from morning to evening: daily stand-up at 09:00; update the board at 10:30; track the timeline at 12:00; flag risks at 14:00; send the update at 16:30. Tools: Trello, Microsoft Project, Excel."
+        },
+        {
+          "id": "week25-mon-news",
+          "day": "Mon 16 Nov",
+          "lane": "news",
+          "title": "UK Pupils Learn Essential Job Skills",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "UK schools are stepping up to prepare Year 10 pupils with crucial employability skills. These lessons include mastering simple yet impactful skills like handshakes and eye contact. Why is this important? It's all about reducing the number of young people who find themselves 'Neet', meaning not in education, employment, or training. By equipping students early on, schools aim to make them more appealing to future employers who value soft skills as much as technical know-how. For students and graduates, it's a clear signal: mastering these interpersonal skills is just as vital as your academic achievements. Internships can be a great way to further develop these skills outside the classroom. They offer a real-world environment to practice and refine what you've learned, making you even more job-ready. Source: BBC UK.",
+          "hashtags": [
+            "#employabilityskills",
+            "#ukeducation",
+            "#internships",
+            "#softskills",
+            "#youthemployment"
+          ],
+          "captions": {
+            "ig-fb": "UK schools are stepping up to prepare Year 10 pupils with crucial employability skills. These lessons include mastering simple yet impactful skills like handshakes and eye contact. Why is this important? It's all about reducing the number of young people who find themselves 'Neet', meaning not in education, employment, or training. By equipping students early on, schools aim to make them more appealing to future employers who value soft skills as much as technical know-how. For students and graduates, it's a clear signal: mastering these interpersonal skills is just as vital as your academic achievements. Internships can be a great way to further develop these skills outside the classroom. They offer a real-world environment to practice and refine what you've learned, making you even more job-ready. Source: BBC UK.",
+            "linkedin": "In a move to better equip young people for the job market, UK schools are teaching Year 10 pupils key employability skills. Lessons in handshaking and eye contact aim to cut down the number of young individuals who become 'Neet' - not in education, employment, or training. This shift underscores the need for soft skills alongside academic prowess, making students more appealing to employers who value both technical and interpersonal abilities. For students and graduates, the message is clear: hone these soft skills to stand out. Internships provide an excellent platform to practice such skills in a real-world setting, bridging the gap between classroom learning and workplace expectations. Source: BBC UK.",
+            "x": "UK Year 10 pupils learn key job skills like handshakes and eye contact to cut 'Neet' numbers. Soft skills are crucial in today's job market. Internships can help you practice these skills in real-world settings. (Source: BBC UK)",
+            "threads": "Year 10 pupils in the UK are learning crucial job skills like handshakes and eye contact. This helps reduce 'Neet' numbers by making them more employable. Internships are a great way to practice these skills in real settings. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#employabilityskills",
+              "#ukeducation",
+              "#internships",
+              "#softskills",
+              "#youthemployment"
+            ],
+            "linkedin": [
+              "#employabilityskills",
+              "#internships",
+              "#ukjobs"
+            ],
+            "x": [
+              "#ukeducation",
+              "#softskills"
+            ]
+          }
         }
       ]
     }
