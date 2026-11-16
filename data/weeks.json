@@ -13185,7 +13185,7 @@
       "id": "week25",
       "label": "Week 25",
       "weekCommencing": "2026-11-16",
-      "builtAt": 1794750029,
+      "builtAt": 1794841957,
       "posts": [
         {
           "id": "week25-mon-quote",
@@ -14263,6 +14263,50 @@
             "x": [
               "#ukeducation",
               "#softskills"
+            ]
+          }
+        },
+        {
+          "id": "week25-tue-news",
+          "day": "Tue 17 Nov",
+          "lane": "news",
+          "title": "Call to Cut National Insurance for Youth Jobs",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "A recent report is pushing for a reduction in National Insurance contributions for under-25s to boost job creation. This proposal comes as some parents are offering to pay their children's wages just to get them into the workforce. \n\nWhy does this matter? Young people in the UK are facing significant barriers to employment. High National Insurance costs make it less appealing for companies to hire younger workers, who often lack experience. Lowering these costs could make a real difference, encouraging employers to take a chance on younger candidates.\n\nFor students and graduates, this could mean more job openings and chances to gain that all-important experience. internships are a practical way to start building your career. They provide not just a foot in the door, but also the experience and skills that can lead to permanent roles.\n\nIn the meantime, consider internships to gain valuable work experience and skills. They are your stepping stones to a fulfilling career. Source: BBC Business.",
+          "hashtags": [
+            "#youthjobs",
+            "#internships",
+            "#jobmarket",
+            "#careerstart",
+            "#ukjobs"
+          ],
+          "captions": {
+            "ig-fb": "A recent report is pushing for a reduction in National Insurance contributions for under-25s to boost job creation. This proposal comes as some parents are offering to pay their children's wages just to get them into the workforce. \n\nWhy does this matter? Young people in the UK are facing significant barriers to employment. High National Insurance costs make it less appealing for companies to hire younger workers, who often lack experience. Lowering these costs could make a real difference, encouraging employers to take a chance on younger candidates.\n\nFor students and graduates, this could mean more job openings and chances to gain that all-important experience. internships are a practical way to start building your career. They provide not just a foot in the door, but also the experience and skills that can lead to permanent roles.\n\nIn the meantime, consider internships to gain valuable work experience and skills. They are your stepping stones to a fulfilling career. Source: BBC Business.",
+            "linkedin": "A new report suggests cutting National Insurance contributions for workers under 25 to boost job opportunities for young people. This comes as some parents are taking the drastic step of offering to pay wages to help their children secure employment.\n\nThe significance of this proposal lies in its potential to lower the hiring costs for young workers, making them more attractive to employers. With the current economic climate, young job seekers face tough competition, and anything that can ease the financial burden on employers could open up more opportunities.\n\nFor students and graduates, this could translate into more entry-level job openings and a smoother transition into the workforce. It's crucial to accumulate experience, and internships can be a great way to do so. These roles not only provide a salary but also the chance to develop skills that employers value.\n\nIn the interim, explore internship opportunities to enhance your CV and skillset. They provide a solid foundation for securing permanent positions in the future. Source: BBC Business.",
+            "x": "A report suggests cutting National Insurance for under-25s to boost youth jobs. Some parents are even offering to pay wages to help their children. internships can bridge the gap, providing experience and skills. (Source: BBC Business)",
+            "threads": "A report proposes cutting National Insurance for under-25s to boost job prospects, as some parents offer to pay wages. This could ease hiring for young workers. Until then, consider internships to gain skills and experience. Visit www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#youthjobs",
+              "#internships",
+              "#jobmarket",
+              "#careerstart",
+              "#ukjobs"
+            ],
+            "linkedin": [
+              "#youthemployment",
+              "#ukjobs",
+              "#internships"
+            ],
+            "x": [
+              "#youthjobs",
+              "#internships"
             ]
           }
         }
