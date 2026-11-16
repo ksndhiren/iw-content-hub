@@ -544,5 +544,21 @@
       "linkedin"
     ],
     "at": "2026-11-15T09:30:22.185967"
+  },
+  "https://www.internwise.com/blog/startup-validation/startup-validation-tools": {
+    "networks": [
+      "facebook",
+      "gmb",
+      "linkedin"
+    ],
+    "at": "2026-11-16T09:49:05.786698"
+  },
+  "https://www.internwise.com/blog/startup-validation/startup-validation-examples": {
+    "networks": [
+      "facebook",
+      "gmb",
+      "linkedin"
+    ],
+    "at": "2026-11-16T09:49:07.454126"
   }
 }
