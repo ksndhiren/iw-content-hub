@@ -8836,5 +8836,53 @@
     "at": "2026-11-17T09:08:48.933791",
     "network": "facebook",
     "scheduleDate": "2026-11-20T16:30:00Z"
+  },
+  "week25-wed-news:instagram": {
+    "id": "PYTSlvk4lw8FByqfEaWE",
+    "at": "2026-11-17T15:42:58.849232",
+    "network": "instagram",
+    "scheduleDate": "2026-11-18T08:00:00Z"
+  },
+  "week25-wed-news:facebook": {
+    "id": "YfNpicOrcnFioqbpocBc",
+    "at": "2026-11-17T15:43:00.542691",
+    "network": "facebook",
+    "scheduleDate": "2026-11-18T08:00:00Z"
+  },
+  "week25-wed-news:linkedin": {
+    "id": "7kMAL63LMtBXupF0L611",
+    "at": "2026-11-17T15:43:02.159841",
+    "network": "linkedin",
+    "scheduleDate": "2026-11-18T08:00:00Z"
+  },
+  "week25-wed-news:threads": {
+    "id": "d9QYKphnvhC3UAYUh95b",
+    "at": "2026-11-17T15:43:03.634732",
+    "network": "threads",
+    "scheduleDate": "2026-11-18T08:00:00Z"
+  },
+  "week25-wed-news:gmb": {
+    "id": "RrWw6KjBUEGmVWop4t2g",
+    "at": "2026-11-17T15:43:05.083954",
+    "network": "gmb",
+    "scheduleDate": "2026-11-18T08:00:00Z"
+  },
+  "week25-wed-news:pinterest": {
+    "id": "RqacPKruEuERCBxLWvsg",
+    "at": "2026-11-17T15:43:06.089895",
+    "network": "pinterest",
+    "scheduleDate": "2026-11-18T08:00:00Z"
+  },
+  "week25-wed-news:instagram:story": {
+    "id": "hRCzF8ysf7KMGJea1zlG",
+    "at": "2026-11-17T15:43:07.896054",
+    "network": "instagram",
+    "scheduleDate": "2026-11-18T08:00:00Z"
+  },
+  "week25-wed-news:facebook:story": {
+    "id": "OhsjQIzD9kX7KNg721wJ",
+    "at": "2026-11-17T15:43:09.313390",
+    "network": "facebook",
+    "scheduleDate": "2026-11-18T08:00:00Z"
   }
 }
