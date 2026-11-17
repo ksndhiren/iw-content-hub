@@ -13185,7 +13185,7 @@
       "id": "week25",
       "label": "Week 25",
       "weekCommencing": "2026-11-16",
-      "builtAt": 1794841957,
+      "builtAt": 1794930170,
       "posts": [
         {
           "id": "week25-sat-quote",
@@ -14310,6 +14310,50 @@
             ],
             "x": [
               "#youthjobs",
+              "#internships"
+            ]
+          }
+        },
+        {
+          "id": "week25-wed-news",
+          "day": "Wed 18 Nov",
+          "lane": "news",
+          "title": "Call to Lower NI for Hiring Under-25s",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "A recent report suggests that reducing the National Insurance contributions for businesses hiring those under 25 could help create more jobs. This idea comes from a former government minister who believes it could ease the financial burden on employers and encourage them to hire more young people.\n\nFor students and recent graduates, this could mean more opportunities to enter the workforce. Lower costs for employers might lead to increased hiring, making it easier for young talent to get a foot in the door.\n\nInternships can be a stepping stone in this scenario by providing practical experience that makes candidates more appealing. With the potential for job creation through lowered NI, internships become even more valuable for gaining relevant skills.\n\nSource: BBC Business.",
+          "hashtags": [
+            "#jobmarket",
+            "#nationalinsurance",
+            "#youngtalent",
+            "#internships",
+            "#careergrowth"
+          ],
+          "captions": {
+            "ig-fb": "A recent report suggests that reducing the National Insurance contributions for businesses hiring those under 25 could help create more jobs. This idea comes from a former government minister who believes it could ease the financial burden on employers and encourage them to hire more young people.\n\nFor students and recent graduates, this could mean more opportunities to enter the workforce. Lower costs for employers might lead to increased hiring, making it easier for young talent to get a foot in the door.\n\nInternships can be a stepping stone in this scenario by providing practical experience that makes candidates more appealing. With the potential for job creation through lowered NI, internships become even more valuable for gaining relevant skills.\n\nSource: BBC Business.",
+            "linkedin": "A new report by a former government minister proposes that gradually lowering National Insurance contributions for employers hiring under-25s could foster job growth. The idea is to alleviate the financial load on businesses, potentially leading to more employment opportunities for young people.\n\nFor students and graduates, this could translate into better job prospects. If implemented, the reduced cost for employers might encourage them to hire more young talent, opening doors for those starting their careers.\n\nInternships play a crucial role here, offering hands-on experience that can make young candidates more competitive. As businesses consider hiring due to potential NI savings, having internship experience could give applicants an edge.\n\nSource: BBC Business.",
+            "x": "A report suggests lowering NI for hiring under-25s could boost job creation. This might lead to more opportunities for young people entering the workforce. Internships add valuable experience, enhancing employability. (Source: BBC Business)",
+            "threads": "Lowering NI contributions for hiring under-25s could boost job creation, says a report. This could mean more opportunities for young people. Internships provide crucial experience, making candidates more competitive. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#jobmarket",
+              "#nationalinsurance",
+              "#youngtalent",
+              "#internships",
+              "#careergrowth"
+            ],
+            "linkedin": [
+              "#jobmarket",
+              "#youngprofessionals",
+              "#internships"
+            ],
+            "x": [
+              "#jobmarket",
               "#internships"
             ]
           }
