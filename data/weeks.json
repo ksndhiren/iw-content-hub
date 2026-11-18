@@ -13185,7 +13185,7 @@
       "id": "week25",
       "label": "Week 25",
       "weekCommencing": "2026-11-16",
-      "builtAt": 1794930170,
+      "builtAt": 1795015285,
       "posts": [
         {
           "id": "week25-sat-quote",
@@ -14354,6 +14354,50 @@
             ],
             "x": [
               "#jobmarket",
+              "#internships"
+            ]
+          }
+        },
+        {
+          "id": "week25-thu-news",
+          "day": "Thu 19 Nov",
+          "lane": "news",
+          "title": "A Million Young Adults Not in Work or Study",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "Over a million young adults in the UK are currently neither working nor studying. This represents a massive pool of untapped potential that could otherwise contribute to society and the economy. \n\nFor students and graduates, this highlights the importance of seizing opportunities that come their way. Engaging in work or further education is crucial. \n\nInternships are a practical way to gain experience and skills. They offer a bridge from education to employment, helping young people find their footing in the job market. \n\nSource: FE News.",
+          "hashtags": [
+            "#ukjobs",
+            "#youthunemployment",
+            "#internships",
+            "#careergrowth",
+            "#education"
+          ],
+          "captions": {
+            "ig-fb": "Over a million young adults in the UK are currently neither working nor studying. This represents a massive pool of untapped potential that could otherwise contribute to society and the economy. \n\nFor students and graduates, this highlights the importance of seizing opportunities that come their way. Engaging in work or further education is crucial. \n\nInternships are a practical way to gain experience and skills. They offer a bridge from education to employment, helping young people find their footing in the job market. \n\nSource: FE News.",
+            "linkedin": "In the UK, more than a million young adults are not engaged in employment or education. This figure indicates a significant waste of talent and potential, which could be better utilised for economic and social benefit. \n\nFor students and graduates, this underscores the importance of actively seeking opportunities. Engaging in work or educational pursuits is critical to personal and professional growth. \n\nInternships provide a valuable pathway to gaining practical experience and entering the workforce. They help individuals acquire the skills needed to succeed in a competitive job market. \n\nSource: FE News.",
+            "x": "Over a million young UK adults are neither working nor studying, highlighting a need for more engagement opportunities. Internships can help bridge this gap by offering practical experience and aiding workforce entry. (Source: FE News)",
+            "threads": "The UK has over a million young adults not in work or study, wasting potential talent. This calls for more engagement opportunities. Internships can help by providing practical experience and easing the transition to the workforce. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#ukjobs",
+              "#youthunemployment",
+              "#internships",
+              "#careergrowth",
+              "#education"
+            ],
+            "linkedin": [
+              "#ukjobmarket",
+              "#youthopportunities",
+              "#internships"
+            ],
+            "x": [
+              "#ukjobs",
               "#internships"
             ]
           }
