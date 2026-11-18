@@ -1,5 +1,66 @@
 {
   "id": "featured",
   "label": "Featured Jobs",
-  "posts": []
+  "posts": [
+    {
+      "id": "job-35410",
+      "sourceId": "35410",
+      "sourceUrl": "https://www.internwise.co.uk/job/35410/marketing-and-social-media-coordinator",
+      "addedAt": "2026-11-18T15:25:31Z",
+      "day": "JBROWN GLOBAL LIMITED",
+      "title": "Marketing and Social Media Coordinator",
+      "platform": "Featured Job",
+      "format": "Single",
+      "slides": [
+        "job-35410-2026-08-19-employers-sm-ads-v1.png"
+      ],
+      "status": "in-review",
+      "caption": "Turn what you have learned into real marketing and social media coordinator work with a team that mentors you.\n\n📍 Manchester, North West England\n\nApply now 👉 https://www.internwise.co.uk/job/35410/marketing-and-social-media-coordinator",
+      "hashtags": [
+        "#internship",
+        "#londonjobs",
+        "#socialmediajobs",
+        "#hiring",
+        "#graduatejobs"
+      ],
+      "captions": {
+        "ig-fb": "Turn what you have learned into real marketing and social media coordinator work with a team that mentors you.\n\n📍 Manchester, North West England\n\nApply now 👉 https://www.internwise.co.uk/job/35410/marketing-and-social-media-coordinator",
+        "linkedin": "Turn what you have learned into real marketing and social media coordinator work with a team that mentors you.\n\n📍 Manchester, North West England\n\nApply now 👉 https://www.internwise.co.uk/job/35410/marketing-and-social-media-coordinator",
+        "x": "Turn what you have learned into real marketing and social media coordinator work with a team that mentors you.\n\n📍 Manchester, North West England\n\nApply now 👉 https://www.internwise.co.uk/job/35410/marketing-and-social-media-coordinator"
+      },
+      "hashtagsByPlatform": {
+        "ig-fb": [
+          "#internship",
+          "#londonjobs",
+          "#socialmediajobs",
+          "#hiring",
+          "#graduatejobs"
+        ],
+        "linkedin": [
+          "#hiring",
+          "#internship",
+          "#socialmediajobs",
+          "#careers"
+        ],
+        "x": [
+          "#socialmediajobs",
+          "#hiring"
+        ]
+      },
+      "sector": "Social Media",
+      "sectorStyle": "social",
+      "palette": {
+        "version": "2026-08-19-employers-sm-ads-v1",
+        "style": "social",
+        "sector": "Social Media",
+        "accent": "#5AA9E8",
+        "accentDark": "#2E6BB0",
+        "background": [
+          "#123A66",
+          "#1E6FAE"
+        ],
+        "spark": "#D4FF3D"
+      }
+    }
+  ]
 }
