@@ -1,11 +1,77 @@
 {
-  "generatedAt": "2026-11-18T15:26:09Z",
+  "generatedAt": "2026-11-19T15:31:15Z",
   "windowRecords": 80,
-  "byLane": {},
-  "byDay": {},
-  "byHour": {},
-  "topPosts": [],
-  "insights": [],
+  "byLane": {
+    "education": {
+      "posts": 6,
+      "engagement": 0,
+      "avg": 0.0
+    }
+  },
+  "byDay": {
+    "Tue": {
+      "posts": 6,
+      "engagement": 0,
+      "avg": 0.0
+    }
+  },
+  "byHour": {
+    "9": {
+      "posts": 6,
+      "engagement": 0,
+      "avg": 0.0
+    }
+  },
+  "topPosts": [
+    {
+      "lane": "education",
+      "network": "gmb",
+      "engagement": 0,
+      "created": "2026-11-17T09:05:08Z",
+      "caption": "Have you applied to dozens of jobs but only got a couple of interviews? It might be time to get some real feedback on yo"
+    },
+    {
+      "lane": "education",
+      "network": "threads",
+      "engagement": 0,
+      "created": "2026-11-17T09:05:06Z",
+      "caption": "Have you applied to dozens of jobs but only got a couple of interviews? It might be time to get some real feedback on yo"
+    },
+    {
+      "lane": "education",
+      "network": "instagram",
+      "engagement": 0,
+      "created": "2026-11-17T09:04:58Z",
+      "caption": "Have you applied to dozens of jobs but only got a couple of interviews? It might be time to get some real feedback on yo"
+    },
+    {
+      "lane": "education",
+      "network": "pinterest",
+      "engagement": 0,
+      "created": "2026-11-17T09:05:10Z",
+      "caption": "Have you applied to dozens of jobs but only got a couple of interviews? It might be time to get some real feedback on yo"
+    },
+    {
+      "lane": "education",
+      "network": "linkedin",
+      "engagement": 0,
+      "created": "2026-11-17T09:05:01Z",
+      "caption": "Struggling to get interviews despite sending out countless applications? It might be time to gather real feedback on you"
+    },
+    {
+      "lane": "education",
+      "network": "facebook",
+      "engagement": 0,
+      "created": "2026-11-17T09:05:04Z",
+      "caption": "Have you applied to dozens of jobs but only got a couple of interviews? It might be time to get some real feedback on yo"
+    }
+  ],
+  "insights": [
+    "Your strongest topic is Education (0.0 avg engagement/post). Make more of it.",
+    "Tue is your best posting day (0.0 avg engagement/post).",
+    "Posts around 09:00 UTC perform best (0.0 avg engagement/post).",
+    "Education is underperforming (0.0 avg) - rework the angle or post it at a stronger time."
+  ],
   "laneLabels": {
     "education": "Education",
     "news": "News",
