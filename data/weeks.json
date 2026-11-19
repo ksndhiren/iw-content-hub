@@ -13185,7 +13185,7 @@
       "id": "week25",
       "label": "Week 25",
       "weekCommencing": "2026-11-16",
-      "builtAt": 1795015285,
+      "builtAt": 1795102049,
       "posts": [
         {
           "id": "week25-sat-quote",
@@ -14398,6 +14398,50 @@
             ],
             "x": [
               "#ukjobs",
+              "#internships"
+            ]
+          }
+        },
+        {
+          "id": "week25-fri-news",
+          "day": "Fri 20 Nov",
+          "lane": "news",
+          "title": "Young Kids' Lies Seen as Learning Tool",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "New research has found that children start lying and tricking others at a surprisingly young age. These behaviours aren't just random; they are often practised and honed over time. Recognising that strategic thinking and problem-solving skills develop early can be insightful for students and graduates. It highlights the potential found in everyday behaviours. \n\nFor those entering the job market, internships offer a fantastic way to further develop these strategic skills. They provide real-world scenarios to apply and refine critical thinking, preparing you for workplace challenges. Source: BBC UK.",
+          "hashtags": [
+            "#skillsdevelopment",
+            "#earlylearning",
+            "#internships",
+            "#problemsolving",
+            "#ukgraduates"
+          ],
+          "captions": {
+            "ig-fb": "New research has found that children start lying and tricking others at a surprisingly young age. These behaviours aren't just random; they are often practised and honed over time. Recognising that strategic thinking and problem-solving skills develop early can be insightful for students and graduates. It highlights the potential found in everyday behaviours. \n\nFor those entering the job market, internships offer a fantastic way to further develop these strategic skills. They provide real-world scenarios to apply and refine critical thinking, preparing you for workplace challenges. Source: BBC UK.",
+            "linkedin": "A recent study reveals that children begin lying and tricking others at a surprisingly young age. These actions are often practised, indicating the early development of strategic thinking and problem-solving skills. Understanding these traits can be beneficial for students and graduates, as they indicate potential in seemingly trivial behaviours. \n\nInternships are an excellent opportunity to nurture these skills. By providing real-world experience, they help refine critical thinking and strategic problem-solving, preparing you for the complexities of the professional world. Source: BBC UK.",
+            "x": "Research shows kids start lying young, practising these skills. Recognising early development in strategic thinking can be valuable for students. Internships help refine these skills in real-world scenarios. (Source: BBC UK)",
+            "threads": "Research shows children start lying young, practising strategic skills. Recognising early development aids students. Internships refine these skills in real-world settings. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#skillsdevelopment",
+              "#earlylearning",
+              "#internships",
+              "#problemsolving",
+              "#ukgraduates"
+            ],
+            "linkedin": [
+              "#skillsdevelopment",
+              "#earlylearning",
+              "#internships"
+            ],
+            "x": [
+              "#skillsdevelopment",
               "#internships"
             ]
           }
