@@ -88,6 +88,47 @@ def week_of(target: datetime.date):
 AGE_LADDER = (7, 10, 14)
 
 
+JUDGE_PROMPT = """You screen news stories for Internwise, a UK internship and graduate-jobs platform.
+Its daily news post must be a story that is genuinely ABOUT one of these:
+- the UK job market, hiring, recruitment, pay or unemployment
+- internships, graduate jobs, apprenticeships, work experience or entry-level roles
+- young people moving from education into work (employability, skills for jobs, NEETs)
+- university/college students' career prospects, or government schemes for jobs and skills
+
+Answer NO when work is not the subject, even if the wording mentions skills, young
+people, universities or research: e.g. child development, parenting, psychology or
+health research, crime, sport, celebrity, general politics, lifestyle and human
+interest. Also answer NO when the story mainly promotes ONE named college, university,
+school or company (its appointments, new building, event, awards or own students).
+If you would need a stretch to explain why a jobseeker or employer should
+care, answer NO.
+
+Story source: {source}
+Headline: {title}
+Summary: {summary}
+
+Return JSON: {{"relevant": true or false, "reason": "one short sentence"}}"""
+
+
+def judge_relevant(item):
+    """Second, semantic gate after news_fetch's keyword filter. One small LLM
+    call per candidate. Fails CLOSED: if the check cannot run, the story is not
+    used (an off-topic post is worse than trying the next story)."""
+    try:
+        r = bw.writer._client().chat.completions.create(
+            model=bw.writer.MODEL, temperature=0, max_tokens=120,
+            response_format={"type": "json_object"},
+            messages=[{"role": "user", "content": JUDGE_PROMPT.format(
+                source=item.get("source", ""), title=item.get("title", ""),
+                summary=(item.get("summary") or "")[:600])}])
+        v = json.loads(r.choices[0].message.content)
+        ok, why = v.get("relevant") is True, v.get("reason", "")
+    except Exception as e:
+        ok, why = False, f"relevance check failed ({e})"
+    print(f"  relevance {'OK ' if ok else 'NO '} \"{item.get('title', '')[:60]}\" - {why}")
+    return ok
+
+
 def pick_fresh(exclude_titles, max_age_days=5):
     """First fresh, unused UK news item whose topic doesn't repeat a headline
     already used in this week. Raises instead of silently repeating unless
@@ -109,15 +150,21 @@ def pick_fresh(exclude_titles, max_age_days=5):
             f"unless {bw.TOPIC_REPEAT_OVERRIDE_ENV}=1 is set."
         )
     pool = bw.pick_distinct_news(fetched, 8)
+    judged = {}
     for it in pool:
         ws = bw._news_words(it.get("title", ""))
         if any(bw.sets_collide(ws, es, 0.4, metric="overlap") for es in excl_sets):
             continue
-        return it
+        judged[id(it)] = judge_relevant(it)
+        if judged[id(it)]:
+            return it
     if bw.topic_repeat_allowed():
-        return pool[0] if pool else bw.news_fetch.sample_item()
+        ok = [it for it in pool if judged.get(id(it), None) is not False and
+              (id(it) in judged or judge_relevant(it))]
+        return ok[0] if ok else bw.news_fetch.sample_item()
     raise bw.TopicFreshnessError(
-        "All fetched news items repeat a story already used this week. Add a fresh source item "
+        "No fetched news item is both fresh and genuinely about work or early careers "
+        "(see the relevance lines above). Add a fresh source item "
         f"or set {bw.TOPIC_REPEAT_OVERRIDE_ENV}=1 for an explicit emergency repeat."
     )
 

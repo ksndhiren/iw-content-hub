@@ -48,11 +48,24 @@ KEYWORDS = re.compile(
     r"skills|wage|salary|pay|workforce|early careers?|entry.?level|"
     r"talent|unemploy|redundan|remote work|hybrid work|gen z)\b", re.I)
 
+# "skills" is deliberately NOT a job-market word on its own: research and
+# human-interest stories ("children are developing important skills, say
+# university researchers") used it to pass every gate - that is how "Why
+# children lie" went out as news on 20 Nov 2026. It only counts next to a real
+# work word (see _core_job_market).
 CORE_JOB_MARKET = re.compile(
     r"\b(job|jobs|hiring|hire|graduate|intern|internship|apprentice|"
     r"recruit|recruitment|vacan|employ|labour market|labor market|"
-    r"skills|workforce|early careers?|entry.?level|talent|unemploy|"
+    r"workforce|early careers?|entry.?level|unemploy|"
     r"redundan|remote work|hybrid work|gen z)\b", re.I)
+SKILLS = re.compile(r"\b(skills?|talent)\b", re.I)
+WORK_WORD = re.compile(
+    r"\b(jobs?|work|working|workplace|careers?|employers?|employment|employees?|"
+    r"hiring|workforce|labour market|apprenticeships?|internships?|vacanc\w+)\b", re.I)
+
+
+def _core_job_market(hay):
+    return bool(CORE_JOB_MARKET.search(hay) or (SKILLS.search(hay) and WORK_WORD.search(hay)))
 INTERNWISE_NEWS_CANON = re.compile(
     r"\b(students?|graduates?|grad\b|interns?|internships?|"
     r"apprentices?|apprenticeships?|early careers?|entry.?level|school.?leavers?|"
@@ -145,7 +158,7 @@ def _is_youth_labour_story(hay):
     """True for youth-labour-market stories that use none of the canon nouns,
     e.g. 'Young bearing brunt of hiring slump'. Requires both a youth signal and
     core job-market language so general 'young people' stories don't slip in."""
-    return bool(_YOUTH_SIGNAL.search(hay) and CORE_JOB_MARKET.search(hay))
+    return bool(_YOUTH_SIGNAL.search(hay) and _core_job_market(hay))
 
 
 def _is_uk(hay):
@@ -174,14 +187,14 @@ def _is_job_market_relevant(hay):
         return False
     if SPORT_PLAYING.search(hay) and not SPORT_INDUSTRY_JOB.search(hay):
         return False
-    if LIFESTYLE_MONEY.search(hay) and not CORE_JOB_MARKET.search(hay):
+    if LIFESTYLE_MONEY.search(hay) and not _core_job_market(hay):
         return False
     youth = _is_youth_labour_story(hay)
     if not INTERNWISE_NEWS_CANON.search(hay) and not youth:
         return False
     if not ACTIONABLE_EARLY_CAREER.search(hay) and not youth:
         return False
-    if CORE_JOB_MARKET.search(hay):
+    if _core_job_market(hay):
         return True
     return bool(re.search(r"\b(wage|salary|pay)\b", hay, re.I) and WORK_PAY_CONTEXT.search(hay))
 
