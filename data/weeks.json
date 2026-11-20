@@ -13185,7 +13185,7 @@
       "id": "week25",
       "label": "Week 25",
       "weekCommencing": "2026-11-16",
-      "builtAt": 1795102049,
+      "builtAt": 1795165440,
       "posts": [
         {
           "id": "week25-sat-quote",
@@ -14406,43 +14406,43 @@
           "id": "week25-fri-news",
           "day": "Fri 20 Nov",
           "lane": "news",
-          "title": "Young Kids' Lies Seen as Learning Tool",
+          "title": "Guaranteed Jobs for 90,000 Young People",
           "platform": "Multi-Platform",
           "format": "Single",
           "slides": [
             "slide_1.png"
           ],
           "status": "approved",
-          "caption": "New research has found that children start lying and tricking others at a surprisingly young age. These behaviours aren't just random; they are often practised and honed over time. Recognising that strategic thinking and problem-solving skills develop early can be insightful for students and graduates. It highlights the potential found in everyday behaviours. \n\nFor those entering the job market, internships offer a fantastic way to further develop these strategic skills. They provide real-world scenarios to apply and refine critical thinking, preparing you for workplace challenges. Source: BBC UK.",
+          "caption": "Every eligible 18 to 24 year old in Great Britain who is on Universal Credit and looking for work will be offered a guaranteed job from the end of November.\n\nThe Jobs Guarantee, first trialled in six areas with high youth unemployment, is now rolling out across England, Scotland and Wales. Each role is funded for six months, matched to the young person's skills, and comes with support before and during the job.\n\nFrom April, young people will qualify after 12 months of looking for work instead of 18. The scheme aims to help more than 90,000 young people into work by March 2029, and more than 400 employers have already signed up.\n\nWhy it matters: real work experience is what opens the next door. If you're a student or graduate, an internship gives you that earlier, with a real project, real responsibility and a reference at the end.\n\nSource: GOV.UK.",
           "hashtags": [
-            "#skillsdevelopment",
-            "#earlylearning",
-            "#internships",
-            "#problemsolving",
-            "#ukgraduates"
+            "#jobsguarantee",
+            "#youthemployment",
+            "#ukjobs",
+            "#careers",
+            "#internships"
           ],
           "captions": {
-            "ig-fb": "New research has found that children start lying and tricking others at a surprisingly young age. These behaviours aren't just random; they are often practised and honed over time. Recognising that strategic thinking and problem-solving skills develop early can be insightful for students and graduates. It highlights the potential found in everyday behaviours. \n\nFor those entering the job market, internships offer a fantastic way to further develop these strategic skills. They provide real-world scenarios to apply and refine critical thinking, preparing you for workplace challenges. Source: BBC UK.",
-            "linkedin": "A recent study reveals that children begin lying and tricking others at a surprisingly young age. These actions are often practised, indicating the early development of strategic thinking and problem-solving skills. Understanding these traits can be beneficial for students and graduates, as they indicate potential in seemingly trivial behaviours. \n\nInternships are an excellent opportunity to nurture these skills. By providing real-world experience, they help refine critical thinking and strategic problem-solving, preparing you for the complexities of the professional world. Source: BBC UK.",
-            "x": "Research shows kids start lying young, practising these skills. Recognising early development in strategic thinking can be valuable for students. Internships help refine these skills in real-world scenarios. (Source: BBC UK)",
-            "threads": "Research shows children start lying young, practising strategic skills. Recognising early development aids students. Internships refine these skills in real-world settings. www.internwise.co.uk"
+            "ig-fb": "Every eligible 18 to 24 year old in Great Britain who is on Universal Credit and looking for work will be offered a guaranteed job from the end of November.\n\nThe Jobs Guarantee, first trialled in six areas with high youth unemployment, is now rolling out across England, Scotland and Wales. Each role is funded for six months, matched to the young person's skills, and comes with support before and during the job.\n\nFrom April, young people will qualify after 12 months of looking for work instead of 18. The scheme aims to help more than 90,000 young people into work by March 2029, and more than 400 employers have already signed up.\n\nWhy it matters: real work experience is what opens the next door. If you're a student or graduate, an internship gives you that earlier, with a real project, real responsibility and a reference at the end.\n\nSource: GOV.UK.",
+            "linkedin": "The Jobs Guarantee is going nationwide.\n\nFrom the end of November, every eligible 18 to 24 year old in Great Britain who is on Universal Credit and looking for work will be offered a funded six-month job, matched to their skills, with support before and during the role. The scheme was first trialled in six areas with some of the highest youth unemployment.\n\nFrom April, eligibility starts after 12 months of looking for work rather than 18. The aim is to help more than 90,000 young people into work by March 2029, and more than 400 employers have already backed it.\n\nFor employers, it is a reminder that structured, supported first roles work. Internships follow the same principle for students and graduates: a defined project, a supervisor and a reference at the end.\n\nSource: GOV.UK.",
+            "x": "From the end of November, every eligible 18 to 24 year old on Universal Credit in Great Britain will be offered a funded six-month job matched to their skills. From April, eligibility starts after 12 months, not 18. (Source: GOV.UK)",
+            "threads": "Guaranteed jobs for young people are going nationwide. From the end of November, eligible 18 to 24 year olds on Universal Credit and looking for work will be offered a funded six-month job matched to their skills, across England, Scotland and Wales. From April they qualify after 12 months, not 18. Real experience opens doors, and internships give students and graduates that experience earlier. www.internwise.co.uk"
           },
           "hashtagsByPlatform": {
             "ig-fb": [
-              "#skillsdevelopment",
-              "#earlylearning",
-              "#internships",
-              "#problemsolving",
-              "#ukgraduates"
+              "#jobsguarantee",
+              "#youthemployment",
+              "#ukjobs",
+              "#careers",
+              "#internships"
             ],
             "linkedin": [
-              "#skillsdevelopment",
-              "#earlylearning",
+              "#youthemployment",
+              "#earlycareers",
               "#internships"
             ],
             "x": [
-              "#skillsdevelopment",
-              "#internships"
+              "#ukjobs",
+              "#youthemployment"
             ]
           }
         }
