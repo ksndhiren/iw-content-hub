@@ -20,11 +20,11 @@
       "body": "Steam and organise the sample rail.",
       "target": [
         528,
-        1368
+        1268
       ],
       "card": [
         22,
-        1070,
+        1050,
         250
       ]
     },
@@ -34,12 +34,12 @@
       "title": "Trend research",
       "body": "Build a mood board for next season.",
       "target": [
-        505,
-        1184
+        610,
+        1075
       ],
       "card": [
         820,
-        966,
+        876,
         240
       ]
     },
@@ -50,11 +50,11 @@
       "body": "Measure samples against the spec sheet.",
       "target": [
         566,
-        1038
+        938
       ],
       "card": [
         22,
-        834,
+        744,
         250
       ]
     },
@@ -65,11 +65,11 @@
       "body": "Dress mannequins for product photos.",
       "target": [
         566,
-        870
+        770
       ],
       "card": [
         820,
-        683,
+        593,
         240
       ]
     },
@@ -80,11 +80,11 @@
       "body": "Pack samples for press and buyers.",
       "target": [
         597,
-        709
+        609
       ],
       "card": [
         22,
-        538,
+        448,
         250
       ],
       "accent": "coral"
