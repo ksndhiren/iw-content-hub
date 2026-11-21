@@ -14447,6 +14447,583 @@
           }
         }
       ]
+    },
+    {
+      "id": "week26",
+      "label": "Week 26",
+      "weekCommencing": "2026-11-23",
+      "builtAt": 1795274088,
+      "posts": [
+        {
+          "id": "week26-mon-quote",
+          "day": "Mon 23 Nov",
+          "lane": "quote",
+          "title": "Quote: Leo Tolstoy",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Feeling stuck on your career journey? Remember, the greatest allies you have are time and patience. Don't rush the process. Every step, no matter how small, brings you closer to your goals. Keep at it and explore new opportunities at www.internwise.co.uk",
+          "hashtags": [
+            "#careerjourney",
+            "#staypatient",
+            "#internshipopportunities",
+            "#keepgoing",
+            "#internwiseuk"
+          ],
+          "captions": {
+            "ig-fb": "Feeling stuck on your career journey? Remember, the greatest allies you have are time and patience. Don't rush the process. Every step, no matter how small, brings you closer to your goals. Keep at it and explore new opportunities at www.internwise.co.uk",
+            "linkedin": "Leo Tolstoy reminds us that the strongest warriors in life are time and patience. As you navigate your career path, embrace every experience, learn from each challenge, and allow yourself the grace to grow. Your professional journey is a marathon, not a sprint. Explore internship opportunities that align with your values and goals at internwise.co.uk.",
+            "x": "In the race of life, time and patience are your best allies. Keep moving forward, learn from each step, and discover new opportunities at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careerjourney",
+              "#staypatient",
+              "#internshipopportunities",
+              "#keepgoing",
+              "#internwiseuk"
+            ],
+            "linkedin": [
+              "#careeradvice",
+              "#professionalgrowth",
+              "#internwiseuk"
+            ],
+            "x": [
+              "#careeradvice",
+              "#internwiseuk"
+            ]
+          },
+          "quoteId": "q061",
+          "world": "editorial"
+        },
+        {
+          "id": "week26-mon-education",
+          "day": "Mon 23 Nov",
+          "lane": "education",
+          "title": "Land Your Dream Internship",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
+          ],
+          "status": "in-review",
+          "caption": "Dreaming of a luxury internship but not sure where to start? Let me guide you through steps to land quality internships. It's all about building a strong, relevant portfolio. A tailored portfolio showcases your best work and quality internships often require specific skill sets. Don't forget, networking in your desired industry is key. Ready to step up? Start crafting your portfolio today. For more guidance, visit www.internwise.co.uk.",
+          "hashtags": [
+            "#internshipgoals",
+            "#careergrowth",
+            "#portfoliotips",
+            "#networking",
+            "#dreamjob"
+          ],
+          "captions": {
+            "ig-fb": "Dreaming of a luxury internship but not sure where to start? Let me guide you through steps to land quality internships. It's all about building a strong, relevant portfolio. A tailored portfolio showcases your best work and quality internships often require specific skill sets. Don't forget, networking in your desired industry is key. Ready to step up? Start crafting your portfolio today. For more guidance, visit www.internwise.co.uk.",
+            "linkedin": "Dreaming of a luxury internship but unsure where to begin? Here's your roadmap to securing quality opportunities. Focus on building a robust portfolio that highlights your best work. Quality internships often look for specific skills, so identify those that match the roles you're after. Networking is also crucial; build connections in your industry to open doors. Ready to take action? Begin by refining your portfolio. For more insights, head to internwise.co.uk.",
+            "x": "Landing a dream internship starts with a strong portfolio. Tailor your skills and network effectively. Ready to take action? internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#internshipgoals",
+              "#careergrowth",
+              "#portfoliotips",
+              "#networking",
+              "#dreamjob"
+            ],
+            "linkedin": [
+              "#internshipadvice",
+              "#careerdevelopment",
+              "#networkingtips"
+            ],
+            "x": [
+              "#internshiptips",
+              "#careeradvice"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Internship Tips",
+            "headline": "Land Your Dream Internship",
+            "tone": "practical",
+            "slides": [
+              {
+                "tag": "Portfolio",
+                "title": "Build a Strong Portfolio",
+                "body": "Tailor your portfolio to showcase your best work. Focus is key."
+              },
+              {
+                "tag": "Skills",
+                "title": "Match Skills to Roles",
+                "body": "Identify skill sets that quality internships require. Be relevant."
+              },
+              {
+                "tag": "Networking",
+                "title": "Connect in Your Industry",
+                "body": "Network effectively in your desired field. Contacts open doors."
+              }
+            ],
+            "points": null,
+            "cta": "Ready to step up? Start crafting your portfolio today."
+          },
+          "world": "navy",
+          "poses": {
+            "cover": "nuno_thoughtful_1",
+            "cta": "nuno_howto_4"
+          }
+        },
+        {
+          "id": "week26-tue-quote",
+          "day": "Tue 24 Nov",
+          "lane": "quote",
+          "title": "Quote: Victor Hugo",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Staying true to your principles doesn't mean you shouldn't evolve. Just like a tree, your roots keep you grounded, but it's the new leaves that signal growth. 🌿 Let your career journey be a blend of strong values and fresh experiences. Ready to explore new opportunities? Find internships that align with your core at www.internwise.co.uk.",
+          "hashtags": [
+            "#careergrowth",
+            "#internshipjourney",
+            "#staytrue",
+            "#professionaldevelopment",
+            "#internwiseuk"
+          ],
+          "captions": {
+            "ig-fb": "Staying true to your principles doesn't mean you shouldn't evolve. Just like a tree, your roots keep you grounded, but it's the new leaves that signal growth. 🌿 Let your career journey be a blend of strong values and fresh experiences. Ready to explore new opportunities? Find internships that align with your core at www.internwise.co.uk.",
+            "linkedin": "Victor Hugo had it right: Change can be good, but your core values should remain steadfast. As you embark on your career journey, hold onto what makes you unique while embracing new opportunities for growth. Discover internships that honour your principles and foster your professional development at internwise.co.uk.",
+            "x": "Embrace change while staying true to your roots. 🌱 Explore internships that align with your values at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careergrowth",
+              "#internshipjourney",
+              "#staytrue",
+              "#professionaldevelopment",
+              "#internwiseuk"
+            ],
+            "linkedin": [
+              "#careergrowth",
+              "#professionaldevelopment",
+              "#internships"
+            ],
+            "x": [
+              "#careergrowth",
+              "#internship"
+            ]
+          },
+          "quoteId": "q062",
+          "world": "colorblock"
+        },
+        {
+          "id": "week26-tue-education",
+          "day": "Tue 24 Nov",
+          "lane": "education",
+          "title": "Ace 'Tell Me About Yourself'",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
+          ],
+          "status": "in-review",
+          "caption": "Struggling with 'Tell me about yourself'? You're not alone! This question trips up many candidates, but with a bit of strategy, you can turn it into your strength. Start by giving a quick overview of who you are. Then, delve into experiences that align directly with the job's responsibilities. Finally, weave these elements together to create a compelling narrative that showcases your fit for the role. Practice makes perfect, so get comfortable with your story. Ready to impress? Visit www.internwise.co.uk for more insights.",
+          "hashtags": [
+            "#jobinterview",
+            "#careertips",
+            "#interviewskills",
+            "#graduatejobs",
+            "#internshipadvice"
+          ],
+          "captions": {
+            "ig-fb": "Struggling with 'Tell me about yourself'? You're not alone! This question trips up many candidates, but with a bit of strategy, you can turn it into your strength. Start by giving a quick overview of who you are. Then, delve into experiences that align directly with the job's responsibilities. Finally, weave these elements together to create a compelling narrative that showcases your fit for the role. Practice makes perfect, so get comfortable with your story. Ready to impress? Visit www.internwise.co.uk for more insights.",
+            "linkedin": "Facing the 'Tell me about yourself' question can feel daunting. Yet, it's your chance to shine. Begin by introducing yourself and your passions. Then, spotlight experiences that align with the job's requirements. Finally, craft a narrative that ties your journey to the role, making you unforgettable. With these strategies, you'll stand out in any interview. Want more tips? Visit internwise.co.uk for guidance.",
+            "x": "Nail 'Tell me about yourself' by linking your experiences to the job. Start strong, show your fit, and craft a memorable narrative. More tips at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#jobinterview",
+              "#careertips",
+              "#interviewskills",
+              "#graduatejobs",
+              "#internshipadvice"
+            ],
+            "linkedin": [
+              "#interviewpreparation",
+              "#careergrowth",
+              "#jobsearch"
+            ],
+            "x": [
+              "#interviewtips",
+              "#careeradvice"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Interview Prep",
+            "headline": "Ace 'Tell Me About Yourself'",
+            "tone": "practical",
+            "slides": [
+              {
+                "tag": "Introduction",
+                "title": "Start With Basics",
+                "body": "Introduce who you are and what you're passionate about."
+              },
+              {
+                "tag": "Experience",
+                "title": "Show Your Fit",
+                "body": "Highlight experiences that mirror the job's key duties."
+              },
+              {
+                "tag": "Conclusion",
+                "title": "Craft Your Narrative",
+                "body": "Connect your story to the role to leave a lasting impression."
+              }
+            ],
+            "points": null,
+            "cta": "Apply these tips to stand out in your next interview."
+          },
+          "world": "ledger",
+          "poses": {
+            "cover": "nuno_authority_3",
+            "cta": "nuno_offers_4"
+          }
+        },
+        {
+          "id": "week26-wed-quote",
+          "day": "Wed 25 Nov",
+          "lane": "quote",
+          "title": "Quote: Robert Louis Stevenson",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Embrace who you are while reaching for who you can become. That's the essence of growth and discovery. Each internship is a step on your unique path. Ready to take that next step? Find opportunities to learn, grow, and shine at www.internwise.co.uk 🌟🚀",
+          "hashtags": [
+            "#careergrowth",
+            "#internshipopportunities",
+            "#futureleaders",
+            "#ukstudents",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Embrace who you are while reaching for who you can become. That's the essence of growth and discovery. Each internship is a step on your unique path. Ready to take that next step? Find opportunities to learn, grow, and shine at www.internwise.co.uk 🌟🚀",
+            "linkedin": "Robert Louis Stevenson reminds us that life is about realizing our potential. Internships are a fantastic way to discover your strengths and explore new horizons. Dive into opportunities that help you grow into your best self at internwise.co.uk.",
+            "x": "Life is about becoming who we're meant to be. Internships pave the way. Discover opportunities at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#careergrowth",
+              "#internshipopportunities",
+              "#futureleaders",
+              "#ukstudents",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internship",
+              "#ukgraduates"
+            ],
+            "x": [
+              "#internship",
+              "#careerpath"
+            ]
+          },
+          "quoteId": "q063",
+          "world": "blueprint"
+        },
+        {
+          "id": "week26-wed-education",
+          "day": "Wed 25 Nov",
+          "lane": "education",
+          "title": "Boost Your Profile with AI",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png"
+          ],
+          "status": "in-review",
+          "caption": "Feeling like your LinkedIn profile is getting lost in the crowd? It might be time for a revamp! By using AI, you can refine your language and improve your layout for a more professional look. This not only attracts more connections but also highlights your strengths effectively. Ready to boost your profile? Head to www.internwise.co.uk for more insights.",
+          "hashtags": [
+            "#linkedinprofile",
+            "#aitools",
+            "#careergrowth",
+            "#professionaldevelopment",
+            "#internwise"
+          ],
+          "captions": {
+            "ig-fb": "Feeling like your LinkedIn profile is getting lost in the crowd? It might be time for a revamp! By using AI, you can refine your language and improve your layout for a more professional look. This not only attracts more connections but also highlights your strengths effectively. Ready to boost your profile? Head to www.internwise.co.uk for more insights.",
+            "linkedin": "Is your LinkedIn profile not catching the attention it deserves? AI can be your new best friend in revamping your profile. By refining your language and layout with smart tools, you can create a polished profile that attracts more connections and showcases your professional strengths. Explore how AI can enhance your presence at internwise.co.uk.",
+            "x": "Revamp your LinkedIn using AI tools! Enhance language and layout to attract connections and highlight strengths. internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#linkedinprofile",
+              "#aitools",
+              "#careergrowth",
+              "#professionaldevelopment",
+              "#internwise"
+            ],
+            "linkedin": [
+              "#linkedintips",
+              "#aiinrecruitment",
+              "#careeradvice"
+            ],
+            "x": [
+              "#linkedinboost",
+              "#aiprofile"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "LinkedIn Tips",
+            "headline": "Boost Your Profile with AI",
+            "tone": "practical",
+            "slides": [
+              {
+                "tag": "Language",
+                "title": "Refine Your Words",
+                "body": "Use AI to sharpen your language. Make every word count."
+              },
+              {
+                "tag": "Layout",
+                "title": "Improve Your Look",
+                "body": "AI tools can suggest a cleaner layout. Stand out visually."
+              },
+              {
+                "tag": "Strengths",
+                "title": "Highlight Skills",
+                "body": "Let AI help you emphasize your strengths. Shine bright."
+              }
+            ],
+            "points": null,
+            "cta": "Polish your LinkedIn with AI and draw in valuable connections."
+          },
+          "world": "grid",
+          "poses": {
+            "cover": "nuno_phone_2",
+            "cta": "nuno_phone_2"
+          }
+        },
+        {
+          "id": "week26-thu-quote",
+          "day": "Thu 26 Nov",
+          "lane": "quote",
+          "title": "Quote: Eleanor Roosevelt",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Eleanor Roosevelt had it right - dreams really do shape your future. Every big success starts with a dream, and the courage to pursue it. Whether you're dreaming of landing your first internship or stepping into your graduate career, we're here to help you take that next step. Explore opportunities that align with your ambitions at www.internwise.co.uk",
+          "hashtags": [
+            "#dreambig",
+            "#careergoals",
+            "#internshipsearch",
+            "#graduatejobs",
+            "#internwiseuk"
+          ],
+          "captions": {
+            "ig-fb": "Eleanor Roosevelt had it right - dreams really do shape your future. Every big success starts with a dream, and the courage to pursue it. Whether you're dreaming of landing your first internship or stepping into your graduate career, we're here to help you take that next step. Explore opportunities that align with your ambitions at www.internwise.co.uk",
+            "linkedin": "Eleanor Roosevelt once said, 'The future belongs to those who believe in the beauty of their dreams.' It's a powerful reminder that believing in our dreams is the first step towards achieving them. At Internwise, we understand the importance of supporting your career ambitions with real opportunities. Discover internships and graduate jobs that can help turn your dreams into reality. Visit internwise.co.uk",
+            "x": "Eleanor Roosevelt reminds us: the future is for dreamers who believe. Ready to make your dreams a reality? Start with your next internship or graduate role. internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#dreambig",
+              "#careergoals",
+              "#internshipsearch",
+              "#graduatejobs",
+              "#internwiseuk"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internshipopportunities",
+              "#graduatejobs"
+            ],
+            "x": [
+              "#dreambig",
+              "#careergoals"
+            ]
+          },
+          "quoteId": "q026",
+          "world": "arc"
+        },
+        {
+          "id": "week26-thu-education",
+          "day": "Thu 26 Nov",
+          "lane": "education",
+          "title": "Create a Mobile CV That Shines",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Struggling to create a CV on your phone? You're not alone. But with the right tools, you can craft a professional CV anywhere, anytime. Mobile apps offer user-friendly templates that make the process simple and efficient. Plus, a digital CV is easy to send and store, ensuring you're always ready to seize new opportunities. Choose an app with templates and guidance, edit your CV on-the-go, and keep it concise. Regular updates keep your CV fresh and relevant. Ready to make your CV shine? Visit www.internwise.co.uk.",
+          "hashtags": [
+            "#mobilecv",
+            "#careertips",
+            "#jobhunt",
+            "#graduates",
+            "#cvtemplates"
+          ],
+          "captions": {
+            "ig-fb": "Struggling to create a CV on your phone? You're not alone. But with the right tools, you can craft a professional CV anywhere, anytime. Mobile apps offer user-friendly templates that make the process simple and efficient. Plus, a digital CV is easy to send and store, ensuring you're always ready to seize new opportunities. Choose an app with templates and guidance, edit your CV on-the-go, and keep it concise. Regular updates keep your CV fresh and relevant. Ready to make your CV shine? Visit www.internwise.co.uk.",
+            "linkedin": "Creating a CV on your phone might seem daunting, but it's easier than you think. Mobile apps provide user-friendly templates, allowing you to build a professional CV wherever you are. With the flexibility to update and send your CV digitally, you're always prepared for new opportunities. Choose an app that offers templates and guidance, edit on-the-go, and keep it concise. Regular updates ensure your CV stays current. Want to stand out with a mobile CV? Visit internwise.co.uk.",
+            "x": "Building a CV on your phone is a breeze with the right app. Use templates, edit anywhere, and keep it updated. Learn more at internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#mobilecv",
+              "#careertips",
+              "#jobhunt",
+              "#graduates",
+              "#cvtemplates"
+            ],
+            "linkedin": [
+              "#mobilecv",
+              "#careerdevelopment",
+              "#jobsearch"
+            ],
+            "x": [
+              "#mobilecv",
+              "#careeradvice"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "CV Tips",
+            "headline": "Create a Mobile CV That Shines",
+            "tone": "practical",
+            "slides": null,
+            "points": [
+              "Choose a CV app with templates.",
+              "Edit your CV on-the-go.",
+              "Send your CV digitally.",
+              "Keep it concise and clear.",
+              "Update your CV regularly."
+            ],
+            "cta": "Start building your mobile CV today and stand out."
+          },
+          "world": "bigidea"
+        },
+        {
+          "id": "week26-fri-quote",
+          "day": "Fri 27 Nov",
+          "lane": "quote",
+          "title": "Quote: Oscar Wilde",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Oscar Wilde was onto something. Every mistake is a stepping stone to experience. Ready to start your journey and learn from your own? Check out the latest internships at www.internwise.co.uk and turn those 'oops' moments into 'aha' moments!",
+          "hashtags": [
+            "#oscarwilde",
+            "#learnbydoing",
+            "#internshipjourney",
+            "#careergrowth",
+            "#internwiseuk"
+          ],
+          "captions": {
+            "ig-fb": "Oscar Wilde was onto something. Every mistake is a stepping stone to experience. Ready to start your journey and learn from your own? Check out the latest internships at www.internwise.co.uk and turn those 'oops' moments into 'aha' moments!",
+            "linkedin": "Oscar Wilde once said, 'Experience is the name everyone gives to their mistakes.' Each misstep is a chance to learn and grow. Dive into the world of internships and start building your experience today. Discover opportunities at internwise.co.uk.",
+            "x": "Oscar Wilde reminds us that mistakes lead to experience. Ready to start learning? Find your next internship at internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#oscarwilde",
+              "#learnbydoing",
+              "#internshipjourney",
+              "#careergrowth",
+              "#internwiseuk"
+            ],
+            "linkedin": [
+              "#careerdevelopment",
+              "#internshipexperience",
+              "#internwiseuk"
+            ],
+            "x": [
+              "#oscarwilde",
+              "#internshipadvice"
+            ]
+          },
+          "quoteId": "q045",
+          "world": "gallery"
+        },
+        {
+          "id": "week26-fri-education",
+          "day": "Fri 27 Nov",
+          "lane": "education",
+          "title": "Plan Your 2026 Job Search Now!",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "caption": "Feeling lost about graduate jobs in 2026? Let's make a plan. Start networking and building skills now to boost your chances. Early preparation increases job prospects, and networking can open doors to hidden opportunities. Skill-building aligns you with future job markets. Research trends, tailor your CV, and use internships to gain valuable experience. Your future is shaped by the actions you take today. Ready to begin? Visit www.internwise.co.uk to explore more opportunities.",
+          "hashtags": [
+            "#graduatejobs2026",
+            "#careerplan",
+            "#networking",
+            "#skillbuilding",
+            "#internwiseuk"
+          ],
+          "captions": {
+            "ig-fb": "Feeling lost about graduate jobs in 2026? Let's make a plan. Start networking and building skills now to boost your chances. Early preparation increases job prospects, and networking can open doors to hidden opportunities. Skill-building aligns you with future job markets. Research trends, tailor your CV, and use internships to gain valuable experience. Your future is shaped by the actions you take today. Ready to begin? Visit www.internwise.co.uk to explore more opportunities.",
+            "linkedin": "Feeling unsure about graduate jobs in 2026? Let’s get you on track. Start by networking and building essential skills now. Early preparation can significantly increase your job prospects. Networking opens doors to hidden opportunities, and by skill-building, you align yourself with future job markets. Research upcoming trends, tailor your CV to each role, and leverage internships for hands-on experience. Your proactive steps today will pave the way for success tomorrow. Start shaping your future at internwise.co.uk.",
+            "x": "Feeling lost about 2026 jobs? Start networking and building skills now. Early prep boosts prospects. Plan your future with internwise.co.uk."
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#graduatejobs2026",
+              "#careerplan",
+              "#networking",
+              "#skillbuilding",
+              "#internwiseuk"
+            ],
+            "linkedin": [
+              "#graduatejobs2026",
+              "#careerplanning",
+              "#internwiseuk"
+            ],
+            "x": [
+              "#graduatejobs2026",
+              "#internwiseuk"
+            ]
+          },
+          "onSlide": {
+            "eyebrow": "Graduate Jobs",
+            "headline": "Plan Your 2026 Job Search Now!",
+            "tone": "practical",
+            "slides": null,
+            "points": [
+              "Start networking early.",
+              "Build relevant skills now.",
+              "Research future job trends.",
+              "Tailor your CV for each role.",
+              "Use internships for experience."
+            ],
+            "cta": "Kickstart your 2026 job journey today!"
+          },
+          "world": "splitcard"
+        }
+      ]
     }
   ]
 }

@@ -1,49 +1,49 @@
 {
-  "week": "week25",
-  "generatedAt": "2026-11-14T14:04:04Z",
+  "week": "week26",
+  "generatedAt": "2026-11-21T15:14:39Z",
   "needByFamily": {
     "thoughtful": 1,
-    "dothis": 1,
-    "planning": 1,
+    "howto": 1,
     "offers": 1,
-    "phone": 2
+    "phone": 2,
+    "planning": 1
   },
   "repeats": [
     {
-      "label": "education/tabs/cover",
-      "cutout": "nuno_thoughtful_3",
+      "label": "education/navy/cover",
+      "cutout": "nuno_thoughtful_1",
       "family": "thoughtful",
-      "week": "week25"
+      "week": "week26"
     },
     {
-      "label": "education/tabs/cta",
-      "cutout": "nuno_dothis_4",
-      "family": "dothis",
-      "week": "week25"
+      "label": "education/navy/cta",
+      "cutout": "nuno_howto_4",
+      "family": "howto",
+      "week": "week26"
     },
     {
-      "label": "education/teal/cover",
-      "cutout": "nuno_planning_1",
-      "family": "planning",
-      "week": "week25"
-    },
-    {
-      "label": "education/teal/cta",
-      "cutout": "nuno_offers_1",
+      "label": "education/ledger/cta",
+      "cutout": "nuno_offers_4",
       "family": "offers",
-      "week": "week25"
+      "week": "week26"
     },
     {
-      "label": "education/plum/cover",
+      "label": "education/grid/cover",
       "cutout": "nuno_phone_2",
       "family": "phone",
-      "week": "week25"
+      "week": "week26"
     },
     {
-      "label": "education/plum/cta",
+      "label": "education/grid/cta",
       "cutout": "nuno_phone_2",
       "family": "phone",
-      "week": "week25"
+      "week": "week26"
+    },
+    {
+      "label": "education/splitcard",
+      "cutout": "nuno_planning_3",
+      "family": "planning",
+      "week": "week26"
     }
   ]
 }

@@ -794,6 +794,56 @@
       "lane": "edu_single",
       "week": "week25",
       "world": "tipcard"
+    },
+    {
+      "lane": "quote",
+      "week": "week26",
+      "world": "editorial"
+    },
+    {
+      "lane": "quote",
+      "week": "week26",
+      "world": "colorblock"
+    },
+    {
+      "lane": "quote",
+      "week": "week26",
+      "world": "blueprint"
+    },
+    {
+      "lane": "quote",
+      "week": "week26",
+      "world": "arc"
+    },
+    {
+      "lane": "quote",
+      "week": "week26",
+      "world": "gallery"
+    },
+    {
+      "lane": "edu_carousel",
+      "week": "week26",
+      "world": "navy"
+    },
+    {
+      "lane": "edu_carousel",
+      "week": "week26",
+      "world": "ledger"
+    },
+    {
+      "lane": "edu_carousel",
+      "week": "week26",
+      "world": "grid"
+    },
+    {
+      "lane": "edu_single",
+      "week": "week26",
+      "world": "bigidea"
+    },
+    {
+      "lane": "edu_single",
+      "week": "week26",
+      "world": "splitcard"
     }
   ]
 }
