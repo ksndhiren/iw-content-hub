@@ -1,0 +1,105 @@
+{
+  "article": "a",
+  "role_line1": "Fashion",
+  "role_line2": "Intern",
+  "structure": "a tall vertical cutaway cross-section of a stylish fashion studio building in the centre of a portrait canvas, with a giant dress form and a spool of thread on its roof.",
+  "character": "young fashion intern (a Black man in his early 20s, short twists, oversized denim jacket, a pin cushion on his wrist)",
+  "scenes": [
+    "he arrives with a coffee and steams garments hanging on a long clothing rail.",
+    "he pins fabric swatches and sketches onto a large trend board.",
+    "he measures a sample garment at a cutting table against a spec sheet of abstract lines, tape measure in hand.",
+    "he dresses a mannequin for a product photo, a small camera on a tripod nearby.",
+    "he packs garments into plain boxes and garment bags ready to send, a tidy rail behind him; dusk through the window."
+  ],
+  "props": "a giant spool of thread, scissors, a sewing needle, a tape measure, coat hangers, a sewing machine, buttons",
+  "steps": [
+    {
+      "n": 1,
+      "time": "09:00",
+      "title": "Prep the samples",
+      "body": "Steam and organise the sample rail.",
+      "target": [
+        528,
+        1368
+      ],
+      "card": [
+        22,
+        1070,
+        250
+      ]
+    },
+    {
+      "n": 2,
+      "time": "10:30",
+      "title": "Trend research",
+      "body": "Build a mood board for next season.",
+      "target": [
+        505,
+        1184
+      ],
+      "card": [
+        820,
+        966,
+        240
+      ]
+    },
+    {
+      "n": 3,
+      "time": "12:00",
+      "title": "Check the fit",
+      "body": "Measure samples against the spec sheet.",
+      "target": [
+        566,
+        1038
+      ],
+      "card": [
+        22,
+        834,
+        250
+      ]
+    },
+    {
+      "n": 4,
+      "time": "14:00",
+      "title": "Style a shoot",
+      "body": "Dress mannequins for product photos.",
+      "target": [
+        566,
+        870
+      ],
+      "card": [
+        820,
+        683,
+        240
+      ]
+    },
+    {
+      "n": 5,
+      "time": "16:30",
+      "title": "Send-outs",
+      "body": "Pack samples for press and buyers.",
+      "target": [
+        597,
+        709
+      ],
+      "card": [
+        22,
+        538,
+        250
+      ],
+      "accent": "coral"
+    }
+  ],
+  "tools": [
+    "Excel",
+    "Pinterest",
+    "Adobe Illustrator"
+  ],
+  "tools_card": [
+    820,
+    230,
+    240
+  ],
+  "cta": "Find fashion internships",
+  "title_width": 440
+}

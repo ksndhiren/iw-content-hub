@@ -15022,6 +15022,471 @@
             "cta": "Kickstart your 2026 job journey today!"
           },
           "world": "splitcard"
+        },
+        {
+          "id": "week26-mon-employerguide",
+          "day": "Mon 23 Nov",
+          "lane": "employer_guide",
+          "title": "15 Questions to Ask an Intern Candidate",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "time": "10:00",
+          "caption": "15 questions to ask an intern candidate, from warm-up to their own questions. Save it for your next interview. internwise.co.uk/employers",
+          "hashtags": [
+            "#hiringinterns",
+            "#interviewquestions",
+            "#internships",
+            "#smallbusinessuk"
+          ],
+          "captions": {
+            "linkedin": "Interviewing an intern? Here are 15 questions worth asking.\n\nWarm-up: why this role, what they know about you, what they enjoy studying\nMotivation: what they want to learn, what excites them, where they see themselves\nSkills: a project they're proud of, the tools they know, how they plan a week\nTeamwork: a group project that went wrong, how they take feedback, when they ask for help\nTheir questions: what they want to know, and what would make the internship great\n\nListen for real examples and genuine curiosity.\n\nAdvertise your internship at internwise.co.uk/employers",
+            "ig-fb": "15 questions to ask an intern candidate, from warm-up to their own questions. Save it for your next interview. internwise.co.uk/employers"
+          },
+          "hashtagsByPlatform": {
+            "linkedin": [
+              "#internships",
+              "#hiring",
+              "#interviewtips"
+            ],
+            "ig-fb": [
+              "#hiringinterns",
+              "#interviewquestions",
+              "#internships",
+              "#smallbusinessuk"
+            ]
+          },
+          "altText": "Employer guide carousel styled as a chat conversation: 15 questions to ask an intern candidate, grouped into warm-up, motivation, skills, teamwork and their questions.",
+          "world": "chat",
+          "guide": "intern-interview-questions",
+          "searchQuery": "questions to ask an intern candidate"
+        },
+        {
+          "id": "week26-tue-employerguide",
+          "day": "Tue 24 Nov",
+          "lane": "employer_guide",
+          "title": "Admin Intern Job Description: A 5-Part Template",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "time": "10:00",
+          "caption": "An admin intern job description in 5 parts: title, tasks, skills, what they'll learn and how to apply. Copy and adapt it. internwise.co.uk/employers",
+          "hashtags": [
+            "#hiringinterns",
+            "#adminjobs",
+            "#internships",
+            "#smallbusinessuk"
+          ],
+          "captions": {
+            "linkedin": "Writing an admin intern job description? Use these 5 parts.\n\n1. Title and summary: a plain title, the team, location and dates\n2. Day-to-day tasks: inboxes, diaries, meetings, records, post\n3. Skills: organised, comfortable with email and spreadsheets, clear communication\n4. What they'll learn: how an office runs, Outlook, Excel and Teams, planning\n5. How to apply: dates, what to send, who to contact\n\nClear listings get better applicants.\n\nPost your internship at internwise.co.uk/employers",
+            "ig-fb": "An admin intern job description in 5 parts: title, tasks, skills, what they'll learn and how to apply. Copy and adapt it. internwise.co.uk/employers"
+          },
+          "hashtagsByPlatform": {
+            "linkedin": [
+              "#internships",
+              "#jobdescription",
+              "#hiring"
+            ],
+            "ig-fb": [
+              "#hiringinterns",
+              "#adminjobs",
+              "#internships",
+              "#smallbusinessuk"
+            ]
+          },
+          "altText": "Employer guide carousel styled as index cards in a file box: a 5-part admin intern job description template covering title, tasks, skills, learning and how to apply.",
+          "world": "rolodex",
+          "guide": "admin-intern-job-description",
+          "searchQuery": "admin intern job description"
+        },
+        {
+          "id": "week26-wed-employerguide",
+          "day": "Wed 25 Nov",
+          "lane": "employer_guide",
+          "title": "How to Give an Intern Feedback: 5 Habits and Examples",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "time": "10:00",
+          "caption": "5 feedback habits for managing interns, with examples of what to say. Try one at your next check-in. internwise.co.uk/employers",
+          "hashtags": [
+            "#hiringinterns",
+            "#feedbacktips",
+            "#internships",
+            "#smallbusinessuk"
+          ],
+          "captions": {
+            "linkedin": "Good feedback is the fastest way an intern grows. 5 habits, with examples of what to say.\n\nBe specific: \"Your summary was clear and short.\"\nGive it soon: \"Got 5 minutes about this morning?\"\nKeep it balanced: one thing that worked, one thing to change\nMake it two-way: \"What would you do differently?\"\nFollow up: \"That's much clearer. Nice work.\"\n\nAdvertise your internship at internwise.co.uk/employers",
+            "ig-fb": "5 feedback habits for managing interns, with examples of what to say. Try one at your next check-in. internwise.co.uk/employers"
+          },
+          "hashtagsByPlatform": {
+            "linkedin": [
+              "#internships",
+              "#feedback",
+              "#management"
+            ],
+            "ig-fb": [
+              "#hiringinterns",
+              "#feedbacktips",
+              "#internships",
+              "#smallbusinessuk"
+            ]
+          },
+          "altText": "Employer guide carousel styled as a chalkboard: 5 habits for giving an intern useful feedback, each with an example of what to say.",
+          "world": "chalkboard",
+          "guide": "intern-feedback-examples",
+          "searchQuery": "intern feedback examples"
+        },
+        {
+          "id": "week26-thu-employerguide",
+          "day": "Thu 26 Nov",
+          "lane": "employer_guide",
+          "title": "How to Write an Internship Reference Letter",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "time": "10:00",
+          "caption": "How to write an internship reference letter in 5 paragraphs. Save it for your intern's last week. internwise.co.uk/employers",
+          "hashtags": [
+            "#hiringinterns",
+            "#referenceletter",
+            "#internships",
+            "#smallbusinessuk"
+          ],
+          "captions": {
+            "linkedin": "Your intern's reference can open their next door. Here's what to include, paragraph by paragraph.\n\n1. Who you are: your role, how you know them, the dates\n2. What they did: projects, tools, results you can stand behind\n3. How they worked: reliability, teamwork, how they took feedback\n4. How they grew: skills built, ownership, where they'd thrive next\n5. Sign off: an honest recommendation and your contact details\n\nAdvertise your internship at internwise.co.uk/employers",
+            "ig-fb": "How to write an internship reference letter in 5 paragraphs. Save it for your intern's last week. internwise.co.uk/employers"
+          },
+          "hashtagsByPlatform": {
+            "linkedin": [
+              "#internships",
+              "#references",
+              "#hiring"
+            ],
+            "ig-fb": [
+              "#hiringinterns",
+              "#referenceletter",
+              "#internships",
+              "#smallbusinessuk"
+            ]
+          },
+          "altText": "Employer guide carousel styled as a letter on cream paper: what to include in an internship reference letter, paragraph by paragraph.",
+          "world": "letter",
+          "guide": "internship-reference-letter",
+          "searchQuery": "internship reference letter from employer"
+        },
+        {
+          "id": "week26-fri-employerguide",
+          "day": "Fri 27 Nov",
+          "lane": "employer_guide",
+          "title": "From Intern to Full-Time Hire: 5 Moves",
+          "platform": "Multi-Platform",
+          "format": "Carousel",
+          "slides": [
+            "slide_1.png",
+            "slide_2.png",
+            "slide_3.png",
+            "slide_4.png",
+            "slide_5.png",
+            "slide_6.png",
+            "slide_7.png"
+          ],
+          "status": "in-review",
+          "time": "10:00",
+          "caption": "5 moves to turn a great intern into a full-time hire. Start the conversation before their last week. internwise.co.uk/employers",
+          "hashtags": [
+            "#hiringinterns",
+            "#graduatejobs",
+            "#internships",
+            "#smallbusinessuk"
+          ],
+          "captions": {
+            "linkedin": "Your best intern could be your next hire. 5 moves to make it happen.\n\n1. Spot potential early: ownership, attitude to feedback\n2. Give them a real project they own\n3. Talk about the future, honestly and early\n4. Make a clear offer in writing and give them time to decide\n5. Plan the first months: same mentor, 90-day goals\n\nInternships are one of the best ways to find your next graduate hire.\n\nAdvertise your internship at internwise.co.uk/employers",
+            "ig-fb": "5 moves to turn a great intern into a full-time hire. Start the conversation before their last week. internwise.co.uk/employers"
+          },
+          "hashtagsByPlatform": {
+            "linkedin": [
+              "#internships",
+              "#graduatehiring",
+              "#retention"
+            ],
+            "ig-fb": [
+              "#hiringinterns",
+              "#graduatejobs",
+              "#internships",
+              "#smallbusinessuk"
+            ]
+          },
+          "altText": "Employer guide carousel styled as a board game: 5 moves to turn an intern into a full-time hire, from spotting potential to planning their first months.",
+          "world": "boardgame",
+          "guide": "intern-to-full-time-hire",
+          "searchQuery": "convert intern to full time"
+        },
+        {
+          "id": "week26-mon-infographic",
+          "day": "Mon 23 Nov",
+          "lane": "infographic",
+          "title": "A Day in the Life: Fashion Intern",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "time": "16:30",
+          "world": "dayinlife",
+          "role": "fashion",
+          "caption": "What does a fashion intern actually do all day?\n\nSteaming the sample rail, building a trend board, checking fit against the spec, styling a shoot and packing samples for press. Detail is everything.\n\nSave this if fashion is on your list, and share it with a friend who is curious.\n\nFind fashion internships: link in bio.",
+          "hashtags": [
+            "#fashioncareers",
+            "#fashioninternship",
+            "#internshipsuk",
+            "#dayinthelife"
+          ],
+          "captions": {
+            "ig-fb": "What does a fashion intern actually do all day?\n\nSteaming the sample rail, building a trend board, checking fit against the spec, styling a shoot and packing samples for press. Detail is everything.\n\nSave this if fashion is on your list, and share it with a friend who is curious.\n\nFind fashion internships: link in bio.",
+            "linkedin": "What does a fashion intern actually do all day?\n\nSamples steamed at 9, a trend board at 10:30, fit checks against the spec sheet at noon, mannequins styled for product photos at 2, then samples packed for press and buyers. Excel, Pinterest and Illustrator get used every day.\n\nIf you are considering fashion, this is the job behind the job title.\n\nhttps://www.internwise.co.uk",
+            "x": "Sample rails, trend boards, fit checks and shoots. A day in the life of a fashion intern.\n\ninternwise.co.uk",
+            "threads": "What does a fashion intern actually do all day?\n\nSteaming the sample rail, building a trend board, checking fit against the spec, styling a shoot and packing samples for press. Detail is everything.\n\nSave this if fashion is on your list, and share it with a friend who is curious.\n\nFind fashion internships: internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#fashioncareers",
+              "#fashioninternship",
+              "#internshipsuk",
+              "#dayinthelife"
+            ],
+            "linkedin": [
+              "#fashion",
+              "#internships",
+              "#careers"
+            ],
+            "x": [
+              "#internships",
+              "#dayinthelife"
+            ]
+          },
+          "altText": "Five floors of a cut-away building show one fashion intern's day from morning to evening: prep the samples at 09:00; trend research at 10:30; check the fit at 12:00; style a shoot at 14:00; send-outs at 16:30. Tools: Excel, Pinterest, Adobe Illustrator."
+        },
+        {
+          "id": "week26-tue-infographic",
+          "day": "Tue 24 Nov",
+          "lane": "infographic",
+          "title": "A Day in the Life: Admin Intern",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "time": "16:30",
+          "world": "dayinlife",
+          "role": "admin",
+          "caption": "What does an admin intern actually do all day?\n\nSorting the post, managing diaries, setting up meetings, keeping records and planning tomorrow. The person who keeps the whole office running.\n\nSave this if admin is on your list, and share it with a friend who is curious.\n\nFind admin internships: link in bio.",
+          "hashtags": [
+            "#adminjobs",
+            "#officejobs",
+            "#internshipsuk",
+            "#dayinthelife"
+          ],
+          "captions": {
+            "ig-fb": "What does an admin intern actually do all day?\n\nSorting the post, managing diaries, setting up meetings, keeping records and planning tomorrow. The person who keeps the whole office running.\n\nSave this if admin is on your list, and share it with a friend who is curious.\n\nFind admin internships: link in bio.",
+            "linkedin": "What does an admin intern actually do all day?\n\nPost and inbox at 9, diaries and room bookings at 10:30, a meeting room set up by noon, spreadsheets and filing at 2, then supplies restocked and tomorrow planned. Outlook, Excel and Teams do the heavy lifting.\n\nIf you are considering admin, this is the job behind the job title.\n\nhttps://www.internwise.co.uk",
+            "x": "Inboxes, diaries, meetings and records. A day in the life of an admin intern.\n\ninternwise.co.uk",
+            "threads": "What does an admin intern actually do all day?\n\nSorting the post, managing diaries, setting up meetings, keeping records and planning tomorrow. The person who keeps the whole office running.\n\nSave this if admin is on your list, and share it with a friend who is curious.\n\nFind admin internships: internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#adminjobs",
+              "#officejobs",
+              "#internshipsuk",
+              "#dayinthelife"
+            ],
+            "linkedin": [
+              "#admin",
+              "#internships",
+              "#careers"
+            ],
+            "x": [
+              "#internships",
+              "#dayinthelife"
+            ]
+          },
+          "altText": "Five floors of a cut-away building show one admin intern's day from morning to evening: inbox and post at 09:00; manage diaries at 10:30; set up meetings at 12:00; keep records at 14:00; plan tomorrow at 16:30. Tools: Outlook, Excel, Microsoft Teams."
+        },
+        {
+          "id": "week26-wed-infographic",
+          "day": "Wed 25 Nov",
+          "lane": "infographic",
+          "title": "A Day in the Life: Photography Intern",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "time": "16:30",
+          "world": "dayinlife",
+          "role": "photography",
+          "caption": "What does a photography intern actually do all day?\n\nCharging kit, setting the lights, assisting the shoot, picking the best frames and retouching the finals. Most of the job happens before and after the click.\n\nSave this if photography is on your list, and share it with a friend who is curious.\n\nFind photography internships: link in bio.",
+          "hashtags": [
+            "#photography",
+            "#photographyjobs",
+            "#internshipsuk",
+            "#dayinthelife"
+          ],
+          "captions": {
+            "ig-fb": "What does a photography intern actually do all day?\n\nCharging kit, setting the lights, assisting the shoot, picking the best frames and retouching the finals. Most of the job happens before and after the click.\n\nSave this if photography is on your list, and share it with a friend who is curious.\n\nFind photography internships: link in bio.",
+            "linkedin": "What does a photography intern actually do all day?\n\nKit checked at 9, lights and backdrop set at 10:30, assisting the shoot at noon, picking the best frames from hundreds at 2, then retouching and delivering the finals. Lightroom, Photoshop and Capture One are the daily tools.\n\nIf you are considering photography, this is the job behind the job title.\n\nhttps://www.internwise.co.uk",
+            "x": "Kit, lights, the shoot and the edit. A day in the life of a photography intern.\n\ninternwise.co.uk",
+            "threads": "What does a photography intern actually do all day?\n\nCharging kit, setting the lights, assisting the shoot, picking the best frames and retouching the finals. Most of the job happens before and after the click.\n\nSave this if photography is on your list, and share it with a friend who is curious.\n\nFind photography internships: internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#photography",
+              "#photographyjobs",
+              "#internshipsuk",
+              "#dayinthelife"
+            ],
+            "linkedin": [
+              "#photography",
+              "#internships",
+              "#creativecareers"
+            ],
+            "x": [
+              "#internships",
+              "#dayinthelife"
+            ]
+          },
+          "altText": "Five floors of a cut-away building show one photography intern's day from morning to evening: kit check at 09:00; set the lights at 10:30; assist the shoot at 12:00; pick the best at 14:00; edit and deliver at 16:30. Tools: Lightroom, Photoshop, Capture One."
+        },
+        {
+          "id": "week26-thu-infographic",
+          "day": "Thu 26 Nov",
+          "lane": "infographic",
+          "title": "A Day in the Life: Events Intern",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "time": "16:30",
+          "world": "dayinlife",
+          "role": "events",
+          "caption": "What does an events intern actually do all day?\n\nPlanning the schedule, calling suppliers, prepping registration, setting up the venue and welcoming guests. Calm under pressure is the real skill.\n\nSave this if events is on your list, and share it with a friend who is curious.\n\nFind events internships: link in bio.",
+          "hashtags": [
+            "#eventsjobs",
+            "#eventplanning",
+            "#internshipsuk",
+            "#dayinthelife"
+          ],
+          "captions": {
+            "ig-fb": "What does an events intern actually do all day?\n\nPlanning the schedule, calling suppliers, prepping registration, setting up the venue and welcoming guests. Calm under pressure is the real skill.\n\nSave this if events is on your list, and share it with a friend who is curious.\n\nFind events internships: link in bio.",
+            "linkedin": "What does an events intern actually do all day?\n\nThe plan reviewed at 9, supplier calls at 10:30, badges and welcome packs at noon, seating and sound checked at 2, then guests checked in as the doors open. Eventbrite, Trello and Excel keep it all on track.\n\nIf you are considering events, this is the job behind the job title.\n\nhttps://www.internwise.co.uk",
+            "x": "Schedules, suppliers, set-up and doors open. A day in the life of an events intern.\n\ninternwise.co.uk",
+            "threads": "What does an events intern actually do all day?\n\nPlanning the schedule, calling suppliers, prepping registration, setting up the venue and welcoming guests. Calm under pressure is the real skill.\n\nSave this if events is on your list, and share it with a friend who is curious.\n\nFind events internships: internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#eventsjobs",
+              "#eventplanning",
+              "#internshipsuk",
+              "#dayinthelife"
+            ],
+            "linkedin": [
+              "#events",
+              "#internships",
+              "#careers"
+            ],
+            "x": [
+              "#internships",
+              "#dayinthelife"
+            ]
+          },
+          "altText": "Five floors of a cut-away building show one events intern's day from morning to evening: plan the day at 09:00; supplier calls at 10:30; registration prep at 12:00; venue set-up at 14:00; welcome guests at 16:30. Tools: Eventbrite, Trello, Excel."
+        },
+        {
+          "id": "week26-fri-infographic",
+          "day": "Fri 27 Nov",
+          "lane": "infographic",
+          "title": "A Day in the Life: Film Intern",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "in-review",
+          "time": "16:30",
+          "world": "dayinlife",
+          "role": "film",
+          "caption": "What does a film intern actually do all day?\n\nPrepping kit, helping on set, logging footage, editing a rough cut and reviewing it with the team. Every scene needs a lot of hands.\n\nSave this if film is on your list, and share it with a friend who is curious.\n\nFind film internships: link in bio.",
+          "hashtags": [
+            "#filmjobs",
+            "#filmmaking",
+            "#internshipsuk",
+            "#dayinthelife"
+          ],
+          "captions": {
+            "ig-fb": "What does a film intern actually do all day?\n\nPrepping kit, helping on set, logging footage, editing a rough cut and reviewing it with the team. Every scene needs a lot of hands.\n\nSave this if film is on your list, and share it with a friend who is curious.\n\nFind film internships: link in bio.",
+            "linkedin": "What does a film intern actually do all day?\n\nKit checked at 9, on set with the crew at 10:30, cards labelled and takes logged at noon, a rough cut built at 2, then the team review. Premiere Pro, DaVinci Resolve and Frame.io are the tools you'll use.\n\nIf you are considering film, this is the job behind the job title.\n\nhttps://www.internwise.co.uk",
+            "x": "Kit, set, footage, edit and review. A day in the life of a film intern.\n\ninternwise.co.uk",
+            "threads": "What does a film intern actually do all day?\n\nPrepping kit, helping on set, logging footage, editing a rough cut and reviewing it with the team. Every scene needs a lot of hands.\n\nSave this if film is on your list, and share it with a friend who is curious.\n\nFind film internships: internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#filmjobs",
+              "#filmmaking",
+              "#internshipsuk",
+              "#dayinthelife"
+            ],
+            "linkedin": [
+              "#film",
+              "#internships",
+              "#creativecareers"
+            ],
+            "x": [
+              "#internships",
+              "#dayinthelife"
+            ]
+          },
+          "altText": "Five floors of a cut-away building show one film intern's day from morning to evening: prep the kit at 09:00; on set at 10:30; log the footage at 12:00; edit at 14:00; review at 16:30. Tools: Premiere Pro, DaVinci Resolve, Frame.io."
         }
       ]
     }

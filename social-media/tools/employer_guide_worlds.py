@@ -510,3 +510,5 @@ WORLDS = {
 # Second bank of worlds (week 25+): transit, swiss, blueprint, kanban, ticket.
 from employer_guide_worlds_b import WORLDS_B  # noqa: E402
 WORLDS.update(WORLDS_B)
+from employer_guide_worlds_c import WORLDS_C  # noqa: E402
+WORLDS.update(WORLDS_C)

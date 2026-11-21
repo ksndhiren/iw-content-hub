@@ -1,0 +1,103 @@
+{
+  "slug": "internship-reference-letter",
+  "query": "internship reference letter from employer",
+  "world": "letter",
+  "kicker": "EMPLOYER GUIDE · REFERENCES",
+  "title_pre": "Writing an Intern's",
+  "title_hi": "Reference",
+  "title_post": "Letter",
+  "sub": "What to include, paragraph by paragraph",
+  "badge": [
+    "5",
+    "PARTS"
+  ],
+  "unit": "paragraph",
+  "cover_photo": "8112128",
+  "cover_inset": "8112128",
+  "steps": [
+    {
+      "title": "Who you are",
+      "hi": "you",
+      "icon": "idcard",
+      "points": [
+        "Your name, role and company",
+        "How you know the intern",
+        "The dates of the internship"
+      ],
+      "tip": "Use letterhead or a work email so it is easy to verify.",
+      "photo": "8112128"
+    },
+    {
+      "title": "What they did",
+      "hi": "did",
+      "icon": "clipboard",
+      "points": [
+        "Their main projects and tasks",
+        "The tools and skills they used",
+        "Results you can stand behind"
+      ],
+      "tip": "Facts first. Real tasks carry more weight than adjectives.",
+      "photo": "8112128"
+    },
+    {
+      "title": "How they worked",
+      "hi": "worked",
+      "icon": "users",
+      "points": [
+        "Reliability and time-keeping",
+        "How they worked with the team",
+        "How they handled feedback"
+      ],
+      "tip": "One short real example makes the whole letter believable.",
+      "photo": "8112128"
+    },
+    {
+      "title": "How they grew",
+      "hi": "grew",
+      "icon": "chart",
+      "points": [
+        "Skills they built during the placement",
+        "Something they took ownership of",
+        "Where they would do well next"
+      ],
+      "tip": "Growth matters more than perfection for a first role.",
+      "photo": "8112128"
+    },
+    {
+      "title": "Sign off",
+      "hi": "Sign off",
+      "icon": "pen",
+      "points": [
+        "A clear, honest recommendation",
+        "Your contact details",
+        "Your signature and the date"
+      ],
+      "tip": "Only write what you would happily repeat on the phone.",
+      "photo": "8112128"
+    }
+  ],
+  "cta_title": "Got a reference to write?",
+  "cta_hi": "reference",
+  "cta_icon": "mail",
+  "cta_sub": "Save this guide for your intern's last week.",
+  "cta_url": "internwise.co.uk/employers",
+  "post_title": "How to Write an Internship Reference Letter",
+  "captions": {
+    "linkedin": "Your intern's reference can open their next door. Here's what to include, paragraph by paragraph.\n\n1. Who you are: your role, how you know them, the dates\n2. What they did: projects, tools, results you can stand behind\n3. How they worked: reliability, teamwork, how they took feedback\n4. How they grew: skills built, ownership, where they'd thrive next\n5. Sign off: an honest recommendation and your contact details\n\nAdvertise your internship at internwise.co.uk/employers",
+    "ig-fb": "How to write an internship reference letter in 5 paragraphs. Save it for your intern's last week. internwise.co.uk/employers"
+  },
+  "hashtags": {
+    "linkedin": [
+      "#internships",
+      "#references",
+      "#hiring"
+    ],
+    "ig-fb": [
+      "#hiringinterns",
+      "#referenceletter",
+      "#internships",
+      "#smallbusinessuk"
+    ]
+  },
+  "altText": "Employer guide carousel styled as a letter on cream paper: what to include in an internship reference letter, paragraph by paragraph."
+}

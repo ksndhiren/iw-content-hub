@@ -1,0 +1,105 @@
+{
+  "article": "a",
+  "role_line1": "Photography",
+  "role_line2": "Intern",
+  "structure": "a tall vertical cutaway cross-section of a creative photo studio building in the centre of a portrait canvas, with a giant vintage camera on its roof.",
+  "character": "young photography intern (an East Asian woman in her early 20s, black bob, mustard beanie, camera strap round her neck)",
+  "scenes": [
+    "she arrives with a coffee and charges camera batteries, lenses lined up on a table.",
+    "she sets up soft box lights and a paper backdrop for a product shoot.",
+    "she holds a round reflector while a photographer shoots a model sitting on a stool.",
+    "she sits at a computer picking photos from a screen showing a grid of abstract thumbnails, one marked with a star.",
+    "she retouches a single photo on a tablet with a stylus beside abstract colour sliders; dusk through the window."
+  ],
+  "props": "a giant camera lens, a roll of film, a light bulb, a tripod, a reflector, an aperture shape, a memory card",
+  "steps": [
+    {
+      "n": 1,
+      "time": "09:00",
+      "title": "Kit check",
+      "body": "Charge batteries and pack the lenses.",
+      "target": [
+        503,
+        1335
+      ],
+      "card": [
+        22,
+        1070,
+        250
+      ]
+    },
+    {
+      "n": 2,
+      "time": "10:30",
+      "title": "Set the lights",
+      "body": "Build the set for the shoot.",
+      "target": [
+        439,
+        1153
+      ],
+      "card": [
+        820,
+        938,
+        240
+      ]
+    },
+    {
+      "n": 3,
+      "time": "12:00",
+      "title": "Assist the shoot",
+      "body": "Hold reflectors and keep shots organised.",
+      "target": [
+        431,
+        979
+      ],
+      "card": [
+        22,
+        781,
+        250
+      ]
+    },
+    {
+      "n": 4,
+      "time": "14:00",
+      "title": "Pick the best",
+      "body": "Choose the strongest frames from hundreds.",
+      "target": [
+        495,
+        796
+      ],
+      "card": [
+        820,
+        616,
+        240
+      ]
+    },
+    {
+      "n": 5,
+      "time": "16:30",
+      "title": "Edit and deliver",
+      "body": "Retouch and send the final images.",
+      "target": [
+        534,
+        630
+      ],
+      "card": [
+        22,
+        467,
+        250
+      ],
+      "accent": "coral"
+    }
+  ],
+  "tools": [
+    "Lightroom",
+    "Photoshop",
+    "Capture One"
+  ],
+  "tools_card": [
+    820,
+    230,
+    240
+  ],
+  "cta": "Find photography internships",
+  "title_width": 500
+}

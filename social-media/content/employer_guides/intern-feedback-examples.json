@@ -1,0 +1,103 @@
+{
+  "slug": "intern-feedback-examples",
+  "query": "intern feedback examples",
+  "world": "chalkboard",
+  "kicker": "EMPLOYER GUIDE · FEEDBACK",
+  "title_pre": "How to Give",
+  "title_hi": "Feedback",
+  "title_post": "Interns Can Use",
+  "sub": "5 habits, with examples of what to say",
+  "badge": [
+    "5",
+    "HABITS"
+  ],
+  "unit": "habit",
+  "cover_photo": "8472788",
+  "cover_inset": "5685813",
+  "steps": [
+    {
+      "title": "Be specific",
+      "hi": "specific",
+      "icon": "magnifier",
+      "points": [
+        "Name the exact piece of work",
+        "Say what worked and why",
+        "Example: \"Your summary was clear and short.\""
+      ],
+      "tip": "\"Good job\" feels nice but teaches nothing.",
+      "photo": "5685813"
+    },
+    {
+      "title": "Give it soon",
+      "hi": "soon",
+      "icon": "calendar",
+      "points": [
+        "Within a day or two of the task",
+        "A quick chat, not a long email",
+        "Example: \"Got 5 minutes about this morning?\""
+      ],
+      "tip": "Feedback weeks later is hard to act on.",
+      "photo": "7278583"
+    },
+    {
+      "title": "Keep it balanced",
+      "hi": "balanced",
+      "icon": "heart",
+      "points": [
+        "Start with what went well",
+        "Pick one thing to improve",
+        "Example: \"Next time, put the dates at the top.\""
+      ],
+      "tip": "One clear change beats a list of five.",
+      "photo": "9050634"
+    },
+    {
+      "title": "Make it two-way",
+      "hi": "two-way",
+      "icon": "users",
+      "points": [
+        "Ask how they think it went",
+        "Agree the next step together",
+        "Example: \"What would you do differently?\""
+      ],
+      "tip": "Interns learn faster when they spot the fix themselves.",
+      "photo": "8068756"
+    },
+    {
+      "title": "Follow up",
+      "hi": "Follow up",
+      "icon": "flag",
+      "points": [
+        "Notice when they make the change",
+        "Praise the improvement",
+        "Example: \"That's much clearer. Nice work.\""
+      ],
+      "tip": "Closing the loop shows the feedback mattered.",
+      "photo": "7108959"
+    }
+  ],
+  "cta_title": "Ready for your next check-in?",
+  "cta_hi": "check-in",
+  "cta_icon": "star",
+  "cta_sub": "Try one of these habits this week.",
+  "cta_url": "internwise.co.uk/employers",
+  "post_title": "How to Give an Intern Feedback: 5 Habits and Examples",
+  "captions": {
+    "linkedin": "Good feedback is the fastest way an intern grows. 5 habits, with examples of what to say.\n\nBe specific: \"Your summary was clear and short.\"\nGive it soon: \"Got 5 minutes about this morning?\"\nKeep it balanced: one thing that worked, one thing to change\nMake it two-way: \"What would you do differently?\"\nFollow up: \"That's much clearer. Nice work.\"\n\nAdvertise your internship at internwise.co.uk/employers",
+    "ig-fb": "5 feedback habits for managing interns, with examples of what to say. Try one at your next check-in. internwise.co.uk/employers"
+  },
+  "hashtags": {
+    "linkedin": [
+      "#internships",
+      "#feedback",
+      "#management"
+    ],
+    "ig-fb": [
+      "#hiringinterns",
+      "#feedbacktips",
+      "#internships",
+      "#smallbusinessuk"
+    ]
+  },
+  "altText": "Employer guide carousel styled as a chalkboard: 5 habits for giving an intern useful feedback, each with an example of what to say."
+}

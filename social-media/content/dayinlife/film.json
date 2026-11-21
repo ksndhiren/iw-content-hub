@@ -1,0 +1,105 @@
+{
+  "article": "a",
+  "role_line1": "Film",
+  "role_line2": "Intern",
+  "structure": "a tall vertical cutaway cross-section of a film production studio building in the centre of a portrait canvas, with a giant blank clapperboard and a film reel on its roof.",
+  "character": "young film intern (a white man in his early 20s, curly brown hair, grey beanie, utility vest)",
+  "scenes": [
+    "he arrives with a coffee and loads kit cases, a camera, a tripod and lights onto a trolley.",
+    "he holds a boom microphone over two actors on a small set beside a camera operator.",
+    "he labels memory cards and notes takes on a clipboard at a kit cart.",
+    "he sits at an editing desk with a timeline of coloured abstract blocks across two monitors.",
+    "he watches the cut with the team in a small screening room with popcorn; dusk through the window."
+  ],
+  "props": "a giant film reel, a blank clapperboard, a director's chair, a spotlight, popcorn, headphones, a film strip",
+  "steps": [
+    {
+      "n": 1,
+      "time": "09:00",
+      "title": "Prep the kit",
+      "body": "Check cameras, lights and sound.",
+      "target": [
+        447,
+        1375
+      ],
+      "card": [
+        22,
+        1070,
+        250
+      ]
+    },
+    {
+      "n": 2,
+      "time": "10:30",
+      "title": "On set",
+      "body": "Help the crew capture each scene.",
+      "target": [
+        431,
+        1177
+      ],
+      "card": [
+        820,
+        959,
+        240
+      ]
+    },
+    {
+      "n": 3,
+      "time": "12:00",
+      "title": "Log the footage",
+      "body": "Label cards and note the best takes.",
+      "target": [
+        526,
+        971
+      ],
+      "card": [
+        22,
+        774,
+        250
+      ]
+    },
+    {
+      "n": 4,
+      "time": "14:00",
+      "title": "Edit",
+      "body": "Build the clips into a rough cut.",
+      "target": [
+        503,
+        820
+      ],
+      "card": [
+        820,
+        638,
+        240
+      ]
+    },
+    {
+      "n": 5,
+      "time": "16:30",
+      "title": "Review",
+      "body": "Watch the cut and take notes.",
+      "target": [
+        447,
+        670
+      ],
+      "card": [
+        22,
+        503,
+        250
+      ],
+      "accent": "coral"
+    }
+  ],
+  "tools": [
+    "Premiere Pro",
+    "DaVinci Resolve",
+    "Frame.io"
+  ],
+  "tools_card": [
+    820,
+    230,
+    240
+  ],
+  "cta": "Find film internships",
+  "title_width": 440
+}

@@ -1,0 +1,103 @@
+{
+  "slug": "intern-to-full-time-hire",
+  "query": "convert intern to full time",
+  "world": "boardgame",
+  "kicker": "EMPLOYER GUIDE · HIRING",
+  "title_pre": "From Intern",
+  "title_hi": "to Hire",
+  "title_post": "in 5 Moves",
+  "sub": "How to keep the talent you trained",
+  "badge": [
+    "5",
+    "MOVES"
+  ],
+  "unit": "move",
+  "cover_photo": "8101970",
+  "cover_inset": "6340650",
+  "steps": [
+    {
+      "title": "Spot potential early",
+      "hi": "potential",
+      "icon": "magnifier",
+      "points": [
+        "Note who takes ownership",
+        "Watch how they handle feedback",
+        "Ask their supervisor halfway through"
+      ],
+      "tip": "Decide early, so the talk is not rushed in the final week.",
+      "photo": "6340650"
+    },
+    {
+      "title": "Give them a real project",
+      "hi": "project",
+      "icon": "rocket",
+      "points": [
+        "One project they own start to finish",
+        "Clear goals and a deadline",
+        "A chance to present the results"
+      ],
+      "tip": "Real ownership shows you how they would do the job.",
+      "photo": "8117476"
+    },
+    {
+      "title": "Talk about the future",
+      "hi": "future",
+      "icon": "handshake",
+      "points": [
+        "Ask what they want next",
+        "Share which roles could open up",
+        "Be honest about timing"
+      ],
+      "tip": "Good interns often take the first firm offer. Talk early.",
+      "photo": "6930555"
+    },
+    {
+      "title": "Make a clear offer",
+      "hi": "offer",
+      "icon": "mail",
+      "points": [
+        "Put the role and start date in writing",
+        "Explain what changes after the internship",
+        "Give them time to decide"
+      ],
+      "tip": "Don't rush them. Pressure loses good people.",
+      "photo": "8152734"
+    },
+    {
+      "title": "Plan the first months",
+      "hi": "first months",
+      "icon": "calendar",
+      "points": [
+        "Keep the same mentor if you can",
+        "Set goals for the first 90 days",
+        "Celebrate the move with the team"
+      ],
+      "tip": "A smooth handover keeps their momentum going.",
+      "photo": "5946217"
+    }
+  ],
+  "cta_title": "Ready to keep your best intern?",
+  "cta_hi": "best intern",
+  "cta_icon": "star",
+  "cta_sub": "Start the conversation before their last week.",
+  "cta_url": "internwise.co.uk/employers",
+  "post_title": "From Intern to Full-Time Hire: 5 Moves",
+  "captions": {
+    "linkedin": "Your best intern could be your next hire. 5 moves to make it happen.\n\n1. Spot potential early: ownership, attitude to feedback\n2. Give them a real project they own\n3. Talk about the future, honestly and early\n4. Make a clear offer in writing and give them time to decide\n5. Plan the first months: same mentor, 90-day goals\n\nInternships are one of the best ways to find your next graduate hire.\n\nAdvertise your internship at internwise.co.uk/employers",
+    "ig-fb": "5 moves to turn a great intern into a full-time hire. Start the conversation before their last week. internwise.co.uk/employers"
+  },
+  "hashtags": {
+    "linkedin": [
+      "#internships",
+      "#graduatehiring",
+      "#retention"
+    ],
+    "ig-fb": [
+      "#hiringinterns",
+      "#graduatejobs",
+      "#internships",
+      "#smallbusinessuk"
+    ]
+  },
+  "altText": "Employer guide carousel styled as a board game: 5 moves to turn an intern into a full-time hire, from spotting potential to planning their first months."
+}

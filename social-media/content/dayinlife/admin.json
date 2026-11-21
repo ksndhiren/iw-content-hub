@@ -1,0 +1,105 @@
+{
+  "article": "an",
+  "role_line1": "Admin",
+  "role_line2": "Intern",
+  "structure": "a tall vertical cutaway cross-section of a busy modern office building in the centre of a portrait canvas, with a giant stack of colourful folders and a paperclip on its roof.",
+  "character": "young admin intern (a white woman in her early 20s, red hair in a ponytail, green cardigan, lanyard)",
+  "scenes": [
+    "she arrives with a coffee and sorts the post at the front desk while her inbox opens on a laptop.",
+    "she books meetings on a big wall calendar and a laptop calendar of coloured abstract blocks.",
+    "she sets up a meeting room with chairs, a water jug and a screen showing abstract slides.",
+    "she updates a spreadsheet of abstract coloured rows and files documents into a cabinet.",
+    "she restocks a stationery cupboard and ticks off a checklist on a clipboard; dusk through the window."
+  ],
+  "props": "a giant paperclip, a stapler, envelopes, a desk calendar, folders, a telephone, sticky notes",
+  "steps": [
+    {
+      "n": 1,
+      "time": "09:00",
+      "title": "Inbox and post",
+      "body": "Sort the post and reply to emails.",
+      "target": [
+        471,
+        1335
+      ],
+      "card": [
+        22,
+        1070,
+        250
+      ]
+    },
+    {
+      "n": 2,
+      "time": "10:30",
+      "title": "Manage diaries",
+      "body": "Book meetings and rooms for the team.",
+      "target": [
+        479,
+        1145
+      ],
+      "card": [
+        820,
+        930,
+        240
+      ]
+    },
+    {
+      "n": 3,
+      "time": "12:00",
+      "title": "Set up meetings",
+      "body": "Get the room ready before people arrive.",
+      "target": [
+        503,
+        971
+      ],
+      "card": [
+        22,
+        774,
+        250
+      ]
+    },
+    {
+      "n": 4,
+      "time": "14:00",
+      "title": "Keep records",
+      "body": "Update spreadsheets and file documents.",
+      "target": [
+        471,
+        796
+      ],
+      "card": [
+        820,
+        616,
+        240
+      ]
+    },
+    {
+      "n": 5,
+      "time": "16:30",
+      "title": "Plan tomorrow",
+      "body": "Restock supplies and check the to-do list.",
+      "target": [
+        542,
+        638
+      ],
+      "card": [
+        22,
+        474,
+        250
+      ],
+      "accent": "coral"
+    }
+  ],
+  "tools": [
+    "Outlook",
+    "Excel",
+    "Microsoft Teams"
+  ],
+  "tools_card": [
+    820,
+    230,
+    240
+  ],
+  "cta": "Find admin internships",
+  "title_width": 440
+}

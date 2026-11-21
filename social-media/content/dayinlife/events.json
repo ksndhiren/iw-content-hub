@@ -1,0 +1,105 @@
+{
+  "article": "an",
+  "role_line1": "Events",
+  "role_line2": "Intern",
+  "structure": "a tall vertical cutaway cross-section of a grand event venue building in the centre of a portrait canvas, with a giant striped marquee tent and bunting on its roof.",
+  "character": "young events intern (a Middle Eastern man in his early 20s, short dark curly hair, black polo shirt, headset round his neck)",
+  "scenes": [
+    "he arrives with a coffee and reviews a schedule on a clipboard beside a laptop timeline of coloured abstract bars.",
+    "he talks on the phone beside boxes of decorations and a venue floor plan made of simple shapes.",
+    "he lays out name badges and welcome bags on a long registration table.",
+    "he arranges rows of chairs and checks a stage microphone with a sound technician.",
+    "he welcomes smiling guests at the entrance with a tablet as fairy lights glow; dusk through the window."
+  ],
+  "props": "a giant balloon, confetti, blank ticket stubs, a spotlight, a microphone, a calendar, party streamers",
+  "steps": [
+    {
+      "n": 1,
+      "time": "09:00",
+      "title": "Plan the day",
+      "body": "Run through the schedule and checklist.",
+      "target": [
+        447,
+        1359
+      ],
+      "card": [
+        22,
+        1070,
+        250
+      ]
+    },
+    {
+      "n": 2,
+      "time": "10:30",
+      "title": "Supplier calls",
+      "body": "Confirm catering, kit and deliveries.",
+      "target": [
+        447,
+        1184
+      ],
+      "card": [
+        820,
+        966,
+        240
+      ]
+    },
+    {
+      "n": 3,
+      "time": "12:00",
+      "title": "Registration prep",
+      "body": "Lay out badges and welcome packs.",
+      "target": [
+        503,
+        987
+      ],
+      "card": [
+        22,
+        788,
+        250
+      ]
+    },
+    {
+      "n": 4,
+      "time": "14:00",
+      "title": "Venue set-up",
+      "body": "Arrange seating and test the sound.",
+      "target": [
+        487,
+        796
+      ],
+      "card": [
+        820,
+        616,
+        240
+      ]
+    },
+    {
+      "n": 5,
+      "time": "16:30",
+      "title": "Welcome guests",
+      "body": "Check people in as the doors open.",
+      "target": [
+        471,
+        638
+      ],
+      "card": [
+        22,
+        474,
+        250
+      ],
+      "accent": "coral"
+    }
+  ],
+  "tools": [
+    "Eventbrite",
+    "Trello",
+    "Excel"
+  ],
+  "tools_card": [
+    820,
+    230,
+    240
+  ],
+  "cta": "Find events internships",
+  "title_width": 440
+}

@@ -1,0 +1,103 @@
+{
+  "slug": "intern-interview-questions",
+  "query": "questions to ask an intern candidate",
+  "world": "chat",
+  "kicker": "EMPLOYER GUIDE · INTERVIEWS",
+  "title_pre": "Questions to Ask",
+  "title_hi": "an Intern",
+  "title_post": "Candidate",
+  "sub": "15 questions, and what good answers sound like",
+  "badge": [
+    "15",
+    "QUESTIONS"
+  ],
+  "unit": "set",
+  "cover_photo": "7644081",
+  "cover_inset": "6077664",
+  "steps": [
+    {
+      "title": "Warm-up",
+      "hi": "Warm-up",
+      "icon": "users",
+      "points": [
+        "What made you apply for this role?",
+        "What do you know about what we do?",
+        "What are you studying, and what do you enjoy most?"
+      ],
+      "tip": "Start easy. Nervous candidates give better answers once they relax.",
+      "photo": "7644081"
+    },
+    {
+      "title": "Motivation",
+      "hi": "Motivation",
+      "icon": "target",
+      "points": [
+        "What do you hope to learn here?",
+        "Which part of the role excites you most?",
+        "Where would you like to be in two years?"
+      ],
+      "tip": "Listen for curiosity about the work, not just the company name.",
+      "photo": "7644081"
+    },
+    {
+      "title": "Skills and experience",
+      "hi": "Skills",
+      "icon": "chart",
+      "points": [
+        "Tell me about a project you're proud of.",
+        "Which tools are you confident with?",
+        "How do you organise a busy week?"
+      ],
+      "tip": "Ask for one real example. Specifics beat buzzwords.",
+      "photo": "7644081"
+    },
+    {
+      "title": "Working with others",
+      "hi": "others",
+      "icon": "handshake",
+      "points": [
+        "Tell me about a group project that went wrong.",
+        "How do you like to get feedback?",
+        "When would you ask for help?"
+      ],
+      "tip": "Good interns ask questions early. That is a strength, not a weakness.",
+      "photo": "7644081"
+    },
+    {
+      "title": "Their questions",
+      "hi": "questions",
+      "icon": "bulb",
+      "points": [
+        "What would you like to know about the team?",
+        "Is there anything we haven't asked you?",
+        "What would make this internship great for you?"
+      ],
+      "tip": "Their questions show how seriously they have thought about the role.",
+      "photo": "7644081"
+    }
+  ],
+  "cta_title": "Ready to meet your candidates?",
+  "cta_hi": "candidates",
+  "cta_icon": "mail",
+  "cta_sub": "Save these 15 questions for your next interview.",
+  "cta_url": "internwise.co.uk/employers",
+  "post_title": "15 Questions to Ask an Intern Candidate",
+  "captions": {
+    "linkedin": "Interviewing an intern? Here are 15 questions worth asking.\n\nWarm-up: why this role, what they know about you, what they enjoy studying\nMotivation: what they want to learn, what excites them, where they see themselves\nSkills: a project they're proud of, the tools they know, how they plan a week\nTeamwork: a group project that went wrong, how they take feedback, when they ask for help\nTheir questions: what they want to know, and what would make the internship great\n\nListen for real examples and genuine curiosity.\n\nAdvertise your internship at internwise.co.uk/employers",
+    "ig-fb": "15 questions to ask an intern candidate, from warm-up to their own questions. Save it for your next interview. internwise.co.uk/employers"
+  },
+  "hashtags": {
+    "linkedin": [
+      "#internships",
+      "#hiring",
+      "#interviewtips"
+    ],
+    "ig-fb": [
+      "#hiringinterns",
+      "#interviewquestions",
+      "#internships",
+      "#smallbusinessuk"
+    ]
+  },
+  "altText": "Employer guide carousel styled as a chat conversation: 15 questions to ask an intern candidate, grouped into warm-up, motivation, skills, teamwork and their questions."
+}
