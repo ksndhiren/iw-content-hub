@@ -14452,7 +14452,7 @@
       "id": "week26",
       "label": "Week 26",
       "weekCommencing": "2026-11-23",
-      "builtAt": 1795294319,
+      "builtAt": 1795357088,
       "posts": [
         {
           "id": "week26-mon-quote",
@@ -15488,6 +15488,50 @@
             ]
           },
           "altText": "Five floors of a cut-away building show one film intern's day from morning to evening: prep the kit at 09:00; on set at 10:30; log the footage at 12:00; edit at 14:00; review at 16:30. Tools: Premiere Pro, DaVinci Resolve, Frame.io."
+        },
+        {
+          "id": "week26-mon-news",
+          "day": "Mon 23 Nov",
+          "lane": "news",
+          "title": "UK Job Seekers Want Interview Feedback",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "Job seekers in the UK are calling for more feedback from employers after interviews. Many applicants are left in the dark after applying, not knowing why they didn't make the cut. This push for feedback aims to change that.\n\nFor students and recent graduates, receiving feedback can be a game-changer. It shows you where you shine and where you need to improve, making your next application stronger.\n\nInternships can be a great way to practise receiving and using feedback. They not only give you real-world experience but also help you learn how to adapt and improve based on constructive criticism.\n\nSource: BBC Business.",
+          "hashtags": [
+            "#ukjobs",
+            "#interviewfeedback",
+            "#internships",
+            "#careergrowth",
+            "#studentlife"
+          ],
+          "captions": {
+            "ig-fb": "Job seekers in the UK are calling for more feedback from employers after interviews. Many applicants are left in the dark after applying, not knowing why they didn't make the cut. This push for feedback aims to change that.\n\nFor students and recent graduates, receiving feedback can be a game-changer. It shows you where you shine and where you need to improve, making your next application stronger.\n\nInternships can be a great way to practise receiving and using feedback. They not only give you real-world experience but also help you learn how to adapt and improve based on constructive criticism.\n\nSource: BBC Business.",
+            "linkedin": "In the UK, job applicants often find themselves in the dark after interviews, receiving no feedback from potential employers. Now, there's a growing call for companies to provide feedback to every candidate.\n\nFor those starting their careers, understanding what went wrong or right in an application can be invaluable. Feedback can illuminate your strengths and areas for development, giving you an edge in future applications.\n\nInternships can play a crucial role here. They offer a platform to gain feedback in a professional setting, helping you refine your skills and grow your confidence. Think of internships as a rehearsal space where you can learn from your mistakes and perfect your craft.\n\nSource: BBC Business.",
+            "x": "UK job seekers want more feedback after interviews. Getting insights can help students and grads improve applications. Internships offer early feedback opportunities, boosting skills and confidence. (Source: BBC Business)",
+            "threads": "UK job applicants wish for more interview feedback. It can help students and grads understand strengths and improve applications. Internships are a great way to gain early feedback, sharpening your skills. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#ukjobs",
+              "#interviewfeedback",
+              "#internships",
+              "#careergrowth",
+              "#studentlife"
+            ],
+            "linkedin": [
+              "#ukjobmarket",
+              "#interviewfeedback",
+              "#careerdevelopment"
+            ],
+            "x": [
+              "#ukjobs",
+              "#feedback"
+            ]
+          }
         }
       ]
     }
