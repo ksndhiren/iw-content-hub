@@ -1,17 +1,17 @@
 {
-  "week_id": "auto-2026-11-16",
-  "generated_at": "2026-11-16T13:28:18.933668+00:00",
+  "week_id": "auto-2026-11-23",
+  "generated_at": "2026-11-23T15:48:00.216306+00:00",
   "default_duration_seconds": 52,
   "source_summary": {
     "reddit_rss_signals": 0,
-    "google_trends_signals": 19,
+    "google_trends_signals": 6,
     "youtube_signals": 40,
     "seed_question_signals": 5,
     "warnings": [
       {
         "source": "reddit-ukjobs-internship-cv",
         "title": "Reddit RSS unavailable: UK jobs - internship CV",
-        "detail": "HTTP Error 403: Forbidden"
+        "detail": "HTTP Error 404: Not Found"
       },
       {
         "source": "reddit-careerguidance-interview",
@@ -26,17 +26,32 @@
       {
         "source": "reddit-resumes-internship",
         "title": "Reddit RSS unavailable: Resumes - internship",
-        "detail": "HTTP Error 403: Forbidden"
+        "detail": "HTTP Error 404: Not Found"
+      },
+      {
+        "source": "serpapi-internship cv",
+        "title": "SerpApi Trends unavailable",
+        "detail": "The read operation timed out"
+      },
+      {
+        "source": "serpapi-graduate jobs",
+        "title": "SerpApi Trends unavailable",
+        "detail": "The read operation timed out"
+      },
+      {
+        "source": "serpapi-no experience cv",
+        "title": "SerpApi Trends unavailable",
+        "detail": "The read operation timed out"
       }
     ]
   },
   "topics": [
     {
-      "id": "auto-mobile-cvs-that-impress",
-      "title": "Mobile CVs That Impress",
+      "id": "auto-ace-your-accounting-cover-letter",
+      "title": "Ace Your Accounting Cover Letter",
       "source_post": "automated-topic-engine",
-      "source_cluster": "cv",
-      "signal_score": 63.1,
+      "source_cluster": "cover-letter",
+      "signal_score": 64.0,
       "pain": 4,
       "specificity": 4,
       "curiosity": 5,
@@ -46,17 +61,56 @@
       "brand_fit": 5,
       "angle_source": "llm",
       "hook_candidates": [
-        "Struggling to create a CV on your phone?",
+        "Struggling to make your accounting cover letter stand out?",
+        "If you are stuck on cover letter, watch this before your next application."
+      ],
+      "promise": "I will show you how to highlight your skills effectively.",
+      "proof_points": [
+        "Employers value relevant coursework in cover letters.",
+        "Detailing projects shows practical skills.",
+        "Specificity helps you stand out from generic applications."
+      ],
+      "core_takeaway": "Focus on specific accounting projects or coursework.",
+      "cta": "Find more tips at internwise.co.uk.",
+      "source_signals": [
+        {
+          "source": "google_trends_serpapi",
+          "title": "accounting internship cover letter",
+          "url": "",
+          "score": 61.0,
+          "meta": {
+            "seed": "cover letter internship",
+            "rising_value": 350.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "auto-cv-mistakes-you-don-t-know",
+      "title": "CV Mistakes You Don't Know",
+      "source_post": "automated-topic-engine",
+      "source_cluster": "cv",
+      "signal_score": 59.0,
+      "pain": 3,
+      "specificity": 3,
+      "curiosity": 4,
+      "utility": 4,
+      "timeliness": 3,
+      "discussion": 3,
+      "brand_fit": 5,
+      "angle_source": "llm",
+      "hook_candidates": [
+        "Wondering why your CV keeps getting rejected?",
         "If you are stuck on cv, watch this before your next application."
       ],
-      "promise": "I'll show you how to make it professional.",
+      "promise": "I will show you common mistakes that get CVs tossed.",
       "proof_points": [
-        "Mobile apps offer user-friendly templates.",
-        "You can update your CV anywhere, anytime.",
-        "Digital CVs are easy to send and store."
+        "Recruiters spend seconds scanning CVs.",
+        "Unexplained gaps raise red flags.",
+        "Clear job titles help match you to roles."
       ],
-      "core_takeaway": "Use a CV app that includes templates and guidance.",
-      "cta": "Find more resources at internwise.co.uk",
+      "core_takeaway": "Avoid vague job titles and unexplained gaps.",
+      "cta": "Get CV insights at internwise.co.uk.",
       "source_signals": [
         {
           "source": "seed_question",
@@ -65,16 +119,6 @@
           "score": 64.0,
           "meta": {
             "configured": true
-          }
-        },
-        {
-          "source": "google_trends_serpapi",
-          "title": "cv library",
-          "url": "",
-          "score": 53.0,
-          "meta": {
-            "seed": "internship cv",
-            "rising_value": 5000.0
           }
         },
         {
@@ -88,13 +132,13 @@
         },
         {
           "source": "youtube",
-          "title": "How To Make Resume In Mobile | How To Make CV In Mobile | How To Create CV In Mobile",
-          "url": "https://www.youtube.com/watch?v=FTQMoIlo67U",
-          "score": 40.16,
+          "title": "how to make resume | resume kaise banaye | cv format in english | resume #shorts",
+          "url": "https://www.youtube.com/watch?v=FJwOCuCMeog",
+          "score": 44.71,
           "meta": {
             "query": "no experience cv graduate",
-            "views": 309081,
-            "views_per_day": 1040.7
+            "views": 75352,
+            "views_per_day": 1177.4
           }
         },
         {
@@ -104,19 +148,30 @@
           "score": 26.49,
           "meta": {
             "query": "no experience cv graduate",
-            "views": 35722,
-            "views_per_day": 123.2
+            "views": 36488,
+            "views_per_day": 122.9
           }
         },
         {
           "source": "youtube",
           "title": "\ud83d\ude31 HR Only Checks These Things #shorts #telugu #resume #internship #students #hr #job #tips #time",
           "url": "https://www.youtube.com/watch?v=27Hi6i7Uh-I",
-          "score": 26.2,
+          "score": 26.19,
           "meta": {
             "query": "internship cv advice shorts",
             "views": 8092,
-            "views_per_day": 49.0
+            "views_per_day": 47.0
+          }
+        },
+        {
+          "source": "youtube",
+          "title": "#unemployment #job #internship #resume #hobby #jobsearch #tips #shorts #explore",
+          "url": "https://www.youtube.com/watch?v=_O9UwHeQnoA",
+          "score": 26.01,
+          "meta": {
+            "query": "internship cv advice shorts",
+            "views": 1069,
+            "views_per_day": 3.5
           }
         }
       ]
@@ -136,17 +191,17 @@
       "brand_fit": 5,
       "angle_source": "llm",
       "hook_candidates": [
-        "Worried about getting a job with no experience?",
+        "Worried your lack of experience is holding you back?",
         "If you are stuck on experience, watch this before your next application."
       ],
-      "promise": "I will show you how to leverage other aspects to get noticed.",
+      "promise": "I will show you how to leverage skills over experience.",
       "proof_points": [
-        "Transferable skills apply across many roles.",
-        "Relevant projects demonstrate your capability.",
-        "Employers value proactive candidates."
+        "Transferable skills are valued across industries.",
+        "Relevant projects demonstrate capability.",
+        "Skills-based CVs attract diverse roles."
       ],
       "core_takeaway": "Highlight transferable skills and relevant projects.",
-      "cta": "Discover how at internwise.co.uk",
+      "cta": "Start your career at internwise.co.uk.",
       "source_signals": [
         {
           "source": "seed_question",
@@ -160,197 +215,11 @@
       ]
     },
     {
-      "id": "auto-plan-for-graduate-jobs-2026",
-      "title": "Plan for Graduate Jobs 2026",
-      "source_post": "automated-topic-engine",
-      "source_cluster": "graduate-jobs",
-      "signal_score": 44.9,
-      "pain": 3,
-      "specificity": 3,
-      "curiosity": 3,
-      "utility": 4,
-      "timeliness": 3,
-      "discussion": 3,
-      "brand_fit": 5,
-      "angle_source": "llm",
-      "hook_candidates": [
-        "Feeling lost about graduate jobs in 2026?",
-        "If you are stuck on graduate jobs, watch this before your next application."
-      ],
-      "promise": "I will help you create a clear plan for your job search.",
-      "proof_points": [
-        "Early preparation increases job prospects.",
-        "Networking opens doors to hidden opportunities.",
-        "Skill-building aligns you with future job markets."
-      ],
-      "core_takeaway": "Start networking and building skills now.",
-      "cta": "Learn more at internwise.co.uk",
-      "source_signals": [
-        {
-          "source": "google_trends_serpapi",
-          "title": "graduate schemes 2027",
-          "url": "",
-          "score": 49.0,
-          "meta": {
-            "seed": "graduate jobs",
-            "rising_value": 2400.0
-          }
-        },
-        {
-          "source": "google_trends_serpapi",
-          "title": "graduate jobs 2026",
-          "url": "",
-          "score": 49.0,
-          "meta": {
-            "seed": "graduate jobs",
-            "rising_value": 450.0
-          }
-        },
-        {
-          "source": "google_trends_serpapi",
-          "title": "history graduate jobs",
-          "url": "",
-          "score": 17.0,
-          "meta": {
-            "seed": "graduate jobs",
-            "rising_value": 80.0
-          }
-        },
-        {
-          "source": "google_trends_serpapi",
-          "title": "lidl graduate scheme",
-          "url": "",
-          "score": 14.0,
-          "meta": {
-            "seed": "graduate jobs",
-            "rising_value": 50.0
-          }
-        },
-        {
-          "source": "youtube",
-          "title": "Habis Wisuda Bingung? Ini Langkah Pertama Fresh Graduate #talenika #tips #pelatihankerja #shorts",
-          "url": "https://www.youtube.com/watch?v=ipHq70ED_3k",
-          "score": 10.36,
-          "meta": {
-            "query": "internship cv advice shorts",
-            "views": 4081,
-            "views_per_day": 340.1
-          }
-        },
-        {
-          "source": "youtube",
-          "title": "HCL TECH Hiring Fresher for Graduate Trainee At Service Desk #shorts #jobs",
-          "url": "https://www.youtube.com/watch?v=gd4govmnULM",
-          "score": 9.21,
-          "meta": {
-            "query": "graduate job interview tips shorts",
-            "views": 2595,
-            "views_per_day": 53.0
-          }
-        }
-      ]
-    },
-    {
-      "id": "auto-revamp-linkedin-with-ai",
-      "title": "Revamp LinkedIn with AI",
-      "source_post": "automated-topic-engine",
-      "source_cluster": "linkedin",
-      "signal_score": 40.7,
-      "pain": 3,
-      "specificity": 3,
-      "curiosity": 3,
-      "utility": 4,
-      "timeliness": 3,
-      "discussion": 3,
-      "brand_fit": 5,
-      "angle_source": "llm",
-      "hook_candidates": [
-        "LinkedIn profile not getting noticed?",
-        "If you are stuck on linkedin, watch this before your next application."
-      ],
-      "promise": "I'll show you how to use AI to enhance your profile.",
-      "proof_points": [
-        "AI tools offer language and layout suggestions.",
-        "A polished profile attracts more connections.",
-        "Refined profiles highlight your professional strengths."
-      ],
-      "core_takeaway": "Use AI tools to refine your profile's language and layout.",
-      "cta": "Find out how at internwise.co.uk",
-      "source_signals": [
-        {
-          "source": "youtube",
-          "title": "\ud83d\udcbc MBA Profile Building Strategy 2026 | Internship, LinkedIn & Networking Tips #mba #shorts",
-          "url": "https://www.youtube.com/watch?v=mbtinpvgz38",
-          "score": 26.01,
-          "meta": {
-            "query": "internship cv advice shorts",
-            "views": 451,
-            "views_per_day": 3.5
-          }
-        },
-        {
-          "source": "youtube",
-          "title": "How To Connect My LinkedIn And Claude AI (\ud835\udfee\ud835\udfec\ud835\udfee\ud835\udff2) | 100% WORKS & EASY | Connect LinkedIn To Claude",
-          "url": "https://www.youtube.com/watch?v=hasA9fuX6L4",
-          "score": 25.01,
-          "meta": {
-            "query": "linkedin profile job search",
-            "views": 91472,
-            "views_per_day": 502.6
-          }
-        },
-        {
-          "source": "youtube",
-          "title": "Linkedin Profile Kaise Banaye | Linkedin Account Kaise Banaye | Linkedin Me Login Kaise Kare",
-          "url": "https://www.youtube.com/watch?v=WqKWWs1itGs",
-          "score": 24.79,
-          "meta": {
-            "query": "linkedin profile job search",
-            "views": 111716,
-            "views_per_day": 946.7
-          }
-        },
-        {
-          "source": "youtube",
-          "title": "\ud83d\ude31 ChatGPT KILLED LinkedIn \ud83d\udd25 #shorts",
-          "url": "https://www.youtube.com/watch?v=hDtSuF3gAQc",
-          "score": 21.91,
-          "meta": {
-            "query": "linkedin profile job search",
-            "views": 122468,
-            "views_per_day": 2226.7
-          }
-        },
-        {
-          "source": "youtube",
-          "title": "How to Rewrite Your LinkedIn Profile Using AI (Claude Tutorial)",
-          "url": "https://www.youtube.com/watch?v=h342qqDSorM",
-          "score": 21.5,
-          "meta": {
-            "query": "linkedin profile job search",
-            "views": 95504,
-            "views_per_day": 624.2
-          }
-        },
-        {
-          "source": "youtube",
-          "title": "I literally used Claude (and Apify and LinkedIn) to apply to unlimited jobs",
-          "url": "https://www.youtube.com/watch?v=AOgvN2ePeRM",
-          "score": 16.68,
-          "meta": {
-            "query": "linkedin profile job search",
-            "views": 149947,
-            "views_per_day": 919.9
-          }
-        }
-      ]
-    },
-    {
-      "id": "auto-master-tell-me-about-yourself",
-      "title": "Master 'Tell Me About Yourself'",
+      "id": "auto-the-interview-answer-that-sounds-too-generic",
+      "title": "The Interview Answer That Sounds Too Generic",
       "source_post": "automated-topic-engine",
       "source_cluster": "interview",
-      "signal_score": 40.3,
+      "signal_score": 43.5,
       "pain": 3,
       "specificity": 3,
       "curiosity": 3,
@@ -358,19 +227,19 @@
       "timeliness": 3,
       "discussion": 3,
       "brand_fit": 5,
-      "angle_source": "llm",
+      "angle_source": "bank",
       "hook_candidates": [
-        "Struggling with the 'Tell me about yourself' question?",
+        "This is why your interview answer sounds generic.",
         "If you are stuck on interview, watch this before your next application."
       ],
-      "promise": "I will guide you on crafting a compelling answer.",
+      "promise": "Here is how to sound prepared without sounding scripted.",
       "proof_points": [
-        "Relevant answers show you're the right fit.",
-        "Structured responses make a strong impression.",
-        "Linking to the job creates a memorable narrative."
+        "Generic answers sound safe, but they are hard to remember.",
+        "A specific moment proves judgement better than a list of traits.",
+        "Stopping cleanly is part of confidence."
       ],
-      "core_takeaway": "Link your experiences to the job's key responsibilities.",
-      "cta": "Check out more advice at internwise.co.uk",
+      "core_takeaway": "Use one situation, one decision, one result, then stop.",
+      "cta": "Save this for your next practice interview.",
       "source_signals": [
         {
           "source": "seed_question",
@@ -392,23 +261,34 @@
         },
         {
           "source": "youtube",
-          "title": "Can You Do Graduation While Being Cabin Crew? \ud83c\udf93\u2708\ufe0f | HR Interview Question #cabincrew #airhostess",
-          "url": "https://www.youtube.com/watch?v=2Bg_mrsgFjc",
-          "score": 13.04,
+          "title": "Job Interview Manners in Japan\ud83c\uddef\ud83c\uddf5 #shorts",
+          "url": "https://www.youtube.com/watch?v=r5HgMuvz2NM",
+          "score": 23.13,
           "meta": {
             "query": "graduate job interview tips shorts",
-            "views": 495,
-            "views_per_day": 10.3
+            "views": 732035,
+            "views_per_day": 2533.0
+          }
+        },
+        {
+          "source": "youtube",
+          "title": "How to Use Claude AI for Job Application (5 Interview Calls in 1 Week)",
+          "url": "https://www.youtube.com/watch?v=drq2xcrYRIQ",
+          "score": 21.79,
+          "meta": {
+            "query": "linkedin profile job search",
+            "views": 139703,
+            "views_per_day": 698.5
           }
         }
       ]
     },
     {
-      "id": "auto-tailor-your-cover-letter",
-      "title": "Tailor Your Cover Letter",
+      "id": "auto-linkedin-profile-first-impressions",
+      "title": "LinkedIn Profile: First Impressions",
       "source_post": "automated-topic-engine",
-      "source_cluster": "cover-letter",
-      "signal_score": 35.5,
+      "source_cluster": "linkedin",
+      "signal_score": 34.1,
       "pain": 3,
       "specificity": 3,
       "curiosity": 3,
@@ -418,43 +298,191 @@
       "brand_fit": 5,
       "angle_source": "llm",
       "hook_candidates": [
-        "Is your cover letter failing to get responses?",
-        "If you are stuck on cover letter, watch this before your next application."
+        "Not getting noticed on LinkedIn?",
+        "If you are stuck on linkedin, watch this before your next application."
       ],
-      "promise": "I'll show you how to make it stand out.",
+      "promise": "I will show you how to make a strong first impression.",
       "proof_points": [
-        "Employers look for specific skills mentioned in their ads.",
-        "A tailored letter shows genuine interest in the role.",
-        "Unique cover letters are remembered by recruiters."
+        "The headline is the first thing recruiters see.",
+        "A strong summary captures attention.",
+        "Clear profiles increase connection requests."
       ],
-      "core_takeaway": "Match your skills directly to the job description.",
-      "cta": "Discover more at internwise.co.uk",
+      "core_takeaway": "Start with a compelling headline and summary.",
+      "cta": "Boost your profile at internwise.co.uk.",
       "source_signals": [
         {
-          "source": "google_trends_serpapi",
-          "title": "accounting internship cover letter",
-          "url": "",
-          "score": 37.0,
+          "source": "youtube",
+          "title": "\ud83d\udcbc MBA Profile Building Strategy 2026 | Internship, LinkedIn & Networking Tips #mba #shorts",
+          "url": "https://www.youtube.com/watch?v=mbtinpvgz38",
+          "score": 26.01,
           "meta": {
-            "seed": "cover letter internship",
-            "rising_value": 110.0
+            "query": "internship cv advice shorts",
+            "views": 452,
+            "views_per_day": 3.3
           }
         },
         {
-          "source": "google_trends_serpapi",
-          "title": "cover letter",
-          "url": "",
-          "score": 22.0,
+          "source": "youtube",
+          "title": "Linkedin Profile Kaise Banaye | Linkedin Account Kaise Banaye | Linkedin Me Login Kaise Kare",
+          "url": "https://www.youtube.com/watch?v=WqKWWs1itGs",
+          "score": 24.83,
           "meta": {
-            "seed": "internship cv",
-            "rising_value": 90.0
+            "query": "linkedin profile job search",
+            "views": 119701,
+            "views_per_day": 957.6
+          }
+        },
+        {
+          "source": "youtube",
+          "title": "\ud83d\ude31 ChatGPT KILLED LinkedIn \ud83d\udd25 #shorts",
+          "url": "https://www.youtube.com/watch?v=hDtSuF3gAQc",
+          "score": 20.96,
+          "meta": {
+            "query": "linkedin profile job search",
+            "views": 123334,
+            "views_per_day": 1989.3
+          }
+        },
+        {
+          "source": "youtube",
+          "title": "I literally used Claude (and Apify and LinkedIn) to apply to unlimited jobs",
+          "url": "https://www.youtube.com/watch?v=AOgvN2ePeRM",
+          "score": 16.71,
+          "meta": {
+            "query": "linkedin profile job search",
+            "views": 158758,
+            "views_per_day": 928.4
           }
         }
       ]
     },
     {
-      "id": "auto-land-your-dream-internship",
-      "title": "Land Your Dream Internship",
+      "id": "auto-first-step-after-graduation",
+      "title": "First Step After Graduation",
+      "source_post": "automated-topic-engine",
+      "source_cluster": "graduate-jobs",
+      "signal_score": 28.6,
+      "pain": 3,
+      "specificity": 3,
+      "curiosity": 3,
+      "utility": 4,
+      "timeliness": 3,
+      "discussion": 3,
+      "brand_fit": 5,
+      "angle_source": "llm",
+      "hook_candidates": [
+        "Just graduated and unsure where to start?",
+        "If you are stuck on graduate jobs, watch this before your next application."
+      ],
+      "promise": "I will show you the first step to take after graduating.",
+      "proof_points": [
+        "Knowing your interests guides job search focus.",
+        "Aligned applications are more likely to succeed.",
+        "Industry insight leads to better job matches."
+      ],
+      "core_takeaway": "Identify industries and roles that excite you.",
+      "cta": "Explore career options at internwise.co.uk.",
+      "source_signals": [
+        {
+          "source": "youtube",
+          "title": "RRB NTPC Under-Graduate CEN 07/2026 Short Notice Out | RRB NTPC UG 2026 Notification | Radhika Ma\u2019am",
+          "url": "https://www.youtube.com/watch?v=ztSSIP_SeAU",
+          "score": 30.96,
+          "meta": {
+            "query": "graduate job interview tips shorts",
+            "views": 340335,
+            "views_per_day": 5489.3
+          }
+        },
+        {
+          "source": "youtube",
+          "title": "Habis Wisuda Bingung? Ini Langkah Pertama Fresh Graduate #talenika #tips #pelatihankerja #shorts",
+          "url": "https://www.youtube.com/watch?v=ipHq70ED_3k",
+          "score": 9.86,
+          "meta": {
+            "query": "internship cv advice shorts",
+            "views": 4094,
+            "views_per_day": 215.5
+          }
+        },
+        {
+          "source": "youtube",
+          "title": "HCL TECH Hiring Fresher for Graduate Trainee At Service Desk #shorts #jobs",
+          "url": "https://www.youtube.com/watch?v=gd4govmnULM",
+          "score": 9.19,
+          "meta": {
+            "query": "graduate job interview tips shorts",
+            "views": 2661,
+            "views_per_day": 47.5
+          }
+        },
+        {
+          "source": "youtube",
+          "title": "FRESH GRADUATE looking for work #shorts",
+          "url": "https://www.youtube.com/watch?v=uct2zMQTJIA",
+          "score": 9.13,
+          "meta": {
+            "query": "graduate job interview tips shorts",
+            "views": 1199,
+            "views_per_day": 31.6
+          }
+        },
+        {
+          "source": "youtube",
+          "title": "IndiGo Hiring 2026 \u2708\ufe0f Bengaluru Airport Jobs | Any Graduate #Shorts #careerguidance #entryleveljobs",
+          "url": "https://www.youtube.com/watch?v=2fZ21ILLWhg",
+          "score": 9.1,
+          "meta": {
+            "query": "graduate job interview tips shorts",
+            "views": 1012,
+            "views_per_day": 24.1
+          }
+        }
+      ]
+    },
+    {
+      "id": "auto-stop-job-search-automation-fails",
+      "title": "Stop Job Search Automation Fails",
+      "source_post": "automated-topic-engine",
+      "source_cluster": "job-search",
+      "signal_score": 17.1,
+      "pain": 3,
+      "specificity": 3,
+      "curiosity": 3,
+      "utility": 4,
+      "timeliness": 3,
+      "discussion": 3,
+      "brand_fit": 5,
+      "angle_source": "llm",
+      "hook_candidates": [
+        "Is automation making your job search less effective?",
+        "If you are stuck on job search, watch this before your next application."
+      ],
+      "promise": "I will show you how to use automation smartly.",
+      "proof_points": [
+        "Personalised applications stand out.",
+        "Automation saves time but lacks nuance.",
+        "Balanced approaches yield better responses."
+      ],
+      "core_takeaway": "Combine automation with personalisation for best results.",
+      "cta": "Get job search strategies at internwise.co.uk.",
+      "source_signals": [
+        {
+          "source": "youtube",
+          "title": "One guy automated his entire job search with Claude Code #ai #automation",
+          "url": "https://www.youtube.com/watch?v=2vKU3J29FJw",
+          "score": 14.15,
+          "meta": {
+            "query": "linkedin profile job search",
+            "views": 271809,
+            "views_per_day": 1288.2
+          }
+        }
+      ]
+    },
+    {
+      "id": "auto-spot-quality-internships-fast",
+      "title": "Spot Quality Internships Fast",
       "source_post": "automated-topic-engine",
       "source_cluster": "internship-quality",
       "signal_score": 16.1,
@@ -467,31 +495,31 @@
       "brand_fit": 5,
       "angle_source": "llm",
       "hook_candidates": [
-        "Dreaming of a luxury internship but not sure where to start?",
+        "Worried about committing to the wrong internship?",
         "If you are stuck on internship quality, watch this before your next application."
       ],
-      "promise": "I will guide you through steps to land quality internships.",
+      "promise": "I will show you how to quickly assess internship quality.",
       "proof_points": [
-        "A tailored portfolio showcases your best work.",
-        "Quality internships often require specific skill sets.",
-        "Networking in your desired industry is key."
+        "Structured projects ensure learning.",
+        "Mentorship indicates developmental focus.",
+        "Quality programs often have clear objectives."
       ],
-      "core_takeaway": "Focus on building a strong, relevant portfolio.",
-      "cta": "See more strategies at internwise.co.uk",
+      "core_takeaway": "Check for structured projects and mentorship opportunities.",
+      "cta": "Learn more at internwise.co.uk.",
       "source_signals": [
         {
           "source": "youtube",
           "title": "10/10 things I did to land my first luxury internship at LVMH Paris",
           "url": "https://www.youtube.com/watch?v=gaYZB9gR7nY",
-          "score": 13.12,
+          "score": 13.11,
           "meta": {
             "query": "internship cv advice shorts",
-            "views": 1969,
-            "views_per_day": 29.8
+            "views": 2044,
+            "views_per_day": 28.0
           }
         }
       ]
     }
   ],
-  "fingerprint": "f82949bd23e85c98"
+  "fingerprint": "8a8a7e562cba688b"
 }
