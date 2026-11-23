@@ -14452,7 +14452,7 @@
       "id": "week26",
       "label": "Week 26",
       "weekCommencing": "2026-11-23",
-      "builtAt": 1795357088,
+      "builtAt": 1795455646,
       "posts": [
         {
           "id": "week26-mon-quote",
@@ -15530,6 +15530,50 @@
             "x": [
               "#ukjobs",
               "#feedback"
+            ]
+          }
+        },
+        {
+          "id": "week26-tue-news",
+          "day": "Tue 24 Nov",
+          "lane": "news",
+          "title": "Call for Action on Youth Unemployment",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "There's a growing call for action to tackle youth unemployment in the UK. Recent discussions emphasise the need for substantial government investment in job schemes aimed at young people, particularly those not currently in education, employment, or training (NEETs). This debate shines a light on the challenges many young people face when trying to enter the workforce. \n\nFor students and graduates, these discussions underscore the importance of accessible job opportunities. Navigating the transition from education to employment can be tough, and many are left without the support they need to succeed. \n\nInternships play a vital role in this landscape. They offer practical experience and help bridge the gap between academic learning and workplace demands. internships are especially valuable as they provide real-world insights and skills, enhancing employability. \n\nAs the conversation continues, it's clear that equipping young people with meaningful job experiences should be a priority. Investing in youth employment can pave the way for a more robust economy. \n\nSource: The Guardian.",
+          "hashtags": [
+            "#youthemployment",
+            "#internships",
+            "#ukjobs",
+            "#careergrowth",
+            "#graduateopportunities"
+          ],
+          "captions": {
+            "ig-fb": "There's a growing call for action to tackle youth unemployment in the UK. Recent discussions emphasise the need for substantial government investment in job schemes aimed at young people, particularly those not currently in education, employment, or training (NEETs). This debate shines a light on the challenges many young people face when trying to enter the workforce. \n\nFor students and graduates, these discussions underscore the importance of accessible job opportunities. Navigating the transition from education to employment can be tough, and many are left without the support they need to succeed. \n\nInternships play a vital role in this landscape. They offer practical experience and help bridge the gap between academic learning and workplace demands. internships are especially valuable as they provide real-world insights and skills, enhancing employability. \n\nAs the conversation continues, it's clear that equipping young people with meaningful job experiences should be a priority. Investing in youth employment can pave the way for a more robust economy. \n\nSource: The Guardian.",
+            "linkedin": "In a recent push to address youth unemployment in the UK, there's been a call for significant government investment in job schemes targeting young people not in education, employment, or training (NEETs). This move aims to tackle the challenges of entering the workforce faced by many young individuals. \n\nFor students and recent graduates, this highlights the need for more accessible opportunities and support systems. The transition from education to employment is often fraught with difficulties, leaving many without the resources they need to succeed. \n\nInternships are a crucial piece of the puzzle. They provide essential hands-on experience and help bridge the gap between academic knowledge and the practical skills demanded by employers. internships, in particular, offer invaluable insights and improve job prospects, making graduates more competitive. \n\nAs discussions continue, it's clear that investing in youth employment can lead to a more thriving and inclusive economy. Giving young people the tools and experiences they need is an investment in the future. \n\nSource: The Guardian.",
+            "x": "The UK faces calls for major investment in youth job schemes, focusing on NEETs. This highlights the need for accessible opportunities for students/graduates. internships can bridge the gap to employment. (Source: The Guardian)",
+            "threads": "A call for action on UK youth unemployment urges government investment in job schemes. For students/graduates, it shows the need for accessible job opportunities. internships are key to gaining skills and experience. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#youthemployment",
+              "#internships",
+              "#ukjobs",
+              "#careergrowth",
+              "#graduateopportunities"
+            ],
+            "linkedin": [
+              "#youthemployment",
+              "#ukworkforce",
+              "#internships"
+            ],
+            "x": [
+              "#youthjobs",
+              "#internships"
             ]
           }
         }
