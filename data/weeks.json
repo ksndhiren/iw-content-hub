@@ -14452,7 +14452,7 @@
       "id": "week26",
       "label": "Week 26",
       "weekCommencing": "2026-11-23",
-      "builtAt": 1795455646,
+      "builtAt": 1795605363,
       "posts": [
         {
           "id": "week26-mon-quote",
@@ -15574,6 +15574,50 @@
             "x": [
               "#youthjobs",
               "#internships"
+            ]
+          }
+        },
+        {
+          "id": "week26-wed-news",
+          "day": "Wed 25 Nov",
+          "lane": "news",
+          "title": "Clean Energy Jobs in Liverpool Spotlight",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "A recent summit in Liverpool put a spotlight on the job opportunities arising from the clean energy transition. The focus was on preparing local talent to step into these roles, highlighting the importance of training and education. \n\nWhy does this matter to you? If you're a student or recent graduate, the clean energy sector is a growing field with increasing demand for skilled workers. This means more job openings and a promising career path in sustainable industries. \n\nThe takeaway? Internships can be your stepping stone. They offer real-world experience and can help you build the skills that employers in the clean energy sector are looking for. Start exploring opportunities in this field to get ahead. \n\nSource: FE News.",
+          "hashtags": [
+            "#cleanenergy",
+            "#liverpooljobs",
+            "#internships",
+            "#sustainablecareers",
+            "#ukjobs"
+          ],
+          "captions": {
+            "ig-fb": "A recent summit in Liverpool put a spotlight on the job opportunities arising from the clean energy transition. The focus was on preparing local talent to step into these roles, highlighting the importance of training and education. \n\nWhy does this matter to you? If you're a student or recent graduate, the clean energy sector is a growing field with increasing demand for skilled workers. This means more job openings and a promising career path in sustainable industries. \n\nThe takeaway? Internships can be your stepping stone. They offer real-world experience and can help you build the skills that employers in the clean energy sector are looking for. Start exploring opportunities in this field to get ahead. \n\nSource: FE News.",
+            "linkedin": "A summit held in Liverpool has brought attention to the potential job growth in the clean energy sector. The event emphasised the need for local residents to receive training to fill these upcoming roles. \n\nWhat does this mean for those starting their careers? The clean energy transition represents a significant opportunity for students and graduates. As demand for sustainable solutions increases, so do the job prospects in this area. Developing the right skills now could position you for success in this expanding field. \n\nHow can internships play a role? They provide invaluable experience and can bridge the gap between education and employment, particularly in emerging sectors like clean energy. Consider seeking internships that align with your career goals in this dynamic industry. \n\nSource: FE News.",
+            "x": "Liverpool's clean energy summit highlights job growth potential, calling for local training. For grads, this means new opportunities in sustainable jobs. Internships can help you gain the skills needed. (Source: FE News)",
+            "threads": "Liverpool's summit highlights clean energy job growth, stressing the need for local training. For students, this means more opportunities in sustainability. Internships offer vital experience and skills in this field. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#cleanenergy",
+              "#liverpooljobs",
+              "#internships",
+              "#sustainablecareers",
+              "#ukjobs"
+            ],
+            "linkedin": [
+              "#cleanenergyjobs",
+              "#careergrowth",
+              "#sustainability"
+            ],
+            "x": [
+              "#cleanenergy",
+              "#ukjobs"
             ]
           }
         }

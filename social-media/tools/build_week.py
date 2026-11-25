@@ -201,7 +201,13 @@ _NEWS_STOP = {"with", "from", "your", "this", "that", "will", "says", "said",
               "survey", "suggests", "amid", "after", "over", "into", "more", "most",
               "than", "have", "been", "could", "would", "should", "their", "them",
               "they", "what", "when", "which", "where", "about", "just", "year",
-              "years", "week", "month", "new", "uk", "gov"}
+              "years", "week", "month", "new", "uk", "gov",
+              # Words nearly every early-careers headline shares. Counting them let
+              # "Clean energy ... open doors for young people" read as a repeat of
+              # "Guaranteed Jobs for 90,000 Young People" (jobs/young/people = 3/5),
+              # which emptied the pool and failed the 24 Nov 2026 news build.
+              "young", "people", "jobs", "work", "working", "workers", "employers",
+              "employer", "employment", "career", "careers", "help", "helps", "skills"}
 
 
 EDU_COLLIDE_THRESH = 0.34     # Jaccard; ~the old 0.5 overlap for equal-length titles
@@ -224,8 +230,13 @@ def sets_collide(a, b, thresh, metric="jaccard", min_words=COLLIDE_MIN_WORDS):
     """
     if not a or not b or len(a) < min_words or len(b) < min_words:
         return False
+    shared = len(a & b)
+    if metric == "overlap" and shared < 2:
+        # One shared word is never the same story ("boost", "needs"); with short
+        # headlines it used to score 1/2 = 0.5 and block fresh news.
+        return False
     denom = len(a | b) if metric == "jaccard" else min(len(a), len(b))
-    return len(a & b) / denom >= thresh
+    return shared / denom >= thresh
 
 
 def _news_words(title):
