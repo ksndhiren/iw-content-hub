@@ -1,11 +1,91 @@
 {
-  "generatedAt": "2026-11-24T17:18:53Z",
+  "generatedAt": "2026-11-25T16:59:56Z",
   "windowRecords": 80,
-  "byLane": {},
-  "byDay": {},
-  "byHour": {},
-  "topPosts": [],
-  "insights": [],
+  "byLane": {
+    "infographic": {
+      "posts": 8,
+      "engagement": 0,
+      "avg": 0.0
+    }
+  },
+  "byDay": {
+    "Mon": {
+      "posts": 8,
+      "engagement": 0,
+      "avg": 0.0
+    }
+  },
+  "byHour": {
+    "9": {
+      "posts": 8,
+      "engagement": 0,
+      "avg": 0.0
+    }
+  },
+  "topPosts": [
+    {
+      "lane": "infographic",
+      "network": "linkedin",
+      "engagement": 0,
+      "created": "2026-11-23T09:14:51Z",
+      "caption": "What does a photography intern actually do all day?\n\nKit checked at 9, lights and backdrop set at 10:30, assisting the s"
+    },
+    {
+      "lane": "infographic",
+      "network": "facebook",
+      "engagement": 0,
+      "created": "2026-11-23T09:14:49Z",
+      "caption": "What does a photography intern actually do all day?\n\nCharging kit, setting the lights, assisting the shoot, picking the "
+    },
+    {
+      "lane": "infographic",
+      "network": "instagram",
+      "engagement": 0,
+      "created": "2026-11-23T09:14:57Z",
+      "caption": "A Day in the Life: Photography Intern"
+    },
+    {
+      "lane": "infographic",
+      "network": "threads",
+      "engagement": 0,
+      "created": "2026-11-23T09:14:53Z",
+      "caption": "What does a photography intern actually do all day?\n\nCharging kit, setting the lights, assisting the shoot, picking the "
+    },
+    {
+      "lane": "infographic",
+      "network": "gmb",
+      "engagement": 0,
+      "created": "2026-11-23T09:14:54Z",
+      "caption": "What does a photography intern actually do all day?\n\nCharging kit, setting the lights, assisting the shoot, picking the "
+    },
+    {
+      "lane": "infographic",
+      "network": "pinterest",
+      "engagement": 0,
+      "created": "2026-11-23T09:14:56Z",
+      "caption": "What does a photography intern actually do all day?\n\nCharging kit, setting the lights, assisting the shoot, picking the "
+    },
+    {
+      "lane": "infographic",
+      "network": "instagram",
+      "engagement": 0,
+      "created": "2026-11-23T09:14:47Z",
+      "caption": "What does a photography intern actually do all day?\n\nCharging kit, setting the lights, assisting the shoot, picking the "
+    },
+    {
+      "lane": "infographic",
+      "network": "facebook",
+      "engagement": 0,
+      "created": "2026-11-23T09:14:59Z",
+      "caption": "A Day in the Life: Photography Intern"
+    }
+  ],
+  "insights": [
+    "Your strongest topic is Infographic (0.0 avg engagement/post). Make more of it.",
+    "Mon is your best posting day (0.0 avg engagement/post).",
+    "Posts around 09:00 UTC perform best (0.0 avg engagement/post).",
+    "Infographic is underperforming (0.0 avg) - rework the angle or post it at a stronger time."
+  ],
   "laneLabels": {
     "education": "Education",
     "news": "News",
