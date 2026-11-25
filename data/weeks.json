@@ -14452,7 +14452,7 @@
       "id": "week26",
       "label": "Week 26",
       "weekCommencing": "2026-11-23",
-      "builtAt": 1795605363,
+      "builtAt": 1795625887,
       "posts": [
         {
           "id": "week26-mon-quote",
@@ -15618,6 +15618,50 @@
             "x": [
               "#cleanenergy",
               "#ukjobs"
+            ]
+          }
+        },
+        {
+          "id": "week26-thu-news",
+          "day": "Thu 26 Nov",
+          "lane": "news",
+          "title": "Early Job Skills Needed Before Unemployment",
+          "platform": "Multi-Platform",
+          "format": "Single",
+          "slides": [
+            "slide_1.png"
+          ],
+          "status": "approved",
+          "caption": "A recent report has raised concerns about when young people in the UK are taught essential job skills. Often, these skills are only addressed once they become unemployed, rather than being integrated earlier in their education. This delay means many students and graduates enter the job market without the necessary preparation, impacting their ability to secure employment.\n\nUnderstanding the job market and gaining relevant skills before graduation is crucial. Without early exposure, young individuals may find themselves at a disadvantage compared to peers who have had practical experience.\n\nInternships play a key role in closing this gap. They provide hands-on experience and help students develop the skills employers are looking for. By participating in internships, young people can enhance their employability and transition more smoothly into full-time roles.\n\nSource: FE News.",
+          "hashtags": [
+            "#ukjobs",
+            "#internships",
+            "#skilldevelopment",
+            "#graduates",
+            "#careerprep"
+          ],
+          "captions": {
+            "ig-fb": "A recent report has raised concerns about when young people in the UK are taught essential job skills. Often, these skills are only addressed once they become unemployed, rather than being integrated earlier in their education. This delay means many students and graduates enter the job market without the necessary preparation, impacting their ability to secure employment.\n\nUnderstanding the job market and gaining relevant skills before graduation is crucial. Without early exposure, young individuals may find themselves at a disadvantage compared to peers who have had practical experience.\n\nInternships play a key role in closing this gap. They provide hands-on experience and help students develop the skills employers are looking for. By participating in internships, young people can enhance their employability and transition more smoothly into full-time roles.\n\nSource: FE News.",
+            "linkedin": "A new report highlights a significant issue in the UK job market: the delay in teaching young people essential job skills. Typically, these skills are only addressed when individuals face unemployment, rather than being incorporated earlier into their educational journey. This approach leaves many students and graduates underprepared for the workforce.\n\nThe impact of this delay is significant. Without early job skill development, young people may struggle to compete for positions, affecting their long-term career prospects. It underscores the need for earlier integration of employability training in education.\n\nInternships offer a practical solution. They provide invaluable experience and help students develop relevant skills before they graduate. By engaging in internships, young people can gain the confidence and competence needed to succeed in the job market.\n\nSource: FE News.",
+            "x": "UK report shows job skills often taught too late, only when youth are unemployed. Early internships can provide the needed skills and prepare students for the workforce. (Source: FE News)",
+            "threads": "A UK report reveals job skills are often taught only after youth face unemployment. Early internships can bridge this gap by providing essential experience and preparing you for the job market. www.internwise.co.uk"
+          },
+          "hashtagsByPlatform": {
+            "ig-fb": [
+              "#ukjobs",
+              "#internships",
+              "#skilldevelopment",
+              "#graduates",
+              "#careerprep"
+            ],
+            "linkedin": [
+              "#ukjobs",
+              "#skilldevelopment",
+              "#internships"
+            ],
+            "x": [
+              "#ukjobs",
+              "#careerprep"
             ]
           }
         }
