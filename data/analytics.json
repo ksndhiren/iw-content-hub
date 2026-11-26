@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-11-25T16:59:56Z",
+  "generatedAt": "2026-11-26T16:42:50Z",
   "windowRecords": 80,
   "platforms": {
     "instagram": {
       "followers": 356,
-      "reach": 9170,
-      "views": 10455,
-      "likes": 701,
-      "comments": 124,
+      "reach": 9171,
+      "views": 10510,
+      "likes": 696,
+      "comments": 122,
       "shares": 3,
-      "posts": 961,
+      "posts": 965,
       "name": "Internwise"
     },
     "facebook": {
-      "followers": 13384,
+      "followers": 13385,
       "reach": null,
       "views": null,
       "likes": null,
@@ -23,7 +23,7 @@
       "name": "Internwise"
     },
     "linkedin": {
-      "followers": 501,
+      "followers": 500,
       "reach": null,
       "views": null,
       "likes": 205,
@@ -33,7 +33,7 @@
       "name": null
     },
     "threads": {
-      "followers": 54,
+      "followers": 55,
       "reach": null,
       "views": null,
       "likes": null,
@@ -46,10 +46,6 @@
   "series": {
     "instagram": {
       "reach": [
-        {
-          "d": "2026-08-28",
-          "v": 3
-        },
         {
           "d": "2026-08-29",
           "v": 0
@@ -404,16 +400,16 @@
         },
         {
           "d": "2026-11-25",
-          "v": 12
+          "v": 20
+        },
+        {
+          "d": "2026-11-26",
+          "v": 13
         }
       ]
     },
     "facebook": {
       "views": [
-        {
-          "d": "2026-08-29",
-          "v": 42
-        },
         {
           "d": "2026-08-30",
           "v": 14
@@ -768,14 +764,14 @@
         },
         {
           "d": "2026-11-26",
-          "v": 92
+          "v": 166
+        },
+        {
+          "d": "2026-11-27",
+          "v": 75
         }
       ],
       "engagement": [
-        {
-          "d": "2026-08-29",
-          "v": 0
-        },
         {
           "d": "2026-08-30",
           "v": 0
@@ -1131,15 +1127,15 @@
         {
           "d": "2026-11-26",
           "v": 0
+        },
+        {
+          "d": "2026-11-27",
+          "v": 0
         }
       ]
     },
     "threads": {
       "views": [
-        {
-          "d": "2026-08-27",
-          "v": 27
-        },
         {
           "d": "2026-08-28",
           "v": 6
@@ -1498,7 +1494,11 @@
         },
         {
           "d": "2026-11-25",
-          "v": 40
+          "v": 46
+        },
+        {
+          "d": "2026-11-26",
+          "v": 16
         }
       ]
     }
